@@ -2,8 +2,8 @@ var Backbone = require('backbone');
 var login = require('./templates/login.html');
 var main = require('./templates/main.html');
 var match = require('./templates/match.html');
-var profile = require('./templates/profile.html')
-var createMatch = require('./templates/createMatch.html')
+var profile = require('./templates/profile.html');
+var createMatch = require('./templates/createMatch.html');
 
 
 var Router = Backbone.Router.extend({
