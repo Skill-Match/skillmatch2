@@ -1,0 +1,32 @@
+{
+  "name": "skillmatch",
+  "version": "1.0.0",
+  "description": "This is the readme for the Skill Match final project.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reynoldsn/skillMatch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reynoldsn/skillMatch/issues"
+  },
+  "homepage": "https://github.com/Reynoldsn/skillMatch#readme",
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "css-loader": "^0.23.0",
+    "hogan.js": "^3.0.2",
+    "jquery": "^2.1.4",
+    "json-loader": "^0.5.4",
+    "loader-utils": "^0.2.12",
+    "mustache": "^2.2.0",
+    "mustache-loader": "^0.3.0",
+    "style-loader": "^0.13.0",
+    "underscore": "^1.8.3",
+    "webpack": "^1.12.9"
+  }
+}
