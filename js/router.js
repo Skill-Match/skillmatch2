@@ -1,6 +1,7 @@
 var Backbone = require('backbone');
 var login = require('./templates/login.html');
 var main = require('./templates/main.html');
+var match = require('./templates/match.html');
 
 
 var Router = Backbone.Router.extend({
@@ -9,12 +10,13 @@ var Router = Backbone.Router.extend({
   },
   routes: {
     "main":"main",
+    "match":"match",
     "":"index"
   },
   index: function () {
     var html = login;
         $("#container").html(html);
-      
+
   }
 });
 
@@ -23,7 +25,12 @@ var router = new Router();
 router.on('route:main', function(){
   var html = main;
   $("#container").html(html);
-})
+});
+
+router.on('route:match', function() {
+  var html = match;
+  $("#container").html(html);
+});
 
 $('body').on('click', 'button', 'a', function (e){
   e.preventDefault();
