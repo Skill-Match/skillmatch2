@@ -14,14 +14,37 @@ var Router = Backbone.Router.extend({
   routes: {
     "feedback":"feedback",
     "match":"match",
-    "main":"main",
+    "main/:username":"main",
     "profile":"profile",
     "createMatch":"createMatch",
     "":"index"
   },
   index: function () {
     var html = login;
-    $("#container").html(html);
+
+        $("#container").html(html);
+        $('#loginSubmit').on('click', function(){
+        var username = $("#username").val();
+        var password = $("#password").val();
+        $.ajax({
+      url:"https://skill-match.herokuapp.com/api/api-token-auth/",
+      method:'POST',
+      data: {username: username, password:password}
+    }).then(function(resp){
+      console.log(resp);
+      setToken(resp.token);
+      router.navigate('/main/'+username, {trigger: true});
+    });
+    function setToken(token) {
+  var backboneSync = Backbone.sync;
+  Backbone.sync = function(method,model,options) {
+    options.headers = {
+      'Authorization': 'Token' + token
+    };
+    backboneSync(method,model,options);
+    };
+  }
+     });
   }
 });
 
