@@ -5,6 +5,7 @@ var match = require('./templates/match.html');
 var profile = require('./templates/profile.html');
 var createMatch = require('./templates/createMatch.html');
 var feedback = require('./templates/feedback.html');
+var home = require('./templates/home.html');
 
 
 var Router = Backbone.Router.extend({
@@ -14,13 +15,22 @@ var Router = Backbone.Router.extend({
   routes: {
     "feedback":"feedback",
     "match":"match",
-    "main/:username":"main",
+    "login":"login",
     "profile":"profile",
     "createMatch":"createMatch",
+    "home/:username":"home",
     "":"index"
   },
   index: function () {
-    var html = login;
+    var html = main;
+  $("#container").html(main);
+  }
+});
+
+var router = new Router();
+
+router.on('route:login', function(){
+  var html = login;
         $("#container").html(html);
         $('#loginSubmit').on('click', function(){
         var username = $("#username").val();
@@ -32,7 +42,7 @@ var Router = Backbone.Router.extend({
     }).then(function(resp){
       console.log(resp);
       setToken(resp.token);
-      router.navigate('/main/'+username, {trigger: true});
+      router.navigate('/home/' + username, {trigger: true});
     });
     function setToken(token) {
   var backboneSync = Backbone.sync;
@@ -44,13 +54,10 @@ var Router = Backbone.Router.extend({
     };
   }
      });
-  }
 });
 
-var router = new Router();
-
-router.on('route:main', function(){
-  var html = main;
+router.on('route:home', function(){
+  var html = home;
   $("#container").html(html);
 });
 
