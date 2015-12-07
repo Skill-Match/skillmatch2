@@ -2,8 +2,10 @@ var Backbone = require('backbone');
 var login = require('./templates/login.html');
 var main = require('./templates/main.html');
 var match = require('./templates/match.html');
-var profile = require('./templates/profile.html')
-var createMatch = require('./templates/createMatch.html')
+var profile = require('./templates/profile.html');
+var createMatch = require('./templates/createMatch.html');
+var feedback = require('./templates/feedback.html');
+
 
 
 var Router = Backbone.Router.extend({
@@ -11,8 +13,9 @@ var Router = Backbone.Router.extend({
     Backbone.history.start({pushState: true});
   },
   routes: {
-    "main":"main",
+    "feedback":"feedback",
     "match":"match",
+    "main":"main",
     "profile":"profile",
     "createMatch":"createMatch",
     "":"index"
@@ -43,6 +46,11 @@ router.on('route:profile', function() {
 
 router.on('route:createMatch', function() {
   var html = createMatch;
+  $("#container").html(html);
+});
+
+router.on('route:feedback', function(){
+  var html = feedback;
   $("#container").html(html);
 });
 
