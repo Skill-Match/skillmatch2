@@ -11,12 +11,6 @@
 
 <h2>REGISTER</h2>
 <form>
-  <label>FIRST NAME:</label>
-  <input type="text" placeholder="First Name">
-  </br>
-  <label>LAST NAME:</label>
-  <input type="text" placeholder="Last Name">
-  </br>
   <label>USERNAME:</label>
   <input type="text" placeholder="Username">
   </br>
@@ -26,10 +20,21 @@
   <label>PASSWORD:</label>
   <input type="password" placeholder="Password">
   </br>
-  <label>SEX:</label>
-  <input type="radio" name="Sex" value="male"> Male
-  <input type="radio" name="Sex" value="female"> Female
+  <label>GENDER:</label>
+  <input type="radio" name="Gender" value="Man"> Male
+  <input type="radio" name="Gender" value="Woman"> Female
+  <input type="radio" name="Gender" value="Other"> Other
   </br>
+  <select name="age">
+  <option value="age">Enter Age</option>
+  <option value="Under 16">Under 16</option>
+  <option value="16-19">16-19</option>
+  <option value="20's">20's</option>
+  <option value="30's">30's</option>
+  <option value="40's">40's</option>
+  <option value="50's">50's</option>
+  <option value="60+">60 +</option>
+</select>
   <button type="submit" href="/">Submit</button>
 </form>
 
