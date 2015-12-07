@@ -21,8 +21,7 @@ var Router = Backbone.Router.extend({
   },
   index: function () {
     var html = login;
-        $("#container").html(html);
-
+    $("#container").html(html);
   }
 });
 
