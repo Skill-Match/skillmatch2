@@ -1,5 +1,6 @@
 var Backbone = require('backbone');
 var login = require('./templates/login.html');
+var main = require('./templates/main.html');
 
 
 var Router = Backbone.Router.extend({
@@ -7,17 +8,24 @@ var Router = Backbone.Router.extend({
     Backbone.history.start({pushState: true});
   },
   routes: {
+    "main":"main",
     "":"index"
   },
   index: function () {
-        $("#container").html(login);
+    var html = login;
+        $("#container").html(html);
       
   }
 });
 
 var router = new Router();
 
-$('body').on('click', 'a', function (e){
+router.on('route:main', function(){
+  var html = main;
+  $("#container").html(html);
+})
+
+$('body').on('click', 'button', 'a', function (e){
   e.preventDefault();
   var href = $(this).attr('href').substr(1);
   router.navigate(href, {trigger:true});
