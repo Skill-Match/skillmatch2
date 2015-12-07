@@ -7,7 +7,6 @@ var createMatch = require('./templates/createMatch.html');
 var feedback = require('./templates/feedback.html');
 
 
-
 var Router = Backbone.Router.extend({
   initialize: function () {
     Backbone.history.start({pushState: true});
