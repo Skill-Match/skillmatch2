@@ -2,6 +2,8 @@ var Backbone = require('backbone');
 var login = require('./templates/login.html');
 var main = require('./templates/main.html');
 var match = require('./templates/match.html');
+var profile = require('./templates/profile.html')
+var createMatch = require('./templates/createMatch.html')
 
 
 var Router = Backbone.Router.extend({
@@ -11,6 +13,8 @@ var Router = Backbone.Router.extend({
   routes: {
     "main":"main",
     "match":"match",
+    "profile":"profile",
+    "createMatch":"createMatch",
     "":"index"
   },
   index: function () {
@@ -32,7 +36,23 @@ router.on('route:match', function() {
   $("#container").html(html);
 });
 
-$('body').on('click', 'button', 'a', function (e){
+router.on('route:profile', function() {
+  var html = profile;
+  $("#container").html(html);
+});
+
+router.on('route:createMatch', function() {
+  var html = createMatch;
+  $("#container").html(html);
+});
+
+$('body').on('click', 'button', function (e){
+  e.preventDefault();
+  var href = $(this).attr('href').substr(1);
+  router.navigate(href, {trigger:true});
+});
+
+$('body').on('click', 'a', function (e){
   e.preventDefault();
   var href = $(this).attr('href').substr(1);
   router.navigate(href, {trigger:true});
