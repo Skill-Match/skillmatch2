@@ -4,11 +4,12 @@
 }
 #header h1{
 	display: inline-block;
+	margin:0 25%
 }
 #nav{
 	list-style: none;
 	display: inline-block;
-	
+	margin:0 10%
 }
 #nav li{
 	float: left;

@@ -12,20 +12,20 @@
 <h2>REGISTER</h2>
 <form>
   <label>USERNAME:</label>
-  <input type="text" placeholder="Username">
+  <input id="ruser" type="text" placeholder="Username">
   </br>
    <label>EMAIL:</label>
-  <input type="email" placeholder="Email">
+  <input id="remail" type="email" placeholder="Email">
   </br>
   <label>PASSWORD:</label>
-  <input type="password" placeholder="Password">
+  <input id="rpass" type="password" placeholder="Password">
   </br>
   <label>GENDER:</label>
-  <input type="radio" name="Gender" value="Man"> Male
-  <input type="radio" name="Gender" value="Woman"> Female
-  <input type="radio" name="Gender" value="Other"> Other
+  <input id="rgen" type="radio" name="Gender" value="Male"> Male
+  <input id="rgen" type="radio" name="Gender" value="Female"> Female
+  <input id="rgen" type="radio" name="Gender" value="Other"> Other
   </br>
-  <select name="age">
+  <select id="rage" name="age">
   <option value="age">Enter Age</option>
   <option value="Under 16">Under 16</option>
   <option value="16-19">16-19</option>
@@ -35,6 +35,6 @@
   <option value="50's">50's</option>
   <option value="60+">60 +</option>
 </select>
-  <button type="submit" href="/">Submit</button>
+  <button id="register" type="submit" href="/login">Submit</button>
 </form>
 
