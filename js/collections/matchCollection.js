@@ -19,14 +19,12 @@ matchCollection.fetch ({
 $("#setMatch").on('click', function() {
   matchAdd = new matchContainer();
   matchAdd.set({
-    title: $("#").val(),
-    description: $("#").val(),
-    park: $("#").val(),
-    sport: $("#").val(),
-    skill_level: $("#").val(),
-    date_time: $("#").val(),
-    players: $("#").val()
-  })
+    park: $("#addPark").val(),
+    sport: $("#addSport").val(),
+    skill_level:$("#addSkill").val(),
+    date: $("#addDate").val(),
+    time: $("#addTime").val
+  });
   matchAdd.save(null, {
     url: 'https://skill-match.herokuapp.com/api/matches/',
     success: function(resp) {
@@ -36,10 +34,9 @@ $("#setMatch").on('click', function() {
       concole.log("error", err);
     }
   });
-      $("#").val("");
-      $("#").val("");
-      $("#").val("");
-      $("#").val("");
-      $("#").val("");
-      $("#").val("");
-})
+      $("#addPark").val("");
+      $("#addSport").val("");
+      $("#addSkill").val("");
+      $("#addDate").val("");
+      $("#addTime").val("");
+});
