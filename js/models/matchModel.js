@@ -14,6 +14,5 @@ var matchContainer = Backbone.Model.extend({
     },
     Model: matchContainer,
     url: 'https://skill-match.herokuapp.com/api/matches/'
-  }
-});
+  });
  module.exports = matchContainer;

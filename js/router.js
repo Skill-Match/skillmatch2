@@ -6,7 +6,8 @@ var profile = require('./templates/profile.html');
 var createMatch = require('./templates/createMatch.html');
 var feedback = require('./templates/feedback.html');
 var home = require('./templates/home.html');
-
+var matchCollection = require('./collections/matchCollection.js')
+var matchModel = require('./models/matchModel.js')
 
 var Router = Backbone.Router.extend({
   initialize: function () {
@@ -48,11 +49,12 @@ router.on('route:login', function(){
   var backboneSync = Backbone.sync;
   Backbone.sync = function(method,model,options) {
     options.headers = {
-      'Authorization': 'Token' + token
+      'Authorization': 'Token ' + token
     };
     backboneSync(method,model,options);
     };
   }
+
      });
 });
 
@@ -71,9 +73,49 @@ router.on('route:profile', function() {
   $("#container").html(html);
 });
 
+var matchContainer = Backbone.Model.extend({
+  initialize: function() {
+  },
+  defaults: {
+    park: null,
+    sport: null,
+    skill_level: null,
+    date: null,
+    time: null
+    },
+    Model: matchContainer,
+    url: 'https://skill-match.herokuapp.com/api/matches/'
+  });
+
 router.on('route:createMatch', function() {
   var html = createMatch;
   $("#container").html(html);
+  $("#createMatch").on('click', function() {
+  console.log("test");
+    matchAdd = new matchContainer();
+    matchAdd.set({
+    park: $("#addPark").val(),
+    sport: $("#addSport").val(),
+    skill_level:$("#addSkill").val(),
+    date: $("#addDate").val(),
+    time: $("#addTime").val()
+  });
+  matchAdd.save(null, {
+    url: 'https://skill-match.herokuapp.com/api/matches/',
+      success: function(resp) {
+        console.log("success", resp);
+        console.log("testtest");
+      },
+      error: function(err) {
+        console.log("error", err);
+      }
+  });
+      $("#addPark").val("");
+      $("#addSport").val("");
+      $("#addSkill").val("");
+      $("#addDate").val("");
+      $("#addTime").val("");
+  });
 });
 
 router.on('route:feedback', function(){
