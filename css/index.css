@@ -1,3 +1,15 @@
+#header {
+	width: 80%;
+	margin: 0 5% 0 10%;
+}
+#header h1{
+	display: inline-block;
+}
 #nav{
 	list-style: none;
+	display: inline-block;
+	
+}
+#nav li{
+	float: left;
 }
