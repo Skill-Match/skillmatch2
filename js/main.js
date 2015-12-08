@@ -1,5 +1,6 @@
-require("../css/main.css");
+require("../css/index.css");
 require("../css/normal.css");
+require("../css/main.css");
 
 
 $(document).ready(function(){
