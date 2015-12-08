@@ -2,7 +2,7 @@ var Backbone = require('backbone');
 var matchContainer = require('../models/matchModel');
 
 var matchContainers = Backbone.Collection.extend({
-  Model:matchContainer
+  Model: matchContainer
 });
 
 var matchCollection = new matchContainer();
