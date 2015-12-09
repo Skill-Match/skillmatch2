@@ -71,7 +71,6 @@ router.on('route:login', function(){
         method:'POST',
         data: {username: username, password:password}
       }).then(function(resp){
-        console.log(resp);
         setToken(resp.token);
         router.navigate('/home/' + username, {trigger: true});
       });
@@ -137,11 +136,10 @@ router.on('route:home', function(){
 router.on('route:match', function(id) {
     var matchDetail = new matchContainer();
     matchDetail.fetch({
-      url: 'https://skill-match.herokuapp.com/api/matches/39',
+      url: 'https://skill-match.herokuapp.com/api/matches/' +id,
       success: function(resp) {
         var html = match({"data": resp.toJSON()});
         console.log("success", resp);
-        console.log(html);
         var matchTemplate = $("#matchTemplate").text();
         var matchHTML = Mustache.render(matchTemplate, 'data');
         $("#matchDetailContainer").html(matchHTML);
@@ -160,6 +158,7 @@ router.on('route:profile', function() {
 
 var matchContainer = Backbone.Model.extend({
   initialize: function() {
+    var park = $('option')
   },
   defaults: {
     park: null,
@@ -177,7 +176,6 @@ router.on('route:createMatch', function(id) {
   $("#container").html(html);
   $("#createMatch").on('click', function(e) {
     e.preventDefault();
-  console.log("test");
     matchAdd = new matchContainer();
     matchAdd.set({
     park: $("#addPark").val(),
@@ -190,7 +188,6 @@ router.on('route:createMatch', function(id) {
     url: 'https://skill-match.herokuapp.com/api/matches/',
       success: function(resp) {
         console.log("success", resp);
-        console.log("testtest");
         var id = resp.toJSON().id;
         console.log(id);
         router.navigate('/match/' + id, {trigger: true});
