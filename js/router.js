@@ -73,7 +73,7 @@ router.on('route:login', function(){
         data: {username: username, password:password}
       }).then(function(resp){
         setToken(resp.token);
-        router.navigate('/match/' + 59, {trigger: true});
+        router.navigate('/home/' + username, {trigger: true});
       });
     });
     function setToken(token) {
@@ -160,7 +160,7 @@ router.on('route:home', function(username){
    console.log("nope")
  }
 });
- 
+
 });
 
 
