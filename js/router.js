@@ -1,4 +1,5 @@
 var Backbone = require('backbone');
+var Mustache = require('mustache');
 var login = require('./templates/login.html');
 var main = require('./templates/main.html');
 var match = require('./templates/match.html');
@@ -14,7 +15,7 @@ var Router = Backbone.Router.extend({
   },
   routes: {
     "feedback":"feedback",
-    "match":"match",
+    "match/:id":"match",
     "login":"login",
     "profile":"profile",
     "createMatch":"createMatch",
@@ -64,7 +65,7 @@ router.on('route:login', function(){
         gender: null,
         age: null
     }
-  },  
+  },
   url: 'https://skill-match.herokuapp.com/api/users/create/'
 });
 
@@ -77,7 +78,7 @@ $("#register").on('click', function() {
      profile:{
      gender: $("#rgen").val(),
      age: $("#rage").val()
-  } 
+  }
   })
    var Users = Backbone.Collection.extend({
   model: User,
@@ -127,10 +128,26 @@ router.on('route:home', function(){
   });
 });
 
-router.on('route:match', function() {
+
+router.on('route:match', function(id) {
   var html = match;
   $("#container").html(html);
-});
+    var matchDetail = new matchContainer();
+    matchDetail.fetch({
+      url: 'https://skill-match.herokuapp.com/api/matches/' + id,
+      success: function(resp) {
+        console.log("success", resp);
+        var dataObj = {"data": resp.toJSON()};
+        console.log(dataObj);
+        var matchTemplate = $("#matchTemplate").text();
+        var matchHTML = Mustache.render(matchTemplate, dataObj);
+        $("#matchDetailContainer").html(matchHTML);
+      },
+      error: function(err) {
+        console.log("error", err);
+      }
+      })
+    });
 
 router.on('route:profile', function() {
   var html = profile;
@@ -151,10 +168,11 @@ var matchContainer = Backbone.Model.extend({
     url: 'https://skill-match.herokuapp.com/api/matches/'
   });
 
-router.on('route:createMatch', function() {
+router.on('route:createMatch', function(id) {
   var html = createMatch;
   $("#container").html(html);
-  $("#createMatch").on('click', function() {
+  $("#createMatch").on('click', function(e) {
+    e.preventDefault();
   console.log("test");
     matchAdd = new matchContainer();
     matchAdd.set({
@@ -169,6 +187,9 @@ router.on('route:createMatch', function() {
       success: function(resp) {
         console.log("success", resp);
         console.log("testtest");
+        var id = resp.toJSON().id;
+        console.log(id);
+        router.navigate('/match/' + id, {trigger: true});
       },
       error: function(err) {
         console.log("error", err);
