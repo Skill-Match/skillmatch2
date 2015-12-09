@@ -139,7 +139,7 @@ router.on('route:match', function(id) {
   $("#container").html(html);
     var matchDetail = new matchContainer();
     matchDetail.fetch({
-      url: 'https://skill-match.herokuapp.com/api/matches/' + id,
+      url: 'https://skill-match.herokuapp.com/api/matches/39',
       success: function(resp) {
         console.log("success", resp);
         var dataObj = {"data": resp.toJSON()};
