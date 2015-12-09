@@ -1,12 +1,16 @@
 <div id="imageContainer">
   <button type="submit" href="/createMatch">Create Match</button>
 </div>
-
+<div id="upComing">
+{{#data}}
 <ul>
-  <li> Match: <!--{{name}}--><a href="/profile"> BOB </a></li>
-  <li> Sport: <!--{{sport}}-->Tennis </li>
-  <li> Time: <!--{{date}}-->12/21/2015 1:30 pm</li>
-  <li> Park: <!--{{park}}-->Sunset </li>
-  <li> Skill: <!--{{skill}}-->70/100</li>
-  <button type="sumbit" href="/match"> Match </button>
+  <li> Description: {{description}}<a href="/profile"> BOB </a></li>
+  <li> Park: {{park}} </li>
+  <li> Sport: {{sport}}</li>
+  <li> Skill level:  {{skill_level}}</li>
+  <li> Date: {{date}}</li>
+  <li> Time: {{time}}</li>
+  <button type="sumbit" href="/match"> Accept </button>
 </ul>
+{{/data}}
+</div>
