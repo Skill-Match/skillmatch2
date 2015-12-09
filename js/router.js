@@ -33,10 +33,11 @@ var Router = Backbone.Router.extend({
     skill_level: null,
     date: null,
     time: null
-      },  
+      },
   url: 'https://skill-match.herokuapp.com/api/matches/'
 });
-    var Matches = Backbone.Collection.extend({
+
+  var Matches = Backbone.Collection.extend({
   model: Match,
   url: 'https://skill-match.herokuapp.com/api/matches/'
 });
@@ -44,8 +45,7 @@ var Router = Backbone.Router.extend({
     match.fetch({
  success: function(resp) {
     var html = main({'data': resp.toJSON().results});
-    console.log(html);
-   var mainTemplate = $("#mainTemplate").text();
+    var mainTemplate = $("#mainTemplate").text();
     var mainHTML = Mustache.render(mainTemplate, 'data');
     $("#upComing").html(mainHTML);
     $("#container").html(html);
@@ -135,18 +135,17 @@ router.on('route:home', function(){
 
 
 router.on('route:match', function(id) {
-  var html = match;
-  $("#container").html(html);
     var matchDetail = new matchContainer();
     matchDetail.fetch({
       url: 'https://skill-match.herokuapp.com/api/matches/39',
       success: function(resp) {
+        var html = match({"data": resp.toJSON()});
         console.log("success", resp);
-        var dataObj = {"data": resp.toJSON()};
-        console.log(dataObj);
+        console.log(html);
         var matchTemplate = $("#matchTemplate").text();
-        var matchHTML = Mustache.render(matchTemplate, dataObj);
+        var matchHTML = Mustache.render(matchTemplate, 'data');
         $("#matchDetailContainer").html(matchHTML);
+        $("#container").html(html);
       },
       error: function(err) {
         console.log("error", err);
