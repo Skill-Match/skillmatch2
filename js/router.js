@@ -15,7 +15,7 @@ var Router = Backbone.Router.extend({
     Backbone.history.start({pushState: true});
   },
   routes: {
-    "feedback":"feedback",
+    "feedback/:id":"feedback",
     "match/:id":"match",
     "login":"login",
     "profile":"profile",
@@ -73,7 +73,9 @@ router.on('route:login', function(){
         data: {username: username, password:password}
       }).then(function(resp){
         setToken(resp.token);
+
         router.navigate('/home/' + username, {trigger: true});
+
       });
     });
     function setToken(token) {
@@ -238,7 +240,7 @@ router.on('route:createMatch', function(id) {
   });
 });
 
-router.on('route:feedback', function(){
+router.on('route:feedback', function(id){
   var html = feedback;
   $("#container").html(html);
 });
