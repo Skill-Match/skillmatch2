@@ -127,16 +127,46 @@ user.save(null, {
  });
 });
 
-router.on('route:home', function(){
-  var html = home;
-  $("#container").html(html);
+router.on('route:home', function(username){
+  var Match = Backbone.Model.extend({
+  initialize: function () {
+  },
+  defaults: {
+    description: null,
+    park: null,
+    sport: null,
+    skill_level: null,
+    date: null,
+    time: null
+      },
+  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+});
+  var Matches = Backbone.Collection.extend({
+  model: Match,
+  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+});
+    var match = new Match();
+    match.fetch({
+ success: function(resp) {
+    var html = home({'data': resp.toJSON().results});
+    var homeTemplate = $("#mainTemplate").text();
+    var homeHTML = Mustache.render(homeTemplate, 'data');
+    $("#yourMatches").html(homeHTML);
+    $("#container").html(html);
+   console.log("success: ",resp)
+ },
+ error: function(err) {
+   console.log("nope")
+ }
+});
+ 
 });
 
 
 router.on('route:match', function(id) {
     var matchDetail = new matchContainer();
     matchDetail.fetch({
-      url: 'https://skill-match.herokuapp.com/api/matches/' +id,
+      url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
       success: function(resp) {
         var html = match({"data": resp.toJSON()});
         console.log("success", resp);
