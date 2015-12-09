@@ -23,8 +23,39 @@ var Router = Backbone.Router.extend({
     "":"index"
   },
   index: function () {
-    var html = main;
-  $("#container").html(main);
+    var Match = Backbone.Model.extend({
+  initialize: function () {
+  },
+  defaults: {
+    description: null,
+    park: null,
+    sport: null,
+    skill_level: null,
+    date: null,
+    time: null
+      },  
+  url: 'https://skill-match.herokuapp.com/api/matches/'
+});
+    var Matches = Backbone.Collection.extend({
+  model: Match,
+  url: 'https://skill-match.herokuapp.com/api/matches/'
+});
+    var match = new Match();
+    match.fetch({
+ success: function(resp) {
+    var html = main({'data': resp.toJSON().results});
+    console.log(html);
+   var mainTemplate = $("#mainTemplate").text();
+    var mainHTML = Mustache.render(mainTemplate, 'data');
+    $("#upComing").html(mainHTML);
+    $("#container").html(html);
+   console.log("success: ",resp)
+ },
+ error: function(err) {
+   console.log("nope")
+ }
+});
+
   }
 });
 
@@ -100,32 +131,6 @@ user.save(null, {
 router.on('route:home', function(){
   var html = home;
   $("#container").html(html);
-  var Match = Backbone.Model.extend({
-  initialize: function () {
-  },
-  defaults: {
-    title: null,
-    description: null,
-    park: null,
-    sport: null,
-    skill_level: null,
-    date_time: null,
-    players: null
-    },
-  url: 'https://skill-match.herokuapp.com/api/matches/'
-});
-  var Matches = Backbone.Collection.extend({
-  model: Match,
-  url: 'https://skill-match.herokuapp.com/api/matches/'
-});
- var MatchCollection = new Matches();
-    MatchCollection.fetch({
-        success: function(resp) {
-          console.log("success: ", resp);
-        },error: function (err) {
-          console.log("error: ", err);
-        }
-  });
 });
 
 
