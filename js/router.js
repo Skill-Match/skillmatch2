@@ -9,6 +9,7 @@ var feedback = require('./templates/feedback.html');
 var home = require('./templates/home.html');
 var matchModel = require('./models/matchModel.js')
 
+
 var Router = Backbone.Router.extend({
   initialize: function () {
     Backbone.history.start({pushState: true});
@@ -73,7 +74,7 @@ router.on('route:login', function(){
       }).then(function(resp){
         console.log(resp);
         setToken(resp.token);
-        router.navigate('/home/' + username, {trigger: true});
+        router.navigate('/match/' + 59, {trigger: true});
       });
     });
     function setToken(token) {
@@ -156,6 +157,9 @@ router.on('route:match', function(id) {
 router.on('route:profile', function() {
   var html = profile;
   $("#container").html(html);
+  $("#goToFeedback").on('click', function() {
+    router.navigate('/feedback', {trigger: true});
+  })
 });
 
 var matchContainer = Backbone.Model.extend({
