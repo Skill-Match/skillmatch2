@@ -187,9 +187,7 @@ router.on('route:match', function(id) {
 router.on('route:profile', function() {
   var html = profile;
   $("#container").html(html);
-  $("#goToFeedback").on('click', function() {
-    router.navigate('/feedback', {trigger: true});
-  })
+
 });
 
 var matchContainer = Backbone.Model.extend({
@@ -240,9 +238,43 @@ router.on('route:createMatch', function(id) {
   });
 });
 
+var feedbackContainer = Backbone.Model.extend({
+  initialize: function() {
+  },
+  defaults: {
+    skill: null,
+    sportsmanship: null,
+    availability: null
+  },
+  Model: feedbackContainer,
+  url: 'https://skill-match.herokuapp.com/api/feedbacks/create/'
+});
+
 router.on('route:feedback', function(id){
   var html = feedback;
   $("#container").html(html);
+  $("#submitFeedback").on('click', function() {
+    console.log("test");
+    feedbackAdd = new feedbackContainer();
+    feedbackAdd.set({
+      match: id,
+      skill: $("#addSkillFeedback").val(),
+      sportsmanship: $("#addFunFeedback").val(),
+      availability: $("#addCrowdFeedback").val()
+    });
+    feedbackAdd.save(null, {
+      url: 'https://skill-match.herokuapp.com/api/feedbacks/create/',
+      success: function(resp) {
+        console.log("success", resp);
+      },
+      error: function(err) {
+        console.log("error", err);
+      }
+    });
+    $("#addSkillFeedback").val("");
+    $("#addFunFeedback").val("");
+    $("#addCrowdFeedback").val("");
+  });
 });
 
 $('body').on('click', 'button', function (e){
