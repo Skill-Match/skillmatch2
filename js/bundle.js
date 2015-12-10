@@ -45,11 +45,13 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {__webpack_require__(2);
-
+	__webpack_require__(6);
+	__webpack_require__(8);
 
 
 	$(document).ready(function(){
-	  var Router = __webpack_require__(6);
+	  var Router = __webpack_require__(10);
+
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
@@ -9285,8 +9287,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./main.css", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./main.css");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./index.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./index.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -9304,7 +9306,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "#header {\n\twidth: 80%;\n\tmargin: 0 5% 0 10%;\n}\n#header h1{\n\tdisplay: inline-block;\n\tmargin:0 25%\n}\n#nav{\n\tlist-style: none;\n\tdisplay: inline-block;\n\tmargin:0 10%\n}\n#nav li{\n\tfloat: left;\n}", ""]);
 
 	// exports
 
@@ -9623,8 +9625,96 @@
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {var Backbone = __webpack_require__(7);
-	var login = __webpack_require__(9);
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(7);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./normal.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./normal.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/*! normalize.css v3.0.2 | MIT License | git.io/normalize */\n\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\n\nhtml {\n  font-family: sans-serif; /* 1 */\n  -ms-text-size-adjust: 100%; /* 2 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/**\n * Remove default margin.\n */\n\nbody {\n  margin: 0;\n}\n\n/* HTML5 display definitions\n   ========================================================================== */\n\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\n\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block; /* 1 */\n  vertical-align: baseline; /* 2 */\n}\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n\n[hidden],\ntemplate {\n  display: none;\n}\n\n/* Links\n   ========================================================================== */\n\n/**\n * Remove the gray background color from active links in IE 10.\n */\n\na {\n  background-color: transparent;\n}\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\n\na:active,\na:hover {\n  outline: 0;\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\n\nabbr[title] {\n  border-bottom: 1px dotted;\n}\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\n\nb,\nstrong {\n  font-weight: bold;\n}\n\n/**\n * Address styling not present in Safari and Chrome.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/**\n * Address styling not present in IE 8/9.\n */\n\nmark {\n  background: #ff0;\n  color: #000;\n}\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsup {\n  top: -0.5em;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\n\nimg {\n  border: 0;\n}\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\n\nfigure {\n  margin: 1em 40px;\n}\n\n/**\n * Address differences between Firefox and other browsers.\n */\n\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0;\n}\n\n/**\n * Contain overflow in all browsers.\n */\n\npre {\n  overflow: auto;\n}\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\n\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit; /* 1 */\n  font: inherit; /* 2 */\n  margin: 0; /* 3 */\n}\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\n\nbutton {\n  overflow: visible;\n}\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\n\nbutton,\nhtml input[type=\"button\"], /* 1 */\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button; /* 2 */\n  cursor: pointer; /* 3 */\n}\n\n/**\n * Re-set default cursor for disabled elements.\n */\n\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\n\ninput {\n  line-height: normal;\n}\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\n\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\n\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\n\ninput[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box; /* 2 */\n  box-sizing: content-box;\n}\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\n\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * Define consistent border, margin, and padding.\n */\n\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\n\nlegend {\n  border: 0; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\n\noptgroup {\n  font-weight: bold;\n}\n\n/* Tables\n   ========================================================================== */\n\n/**\n * Remove most spacing between table cells.\n */\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\ntd,\nth {\n  padding: 0;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(9);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./main.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./main.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "#imageContainer {\n  background-image: url('/images/tennis.jpg');\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 420px;\n  width: 100%;\n}\n\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {var Backbone = __webpack_require__(11);
+	var Mustache = __webpack_require__(13);
+	var login = __webpack_require__(14);
+	var main = __webpack_require__(18);
+	var match = __webpack_require__(19);
+	var profile = __webpack_require__(20);
+	var createMatch = __webpack_require__(21);
+	var feedback = __webpack_require__(22);
+	var home = __webpack_require__(23);
+	var matchModel = __webpack_require__(24)
 
 
 	var Router = Backbone.Router.extend({
@@ -9632,15 +9722,241 @@
 	    Backbone.history.start({pushState: true});
 	  },
 	  routes: {
+	    "feedback/:id":"feedback",
+	    "match/:id":"match",
+	    "login":"login",
+	    "profile":"profile",
+	    "createMatch":"createMatch",
+	    "home/:username":"home",
 	    "":"index"
 	  },
 	  index: function () {
-	        $("#container").html(login);
-	      
+	    var Match = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    description: null,
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	      },
+	  url: 'https://skill-match.herokuapp.com/api/matches/'
+	});
+
+	  var Matches = Backbone.Collection.extend({
+	  model: Match,
+	  url: 'https://skill-match.herokuapp.com/api/matches/'
+	});
+	    var match = new Match();
+	    match.fetch({
+	 success: function(resp) {
+	    var html = main({'data': resp.toJSON().results});
+	    var mainTemplate = $("#mainTemplate").text();
+	    var mainHTML = Mustache.render(mainTemplate, 'data');
+	    $("#upComing").html(mainHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp)
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+	});
+
 	  }
 	});
 
 	var router = new Router();
+	router.on('route:login', function(){
+	  var html = login;
+	        $("#container").html(html);
+	          $('#loginSubmit').on('click', function(){
+	          var username = $("#username").val();
+	          var password = $("#password").val();
+	          $.ajax({
+	        url:"https://skill-match.herokuapp.com/api/api-token-auth/",
+	        method:'POST',
+	        data: {username: username, password:password}
+	      }).then(function(resp){
+	        setToken(resp.token);
+
+	        router.navigate('/home/' + username, {trigger: true});
+
+	      });
+	    });
+	    function setToken(token) {
+	  var backboneSync = Backbone.sync;
+	  Backbone.sync = function(method,model,options) {
+	    options.headers = {
+	      'Authorization': 'Token ' + token
+	    };
+	    backboneSync(method,model,options);
+	    };
+	  }
+	       var User = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    username: null,
+	    email: null,
+	    password: null,
+	    profile: {
+	        gender: null,
+	        age: null
+	    }
+	  },
+	  url: 'https://skill-match.herokuapp.com/api/users/create/'
+	});
+
+	$("#register").on('click', function() {
+	   user = new User();
+	   user.set({
+	     username: $("#ruser").val(),
+	     email: $("#remail").val(),
+	     password:$("#rpass").val(),
+	     profile:{
+	     gender: $("#rgen").val(),
+	     age: $("#rage").val()
+	  }
+	  })
+	   var Users = Backbone.Collection.extend({
+	  model: User,
+	  url: 'https://skill-match.herokuapp.com/api/users/create/'
+	});
+	var UserCollection = new Users();
+	user.save(null, {
+	 success: function(resp) {
+	   console.log("success: ",resp)
+	   console.log("New user added.");
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+	});
+	 });
+	});
+
+	router.on('route:home', function(username){
+	  var Match = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    description: null,
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	      },
+	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	});
+	  var Matches = Backbone.Collection.extend({
+	  model: Match,
+	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	});
+	    var match = new Match();
+	    match.fetch({
+	 success: function(resp) {
+	    var html = home({'data': resp.toJSON().results});
+	    var homeTemplate = $("#mainTemplate").text();
+	    var homeHTML = Mustache.render(homeTemplate, 'data');
+	    $("#yourMatches").html(homeHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp)
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+	});
+
+	});
+
+
+	router.on('route:match', function(id) {
+	    var matchDetail = new matchContainer();
+	    matchDetail.fetch({
+	      url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
+	      success: function(resp) {
+	        var html = match({"data": resp.toJSON()});
+	        console.log("success", resp);
+	        var matchTemplate = $("#matchTemplate").text();
+	        var matchHTML = Mustache.render(matchTemplate, 'data');
+	        $("#matchDetailContainer").html(matchHTML);
+	        $("#container").html(html);
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	      })
+	    });
+
+	router.on('route:profile', function() {
+	  var html = profile;
+	  $("#container").html(html);
+	  $("#goToFeedback").on('click', function() {
+	    router.navigate('/feedback', {trigger: true});
+	  })
+	});
+
+	var matchContainer = Backbone.Model.extend({
+	  initialize: function() {
+	    var park = $('option')
+	  },
+	  defaults: {
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	    },
+	    Model: matchContainer,
+	    url: 'https://skill-match.herokuapp.com/api/matches/'
+	  });
+
+	router.on('route:createMatch', function(id) {
+	  var html = createMatch;
+	  $("#container").html(html);
+	  $("#createMatch").on('click', function(e) {
+	    e.preventDefault();
+	    matchAdd = new matchContainer();
+	    matchAdd.set({
+	    park: $("#addPark").val(),
+	    sport: $("#addSport").val(),
+	    skill_level:$("#addSkill").val(),
+	    date: $("#addDate").val(),
+	    time: $("#addTime").val()
+	  });
+	  matchAdd.save(null, {
+	    url: 'https://skill-match.herokuapp.com/api/matches/',
+	      success: function(resp) {
+	        console.log("success", resp);
+	        var id = resp.toJSON().id;
+	        console.log(id);
+	        router.navigate('/match/' + id, {trigger: true});
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	  });
+	      $("#addPark").val("");
+	      $("#addSport").val("");
+	      $("#addSkill").val("");
+	      $("#addDate").val("");
+	      $("#addTime").val("");
+	  });
+	});
+
+	router.on('route:feedback', function(id){
+	  var html = feedback;
+	  $("#container").html(html);
+	});
+
+	$('body').on('click', 'button', function (e){
+	  e.preventDefault();
+	  var href = $(this).attr('href').substr(1);
+	  router.navigate(href, {trigger:true});
+	});
 
 	$('body').on('click', 'a', function (e){
 	  e.preventDefault();
@@ -9648,11 +9964,12 @@
 	  router.navigate(href, {trigger:true});
 	});
 
+
 	module.exports = router;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 7 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {//     Backbone.js 1.2.3
@@ -9671,7 +9988,7 @@
 
 	  // Set up Backbone appropriately for the environment. Start with AMD.
 	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(8), __webpack_require__(1), exports], __WEBPACK_AMD_DEFINE_RESULT__ = function(_, $, exports) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(12), __webpack_require__(1), exports], __WEBPACK_AMD_DEFINE_RESULT__ = function(_, $, exports) {
 	      // Export global even in AMD case in case this script is loaded with
 	      // others that may still expect a global Backbone.
 	      root.Backbone = factory(root, exports, _, $);
@@ -11553,7 +11870,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 8 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
@@ -13107,14 +13424,647 @@
 
 
 /***/ },
-/* 9 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(10);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<h2>LOG IN</h2>");t.b("\n" + i);t.b("<form>");t.b("\n" + i);t.b("  <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input type=\"email\" placeholder=\"EMAIL\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input type=\"password\" placeholder=\"PASSWORD\">");t.b("\n" + i);t.b("</form>");t.b("\n");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("<form>");t.b("\n" + i);t.b("  <label>FIRST NAME:</label>");t.b("\n" + i);t.b("  <input type=\"text\" placeholder=\"First Name\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>LAST NAME:</label>");t.b("\n" + i);t.b("  <input type=\"text\" placeholder=\"Last Name\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>SEX:</label>");t.b("\n" + i);t.b("  <input type=\"radio\" name=\"Sex\" value=\"male\"> Male");t.b("\n" + i);t.b("  <input type=\"radio\" name=\"Sex\" value=\"female\"> Female");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b(">>>>>>> nick");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<h2>LOG IN</h2>\n<form>\n  <label>EMAIL:</label>\n  <input type=\"email\" placeholder=\"EMAIL\">\n  </br>\n  <label>PASSWORD:</label>\n  <input type=\"password\" placeholder=\"PASSWORD\">\n</form>\n\n<h2>REGISTER</h2>\n<form>\n  <label>FIRST NAME:</label>\n  <input type=\"text\" placeholder=\"First Name\">\n  </br>\n  <label>LAST NAME:</label>\n  <input type=\"text\" placeholder=\"Last Name\">\n  </br>\n  <label>USERNAME:</label>\n  <input type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>SEX:</label>\n  <input type=\"radio\" name=\"Sex\" value=\"male\"> Male\n  <input type=\"radio\" name=\"Sex\" value=\"female\"> Female\n</form>\n>>>>>>> nick\n", H);return T.render.apply(T, arguments); };
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * mustache.js - Logic-less {{mustache}} templates with JavaScript
+	 * http://github.com/janl/mustache.js
+	 */
+
+	/*global define: false Mustache: true*/
+
+	(function defineMustache (global, factory) {
+	  if (typeof exports === 'object' && exports && typeof exports.nodeName !== 'string') {
+	    factory(exports); // CommonJS
+	  } else if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)); // AMD
+	  } else {
+	    global.Mustache = {};
+	    factory(Mustache); // script, wsh, asp
+	  }
+	}(this, function mustacheFactory (mustache) {
+
+	  var objectToString = Object.prototype.toString;
+	  var isArray = Array.isArray || function isArrayPolyfill (object) {
+	    return objectToString.call(object) === '[object Array]';
+	  };
+
+	  function isFunction (object) {
+	    return typeof object === 'function';
+	  }
+
+	  /**
+	   * More correct typeof string handling array
+	   * which normally returns typeof 'object'
+	   */
+	  function typeStr (obj) {
+	    return isArray(obj) ? 'array' : typeof obj;
+	  }
+
+	  function escapeRegExp (string) {
+	    return string.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&');
+	  }
+
+	  /**
+	   * Null safe way of checking whether or not an object,
+	   * including its prototype, has a given property
+	   */
+	  function hasProperty (obj, propName) {
+	    return obj != null && typeof obj === 'object' && (propName in obj);
+	  }
+
+	  // Workaround for https://issues.apache.org/jira/browse/COUCHDB-577
+	  // See https://github.com/janl/mustache.js/issues/189
+	  var regExpTest = RegExp.prototype.test;
+	  function testRegExp (re, string) {
+	    return regExpTest.call(re, string);
+	  }
+
+	  var nonSpaceRe = /\S/;
+	  function isWhitespace (string) {
+	    return !testRegExp(nonSpaceRe, string);
+	  }
+
+	  var entityMap = {
+	    '&': '&amp;',
+	    '<': '&lt;',
+	    '>': '&gt;',
+	    '"': '&quot;',
+	    "'": '&#39;',
+	    '/': '&#x2F;'
+	  };
+
+	  function escapeHtml (string) {
+	    return String(string).replace(/[&<>"'\/]/g, function fromEntityMap (s) {
+	      return entityMap[s];
+	    });
+	  }
+
+	  var whiteRe = /\s*/;
+	  var spaceRe = /\s+/;
+	  var equalsRe = /\s*=/;
+	  var curlyRe = /\s*\}/;
+	  var tagRe = /#|\^|\/|>|\{|&|=|!/;
+
+	  /**
+	   * Breaks up the given `template` string into a tree of tokens. If the `tags`
+	   * argument is given here it must be an array with two string values: the
+	   * opening and closing tags used in the template (e.g. [ "<%", "%>" ]). Of
+	   * course, the default is to use mustaches (i.e. mustache.tags).
+	   *
+	   * A token is an array with at least 4 elements. The first element is the
+	   * mustache symbol that was used inside the tag, e.g. "#" or "&". If the tag
+	   * did not contain a symbol (i.e. {{myValue}}) this element is "name". For
+	   * all text that appears outside a symbol this element is "text".
+	   *
+	   * The second element of a token is its "value". For mustache tags this is
+	   * whatever else was inside the tag besides the opening symbol. For text tokens
+	   * this is the text itself.
+	   *
+	   * The third and fourth elements of the token are the start and end indices,
+	   * respectively, of the token in the original template.
+	   *
+	   * Tokens that are the root node of a subtree contain two more elements: 1) an
+	   * array of tokens in the subtree and 2) the index in the original template at
+	   * which the closing tag for that section begins.
+	   */
+	  function parseTemplate (template, tags) {
+	    if (!template)
+	      return [];
+
+	    var sections = [];     // Stack to hold section tokens
+	    var tokens = [];       // Buffer to hold the tokens
+	    var spaces = [];       // Indices of whitespace tokens on the current line
+	    var hasTag = false;    // Is there a {{tag}} on the current line?
+	    var nonSpace = false;  // Is there a non-space char on the current line?
+
+	    // Strips all whitespace tokens array for the current line
+	    // if there was a {{#tag}} on it and otherwise only space.
+	    function stripSpace () {
+	      if (hasTag && !nonSpace) {
+	        while (spaces.length)
+	          delete tokens[spaces.pop()];
+	      } else {
+	        spaces = [];
+	      }
+
+	      hasTag = false;
+	      nonSpace = false;
+	    }
+
+	    var openingTagRe, closingTagRe, closingCurlyRe;
+	    function compileTags (tagsToCompile) {
+	      if (typeof tagsToCompile === 'string')
+	        tagsToCompile = tagsToCompile.split(spaceRe, 2);
+
+	      if (!isArray(tagsToCompile) || tagsToCompile.length !== 2)
+	        throw new Error('Invalid tags: ' + tagsToCompile);
+
+	      openingTagRe = new RegExp(escapeRegExp(tagsToCompile[0]) + '\\s*');
+	      closingTagRe = new RegExp('\\s*' + escapeRegExp(tagsToCompile[1]));
+	      closingCurlyRe = new RegExp('\\s*' + escapeRegExp('}' + tagsToCompile[1]));
+	    }
+
+	    compileTags(tags || mustache.tags);
+
+	    var scanner = new Scanner(template);
+
+	    var start, type, value, chr, token, openSection;
+	    while (!scanner.eos()) {
+	      start = scanner.pos;
+
+	      // Match any text between tags.
+	      value = scanner.scanUntil(openingTagRe);
+
+	      if (value) {
+	        for (var i = 0, valueLength = value.length; i < valueLength; ++i) {
+	          chr = value.charAt(i);
+
+	          if (isWhitespace(chr)) {
+	            spaces.push(tokens.length);
+	          } else {
+	            nonSpace = true;
+	          }
+
+	          tokens.push([ 'text', chr, start, start + 1 ]);
+	          start += 1;
+
+	          // Check for whitespace on the current line.
+	          if (chr === '\n')
+	            stripSpace();
+	        }
+	      }
+
+	      // Match the opening tag.
+	      if (!scanner.scan(openingTagRe))
+	        break;
+
+	      hasTag = true;
+
+	      // Get the tag type.
+	      type = scanner.scan(tagRe) || 'name';
+	      scanner.scan(whiteRe);
+
+	      // Get the tag value.
+	      if (type === '=') {
+	        value = scanner.scanUntil(equalsRe);
+	        scanner.scan(equalsRe);
+	        scanner.scanUntil(closingTagRe);
+	      } else if (type === '{') {
+	        value = scanner.scanUntil(closingCurlyRe);
+	        scanner.scan(curlyRe);
+	        scanner.scanUntil(closingTagRe);
+	        type = '&';
+	      } else {
+	        value = scanner.scanUntil(closingTagRe);
+	      }
+
+	      // Match the closing tag.
+	      if (!scanner.scan(closingTagRe))
+	        throw new Error('Unclosed tag at ' + scanner.pos);
+
+	      token = [ type, value, start, scanner.pos ];
+	      tokens.push(token);
+
+	      if (type === '#' || type === '^') {
+	        sections.push(token);
+	      } else if (type === '/') {
+	        // Check section nesting.
+	        openSection = sections.pop();
+
+	        if (!openSection)
+	          throw new Error('Unopened section "' + value + '" at ' + start);
+
+	        if (openSection[1] !== value)
+	          throw new Error('Unclosed section "' + openSection[1] + '" at ' + start);
+	      } else if (type === 'name' || type === '{' || type === '&') {
+	        nonSpace = true;
+	      } else if (type === '=') {
+	        // Set the tags for the next time around.
+	        compileTags(value);
+	      }
+	    }
+
+	    // Make sure there are no open sections when we're done.
+	    openSection = sections.pop();
+
+	    if (openSection)
+	      throw new Error('Unclosed section "' + openSection[1] + '" at ' + scanner.pos);
+
+	    return nestTokens(squashTokens(tokens));
+	  }
+
+	  /**
+	   * Combines the values of consecutive text tokens in the given `tokens` array
+	   * to a single token.
+	   */
+	  function squashTokens (tokens) {
+	    var squashedTokens = [];
+
+	    var token, lastToken;
+	    for (var i = 0, numTokens = tokens.length; i < numTokens; ++i) {
+	      token = tokens[i];
+
+	      if (token) {
+	        if (token[0] === 'text' && lastToken && lastToken[0] === 'text') {
+	          lastToken[1] += token[1];
+	          lastToken[3] = token[3];
+	        } else {
+	          squashedTokens.push(token);
+	          lastToken = token;
+	        }
+	      }
+	    }
+
+	    return squashedTokens;
+	  }
+
+	  /**
+	   * Forms the given array of `tokens` into a nested tree structure where
+	   * tokens that represent a section have two additional items: 1) an array of
+	   * all tokens that appear in that section and 2) the index in the original
+	   * template that represents the end of that section.
+	   */
+	  function nestTokens (tokens) {
+	    var nestedTokens = [];
+	    var collector = nestedTokens;
+	    var sections = [];
+
+	    var token, section;
+	    for (var i = 0, numTokens = tokens.length; i < numTokens; ++i) {
+	      token = tokens[i];
+
+	      switch (token[0]) {
+	      case '#':
+	      case '^':
+	        collector.push(token);
+	        sections.push(token);
+	        collector = token[4] = [];
+	        break;
+	      case '/':
+	        section = sections.pop();
+	        section[5] = token[2];
+	        collector = sections.length > 0 ? sections[sections.length - 1][4] : nestedTokens;
+	        break;
+	      default:
+	        collector.push(token);
+	      }
+	    }
+
+	    return nestedTokens;
+	  }
+
+	  /**
+	   * A simple string scanner that is used by the template parser to find
+	   * tokens in template strings.
+	   */
+	  function Scanner (string) {
+	    this.string = string;
+	    this.tail = string;
+	    this.pos = 0;
+	  }
+
+	  /**
+	   * Returns `true` if the tail is empty (end of string).
+	   */
+	  Scanner.prototype.eos = function eos () {
+	    return this.tail === '';
+	  };
+
+	  /**
+	   * Tries to match the given regular expression at the current position.
+	   * Returns the matched text if it can match, the empty string otherwise.
+	   */
+	  Scanner.prototype.scan = function scan (re) {
+	    var match = this.tail.match(re);
+
+	    if (!match || match.index !== 0)
+	      return '';
+
+	    var string = match[0];
+
+	    this.tail = this.tail.substring(string.length);
+	    this.pos += string.length;
+
+	    return string;
+	  };
+
+	  /**
+	   * Skips all text until the given regular expression can be matched. Returns
+	   * the skipped string, which is the entire tail if no match can be made.
+	   */
+	  Scanner.prototype.scanUntil = function scanUntil (re) {
+	    var index = this.tail.search(re), match;
+
+	    switch (index) {
+	    case -1:
+	      match = this.tail;
+	      this.tail = '';
+	      break;
+	    case 0:
+	      match = '';
+	      break;
+	    default:
+	      match = this.tail.substring(0, index);
+	      this.tail = this.tail.substring(index);
+	    }
+
+	    this.pos += match.length;
+
+	    return match;
+	  };
+
+	  /**
+	   * Represents a rendering context by wrapping a view object and
+	   * maintaining a reference to the parent context.
+	   */
+	  function Context (view, parentContext) {
+	    this.view = view;
+	    this.cache = { '.': this.view };
+	    this.parent = parentContext;
+	  }
+
+	  /**
+	   * Creates a new context using the given view with this context
+	   * as the parent.
+	   */
+	  Context.prototype.push = function push (view) {
+	    return new Context(view, this);
+	  };
+
+	  /**
+	   * Returns the value of the given name in this context, traversing
+	   * up the context hierarchy if the value is absent in this context's view.
+	   */
+	  Context.prototype.lookup = function lookup (name) {
+	    var cache = this.cache;
+
+	    var value;
+	    if (cache.hasOwnProperty(name)) {
+	      value = cache[name];
+	    } else {
+	      var context = this, names, index, lookupHit = false;
+
+	      while (context) {
+	        if (name.indexOf('.') > 0) {
+	          value = context.view;
+	          names = name.split('.');
+	          index = 0;
+
+	          /**
+	           * Using the dot notion path in `name`, we descend through the
+	           * nested objects.
+	           *
+	           * To be certain that the lookup has been successful, we have to
+	           * check if the last object in the path actually has the property
+	           * we are looking for. We store the result in `lookupHit`.
+	           *
+	           * This is specially necessary for when the value has been set to
+	           * `undefined` and we want to avoid looking up parent contexts.
+	           **/
+	          while (value != null && index < names.length) {
+	            if (index === names.length - 1)
+	              lookupHit = hasProperty(value, names[index]);
+
+	            value = value[names[index++]];
+	          }
+	        } else {
+	          value = context.view[name];
+	          lookupHit = hasProperty(context.view, name);
+	        }
+
+	        if (lookupHit)
+	          break;
+
+	        context = context.parent;
+	      }
+
+	      cache[name] = value;
+	    }
+
+	    if (isFunction(value))
+	      value = value.call(this.view);
+
+	    return value;
+	  };
+
+	  /**
+	   * A Writer knows how to take a stream of tokens and render them to a
+	   * string, given a context. It also maintains a cache of templates to
+	   * avoid the need to parse the same template twice.
+	   */
+	  function Writer () {
+	    this.cache = {};
+	  }
+
+	  /**
+	   * Clears all cached templates in this writer.
+	   */
+	  Writer.prototype.clearCache = function clearCache () {
+	    this.cache = {};
+	  };
+
+	  /**
+	   * Parses and caches the given `template` and returns the array of tokens
+	   * that is generated from the parse.
+	   */
+	  Writer.prototype.parse = function parse (template, tags) {
+	    var cache = this.cache;
+	    var tokens = cache[template];
+
+	    if (tokens == null)
+	      tokens = cache[template] = parseTemplate(template, tags);
+
+	    return tokens;
+	  };
+
+	  /**
+	   * High-level method that is used to render the given `template` with
+	   * the given `view`.
+	   *
+	   * The optional `partials` argument may be an object that contains the
+	   * names and templates of partials that are used in the template. It may
+	   * also be a function that is used to load partial templates on the fly
+	   * that takes a single argument: the name of the partial.
+	   */
+	  Writer.prototype.render = function render (template, view, partials) {
+	    var tokens = this.parse(template);
+	    var context = (view instanceof Context) ? view : new Context(view);
+	    return this.renderTokens(tokens, context, partials, template);
+	  };
+
+	  /**
+	   * Low-level method that renders the given array of `tokens` using
+	   * the given `context` and `partials`.
+	   *
+	   * Note: The `originalTemplate` is only ever used to extract the portion
+	   * of the original template that was contained in a higher-order section.
+	   * If the template doesn't use higher-order sections, this argument may
+	   * be omitted.
+	   */
+	  Writer.prototype.renderTokens = function renderTokens (tokens, context, partials, originalTemplate) {
+	    var buffer = '';
+
+	    var token, symbol, value;
+	    for (var i = 0, numTokens = tokens.length; i < numTokens; ++i) {
+	      value = undefined;
+	      token = tokens[i];
+	      symbol = token[0];
+
+	      if (symbol === '#') value = this.renderSection(token, context, partials, originalTemplate);
+	      else if (symbol === '^') value = this.renderInverted(token, context, partials, originalTemplate);
+	      else if (symbol === '>') value = this.renderPartial(token, context, partials, originalTemplate);
+	      else if (symbol === '&') value = this.unescapedValue(token, context);
+	      else if (symbol === 'name') value = this.escapedValue(token, context);
+	      else if (symbol === 'text') value = this.rawValue(token);
+
+	      if (value !== undefined)
+	        buffer += value;
+	    }
+
+	    return buffer;
+	  };
+
+	  Writer.prototype.renderSection = function renderSection (token, context, partials, originalTemplate) {
+	    var self = this;
+	    var buffer = '';
+	    var value = context.lookup(token[1]);
+
+	    // This function is used to render an arbitrary template
+	    // in the current context by higher-order sections.
+	    function subRender (template) {
+	      return self.render(template, context, partials);
+	    }
+
+	    if (!value) return;
+
+	    if (isArray(value)) {
+	      for (var j = 0, valueLength = value.length; j < valueLength; ++j) {
+	        buffer += this.renderTokens(token[4], context.push(value[j]), partials, originalTemplate);
+	      }
+	    } else if (typeof value === 'object' || typeof value === 'string' || typeof value === 'number') {
+	      buffer += this.renderTokens(token[4], context.push(value), partials, originalTemplate);
+	    } else if (isFunction(value)) {
+	      if (typeof originalTemplate !== 'string')
+	        throw new Error('Cannot use higher-order sections without the original template');
+
+	      // Extract the portion of the original template that the section contains.
+	      value = value.call(context.view, originalTemplate.slice(token[3], token[5]), subRender);
+
+	      if (value != null)
+	        buffer += value;
+	    } else {
+	      buffer += this.renderTokens(token[4], context, partials, originalTemplate);
+	    }
+	    return buffer;
+	  };
+
+	  Writer.prototype.renderInverted = function renderInverted (token, context, partials, originalTemplate) {
+	    var value = context.lookup(token[1]);
+
+	    // Use JavaScript's definition of falsy. Include empty arrays.
+	    // See https://github.com/janl/mustache.js/issues/186
+	    if (!value || (isArray(value) && value.length === 0))
+	      return this.renderTokens(token[4], context, partials, originalTemplate);
+	  };
+
+	  Writer.prototype.renderPartial = function renderPartial (token, context, partials) {
+	    if (!partials) return;
+
+	    var value = isFunction(partials) ? partials(token[1]) : partials[token[1]];
+	    if (value != null)
+	      return this.renderTokens(this.parse(value), context, partials, value);
+	  };
+
+	  Writer.prototype.unescapedValue = function unescapedValue (token, context) {
+	    var value = context.lookup(token[1]);
+	    if (value != null)
+	      return value;
+	  };
+
+	  Writer.prototype.escapedValue = function escapedValue (token, context) {
+	    var value = context.lookup(token[1]);
+	    if (value != null)
+	      return mustache.escape(value);
+	  };
+
+	  Writer.prototype.rawValue = function rawValue (token) {
+	    return token[1];
+	  };
+
+	  mustache.name = 'mustache.js';
+	  mustache.version = '2.2.0';
+	  mustache.tags = [ '{{', '}}' ];
+
+	  // All high-level mustache.* functions use this writer.
+	  var defaultWriter = new Writer();
+
+	  /**
+	   * Clears all cached templates in the default writer.
+	   */
+	  mustache.clearCache = function clearCache () {
+	    return defaultWriter.clearCache();
+	  };
+
+	  /**
+	   * Parses and caches the given template in the default writer and returns the
+	   * array of tokens it contains. Doing this ahead of time avoids the need to
+	   * parse templates on the fly as they are rendered.
+	   */
+	  mustache.parse = function parse (template, tags) {
+	    return defaultWriter.parse(template, tags);
+	  };
+
+	  /**
+	   * Renders the `template` with the given `view` and `partials` using the
+	   * default writer.
+	   */
+	  mustache.render = function render (template, view, partials) {
+	    if (typeof template !== 'string') {
+	      throw new TypeError('Invalid template! Template should be a "string" ' +
+	                          'but "' + typeStr(template) + '" was given as the first ' +
+	                          'argument for mustache#render(template, view, partials)');
+	    }
+
+	    return defaultWriter.render(template, view, partials);
+	  };
+
+	  // This is here for backwards compatibility with 0.4.x.,
+	  /*eslint-disable */ // eslint wants camel cased function name
+	  mustache.to_html = function to_html (template, view, partials, send) {
+	    /*eslint-enable*/
+
+	    var result = mustache.render(template, view, partials);
+
+	    if (isFunction(send)) {
+	      send(result);
+	    } else {
+	      return result;
+	    }
+	  };
+
+	  // Export the escaping function so that the user may override it.
+	  // See https://github.com/janl/mustache.js/issues/244
+	  mustache.escape = escapeHtml;
+
+	  // Export these mainly for testing, but also for advanced usage.
+	  mustache.Scanner = Scanner;
+	  mustache.Context = Context;
+	  mustache.Writer = Writer;
+
+	}));
+
 
 /***/ },
-/* 10 */
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(15);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<h2>LOG IN Page</h2>");t.b("\n" + i);t.b("<form>");t.b("\n" + i);t.b("  <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"username\" type=\"email\" placeholder=\"EMAIL\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <button id=\"loginSubmit\" type=\"submit\" href=\"/home\">Submit</button>");t.b("\n" + i);t.b("</form>");t.b("\n");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("<form>");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>GENDER:</label>");t.b("\n" + i);t.b("  <input id=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\"> Male");t.b("\n" + i);t.b("  <input id=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\"> Female");t.b("\n" + i);t.b("  <input id=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\"> Other");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select>");t.b("\n" + i);t.b("  <button id=\"register\" type=\"submit\" href=\"/login\">Submit</button>");t.b("\n" + i);t.b("</form>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<h2>LOG IN Page</h2>\n<form>\n  <label>EMAIL:</label>\n  <input id=\"username\" type=\"email\" placeholder=\"EMAIL\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">\n  </br>\n  <button id=\"loginSubmit\" type=\"submit\" href=\"/home\">Submit</button>\n</form>\n\n<h2>REGISTER</h2>\n<form>\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>GENDER:</label>\n  <input id=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\"> Male\n  <input id=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\"> Female\n  <input id=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\"> Other\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select>\n  <button id=\"register\" type=\"submit\" href=\"/login\">Submit</button>\n</form>\n\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -13134,14 +14084,14 @@
 
 	// This file is for use with Node.js. See dist/ for browser files.
 
-	var Hogan = __webpack_require__(11);
-	Hogan.Template = __webpack_require__(12).Template;
+	var Hogan = __webpack_require__(16);
+	Hogan.Template = __webpack_require__(17).Template;
 	Hogan.template = Hogan.Template;
 	module.exports = Hogan;
 
 
 /***/ },
-/* 11 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -13570,7 +14520,7 @@
 
 
 /***/ },
-/* 12 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -13915,6 +14865,71 @@
 
 	})( true ? exports : Hogan);
 
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(15);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <button type=\"submit\" href=\"/createMatch\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,128,426,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li> <a href=\"/profile\"> ");t.b(t.v(t.f("creator",c,p,0)));t.b(" </a>");t.b("\n" + i);t.b("  <li> Description: </li>");t.b("\n" + i);t.b("  <li> Park: ");t.b(t.v(t.f("park",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Skill level:  ");t.b(t.v(t.f("skill_level",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <button type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Accept </button>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"imageContainer\">\n  <button type=\"submit\" href=\"/createMatch\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n<ul>\n  <li> <a href=\"/profile\"> {{creator}} </a>\n  <li> Description: </li>\n  <li> Park: {{park}} </li>\n  <li> Sport: {{sport}}</li>\n  <li> Skill level:  {{skill_level}}</li>\n  <li> Date: {{date}}</li>\n  <li> Time: {{time}}</li>\n  <button type=\"sumbit\" href=\"/match/{{id}}\"> Accept </button>\n</ul>\n{{/data}}\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(15);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<h2>Match Page</h2>");t.b("\n");t.b("\n" + i);t.b("<div id=\"matchDetailContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,64,371,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li><a href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("creator",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> Park: ");t.b(t.v(t.f("park",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li> Skill: ");t.b(t.v(t.f("skill_level",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <button id=\"setMatch\" type=\"sumbit\" href=\"/match/id\"> Sign Up </button>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<h2>Match Page</h2>\n\n<div id=\"matchDetailContainer\">\n  {{#data}}\n  <ul>\n    <li><a href=\"/feedback/{{id}}\">{{creator}}</a></li>\n    <li> Sport: {{sport}} </li>\n    <li> Time: {{time}}</li>\n    <li> Date: {{date}}</li>\n    <li> Park: {{park}} </li>\n    <li> Skill: {{skill_level}}</li>\n    <button id=\"setMatch\" type=\"sumbit\" href=\"/match/id\"> Sign Up </button>\n  </ul>\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(15);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<h2>Profile Page</h2>");t.b("\n");t.b("\n" + i);t.b("<button type=\"submit\">Log In</button>");t.b("\n" + i);t.b("<button type=\"submit\">Sign Up</button>");t.b("\n");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <h2> Upcoming Matches </h2>");t.b("\n" + i);t.b("  <li> Match: Bob </li>");t.b("\n" + i);t.b("  <li> Skill: 40/100 </li>");t.b("\n" + i);t.b("  <li> Sportsmanship: 70/100 </li>");t.b("\n" + i);t.b("  <li> Experience: 35 Tennis matches </li>");t.b("\n" + i);t.b("  <button type=\"submit\"> Challenge </button>");t.b("\n" + i);t.b("</ul>");t.b("\n");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <h2> History of Matches </h2>");t.b("\n" + i);t.b("  <li> Match: Tom </li>");t.b("\n" + i);t.b("  <li> Experience: 35 Tennis matches </li>");t.b("\n" + i);t.b("  <button id=\"goToFeedback\" type=\"submit\"> Feedback </button>");t.b("\n" + i);t.b("</ul>");t.b("\n");t.b("\n");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<h2>Profile Page</h2>\n\n<button type=\"submit\">Log In</button>\n<button type=\"submit\">Sign Up</button>\n\n<ul>\n  <h2> Upcoming Matches </h2>\n  <li> Match: Bob </li>\n  <li> Skill: 40/100 </li>\n  <li> Sportsmanship: 70/100 </li>\n  <li> Experience: 35 Tennis matches </li>\n  <button type=\"submit\"> Challenge </button>\n</ul>\n\n<ul>\n  <h2> History of Matches </h2>\n  <li> Match: Tom </li>\n  <li> Experience: 35 Tennis matches </li>\n  <button id=\"goToFeedback\" type=\"submit\"> Feedback </button>\n</ul>\n\n\n\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(15);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<h2> Create Match Page </h2>");t.b("\n");t.b("\n" + i);t.b("<button type=\"submit\">Log In</button>");t.b("\n" + i);t.b("<button type=\"submit\">Sign Up</button>");t.b("\n");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <h3> Create Game </h3>");t.b("\n" + i);t.b("  <li> Sport:</li> <input id=\"addSport\"type=\"text\" placeholder=\"Add Sport\">");t.b("\n" + i);t.b("  <li> Date:</li>  <input id=\"addDate\" type=\"date\">");t.b("\n" + i);t.b("  <li> Time:</li> <input id=\"addTime\" type=\"time\">");t.b("\n" + i);t.b("  <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"text\">");t.b("\n" + i);t.b("  <li> Park:</li>");t.b("\n" + i);t.b("  <select id=\"addPark\" name=\"park\">");t.b("\n" + i);t.b("  <option value=\"2\">Sunset</option>");t.b("\n" + i);t.b("  </select>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</ul>");return t.fl(); },partials: {}, subs: {  }}, "<h2> Create Match Page </h2>\n\n<button type=\"submit\">Log In</button>\n<button type=\"submit\">Sign Up</button>\n\n<ul>\n  <h3> Create Game </h3>\n  <li> Sport:</li> <input id=\"addSport\"type=\"text\" placeholder=\"Add Sport\">\n  <li> Date:</li>  <input id=\"addDate\" type=\"date\">\n  <li> Time:</li> <input id=\"addTime\" type=\"time\">\n  <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"text\">\n  <li> Park:</li>\n  <select id=\"addPark\" name=\"park\">\n  <option value=\"2\">Sunset</option>\n  </select>\n  <button id=\"createMatch\" type=\"submit\">Submit</button>\n</ul>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(15);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div>");t.b("\n" + i);t.b("<h3>Skill level of player</h3>");t.b("\n" + i);t.b("  <form>");t.b("\n" + i);t.b("    <input id=\"addSkillFeedback\" type=\"text\" placeholder=\"Skill\">");t.b("\n" + i);t.b("  <form>");t.b("\n" + i);t.b("<h3>How fun was the match</h3>");t.b("\n" + i);t.b("  <form>");t.b("\n" + i);t.b("    <input id=\"addFunFeedback\" type=\"text\" placeholder=\"Fun\">");t.b("\n" + i);t.b("  <form>");t.b("\n" + i);t.b("<h3>Crowd level</h3>");t.b("\n" + i);t.b("  <form>");t.b("\n" + i);t.b("    <input id=\"addCrowdFeedback\" type=\"text\" placeholder=\"Crowd Level\">");t.b("\n" + i);t.b("  <form>");t.b("\n" + i);t.b("<button id=\"submitFeedback \"type=\"sumbit\" href=\"/home\"> Feedback </button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div>\n<h3>Skill level of player</h3>\n  <form>\n    <input id=\"addSkillFeedback\" type=\"text\" placeholder=\"Skill\">\n  <form>\n<h3>How fun was the match</h3>\n  <form>\n    <input id=\"addFunFeedback\" type=\"text\" placeholder=\"Fun\">\n  <form>\n<h3>Crowd level</h3>\n  <form>\n    <input id=\"addCrowdFeedback\" type=\"text\" placeholder=\"Crowd Level\">\n  <form>\n<button id=\"submitFeedback \"type=\"sumbit\" href=\"/home\"> Feedback </button>\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(15);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<h2> Main Page </h2>");t.b("\n");t.b("\n");t.b("\n" + i);t.b("<button type=\"submit\" href=\"/createMatch\">Create Match</button>");t.b("\n");t.b("\n" + i);t.b("<div id=\"yourMatches\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,120,381,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li> Description:");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Park: ");t.b(t.v(t.f("park",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Skill level:  ");t.b(t.v(t.f("skill_level",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <button type=\"sumbit\" href=\"/match\"> Accept </button>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<h2> Main Page </h2>\n\n\n<button type=\"submit\" href=\"/createMatch\">Create Match</button>\n\n<div id=\"yourMatches\">\n{{#data}}\n<ul>\n  <li> Description:{{description}}</li>\n  <li> Park: {{park}} </li>\n  <li> Sport: {{sport}}</li>\n  <li> Skill level:  {{skill_level}}</li>\n  <li> Date: {{date}}</li>\n  <li> Time: {{time}}</li>\n  <button type=\"sumbit\" href=\"/match\"> Accept </button>\n</ul>\n{{/data}}\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Backbone = __webpack_require__(11);
+
+	var matchContainer = Backbone.Model.extend({
+	  initialize: function() {
+	  },
+	  defaults: {
+	    title: null,
+	    description: null,
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	    },
+	    Model: matchContainer,
+	    url: 'https://skill-match.herokuapp.com/api/matches/'
+	  });
+	 module.exports = matchContainer;
 
 /***/ }
 /******/ ]);

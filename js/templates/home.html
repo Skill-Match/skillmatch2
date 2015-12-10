@@ -3,16 +3,16 @@
 
 <button type="submit" href="/createMatch">Create Match</button>
 
-<div id="yourMatches">
+<div id="upComing">
 {{#data}}
 <ul>
-  <li> Description:{{description}}</li>
+  <li> <a href="/profile"> {{creator}} </a>
+  <li> Description: </li>
   <li> Park: {{park}} </li>
   <li> Sport: {{sport}}</li>
   <li> Skill level:  {{skill_level}}</li>
   <li> Date: {{date}}</li>
   <li> Time: {{time}}</li>
-  <button type="sumbit" href="/match"> Accept </button>
 </ul>
 {{/data}}
 </div>
