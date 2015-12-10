@@ -177,6 +177,31 @@ router.on('route:match', function(id) {
         var matchHTML = Mustache.render(matchTemplate, 'data');
         $("#matchDetailContainer").html(matchHTML);
         $("#container").html(html);
+        var Join = Backbone.Model.extend({
+      initialize: function () {
+      },
+      defaults: {},
+      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/signup/'
+    });
+
+      var Joins = Backbone.Collection.extend({
+      model: Join,
+      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/signup/'
+    });
+      $("#join").on('click', function() {
+        console.log(id)
+        var join = new Join();
+        join.set({id:id})
+          join.save(null, {
+      success: function(resp) {
+        console.log("success", resp);
+        router.navigate('/match/' + id, {trigger: true});
+      },
+      error: function(err) {
+        console.log("error", err);
+      }
+  });
+    });
       },
       error: function(err) {
         console.log("error", err);
