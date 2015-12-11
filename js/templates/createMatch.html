@@ -1,9 +1,6 @@
 <h2> Create Match Page </h2>
 
-<button type="submit">Log In</button>
-<button type="submit">Sign Up</button>
-
-<ul>
+<ul id="create">
   <h3> Create Game </h3>
   <li> Sport:</li> <input id="addSport"type="text" placeholder="Add Sport">
   <li> Date:</li>  <input id="addDate" type="date">
@@ -11,7 +8,9 @@
   <li> Skill: 1-100</li> <input id="addSkill" type="text">
   <li> Park:</li>
   <select id="addPark" name="park">
-  <option value="3">Red Ridge</option>
+  {{#park}}
+  <option value="{{id}}">{{name}}</option>
+  {{/park}}
   </select>
   <button id="createMatch" type="submit">Submit</button>
 </ul>

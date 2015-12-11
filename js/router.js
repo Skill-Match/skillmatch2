@@ -249,7 +249,6 @@ router.on('route:profile', function(creator) {
 
 var matchContainer = Backbone.Model.extend({
   initialize: function() {
-    var park = $('option')
   },
   defaults: {
     park: null,
@@ -263,8 +262,30 @@ var matchContainer = Backbone.Model.extend({
   });
 
 router.on('route:createMatch', function(id) {
-  var html = createMatch;
-  $("#container").html(html);
+  
+  var Park = Backbone.Model.extend({
+  initialize: function () {
+  },
+  defaults: {
+    id: null,
+    name: null
+      },
+  url: 'https://skill-match.herokuapp.com/api/parks/'
+});
+  var Parks = Backbone.Collection.extend({
+  model: Park,
+  url: 'https://skill-match.herokuapp.com/api/parks/'
+});
+    var park = new Parks();
+    park.fetch({
+ success: function(resp) {
+    var html = createMatch({'park': resp.toJSON()[0].results});
+    var createMatchTemplate = $("#mainTemplate").text();
+    var createMatchHTML = Mustache.render(createMatchTemplate, 'park');
+    $("#create").html(createMatchHTML);
+    $("#container").html(html);
+
+   console.log("success: ",resp)
   $("#createMatch").on('click', function(e) {
     e.preventDefault();
     matchAdd = new matchContainer();
@@ -293,6 +314,12 @@ router.on('route:createMatch', function(id) {
       $("#addDate").val("");
       $("#addTime").val("");
   });
+ },
+ error: function(err) {
+   console.log("nope")
+ }
+
+});
 });
 
 var feedbackContainer = Backbone.Model.extend({

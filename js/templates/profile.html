@@ -8,8 +8,8 @@
     <li> Name: {{username}} </li>
     <li> Age: {{profile.age}} </li>
     <li> Gender: {{profile.gender}}</li>
-    <li> Skill Level {{profile.skill}} </li>
-    <li> Sportsmanship {{profile.sportsmanship}} </li>
+    <li>Skill Level <progress class="skill" value="{{profile.skill}}" max="100"></progress></li>
+    <li> Sportsmanship <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
     <button type="submit"> Challenge </button>
   </ul>
 {{/data}}
