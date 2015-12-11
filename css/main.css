@@ -1,8 +1,8 @@
 #imageContainer {
-  background-image: url('/images/tennis.jpg');
+  background-image: url("/images/tennis.jpg");
   background-position: center;
   background-repeat: no-repeat;
   height: 420px;
-  width: 100%;
-}
+  width: 100%; }
 
+/*# sourceMappingURL=main.css.map */
