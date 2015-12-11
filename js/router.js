@@ -18,7 +18,7 @@ var Router = Backbone.Router.extend({
     "feedback/:id":"feedback",
     "match/:id":"match",
     "login":"login",
-    "profile":"profile",
+    "profile/:creator":"profile",
     "createMatch":"createMatch",
     "home/:username":"home",
     "":"index"
@@ -28,6 +28,8 @@ var Router = Backbone.Router.extend({
   initialize: function () {
   },
   defaults: {
+    creator: null,
+    creator_name: null,
     description: null,
     park: null,
     sport: null,
@@ -209,7 +211,7 @@ router.on('route:match', function(id) {
       })
     });
 
-router.on('route:profile', function() {
+router.on('route:profile', function(creator) {
   var profileContainer = Backbone.Model.extend({
     initialize: function() {
     },
@@ -224,16 +226,16 @@ router.on('route:profile', function() {
       }
     },
     Model: profileContainer,
-    url: 'https://skill-match.herokuapp.com/api/users/'
+    url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
   });
   var Profiles = Backbone.Collection.extend({
     Model: profileContainer,
-    url: 'https://skill-match.herokuapp.com/api/users/'
+    url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
   });
   var userProfile = new Profiles();
   userProfile.fetch({
     success: function(resp) {
-      var html = profile({'data': resp.toJSON()[0].results});
+      var html = profile({'data': resp.toJSON()});
       $("#profileContainer").html(html);
       $("#container").html(html);
       console.log(html);
