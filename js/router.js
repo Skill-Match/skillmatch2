@@ -210,9 +210,39 @@ router.on('route:match', function(id) {
     });
 
 router.on('route:profile', function() {
-  var html = profile;
-  $("#container").html(html);
-
+  var profileContainer = Backbone.Model.extend({
+    initialize: function() {
+    },
+    defaults: {
+      id: null,
+      username: null,
+      profile: {
+        gender: null,
+        age: null,
+        skill: null,
+        sportsmanship: null
+      }
+    },
+    Model: profileContainer,
+    url: 'https://skill-match.herokuapp.com/api/users/'
+  });
+  var Profiles = Backbone.Collection.extend({
+    Model: profileContainer,
+    url: 'https://skill-match.herokuapp.com/api/users/'
+  });
+  var userProfile = new Profiles();
+  userProfile.fetch({
+    success: function(resp) {
+      var html = profile({'data': resp.toJSON()[0].results});
+      $("#profileContainer").html(html);
+      $("#container").html(html);
+      console.log(html);
+      console.log('success', resp.toJSON());
+    },
+    error: function(err) {
+      console.log('error', err);
+    }
+  })
 });
 
 var matchContainer = Backbone.Model.extend({
@@ -280,6 +310,7 @@ router.on('route:feedback', function(id){
   $("#container").html(html);
   $("#submitFeedback").on('click', function() {
     console.log("test");
+    var html = feedback;
     feedbackAdd = new feedbackContainer();
     feedbackAdd.set({
       match: id,
