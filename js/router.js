@@ -53,6 +53,7 @@ var Router = Backbone.Router.extend({
     $("#upComing").html(mainHTML);
     $("#container").html(html);
    console.log("success: ",resp)
+   
  },
  error: function(err) {
    console.log("nope")
