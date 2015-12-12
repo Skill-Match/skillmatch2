@@ -19,7 +19,7 @@ var Router = Backbone.Router.extend({
     "match/:id":"match",
     "login":"login",
     "profile/:creator":"profile",
-    "createMatch":"createMatch",
+    "createMatch/:username":"createMatch",
     "home/:username":"home",
     "":"index"
   },
@@ -154,11 +154,53 @@ router.on('route:home', function(username){
     match.fetch({
  success: function(resp) {
     var html = home({'data': resp.toJSON().results});
-    var homeTemplate = $("#mainTemplate").text();
+    var homeTemplate = $("#homeTemplate").text();
     var homeHTML = Mustache.render(homeTemplate, 'data');
+    //var creator = resp.toJSON().results[0].creator;
+    //console.log(creator);
     $("#yourMatches").html(homeHTML);
     $("#container").html(html);
-   console.log("success: ",resp)
+   console.log("success: ",resp);
+
+
+  //   var profileContainer = Backbone.Model.extend({
+  //   initialize: function() {
+  //   },
+  //   defaults: {
+  //     id: null,
+  //     username: null,
+  //     profile: {
+  //       gender: null,
+  //       age: null,
+  //       skill: null,
+  //       sportsmanship: null
+  //     }
+  //   },
+  //   Model: profileContainer,
+  //   url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
+  // });
+  // var Profiles = Backbone.Collection.extend({
+  //   Model: profileContainer,
+  //   url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
+  // });
+  // var userProfile = new Profiles();
+  // userProfile.fetch({
+  //   success: function(resp) {
+  //     var userhtml =home({'user': resp.toJSON()});
+  //     var userTemplate = $("#userTemplate").text();
+  //     var userHTML = Mustache.render(userTemplate, 'user');
+  //     $("#userprofile").html(userhtml);
+  //     console.log(userhtml);
+  //     console.log('success', resp.toJSON());
+    
+  //       $('#createMatch').on('click', function(){
+  //         router.navigate('/createMatch/' + username, {trigger: true});
+  //       })
+  //   },
+  //   error: function(err) {
+  //     console.log('error', err);
+  //   }
+  // })
  },
  error: function(err) {
    console.log("nope")
@@ -168,7 +210,7 @@ router.on('route:home', function(username){
 });
 
 
-router.on('route:match', function(id) {
+router.on('route:match', function(id, username) {
     var matchDetail = new matchContainer();
     matchDetail.fetch({
       url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
@@ -211,7 +253,7 @@ router.on('route:match', function(id) {
       })
     });
 
-router.on('route:profile', function(creator) {
+router.on('route:profile', function(creator, username) {
   var profileContainer = Backbone.Model.extend({
     initialize: function() {
     },
@@ -261,7 +303,7 @@ var matchContainer = Backbone.Model.extend({
     url: 'https://skill-match.herokuapp.com/api/matches/'
   });
 
-router.on('route:createMatch', function(id) {
+router.on('route:createMatch', function(id, username) {
   
   var Park = Backbone.Model.extend({
   initialize: function () {
@@ -301,8 +343,9 @@ router.on('route:createMatch', function(id) {
       success: function(resp) {
         console.log("success", resp);
         var id = resp.toJSON().id;
-        console.log(id);
-        router.navigate('/match/' + id, {trigger: true});
+        var creator = resp.toJSON().creator;
+        console.log(creator);
+        router.navigate('/home/' + creator, {trigger: true});
       },
       error: function(err) {
         console.log("error", err);
@@ -334,7 +377,7 @@ var feedbackContainer = Backbone.Model.extend({
   url: 'https://skill-match.herokuapp.com/api/feedbacks/create/'
 });
 
-router.on('route:feedback', function(id){
+router.on('route:feedback', function(id, username){
   var html = feedback;
   $("#container").html(html);
   $("#submitFeedback").on('click', function() {
@@ -362,11 +405,7 @@ router.on('route:feedback', function(id){
   });
 });
 
-$('body').on('click', 'button', function (e){
-  e.preventDefault();
-  var href = $(this).attr('href').substr(1);
-  router.navigate(href, {trigger:true});
-});
+
 
 $('body').on('click', 'a', function (e){
   e.preventDefault();

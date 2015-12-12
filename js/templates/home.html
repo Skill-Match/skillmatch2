@@ -1,9 +1,19 @@
-<button type="submit" href="/createMatch">Create Match</button>
-
-<div id="upComing">
+<div id="userprofile">
+{{#user}}
+  <ul>
+    <li> Name: {{username}} </li>
+    <li> Age: {{profile.age}} </li>
+    <li> Gender: {{profile.gender}}</li>
+    <li>Skill Level <progress class="skill" value="{{profile.skill}}" max="100"></progress></li>
+    <li> Sportsmanship <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
+  </ul>
+  <button id="createMatch" type="submit">Create Match</button>
+{{/user}}
+</div>
+<div id="yourMatches">
 {{#data}}
 <ul>
-  <li> <a href="/profile"> {{creator}} </a>
+  <li> <a href="/profile/{{creator}}"> {{creator_name}} </a>
   <li> Description: </li>
   <li> Park: {{park}} </li>
   <li> Sport: {{sport}}</li>
