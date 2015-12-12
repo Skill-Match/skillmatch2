@@ -14,6 +14,13 @@
     font-size: 30px;
     border-radius: 15px;
     border: none;
+    outline: none;
+    box-shadow: 10px 10px 8px 0px rgba(0,0,0,0.50);
+  }
+
+  #createMatchButton:active {
+    box-shadow: 0 0 0 0;
+    font-size: 29px;
   }
 
   #mission {
@@ -51,6 +58,11 @@
     border-radius: 20px;
     position: absolute;
     right: 5em;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+  }
+  #matchSubmit:active {
+    box-shadow: none;
   }
   #skillProgress {
     position: absolute;

@@ -12,7 +12,12 @@
     background-color: #ef3122;
     font-size: 30px;
     border-radius: 15px;
-    border: none; }
+    border: none;
+    outline: none;
+    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5); }
+  #imageContainer #createMatchButton:active {
+    box-shadow: 0 0 0 0;
+    font-size: 29px; }
   #imageContainer #mission {
     position: absolute;
     top: 250px;
@@ -38,7 +43,11 @@
     border: none;
     border-radius: 20px;
     position: absolute;
-    right: 5em; }
+    right: 5em;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none; }
+  #upComing #matchSubmit:active {
+    box-shadow: none; }
   #upComing #skillProgress {
     position: absolute;
     right: 30em; }
