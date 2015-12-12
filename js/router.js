@@ -56,7 +56,6 @@ var Router = Backbone.Router.extend({
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
   });
-
  },
  error: function(err) {
    console.log("nope")
