@@ -7,13 +7,16 @@
 <div id="upComing">
 {{#data}}
 <ul>
-  <li> <a href="/profile/{{creator}}"> {{creator_name}} </a></li>
+  <li class="creatorName"> <a href="/profile/{{creator}}"> {{creator_name}} </a></li>
+      <li>
+  <button id="matchSubmit" type="sumbit" href="/match/{{id}}"> Accept </button>
+  </li>
   <li> Park: {{park}} </li>
+    <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
   <li> Sport: {{sport}}</li>
-  <li> Skill level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
   <li> Date: {{date}}</li>
   <li> Time: {{time}}</li>
-  <button type="sumbit" href="/match/{{id}}"> Accept </button>
+  <p></p>
 </ul>
 {{/data}}
 </div>
