@@ -19,7 +19,7 @@ var Router = Backbone.Router.extend({
     "match/:id":"match",
     "login":"login",
     "profile/:creator":"profile",
-    "createMatch/:username":"createMatch",
+    "createMatch":"createMatch",
     "home/:username":"home",
     "":"index"
   },
@@ -53,6 +53,10 @@ var Router = Backbone.Router.extend({
     $("#upComing").html(mainHTML);
     $("#container").html(html);
    console.log("success: ",resp)
+   $("#createMatchButton").on('click', function() {
+    router.navigate('/createMatch', {trigger: true});
+  });
+
  },
  error: function(err) {
    console.log("nope")
@@ -156,51 +160,51 @@ router.on('route:home', function(username){
     var html = home({'data': resp.toJSON().results});
     var homeTemplate = $("#homeTemplate").text();
     var homeHTML = Mustache.render(homeTemplate, 'data');
-    //var creator = resp.toJSON().results[0].creator;
-    //console.log(creator);
+    var creator = resp.toJSON().results[0].creator;
+    console.log(creator);
     $("#yourMatches").html(homeHTML);
     $("#container").html(html);
    console.log("success: ",resp);
 
 
-  //   var profileContainer = Backbone.Model.extend({
-  //   initialize: function() {
-  //   },
-  //   defaults: {
-  //     id: null,
-  //     username: null,
-  //     profile: {
-  //       gender: null,
-  //       age: null,
-  //       skill: null,
-  //       sportsmanship: null
-  //     }
-  //   },
-  //   Model: profileContainer,
-  //   url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
-  // });
-  // var Profiles = Backbone.Collection.extend({
-  //   Model: profileContainer,
-  //   url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
-  // });
-  // var userProfile = new Profiles();
-  // userProfile.fetch({
-  //   success: function(resp) {
-  //     var userhtml =home({'user': resp.toJSON()});
-  //     var userTemplate = $("#userTemplate").text();
-  //     var userHTML = Mustache.render(userTemplate, 'user');
-  //     $("#userprofile").html(userhtml);
-  //     console.log(userhtml);
-  //     console.log('success', resp.toJSON());
-    
-  //       $('#createMatch').on('click', function(){
-  //         router.navigate('/createMatch/' + username, {trigger: true});
-  //       })
-  //   },
-  //   error: function(err) {
-  //     console.log('error', err);
-  //   }
-  // })
+    var profileContainer = Backbone.Model.extend({
+    initialize: function() {
+    },
+    defaults: {
+      id: null,
+      username: null,
+      profile: {
+        gender: null,
+        age: null,
+        skill: null,
+        sportsmanship: null
+      }
+    },
+    Model: profileContainer,
+    url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
+  });
+  var Profiles = Backbone.Collection.extend({
+    Model: profileContainer,
+    url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
+  });
+  var userProfile = new Profiles();
+  userProfile.fetch({
+    success: function(resp) {
+      var userhtml =home({'user': resp.toJSON()});
+      var userTemplate = $("#userTemplate").text();
+      var userHTML = Mustache.render(userTemplate, 'user');
+      $("#userprofile").html(userhtml);
+      console.log(userhtml);
+      console.log('success', resp.toJSON());
+
+        $('#createMatch').on('click', function(){
+          router.navigate('/createMatch/' + username, {trigger: true});
+        })
+    },
+    error: function(err) {
+      console.log('error', err);
+    }
+  })
  },
  error: function(err) {
    console.log("nope")
@@ -304,7 +308,7 @@ var matchContainer = Backbone.Model.extend({
   });
 
 router.on('route:createMatch', function(id, username) {
-  
+
   var Park = Backbone.Model.extend({
   initialize: function () {
   },
