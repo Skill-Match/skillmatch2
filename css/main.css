@@ -33,23 +33,35 @@
     font-size: 20px; }
   #upComing p {
     border: 1px solid #4f1e47;
-    width: 1200px; }
+    width: 1200px;
+    margin-top: 30px; }
   #upComing li {
-    list-style-type: none; }
+    list-style-type: none;
+    padding-bottom: 5px; }
+  #upComing .description {
+    position: relative;
+    top: 2em; }
+  #upComing .profileImg {
+    float: left;
+    margin: 0 15px; }
+  #upComing #skillProgress {
+    position: relative;
+    left: 13em;
+    bottom: 3em; }
   #upComing #matchSubmit {
     padding: 15px;
     background-color: #1e8880;
     color: white;
     border: none;
     border-radius: 20px;
-    position: absolute;
-    right: 5em;
     box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
-    outline: none; }
+    outline: none;
+    position: relative;
+    bottom: 5em;
+    left: 44em; }
+  #upComing .skill {
+    width: 300px; }
   #upComing #matchSubmit:active {
     box-shadow: none; }
-  #upComing #skillProgress {
-    position: absolute;
-    right: 30em; }
 
 /*# sourceMappingURL=main.css.map */

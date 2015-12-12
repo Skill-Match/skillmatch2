@@ -7,15 +7,15 @@
 <div id="upComing">
 {{#data}}
 <ul>
-  <li class="creatorName"> <a href="/profile/{{creator}}"> {{creator_name}} </a></li>
-  <li>
-  <button id="matchSubmit" type="sumbit" href="/match/{{id}}"> Accept </button>
-  </li>
-  <li> Park: {{park}} </li>
-    <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
-  <li> Sport: {{sport}}</li>
-  <li> Date: {{date}}</li>
-  <li> Time: {{time}}</li>
+  <li class="profileImg"><img src="http://placehold.it/200x200"></li>
+  <li class="description" class="creatorName"> <a href="/profile/{{creator}}"> {{creator_name}} </a></li>
+  <li class="description"> Park: {{park}} </li>
+  <li class="description"> Sport: {{sport}}</li>
+  <li class="description"> Date: {{date}}</li>
+  <li class="description"> Time: {{time}}</li>
+  <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
+  </progress></li>
+  <li><button id="matchSubmit" type="sumbit" href="/match/{{id}}"> Accept </button></li>
   <p></p>
 </ul>
 {{/data}}
