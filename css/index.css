@@ -1,16 +1,13 @@
-#header {
-	width: 80%;
-	margin: 0 5% 0 10%;
+body {
+  background-color: #324053;
+  font-family: 'Ubuntu', sans-serif;
 }
-#header h1{
-	display: inline-block;
-	margin:0 25%
+
+#title a {
+  color: white;
+  text-decoration: none;
 }
-#nav{
-	list-style: none;
-	display: inline-block;
-	margin:0 10%
-}
-#nav li{
-	float: left;
+
+#container {
+  background-color: #f5f2ec;
 }

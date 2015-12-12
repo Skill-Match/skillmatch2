@@ -4,5 +4,20 @@
   background-repeat: no-repeat;
   height: 420px;
   width: 100%; }
+  #imageContainer #createMatchButton {
+    position: absolute;
+    top: 370px;
+    left: 330px;
+    color: white;
+    background-color: #ef3122;
+    font-size: 30px;
+    border-radius: 15px;
+    border: black 2px solid; }
+  #imageContainer #mission {
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    font-size: 40px;
+    color: white; }
 
 /*# sourceMappingURL=main.css.map */
