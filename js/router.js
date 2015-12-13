@@ -156,6 +156,14 @@ router.on('route:home', function(username){
     var match = new Match();
     match.fetch({
  success: function(resp) {
+  if (creator === undefined) {
+    var html = home({'data': resp.toJSON().results});
+    var homeTemplate = $("#homeTemplate").text();
+    var homeHTML = Mustache.render(homeTemplate, 'data');
+    $("#yourMatches").html(homeHTML);
+    $("#container").html(html);
+   console.log("success: ",resp);
+  }else{
     var html = home({'data': resp.toJSON().results});
     var homeTemplate = $("#homeTemplate").text();
     var homeHTML = Mustache.render(homeTemplate, 'data');
@@ -204,6 +212,7 @@ router.on('route:home', function(username){
       console.log('error', err);
     }
   })
+}
  },
  error: function(err) {
    console.log("nope")
@@ -346,9 +355,7 @@ router.on('route:createMatch', function(id, username) {
       success: function(resp) {
         console.log("success", resp);
         var id = resp.toJSON().id;
-        var creator = resp.toJSON().creator;
-        console.log(creator);
-        router.navigate('/home/' + creator, {trigger: true});
+        router.navigate('/match/' + id, {trigger: true});
       },
       error: function(err) {
         console.log("error", err);
