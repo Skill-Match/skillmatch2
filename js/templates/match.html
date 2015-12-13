@@ -1,5 +1,3 @@
-<h2>Match Page</h2>
-
 <div id="matchDetailContainer">
   {{#data}}
   <ul>
@@ -8,9 +6,9 @@
     <li> Time: {{time}}</li>
     <li> Date: {{date}}</li>
     <li> Park: {{park}} </li>
-    <li> Skill:<progress class="skill" value="{{skill_level}}" max="100"></progress></li>
-    <a id="goToFeedback" type="submit" href="/feedback/{{id}}"> Feedback </a>
-    <a id="join" href="/match/{{id}}"> Join </a>
+    <li id="matchSkill"> Skill:<progress class="skill" value="{{skill_level}}" max="100"></progress></li>
+
+    <a id="join" href="/home"> Join </a>
   </ul>
   {{/data}}
 </div>

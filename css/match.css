@@ -1,0 +1,30 @@
+#matchDetailContainer {
+  font-size: 25px;
+  height: 20em; }
+  #matchDetailContainer li {
+    list-style-type: none;
+    margin-bottom: 15px; }
+  #matchDetailContainer a {
+    text-decoration: none; }
+  #matchDetailContainer #matchSkill {
+    position: absolute;
+    left: 15em;
+    top: 8em; }
+  #matchDetailContainer .skill {
+    width: 300px;
+    margin-left: 8px; }
+  #matchDetailContainer #join {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none;
+    position: absolute;
+    left: 40em;
+    top: 8em; }
+  #matchDetailContainer #join:active {
+    box-shadow: none; }
+
+/*# sourceMappingURL=match.css.map */

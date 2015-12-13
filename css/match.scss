@@ -1,0 +1,40 @@
+#matchDetailContainer {
+  font-size: 25px;
+  height: 20em;
+
+  li {
+    list-style-type: none;
+    margin-bottom: 15px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  #matchSkill {
+    position: absolute;
+    left: 15em;
+    top: 8em;
+  }
+
+  .skill {
+    width: 300px;
+    margin-left: 8px;
+  }
+
+  #join {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+    position: absolute;
+    left: 40em;
+    top: 8em;
+  }
+
+  #join:active {
+    box-shadow: none;
+  }
+}
