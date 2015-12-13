@@ -1,0 +1,51 @@
+#signupPage {
+  background-color: #D8DFEA;
+  height: 35em;
+  width: 50%;
+  margin: 0% 25%;
+  text-align: center; }
+  #signupPage #signupHeader {
+    height: 75px;
+    background-color: #356b66; }
+    #signupPage #signupHeader h2 {
+      padding-top: 25px;
+      color: white; }
+  #signupPage #signupForm input {
+    margin: 10px 5px 5px;
+    font-size: 18px;
+    width: 300px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px; }
+  #signupPage #signupForm select {
+    margin: 10px 5px 5px;
+    font-size: 18px;
+    width: 300px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    left: 50px; }
+  #signupPage #signupForm #remail {
+    position: relative;
+    left: 22px; }
+  #signupPage #signupForm .rgen {
+    width: 30px;
+    margin: 0;
+    padding: 0; }
+  #signupPage #signupForm #gender {
+    position: relative;
+    right: 39px; }
+  #signupPage #signupForm .register {
+    text-decoration: none;
+    padding: 15px;
+    background-color: #356b66;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none;
+    position: relative;
+    top: 30px; }
+
+/*# sourceMappingURL=signup.css.map */

@@ -16,6 +16,7 @@ module.exports = {
     loaders: [
       {test:/\.html$/, loader:'mustache'},
       {test: /\.css$/, loader:'style!css'},
+      {test: /\.scss$/,loaders: ["style", "css", "sass"]},
       {test: /\.json$/, loader:'json'},
       {test: /\.jsx$/, loader: 'jsx-loader?insertPragma=React.DOM&harmony'},
     ]

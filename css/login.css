@@ -1,0 +1,39 @@
+#loginPage {
+  background-color: #D8DFEA;
+  height: 35em;
+  width: 50%;
+  margin: 0% 25%;
+  text-align: center; }
+  #loginPage #loginHeader {
+    height: 75px;
+    background-color: #356b66; }
+    #loginPage #loginHeader h2 {
+      padding-top: 25px;
+      color: white; }
+  #loginPage #loginForm input {
+    margin: 10px 5px 5px;
+    font-size: 18px;
+    width: 300px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px; }
+  #loginPage #loginForm #loginSubmit {
+    margin: 15px 0 0 70px;
+    padding: 15px;
+    background-color: #356b66;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none; }
+  #loginPage #loginForm .register {
+    text-decoration: none;
+    padding: 15px;
+    background-color: #356b66;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none; }
+
+/*# sourceMappingURL=login.css.map */

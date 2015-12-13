@@ -1,6 +1,7 @@
 var Backbone = require('backbone');
 var Mustache = require('mustache');
 var login = require('./templates/login.html');
+var signup = require('./templates/signup.html');
 var main = require('./templates/main.html');
 var match = require('./templates/match.html');
 var profile = require('./templates/profile.html');
@@ -18,6 +19,7 @@ var Router = Backbone.Router.extend({
     "feedback/:id":"feedback",
     "match/:id":"match",
     "login":"login",
+    "signup":"signup",
     "profile/:creator":"profile",
     "createMatch":"createMatch",
     "home/:username":"home",
@@ -66,6 +68,51 @@ var Router = Backbone.Router.extend({
 });
 
 var router = new Router();
+router.on('route:signup', function(){
+  var html = signup;
+        $("#container").html(html);
+var User = Backbone.Model.extend({
+  initialize: function () {
+  },
+  defaults: {
+    username: null,
+    email: null,
+    password: null,
+    profile: {
+        gender: null,
+        age: null
+    }
+  },
+  url: 'https://skill-match.herokuapp.com/api/users/create/'
+});
+
+$("#register").on('click', function() {
+   user = new User();
+   user.set({
+     username: $("#ruser").val(),
+     email: $("#remail").val(),
+     password:$("#rpass").val(),
+     profile:{
+     gender: $(".rgen").val(),
+     age: $("#rage").val()
+  }
+  })
+   var Users = Backbone.Collection.extend({
+  model: User,
+  url: 'https://skill-match.herokuapp.com/api/users/create/'
+});
+var UserCollection = new Users();
+user.save(null, {
+ success: function(resp) {
+   console.log("success: ",resp)
+   console.log("New user added.");
+ },
+ error: function(err) {
+   console.log("nope")
+ }
+});
+ });
+});
 router.on('route:login', function(){
   var html = login;
         $("#container").html(html);
@@ -92,47 +139,6 @@ router.on('route:login', function(){
     backboneSync(method,model,options);
     };
   }
-       var User = Backbone.Model.extend({
-  initialize: function () {
-  },
-  defaults: {
-    username: null,
-    email: null,
-    password: null,
-    profile: {
-        gender: null,
-        age: null
-    }
-  },
-  url: 'https://skill-match.herokuapp.com/api/users/create/'
-});
-
-$("#register").on('click', function() {
-   user = new User();
-   user.set({
-     username: $("#ruser").val(),
-     email: $("#remail").val(),
-     password:$("#rpass").val(),
-     profile:{
-     gender: $("#rgen").val(),
-     age: $("#rage").val()
-  }
-  })
-   var Users = Backbone.Collection.extend({
-  model: User,
-  url: 'https://skill-match.herokuapp.com/api/users/create/'
-});
-var UserCollection = new Users();
-user.save(null, {
- success: function(resp) {
-   console.log("success: ",resp)
-   console.log("New user added.");
- },
- error: function(err) {
-   console.log("nope")
- }
-});
- });
 });
 
 router.on('route:home', function(username){
@@ -156,14 +162,16 @@ router.on('route:home', function(username){
     var match = new Match();
     match.fetch({
  success: function(resp) {
-  if (creator === undefined) {
-    var html = home({'data': resp.toJSON().results});
-    var homeTemplate = $("#homeTemplate").text();
-    var homeHTML = Mustache.render(homeTemplate, 'data');
-    $("#yourMatches").html(homeHTML);
-    $("#container").html(html);
-   console.log("success: ",resp);
-  }else{
+  // if (creator === undefined) {
+  //   var html = home({'data': resp.toJSON().results});
+  //   var homeTemplate = $("#homeTemplate").text();
+  //   var homeHTML = Mustache.render(homeTemplate, 'data');
+  //   var creator = resp.toJSON().results[0].creator;
+  //   console.log(creator);
+  //   $("#yourMatches").html(homeHTML);
+  //   $("#container").html(html);
+  //  console.log("success: ",resp);
+  //}else{
     var html = home({'data': resp.toJSON().results});
     var homeTemplate = $("#homeTemplate").text();
     var homeHTML = Mustache.render(homeTemplate, 'data');
@@ -212,7 +220,7 @@ router.on('route:home', function(username){
       console.log('error', err);
     }
   })
-}
+//}
  },
  error: function(err) {
    console.log("nope")
