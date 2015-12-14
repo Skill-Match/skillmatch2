@@ -1,16 +1,17 @@
-<h2> Create Match Page </h2>
+<div id="createMatchPage">
+  <h3> Create Game you would like to play </h3>
+  <ul id="create">
+    <li> Sport:</li> <input id="addSport"type="text" placeholder="Add Sport">
+    <li> Date:</li>  <input id="addDate" type="date">
+    <li> Time:</li> <input id="addTime" type="time">
+    <li> Skill: 1-100</li> <input id="addSkill" type="text" placeholder="Skill Level">
+    <li> Park: </br><select id="addPark" name="park">
+    {{#park}}
+    <option value="{{id}}">{{name}}</option>
+    {{/park}}
+    </select>
+    </li>
+    <li><button id="createMatch" type="submit">Submit</button></li>
+  </ul>
+</div>
 
-<ul id="create">
-  <h3> Create Game </h3>
-  <li> Sport:</li> <input id="addSport"type="text" placeholder="Add Sport">
-  <li> Date:</li>  <input id="addDate" type="date">
-  <li> Time:</li> <input id="addTime" type="time">
-  <li> Skill: 1-100</li> <input id="addSkill" type="text">
-  <li> Park:</li>
-  <select id="addPark" name="park">
-  {{#park}}
-  <option value="{{id}}">{{name}}</option>
-  {{/park}}
-  </select>
-  <button id="createMatch" type="submit">Submit</button>
-</ul>

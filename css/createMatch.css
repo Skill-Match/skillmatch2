@@ -1,0 +1,32 @@
+#createMatchPage {
+  height: 35em;
+  width: 50%; }
+  #createMatchPage ul {
+    list-style-type: none; }
+  #createMatchPage input {
+    font-size: 18px;
+    margin: 10px 5px 5px;
+    border: none;
+    width: 300px;
+    padding: 8px 10px;
+    border-radius: 5px; }
+  #createMatchPage select {
+    font-size: 18px;
+    margin: 10px 5px 5px;
+    border: none;
+    width: 300px;
+    padding: 8px 10px;
+    border-radius: 5px; }
+  #createMatchPage #createMatch {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none; }
+  #createMatchPage #createMatch:active {
+    box-shadow: none; }
+
+/*# sourceMappingURL=createMatch.css.map */

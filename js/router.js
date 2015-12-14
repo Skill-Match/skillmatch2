@@ -317,7 +317,8 @@ var matchContainer = Backbone.Model.extend({
     sport: null,
     skill_level: null,
     date: null,
-    time: null
+    time: null,
+    player:[null]
     },
     Model: matchContainer,
     url: 'https://skill-match.herokuapp.com/api/matches/'
