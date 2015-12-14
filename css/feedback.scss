@@ -1,0 +1,21 @@
+#feedbackContainer {
+  height: 35em;
+
+  #feedbackForm {
+    padding: 2em;
+  }
+
+  #submitFeedback {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+  }
+
+  #submitFeedback:active {
+    box-shadow: none;
+  }
+}

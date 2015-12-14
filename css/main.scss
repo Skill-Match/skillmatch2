@@ -92,12 +92,11 @@
     left: 40em;
   }
 
+  #matchSubmit:active {
+    box-shadow: none;
+  }
 
   .skill{
     width: 300px;
-  }
-
-  #matchSubmit:active {
-    box-shadow: none;
   }
 }
