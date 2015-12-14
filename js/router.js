@@ -213,7 +213,7 @@ router.on('route:home', function(username){
       console.log('success', resp.toJSON());
 
         $('#createMatch').on('click', function(){
-          router.navigate('/createMatch/' + username, {trigger: true});
+          router.navigate('/createMatch', {trigger: true});
         })
     },
     error: function(err) {
@@ -241,6 +241,9 @@ router.on('route:match', function(id, username) {
         var matchHTML = Mustache.render(matchTemplate, 'data');
         $("#matchDetailContainer").html(matchHTML);
         $("#container").html(html);
+        var player = resp.toJSON().players[1];
+        console.log('this is ' +player);
+
         var Join = Backbone.Model.extend({
       initialize: function () {
       },
@@ -259,7 +262,8 @@ router.on('route:match', function(id, username) {
           join.save(null, {
       success: function(resp) {
         console.log("success", resp);
-        router.navigate('/match/' + id, {trigger: true});
+        router.navigate('/home/' + player, {trigger: true});
+
       },
       error: function(err) {
         console.log("error", err);
