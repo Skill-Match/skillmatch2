@@ -1,5 +1,64 @@
 #userprofile {
+
+  background-color: #e3e3e3;
+
+  height: 250px;
+
+  font-size: 20px;
+
+  border-bottom: solid black 1px;
+
+  #homeProfileImg {
+    margin: 20px 0px;
+  }
+
+  .mainDescription {
+    position: relative;
+    left: 12em;
+    bottom: 10em;
+    margin-bottom: 5px;
+  }
+
   li {
     list-style-type: none;
+  }
+
+  #createMatch {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+    position: absolute;
+    left: 35em;
+    top: 10em;
+  }
+  #createMatch:active {
+    box-shadow: none;
+  }
+
+}
+
+
+#yourMatches {
+  font-size: 18px;
+
+  ul {
+    border-bottom: 1px solid #4f1e47;
+    margin-left: 20px;
+    width: 1200px;
+    height: 180px;
+  }
+
+  ul:nth-last-child(1){
+    border-bottom:none;
+    padding-bottom:20px;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 3px;
   }
 }

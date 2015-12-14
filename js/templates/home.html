@@ -1,16 +1,17 @@
 <div id="userprofile">
-<h3>HELLO</h3>
 {{#user}}
   <ul>
-    <li> Name: {{username}} </li>
-    <li> Age: {{profile.age}} </li>
-    <li> Gender: {{profile.gender}}</li>
-    <li>Skill Level <progress class="skill" value="{{profile.skill}}" max="100"></progress></li>
-    <li> Sportsmanship <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
+     <li><img id="homeProfileImg" src="http://placehold.it/200x200"></li>
+    <li class="mainDescription"> Username: {{username}} </li>
+    <li class="mainDescription"> Age: {{profile.age}} </li>
+    <li class="mainDescription"> Gender: {{profile.gender}}</li>
+    <li class="mainDescription"> Skill Level: <progress class="skill" value="{{profile.skill}}" max="100"></progress></li>
+    <li class="mainDescription"> Sportsmanship: <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
   </ul>
   <button id="createMatch" type="submit">Create Match</button>
 {{/user}}
 </div>
+
 <div id="yourMatches">
 {{#data}}
 <ul>
