@@ -198,7 +198,7 @@ router.on('route:home', function(username){
       console.log('success', resp.toJSON());
 
         $('#createMatch').on('click', function(){
-          router.navigate('/createMatch/' + username, {trigger: true});
+          router.navigate('/createMatch', {trigger: true});
         })
     },
     error: function(err) {
