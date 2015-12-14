@@ -1,25 +1,23 @@
-<h2>Profile Page</h2>
-
 <div id="profileContainer">
-<h2> Upcoming Matches </h2>
 {{#data}}
   <ul>
-
-    <li> Name: {{username}} </li>
-    <li> Age: {{profile.age}} </li>
-    <li> Gender: {{profile.gender}}</li>
-    <li>Skill Level <progress class="skill" value="{{profile.skill}}" max="100"></progress></li>
-    <li> Sportsmanship <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
-    <button type="submit"> Challenge </button>
+    <li><img id="userProfileImg" src="http://placehold.it/200x200"></li>
+    <li class="profileDescription"> Username: {{username}} </li>
+    <li class="profileDescription"> Age: {{profile.age}} </li>
+    <li class="profileDescription"> Gender: {{profile.gender}}</li>
+    <li class="profileDescription">Skill Level <progress class="skill" value="{{profile.skill}}" max="100"></progress></li>
+    <li class="profileDescription"> Sportsmanship <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
   </ul>
 {{/data}}
-
 </div>
+
+<div id="historyContainer">
   <ul>
     <h2> History of Matches </h2>
-    <li> Match: Tom </li>
-    <li> Experience: 35 Tennis matches </li>
+    <li> Match: </li>
+    <li> Experience: </li>
 {{#data}}
-    <a id="goToFeedback" type="submit" href="/feedback/{{id}}"> Feedback </a>
+    <a id="goToFeedback" href="/feedback/{{id}}"> Feedback </a>
 {{/data}}
   </ul>
+</div>
