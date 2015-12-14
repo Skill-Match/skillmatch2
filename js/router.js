@@ -239,8 +239,13 @@ router.on('route:match', function(id, username) {
         console.log("success", resp);
         var matchTemplate = $("#matchTemplate").text();
         var matchHTML = Mustache.render(matchTemplate, 'data');
+        var player = resp.toJSON().players[1];
+        console.log(player);
         $("#matchDetailContainer").html(matchHTML);
         $("#container").html(html);
+        $('#homeBtn').on('click', function(){
+          router.navigate('/home/' + player, {trigger: true});
+        })
         var Join = Backbone.Model.extend({
       initialize: function () {
       },
@@ -271,6 +276,7 @@ router.on('route:match', function(id, username) {
         console.log("error", err);
       }
       })
+      
     });
 
 router.on('route:profile', function(creator, username) {
@@ -317,8 +323,7 @@ var matchContainer = Backbone.Model.extend({
     sport: null,
     skill_level: null,
     date: null,
-    time: null,
-    player:[null]
+    time: null
     },
     Model: matchContainer,
     url: 'https://skill-match.herokuapp.com/api/matches/'
