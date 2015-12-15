@@ -255,12 +255,12 @@ router.on('route:match', function(id, username) {
       initialize: function () {
       },
       defaults: {},
-      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/signup/'
+      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
     });
 
       var Joins = Backbone.Collection.extend({
       model: Join,
-      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/signup/'
+      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
     });
       $("#join").on('click', function() {
         console.log(id)
@@ -278,12 +278,12 @@ router.on('route:match', function(id, username) {
     });
       var Confirm = Backbone.Model.extend({
         defaults: {},
-        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/signup/?confirm=true'
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
       });
 
       var Confirms = Backbone.Collection.extend ({
         model: Confirm,
-        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/signup/?confirm=true'
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
       });
       $("#confirm").on('click', function() {
         var confirm = new Confirm();
@@ -299,11 +299,11 @@ router.on('route:match', function(id, username) {
       });
       var Decline = Backbone.Model.extend({
         defaults: {},
-        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/signup/?decline=true'
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
       });
       var Declines = Backbone.Collection.extend({
         model: Decline,
-        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/signup/?decline=true'
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
       });
       $("#decline").on('click', function(){
         var decline = new Decline();
@@ -514,13 +514,13 @@ router.on('route:feedback', function(id, username){
 });
 
 router.on('route:parks', function() {
-    var Park = Backbone.Model.extend({
-  initialize: function () {
-  },
-  defaults: {
+  var Park = Backbone.Model.extend({
+    initialize: function () {
+    },
+    defaults: {
     id: null,
     name: null
-      },
+    },
   url: 'https://skill-match.herokuapp.com/api/parks/'
 });
   var Parks = Backbone.Collection.extend({
@@ -542,9 +542,6 @@ router.on('route:parks', function() {
       console.log("error", err);
     }
   })
-
-
-
 });
 
 

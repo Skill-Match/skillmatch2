@@ -26,5 +26,35 @@
     top: 8em; }
   #matchDetailContainer #join:active {
     box-shadow: none; }
+  #matchDetailContainer #confirm {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none; }
+  #matchDetailContainer #confirm:active {
+    box-shadow: none; }
+  #matchDetailContainer #decline {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none; }
+  #matchDetailContainer #decline:active {
+    box-shadow: none; }
+  #matchDetailContainer #homeBtn {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none; }
+  #matchDetailContainer #homeBtn:active {
+    box-shadow: none; }
 
 /*# sourceMappingURL=match.css.map */
