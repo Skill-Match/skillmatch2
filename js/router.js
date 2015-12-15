@@ -10,6 +10,7 @@ var createMatch = require('./templates/createMatch.html');
 var feedback = require('./templates/feedback.html');
 var home = require('./templates/home.html');
 var matchModel = require('./models/matchModel.js')
+var parks = require('./templates/parks.html');
 
 
 var Router = Backbone.Router.extend({
@@ -512,6 +513,39 @@ router.on('route:feedback', function(id, username){
   });
 });
 
+router.on('route:parks', function() {
+    var Park = Backbone.Model.extend({
+  initialize: function () {
+  },
+  defaults: {
+    id: null,
+    name: null
+      },
+  url: 'https://skill-match.herokuapp.com/api/parks/'
+});
+  var Parks = Backbone.Collection.extend({
+    model: Park,
+    url: 'https://skill-match.herokuapp.com/api/parks/'
+});
+  var park = new Park();
+  park.fetch ({
+    success: function(resp) {
+      var html = parks({'data': resp.toJSON().results});
+      var parkTemplate = $("#parkTemplate").text();
+      var parkHTML = Mustache.render(parkTemplate, "data");
+      $("#parksContainer").html(parkHTML);
+      $("#container").html(html);
+      console.log("success", resp);
+      console.log(parkHTML);
+    },
+    error: function(err) {
+      console.log("error", err);
+    }
+  })
+
+
+
+});
 
 
 $('body').on('click', 'a', function (e){
