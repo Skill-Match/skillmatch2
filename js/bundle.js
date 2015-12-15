@@ -58,6 +58,33 @@
 
 	$(document).ready(function(){
 	  var Router = __webpack_require__(24);
+	          $('#loginSubmit').on('click', function(){
+	          var username = $("#username").val();
+	          var password = $("#password").val();
+	          var homeBtn = document.createElement('a');
+	          var link = document.createTextNode(username);
+	          homeBtn.appendChild(link);
+				  homeBtn.setAttribute('href', '/home/'+username);
+	          $.ajax({
+	        url:"https://skill-match.herokuapp.com/api/api-token-auth/",
+	        method:'POST',
+	        data: {username: username, password:password}
+	      }).then(function(resp){
+	        setToken(resp.token);
+	        console.log(resp.token);
+	        $('#nav').html(homeBtn);
+	        console.log(username)
+	      });
+	    });
+	    function setToken(token) {
+	  var backboneSync = Backbone.sync;
+	  Backbone.sync = function(method,model,options) {
+	    options.headers = {
+	      'Authorization': 'Token ' + token
+	    };
+	    backboneSync(method,model,options);
+	    };
+	  }
 
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
@@ -9703,7 +9730,7 @@
 
 
 	// module
-	exports.push([module.id, "#imageContainer {\n  background-image: url(\"/images/tennis.jpg\");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 420px;\n  width: 100%; }\n  #imageContainer #createMatchButton {\n    position: absolute;\n    top: 370px;\n    left: 330px;\n    color: white;\n    background-color: #ef3122;\n    font-size: 30px;\n    border-radius: 15px;\n    border: none;\n    outline: none;\n    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5); }\n  #imageContainer #createMatchButton:active {\n    box-shadow: 0 0 0 0;\n    font-size: 29px; }\n  #imageContainer #mission {\n    position: absolute;\n    top: 250px;\n    left: 200px;\n    font-size: 40px;\n    color: white; }\n\n#upComing {\n  font-size: 17px; }\n  #upComing a {\n    text-decoration: none;\n    color: black;\n    font-size: 20px; }\n  #upComing ul {\n    border-bottom: 1px solid #4f1e47;\n    width: 1200px;\n    margin-top: 30px;\n    margin-left: 20px; }\n  #upComing ul:nth-last-child(1) {\n    border-bottom: none;\n    padding-bottom: 20px; }\n  #upComing li:nth-last-child(1) {\n    margin-bottom: 35px; }\n  #upComing li {\n    list-style-type: none;\n    padding-bottom: 5px; }\n  #upComing .description {\n    position: relative;\n    top: 2em; }\n  #upComing .profileImg {\n    float: left;\n    margin: 0 15px; }\n  #upComing #skillProgress {\n    position: relative;\n    left: 13em;\n    bottom: 3em; }\n  #upComing #matchSubmit {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: relative;\n    bottom: 4em;\n    left: 40em; }\n  #upComing .skill {\n    width: 300px; }\n  #upComing #matchSubmit:active {\n    box-shadow: none; }\n\n/*# sourceMappingURL=main.css.map */\n", ""]);
+	exports.push([module.id, "#imageContainer {\n  background-image: url(\"/images/tennis.jpg\");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 420px;\n  width: 100%; }\n  #imageContainer #createMatchButton {\n    position: absolute;\n    top: 370px;\n    left: 330px;\n    color: white;\n    background-color: #ef3122;\n    font-size: 30px;\n    border-radius: 15px;\n    border: none;\n    outline: none;\n    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5); }\n  #imageContainer #createMatchButton:active {\n    box-shadow: 0 0 0 0;\n    font-size: 29px; }\n  #imageContainer #mission {\n    position: absolute;\n    top: 250px;\n    left: 200px;\n    font-size: 40px;\n    color: white; }\n\n#upComing {\n  font-size: 17px; }\n  #upComing a {\n    text-decoration: none;\n    color: black;\n    font-size: 20px; }\n  #upComing ul {\n    border-bottom: 1px solid #4f1e47;\n    width: 1200px;\n    margin-top: 30px;\n    margin-left: 20px; }\n  #upComing ul:nth-last-child(1) {\n    border-bottom: none;\n    padding-bottom: 20px; }\n  #upComing li:nth-last-child(1) {\n    margin-bottom: 35px; }\n  #upComing li {\n    list-style-type: none;\n    padding-bottom: 5px; }\n  #upComing .description {\n    position: relative;\n    top: 2em; }\n  #upComing .profileImg {\n    float: left;\n    margin: 0 15px; }\n  #upComing #skillProgress {\n    position: relative;\n    left: 13em;\n    bottom: 3em; }\n  #upComing #matchSubmit {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: relative;\n    bottom: 4em;\n    left: 40em; }\n  #upComing #matchSubmit:active {\n    box-shadow: none; }\n  #upComing .skill {\n    width: 300px; }\n\n/*# sourceMappingURL=main.css.map */\n", ""]);
 
 	// exports
 
@@ -9998,11 +10025,12 @@
 	var signup = __webpack_require__(32);
 	var main = __webpack_require__(33);
 	var match = __webpack_require__(34);
-	var profile = __webpack_require__(35);
-	var createMatch = __webpack_require__(36);
-	var feedback = __webpack_require__(37);
-	var home = __webpack_require__(38);
-	var matchModel = __webpack_require__(39)
+	var history = __webpack_require__(35);
+	var profile = __webpack_require__(36);
+	var createMatch = __webpack_require__(37);
+	var feedback = __webpack_require__(38);
+	var home = __webpack_require__(39);
+	var matchModel = __webpack_require__(40)
 
 
 	var Router = Backbone.Router.extend({
@@ -10019,7 +10047,7 @@
 	    "home/:username":"home",
 	    "":"index"
 	  },
-	  index: function () {
+	  index: function (username) {
 	    var Match = Backbone.Model.extend({
 	  initialize: function () {
 	  },
@@ -10053,6 +10081,7 @@
 	   console.log("success: ",resp)
 	   $("#createMatchButton").on('click', function() {
 	    router.navigate('/createMatch', {trigger: true});
+	    console.log(username);
 	  });
 	 },
 	 error: function(err) {
@@ -10082,14 +10111,14 @@
 	  url: 'https://skill-match.herokuapp.com/api/users/create/'
 	});
 
-	$("#register").on('click', function() {
+	$(".register").on('click', function() {
 	   user = new User();
 	   user.set({
 	     username: $("#ruser").val(),
 	     email: $("#remail").val(),
 	     password:$("#rpass").val(),
 	     profile:{
-	     gender: $("#rgen").val(),
+	     gender: $(".rgen").val(),
 	     age: $("#rage").val()
 	  }
 	  })
@@ -10205,10 +10234,9 @@
 	      var userTemplate = $("#userTemplate").text();
 	      var userHTML = Mustache.render(userTemplate, 'user');
 	      $("#userprofile").html(userhtml);
-	      console.log(userhtml);
 	      console.log('success', resp.toJSON());
 
-	        $('#createMatch').on('click', function(){
+	      $('#createMatch').on('click', function(){
 	          router.navigate('/createMatch', {trigger: true});
 	        })
 	    },
@@ -10300,10 +10328,43 @@
 	  userProfile.fetch({
 	    success: function(resp) {
 	      var html = profile({'data': resp.toJSON()});
-	      $("#profileContainer").html(html);
+	      var profileTemplate = $("#profileTemplate").text();
+	      var profileHTML = Mustache.render(profileTemplate, 'data');
+	      var username = resp.toJSON()[0].username;
+	      $("#profileContainer").html(profileHTML);
 	      $("#container").html(html);
-	      console.log(html);
 	      console.log('success', resp.toJSON());
+	      var Match = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    description: null,
+	    park_name: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	      },
+	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	});
+	  var Matches = Backbone.Collection.extend({
+	  model: Match,
+	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	});
+	      var userMatches = new Match();
+	  userMatches.fetch({
+	    success: function(resp) {
+	      var historyhtml = history({'history': resp.toJSON().results});
+	      var historyTemplate = $("#historyTemplate").text();
+	      var historyHTML = Mustache.render(historyTemplate, 'history');
+	      $("#historyContainer").html(historyhtml);
+	      console.log('success', resp.toJSON());
+	      console.log(historyhtml);
+	    },
+	    error: function(err) {
+	      console.log('error', err);
+	    }
+	  })
 	    },
 	    error: function(err) {
 	      console.log('error', err);
@@ -10417,6 +10478,7 @@
 	      url: 'https://skill-match.herokuapp.com/api/feedbacks/create/',
 	      success: function(resp) {
 	        console.log("success", resp);
+	        router.navigate('/match/' + id, {trigger: true});
 	      },
 	      error: function(err) {
 	        console.log("error", err);
@@ -15343,7 +15405,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(29);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  <a class=\"register\" type=\"submit\" href=\"/login\">Submit</a>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  <a class=\"register\" type=\"submit\" href=\"/login\">Submit</a>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  <a class=\"register\" type=\"submit\" href=\"/\">Submit</a>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  <a class=\"register\" type=\"submit\" href=\"/\">Submit</a>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 33 */
@@ -15364,31 +15426,38 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(29);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"profileContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,581,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li><img id=\"userProfileImg\" src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\">Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.skill",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Sportsmanship <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <h2> History of Matches </h2>");t.b("\n" + i);t.b("    <li> Match: </li>");t.b("\n" + i);t.b("    <li> Experience: </li>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,726,791,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a>");t.b("\n" + i);});c.pop();}t.b("  </ul>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"profileContainer\">\n{{#data}}\n  <ul>\n    <li><img id=\"userProfileImg\" src=\"http://placehold.it/200x200\"></li>\n    <li class=\"profileDescription\"> Username: {{username}} </li>\n    <li class=\"profileDescription\"> Age: {{profile.age}} </li>\n    <li class=\"profileDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"profileDescription\">Skill Level <progress class=\"skill\" value=\"{{profile.skill}}\" max=\"100\"></progress></li>\n    <li class=\"profileDescription\"> Sportsmanship <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n  </ul>\n{{/data}}\n</div>\n\n<div id=\"historyContainer\">\n  <ul>\n    <h2> History of Matches </h2>\n    <li> Match: </li>\n    <li> Experience: </li>\n{{#data}}\n    <a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a>\n{{/data}}\n  </ul>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("<h2>Match History</h2>");t.b("\n" + i);if(t.s(t.f("history",c,p,1),c,p,0,63,283,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_completed",c,p,1),c,p,0,82,262,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" 	<ul>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("players",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("park_name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);t.b("    <a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"historyContainer\">\n<h2>Match History</h2>\n{{#history}}\n {{#is_completed}}\n \t<ul>\n    <li>{{sport}}</li>\n    <li>{{players}}</li>\n    <li>{{date}}</li>\n    <li>{{park_name}}</li>\n    </ul>\n    <a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a>\n {{/is_completed}}   \n{{/history}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(29);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennid\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <li> Park: </br><select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,824,874,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  <ul id=\"create\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennid\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <li> Park: </br><select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>\n  </ul>\n</div>\n\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"profileContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,581,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li><img id=\"userProfileImg\" src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\">Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.skill",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Sportsmanship <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"profileContainer\">\n{{#data}}\n  <ul>\n    <li><img id=\"userProfileImg\" src=\"http://placehold.it/200x200\"></li>\n    <li class=\"profileDescription\"> Username: {{username}} </li>\n    <li class=\"profileDescription\"> Age: {{profile.age}} </li>\n    <li class=\"profileDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"profileDescription\">Skill Level <progress class=\"skill\" value=\"{{profile.skill}}\" max=\"100\"></progress></li>\n    <li class=\"profileDescription\"> Sportsmanship <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n  </ul>\n{{/data}}\n</div>\n\n<div id=\"historyContainer\">\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(29);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"feedbackContainer\">");t.b("\n" + i);t.b("  <form id=\"feedbackForm\">");t.b("\n" + i);t.b("  <h3>Skill level of player</h3>");t.b("\n" + i);t.b("    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>How fun was the match</h3>");t.b("\n" + i);t.b("    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>Crowd level</h3>");t.b("\n" + i);t.b("    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">");t.b("\n" + i);t.b("      <option value=\"No Show\">No Show</option>");t.b("\n" + i);t.b("      <option value=\"On Time\">On Time</option>");t.b("\n" + i);t.b("      <option value=\"Little bit late\">Little Late</option>");t.b("\n" + i);t.b("      <option value=\"Over 10 min late\">Over 10 mins late</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"feedbackContainer\">\n  <form id=\"feedbackForm\">\n  <h3>Skill level of player</h3>\n    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>How fun was the match</h3>\n    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>Crowd level</h3>\n    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n    </br>\n    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">\n      <option value=\"No Show\">No Show</option>\n      <option value=\"On Time\">On Time</option>\n      <option value=\"Little bit late\">Little Late</option>\n      <option value=\"Over 10 min late\">Over 10 mins late</option>\n    </select>\n  </form>\n  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennid\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <li> Park: </br><select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,824,874,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  <ul id=\"create\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennid\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <li> Park: </br><select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>\n  </ul>\n</div>\n\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(29);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"userprofile\">");t.b("\n" + i);if(t.s(t.f("user",c,p,1),c,p,0,32,628,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("     <li><img id=\"homeProfileImg\" src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Skill Level: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.skill",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Create Match</button>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"yourMatches\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,678,982,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a>");t.b("\n" + i);t.b("  <li> Description: </li>");t.b("\n" + i);t.b("  <li> Park: ");t.b(t.v(t.f("park",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  <li> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"userprofile\">\n{{#user}}\n  <ul>\n     <li><img id=\"homeProfileImg\" src=\"http://placehold.it/200x200\"></li>\n    <li class=\"mainDescription\"> Username: {{username}} </li>\n    <li class=\"mainDescription\"> Age: {{profile.age}} </li>\n    <li class=\"mainDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"mainDescription\"> Skill Level: <progress class=\"skill\" value=\"{{profile.skill}}\" max=\"100\"></progress></li>\n    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Create Match</button>\n{{/user}}\n</div>\n\n<div id=\"yourMatches\">\n{{#data}}\n<ul>\n  <li> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a>\n  <li> Description: </li>\n  <li> Park: {{park}} </li>\n  <li> Sport: {{sport}}</li>\n  <li> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n  <li> Date: {{date}}</li>\n  <li> Time: {{time}}</li>\n</ul>\n{{/data}}\n</div>\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"feedbackContainer\">");t.b("\n" + i);t.b("  <form id=\"feedbackForm\">");t.b("\n" + i);t.b("  <h3>Skill level of player</h3>");t.b("\n" + i);t.b("    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>How fun was the match</h3>");t.b("\n" + i);t.b("    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>Crowd level</h3>");t.b("\n" + i);t.b("    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">");t.b("\n" + i);t.b("      <option value=\"No Show\">No Show</option>");t.b("\n" + i);t.b("      <option value=\"On Time\">On Time</option>");t.b("\n" + i);t.b("      <option value=\"Little bit late\">Little Late</option>");t.b("\n" + i);t.b("      <option value=\"Over 10 min late\">Over 10 mins late</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"feedbackContainer\">\n  <form id=\"feedbackForm\">\n  <h3>Skill level of player</h3>\n    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>How fun was the match</h3>\n    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>Crowd level</h3>\n    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n    </br>\n    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">\n      <option value=\"No Show\">No Show</option>\n      <option value=\"On Time\">On Time</option>\n      <option value=\"Little bit late\">Little Late</option>\n      <option value=\"Over 10 min late\">Over 10 mins late</option>\n    </select>\n  </form>\n  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(29);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"userprofile\">");t.b("\n" + i);if(t.s(t.f("user",c,p,1),c,p,0,32,628,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("     <li><img id=\"homeProfileImg\" src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Skill Level: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.skill",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Create Match</button>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"yourMatches\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,678,982,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a>");t.b("\n" + i);t.b("  <li> Description: </li>");t.b("\n" + i);t.b("  <li> Park: ");t.b(t.v(t.f("park",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  <li> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"userprofile\">\n{{#user}}\n  <ul>\n     <li><img id=\"homeProfileImg\" src=\"http://placehold.it/200x200\"></li>\n    <li class=\"mainDescription\"> Username: {{username}} </li>\n    <li class=\"mainDescription\"> Age: {{profile.age}} </li>\n    <li class=\"mainDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"mainDescription\"> Skill Level: <progress class=\"skill\" value=\"{{profile.skill}}\" max=\"100\"></progress></li>\n    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Create Match</button>\n{{/user}}\n</div>\n\n<div id=\"yourMatches\">\n{{#data}}\n<ul>\n  <li> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a>\n  <li> Description: </li>\n  <li> Park: {{park}} </li>\n  <li> Sport: {{sport}}</li>\n  <li> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n  <li> Date: {{date}}</li>\n  <li> Time: {{time}}</li>\n</ul>\n{{/data}}\n</div>\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Backbone = __webpack_require__(25);
