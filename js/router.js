@@ -38,11 +38,13 @@ var Router = Backbone.Router.extend({
     skill_level: null,
     date: null,
     time: null
-      },
+  },
   url: 'https://skill-match.herokuapp.com/api/matches/'
 });
 
-  var Matches = Backbone.Collection.extend({
+
+
+var Matches = Backbone.Collection.extend({
   model: Match,
   url: 'https://skill-match.herokuapp.com/api/matches/'
 });
@@ -276,7 +278,7 @@ router.on('route:match', function(id, username) {
         console.log("error", err);
       }
       })
-      
+
     });
 
 router.on('route:profile', function(creator, username) {
@@ -330,7 +332,6 @@ var matchContainer = Backbone.Model.extend({
   });
 
 router.on('route:createMatch', function(id, username) {
-
   var Park = Backbone.Model.extend({
   initialize: function () {
   },
@@ -359,6 +360,7 @@ router.on('route:createMatch', function(id, username) {
     matchAdd = new matchContainer();
     matchAdd.set({
     park: $("#addPark").val(),
+    description: $("#addDescription").val(),
     sport: $("#addSport").val(),
     skill_level:$("#addSkill").val(),
     date: $("#addDate").val(),
@@ -376,6 +378,7 @@ router.on('route:createMatch', function(id, username) {
       }
   });
       $("#addPark").val("");
+      $("#addDescription").val("");
       $("#addSport").val("");
       $("#addSkill").val("");
       $("#addDate").val("");
@@ -395,6 +398,7 @@ var feedbackContainer = Backbone.Model.extend({
   defaults: {
     skill: null,
     sportsmanship: null,
+    punctuality: null,
     availability: null
   },
   Model: feedbackContainer,
@@ -412,7 +416,8 @@ router.on('route:feedback', function(id, username){
       match: id,
       skill: $("#addSkillFeedback").val(),
       sportsmanship: $("#addFunFeedback").val(),
-      availability: $("#addCrowdFeedback").val()
+      availability: $("#addCrowdFeedback").val(),
+      punctuality: $("#addPunctualityFeedback").val()
     });
     feedbackAdd.save(null, {
       url: 'https://skill-match.herokuapp.com/api/feedbacks/create/',
@@ -426,6 +431,7 @@ router.on('route:feedback', function(id, username){
     $("#addSkillFeedback").val("");
     $("#addFunFeedback").val("");
     $("#addCrowdFeedback").val("");
+    $("#addPunctualityFeedback").val("");
   });
 });
 
@@ -436,6 +442,5 @@ $('body').on('click', 'a', function (e){
   var href = $(this).attr('href').substr(1);
   router.navigate(href, {trigger:true});
 });
-
 
 module.exports = router;
