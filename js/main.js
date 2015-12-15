@@ -16,7 +16,7 @@ $(document).ready(function(){
           var username = $("#username").val();
           var password = $("#password").val();
           var homeBtn = document.createElement('a');
-          var link = document.createTextNode(username);
+          var link = document.createTextNode("Hello, " + username);
           homeBtn.appendChild(link);
 			  homeBtn.setAttribute('href', '/home/'+username);
           $.ajax({

@@ -14,6 +14,16 @@ body {
   top: 1.5em;
 }
 
+#nav a {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  text-decoration: underline;
+}
+
 #nav li {
   list-style-type: none;
   display: inline-block;
@@ -28,6 +38,7 @@ body {
   color: white;
   list-style-type: none;
   text-decoration: none;
+  font-size: 15px;
 }
 
 #title a {
