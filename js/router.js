@@ -40,14 +40,14 @@ var Router = Backbone.Router.extend({
     date: null,
     time: null
   },
-  url: 'https://skill-match.herokuapp.com/api/matches/?page=2'
+  url: 'https://skill-match.herokuapp.com/api/matches/'
 });
 
 
 
 var Matches = Backbone.Collection.extend({
   model: Match,
-  url: 'https://skill-match.herokuapp.com/api/matches/?page=2'
+  url: 'https://skill-match.herokuapp.com/api/matches/'
 });
     var match = new Match();
     match.fetch({
@@ -305,7 +305,7 @@ router.on('route:match', function(id, username) {
       });
       $("#decline").on('click', function(){
         var decline = new Decline();
-        decline.ser({id:id})
+        decline.set({id:id})
         decline.save(null, {
           success: function(resp) {
             console.log("success", resp);
