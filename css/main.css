@@ -65,9 +65,9 @@
     position: relative;
     bottom: 4em;
     left: 40em; }
-  #upComing .skill {
-    width: 300px; }
   #upComing #matchSubmit:active {
     box-shadow: none; }
+  #upComing .skill {
+    width: 300px; }
 
 /*# sourceMappingURL=main.css.map */

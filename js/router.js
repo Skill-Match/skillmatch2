@@ -4,6 +4,7 @@ var login = require('./templates/login.html');
 var signup = require('./templates/signup.html');
 var main = require('./templates/main.html');
 var match = require('./templates/match.html');
+var history = require('./templates/history.html');
 var profile = require('./templates/profile.html');
 var createMatch = require('./templates/createMatch.html');
 var feedback = require('./templates/feedback.html');
@@ -25,7 +26,7 @@ var Router = Backbone.Router.extend({
     "home/:username":"home",
     "":"index"
   },
-  index: function () {
+  index: function (username) {
     var Match = Backbone.Model.extend({
   initialize: function () {
   },
@@ -57,6 +58,7 @@ var Router = Backbone.Router.extend({
    console.log("success: ",resp)
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
+    console.log(username);
   });
  },
  error: function(err) {
@@ -86,14 +88,14 @@ var User = Backbone.Model.extend({
   url: 'https://skill-match.herokuapp.com/api/users/create/'
 });
 
-$("#register").on('click', function() {
+$(".register").on('click', function() {
    user = new User();
    user.set({
      username: $("#ruser").val(),
      email: $("#remail").val(),
      password:$("#rpass").val(),
      profile:{
-     gender: $("#rgen").val(),
+     gender: $(".rgen").val(),
      age: $("#rage").val()
   }
   })
@@ -209,10 +211,9 @@ router.on('route:home', function(username){
       var userTemplate = $("#userTemplate").text();
       var userHTML = Mustache.render(userTemplate, 'user');
       $("#userprofile").html(userhtml);
-      console.log(userhtml);
       console.log('success', resp.toJSON());
 
-        $('#createMatch').on('click', function(){
+      $('#createMatch').on('click', function(){
           router.navigate('/createMatch', {trigger: true});
         })
     },
@@ -304,10 +305,43 @@ router.on('route:profile', function(creator, username) {
   userProfile.fetch({
     success: function(resp) {
       var html = profile({'data': resp.toJSON()});
-      $("#profileContainer").html(html);
+      var profileTemplate = $("#profileTemplate").text();
+      var profileHTML = Mustache.render(profileTemplate, 'data');
+      var username = resp.toJSON()[0].username;
+      $("#profileContainer").html(profileHTML);
       $("#container").html(html);
-      console.log(html);
       console.log('success', resp.toJSON());
+      var Match = Backbone.Model.extend({
+  initialize: function () {
+  },
+  defaults: {
+    description: null,
+    park_name: null,
+    sport: null,
+    skill_level: null,
+    date: null,
+    time: null
+      },
+  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+});
+  var Matches = Backbone.Collection.extend({
+  model: Match,
+  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+});
+      var userMatches = new Match();
+  userMatches.fetch({
+    success: function(resp) {
+      var historyhtml = history({'history': resp.toJSON().results});
+      var historyTemplate = $("#historyTemplate").text();
+      var historyHTML = Mustache.render(historyTemplate, 'history');
+      $("#historyContainer").html(historyhtml);
+      console.log('success', resp.toJSON());
+      console.log(historyhtml);
+    },
+    error: function(err) {
+      console.log('error', err);
+    }
+  })
     },
     error: function(err) {
       console.log('error', err);
@@ -418,6 +452,7 @@ router.on('route:feedback', function(id, username){
       url: 'https://skill-match.herokuapp.com/api/feedbacks/create/',
       success: function(resp) {
         console.log("success", resp);
+        router.navigate('/match/' + id, {trigger: true});
       },
       error: function(err) {
         console.log("error", err);
