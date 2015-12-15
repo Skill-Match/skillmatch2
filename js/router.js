@@ -24,6 +24,7 @@ var Router = Backbone.Router.extend({
     "profile/:creator":"profile",
     "createMatch":"createMatch",
     "home/:username":"home",
+    "parks":"parks",
     "":"index"
   },
   index: function (username) {
