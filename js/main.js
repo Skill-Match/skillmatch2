@@ -18,16 +18,17 @@ $(document).ready(function(){
           var homeBtn = document.createElement('a');
           var link = document.createTextNode(username);
           homeBtn.appendChild(link);
-			  homeBtn.setAttribute('href', '/home/'+username);
           $.ajax({
         url:"https://skill-match.herokuapp.com/api/api-token-auth/",
         method:'POST',
         data: {username: username, password:password}
       }).then(function(resp){
         setToken(resp.token);
-        console.log(resp.token);
+        console.log(resp);
+        console.log(resp.user_id)
         $('#nav').html(homeBtn);
-        console.log(username)
+        var user_id = resp.user_id;
+        homeBtn.setAttribute('href', '/home/'+username+"/"+ user_id);
       });
     });
     function setToken(token) {

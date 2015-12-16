@@ -1,0 +1,22 @@
+<div id="UpMatchPage">
+  <h3> Create Game you would like to play </h3>
+  {{#data}}
+  <a id="updateMatch" href="/match/{{id}}">Update Match</a>
+  <ul id="update">
+    <li> Sport:</li>
+      <select id="addSport" name="Sport" value"{{sport}}">
+        <option value="Tennis">Tennis</option>
+        <option value="Basketball">Basketball</option>
+        <option value="Football">Football</option>
+        <option value="Soccer">Soccer</option>
+        <option value="Other">Other</option>
+      </select>
+    <li> Description:</li> <textarea id="addDescription" cols="30" placeholder="What kind of match you are looking for?">{{description}}</textarea>
+    <li> Date:</li>  <input id="addDate" type="date" value="{{date}}">
+    <li> Time:</li> <input id="addTime" type="time" value="{{time}}">
+    <li> Skill: 1-100</li> <input id="addSkill" type="range" min="0" max="100" step="1" value='{{skill_level}}'>
+    <li> Park:</br><select id="addPark" name="park"></li>
+  </ul>
+  {{/data}}
+</div>
+
