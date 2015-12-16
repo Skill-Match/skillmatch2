@@ -1,7 +1,7 @@
 var Backbone = require('backbone');
 var Mustache = require('mustache');
-var BackbonePagination = require('backbone.paginator')
 var Cookie = require('js-cookie');
+var BackbonePagination = require('backbone.paginator')
 var login = require('./templates/login.html');
 var signup = require('./templates/signup.html');
 var main = require('./templates/main.html');
@@ -179,7 +179,7 @@ router.on('route:login', function(){
 });
 
 router.on('route:home', function(username){
-  Cookie.get('user_id');
+  console.log(Cookie.get('uid'));
   var Match = Backbone.Model.extend({
   initialize: function () {
   },
@@ -222,11 +222,11 @@ router.on('route:home', function(username){
       }
     },
     Model: profileContainer,
-    url: 'https://skill-match.herokuapp.com/api/users/6/'
+    url: 'https://skill-match.herokuapp.com/api/users/'+Cookie.get('uid')+'/'
   });
   var Profiles = Backbone.Collection.extend({
     Model: profileContainer,
-    url: 'https://skill-match.herokuapp.com/api/users/6/'
+    url: 'https://skill-match.herokuapp.com/api/users/'+Cookie.get('uid')+'/'
   });
   var userProfile = new Profiles();
   userProfile.fetch({
@@ -263,8 +263,6 @@ router.on('route:match', function(id, username) {
         console.log("success", resp);
         var matchTemplate = $("#matchTemplate").text();
         var matchHTML = Mustache.render(matchTemplate, 'data');
-        var player = resp.toJSON().players[1];
-        console.log(player);
         $("#matchDetailContainer").html(matchHTML);
         $("#container").html(html);
         $('#homeBtn').on('click', function(){
@@ -437,11 +435,31 @@ var matchContainer = Backbone.Model.extend({
     Model: matchContainer,
     url: 'https://skill-match.herokuapp.com/api/matches/'
   });
+var Matches = Backbone.Collection.extend({
+  model: matchContainer,
+  url: 'https://skill-match.herokuapp.com/api/matches/'
+});
 
 router.on('route:updatematch', function(id){
+  var matchContainer = Backbone.Model.extend({
+  initialize: function() {
+  },
+  defaults: {
+    park: null,
+    sport: null,
+    skill_level: null,
+    date: null,
+    time: null
+    },
+    Model: matchContainer,
+    url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
+  });
+var Matches = Backbone.Collection.extend({
+  model: matchContainer,
+  url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
+});
 var matchDetail = new matchContainer();
     matchDetail.fetch({
-      url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
       success: function(resp) {
         var html = updatematch({"data": resp.toJSON()});
         console.log("success", resp);
@@ -477,8 +495,8 @@ var matchDetail = new matchContainer();
  })
     $("#updateMatch").on('click', function(e) {
     e.preventDefault();
-    update = new matchContainer();
-    update.set({
+    matchDetail = new matchContainer();
+    matchDetail.set({
     park: $("#addPark").val(),
     description: $("#addDescription").val(),
     sport: $("#addSport").val(),
@@ -486,7 +504,8 @@ var matchDetail = new matchContainer();
     date: $("#addDate").val(),
     time: $("#addTime").val()
   });
-  update.save(null, {
+    matchDetail.fetch({id})
+  matchDetail.save(null, {
     url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
       success: function(resp) {
         console.log("success", resp);
@@ -511,7 +530,7 @@ var matchDetail = new matchContainer();
 
 })
 
-router.on('route:creatematch', function(id, username) {
+router.on('route:createMatch', function(id, username) {
   var Park = Backbone.Model.extend({
   initialize: function () {
   },
@@ -537,8 +556,8 @@ router.on('route:creatematch', function(id, username) {
    console.log("success: ",resp)
   $("#createMatch").on('click', function(e) {
     e.preventDefault();
-    matchAdd = new matchContainer();
-    matchAdd.set({
+    update = new matchContainer();
+    update.set({
     park: $("#addPark").val(),
     description: $("#addDescription").val(),
     sport: $("#addSport").val(),
@@ -546,7 +565,7 @@ router.on('route:creatematch', function(id, username) {
     date: $("#addDate").val(),
     time: $("#addTime").val()
   });
-  matchAdd.save(null, {
+  update.save(null, {
     url: 'https://skill-match.herokuapp.com/api/matches/',
       success: function(resp) {
         console.log("success", resp);

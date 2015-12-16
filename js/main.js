@@ -24,9 +24,9 @@ $(document).ready(function(){
         data: {username: username, password:password}
       }).then(function(resp){
         setToken(resp.token);
+        var user_id = resp.user_id;
+        Cookie.set('uid', user_id); 
         $('#nav').html(homeBtn);
-        Cookie.set('user_id', resp.user_id);
-
         homeBtn.setAttribute('href', '/home/'+username);
       });
     });
