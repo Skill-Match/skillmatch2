@@ -12,6 +12,7 @@ var createMatch = require('./templates/createMatch.html');
 var feedback = require('./templates/feedback.html');
 var home = require('./templates/home.html');
 var matchModel = require('./models/matchModel.js')
+var parks = require('./templates/parks.html');
 
 
 var Router = Backbone.Router.extend({
@@ -254,12 +255,13 @@ router.on('route:match', function(id, username) {
       initialize: function () {
       },
       defaults: {},
-      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/join/'
+
+      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
     });
 
       var Joins = Backbone.Collection.extend({
       model: Join,
-      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/join/'
+      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
     });
       $("#join").on('click', function() {
         console.log(id)
@@ -277,12 +279,12 @@ router.on('route:match', function(id, username) {
     });
       var Confirm = Backbone.Model.extend({
         defaults: {},
-        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/confirm/'
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
       });
 
       var Confirms = Backbone.Collection.extend ({
         model: Confirm,
-        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/confirm/'
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
       });
       $("#confirm").on('click', function() {
         var confirm = new Confirm();
@@ -298,11 +300,11 @@ router.on('route:match', function(id, username) {
       });
       var Decline = Backbone.Model.extend({
         defaults: {},
-        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/decline/'
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
       });
       var Declines = Backbone.Collection.extend({
         model: Decline,
-        url: 'https://skill-match.herokuapp.com/api/matches/'+id +'/decline/'
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
       });
       $("#decline").on('click', function(){
         var decline = new Decline();
@@ -585,6 +587,36 @@ router.on('route:feedback', function(id, username){
   });
 });
 
+router.on('route:parks', function() {
+  var Park = Backbone.Model.extend({
+    initialize: function () {
+    },
+    defaults: {
+    id: null,
+    name: null
+    },
+  url: 'https://skill-match.herokuapp.com/api/parks/'
+});
+  var Parks = Backbone.Collection.extend({
+    model: Park,
+    url: 'https://skill-match.herokuapp.com/api/parks/'
+});
+  var park = new Park();
+  park.fetch ({
+    success: function(resp) {
+      var html = parks({'data': resp.toJSON().results});
+      var parkTemplate = $("#parkTemplate").text();
+      var parkHTML = Mustache.render(parkTemplate, "data");
+      $("#parksContainer").html(parkHTML);
+      $("#container").html(html);
+      console.log("success", resp);
+      console.log(parkHTML);
+    },
+    error: function(err) {
+      console.log("error", err);
+    }
+  })
+});
 
 
 $('body').on('click', 'a', function (e){

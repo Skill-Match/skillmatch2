@@ -37,4 +37,46 @@
   #join:active {
     box-shadow: none;
   }
+
+  #confirm {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+  }
+
+  #confirm:active {
+    box-shadow: none;
+  }
+
+  #decline {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+  }
+
+  #decline:active {
+    box-shadow: none;
+  }
+
+  #homeBtn {
+    padding: 15px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+  }
+
+  #homeBtn:active {
+    box-shadow: none;
+  }
 }
