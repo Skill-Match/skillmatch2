@@ -62,7 +62,7 @@
 	          var username = $("#username").val();
 	          var password = $("#password").val();
 	          var homeBtn = document.createElement('a');
-	          var link = document.createTextNode(username);
+	          var link = document.createTextNode("Hello, " + username);
 	          homeBtn.appendChild(link);
 	          $.ajax({
 	        url:"https://skill-match.herokuapp.com/api/api-token-auth/",
@@ -9341,7 +9341,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #324053;\n  font-family: 'Ubuntu', sans-serif;\n}\n\n#title {\n  font-size: 40px;\n  margin-left: 1em;\n}\n\n#nav {\n  position: absolute;\n  right: 5em;\n  top: 1.5em;\n}\n\n#nav li {\n  list-style-type: none;\n  display: inline-block;\n}\n\n#logIn a {\n  color: white;\n  text-decoration: none;\n}\n\n#signUp a {\n  color: white;\n  list-style-type: none;\n  text-decoration: none;\n}\n\n#title a {\n  color: white;\n  text-decoration: none;\n}\n\n#container {\n  background-color: #f5f2ec;\n}\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #324053;\n  font-family: 'Ubuntu', sans-serif;\n}\n\n#title {\n  font-size: 40px;\n  margin-left: 1em;\n}\n\n#nav {\n  position: absolute;\n  right: 5em;\n  top: 1.5em;\n}\n\n#nav a {\n  font-size: 30px;\n  color: white;\n  text-decoration: none;\n}\n\n#nav a:hover {\n  text-decoration: underline;\n}\n\n#nav li {\n  list-style-type: none;\n  display: inline-block;\n}\n\n#logIn a {\n  color: white;\n  text-decoration: none;\n}\n\n#signUp a {\n  color: white;\n  list-style-type: none;\n  text-decoration: none;\n  font-size: 15px;\n}\n\n#title a {\n  color: white;\n  text-decoration: none;\n}\n\n#container {\n  background-color: #f5f2ec;\n}\n\ninput {\n  font-size: 15px;\n  margin: 10px 5px 5px;\n  border: none;\n  width: 150px;\n  padding: 8px 10px;\n  border-radius: 5px;\n}\n\nbutton {\n  margin-top: 15px;\n  padding: 8px;\n  background-color:#f5f2ec;\n  border: none;\n  border-radius: 10px;\n  box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);\n  outline: none;\n}\n\nbutton:active {\n  box-shadow: none;\n}\n\n.footerNav {\n  font-size: 10px;\n  color: white;\n  text-decoration: none;\n  margin-right: 5px;\n  margin-left: 5px;\n}\n\n.footerNav ul {\n  margin-bottom: 30px;\n}\n\n#footer li{\n  display: inline-block;\n}\n\n#footer p {\n  color: white;\n  font-size: 8px;\n}\n", ""]);
 
 	// exports
 
@@ -9891,7 +9891,7 @@
 
 
 	// module
-	exports.push([module.id, "#matchDetailContainer {\n  font-size: 25px;\n  height: 20em; }\n  #matchDetailContainer li {\n    list-style-type: none;\n    margin-bottom: 15px; }\n  #matchDetailContainer a {\n    text-decoration: none; }\n  #matchDetailContainer #matchSkill {\n    position: absolute;\n    left: 15em;\n    top: 8em; }\n  #matchDetailContainer .skill {\n    width: 300px;\n    margin-left: 8px; }\n  #matchDetailContainer #join {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    left: 40em;\n    top: 8em; }\n  #matchDetailContainer #join:active {\n    box-shadow: none; }\n\n/*# sourceMappingURL=match.css.map */\n", ""]);
+	exports.push([module.id, "#matchDetailContainer {\n  font-size: 25px;\n  height: 20em; }\n  #matchDetailContainer li {\n    list-style-type: none;\n    margin-bottom: 15px; }\n  #matchDetailContainer a {\n    text-decoration: none; }\n  #matchDetailContainer #matchSkill {\n    position: absolute;\n    left: 15em;\n    top: 8em; }\n  #matchDetailContainer .skill {\n    width: 300px;\n    margin-left: 8px; }\n  #matchDetailContainer #join {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    left: 40em;\n    top: 8em; }\n  #matchDetailContainer #join:active {\n    box-shadow: none; }\n  #matchDetailContainer #confirm {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #matchDetailContainer #confirm:active {\n    box-shadow: none; }\n  #matchDetailContainer #decline {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #matchDetailContainer #decline:active {\n    box-shadow: none; }\n  #matchDetailContainer #homeBtn {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #matchDetailContainer #homeBtn:active {\n    box-shadow: none; }\n\n/*# sourceMappingURL=match.css.map */\n", ""]);
 
 	// exports
 
@@ -10034,6 +10034,8 @@
 	var feedback = __webpack_require__(40);
 	var home = __webpack_require__(41);
 	var matchModel = __webpack_require__(42)
+	var parks = __webpack_require__(43);
+
 
 	var Router = Backbone.Router.extend({
 	  initialize: function () {
@@ -10052,10 +10054,6 @@
 	    "":"index"
 	  },
 	  index: function (username) {
-	     var page = 1
-	     $('.next').on('click', function(){
-	      page += 1
-	      console.log(page);
 	    var Match = Backbone.Model.extend({
 	  initialize: function () {
 	  },
@@ -10069,14 +10067,14 @@
 	    date: null,
 	    time: null
 	  },
-	  url: 'https://skill-match.herokuapp.com/api/matches/'+page
+	  url: 'https://skill-match.herokuapp.com/api/matches/'
 	});
 
 
 
 	var Matches = Backbone.Collection.extend({
 	  model: Match,
-	  url: 'https://skill-match.herokuapp.com/api/matches/'+page
+	  url: 'https://skill-match.herokuapp.com/api/matches/'
 	});
 	    var match = new Match();
 	    match.fetch({
@@ -10095,7 +10093,6 @@
 	   console.log("nope")
 	 }
 	});
-	})
 	  }
 	});
 
@@ -10280,12 +10277,13 @@
 	      initialize: function () {
 	      },
 	      defaults: {},
-	      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/join/'
+
+	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
 	    });
 
 	      var Joins = Backbone.Collection.extend({
 	      model: Join,
-	      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/join/'
+	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
 	    });
 	      $("#join").on('click', function() {
 	        console.log(id)
@@ -10303,12 +10301,12 @@
 	    });
 	      var Confirm = Backbone.Model.extend({
 	        defaults: {},
-	        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/confirm/'
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
 	      });
 
 	      var Confirms = Backbone.Collection.extend ({
 	        model: Confirm,
-	        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/confirm/'
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
 	      });
 	      $("#confirm").on('click', function() {
 	        var confirm = new Confirm();
@@ -10324,11 +10322,11 @@
 	      });
 	      var Decline = Backbone.Model.extend({
 	        defaults: {},
-	        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/decline/'
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
 	      });
 	      var Declines = Backbone.Collection.extend({
 	        model: Decline,
-	        url: 'https://skill-match.herokuapp.com/api/matches/'+id +'/decline/'
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
 	      });
 	      $("#decline").on('click', function(){
 	        var decline = new Decline();
@@ -10611,6 +10609,36 @@
 	  });
 	});
 
+	router.on('route:parks', function() {
+	  var Park = Backbone.Model.extend({
+	    initialize: function () {
+	    },
+	    defaults: {
+	    id: null,
+	    name: null
+	    },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	  var Parks = Backbone.Collection.extend({
+	    model: Park,
+	    url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	  var park = new Park();
+	  park.fetch ({
+	    success: function(resp) {
+	      var html = parks({'data': resp.toJSON().results});
+	      var parkTemplate = $("#parkTemplate").text();
+	      var parkHTML = Mustache.render(parkTemplate, "data");
+	      $("#parksContainer").html(parkHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	      console.log(parkHTML);
+	    },
+	    error: function(err) {
+	      console.log("error", err);
+	    }
+	  })
+	});
 
 
 	$('body').on('click', 'a', function (e){
@@ -15532,7 +15560,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(29);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,275,950,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,288,937,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("  <li class=\"description\"> Park: ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li class=\"description\"> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Description of match: ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("  </progress></li>");t.b("\n" + i);t.b("  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Accept </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("<button class=\"next\">Next Page</button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n{{#is_open}}\n<ul>\n  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>\n  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a></li>\n  <li class=\"description\"> Park: {{park_name}} </li>\n  <li class=\"description\"> Sport: {{sport}}</li>\n  <li class=\"description\"> Date: {{date}}</li>\n  <li class=\"description\"> Time: {{time}}</li>\n  <li class=\"description\"> Description of match: {{description}}</li>\n  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n  </progress></li>\n  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Accept </a></li>\n</ul>\n{{/is_open}}\n{{/data}}\n<button class=\"next\">Next Page</button>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,275,950,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,288,937,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("  <li class=\"description\"> Park: ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li class=\"description\"> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Description of match: ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("  </progress></li>");t.b("\n" + i);t.b("  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Accept </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n{{#is_open}}\n<ul>\n  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>\n  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a></li>\n  <li class=\"description\"> Park: {{park_name}} </li>\n  <li class=\"description\"> Sport: {{sport}}</li>\n  <li class=\"description\"> Date: {{date}}</li>\n  <li class=\"description\"> Time: {{time}}</li>\n  <li class=\"description\"> Description of match: {{description}}</li>\n  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n  </progress></li>\n  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Accept </a></li>\n</ul>\n{{/is_open}}\n{{/data}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 34 */
@@ -15612,6 +15640,13 @@
 	    url: 'https://skill-match.herokuapp.com/api/matches/'
 	  });
 	 module.exports = matchContainer;
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(29);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,256,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("rating",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address1",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address2",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n  {{#data}}\n  <ul>\n    <li>{{name}}</li>\n    <li>{{rating}}</li>\n    <li><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li>{{display_address1}}</li>\n    <li>{{display_address2}}</li>\n    <li>{{display_address3}}</li>\n  </ul>\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ }
 /******/ ]);
