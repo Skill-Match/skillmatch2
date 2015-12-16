@@ -295,13 +295,15 @@ router.on('route:match', function(id, username) {
           router.navigate('/home/' + player, {trigger: true});
         })
         $('#cancel').on('click', function(){
+          var matchDetail = new matchContainer({id:id});
         matchDetail.destroy({
-          success: function(resp) {
-        console.log("success", resp);
-      },
-      error: function(err) {
-        console.log("error", err);
-      }
+           url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
+          success: function(resp){
+           console.log("success", resp);
+          },
+          error : function() {
+            console.log("error")
+          }
         })
          })
         var Join = Backbone.Model.extend({
@@ -484,7 +486,7 @@ var Matches = Backbone.Collection.extend({
   model: matchContainer,
   url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
 });
-var matchDetail = new matchContainer();
+var matchDetail = new matchContainer(id);
     matchDetail.fetch({
       success: function(resp) {
         var html = updatematch({"data": resp.toJSON()});
@@ -521,7 +523,7 @@ var matchDetail = new matchContainer();
  })
     $("#updateMatch").on('click', function(e) {
     e.preventDefault();
-    matchDetail = new matchContainer();
+    matchDetail = new matchContainer({id:id});
     matchDetail.set({
     park: $("#addPark").val(),
     description: $("#addDescription").val(),
@@ -530,7 +532,6 @@ var matchDetail = new matchContainer();
     date: $("#addDate").val(),
     time: $("#addTime").val()
   });
-    matchDetail.fetch({id})
   matchDetail.save(null, {
     url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
       success: function(resp) {
