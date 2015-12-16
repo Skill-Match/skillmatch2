@@ -9,8 +9,8 @@ require("../css/home.css");
 require("../css/profile.css");
 require("../css/feedback.css");
 
-
 $(document).ready(function(){
+  var Cookie = require('js-cookie');
   var Router = require('./router.js');
           $('#loginSubmit').on('click', function(){
           var username = $("#username").val();
@@ -24,11 +24,10 @@ $(document).ready(function(){
         data: {username: username, password:password}
       }).then(function(resp){
         setToken(resp.token);
-        console.log(resp);
-        console.log(resp.user_id)
         $('#nav').html(homeBtn);
-        var user_id = resp.user_id;
-        homeBtn.setAttribute('href', '/home/'+username+"/"+ user_id);
+        Cookie.set('user_id', resp.user_id);
+
+        homeBtn.setAttribute('href', '/home/'+username);
       });
     });
     function setToken(token) {

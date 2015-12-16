@@ -10035,6 +10035,7 @@
 	var feedback = __webpack_require__(40);
 	var home = __webpack_require__(41);
 	var matchModel = __webpack_require__(42)
+<<<<<<< HEAD
 =======
 	var match = __webpack_require__(34);
 	var history = __webpack_require__(35);
@@ -10046,6 +10047,10 @@
 	var parks = __webpack_require__(41);
 
 >>>>>>> nick
+=======
+	var parks = __webpack_require__(43);
+
+>>>>>>> drosa
 
 	var Router = Backbone.Router.extend({
 	  initialize: function () {
@@ -10068,10 +10073,6 @@
 	    "":"index"
 	  },
 	  index: function (username) {
-	     var page = 1
-	     $('.next').on('click', function(){
-	      page += 1
-	      console.log(page);
 	    var Match = Backbone.Model.extend({
 	  initialize: function () {
 	  },
@@ -10085,14 +10086,14 @@
 	    date: null,
 	    time: null
 	  },
-	  url: 'https://skill-match.herokuapp.com/api/matches/'+page
+	  url: 'https://skill-match.herokuapp.com/api/matches/'
 	});
 
 
 
 	var Matches = Backbone.Collection.extend({
 	  model: Match,
-	  url: 'https://skill-match.herokuapp.com/api/matches/'+page
+	  url: 'https://skill-match.herokuapp.com/api/matches/'
 	});
 	    var match = new Match();
 	    match.fetch({
@@ -10112,6 +10113,7 @@
 	 }
 	});
 <<<<<<< HEAD
+<<<<<<< HEAD
 	})
 =======
 
@@ -10130,6 +10132,8 @@
 	});
 
 >>>>>>> nick
+=======
+>>>>>>> drosa
 	  }
 	});
 
@@ -10315,19 +10319,28 @@
 	      },
 	      defaults: {},
 <<<<<<< HEAD
-	      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/join/'
-=======
-	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
->>>>>>> nick
-	    });
-
-	      var Joins = Backbone.Collection.extend({
-	      model: Join,
 <<<<<<< HEAD
 	      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/join/'
 =======
 	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
 >>>>>>> nick
+=======
+
+	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
+>>>>>>> drosa
+	    });
+
+	      var Joins = Backbone.Collection.extend({
+	      model: Join,
+<<<<<<< HEAD
+<<<<<<< HEAD
+	      url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/join/'
+=======
+	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
+>>>>>>> nick
+=======
+	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
+>>>>>>> drosa
 	    });
 	      $("#join").on('click', function() {
 	        console.log(id)
@@ -10346,19 +10359,27 @@
 	      var Confirm = Backbone.Model.extend({
 	        defaults: {},
 <<<<<<< HEAD
-	        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/confirm/'
-=======
-	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
->>>>>>> nick
-	      });
-
-	      var Confirms = Backbone.Collection.extend ({
-	        model: Confirm,
 <<<<<<< HEAD
 	        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/confirm/'
 =======
 	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
 >>>>>>> nick
+=======
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
+>>>>>>> drosa
+	      });
+
+	      var Confirms = Backbone.Collection.extend ({
+	        model: Confirm,
+<<<<<<< HEAD
+<<<<<<< HEAD
+	        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/confirm/'
+=======
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
+>>>>>>> nick
+=======
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
+>>>>>>> drosa
 	      });
 	      $("#confirm").on('click', function() {
 	        var confirm = new Confirm();
@@ -10375,6 +10396,7 @@
 	      var Decline = Backbone.Model.extend({
 	        defaults: {},
 <<<<<<< HEAD
+<<<<<<< HEAD
 	        url: 'https://skill-match.herokuapp.com/api/matches/'+id+'/decline/'
 	      });
 	      var Declines = Backbone.Collection.extend({
@@ -10387,6 +10409,13 @@
 	        model: Decline,
 	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
 >>>>>>> nick
+=======
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
+	      });
+	      var Declines = Backbone.Collection.extend({
+	        model: Decline,
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
+>>>>>>> drosa
 	      });
 	      $("#decline").on('click', function(){
 	        var decline = new Decline();
@@ -15620,7 +15649,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(29);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,275,950,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,288,937,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("  <li class=\"description\"> Park: ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li class=\"description\"> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Description of match: ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("  </progress></li>");t.b("\n" + i);t.b("  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Accept </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("<button class=\"next\">Next Page</button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n{{#is_open}}\n<ul>\n  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>\n  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a></li>\n  <li class=\"description\"> Park: {{park_name}} </li>\n  <li class=\"description\"> Sport: {{sport}}</li>\n  <li class=\"description\"> Date: {{date}}</li>\n  <li class=\"description\"> Time: {{time}}</li>\n  <li class=\"description\"> Description of match: {{description}}</li>\n  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n  </progress></li>\n  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Accept </a></li>\n</ul>\n{{/is_open}}\n{{/data}}\n<button class=\"next\">Next Page</button>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,275,950,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,288,937,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("  <li class=\"description\"> Park: ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li class=\"description\"> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Description of match: ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("  </progress></li>");t.b("\n" + i);t.b("  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Accept </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n{{#is_open}}\n<ul>\n  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>\n  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a></li>\n  <li class=\"description\"> Park: {{park_name}} </li>\n  <li class=\"description\"> Sport: {{sport}}</li>\n  <li class=\"description\"> Date: {{date}}</li>\n  <li class=\"description\"> Time: {{time}}</li>\n  <li class=\"description\"> Description of match: {{description}}</li>\n  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n  </progress></li>\n  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Accept </a></li>\n</ul>\n{{/is_open}}\n{{/data}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 34 */
@@ -15718,7 +15747,11 @@
 	 module.exports = matchContainer;
 
 /***/ },
+<<<<<<< HEAD
 /* 41 */
+=======
+/* 43 */
+>>>>>>> drosa
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(29);
