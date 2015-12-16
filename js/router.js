@@ -75,6 +75,7 @@ var Matches = Backbone.Collection.extend({
 });
 
 $("#nextPage").on('click', function() {
+  window.scrollTo(0, 450);
   counter++;
   var nextMatches = Backbone.PageableCollection.extend({
     model: Match,
@@ -101,6 +102,32 @@ $("#nextPage").on('click', function() {
     }
   });
 });
+  $("#previousPage").on('click', function() {
+    window.scrollTo(0, 450);
+    counter--;
+    var previousMatches = BackbonePagination.extend({
+      model: Match,
+      url: 'https://skill-match.herokuapp.com/api/matches/',
+      state: {
+        firstPage: 1,
+        currentPage: counter
+      }
+    });
+    var previousMatch = new previousMatches();
+    previousMatch.fetch({
+    success: function(resp) {
+    console.log("success", resp);
+    var html = main({'data': resp.toJSON()[0].results});
+    var mainTemplate = $("#mainTemplate").text();
+    var mainHTML = Mustache.render(mainTemplate, 'data');
+    $("#upComing").html(mainHTML);
+    $("#container").html(html);
+    },
+    error: function(err) {
+      console.log("error", err);
+    }
+  });
+})
   }
 });
 
