@@ -20,7 +20,11 @@
         </ul>
     </div>
    <div id="container"></div>
-
+<script type="x-tmpl-mustache" id="mainTemplate">
+  {{#data}}
+  <a id="nextPage" href="{{page}}">Next Page</a>
+  {{/data}}
+</script>
   <div id="footer">
     <ul>
       <li><a class="footerNav" href="/"> Home </a></li>
@@ -33,6 +37,7 @@
       <li><a class="footerNav" href="/About Us"> About Us </a></li>
     </ul>
   </div>
+  <a id="nextPage" href=""> Next Page </a>
   <script type="text/javascript" src="/js/bundle.js"></script>
 </body>
 </html>

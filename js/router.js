@@ -1,5 +1,6 @@
 var Backbone = require('backbone');
 var Mustache = require('mustache');
+var BackbonePagination = require('backbone.paginator')
 var login = require('./templates/login.html');
 var signup = require('./templates/signup.html');
 var main = require('./templates/main.html');
@@ -11,6 +12,8 @@ var feedback = require('./templates/feedback.html');
 var home = require('./templates/home.html');
 var matchModel = require('./models/matchModel.js')
 var parks = require('./templates/parks.html');
+
+var counter = 1;
 
 
 var Router = Backbone.Router.extend({
@@ -45,8 +48,6 @@ var Router = Backbone.Router.extend({
   url: 'https://skill-match.herokuapp.com/api/matches/'
 });
 
-
-
 var Matches = Backbone.Collection.extend({
   model: Match,
   url: 'https://skill-match.herokuapp.com/api/matches/'
@@ -68,6 +69,34 @@ var Matches = Backbone.Collection.extend({
  error: function(err) {
    console.log("nope")
  }
+});
+
+$("#nextPage").on('click', function() {
+  counter++;
+  var nextMatches = Backbone.PageableCollection.extend({
+    model: Match,
+    url: 'https://skill-match.herokuapp.com/api/matches/',
+    state:{
+     firstPage: 1,
+     currentPage: counter
+   }
+
+  });
+
+  var nextMatch = new nextMatches();
+  nextMatch.fetch({
+    success: function(resp) {
+    console.log("success", resp);
+    var html = main({'data': resp.toJSON()[0].results});
+    var mainTemplate = $("#mainTemplate").text();
+    var mainHTML = Mustache.render(mainTemplate, 'data');
+    $("#upComing").html(mainHTML);
+    $("#container").html(html);
+    },
+    error: function(err) {
+      console.log("error", err);
+    }
+  });
 });
 
   }
