@@ -1,5 +1,4 @@
 <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-
 <div id="imageContainer">
   <p id="mission"> Find the Game for you... </p>
   <button id="createMatchButton" type="submit">Create Match</button>
@@ -8,7 +7,7 @@
 {{#data}}
 {{#is_open}}
 <ul>
-  <li class="profileImg"><img src="http://placehold.it/200x200"></li>
+  <li class="description"><img src="{{img_url}}"></li>
   <li class="description" class="creatorName"> <a href="/profile/{{creator}}"> {{creator_name}} </a></li>
   <li class="description"> Park: {{park_name}} </li>
   <li class="description"> Sport: {{sport}}</li>

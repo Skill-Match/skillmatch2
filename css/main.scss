@@ -63,14 +63,17 @@
     padding-bottom: 5px;
   }
 
+  img {
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin: 0 15px;
+    margin-top: -26px;
+  }
+
   .description {
     position: relative;
     top: 2em;
-  }
-
-  .profileImg{
-    float: left;
-    margin: 0 15px;
   }
 
   #skillProgress {
