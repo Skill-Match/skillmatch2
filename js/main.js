@@ -29,6 +29,7 @@ $(document).ready(function(){
         $('#nav').html(homeBtn);
         homeBtn.setAttribute('href', '/home/'+username);
       });
+      
     });
     function setToken(token) {
   var backboneSync = Backbone.sync;

@@ -73,6 +73,7 @@ var Matches = Backbone.Collection.extend({
  }
 });
 
+
 $("#nextPage").on('click', function() {
   window.scrollTo(0, 450);
   counter++;
@@ -285,6 +286,10 @@ router.on('route:match', function(id, username) {
     matchDetail.fetch({
       url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
       success: function(resp) {
+        var creator = resp.toJSON().creator;
+        if (Cookie.get('uid') === creator) {
+          $("#join").hide();
+        };
         var html = match({"data": resp.toJSON()});
         console.log("success", resp);
         var matchTemplate = $("#matchTemplate").text();
@@ -378,7 +383,6 @@ router.on('route:match', function(id, username) {
         console.log("error", err);
       }
       })
-
     });
 
 router.on('route:profile', function(creator, username) {

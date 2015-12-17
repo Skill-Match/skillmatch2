@@ -9340,7 +9340,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #324053;\n  font-family: 'Ubuntu', sans-serif;\n}\n\n#title {\n  font-size: 40px;\n  margin-left: 1em;\n}\n\n#nav {\n  position: absolute;\n  right: 5em;\n  top: 1.5em;\n}\n\n#nav a {\n  font-size: 30px;\n  color: white;\n  text-decoration: none;\n}\n\n#nav a:hover {\n  text-decoration: underline;\n}\n\n#nav li {\n  list-style-type: none;\n  display: inline-block;\n}\n\n#logIn a {\n  color: white;\n  text-decoration: none;\n}\n\n#signUp a {\n  color: white;\n  list-style-type: none;\n  text-decoration: none;\n  font-size: 15px;\n}\n\n#title a {\n  color: white;\n  text-decoration: none;\n}\n\n#container {\n  background-color: #f5f2ec;\n}\n\ninput {\n  font-size: 15px;\n  margin: 10px 5px 5px;\n  border: none;\n  width: 150px;\n  padding: 8px 10px;\n  border-radius: 5px;\n}\n\nbutton {\n  margin-top: 15px;\n  padding: 8px;\n  background-color:#f5f2ec;\n  border: none;\n  border-radius: 10px;\n  box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);\n  outline: none;\n}\n\nbutton:active {\n  box-shadow: none;\n}\n\n.footerNav {\n  font-size: 10px;\n  color: white;\n  text-decoration: none;\n  margin-right: 5px;\n  margin-left: 5px;\n}\n\n.footerNav ul {\n  margin-bottom: 30px;\n}\n\n#footer li{\n  display: inline-block;\n}\n\n#footer p {\n  color: white;\n  font-size: 8px;\n}\n", ""]);
+	exports.push([module.id, "/*\nErrno::ENOENT: No such file or directory - index.scss\n\nBacktrace:\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:482:in `read'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:482:in `update_stylesheet'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `each'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:293:in `watch'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin.rb:108:in `method_missing'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:381:in `watch_or_update'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:51:in `process_result'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/base.rb:52:in `parse'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/base.rb:19:in `parse!'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/bin/sass:13:in `<top (required)>'\n/usr/local/bin/sass:23:in `load'\n/usr/local/bin/sass:23:in `<main>'\n*/\nbody:before {\n  white-space: pre;\n  font-family: monospace;\n  content: \"Errno::ENOENT: No such file or directory - index.scss\"; }\n", ""]);
 
 	// exports
 
@@ -10233,6 +10233,9 @@
 	   $("#createMatchButton").on('click', function() {
 	    router.navigate('/createMatch', {trigger: true});
 	  });
+	   if (false) {
+	    $('.sport').append("maki-basketball")
+	   };
 	 },
 	 error: function(err) {
 	   console.log("nope")
@@ -10461,13 +10464,15 @@
 	          router.navigate('/home/' + player, {trigger: true});
 	        })
 	        $('#cancel').on('click', function(){
+	          var matchDetail = new matchContainer({id:id});
 	        matchDetail.destroy({
-	          success: function(resp) {
-	        console.log("success", resp);
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
+	           url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
+	          success: function(resp){
+	           console.log("success", resp);
+	          },
+	          error : function() {
+	            console.log("error")
+	          }
 	        })
 	         })
 	        var Join = Backbone.Model.extend({
@@ -10650,7 +10655,7 @@
 	  model: matchContainer,
 	  url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
 	});
-	var matchDetail = new matchContainer();
+	var matchDetail = new matchContainer(id);
 	    matchDetail.fetch({
 	      success: function(resp) {
 	        var html = updatematch({"data": resp.toJSON()});
@@ -10687,7 +10692,7 @@
 	 })
 	    $("#updateMatch").on('click', function(e) {
 	    e.preventDefault();
-	    matchDetail = new matchContainer();
+	    matchDetail = new matchContainer({id:id});
 	    matchDetail.set({
 	    park: $("#addPark").val(),
 	    description: $("#addDescription").val(),
@@ -10696,7 +10701,6 @@
 	    date: $("#addDate").val(),
 	    time: $("#addTime").val()
 	  });
-	    matchDetail.fetch({id})
 	  matchDetail.save(null, {
 	    url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
 	      success: function(resp) {
@@ -17162,7 +17166,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,275,948,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,288,935,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("  <li class=\"description\"> Park: ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li class=\"description\"> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Description of match: ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("  </progress></li>");t.b("\n" + i);t.b("  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n{{#is_open}}\n<ul>\n  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>\n  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a></li>\n  <li class=\"description\"> Park: {{park_name}} </li>\n  <li class=\"description\"> Sport: {{sport}}</li>\n  <li class=\"description\"> Date: {{date}}</li>\n  <li class=\"description\"> Time: {{time}}</li>\n  <li class=\"description\"> Description of match: {{description}}</li>\n  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n  </progress></li>\n  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n{{/is_open}}\n{{/data}}\n</div>\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,275,962,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,288,949,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("  <li class=\"description\"> Park: ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li class=\"description\" class=\"sport\"> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Description of match: ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("  </progress></li>");t.b("\n" + i);t.b("  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n{{#is_open}}\n<ul>\n  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>\n  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a></li>\n  <li class=\"description\"> Park: {{park_name}} </li>\n  <li class=\"description\" class=\"sport\"> Sport: {{sport}}</li>\n  <li class=\"description\"> Date: {{date}}</li>\n  <li class=\"description\"> Time: {{time}}</li>\n  <li class=\"description\"> Description of match: {{description}}</li>\n  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n  </progress></li>\n  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n{{/is_open}}\n{{/data}}\n</div>\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 36 */
@@ -17204,7 +17208,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennid\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <li> Park: </br><select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,824,874,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  <ul id=\"create\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennid\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <li> Park: </br><select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>\n  </ul>\n</div>\n\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <li> Park: </br><select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,824,874,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  <ul id=\"create\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <li> Park: </br><select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>\n  </ul>\n</div>\n\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 42 */
