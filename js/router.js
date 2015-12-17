@@ -102,7 +102,8 @@ $("#nextPage").on('click', function() {
     }
   });
 });
-  $("#previousPage").on('click', function() {
+  $("#previousPage").on('click', function(e) {
+    e.preventDefault();
     window.scrollTo(0, 450);
     counter--;
     var previousMatches = BackbonePagination.extend({
@@ -144,8 +145,11 @@ var User = Backbone.Model.extend({
     password: null,
     profile: {
         gender: null,
-        age: null
+        age: null,
+        phone_number: null,
+        wants_texts: false,
     }
+
   },
   url: 'https://skill-match.herokuapp.com/api/users/create/'
 });
@@ -158,7 +162,9 @@ $(".register").on('click', function() {
      password:$("#rpass").val(),
      profile:{
      gender: $(".rgen").val(),
-     age: $("#rage").val()
+     age: $("#rage").val(),
+     phone_number: $(".rnumber").val(),
+     wants_textsff: $("#rtxt").val()
   }
   })
    var Users = Backbone.Collection.extend({
@@ -287,15 +293,30 @@ router.on('route:match', function(id, username) {
       url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
       success: function(resp) {
         var creator = resp.toJSON().creator;
-        if (Cookie.get('uid') === creator) {
-          $("#join").hide();
-        };
+        var confirm = resp.toJSON().is_confirmed;
+        var open = resp.toJSON().is_open;
         var html = match({"data": resp.toJSON()});
         console.log("success", resp);
         var matchTemplate = $("#matchTemplate").text();
         var matchHTML = Mustache.render(matchTemplate, 'data');
         $("#matchDetailContainer").html(matchHTML);
         $("#container").html(html);
+        $("#confirm").hide();
+        $("#decline").hide();
+        console.log(Cookie.get('uid'));
+        if ( Cookie.get('uid') == creator) {
+          $("#join").hide();
+          $("#confirm").show();
+          $("#decline").show();
+        };
+        if(confirm == true){
+          $("#confirm").hide();
+          $("#decline").hide();
+        }
+        if(open == false){
+          $("#join").hide();
+        }
+
         $('#homeBtn').on('click', function(){
           router.navigate('/home/' + player, {trigger: true});
         })
@@ -330,7 +351,7 @@ router.on('route:match', function(id, username) {
           join.save(null, {
       success: function(resp) {
         console.log("success", resp);
-        router.navigate('/match/' + id, {trigger: true});
+        router.navigate('/home/' + Cookie.get('userName'), {trigger: true});
       },
       error: function(err) {
         console.log("error", err);

@@ -24,8 +24,11 @@ $(document).ready(function(){
         data: {username: username, password:password}
       }).then(function(resp){
         setToken(resp.token);
+        console.log(resp);
         var user_id = resp.user_id;
-        Cookie.set('uid', user_id); 
+        var user = resp.username;
+        Cookie.set('uid', user_id);
+        Cookie.set('userName', user); 
         $('#nav').html(homeBtn);
         homeBtn.setAttribute('href', '/home/'+username);
       });
