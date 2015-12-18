@@ -54,10 +54,11 @@
 	__webpack_require__(18);
 	__webpack_require__(20);
 	__webpack_require__(22);
+	__webpack_require__(24);
 
 	$(document).ready(function(){
-	  var Cookie = __webpack_require__(24);
-	  var Router = __webpack_require__(25);
+	  var Cookie = __webpack_require__(26);
+	  var Router = __webpack_require__(27);
 	          $('#loginSubmit').on('click', function(){
 	          var username = $("#username").val();
 	          var password = $("#password").val();
@@ -70,11 +71,15 @@
 	        data: {username: username, password:password}
 	      }).then(function(resp){
 	        setToken(resp.token);
+	        console.log(resp);
 	        var user_id = resp.user_id;
-	        Cookie.set('uid', user_id); 
+	        var user = resp.username;
+	        Cookie.set('uid', user_id);
+	        Cookie.set('userName', user); 
 	        $('#nav').html(homeBtn);
 	        homeBtn.setAttribute('href', '/home/'+username);
 	      });
+	      
 	    });
 	    function setToken(token) {
 	  var backboneSync = Backbone.sync;
@@ -9340,7 +9345,7 @@
 
 
 	// module
-	exports.push([module.id, "/*\nErrno::ENOENT: No such file or directory - index.scss\n\nBacktrace:\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:482:in `read'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:482:in `update_stylesheet'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `each'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:293:in `watch'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin.rb:108:in `method_missing'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:381:in `watch_or_update'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:51:in `process_result'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/base.rb:52:in `parse'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/base.rb:19:in `parse!'\n/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/bin/sass:13:in `<top (required)>'\n/usr/local/bin/sass:23:in `load'\n/usr/local/bin/sass:23:in `<main>'\n*/\nbody:before {\n  white-space: pre;\n  font-family: monospace;\n  content: \"Errno::ENOENT: No such file or directory - index.scss\"; }\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #324053;\n  font-family: 'Ubuntu', sans-serif;\n}\n#title {\n  font-size: 40px;\n  margin-left: 1em;\n}\n\n#skillMatch {\n  position: absolute;\n  top: .8em;\n  left: 3em;\n}\n\nh1 {\n  color: white;\n}\nimg {\n  height: 5%;\n  width: 5%;\n}\n#nav {\n  position: absolute;\n  right: 5em;\n  top: 1.5em;\n}\n#nav a {\n  font-size: 30px;\n  color: white;\n  text-decoration: none;\n}\n#nav a:hover {\n  text-decoration: underline;\n}\n#nav li {\n  list-style-type: none;\n  display: inline-block;\n}\n#logIn a {\n  color: white;\n  text-decoration: none;\n}\n#signUp a {\n  color: white;\n  list-style-type: none;\n  text-decoration: none;\n  font-size: 15px;\n}\n#title a {\n  color: white;\n  text-decoration: none;\n}\n#container {\n  background-color: #f5f2ec;\n}\ninput {\n  font-size: 15px;\n  margin: 10px 5px 5px;\n  border: none;\n  width: 150px;\n  padding: 8px 10px;\n  border-radius: 5px;\n}\nbutton {\n  margin-top: 15px;\n  padding: 8px;\n  background-color:#f5f2ec;\n  border: none;\n  border-radius: 10px;\n  box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);\n  outline: none;\n}\nbutton:active {\n  box-shadow: none;\n}\n.footerNav {\n  font-size: 10px;\n  color: white;\n  text-decoration: none;\n  margin-right: 5px;\n  margin-left: 5px;\n}\n.footerNav ul {\n  margin-bottom: 30px;\n}\n#footer li{\n  display: inline-block;\n}\n#footer p {\n  color: white;\n  font-size: 8px;\n}", ""]);
 
 	// exports
 
@@ -9730,7 +9735,7 @@
 
 
 	// module
-	exports.push([module.id, "#imageContainer {\n  background-image: url(\"/images/tennis.jpg\");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 420px;\n  width: 100%; }\n  #imageContainer #createMatchButton {\n    position: absolute;\n    top: 370px;\n    left: 330px;\n    color: white;\n    background-color: #ef3122;\n    font-size: 30px;\n    border-radius: 15px;\n    border: none;\n    outline: none;\n    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5); }\n  #imageContainer #createMatchButton:active {\n    box-shadow: 0 0 0 0;\n    font-size: 29px; }\n  #imageContainer #mission {\n    position: absolute;\n    top: 250px;\n    left: 200px;\n    font-size: 40px;\n    color: white; }\n\n#upComing {\n  font-size: 17px; }\n  #upComing a {\n    text-decoration: none;\n    color: black;\n    font-size: 20px; }\n  #upComing ul {\n    border-bottom: 1px solid #4f1e47;\n    width: 1200px;\n    margin-top: 30px;\n    margin-left: 20px; }\n  #upComing ul:nth-last-child(1) {\n    border-bottom: none;\n    padding-bottom: 20px; }\n  #upComing li:nth-last-child(1) {\n    margin-bottom: 35px; }\n  #upComing li {\n    list-style-type: none;\n    padding-bottom: 5px; }\n  #upComing .description {\n    position: relative;\n    top: 2em; }\n  #upComing .profileImg {\n    float: left;\n    margin: 0 15px; }\n  #upComing #skillProgress {\n    position: relative;\n    left: 13em;\n    bottom: 3em; }\n  #upComing #matchSubmit {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: relative;\n    bottom: 4em;\n    left: 40em; }\n  #upComing #matchSubmit:active {\n    box-shadow: none; }\n  #upComing .skill {\n    width: 300px; }\n\n/*# sourceMappingURL=main.css.map */\n", ""]);
+	exports.push([module.id, "#imageContainer {\n  background-image: url(\"/images/tennis.jpg\");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 350px; }\n  #imageContainer #createMatchButton {\n    position: absolute;\n    top: 370px;\n    left: 330px;\n    color: white;\n    background-color: #ef3122;\n    font-size: 30px;\n    border-radius: 15px;\n    border: none;\n    outline: none;\n    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5); }\n  #imageContainer #createMatchButton:active {\n    box-shadow: 0 0 0 0;\n    font-size: 29px; }\n  #imageContainer #mission {\n    position: absolute;\n    top: 250px;\n    left: 200px;\n    font-size: 40px;\n    color: white; }\n\n#upComing #sportImage {\n  margin-left: 50px;\n  margin-top: 1px;\n  margin-right: 50px; }\n#upComing a {\n  text-decoration: none;\n  color: black; }\n#upComing a:hover {\n  text-decoration: underline; }\n#upComing ul {\n  border-bottom: 1px solid #4f1e47;\n  width: 1200px;\n  margin-left: 20px; }\n#upComing ul:nth-last-child(1) {\n  border-bottom: none;\n  padding-bottom: 20px; }\n#upComing li:nth-last-child(1) {\n  margin-bottom: 35px; }\n#upComing li {\n  list-style-type: none;\n  padding-bottom: 5px; }\n#upComing img {\n  height: 200px;\n  width: 200px;\n  float: left;\n  margin: 0 15px;\n  margin-top: -26px; }\n#upComing .description {\n  position: relative;\n  top: 2em; }\n#upComing #skillProgress {\n  position: relative;\n  left: 13em;\n  bottom: 3em; }\n#upComing #matchSubmit {\n  padding: 15px;\n  background-color: #1e8880;\n  color: white;\n  border: none;\n  border-radius: 20px;\n  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n  outline: none;\n  position: relative;\n  bottom: 4.5em;\n  left: 45em; }\n#upComing #matchSubmit:active {\n  box-shadow: none; }\n#upComing .creatorName {\n  color: #00bfff; }\n#upComing .creatorName:hover {\n  text-decoration: underline; }\n#upComing .skill {\n  width: 300px; }\n\n/*# sourceMappingURL=main.css.map */\n", ""]);
 
 	// exports
 
@@ -9810,7 +9815,7 @@
 
 
 	// module
-	exports.push([module.id, "#signupPage {\n  background-color: #D8DFEA;\n  height: 35em;\n  width: 50%;\n  margin: 0% 25%;\n  text-align: center; }\n  #signupPage #signupHeader {\n    height: 75px;\n    background-color: #356b66; }\n    #signupPage #signupHeader h2 {\n      padding-top: 25px;\n      color: white; }\n  #signupPage #signupForm input {\n    margin: 10px 5px 5px;\n    font-size: 18px;\n    width: 300px;\n    padding: 8px 10px;\n    border: none;\n    border-radius: 5px; }\n  #signupPage #signupForm select {\n    margin: 10px 5px 5px;\n    font-size: 18px;\n    width: 300px;\n    padding: 8px 10px;\n    border: none;\n    border-radius: 5px;\n    position: relative;\n    left: 50px; }\n  #signupPage #signupForm #remail {\n    position: relative;\n    left: 22px; }\n  #signupPage #signupForm .rgen {\n    width: 30px;\n    margin: 0;\n    padding: 0; }\n  #signupPage #signupForm #gender {\n    position: relative;\n    right: 39px; }\n  #signupPage #signupForm .register {\n    text-decoration: none;\n    padding: 15px;\n    background-color: #356b66;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: relative;\n    top: 30px; }\n\n/*# sourceMappingURL=signup.css.map */\n", ""]);
+	exports.push([module.id, "#signupPage {\n  background-color: #D8DFEA;\n  height: 35em;\n  width: 50%;\n  margin: 0% 25%;\n  text-align: center; }\n  #signupPage #signupHeader {\n    height: 75px;\n    background-color: #356b66; }\n    #signupPage #signupHeader h2 {\n      padding-top: 25px;\n      color: white; }\n  #signupPage #signupForm input {\n    margin: 10px 5px 5px;\n    font-size: 18px;\n    width: 300px;\n    padding: 8px 10px;\n    border: none;\n    border-radius: 5px; }\n  #signupPage #signupForm select {\n    margin: 10px 5px 5px;\n    font-size: 18px;\n    width: 300px;\n    padding: 8px 10px;\n    border: none;\n    border-radius: 5px;\n    position: relative;\n    left: 50px; }\n  #signupPage #signupForm #remail {\n    position: relative;\n    left: 22px; }\n  #signupPage #signupForm .rgen {\n    width: 30px;\n    margin: 0;\n    padding: 0; }\n  #signupPage #signupForm #gender {\n    position: relative;\n    right: 39px; }\n  #signupPage #signupForm #rnumber {\n    position: relative;\n    left: 17px; }\n  #signupPage #signupForm .register {\n    text-decoration: none;\n    padding: 15px;\n    background-color: #356b66;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: relative;\n    top: 30px; }\n\n/*# sourceMappingURL=signup.css.map */\n", ""]);
 
 	// exports
 
@@ -9890,7 +9895,7 @@
 
 
 	// module
-	exports.push([module.id, "#matchDetailContainer {\n  font-size: 25px;\n  height: 20em; }\n  #matchDetailContainer li {\n    list-style-type: none;\n    margin-bottom: 15px; }\n  #matchDetailContainer a {\n    text-decoration: none; }\n  #matchDetailContainer #matchSkill {\n    position: absolute;\n    left: 15em;\n    top: 8em; }\n  #matchDetailContainer .skill {\n    width: 300px;\n    margin-left: 8px; }\n  #matchDetailContainer #join {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    left: 40em;\n    top: 8em; }\n  #matchDetailContainer #join:active {\n    box-shadow: none; }\n  #matchDetailContainer #confirm {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #matchDetailContainer #confirm:active {\n    box-shadow: none; }\n  #matchDetailContainer #decline {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #matchDetailContainer #decline:active {\n    box-shadow: none; }\n  #matchDetailContainer #homeBtn {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #matchDetailContainer #homeBtn:active {\n    box-shadow: none; }\n\n/*# sourceMappingURL=match.css.map */\n", ""]);
+	exports.push([module.id, "#matchDetailContainer {\n  height: 30em; }\n  #matchDetailContainer li {\n    list-style-type: none;\n    margin-bottom: 15px; }\n  #matchDetailContainer a {\n    text-decoration: none; }\n  #matchDetailContainer #matchSkill {\n    position: absolute;\n    left: 30em;\n    top: 10em; }\n  #matchDetailContainer .skill {\n    width: 300px;\n    margin-left: 8px; }\n  #matchDetailContainer #join {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    left: 40em;\n    top: 8em; }\n  #matchDetailContainer #join:active {\n    box-shadow: none; }\n  #matchDetailContainer #confirm {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #matchDetailContainer #confirm:active {\n    box-shadow: none; }\n  #matchDetailContainer #decline {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #matchDetailContainer #decline:active {\n    box-shadow: none; }\n  #matchDetailContainer #homeBtn {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #matchDetailContainer #homeBtn:active {\n    box-shadow: none; }\n  #matchDetailContainer #sportImage {\n    height: 200px;\n    width: 200px;\n    float: left;\n    margin-top: 40px;\n    margin-left: 20px; }\n\n/*# sourceMappingURL=match.css.map */\n", ""]);
 
 	// exports
 
@@ -9930,7 +9935,7 @@
 
 
 	// module
-	exports.push([module.id, "#userprofile {\n  background-color: #e3e3e3;\n  height: 250px;\n  font-size: 20px;\n  border-bottom: solid black 1px; }\n  #userprofile #homeProfileImg {\n    margin: 20px 0px; }\n  #userprofile .mainDescription {\n    position: relative;\n    left: 12em;\n    bottom: 10em;\n    margin-bottom: 5px; }\n  #userprofile li {\n    list-style-type: none; }\n  #userprofile #createMatch {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    left: 35em;\n    top: 10em; }\n  #userprofile #createMatch:active {\n    box-shadow: none; }\n\n#yourMatches {\n  font-size: 18px; }\n  #yourMatches ul {\n    border-bottom: 1px solid #4f1e47;\n    margin-left: 20px;\n    width: 1200px;\n    height: 180px; }\n  #yourMatches ul:nth-last-child(1) {\n    border-bottom: none;\n    padding-bottom: 20px; }\n  #yourMatches li {\n    list-style-type: none;\n    margin-bottom: 3px; }\n\n/*# sourceMappingURL=home.css.map */\n", ""]);
+	exports.push([module.id, "#userprofile {\n  background-color: #e3e3e3;\n  height: 250px;\n  font-size: 20px;\n  border-bottom: solid black 1px; }\n  #userprofile #homeProfileImg {\n    margin: 20px 0px;\n    height: 200px;\n    width: 200px; }\n  #userprofile .mainDescription {\n    position: relative;\n    left: 12em;\n    bottom: 10em;\n    margin-bottom: 5px; }\n  #userprofile li {\n    list-style-type: none; }\n  #userprofile #createMatch {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    left: 35em;\n    top: 10em; }\n  #userprofile #createMatch:active {\n    box-shadow: none; }\n\n#yourMatches a {\n  color: black; }\n#yourMatches ul {\n  border-bottom: 1px solid #4f1e47;\n  margin-left: 20px;\n  width: 1200px;\n  height: 230px; }\n#yourMatches ul:nth-last-child(1) {\n  border-bottom: none;\n  padding-bottom: 20px; }\n#yourMatches li {\n  list-style-type: none;\n  padding-bottom: 5px; }\n#yourMatches #profileName {\n  text-decoration: none;\n  color: #00bfff; }\n#yourMatches #profileName:hover {\n  text-decoration: underline; }\n#yourMatches #skillProgressHome {\n  position: relative;\n  left: 20em;\n  bottom: 5em; }\n#yourMatches .skill {\n  width: 300px; }\n#yourMatches #sportImage {\n  float: left;\n  height: 200px;\n  width: 200px;\n  margin-left: 25px;\n  margin-right: 50px; }\n#yourMatches #dateHome {\n  text-decoration: none; }\n#yourMatches #dateHome:hover {\n  text-decoration: underline; }\n\n/*# sourceMappingURL=home.css.map */\n", ""]);
 
 	// exports
 
@@ -10017,6 +10022,46 @@
 
 /***/ },
 /* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(25);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./parks.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./parks.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "#parksContainer ul {\n  list-style: none; }\n#parksContainer .parkName {\n  font-size: 20px; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10161,26 +10206,27 @@
 
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {var Backbone = __webpack_require__(26);
-	var Mustache = __webpack_require__(28);
-	var Cookie = __webpack_require__(24);
-	var BackbonePagination = __webpack_require__(29)
-	var login = __webpack_require__(30);
-	var signup = __webpack_require__(34);
-	var main = __webpack_require__(35);
-	var parkList = __webpack_require__(36);
-	var match = __webpack_require__(37);
-	var updatematch = __webpack_require__(38);
-	var history = __webpack_require__(39);
-	var profile = __webpack_require__(40);
-	var createMatch = __webpack_require__(41);
-	var feedback = __webpack_require__(42);
-	var home = __webpack_require__(43);
-	var matchModel = __webpack_require__(44)
-	var parks = __webpack_require__(45);
+	/* WEBPACK VAR INJECTION */(function($) {var Backbone = __webpack_require__(28);
+	var Mustache = __webpack_require__(30);
+	var Cookie = __webpack_require__(26);
+	var BackbonePagination = __webpack_require__(31)
+	var login = __webpack_require__(32);
+	var signup = __webpack_require__(36);
+	var main = __webpack_require__(37);
+	var parkList = __webpack_require__(38);
+	var match = __webpack_require__(39);
+	var updatematch = __webpack_require__(40);
+	var history = __webpack_require__(41);
+	var profile = __webpack_require__(42);
+	var createMatch = __webpack_require__(43);
+	var feedback = __webpack_require__(44);
+	var home = __webpack_require__(45);
+	var matchModel = __webpack_require__(46)
+	var parks = __webpack_require__(47);
+	var parksDetail = __webpack_require__(48);
 
 	var counter = 1;
 
@@ -10198,6 +10244,7 @@
 	    "createMatch":"createMatch",
 	    "home/:username":"home",
 	    "parks":"parks",
+	    "parksDetail/:id":"parksDetail",
 	    "":"index"
 	  },
 	  index: function (username) {
@@ -10228,19 +10275,19 @@
 	    var mainTemplate = $("#mainTemplate").text();
 	    var mainHTML = Mustache.render(mainTemplate, 'data');
 	    $("#upComing").html(mainHTML);
+
+
 	    $("#container").html(html);
 	   console.log("success: ",resp)
 	   $("#createMatchButton").on('click', function() {
 	    router.navigate('/createMatch', {trigger: true});
 	  });
-	   if (false) {
-	    $('.sport').append("maki-basketball")
-	   };
 	 },
 	 error: function(err) {
 	   console.log("nope")
 	 }
 	});
+
 
 	$("#nextPage").on('click', function() {
 	  window.scrollTo(0, 450);
@@ -10270,7 +10317,8 @@
 	    }
 	  });
 	});
-	  $("#previousPage").on('click', function() {
+	  $("#previousPage").on('click', function(e) {
+	    e.preventDefault();
 	    window.scrollTo(0, 450);
 	    counter--;
 	    var previousMatches = BackbonePagination.extend({
@@ -10312,12 +10360,16 @@
 	    password: null,
 	    profile: {
 	        gender: null,
-	        age: null
+	        age: null,
+	        phone_number: null,
+	        wants_texts: false,
+	        pic_url: null
 	    }
+
 	  },
 	  url: 'https://skill-match.herokuapp.com/api/users/create/'
 	});
-
+	$('#rtxt').prop('checked', true)
 	$(".register").on('click', function() {
 	   user = new User();
 	   user.set({
@@ -10326,7 +10378,10 @@
 	     password:$("#rpass").val(),
 	     profile:{
 	     gender: $(".rgen").val(),
-	     age: $("#rage").val()
+	     age: $("#rage").val(),
+	     phone_number: $(".rnumber").val(),
+	     wants_texts: $("#rtxt").is(':checked'),
+	     pic_url: $("#rimg").val()
 	  }
 	  })
 	   var Users = Backbone.Collection.extend({
@@ -10454,12 +10509,31 @@
 	    matchDetail.fetch({
 	      url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
 	      success: function(resp) {
+	        var creator = resp.toJSON().creator;
+	        var confirm = resp.toJSON().is_confirmed;
+	        var open = resp.toJSON().is_open;
 	        var html = match({"data": resp.toJSON()});
 	        console.log("success", resp);
 	        var matchTemplate = $("#matchTemplate").text();
 	        var matchHTML = Mustache.render(matchTemplate, 'data');
 	        $("#matchDetailContainer").html(matchHTML);
 	        $("#container").html(html);
+	        $("#confirm").hide();
+	        $("#decline").hide();
+	        console.log(Cookie.get('uid'));
+	        if ( Cookie.get('uid') == creator) {
+	          $("#join").hide();
+	          $("#confirm").show();
+	          $("#decline").show();
+	        };
+	        if(confirm == true){
+	          $("#confirm").hide();
+	          $("#decline").hide();
+	        }
+	        if(open == false){
+	          $("#join").hide();
+	        }
+
 	        $('#homeBtn').on('click', function(){
 	          router.navigate('/home/' + player, {trigger: true});
 	        })
@@ -10494,7 +10568,7 @@
 	          join.save(null, {
 	      success: function(resp) {
 	        console.log("success", resp);
-	        router.navigate('/match/' + id, {trigger: true});
+	        router.navigate('/home/' + Cookie.get('userName'), {trigger: true});
 	      },
 	      error: function(err) {
 	        console.log("error", err);
@@ -10547,7 +10621,6 @@
 	        console.log("error", err);
 	      }
 	      })
-
 	    });
 
 	router.on('route:profile', function(creator, username) {
@@ -10831,6 +10904,36 @@
 	  });
 	});
 
+	router.on('route:parksDetail', function(id){
+	  var Park = Backbone.Model.extend({
+	    initialize: function () {
+	    },
+	    defaults: {
+	    id: null,
+	    name: null
+	    },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+	});
+	  var Parks = Backbone.Collection.extend({
+	    model: Park,
+	    url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+	});
+	  var park = new Park();
+	  park.fetch ({
+	    success: function(resp) {
+	      var html = parksDetail({'data': resp.toJSON()});
+	      var parksDetailTemplate = $("#parksDetailTemplate").text();
+	      var parksDetailHTML = Mustache.render(parksDetailTemplate, "data");
+	      $("#parksDetail").html(parksDetailHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	    },
+	    error: function(err) {
+	      console.log("error", err);
+	    }
+	});
+	});
+
 	router.on('route:parks', function() {
 	  var Park = Backbone.Model.extend({
 	    initialize: function () {
@@ -10926,7 +11029,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {//     Backbone.js 1.2.3
@@ -10945,7 +11048,7 @@
 
 	  // Set up Backbone appropriately for the environment. Start with AMD.
 	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(27), __webpack_require__(1), exports], __WEBPACK_AMD_DEFINE_RESULT__ = function(_, $, exports) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(29), __webpack_require__(1), exports], __WEBPACK_AMD_DEFINE_RESULT__ = function(_, $, exports) {
 	      // Export global even in AMD case in case this script is loaded with
 	      // others that may still expect a global Backbone.
 	      root.Backbone = factory(root, exports, _, $);
@@ -12827,7 +12930,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
@@ -14381,7 +14484,7 @@
 
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15014,7 +15117,7 @@
 
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -15029,7 +15132,7 @@
 
 	  // CommonJS
 	  if (true) {
-	    module.exports = factory(__webpack_require__(27), __webpack_require__(26));
+	    module.exports = factory(__webpack_require__(29), __webpack_require__(28));
 	  }
 	  // AMD
 	  else if (typeof define == "function" && define.amd) {
@@ -16345,14 +16448,14 @@
 
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
+	var H = __webpack_require__(33);
 	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"loginPage\">");t.b("\n" + i);t.b("<form id=\"loginForm\">");t.b("\n" + i);t.b("<div id=\"loginHeader\">");t.b("\n" + i);t.b("  <h2>LOG IN</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("  <label>Username:</label>");t.b("\n" + i);t.b("  <input id=\"username\" type=\"text\" placeholder=\"USERNAME\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Password: </label>");t.b("\n" + i);t.b("  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <button id=\"loginSubmit\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("  <a class=\"register\" type=\"submit\" href=\"/signup\">SignUp</a>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"loginPage\">\n<form id=\"loginForm\">\n<div id=\"loginHeader\">\n  <h2>LOG IN</h2>\n</div>\n  <label>Username:</label>\n  <input id=\"username\" type=\"text\" placeholder=\"USERNAME\">\n  </br>\n  <label>Password: </label>\n  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">\n  </br>\n  <button id=\"loginSubmit\" type=\"submit\">Submit</button>\n  <a class=\"register\" type=\"submit\" href=\"/signup\">SignUp</a>\n</form>\n</div>\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -16372,14 +16475,14 @@
 
 	// This file is for use with Node.js. See dist/ for browser files.
 
-	var Hogan = __webpack_require__(32);
-	Hogan.Template = __webpack_require__(33).Template;
+	var Hogan = __webpack_require__(34);
+	Hogan.Template = __webpack_require__(35).Template;
 	Hogan.template = Hogan.Template;
 	module.exports = Hogan;
 
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -16808,7 +16911,7 @@
 
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -17155,80 +17258,80 @@
 
 
 /***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  <a class=\"register\" type=\"submit\" href=\"/\">Submit</a>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other<input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  <a class=\"register\" type=\"submit\" href=\"/\">Submit</a>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
-
-/***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,275,962,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,288,949,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("  <li class=\"description\"> Park: ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li class=\"description\" class=\"sport\"> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li class=\"description\"> Description of match: ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("  </progress></li>");t.b("\n" + i);t.b("  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n{{#is_open}}\n<ul>\n  <li class=\"profileImg\"><img src=\"http://placehold.it/200x200\"></li>\n  <li class=\"description\" class=\"creatorName\"> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a></li>\n  <li class=\"description\"> Park: {{park_name}} </li>\n  <li class=\"description\" class=\"sport\"> Sport: {{sport}}</li>\n  <li class=\"description\"> Date: {{date}}</li>\n  <li class=\"description\"> Time: {{time}}</li>\n  <li class=\"description\"> Description of match: {{description}}</li>\n  <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n  </progress></li>\n  <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n{{/is_open}}\n{{/data}}\n</div>\n", H);return T.render.apply(T, arguments); };
-
-/***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,47,97,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("</select>");return t.fl(); },partials: {}, subs: {  }}, "<select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n</select>", H);return T.render.apply(T, arguments); };
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PHONE:</label>");t.b("\n" + i);t.b("  <input id=\"rnumber\" type=\"tel\" placeholder=\"Phone Number\">");t.b("\n" + i);t.b("   </br>");t.b("\n" + i);t.b("  <label>Text Alerts:</label>");t.b("\n" + i);t.b("  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Profile Image:</label>");t.b("\n" + i);t.b("  <input id=\"rimg\" type=\"text\" placeholder=\"Paste img url\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  <a class=\"register\" type=\"submit\" href=\"/\">Submit</a>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>PHONE:</label>\n  <input id=\"rnumber\" type=\"tel\" placeholder=\"Phone Number\">\n   </br>\n  <label>Text Alerts:</label>\n  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n  </br>\n  <label>Profile Image:</label>\n  <input id=\"rimg\" type=\"text\" placeholder=\"Paste img url\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  <a class=\"register\" type=\"submit\" href=\"/\">Submit</a>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"matchDetailContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,43,636,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li><a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\">");t.b(t.v(t.f("creator_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> Park: ");t.b(t.v(t.f("park",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n");t.b("\n" + i);t.b("    <a id=\"join\" href=\"/\"> Join </a>");t.b("\n" + i);t.b("    <a id=\"confirm\" href=\"/\"> Confirm Match </a>");t.b("\n" + i);t.b("    <a id=\"decline\" href=\"/\"> Decline Match </a>");t.b("\n" + i);t.b("    <a id=\"cancel\" href=\"/\"> Cancel Match</a>");t.b("\n" + i);t.b("    <a id=\"update\" href=\"/updatematch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Edit Match</a>");t.b("\n" + i);t.b("    <button id=\"homeBtn\"> home </button>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"matchDetailContainer\">\n  {{#data}}\n  <ul>\n    <li><a href=\"/profile/{{creator}}\">{{creator_name}}</a></li>\n    <li> Sport: {{sport}} </li>\n    <li> Time: {{time}}</li>\n    <li> Date: {{date}}</li>\n    <li> Park: {{park}} </li>\n    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n\n    <a id=\"join\" href=\"/\"> Join </a>\n    <a id=\"confirm\" href=\"/\"> Confirm Match </a>\n    <a id=\"decline\" href=\"/\"> Decline Match </a>\n    <a id=\"cancel\" href=\"/\"> Cancel Match</a>\n    <a id=\"update\" href=\"/updatematch/{{id}}\">Edit Match</a>\n    <button id=\"homeBtn\"> home </button>\n  </ul>\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,274,893,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> ");t.b(t.v(t.f("date",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li class=\"description\">  ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"description\"> ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"description\"> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <li class=\"description\"> Created By: <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\" class=\"creatorName\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("    </progress></li>");t.b("\n" + i);t.b("    <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n<a href=\"/match/{{id}}\"><img id=\"sportImage\"src=\"{{img_url}}\"></a>\n  <ul>\n    <li class=\"description\"> <a href=\"/match/{{id}}\"> {{date}}</a></li>\n    <li class=\"description\">  {{time}}</li>\n    <li class=\"description\"> {{sport}}</li>\n    <li class=\"description\"> {{park_name}} </li>\n    </br>\n    <li class=\"description\"> Created By: <a href=\"/profile/{{creator}}\" class=\"creatorName\"> {{creator_name}} </a></li>\n    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n    </progress></li>\n    <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n{{/data}}\n</div>\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"UpMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,82,973,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <a id=\"updateMatch\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Update Match</a>");t.b("\n" + i);t.b("  <ul id=\"update\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\" value\"");t.b(t.v(t.f("sport",c,p,0)));t.b("\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">");t.b(t.v(t.f("description",c,p,0)));t.b("</textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\" value=\"");t.b(t.v(t.f("date",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\" value=\"");t.b(t.v(t.f("time",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='");t.b(t.v(t.f("skill_level",c,p,0)));t.b("'>");t.b("\n" + i);t.b("    <li> Park:</br><select id=\"addPark\" name=\"park\"></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"UpMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  {{#data}}\n  <a id=\"updateMatch\" href=\"/match/{{id}}\">Update Match</a>\n  <ul id=\"update\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\" value\"{{sport}}\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">{{description}}</textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\" value=\"{{date}}\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\" value=\"{{time}}\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='{{skill_level}}'>\n    <li> Park:</br><select id=\"addPark\" name=\"park\"></li>\n  </ul>\n  {{/data}}\n</div>\n\n", H);return T.render.apply(T, arguments); };
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,47,97,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("</select>");return t.fl(); },partials: {}, subs: {  }}, "<select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n</select>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("<h2>Match History</h2>");t.b("\n" + i);if(t.s(t.f("history",c,p,1),c,p,0,63,280,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_completed",c,p,1),c,p,0,82,262,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" 	<ul>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("players",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("park_name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);t.b("    <a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"historyContainer\">\n<h2>Match History</h2>\n{{#history}}\n {{#is_completed}}\n \t<ul>\n    <li>{{sport}}</li>\n    <li>{{players}}</li>\n    <li>{{date}}</li>\n    <li>{{park_name}}</li>\n    </ul>\n    <a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a>\n {{/is_completed}}\n{{/history}}\n</div>", H);return T.render.apply(T, arguments); };
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"matchDetailContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,43,683,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li><a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\">");t.b(t.v(t.f("creator_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> Park: ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n");t.b("\n" + i);t.b("    <button id=\"join\"> Join </button>");t.b("\n" + i);t.b("    <a id=\"confirm\" href=\"/\"> Confirm Match </a>");t.b("\n" + i);t.b("    <a id=\"decline\" href=\"/\"> Decline Match </a>");t.b("\n" + i);t.b("    <a id=\"cancel\" href=\"/\"> Cancel Match</a>");t.b("\n" + i);t.b("    <a id=\"update\" href=\"/updatematch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Edit Match</a>");t.b("\n" + i);t.b("    <button id=\"homeBtn\"> home </button>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"matchDetailContainer\">\n  {{#data}}\n  <img id=\"sportImage\"src=\"{{img_url}}\">\n  <ul>\n    <li><a href=\"/profile/{{creator}}\">{{creator_name}}</a></li>\n    <li> Sport: {{sport}} </li>\n    <li> Time: {{time}}</li>\n    <li> Date: {{date}}</li>\n    <li> Park: {{park_name}} </li>\n    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n\n    <button id=\"join\"> Join </button>\n    <a id=\"confirm\" href=\"/\"> Confirm Match </a>\n    <a id=\"decline\" href=\"/\"> Decline Match </a>\n    <a id=\"cancel\" href=\"/\"> Cancel Match</a>\n    <a id=\"update\" href=\"/updatematch/{{id}}\">Edit Match</a>\n    <button id=\"homeBtn\"> home </button>\n  </ul>\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"profileContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,573,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li><img id=\"userProfileImg\" src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Username: test </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\">Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.skill",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Sportsmanship <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"profileContainer\">\n{{#data}}\n  <ul>\n    <li><img id=\"userProfileImg\" src=\"http://placehold.it/200x200\"></li>\n    <li class=\"profileDescription\"> Username: test </li>\n    <li class=\"profileDescription\"> Age: {{profile.age}} </li>\n    <li class=\"profileDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"profileDescription\">Skill Level <progress class=\"skill\" value=\"{{profile.skill}}\" max=\"100\"></progress></li>\n    <li class=\"profileDescription\"> Sportsmanship <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n  </ul>\n{{/data}}\n</div>\n\n<div id=\"historyContainer\">\n</div>", H);return T.render.apply(T, arguments); };
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"UpMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,82,973,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <a id=\"updateMatch\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Update Match</a>");t.b("\n" + i);t.b("  <ul id=\"update\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\" value\"");t.b(t.v(t.f("sport",c,p,0)));t.b("\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">");t.b(t.v(t.f("description",c,p,0)));t.b("</textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\" value=\"");t.b(t.v(t.f("date",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\" value=\"");t.b(t.v(t.f("time",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='");t.b(t.v(t.f("skill_level",c,p,0)));t.b("'>");t.b("\n" + i);t.b("    <li> Park:</br><select id=\"addPark\" name=\"park\"></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"UpMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  {{#data}}\n  <a id=\"updateMatch\" href=\"/match/{{id}}\">Update Match</a>\n  <ul id=\"update\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\" value\"{{sport}}\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">{{description}}</textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\" value=\"{{date}}\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\" value=\"{{time}}\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='{{skill_level}}'>\n    <li> Park:</br><select id=\"addPark\" name=\"park\"></li>\n  </ul>\n  {{/data}}\n</div>\n\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <li> Park: </br><select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,824,874,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  <ul id=\"create\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <li> Park: </br><select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>\n  </ul>\n</div>\n\n", H);return T.render.apply(T, arguments); };
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("<h2>Match History</h2>");t.b("\n" + i);if(t.s(t.f("history",c,p,1),c,p,0,63,280,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_completed",c,p,1),c,p,0,82,262,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" 	<ul>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("players",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("park_name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);t.b("    <a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"historyContainer\">\n<h2>Match History</h2>\n{{#history}}\n {{#is_completed}}\n \t<ul>\n    <li>{{sport}}</li>\n    <li>{{players}}</li>\n    <li>{{date}}</li>\n    <li>{{park_name}}</li>\n    </ul>\n    <a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a>\n {{/is_completed}}\n{{/history}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"feedbackContainer\">");t.b("\n" + i);t.b("  <form id=\"feedbackForm\">");t.b("\n" + i);t.b("  <h3>Skill level of player</h3>");t.b("\n" + i);t.b("    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>How fun was the match</h3>");t.b("\n" + i);t.b("    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>Crowd level</h3>");t.b("\n" + i);t.b("    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">");t.b("\n" + i);t.b("      <option value=\"No Show\">No Show</option>");t.b("\n" + i);t.b("      <option value=\"On Time\">On Time</option>");t.b("\n" + i);t.b("      <option value=\"Little bit late\">Little Late</option>");t.b("\n" + i);t.b("      <option value=\"Over 10 min late\">Over 10 mins late</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"feedbackContainer\">\n  <form id=\"feedbackForm\">\n  <h3>Skill level of player</h3>\n    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>How fun was the match</h3>\n    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>Crowd level</h3>\n    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n    </br>\n    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">\n      <option value=\"No Show\">No Show</option>\n      <option value=\"On Time\">On Time</option>\n      <option value=\"Little bit late\">Little Late</option>\n      <option value=\"Over 10 min late\">Over 10 mins late</option>\n    </select>\n  </form>\n  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>\n</div>", H);return T.render.apply(T, arguments); };
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"profileContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,580,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li><img id=\"userProfileImg\" src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Username:");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\">Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.skill",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Sportsmanship <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"profileContainer\">\n{{#data}}\n  <ul>\n    <li><img id=\"userProfileImg\" src=\"http://placehold.it/200x200\"></li>\n    <li class=\"profileDescription\"> Username:{{username}} </li>\n    <li class=\"profileDescription\"> Age: {{profile.age}} </li>\n    <li class=\"profileDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"profileDescription\">Skill Level <progress class=\"skill\" value=\"{{profile.skill}}\" max=\"100\"></progress></li>\n    <li class=\"profileDescription\"> Sportsmanship <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n  </ul>\n{{/data}}\n</div>\n\n<div id=\"historyContainer\">\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"userprofile\">");t.b("\n" + i);if(t.s(t.f("user",c,p,1),c,p,0,32,627,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li><img id=\"homeProfileImg\" src=\"http://placehold.it/200x200\"></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Skill Level: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.skill",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Create Match</button>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"yourMatches\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,677,1051,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("  <li> <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a>");t.b("\n" + i);t.b("  <li> Description: </li>");t.b("\n" + i);t.b("  <li> Park: ");t.b(t.v(t.f("park",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li> Sport: ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  <li> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);t.b(" <a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"userprofile\">\n{{#user}}\n  <ul>\n    <li><img id=\"homeProfileImg\" src=\"http://placehold.it/200x200\"></li>\n    <li class=\"mainDescription\"> Username: {{username}} </li>\n    <li class=\"mainDescription\"> Age: {{profile.age}} </li>\n    <li class=\"mainDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"mainDescription\"> Skill Level: <progress class=\"skill\" value=\"{{profile.skill}}\" max=\"100\"></progress></li>\n    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Create Match</button>\n{{/user}}\n</div>\n\n<div id=\"yourMatches\">\n{{#data}}\n<ul>\n  <li> <a href=\"/profile/{{creator}}\"> {{creator_name}} </a>\n  <li> Description: </li>\n  <li> Park: {{park}} </li>\n  <li> Sport: {{sport}}</li>\n  <li> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n  <li> Date: {{date}}</li>\n  <li> Time: {{time}}</li>\n</ul>\n <a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a>\n{{/data}}\n</div>\n", H);return T.render.apply(T, arguments); };
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <li> Park: </br><select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,824,874,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  <ul id=\"create\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <li> Park: </br><select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>\n  </ul>\n</div>\n\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Backbone = __webpack_require__(26);
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"feedbackContainer\">");t.b("\n" + i);t.b("  <form id=\"feedbackForm\">");t.b("\n" + i);t.b("  <h3>Skill level of player</h3>");t.b("\n" + i);t.b("    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>How fun was the match</h3>");t.b("\n" + i);t.b("    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>Crowd level</h3>");t.b("\n" + i);t.b("    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">");t.b("\n" + i);t.b("      <option value=\"No Show\">No Show</option>");t.b("\n" + i);t.b("      <option value=\"On Time\">On Time</option>");t.b("\n" + i);t.b("      <option value=\"Little bit late\">Little Late</option>");t.b("\n" + i);t.b("      <option value=\"Over 10 min late\">Over 10 mins late</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"feedbackContainer\">\n  <form id=\"feedbackForm\">\n  <h3>Skill level of player</h3>\n    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>How fun was the match</h3>\n    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>Crowd level</h3>\n    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n    </br>\n    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">\n      <option value=\"No Show\">No Show</option>\n      <option value=\"On Time\">On Time</option>\n      <option value=\"Little bit late\">Little Late</option>\n      <option value=\"Over 10 min late\">Over 10 mins late</option>\n    </select>\n  </form>\n  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"userprofile\">");t.b("\n" + i);if(t.s(t.f("user",c,p,1),c,p,0,126,714,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n");t.b("\n" + i);t.b("    <li><img id=\"homeProfileImg\" src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Skill Level: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.skill",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Create Match</button>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"yourMatches\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,764,1282,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\"><li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li></a>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"userprofile\">\n{{#user}}\n  <ul>\n\n    <li><img id=\"homeProfileImg\" src=\"{{profile.pic_url}}\"></li>\n    <li class=\"mainDescription\"> Username: {{username}} </li>\n    <li class=\"mainDescription\"> Age: {{profile.age}} </li>\n    <li class=\"mainDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"mainDescription\"> Skill Level: <progress class=\"skill\" value=\"{{profile.skill}}\" max=\"100\"></progress></li>\n    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Create Match</button>\n{{/user}}\n</div>\n\n<div id=\"yourMatches\">\n{{#data}}\n<a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\"></a>\n<ul>\n  <a href=\"/match/{{id}}\" id=\"dateHome\"><li> {{date}}</li></a>\n  <li> {{time}}</li>\n  <li> {{sport}}</li>\n  <li> {{park_name}} </li>\n  </br>\n  <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n</ul>\n{{/data}}\n\n</div>\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Backbone = __webpack_require__(28);
 
 	var matchContainer = Backbone.Model.extend({
 	  initialize: function() {
@@ -17248,11 +17351,18 @@
 	 module.exports = matchContainer;
 
 /***/ },
-/* 45 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var H = __webpack_require__(31);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,256,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("rating",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address1",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address2",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("\n" + i);t.b("  <a id=\"backPark\" href=\"/parks\"> Back </a>");t.b("\n" + i);t.b("  <a id=\"nextPark\" href=\"/parks\"> Next </a>");t.b("\n");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n  {{#data}}\n  <ul>\n    <li>{{name}}</li>\n    <li>{{rating}}</li>\n    <li><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li>{{display_address1}}</li>\n    <li>{{display_address2}}</li>\n    <li>{{display_address3}}</li>\n  </ul>\n  {{/data}}\n\n  <a id=\"backPark\" href=\"/parks\"> Back </a>\n  <a id=\"nextPark\" href=\"/parks\"> Next </a>\n\n</div>\n\n", H);return T.render.apply(T, arguments); };
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,377,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"parkName\"><a href=\"/parksDetail/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("rating",c,p,0)));t.b("/5</li>");t.b("\n" + i);t.b("    <li><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address2",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("\n" + i);t.b("  <a id=\"backPark\" href=\"/parks\"> Back </a>");t.b("\n" + i);t.b("  <a id=\"nextPark\" href=\"/parks\"> Next </a>");t.b("\n");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n  {{#data}}\n  <ul>\n    <li class=\"parkName\"><a href=\"/parksDetail/{{id}}\">{{name}}</a></li>\n    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>\n    <li>{{rating}}/5</li>\n    <li><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</li>\n  </ul>\n  {{/data}}\n\n  <a id=\"backPark\" href=\"/parks\"> Back </a>\n  <a id=\"nextPark\" href=\"/parks\"> Next </a>\n\n</div>\n\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(33);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksDetail\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,33,683,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"parkName\">");t.b(t.v(t.f("name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("rating",c,p,0)));t.b("/5</li>");t.b("\n" + i);t.b("    <li><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address2",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>");t.b("\n" + i);t.b("    <ul>");if(t.s(t.f("match_set",c,p,1),c,p,0,360,637,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("\n" + i);t.b("        <li class=\"description\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("        <li class=\"description\"> Park: ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("        <li class=\"description\">");t.b(t.v(t.f("sport",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("        <li class=\"description\"> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("        <li class=\"description\"> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);});c.pop();}t.b("     </ul>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksDetail\">\n\t{{#data}}\n  <ul>\n    <li class=\"parkName\">{{name}}</li>\n    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>\n    <li>{{rating}}/5</li>\n    <li><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</li>\n    <li>\n    <ul>{{#match_set}}\n        <li class=\"description\"> {{creator_name}}</li>\n        <li class=\"description\"> Park: {{park_name}} </li>\n        <li class=\"description\">{{sport}} </li>\n        <li class=\"description\"> Date: {{date}}</li>\n        <li class=\"description\"> Time: {{time}}</li>\n        {{/match_set}}\n     </ul>\n    </li>\n  </ul>\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ }
 /******/ ]);

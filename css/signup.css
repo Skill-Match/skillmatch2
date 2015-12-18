@@ -36,6 +36,9 @@
   #signupPage #signupForm #gender {
     position: relative;
     right: 39px; }
+  #signupPage #signupForm #rnumber {
+    position: relative;
+    left: 17px; }
   #signupPage #signupForm .register {
     text-decoration: none;
     padding: 15px;

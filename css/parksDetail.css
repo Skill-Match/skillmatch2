@@ -1,0 +1,15 @@
+#parksDetail ul {
+  list-style: none; }
+.parkName
+#parksDetail .parkMatches {
+  margin-top: 20px;
+  width: 80%; }
+  .parkName
+  #parksDetail .parkMatches li:nth-child(5n+0) {
+    border-bottom: 1px solid black; }
+  .parkName
+  #parksDetail .parkMatches #sportImage {
+    display: inline-block;
+    float: left; }
+
+/*# sourceMappingURL=parksDetail.css.map */

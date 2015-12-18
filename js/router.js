@@ -15,6 +15,7 @@ var feedback = require('./templates/feedback.html');
 var home = require('./templates/home.html');
 var matchModel = require('./models/matchModel.js')
 var parks = require('./templates/parks.html');
+var parksDetail = require('./templates/parksDetail.html');
 
 var counter = 1;
 
@@ -32,6 +33,7 @@ var Router = Backbone.Router.extend({
     "createMatch":"createMatch",
     "home/:username":"home",
     "parks":"parks",
+    "parksDetail/:id":"parksDetail",
     "":"index"
   },
   index: function (username) {
@@ -62,6 +64,8 @@ var Matches = Backbone.Collection.extend({
     var mainTemplate = $("#mainTemplate").text();
     var mainHTML = Mustache.render(mainTemplate, 'data');
     $("#upComing").html(mainHTML);
+
+
     $("#container").html(html);
    console.log("success: ",resp)
    $("#createMatchButton").on('click', function() {
@@ -148,12 +152,13 @@ var User = Backbone.Model.extend({
         age: null,
         phone_number: null,
         wants_texts: false,
+        pic_url: null
     }
 
   },
   url: 'https://skill-match.herokuapp.com/api/users/create/'
 });
-
+$('#rtxt').prop('checked', true)
 $(".register").on('click', function() {
    user = new User();
    user.set({
@@ -164,7 +169,8 @@ $(".register").on('click', function() {
      gender: $(".rgen").val(),
      age: $("#rage").val(),
      phone_number: $(".rnumber").val(),
-     wants_textsff: $("#rtxt").val()
+     wants_texts: $("#rtxt").is(':checked'),
+     pic_url: $("#rimg").val()
   }
   })
    var Users = Backbone.Collection.extend({
@@ -685,6 +691,36 @@ router.on('route:feedback', function(id, username){
     $("#addCrowdFeedback").val("");
     $("#addPunctualityFeedback").val("");
   });
+});
+
+router.on('route:parksDetail', function(id){
+  var Park = Backbone.Model.extend({
+    initialize: function () {
+    },
+    defaults: {
+    id: null,
+    name: null
+    },
+  url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+});
+  var Parks = Backbone.Collection.extend({
+    model: Park,
+    url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+});
+  var park = new Park();
+  park.fetch ({
+    success: function(resp) {
+      var html = parksDetail({'data': resp.toJSON()});
+      var parksDetailTemplate = $("#parksDetailTemplate").text();
+      var parksDetailHTML = Mustache.render(parksDetailTemplate, "data");
+      $("#parksDetail").html(parksDetailHTML);
+      $("#container").html(html);
+      console.log("success", resp);
+    },
+    error: function(err) {
+      console.log("error", err);
+    }
+});
 });
 
 router.on('route:parks', function() {

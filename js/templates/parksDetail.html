@@ -1,0 +1,22 @@
+<div id="parksDetail">
+	{{#data}}
+  <h2 class="parkName">{{name}}</h2>
+  <ul>
+    <li><img id="ParkImage"src="{{image_url}}"></li>
+    <li><a id="parkMatch" type="submit" href="/createMatch">Create Match</a></li>
+    <li>{{rating}}/5</li>
+    <li><a href="{{url}}"> Yelp Park Review</a></li>
+    <li>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</li>
+    <li>
+    <ul class="parkMatches">{{#match_set}}
+        <li><img id="sportImage"src="{{img_url}}"></li>
+        <li>{{creator_name}}</li>
+        <li>{{sport}} </li>
+        <li> Date: {{date}}</li>
+        <li> Time: {{time}}</li>
+        {{/match_set}}
+     </ul>
+    </li>
+  </ul>
+  {{/data}}
+</div>
