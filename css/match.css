@@ -2,18 +2,21 @@
   height: 30em; }
   #matchDetailContainer li {
     list-style-type: none;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    padding-left: 220px; }
+  #matchDetailContainer ul {
+    padding-top: 60px; }
   #matchDetailContainer a {
     text-decoration: none; }
   #matchDetailContainer #matchSkill {
     position: absolute;
-    left: 30em;
-    top: 10em; }
+    left: 16em;
+    top: 11.35em; }
   #matchDetailContainer .skill {
     width: 300px;
     margin-left: 8px; }
   #matchDetailContainer #join {
-    padding: 15px;
+    padding: 15px 30px;
     background-color: #1e8880;
     color: white;
     border: none;
@@ -21,8 +24,8 @@
     box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
     outline: none;
     position: absolute;
-    left: 40em;
-    top: 8em; }
+    left: 5em;
+    top: 25em; }
   #matchDetailContainer #join:active {
     box-shadow: none; }
   #matchDetailContainer #confirm {
@@ -32,7 +35,10 @@
     border: none;
     border-radius: 20px;
     box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
-    outline: none; }
+    outline: none;
+    position: absolute;
+    top: 26em;
+    left: 3em; }
   #matchDetailContainer #confirm:active {
     box-shadow: none; }
   #matchDetailContainer #decline {
@@ -42,18 +48,11 @@
     border: none;
     border-radius: 20px;
     box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
-    outline: none; }
+    outline: none;
+    position: absolute;
+    top: 30em;
+    left: 3em; }
   #matchDetailContainer #decline:active {
-    box-shadow: none; }
-  #matchDetailContainer #homeBtn {
-    padding: 15px;
-    background-color: #1e8880;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
-    outline: none; }
-  #matchDetailContainer #homeBtn:active {
     box-shadow: none; }
   #matchDetailContainer #sportImage {
     height: 200px;
@@ -61,5 +60,22 @@
     float: left;
     margin-top: 40px;
     margin-left: 20px; }
+  #matchDetailContainer #cancel {
+    font-size: 12px; }
+  #matchDetailContainer #update {
+    font-size: 12px; }
+  #matchDetailContainer #matchDescription {
+    width: 600px;
+    padding-left: 240px; }
+  #matchDetailContainer #cancelEdit {
+    padding-left: 50px; }
+    #matchDetailContainer #cancelEdit a {
+      color: black; }
+    #matchDetailContainer #cancelEdit a:hover {
+      text-decoration: underline; }
+  #matchDetailContainer #parkLink {
+    color: black; }
+  #matchDetailContainer #parkLink:hover {
+    text-decoration: underline; }
 
 /*# sourceMappingURL=match.css.map */

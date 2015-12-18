@@ -1,17 +1,27 @@
-.parkName
-#parksDetail{
+#parksPage{
+	#parksDetail{
+		font-size: 2em;
+		text-align: center;
+	}
+	a {
+		text-decoration: none;
+	}
+	#parkImage{
+		width: 200px;
+		height: 200px;
+	}
 	ul{
 		list-style: none;
 	}
 	.parkMatches {
+		font-size: 2em;
 		margin-top: 20px;
-		width: 80%;
 		li:nth-child(5n+0) {
     border-bottom: 1px solid black;
   }
   #sportImage{
-  	display: inline-block;
-  	float: left;
+  	width: 200px;
+  	height: 200px;
   }
 
 	}

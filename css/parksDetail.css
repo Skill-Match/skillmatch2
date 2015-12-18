@@ -1,15 +1,20 @@
-#parksDetail ul {
+#parksPage #parksDetail {
+  font-size: 2em;
+  text-align: center; }
+#parksPage a {
+  text-decoration: none; }
+#parksPage #parkImage {
+  width: 200px;
+  height: 200px; }
+#parksPage ul {
   list-style: none; }
-.parkName
-#parksDetail .parkMatches {
-  margin-top: 20px;
-  width: 80%; }
-  .parkName
-  #parksDetail .parkMatches li:nth-child(5n+0) {
+#parksPage .parkMatches {
+  font-size: 2em;
+  margin-top: 20px; }
+  #parksPage .parkMatches li:nth-child(5n+0) {
     border-bottom: 1px solid black; }
-  .parkName
-  #parksDetail .parkMatches #sportImage {
-    display: inline-block;
-    float: left; }
+  #parksPage .parkMatches #sportImage {
+    width: 200px;
+    height: 200px; }
 
 /*# sourceMappingURL=parksDetail.css.map */
