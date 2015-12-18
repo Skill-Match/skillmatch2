@@ -6,17 +6,17 @@
 <div id="upComing">
 {{#data}}
 {{#is_open}}
-<ul>
-  <li class="description"><img src="{{img_url}}"></li>
-  <li class="description" class="creatorName"> <a href="/profile/{{creator}}"> {{creator_name}} </a></li>
-  <li class="description"> Park: {{park_name}} </li>
-  <li class="description"> Sport:{{sport}}</li>
-  <li class="description"> Date: {{date}}</li>
-  <li class="description"> Time: {{time}}</li>
-  <li class="description"> Description of match: {{description}}</li>
-  <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
-  </progress></li>
-  <li><a id="matchSubmit" type="sumbit" href="/match/{{id}}"> Join </a></li>
+<a href="/match/{{id}}"><img id="sportImage"src="{{img_url}}"></a>
+  <ul>
+    <li class="description"> <a href="/match/{{id}}"> {{date}}</a></li>
+    <li class="description">  {{time}}</li>
+    <li class="description"> {{sport}}</li>
+    <li class="description"> {{park_name}} </li>
+    </br>
+    <li class="description"> Created By: <a href="/profile/{{creator}}" class="creatorName"> {{creator_name}} </a></li>
+    <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
+    </progress></li>
+    <li><a id="matchSubmit" type="sumbit" href="/match/{{id}}"> Join </a></li>
 </ul>
 {{/is_open}}
 {{/data}}

@@ -2,8 +2,7 @@
   background-image: url('/images/tennis.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  height: 420px;
-  width: 100%;
+  height: 350px;
 
   #createMatchButton {
     position: absolute;
@@ -34,18 +33,24 @@
 
 #upComing {
 
-  font-size: 17px;
+  #sportImage {
+    margin-left: 50px;
+    margin-top: 1px;
+    margin-right: 50px;
+  }
 
   a {
     text-decoration: none;
     color: black;
-    font-size: 20px;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   ul {
     border-bottom: 1px solid #4f1e47;
     width: 1200px;
-    margin-top: 30px;
     margin-left: 20px;
   }
 
@@ -91,15 +96,23 @@
     box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
     outline: none;
     position: relative;
-    bottom: 4em;
-    left: 40em;
+    bottom: 4.5em;
+    left: 45em;
   }
 
   #matchSubmit:active {
     box-shadow: none;
   }
 
-  .skill{
+  .creatorName {
+    color: #00bfff;
+  }
+
+  .creatorName:hover {
+    text-decoration: underline;
+  }
+
+  .skill {
     width: 300px;
   }
 }

@@ -6,6 +6,20 @@ body {
   font-size: 40px;
   margin-left: 1em;
 }
+
+#skillMatch {
+  position: absolute;
+  top: .8em;
+  left: 3em;
+}
+
+h1 {
+  color: white;
+}
+img {
+  height: 5%;
+  width: 5%;
+}
 #nav {
   position: absolute;
   right: 5em;

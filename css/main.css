@@ -2,8 +2,7 @@
   background-image: url("/images/tennis.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 420px;
-  width: 100%; }
+  height: 350px; }
   #imageContainer #createMatchButton {
     position: absolute;
     top: 370px;
@@ -25,52 +24,58 @@
     font-size: 40px;
     color: white; }
 
-#upComing {
-  font-size: 17px; }
-  #upComing a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px; }
-  #upComing ul {
-    border-bottom: 1px solid #4f1e47;
-    width: 1200px;
-    margin-top: 30px;
-    margin-left: 20px; }
-  #upComing ul:nth-last-child(1) {
-    border-bottom: none;
-    padding-bottom: 20px; }
-  #upComing li:nth-last-child(1) {
-    margin-bottom: 35px; }
-  #upComing li {
-    list-style-type: none;
-    padding-bottom: 5px; }
-  #upComing img {
-    height: 200px;
-    width: 200px;
-    float: left;
-    margin: 0 15px;
-    margin-top: -26px; }
-  #upComing .description {
-    position: relative;
-    top: 2em; }
-  #upComing #skillProgress {
-    position: relative;
-    left: 13em;
-    bottom: 3em; }
-  #upComing #matchSubmit {
-    padding: 15px;
-    background-color: #1e8880;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
-    outline: none;
-    position: relative;
-    bottom: 4em;
-    left: 40em; }
-  #upComing #matchSubmit:active {
-    box-shadow: none; }
-  #upComing .skill {
-    width: 300px; }
+#upComing #sportImage {
+  margin-left: 50px;
+  margin-top: 1px;
+  margin-right: 50px; }
+#upComing a {
+  text-decoration: none;
+  color: black; }
+#upComing a:hover {
+  text-decoration: underline; }
+#upComing ul {
+  border-bottom: 1px solid #4f1e47;
+  width: 1200px;
+  margin-left: 20px; }
+#upComing ul:nth-last-child(1) {
+  border-bottom: none;
+  padding-bottom: 20px; }
+#upComing li:nth-last-child(1) {
+  margin-bottom: 35px; }
+#upComing li {
+  list-style-type: none;
+  padding-bottom: 5px; }
+#upComing img {
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin: 0 15px;
+  margin-top: -26px; }
+#upComing .description {
+  position: relative;
+  top: 2em; }
+#upComing #skillProgress {
+  position: relative;
+  left: 13em;
+  bottom: 3em; }
+#upComing #matchSubmit {
+  padding: 15px;
+  background-color: #1e8880;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+  outline: none;
+  position: relative;
+  bottom: 4.5em;
+  left: 45em; }
+#upComing #matchSubmit:active {
+  box-shadow: none; }
+#upComing .creatorName {
+  color: #00bfff; }
+#upComing .creatorName:hover {
+  text-decoration: underline; }
+#upComing .skill {
+  width: 300px; }
 
 /*# sourceMappingURL=main.css.map */

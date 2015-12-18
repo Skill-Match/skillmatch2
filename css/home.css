@@ -4,7 +4,9 @@
   font-size: 20px;
   border-bottom: solid black 1px; }
   #userprofile #homeProfileImg {
-    margin: 20px 0px; }
+    margin: 20px 0px;
+    height: 200px;
+    width: 200px; }
   #userprofile .mainDescription {
     position: relative;
     left: 12em;
@@ -26,18 +28,39 @@
   #userprofile #createMatch:active {
     box-shadow: none; }
 
-#yourMatches {
-  font-size: 18px; }
-  #yourMatches ul {
-    border-bottom: 1px solid #4f1e47;
-    margin-left: 20px;
-    width: 1200px;
-    height: 180px; }
-  #yourMatches ul:nth-last-child(1) {
-    border-bottom: none;
-    padding-bottom: 20px; }
-  #yourMatches li {
-    list-style-type: none;
-    margin-bottom: 3px; }
+#yourMatches a {
+  color: black; }
+#yourMatches ul {
+  border-bottom: 1px solid #4f1e47;
+  margin-left: 20px;
+  width: 1200px;
+  height: 230px; }
+#yourMatches ul:nth-last-child(1) {
+  border-bottom: none;
+  padding-bottom: 20px; }
+#yourMatches li {
+  list-style-type: none;
+  padding-bottom: 5px; }
+#yourMatches #profileName {
+  text-decoration: none;
+  color: #00bfff; }
+#yourMatches #profileName:hover {
+  text-decoration: underline; }
+#yourMatches #skillProgressHome {
+  position: relative;
+  left: 20em;
+  bottom: 5em; }
+#yourMatches .skill {
+  width: 300px; }
+#yourMatches #sportImage {
+  float: left;
+  height: 200px;
+  width: 200px;
+  margin-left: 25px;
+  margin-right: 50px; }
+#yourMatches #dateHome {
+  text-decoration: none; }
+#yourMatches #dateHome:hover {
+  text-decoration: underline; }
 
 /*# sourceMappingURL=home.css.map */

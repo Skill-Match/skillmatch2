@@ -1,6 +1,5 @@
 #matchDetailContainer {
-  font-size: 25px;
-  height: 20em; }
+  height: 30em; }
   #matchDetailContainer li {
     list-style-type: none;
     margin-bottom: 15px; }
@@ -8,8 +7,8 @@
     text-decoration: none; }
   #matchDetailContainer #matchSkill {
     position: absolute;
-    left: 15em;
-    top: 8em; }
+    left: 30em;
+    top: 10em; }
   #matchDetailContainer .skill {
     width: 300px;
     margin-left: 8px; }
@@ -56,5 +55,11 @@
     outline: none; }
   #matchDetailContainer #homeBtn:active {
     box-shadow: none; }
+  #matchDetailContainer #sportImage {
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px; }
 
 /*# sourceMappingURL=match.css.map */
