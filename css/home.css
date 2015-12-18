@@ -5,6 +5,9 @@
   border-bottom: solid black 1px; }
   #userprofile #homeProfileImg {
     margin: 20px 0px; }
+  #userprofile img {
+    height: 200px;
+    width: 200px; }
   #userprofile .mainDescription {
     position: relative;
     left: 12em;

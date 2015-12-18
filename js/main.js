@@ -8,6 +8,7 @@ require("../css/match.css");
 require("../css/home.css");
 require("../css/profile.css");
 require("../css/feedback.css");
+require("../css/parks.css");
 
 $(document).ready(function(){
   var Cookie = require('js-cookie');

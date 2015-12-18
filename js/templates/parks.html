@@ -1,12 +1,11 @@
 <div id="parksContainer">
   {{#data}}
   <ul>
-    <li>{{name}}</li>
-    <li>{{rating}}</li>
+    <li class="parkName"><a href="/parksDetail/{{id}}">{{name}}</a></li>
+    <li><a id="parkMatch" type="submit" href="/createMatch">Create Match</a></li>
+    <li>{{rating}}/5</li>
     <li><a href="{{url}}"> Yelp Park Review</a></li>
-    <li>{{display_address1}}</li>
-    <li>{{display_address2}}</li>
-    <li>{{display_address3}}</li>
+    <li>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</li>
   </ul>
   {{/data}}
 

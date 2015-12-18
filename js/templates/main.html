@@ -5,12 +5,12 @@
 </div>
 <div id="upComing">
 {{#data}}
-{{#is_open}}
 <ul>
   <li class="description"><img src="{{img_url}}"></li>
   <li class="description" class="creatorName"> <a href="/profile/{{creator}}"> {{creator_name}} </a></li>
   <li class="description"> Park: {{park_name}} </li>
-  <li class="description"> Sport:{{sport}}</li>
+  <li class="description" class="sport">{{sport}} </li>
+  <li class="description">{{players}}</li>
   <li class="description"> Date: {{date}}</li>
   <li class="description"> Time: {{time}}</li>
   <li class="description"> Description of match: {{description}}</li>
@@ -18,6 +18,5 @@
   </progress></li>
   <li><a id="matchSubmit" type="sumbit" href="/match/{{id}}"> Join </a></li>
 </ul>
-{{/is_open}}
 {{/data}}
 </div>
