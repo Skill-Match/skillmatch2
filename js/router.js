@@ -151,8 +151,7 @@ var User = Backbone.Model.extend({
         gender: null,
         age: null,
         phone_number: null,
-        wants_texts: false,
-        pic_url: null
+        wants_texts: false
     }
 
   },
@@ -168,9 +167,8 @@ $(".register").on('click', function() {
      profile:{
      gender: $(".rgen").val(),
      age: $("#rage").val(),
-     phone_number: $(".rnumber").val(),
-     wants_texts: $("#rtxt").is(':checked'),
-     pic_url: $("#rimg").val()
+     phone_number: $("#rnumber").val(),
+     wants_texts: $("#rtxt").is(':checked')
   }
   })
    var Users = Backbone.Collection.extend({
@@ -721,6 +719,8 @@ router.on('route:parksDetail', function(id){
       var parksDetailTemplate = $("#parksDetailTemplate").text();
       var parksDetailHTML = Mustache.render(parksDetailTemplate, "data");
       $("#parksDetail").html(parksDetailHTML);
+
+
       $("#container").html(html);
       console.log("success", resp);
     },

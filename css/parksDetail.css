@@ -2,7 +2,10 @@
   font-size: 2em;
   text-align: center; }
 #parksPage a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #324053; }
+#parksPage a:hover {
+  text-decoration: underline; }
 #parksPage #parkImage {
   width: 200px;
   height: 200px; }

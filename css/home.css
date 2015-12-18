@@ -7,6 +7,9 @@
     margin: 20px 0px;
     height: 200px;
     width: 200px; }
+  #userprofile img {
+    height: 200px;
+    width: 200px; }
   #userprofile .mainDescription {
     position: relative;
     left: 12em;
@@ -62,5 +65,16 @@
   text-decoration: none; }
 #yourMatches #dateHome:hover {
   text-decoration: underline; }
+#yourMatches #goToFeedback {
+  position: relative;
+  left: 825px;
+  bottom: 100px;
+  padding: 15px 30px;
+  background-color: #1e8880;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+  outline: none; }
 
 /*# sourceMappingURL=home.css.map */
