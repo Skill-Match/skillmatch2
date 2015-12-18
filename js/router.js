@@ -426,8 +426,12 @@ router.on('route:profile', function(creator, username) {
       profile: {
         gender: null,
         age: null,
-        skill: null,
         sportsmanship: null
+      },
+      skill_set: {
+        sport: null,
+        skill: null,
+        num_feedbacks: null
       }
     },
     Model: profileContainer,
@@ -472,7 +476,6 @@ router.on('route:profile', function(creator, username) {
       var historyHTML = Mustache.render(historyTemplate, 'history');
       $("#historyContainer").html(historyhtml);
       console.log('success', resp.toJSON());
-      console.log(historyhtml);
     },
     error: function(err) {
       console.log('error', err);

@@ -1,5 +1,10 @@
 #profileContainer {
 
+  #userProfileImg {
+    height: 200px;
+    width: 200px;
+  }
+
   background-color: #e3e3e3;
 
   height: 250px;
@@ -26,8 +31,7 @@
 }
 
 #historyContainer {
-
-  height: 18em;
+  overflow: auto;
 
   a {
   text-decoration: none;
@@ -35,6 +39,23 @@
 
   li {
     list-style-type: none;
+    position: relative;
+    left: 15em;
+    bottom: 10em;
+  }
+
+  h2 {
+    margin-left: 15px;
+  }
+
+  ul {
+    border-bottom: 1px solid #4f1e47;
+    width: 1200px;
+    margin-left: 20px;
+  }
+
+  ul:nth-last-child(1) {
+    border-bottom:none;
   }
 
   #goToFeedback {
@@ -45,11 +66,17 @@
     border-radius: 20px;
     box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
     outline: none;
-    position: absolute;
+    position: relative;
     left: 35em;
   }
 
   #goToFeedback:active {
     box-shadow: none;
+  }
+
+  #sportImage {
+    padding-left: 40px;
+    height: 200px;
+    width: 200px;
   }
 }

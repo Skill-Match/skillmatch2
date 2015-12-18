@@ -83,9 +83,13 @@ button:active {
 }
 .footerNav ul {
   margin-bottom: 30px;
+
 }
 #footer li{
   display: inline-block;
+}
+#footer ul {
+  padding-left: 65%;
 }
 #footer p {
   color: white;
