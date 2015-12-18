@@ -1,12 +1,16 @@
 <div id="profileContainer">
 {{#data}}
   <ul>
-    <li><img id="userProfileImg" src="http://placehold.it/200x200"></li>
-    <li class="profileDescription"> Username:{{username}} </li>
+    <li><img id="userProfileImg" src="http://placehold.it/"></li>
+    <li class="profileDescription"> Username: {{username}} </li>
     <li class="profileDescription"> Age: {{profile.age}} </li>
     <li class="profileDescription"> Gender: {{profile.gender}}</li>
-    <li class="profileDescription">Skill Level <progress class="skill" value="{{profile.skill}}" max="100"></progress></li>
-    <li class="profileDescription"> Sportsmanship <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
+     <li class="profileDescription"> Sportsmanship: <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
+    <li class="profileDescription">{{#skill_set}} {{sport}} Skill:
+     <progress class="skill" value="{{skill}}" max="100"></progress>
+
+     {{/skill_set}}
+     </li>
   </ul>
 {{/data}}
 </div>

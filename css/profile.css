@@ -4,6 +4,9 @@
   font-size: 20px;
   border-bottom: solid black 1px; }
   #profileContainer #userProfileImg {
+    height: 200px;
+    width: 200px; }
+  #profileContainer #userProfileImg {
     margin: 20px 0px; }
   #profileContainer .profileDescription {
     position: relative;
@@ -14,11 +17,22 @@
     list-style-type: none; }
 
 #historyContainer {
-  height: 18em; }
+  overflow: auto; }
   #historyContainer a {
     text-decoration: none; }
   #historyContainer li {
-    list-style-type: none; }
+    list-style-type: none;
+    position: relative;
+    left: 15em;
+    bottom: 10em; }
+  #historyContainer h2 {
+    margin-left: 15px; }
+  #historyContainer ul {
+    border-bottom: 1px solid #4f1e47;
+    width: 1200px;
+    margin-left: 20px; }
+  #historyContainer ul:nth-last-child(1) {
+    border-bottom: none; }
   #historyContainer #goToFeedback {
     padding: 15px;
     background-color: #1e8880;
@@ -27,9 +41,13 @@
     border-radius: 20px;
     box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
     outline: none;
-    position: absolute;
+    position: relative;
     left: 35em; }
   #historyContainer #goToFeedback:active {
     box-shadow: none; }
+  #historyContainer #sportImage {
+    padding-left: 40px;
+    height: 200px;
+    width: 200px; }
 
 /*# sourceMappingURL=profile.css.map */
