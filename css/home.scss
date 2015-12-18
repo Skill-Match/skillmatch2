@@ -101,5 +101,17 @@ img{
   #dateHome:hover {
     text-decoration: underline;
   }
+  #goToFeedback{
+    position: relative;
+    left: 825px;
+    bottom: 100px;
+    padding: 15px 30px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+  }
 
 }
