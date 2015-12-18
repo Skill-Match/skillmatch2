@@ -7,8 +7,11 @@
     <li class="mainDescription"> Username: {{username}} </li>
     <li class="mainDescription"> Age: {{profile.age}} </li>
     <li class="mainDescription"> Gender: {{profile.gender}}</li>
-    <li class="mainDescription"> Skill Level: <progress class="skill" value="{{profile.skill}}" max="100"></progress></li>
     <li class="mainDescription"> Sportsmanship: <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
+    <li class="mainDescription">{{#skill_set}} {{sport}} Skill:
+     <progress class="skill" value="{{skill}}" max="100"></progress>
+     {{/skill_set}}
+     </li>
   </ul>
   <button id="createMatch" type="submit">Create Match</button>
 {{/user}}
