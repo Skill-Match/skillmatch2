@@ -48,12 +48,12 @@ var Router = Backbone.Router.extend({
     date: null,
     time: null
   },
-  url: 'https://skill-match.herokuapp.com/api/matches/'
+  url: 'https://skill-match.herokuapp.com/api/matches/?home=home'
 });
 
 var Matches = Backbone.Collection.extend({
   model: Match,
-  url: 'https://skill-match.herokuapp.com/api/matches/'
+  url: 'https://skill-match.herokuapp.com/api/matches/?home=home'
 });
     var match = new Match();
     match.fetch({
@@ -303,11 +303,15 @@ router.on('route:match', function(id, username) {
         $("#container").html(html);
         $("#confirm").hide();
         $("#decline").hide();
+        $("#update").hide();
+        $("#cancel").hide();
         console.log(Cookie.get('uid'));
         if ( Cookie.get('uid') == creator) {
           $("#join").hide();
           $("#confirm").show();
           $("#decline").show();
+          $("#update").show();
+          $("#cancel").show();
         };
         if(confirm == true){
           $("#confirm").hide();

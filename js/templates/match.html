@@ -2,19 +2,22 @@
   {{#data}}
   <img id="sportImage"src="{{img_url}}">
   <ul>
-    <li><a href="/profile/{{creator}}">{{creator_name}}</a></li>
-    <li> Sport: {{sport}} </li>
-    <li> Time: {{time}}</li>
-    <li> Date: {{date}}</li>
-    <li> Park: {{park_name}} </li>
+    <li> {{date}}</li>
+    <li> {{time}}</li>
+    <li> {{sport}} </li>
+    <li><a href="/park/{{park}}" id="parkLink"> {{park_name}} </a></li>
     <li id="matchSkill"> Skill:<progress class="skill" value="{{skill_level}}" max="100"></progress></li>
-
+    </br>
+    <li>Created By: <a href="/profile/{{creator}}">{{creator_name}}</a></li>
+  </ul>
     <button id="join"> Join </button>
     <a id="confirm" href="/"> Confirm Match </a>
     <a id="decline" href="/"> Decline Match </a>
-    <a id="cancel" href="/"> Cancel Match</a>
+    <div id="cancelEdit">
+    <a id="cancel" href="/"> Cancel Match </a>
     <a id="update" href="/updatematch/{{id}}">Edit Match</a>
-    <button id="homeBtn"> home </button>
-  </ul>
+    </div>
+   <div id="matchDescription"> <p> {{description}} </p>
+   </div>
   {{/data}}
 </div>
