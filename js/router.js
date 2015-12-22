@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////
+// Requiring in all JS libraries
+// Requiring in all templates
+// Setting global variables
 var Backbone = require('backbone');
 var Mustache = require('mustache');
 var Cookie = require('js-cookie');
@@ -16,9 +20,11 @@ var home = require('./templates/home.html');
 var matchModel = require('./models/matchModel.js')
 var parks = require('./templates/parks.html');
 var parksDetail = require('./templates/parksDetail.html');
-
 var counter = 1;
+////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////
+// Creating routers for navigation
 var Router = Backbone.Router.extend({
   initialize: function () {
     Backbone.history.start({pushState: true});
@@ -53,6 +59,7 @@ var Router = Backbone.Router.extend({
   url: 'https://skill-match.herokuapp.com/api/matches/?home=home'
 });
 
+// Using Backbone fetch to GET the up coming matches
 var Matches = Backbone.Collection.extend({
   model: Match,
   url: 'https://skill-match.herokuapp.com/api/matches/?home=home'
@@ -76,8 +83,9 @@ var Matches = Backbone.Collection.extend({
    console.log("nope")
  }
 });
+// End of backbone fetch for upcoming games
 
-
+// Click button for pagination to see more pages
 $("#nextPage").on('click', function() {
   window.scrollTo(0, 450);
   counter++;
@@ -88,9 +96,9 @@ $("#nextPage").on('click', function() {
      firstPage: 1,
      currentPage: counter
    }
+  }); // End of pagination
 
-  });
-
+  // Using Backbone fetch to GET the up coming matches
   var nextMatch = new nextMatches();
   nextMatch.fetch({
     success: function(resp) {
@@ -104,8 +112,10 @@ $("#nextPage").on('click', function() {
     error: function(err) {
       console.log("error", err);
     }
-  });
-});
+  }); // End of the fetch
+}); // End of the next page click function
+
+  // Click button for pagination to return to the pages
   $("#previousPage").on('click', function(e) {
     e.preventDefault();
     window.scrollTo(0, 450);
@@ -132,10 +142,13 @@ $("#nextPage").on('click', function() {
       console.log("error", err);
     }
   });
-})
+}); // End of return page click function
   }
 });
+////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////
+// Creating the router for the sign up
 var router = new Router();
 router.on('route:signup', function(){
   var html = signup;
@@ -186,7 +199,11 @@ user.save(null, {
  }
 });
  });
-});
+}); // End of the sign up router
+////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////
+// Creating the router for the login
 router.on('route:login', function(){
   var html = login;
         $("#container").html(html);
@@ -213,8 +230,11 @@ router.on('route:login', function(){
     backboneSync(method,model,options);
     };
   }
-});
+}); // End of the log in router
+////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////
+// Creating the router for the home page
 router.on('route:home', function(username){
   console.log(Cookie.get('uid'));
   var Match = Backbone.Model.extend({
@@ -283,12 +303,12 @@ router.on('route:home', function(username){
     }
   })
  },
- error: function(err) {
-   console.log("nope")
- }
-});
-
-});
+  error: function(err) {
+      console.log("nope")
+    }
+  });
+}); // End of home router
+////////////////////////////////////////////////////////////
 
 
 router.on('route:match', function(id, username) {
