@@ -196,8 +196,8 @@ user.save(null, {
  },
  error: function(err) {
    console.log("nope")
- }
-});
+  }
+  });
  });
 }); // End of the sign up router
 ////////////////////////////////////////////////////////////
