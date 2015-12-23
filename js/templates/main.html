@@ -4,6 +4,14 @@
   <button id="createMatchButton" type="submit">Create Match</button>
 </div>
 <div id="upComing">
+<div id="filter">
+  <select>
+    <option>Filter</option>
+    <option>Location</option>
+    <option>Sport</option>
+    <option>Date</option>
+  </select>
+</div>
 {{#data}}
 <a href="/match/{{id}}"><img id="sportImage"src="{{img_url}}"></a>
   <ul>

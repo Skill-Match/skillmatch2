@@ -171,33 +171,40 @@ var User = Backbone.Model.extend({
   url: 'https://skill-match.herokuapp.com/api/users/create/'
 });
 $('#rtxt').prop('checked', true)
-$(".register").on('click', function() {
+$(".register").on('click', function(e) {
+  e.preventDefault();
    user = new User();
    user.set({
      username: $("#ruser").val(),
      email: $("#remail").val(),
      password:$("#rpass").val(),
-     profile:{
+     profile: {
      gender: $(".rgen").val(),
      age: $("#rage").val(),
      phone_number: $("#rnumber").val(),
      wants_texts: $("#rtxt").is(':checked')
-  }
+    }
   })
-   var Users = Backbone.Collection.extend({
-  model: User,
-  url: 'https://skill-match.herokuapp.com/api/users/create/'
+  var Users = Backbone.Collection.extend({
+    model: User,
+    url: 'https://skill-match.herokuapp.com/api/users/create/'
 });
 var UserCollection = new Users();
-user.save(null, {
- success: function(resp) {
-   console.log("success: ",resp)
-   console.log("New user added.");
- },
- error: function(err) {
-   console.log("nope")
-  }
+if ($("#rpass").val() === ($("#rerpass").val())) {
+  user.save(null, {
+   success: function(resp) {
+     console.log("success: ",resp)
+     console.log("New user added.");
+     router.navigate("/?home=home", {trigger: true})
+   },
+   error: function(err) {
+     console.log("nope")
+    }
   });
+  } else {
+    alert("Sorry, you entered the wrong password. Please try again.");
+    router.navigate("/signup", {trigger: true});
+  }
  });
 }); // End of the sign up router
 ////////////////////////////////////////////////////////////
