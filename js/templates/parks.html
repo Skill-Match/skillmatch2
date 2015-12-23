@@ -1,4 +1,5 @@
 <div id="parksContainer">
+<button id="locate">Show my location</button>
   {{#data}}
   <ul>
     <li class="parkName"><a href="/parksDetail/{{id}}">{{name}}</a></li>
@@ -11,6 +12,6 @@
 
   <a id="backPark" href="/parks"> Back </a>
   <a id="nextPark" href="/parks"> Next </a>
-
 </div>
+<div id="map"></div>
 

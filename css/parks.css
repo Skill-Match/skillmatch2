@@ -1,6 +1,12 @@
-#parksContainer ul {
-  list-style: none; }
-#parksContainer .parkName {
-  font-size: 20px; }
+#parksContainer {
+  display: inline-block; }
+  #parksContainer ul {
+    list-style: none; }
+  #parksContainer .parkName {
+    font-size: 20px; }
+
+#map {
+  float: right;
+  display: inline-block; }
 
 /*# sourceMappingURL=parks.css.map */
