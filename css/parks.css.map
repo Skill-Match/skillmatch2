@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACC,kBAAE;EACD,UAAU,EAAE,IAAI;AAEjB,yBAAS;EACR,SAAS,EAAE,IAAI",
+"mappings": "AAAA,eAAe;EACd,OAAO,EAAE,YAAY;EACrB,kBAAE;IACD,UAAU,EAAE,IAAI;EAEjB,yBAAS;IACR,SAAS,EAAE,IAAI;;AAIjB,IAAI;EACH,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,YAAY",
 "sources": ["parks.scss"],
 "names": [],
 "file": "parks.css"
