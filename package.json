@@ -28,6 +28,7 @@
     "loader-utils": "^0.2.12",
     "mustache": "^2.2.0",
     "mustache-loader": "^0.3.0",
+    "node-static": "^0.7.7",
     "pushstate-server": "^1.8.1",
     "style-loader": "^0.13.0",
     "underscore": "^1.8.3",

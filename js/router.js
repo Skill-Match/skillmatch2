@@ -78,13 +78,14 @@ $('#loginSubmit').on('click', function(){
         console.log(resp);
         var user_id = resp.user_id;
         var user = resp.username;
+        var token = resp.token;
+        Cookie.set('token', token);
         Cookie.set('uid', user_id);
-        Cookie.set('userName', user); 
+        Cookie.set('userName', user);
         $('#nav').html(homeBtn);
         homeBtn.setAttribute('href', '/home/'+username);
         router.navigate('/home/' + username , {trigger:true})
       });
-      
     });
     function setToken(token) {
   var backboneSync = Backbone.sync;
@@ -302,6 +303,13 @@ router.on('route:home', function(username){
       $("#userprofile").html(userhtml);
       console.log('success', resp.toJSON());
 
+       $("#logout").on('click', function() {
+    console.log("COOKIETESTTEST!")
+    Cookie.remove('token');
+    router.navigate('/?home=home');
+    location.reload();
+  });
+
       $('#createMatch').on('click', function(){
           router.navigate('/createMatch', {trigger: true});
         })
@@ -437,6 +445,28 @@ router.on('route:match', function(id, username) {
           }
         })
       });
+
+      var LeaveMatch = Backbone.Model.extend({
+        defaults: {},
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/leave/'
+      });
+
+      var LeaveMatches = Backbone.Collection.extend({
+        model: LeaveMatch,
+        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/leave/'
+      });
+      $("#leaveMatch").on('click', function() {
+        var leaveMatch = new LeaveMatch();
+        leaveMatch.set({id: id})
+        leaveMatch.save(null, {
+          success: function(resp) {
+            console.log('success', resp)
+          },
+          error: function(err) {
+            console.log('error', err);
+          }
+        })
+      })
       },
       error: function(err) {
         console.log("error", err);
@@ -445,7 +475,7 @@ router.on('route:match', function(id, username) {
     });
 
 //////////////////////////////////////////////////////////////////////////////////////
-// Player Profile page 
+// Player Profile page
 
 router.on('route:profile', function(creator, username) {
   var profileContainer = Backbone.Model.extend({

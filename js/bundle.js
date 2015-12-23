@@ -57,44 +57,12 @@
 	__webpack_require__(24);
 	__webpack_require__(26);
 
-	$(document).ready(function(){
+	$(document).ready(function() {
 	  var Cookie = __webpack_require__(28);
 	  var Router = __webpack_require__(29);
-	          $('#loginSubmit').on('click', function(){
-	          var username = $("#username").val();
-	          var password = $("#password").val();
-	          var homeBtn = document.createElement('a');
-	          var link = document.createTextNode("Hello, " + username);
-	          homeBtn.appendChild(link);
-	          $.ajax({
-	        url:"https://skill-match.herokuapp.com/api/api-token-auth/",
-	        method:'POST',
-	        data: {username: username, password:password}
-	      }).then(function(resp){
-	        setToken(resp.token);
-	        console.log(resp);
-	        var user_id = resp.user_id;
-	        var user = resp.username;
-	        Cookie.set('uid', user_id);
-	        Cookie.set('userName', user); 
-	        $('#nav').html(homeBtn);
-	        homeBtn.setAttribute('href', '/home/'+username);
-	      });
-	      
-	    });
-	    function setToken(token) {
-	  var backboneSync = Backbone.sync;
-	  Backbone.sync = function(method,model,options) {
-	    options.headers = {
-	      'Authorization': 'Token ' + token
-	    };
-	    backboneSync(method,model,options);
-	    };
-	  }
-
-	  
-
 	});
+
+
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
@@ -10058,7 +10026,7 @@
 
 
 	// module
-	exports.push([module.id, "#parksContainer ul {\n  list-style: none; }\n#parksContainer .parkName {\n  font-size: 20px; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
+	exports.push([module.id, "#parksContainer {\n  display: inline-block; }\n  #parksContainer ul {\n    list-style: none; }\n  #parksContainer .parkName {\n    font-size: 20px; }\n\n#map {\n  float: right;\n  display: inline-block; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
 
 	// exports
 
@@ -10252,7 +10220,11 @@
 /* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {var Backbone = __webpack_require__(30);
+	/* WEBPACK VAR INJECTION */(function($) {////////////////////////////////////////////////////////////
+	// Requiring in all JS libraries
+	// Requiring in all templates
+	// Setting global variables
+	var Backbone = __webpack_require__(30);
 	var Mustache = __webpack_require__(32);
 	var Cookie = __webpack_require__(28);
 	var BackbonePagination = __webpack_require__(33)
@@ -10270,9 +10242,11 @@
 	var matchModel = __webpack_require__(48)
 	var parks = __webpack_require__(49);
 	var parksDetail = __webpack_require__(50);
-
 	var counter = 1;
+	////////////////////////////////////////////////////////////
 
+	////////////////////////////////////////////////////////////
+	// Creating routers for navigation
 	var Router = Backbone.Router.extend({
 	  initialize: function () {
 	    Backbone.history.start({pushState: true});
@@ -10281,7 +10255,6 @@
 	    "feedback/:id":"feedback",
 	    "match/:id":"match",
 	    "updatematch/:id":"updatematch",
-	    "login":"login",
 	    "signup":"signup",
 	    "profile/:creator":"profile",
 	    "createMatch":"createMatch",
@@ -10307,10 +10280,45 @@
 	  url: 'https://skill-match.herokuapp.com/api/matches/?home=home'
 	});
 
+	// Using Backbone fetch to GET the up coming matches
 	var Matches = Backbone.Collection.extend({
 	  model: Match,
 	  url: 'https://skill-match.herokuapp.com/api/matches/?home=home'
 	});
+	$('#loginSubmit').on('click', function(){
+	          var username = $("#username").val();
+	          var password = $("#password").val();
+	          var homeBtn = document.createElement('a');
+	          var link = document.createTextNode("Hello, " + username);
+	          homeBtn.appendChild(link);
+	          $.ajax({
+	        url:"https://skill-match.herokuapp.com/api/api-token-auth/",
+	        method:'POST',
+	        data: {username: username, password:password}
+	      }).then(function(resp){
+	        setToken(resp.token);
+	        console.log(resp);
+	        var user_id = resp.user_id;
+	        var user = resp.username;
+	        var token = resp.token;
+	        Cookie.set('token', token);
+	        Cookie.set('uid', user_id);
+	        Cookie.set('userName', user);
+	        $('#nav').html(homeBtn);
+	        homeBtn.setAttribute('href', '/home/'+username);
+	        router.navigate('/home/' + username , {trigger:true})
+	      });
+	    });
+	    function setToken(token) {
+	  var backboneSync = Backbone.sync;
+	  Backbone.sync = function(method,model,options) {
+	    options.headers = {
+	      'Authorization': 'Token ' + token
+	    };
+	    backboneSync(method,model,options);
+	    };
+	  }
+
 	    var match = new Match();
 	    match.fetch({
 	 success: function(resp) {
@@ -10330,8 +10338,9 @@
 	   console.log("nope")
 	 }
 	});
+	// End of backbone fetch for upcoming games
 
-
+	// Click button for pagination to see more pages
 	$("#nextPage").on('click', function() {
 	  window.scrollTo(0, 450);
 	  counter++;
@@ -10342,9 +10351,9 @@
 	     firstPage: 1,
 	     currentPage: counter
 	   }
+	  }); // End of pagination
 
-	  });
-
+	  // Using Backbone fetch to GET the up coming matches
 	  var nextMatch = new nextMatches();
 	  nextMatch.fetch({
 	    success: function(resp) {
@@ -10358,8 +10367,10 @@
 	    error: function(err) {
 	      console.log("error", err);
 	    }
-	  });
-	});
+	  }); // End of the fetch
+	}); // End of the next page click function
+
+	  // Click button for pagination to return to the pages
 	  $("#previousPage").on('click', function(e) {
 	    e.preventDefault();
 	    window.scrollTo(0, 450);
@@ -10386,10 +10397,13 @@
 	      console.log("error", err);
 	    }
 	  });
-	})
+	}); // End of return page click function
 	  }
 	});
+	////////////////////////////////////////////////////////////
 
+	////////////////////////////////////////////////////////////
+	// Creating the router for the sign up
 	var router = new Router();
 	router.on('route:signup', function(){
 	  var html = signup;
@@ -10412,63 +10426,46 @@
 	  url: 'https://skill-match.herokuapp.com/api/users/create/'
 	});
 	$('#rtxt').prop('checked', true)
-	$(".register").on('click', function() {
+	$(".register").on('click', function(e) {
+	  e.preventDefault();
 	   user = new User();
 	   user.set({
 	     username: $("#ruser").val(),
 	     email: $("#remail").val(),
 	     password:$("#rpass").val(),
-	     profile:{
+	     profile: {
 	     gender: $(".rgen").val(),
 	     age: $("#rage").val(),
 	     phone_number: $("#rnumber").val(),
 	     wants_texts: $("#rtxt").is(':checked')
-	  }
+	    }
 	  })
-	   var Users = Backbone.Collection.extend({
-	  model: User,
-	  url: 'https://skill-match.herokuapp.com/api/users/create/'
+	  var Users = Backbone.Collection.extend({
+	    model: User,
+	    url: 'https://skill-match.herokuapp.com/api/users/create/'
 	});
 	var UserCollection = new Users();
-	user.save(null, {
-	 success: function(resp) {
-	   console.log("success: ",resp)
-	   console.log("New user added.");
-	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-	});
-	 });
-	});
-	router.on('route:login', function(){
-	  var html = login;
-	        $("#container").html(html);
-	          $('#loginSubmit').on('click', function(){
-	          var username = $("#username").val();
-	          var password = $("#password").val();
-	          $.ajax({
-	        url:"https://skill-match.herokuapp.com/api/api-token-auth/",
-	        method:'POST',
-	        data: {username: username, password:password}
-	      }).then(function(resp){
-	        setToken(resp.token);
-
-	        router.navigate('/home/' + username, {trigger: true});
-
-	      });
-	    });
-	    function setToken(token) {
-	  var backboneSync = Backbone.sync;
-	  Backbone.sync = function(method,model,options) {
-	    options.headers = {
-	      'Authorization': 'Token ' + token
-	    };
-	    backboneSync(method,model,options);
-	    };
+	if ($("#rpass").val() === ($("#rerpass").val())) {
+	  user.save(null, {
+	   success: function(resp) {
+	     console.log("success: ",resp)
+	     console.log("New user added.");
+	     router.navigate("/?home=home", {trigger: true})
+	   },
+	   error: function(err) {
+	     console.log("nope")
+	    }
+	  });
+	  } else {
+	    alert("Sorry, you entered the wrong password. Please try again.");
+	    router.navigate("/signup", {trigger: true});
 	  }
-	});
+	 });
+	}); // End of the sign up router
+	////////////////////////////////////////////////////////////
 
+	////////////////////////////////////////////////////////////
+	// Creating the router for the home page
 	router.on('route:home', function(username){
 	  console.log(Cookie.get('uid'));
 	  var Match = Backbone.Model.extend({
@@ -10528,6 +10525,13 @@
 	      $("#userprofile").html(userhtml);
 	      console.log('success', resp.toJSON());
 
+	       $("#logout").on('click', function() {
+	    console.log("COOKIETESTTEST!")
+	    Cookie.remove('token');
+	    router.navigate('/?home=home');
+	    location.reload();
+	  });
+
 	      $('#createMatch').on('click', function(){
 	          router.navigate('/createMatch', {trigger: true});
 	        })
@@ -10537,13 +10541,15 @@
 	    }
 	  })
 	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-	});
+	  error: function(err) {
+	      console.log("nope")
+	    }
+	  });
+	}); // End of home router
+	////////////////////////////////////////////////////////////
 
-	});
-
+	//////////////////////////////////////////////////////////////////////////////////////
+	// Match Detail Page
 
 	router.on('route:match', function(id, username) {
 	    var matchDetail = new matchContainer();
@@ -10668,6 +10674,9 @@
 	      })
 	    });
 
+	//////////////////////////////////////////////////////////////////////////////////////
+	// Player Profile page
+
 	router.on('route:profile', function(creator, username) {
 	  var profileContainer = Backbone.Model.extend({
 	    initialize: function() {
@@ -10758,6 +10767,85 @@
 	  url: 'https://skill-match.herokuapp.com/api/matches/'
 	});
 
+	//////////////////////////////////////////////////////////////////////////////////////
+	// Match Creation Page
+	router.on('route:createMatch', function(id, username) {
+	  var Park = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    id: null,
+	    name: null
+	      },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	  var Parks = Backbone.Collection.extend({
+	  model: Park,
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	    var park = new Parks();
+	    park.fetch({
+	 success: function(resp) {
+	    var html = createMatch({'park': resp.toJSON()[0].results});
+	    var createMatchTemplate = $("#mainTemplate").text();
+	    var createMatchHTML = Mustache.render(createMatchTemplate, 'park');
+	    $("#create").html(createMatchHTML);
+	    $("#container").html(html);
+
+	   console.log("success: ",resp)
+	  $("#createMatch").on('click', function(e) {
+	    e.preventDefault();
+	    update = new matchContainer();
+	    update.set({
+	    park: $("#addPark").val(),
+	    description: $("#addDescription").val(),
+	    sport: $("#addSport").val(),
+	    skill_level:$("#addSkill").val(),
+	    date: $("#addDate").val(),
+	    time: $("#addTime").val()
+	  });
+	  update.save(null, {
+	    url: 'https://skill-match.herokuapp.com/api/matches/',
+	      success: function(resp) {
+	        console.log("success", resp);
+	        var id = resp.toJSON().id;
+	        router.navigate('/match/' + id, {trigger: true});
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	  });
+	      $("#addPark").val("");
+	      $("#addDescription").val("");
+	      $("#addSport").val("");
+	      $("#addSkill").val("");
+	      $("#addDate").val("");
+	      $("#addTime").val("");
+	  });
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+
+	});
+	});
+
+	var feedbackContainer = Backbone.Model.extend({
+	  initialize: function() {
+	  },
+	  defaults: {
+	    skill: null,
+	    sportsmanship: null,
+	    punctuality: null,
+	    availability: null
+	  },
+	  Model: feedbackContainer,
+	  url: 'https://skill-match.herokuapp.com/api/feedbacks/create/'
+	});
+
+	//////////////////////////////////////////////////////////////////////////////////////
+	// Match Update Page
+
 	router.on('route:updatematch', function(id){
 	  var matchContainer = Backbone.Model.extend({
 	  initialize: function() {
@@ -10847,80 +10935,8 @@
 
 	})
 
-	router.on('route:createMatch', function(id, username) {
-	  var Park = Backbone.Model.extend({
-	  initialize: function () {
-	  },
-	  defaults: {
-	    id: null,
-	    name: null
-	      },
-	  url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
-	  var Parks = Backbone.Collection.extend({
-	  model: Park,
-	  url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
-	    var park = new Parks();
-	    park.fetch({
-	 success: function(resp) {
-	    var html = createMatch({'park': resp.toJSON()[0].results});
-	    var createMatchTemplate = $("#mainTemplate").text();
-	    var createMatchHTML = Mustache.render(createMatchTemplate, 'park');
-	    $("#create").html(createMatchHTML);
-	    $("#container").html(html);
-
-	   console.log("success: ",resp)
-	  $("#createMatch").on('click', function(e) {
-	    e.preventDefault();
-	    update = new matchContainer();
-	    update.set({
-	    park: $("#addPark").val(),
-	    description: $("#addDescription").val(),
-	    sport: $("#addSport").val(),
-	    skill_level:$("#addSkill").val(),
-	    date: $("#addDate").val(),
-	    time: $("#addTime").val()
-	  });
-	  update.save(null, {
-	    url: 'https://skill-match.herokuapp.com/api/matches/',
-	      success: function(resp) {
-	        console.log("success", resp);
-	        var id = resp.toJSON().id;
-	        router.navigate('/match/' + id, {trigger: true});
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
-	  });
-	      $("#addPark").val("");
-	      $("#addDescription").val("");
-	      $("#addSport").val("");
-	      $("#addSkill").val("");
-	      $("#addDate").val("");
-	      $("#addTime").val("");
-	  });
-	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-
-	});
-	});
-
-	var feedbackContainer = Backbone.Model.extend({
-	  initialize: function() {
-	  },
-	  defaults: {
-	    skill: null,
-	    sportsmanship: null,
-	    punctuality: null,
-	    availability: null
-	  },
-	  Model: feedbackContainer,
-	  url: 'https://skill-match.herokuapp.com/api/feedbacks/create/'
-	});
-
+	////////////////////////////////////////////////////////////////////////////////
+	// This page gives you the ability to leave Feedback on completed matches
 	router.on('route:feedback', function(id, username){
 	  var html = feedback;
 	  $("#container").html(html);
@@ -10952,40 +10968,41 @@
 	  });
 	});
 
-	router.on('route:parksDetail', function(id){
-	  var Park = Backbone.Model.extend({
-	    initialize: function () {
-	    },
-	    defaults: {
-	    id: null,
-	    name: null
-	    },
-	  url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
-	});
-	  var Parks = Backbone.Collection.extend({
-	    model: Park,
-	    url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
-	});
-	  var park = new Park();
-	  park.fetch ({
-	    success: function(resp) {
-	      var html = parksDetail({'data': resp.toJSON()});
-	      var parksDetailTemplate = $("#parksDetailTemplate").text();
-	      var parksDetailHTML = Mustache.render(parksDetailTemplate, "data");
-	      $("#parksDetail").html(parksDetailHTML);
-
-
-	      $("#container").html(html);
-	      console.log("success", resp);
-	    },
-	    error: function(err) {
-	      console.log("error", err);
-	    }
-	});
-	});
-
+	/////////////////////////////////////////////////////////////////////////////
+	// Routes to parks page where we fetch and display parks from Api
+	// BackbonePagination is used here to page through all parks in Api
+	// We used a counter to along with BackbonePagination get the next page of parks
 	router.on('route:parks', function() {
-	  var Park = Backbone.Model.extend({
+	  function geoFindMe() {
+	  var output = document.getElementById("map");
+
+	  if (!navigator.geolocation){
+	    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+	    return;
+	  }
+
+	  function success(position) {
+	    var latitude  = position.coords.latitude;
+	    var longitude = position.coords.longitude;
+
+	    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+	    var img = new Image();
+	    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+
+	    output.appendChild(img);
+	  };
+
+	  function error() {
+	    output.innerHTML = "Unable to retrieve your location";
+	  };
+
+	  output.innerHTML = "<p>Locating…</p>";
+
+	  navigator.geolocation.getCurrentPosition(success, error);
+	}
+
+	var Park = Backbone.Model.extend({
 	    initialize: function () {
 	    },
 	    defaults: {
@@ -11008,6 +11025,10 @@
 	      $("#container").html(html);
 	      console.log("success", resp);
 	      console.log(parkHTML);
+	      $('#locate').on('click', function(){
+	  console.log('test');
+	  geoFindMe()
+	})
 	    },
 	    error: function(err) {
 	      console.log("error", err);
@@ -11040,6 +11061,7 @@
 	    }
 	    })
 	  })
+
 	    $("body").on('click', "#backPark", function(e) {
 	      e.preventDefault();
 	      counter--;
@@ -11068,12 +11090,45 @@
 	    });
 	  });
 	});
-
+	/////////////////////////////////////////////////////////////////////////////
+	// This page is a more indepth look at the park you have choosen and we display the parks match history.
+	// Soon it will include all a list of sports available at the park.
+	router.on('route:parksDetail', function(id){
+	  var Park = Backbone.Model.extend({
+	    initialize: function () {
+	    },
+	    defaults: {
+	    id: null,
+	    name: null
+	    },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+	});
+	  var Parks = Backbone.Collection.extend({
+	    model: Park,
+	    url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+	});
+	  var park = new Park();
+	  park.fetch ({
+	    success: function(resp) {
+	      var html = parksDetail({'data': resp.toJSON()});
+	      var parksDetailTemplate = $("#parksDetailTemplate").text();
+	      var parksDetailHTML = Mustache.render(parksDetailTemplate, "data");
+	      $("#parksDetail").html(parksDetailHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	    },
+	    error: function(err) {
+	      console.log("error", err);
+	    }
+	});
+	});
+	////////////////////////////////////////////////////////////////////////////////
 	$('body').on('click', 'a', function (e){
 	  e.preventDefault();
 	  var href = $(this).attr('href').substr(1);
 	  router.navigate(href, {trigger:true});
 	});
+
 
 	module.exports = router;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
@@ -17312,14 +17367,14 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(35);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PHONE:</label>");t.b("\n" + i);t.b("  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">");t.b("\n" + i);t.b("   </br>");t.b("\n" + i);t.b("  <label>Text Alerts:</label>");t.b("\n" + i);t.b("  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  <a class=\"register\" type=\"submit\" href=\"/\">Submit</a>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>PHONE:</label>\n  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">\n   </br>\n  <label>Text Alerts:</label>\n  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  <a class=\"register\" type=\"submit\" href=\"/\">Submit</a>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Re-Enter PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  <span id=\"reenterMessage\"></span>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PHONE:</label>");t.b("\n" + i);t.b("  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">");t.b("\n" + i);t.b("   </br>");t.b("\n" + i);t.b("  <label>Text Alerts:</label>");t.b("\n" + i);t.b("  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  <button class=\"register\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>Re-Enter PASSWORD:</label>\n  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">\n  <span id=\"reenterMessage\"></span>\n  </br>\n  <label>PHONE:</label>\n  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">\n   </br>\n  <label>Text Alerts:</label>\n  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  <button class=\"register\" type=\"submit\">Submit</button>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(35);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,274,943,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> ");t.b(t.v(t.f("date",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li class=\"description\">  ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"description\">");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"description\"> <a id=\"parkAnchor\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <li class=\"description\"> Created By: <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\" class=\"creatorName\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("    </progress></li>");t.b("\n" + i);t.b("    <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n{{#data}}\n<a href=\"/match/{{id}}\"><img id=\"sportImage\"src=\"{{img_url}}\"></a>\n  <ul>\n    <li class=\"description\"> <a href=\"/match/{{id}}\"> {{date}}</a></li>\n    <li class=\"description\">  {{time}}</li>\n    <li class=\"description\">{{sport}}</li>\n    <li class=\"description\"> <a id=\"parkAnchor\" href=\"/parksDetail/{{park}}\">{{park_name}}</a></li>\n    </br>\n    <li class=\"description\"> Created By: <a href=\"/profile/{{creator}}\" class=\"creatorName\"> {{creator_name}} </a></li>\n    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n    </progress></li>\n    <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n{{/data}}\n</div>\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);t.b("<div id=\"filter\">");t.b("\n" + i);t.b("  <select>");t.b("\n" + i);t.b("    <option>Filter</option>");t.b("\n" + i);t.b("    <option>Location</option>");t.b("\n" + i);t.b("    <option>Sport</option>");t.b("\n" + i);t.b("    <option>Date</option>");t.b("\n" + i);t.b("  </select>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,433,1102,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> ");t.b(t.v(t.f("date",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li class=\"description\">  ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"description\">");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"description\"> <a id=\"parkAnchor\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <li class=\"description\"> Created By: <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\" class=\"creatorName\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("    </progress></li>");t.b("\n" + i);t.b("    <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n<div id=\"filter\">\n  <select>\n    <option>Filter</option>\n    <option>Location</option>\n    <option>Sport</option>\n    <option>Date</option>\n  </select>\n</div>\n{{#data}}\n<a href=\"/match/{{id}}\"><img id=\"sportImage\"src=\"{{img_url}}\"></a>\n  <ul>\n    <li class=\"description\"> <a href=\"/match/{{id}}\"> {{date}}</a></li>\n    <li class=\"description\">  {{time}}</li>\n    <li class=\"description\">{{sport}}</li>\n    <li class=\"description\"> <a id=\"parkAnchor\" href=\"/parksDetail/{{park}}\">{{park_name}}</a></li>\n    </br>\n    <li class=\"description\"> Created By: <a href=\"/profile/{{creator}}\" class=\"creatorName\"> {{creator_name}} </a></li>\n    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n    </progress></li>\n    <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n{{/data}}\n</div>\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 40 */
@@ -17375,7 +17430,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(35);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"userprofile\">");t.b("\n" + i);if(t.s(t.f("user",c,p,1),c,p,0,126,755,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n");t.b("\n" + i);t.b("    <li><img id=\"homeProfileImg\" src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\">");if(t.s(t.f("skill_set",c,p,1),c,p,0,566,658,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");t.b(t.v(t.f("sport",c,p,0)));t.b(" Skill:");t.b("\n" + i);t.b("     <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);});c.pop();}t.b("     </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Create Match</button>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"yourMatches\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,805,1395,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\"><li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li></a>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("   <li><a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"userprofile\">\n{{#user}}\n  <ul>\n\n    <li><img id=\"homeProfileImg\" src=\"{{profile.pic_url}}\"></li>\n    <li class=\"mainDescription\"> Username: {{username}} </li>\n    <li class=\"mainDescription\"> Age: {{profile.age}} </li>\n    <li class=\"mainDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n    <li class=\"mainDescription\">{{#skill_set}} {{sport}} Skill:\n     <progress class=\"skill\" value=\"{{skill}}\" max=\"100\"></progress>\n     {{/skill_set}}\n     </li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Create Match</button>\n{{/user}}\n</div>\n\n<div id=\"yourMatches\">\n{{#data}}\n<a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\"></a>\n<ul>\n  <a href=\"/match/{{id}}\" id=\"dateHome\"><li> {{date}}</li></a>\n  <li> {{time}}</li>\n  <li> {{sport}}</li>\n  <li> {{park_name}} </li>\n  </br>\n  <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n   <li><a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a></li>\n</ul>\n{{/data}}\n\n</div>\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"userprofile\">");t.b("\n" + i);if(t.s(t.f("user",c,p,1),c,p,0,127,796,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <button id=\"logout\"> Logout </button>");t.b("\n" + i);t.b("  <ul>");t.b("\n");t.b("\n" + i);t.b("    <li><img id=\"homeProfileImg\" src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\">");if(t.s(t.f("skill_set",c,p,1),c,p,0,607,699,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");t.b(t.v(t.f("sport",c,p,0)));t.b(" Skill:");t.b("\n" + i);t.b("     <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);});c.pop();}t.b("     </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Create Match</button>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"yourMatches\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,846,1436,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\"><li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li></a>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("   <li><a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"userprofile\">\n{{#user}}\n  <button id=\"logout\"> Logout </button>\n  <ul>\n\n    <li><img id=\"homeProfileImg\" src=\"{{profile.pic_url}}\"></li>\n    <li class=\"mainDescription\"> Username: {{username}} </li>\n    <li class=\"mainDescription\"> Age: {{profile.age}} </li>\n    <li class=\"mainDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n    <li class=\"mainDescription\">{{#skill_set}} {{sport}} Skill:\n     <progress class=\"skill\" value=\"{{skill}}\" max=\"100\"></progress>\n     {{/skill_set}}\n     </li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Create Match</button>\n{{/user}}\n</div>\n\n<div id=\"yourMatches\">\n{{#data}}\n<a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\"></a>\n<ul>\n  <a href=\"/match/{{id}}\" id=\"dateHome\"><li> {{date}}</li></a>\n  <li> {{time}}</li>\n  <li> {{sport}}</li>\n  <li> {{park_name}} </li>\n  </br>\n  <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n   <li><a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a></li>\n</ul>\n{{/data}}\n\n</div>\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 48 */
@@ -17405,7 +17460,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(35);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,377,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"parkName\"><a href=\"/parksDetail/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("rating",c,p,0)));t.b("/5</li>");t.b("\n" + i);t.b("    <li><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address2",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("\n" + i);t.b("  <a id=\"backPark\" href=\"/parks\"> Back </a>");t.b("\n" + i);t.b("  <a id=\"nextPark\" href=\"/parks\"> Next </a>");t.b("\n");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n  {{#data}}\n  <ul>\n    <li class=\"parkName\"><a href=\"/parksDetail/{{id}}\">{{name}}</a></li>\n    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>\n    <li>{{rating}}/5</li>\n    <li><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</li>\n  </ul>\n  {{/data}}\n\n  <a id=\"backPark\" href=\"/parks\"> Back </a>\n  <a id=\"nextPark\" href=\"/parks\"> Next </a>\n\n</div>\n\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);t.b("<button id=\"locate\">Show my location</button>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,83,423,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"parkName\"><a href=\"/parksDetail/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("rating",c,p,0)));t.b("/5</li>");t.b("\n" + i);t.b("    <li><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address2",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("\n" + i);t.b("  <a id=\"backPark\" href=\"/parks\"> Back </a>");t.b("\n" + i);t.b("  <a id=\"nextPark\" href=\"/parks\"> Next </a>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"map\"></div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n<button id=\"locate\">Show my location</button>\n  {{#data}}\n  <ul>\n    <li class=\"parkName\"><a href=\"/parksDetail/{{id}}\">{{name}}</a></li>\n    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>\n    <li>{{rating}}/5</li>\n    <li><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</li>\n  </ul>\n  {{/data}}\n\n  <a id=\"backPark\" href=\"/parks\"> Back </a>\n  <a id=\"nextPark\" href=\"/parks\"> Next </a>\n</div>\n<div id=\"map\"></div>\n\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 50 */
