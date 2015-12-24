@@ -511,6 +511,7 @@ router.on('route:profile', function(creator, username) {
       var profileTemplate = $("#profileTemplate").text();
       var profileHTML = Mustache.render(profileTemplate, 'data');
       var id = resp.toJSON()[0].id;
+      var username = resp.toJSON()[0].username;
       $("#profileContainer").html(profileHTML);
       $("#container").html(html);
       console.log('success', resp.toJSON());
