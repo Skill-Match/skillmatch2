@@ -350,6 +350,7 @@ router.on('route:match', function(id, username) {
         console.log(Cookie.get('uid'));
         if ( Cookie.get('uid') == creator) {
           $("#join").hide();
+          $("#leaveMatch").hide();
           $("#confirm").show();
           $("#decline").show();
           $("#update").show();
@@ -460,7 +461,7 @@ router.on('route:match', function(id, username) {
         leaveMatch.set({id: id})
         leaveMatch.save(null, {
           success: function(resp) {
-            console.log('success', resp)
+            console.log('success', resp);
           },
           error: function(err) {
             console.log('error', err);
