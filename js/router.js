@@ -36,6 +36,7 @@ var Router = Backbone.Router.extend({
     "signup":"signup",
     "profile/:creator":"profile",
     "createMatch":"createMatch",
+    "challenge/:id":"challenge",
     "home/:username":"home",
     "parks":"parks",
     "parksDetail/:id":"parksDetail",
@@ -509,10 +510,14 @@ router.on('route:profile', function(creator, username) {
       var html = profile({'data': resp.toJSON()});
       var profileTemplate = $("#profileTemplate").text();
       var profileHTML = Mustache.render(profileTemplate, 'data');
-      var username = resp.toJSON()[0].username;
+      var id = resp.toJSON()[0].id;
       $("#profileContainer").html(profileHTML);
       $("#container").html(html);
       console.log('success', resp.toJSON());
+      $('#challenge').on('click', function(){
+        router.navigate('/challenge/' + id, {trigger: true});
+      })
+
       var Match = Backbone.Model.extend({
   initialize: function () {
   },
@@ -646,6 +651,69 @@ var feedbackContainer = Backbone.Model.extend({
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Match Update Page
+
+router.on('route:challenge', function(id) {
+  var Park = Backbone.Model.extend({
+  initialize: function () {
+  },
+  defaults: {
+    id: null,
+    name: null
+      },
+  url: 'https://skill-match.herokuapp.com/api/parks/'
+});
+  var Parks = Backbone.Collection.extend({
+  model: Park,
+  url: 'https://skill-match.herokuapp.com/api/parks/'
+});
+    var park = new Parks();
+    park.fetch({
+ success: function(resp) {
+    var html = createMatch({'park': resp.toJSON()[0].results});
+    var challengeMatchTemplate = $("#mainTemplate").text();
+    var challengeMatchHTML = Mustache.render(challengeMatchTemplate, 'park');
+    $("#challenge").html(challengeMatchHTML);
+    $("#container").html(html);
+
+   console.log("success: ",resp)
+  $("#createMatch").on('click', function(e) {
+    e.preventDefault();
+    challenge = new matchContainer();
+    challenge.set({
+    challenge: id,
+    park: $("#addPark").val(),
+    description: $("#addDescription").val(),
+    sport: $("#addSport").val(),
+    skill_level:$("#addSkill").val(),
+    date: $("#addDate").val(),
+    time: $("#addTime").val(),
+  });
+  challenge.save(null, {
+    url: 'https://skill-match.herokuapp.com/api/matches/challenge/',
+      success: function(resp) {
+        console.log("success", resp);
+        var id = resp.toJSON().id;
+        router.navigate('/match/' + id, {trigger: true});
+      },
+      error: function(err) {
+        console.log("error", err);
+      }
+  });
+      $("#addPark").val("");
+      $("#addDescription").val("");
+      $("#addSport").val("");
+      $("#addSkill").val("");
+      $("#addDate").val("");
+      $("#addTime").val("");
+  });
+ },
+ error: function(err) {
+   console.log("nope")
+ }
+
+});
+});
+
 
 router.on('route:updatematch', function(id){
   var matchContainer = Backbone.Model.extend({
