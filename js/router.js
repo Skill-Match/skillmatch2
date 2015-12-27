@@ -110,7 +110,6 @@ $('#loginSubmit').on('click', function(){
           var mainTemplate = $("#mainTemplate").text();
           var mainHTML = Mustache.render(mainTemplate, 'data');
           $("#upComing").html(mainHTML);
-          $("#previousPage").hide();
           $("#container").html(html);
           $("#sport").on('change', function() {
       filterSport();
