@@ -109,6 +109,8 @@ $('#loginSubmit').on('click', function(){
           var html = main({'data': resp.toJSON().results});
           var mainTemplate = $("#mainTemplate").text();
           var mainHTML = Mustache.render(mainTemplate, 'data');
+          var next = resp.toJSON().next;
+          var previous = resp.toJSON().previous;
           $("#upComing").html(mainHTML);
           $("#container").html(html);
           $("#sport").on('change', function() {
