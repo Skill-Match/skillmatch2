@@ -8,15 +8,27 @@
 
   border-bottom: solid black 1px;
 
+
   #homeProfileImg {
     margin: 20px 0px;
     height: 200px;
     width: 200px;
   }
-img{
-  height: 200px;
-  width: 200px;
-}
+
+  #logout {
+    font-size: 10px;
+    position: absolute;
+    right: 5em;
+  }
+
+  #logout:hover {
+    text-decoration: underline;
+  }
+
+  img{
+    height: 200px;
+    width: 200px;
+  }
   .mainDescription {
     position: relative;
     left: 12em;
