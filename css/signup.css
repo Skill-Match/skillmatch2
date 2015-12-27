@@ -3,10 +3,11 @@
   height: 35em;
   width: 50%;
   margin: 0% 25%;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.5); }
   #signupPage #signupHeader {
     height: 75px;
-    background-color: #356b66; }
+    background-color: #1e8880; }
     #signupPage #signupHeader h2 {
       padding-top: 25px;
       color: white; }
@@ -29,6 +30,8 @@
   #signupPage #signupForm #remail {
     position: relative;
     left: 22px; }
+  #signupPage #signupForm #rerpass {
+    margin-right: 4em; }
   #signupPage #signupForm .rgen {
     width: 30px;
     margin: 0;
@@ -42,7 +45,7 @@
   #signupPage #signupForm .register {
     text-decoration: none;
     padding: 15px;
-    background-color: #356b66;
+    background-color: #1e8880;
     color: white;
     border: none;
     border-radius: 20px;
