@@ -56,13 +56,13 @@ var Router = Backbone.Router.extend({
     date: null,
     time: null
   },
-  url: 'https://skill-match.herokuapp.com/api/matches/?home=home'
+  url: 'https://skill-match.herokuapp.com/api/matches/'
 });
 
 // Using Backbone fetch to GET the up coming matches
 var Matches = Backbone.Collection.extend({
   model: Match,
-  url: 'https://skill-match.herokuapp.com/api/matches/?home=home'
+  url: 'https://skill-match.herokuapp.com/api/matches/'
 });
 $('#loginSubmit').on('click', function(){
           var username = $("#username").val();
@@ -98,20 +98,88 @@ $('#loginSubmit').on('click', function(){
     };
   }
 
+  function nextPage(next){
+    var nextPages = new Match();
+    nextPages.fetch({
+       url: next,
+ success: function(resp) {
+    var html = main({'data': resp.toJSON().results});
+    var mainTemplate = $("#mainTemplate").text();
+    var mainHTML = Mustache.render(mainTemplate, 'data');
+    var next = resp.toJSON().next;
+    var previous = resp.toJSON().previous;
+    console.log(next);
+    console.log(previous);
+    $("#upComing").html(mainHTML);
+    $("#container").html(html);
+   console.log("success: ",resp)
+   $('#next').on('click', function(){
+    nextPage(next)
+   })
+   $('#prev').on('click', function(){
+    prevPage(previous)
+   })
+   $("#createMatchButton").on('click', function() {
+    router.navigate('/createMatch', {trigger: true});
+   });
+ },
+ error: function(err) {
+   console.log("nope")
+ }
+});
+  }
+
+  function prevPage(previous){
+    var prevPages = new Match();
+    prevPages.fetch({
+       url: previous,
+ success: function(resp) {
+    var html = main({'data': resp.toJSON().results});
+    var mainTemplate = $("#mainTemplate").text();
+    var mainHTML = Mustache.render(mainTemplate, 'data');
+    var next = resp.toJSON().next;
+    var previous = resp.toJSON().previous;
+    console.log(next);
+    console.log(previous);
+    $("#upComing").html(mainHTML);
+    $("#container").html(html);
+   console.log("success: ",resp)
+   $('#next').on('click', function(){
+    nextPage(next)
+   })
+   $('#prev').on('click', function(){
+    prevPage(previous)
+   })
+   $("#createMatchButton").on('click', function() {
+    router.navigate('/createMatch', {trigger: true});
+   });
+ },
+ error: function(err) {
+   console.log("nope")
+ }
+});
+  }
+
     var match = new Match();
     match.fetch({
  success: function(resp) {
     var html = main({'data': resp.toJSON().results});
     var mainTemplate = $("#mainTemplate").text();
     var mainHTML = Mustache.render(mainTemplate, 'data');
+    var next = resp.toJSON().next;
+    var previous = resp.toJSON().previous;
     $("#upComing").html(mainHTML);
-
-
     $("#container").html(html);
    console.log("success: ",resp)
+   $('#next').on('click', function(){
+    nextPage(next)
+   })
+   $('#prev').on('click', function(){
+    prevPage(prev)
+   })
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
-  });
+   });
  },
  error: function(err) {
    console.log("nope")
@@ -119,65 +187,65 @@ $('#loginSubmit').on('click', function(){
 });
 // End of backbone fetch for upcoming games
 
-// Click button for pagination to see more pages
-$("#nextPage").on('click', function() {
-  window.scrollTo(0, 450);
-  counter++;
-  var nextMatches = Backbone.PageableCollection.extend({
-    model: Match,
-    url: 'https://skill-match.herokuapp.com/api/matches/',
-    state:{
-     firstPage: 1,
-     currentPage: counter
+// // Click button for pagination to see more pages
+// $("#nextPage").on('click', function() {
+//   window.scrollTo(0, 450);
+//   counter++;
+//   var nextMatches = Backbone.PageableCollection.extend({
+//     model: Match,
+//     url: 'https://skill-match.herokuapp.com/api/matches/',
+//     state:{
+//      firstPage: 1,
+//      currentPage: counter
+//    }
+//   }); // End of pagination
+
+//   // Using Backbone fetch to GET the up coming matches
+//   var nextMatch = new nextMatches();
+//   nextMatch.fetch({
+//     success: function(resp) {
+//     console.log("success", resp);
+//     var html = main({'data': resp.toJSON()[0].results});
+//     var mainTemplate = $("#mainTemplate").text();
+//     var mainHTML = Mustache.render(mainTemplate, 'data');
+//     $("#upComing").html(mainHTML);
+//     $("#container").html(html);
+//     },
+//     error: function(err) {
+//       console.log("error", err);
+//     }
+//   }); // End of the fetch
+// }); // End of the next page click function
+
+//   // Click button for pagination to return to the pages
+//   $("#previousPage").on('click', function(e) {
+//     e.preventDefault();
+//     window.scrollTo(0, 450);
+//     counter--;
+//     var previousMatches = BackbonePagination.extend({
+//       model: Match,
+//       url: 'https://skill-match.herokuapp.com/api/matches/',
+//       state: {
+//         firstPage: 1,
+//         currentPage: counter
+//       }
+//     });
+//     var previousMatch = new previousMatches();
+//     previousMatch.fetch({
+//     success: function(resp) {
+//     console.log("success", resp);
+//     var html = main({'data': resp.toJSON()[0].results});
+//     var mainTemplate = $("#mainTemplate").text();
+//     var mainHTML = Mustache.render(mainTemplate, 'data');
+//     $("#upComing").html(mainHTML);
+//     $("#container").html(html);
+//     },
+//     error: function(err) {
+//       console.log("error", err);
+//     }
+//   });
+// }); // End of return page click function
    }
-  }); // End of pagination
-
-  // Using Backbone fetch to GET the up coming matches
-  var nextMatch = new nextMatches();
-  nextMatch.fetch({
-    success: function(resp) {
-    console.log("success", resp);
-    var html = main({'data': resp.toJSON()[0].results});
-    var mainTemplate = $("#mainTemplate").text();
-    var mainHTML = Mustache.render(mainTemplate, 'data');
-    $("#upComing").html(mainHTML);
-    $("#container").html(html);
-    },
-    error: function(err) {
-      console.log("error", err);
-    }
-  }); // End of the fetch
-}); // End of the next page click function
-
-  // Click button for pagination to return to the pages
-  $("#previousPage").on('click', function(e) {
-    e.preventDefault();
-    window.scrollTo(0, 450);
-    counter--;
-    var previousMatches = BackbonePagination.extend({
-      model: Match,
-      url: 'https://skill-match.herokuapp.com/api/matches/',
-      state: {
-        firstPage: 1,
-        currentPage: counter
-      }
-    });
-    var previousMatch = new previousMatches();
-    previousMatch.fetch({
-    success: function(resp) {
-    console.log("success", resp);
-    var html = main({'data': resp.toJSON()[0].results});
-    var mainTemplate = $("#mainTemplate").text();
-    var mainHTML = Mustache.render(mainTemplate, 'data');
-    $("#upComing").html(mainHTML);
-    $("#container").html(html);
-    },
-    error: function(err) {
-      console.log("error", err);
-    }
-  });
-}); // End of return page click function
-  }
 });
 ////////////////////////////////////////////////////////////
 
@@ -844,30 +912,16 @@ router.on('route:feedback', function(id, username){
 // We used a counter to along with BackbonePagination get the next page of parks
 router.on('route:parks', function() {
   function geoFindMe() {
-  var output = document.getElementById("map");
-
-  if (!navigator.geolocation){
-    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-    return;
-  }
 
   function success(position) {
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
-
-    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-
-    var img = new Image();
-    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-    output.appendChild(img);
+    console.log('latitude '+latitude);
+    console.log('longitude '+longitude);
   };
 
   function error() {
-    output.innerHTML = "Unable to retrieve your location";
   };
-
-  output.innerHTML = "<p>Locating…</p>";
 
   navigator.geolocation.getCurrentPosition(success, error);
 }
@@ -896,7 +950,6 @@ var Park = Backbone.Model.extend({
       console.log("success", resp);
       console.log(parkHTML);
       $('#locate').on('click', function(){
-  console.log('test');
   geoFindMe()
 })
     },

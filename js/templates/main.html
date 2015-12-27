@@ -5,12 +5,14 @@
 </div>
 <div id="upComing">
 <div id="filter">
-  <select>
-    <option>Filter</option>
-    <option>Location</option>
-    <option>Sport</option>
-    <option>Date</option>
+  <select id="sport">
+    <option value="basketball">BasketBall</option>
+    <option value="tennis">Tennis</option>
+    <option value="football">Football</option>
+    <option value="soccer">Soccer</option>
+    <option value="other">Other</option>
   </select>
+  
 </div>
 {{#data}}
 <a href="/match/{{id}}"><img id="sportImage"src="{{img_url}}"></a>
@@ -26,4 +28,6 @@
     <li><a id="matchSubmit" type="sumbit" href="/match/{{id}}"> Join </a></li>
 </ul>
 {{/data}}
+<button id="next">Next</button>
+<button id="prev">prev</button>
 </div>
