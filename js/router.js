@@ -363,6 +363,8 @@ router.on('route:home', function(username){
        $("#logout").on('click', function() {
     console.log("COOKIETESTTEST!")
     Cookie.remove('token');
+    Cookie.remove('userName');
+    Cookie.remove('uid');
     router.navigate('/?home=home');
     location.reload();
   });
