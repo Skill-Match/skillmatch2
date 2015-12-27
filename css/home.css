@@ -8,11 +8,10 @@
     height: 200px;
     width: 200px; }
   #userprofile #logout {
-    font-size: 10px;
+    text-decoration: underline;
+    font-size: 12px;
     position: absolute;
-    right: 5em; }
-  #userprofile #logout:hover {
-    text-decoration: underline; }
+    right: 2em; }
   #userprofile img {
     height: 200px;
     width: 200px; }
