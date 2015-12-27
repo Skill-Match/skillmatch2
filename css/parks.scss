@@ -4,11 +4,11 @@
 		list-style: none;
 	}
 	.parkName{
-		font-size: 20px;
+		font-size: 1em;
 		
 	}
-}
-#map{
-	float: right;
-	display: inline-block;
+	#parksImage{
+		width: 8em;
+		height: 75px;
+	}
 }
