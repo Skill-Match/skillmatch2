@@ -1,16 +1,19 @@
 #profileContainer {
 
+  #challenge {
+    position: absolute;
+    left: 40em;
+    top: 12em;
+  }
+
   #userProfileImg {
     height: 200px;
     width: 200px;
   }
 
   background-color: #e3e3e3;
-
   height: 250px;
-
   font-size: 20px;
-
   border-bottom: solid black 1px;
 
   #userProfileImg {
@@ -19,9 +22,10 @@
 
   .profileDescription {
     position: relative;
+    width: 35em;
     left: 12em;
     bottom: 10em;
-    margin-bottom: 5px;
+    margin-bottom: .5em;
   }
 
   li {
@@ -42,16 +46,17 @@
     position: relative;
     left: 15em;
     bottom: 10em;
+    width: 35em;
   }
 
   h2 {
-    margin-left: 15px;
+    margin-left: 1.5em;
   }
 
   ul {
     border-bottom: 1px solid #4f1e47;
     width: 1200px;
-    margin-left: 20px;
+    margin-left: 2em;
   }
 
   ul:nth-last-child(1) {
@@ -75,7 +80,7 @@
   }
 
   #sportImage {
-    padding-left: 40px;
+    padding-left: 4em;
     height: 200px;
     width: 200px;
   }
