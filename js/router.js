@@ -112,7 +112,6 @@ $('#loginSubmit').on('click', function(){
           var next = resp.toJSON().next;
           var previous = resp.toJSON().previous;
           $("#upComing").html(mainHTML);
-          $("#previousPage").hide();
           $("#container").html(html);
           $("#sport").on('change', function() {
       filterSport();
@@ -150,9 +149,11 @@ $('#loginSubmit').on('click', function(){
     })
    $('#next').on('click', function(){
     nextPage(next)
+    window.scrollTo(0, 450);
    })
    $('#prev').on('click', function(){
     prevPage(previous)
+    window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
@@ -184,9 +185,11 @@ $('#loginSubmit').on('click', function(){
     })
    $('#next').on('click', function(){
     nextPage(next)
+    window.scrollTo(0, 450);
    })
    $('#prev').on('click', function(){
     prevPage(previous)
+    window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
@@ -214,9 +217,11 @@ $('#loginSubmit').on('click', function(){
     })
    $('#next').on('click', function(){
     nextPage(next)
+    window.scrollTo(0, 450);
    })
    $('#prev').on('click', function(){
     prevPage(prev)
+    window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
@@ -226,6 +231,8 @@ $('#loginSubmit').on('click', function(){
    console.log("nope")
  }
 });
+// End of backbone fetch for upcoming games
+
    }
 });
 ////////////////////////////////////////////////////////////
