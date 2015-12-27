@@ -3,10 +3,9 @@
   #parksContainer ul {
     list-style: none; }
   #parksContainer .parkName {
-    font-size: 20px; }
-
-#map {
-  float: right;
-  display: inline-block; }
+    font-size: 1em; }
+  #parksContainer #parksImage {
+    width: 8em;
+    height: 75px; }
 
 /*# sourceMappingURL=parks.css.map */

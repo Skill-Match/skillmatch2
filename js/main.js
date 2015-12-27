@@ -4,6 +4,7 @@ require("../css/main.css");
 require("../css/login.css");
 require("../css/signup.css");
 require("../css/createMatch.css");
+require("../css/updatematch.css");
 require("../css/match.css");
 require("../css/home.css");
 require("../css/profile.css");
