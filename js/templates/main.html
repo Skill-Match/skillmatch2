@@ -13,7 +13,7 @@
     <option value="soccer">Soccer</option>
     <option value="other">Other</option>
   </select>
-  
+
 </div>
 {{#data}}
 <a href="/match/{{id}}"><img id="sportImage"src="{{img_url}}"></a>
@@ -29,6 +29,8 @@
     <li><a id="matchSubmit" type="sumbit" href="/match/{{id}}"> Join </a></li>
 </ul>
 {{/data}}
+<div id="pagination">
+<button id="prev">Prev</button>
 <button id="next">Next</button>
-<button id="prev">prev</button>
+</div>
 </div>

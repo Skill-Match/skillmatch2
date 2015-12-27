@@ -33,6 +33,15 @@
 
 #upComing {
 
+  select {
+    font-size: 18px;
+    margin: 1em .5em .5em;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #e3e3e3;
+  }
+
   #sportImage {
     margin-left: 50px;
     margin-top: 1px;
@@ -85,6 +94,7 @@
     position: relative;
     left: 13em;
     bottom: 3em;
+    width: 35em;
   }
 
   #matchSubmit {
@@ -118,5 +128,12 @@
 
   #parkAnchor {
     color: grey;
+  }
+
+  #next {
+    margin-bottom: 1em;
+  }
+  #prev {
+    margin-left: .5em;
   }
 }
