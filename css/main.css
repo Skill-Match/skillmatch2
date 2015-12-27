@@ -57,7 +57,8 @@
 #upComing #skillProgress {
   position: relative;
   left: 13em;
-  bottom: 3em; }
+  bottom: 3em;
+  width: 35em; }
 #upComing #matchSubmit {
   padding: 15px;
   background-color: #1e8880;
