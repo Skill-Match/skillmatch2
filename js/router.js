@@ -149,9 +149,11 @@ $('#loginSubmit').on('click', function(){
     })
    $('#next').on('click', function(){
     nextPage(next)
+    window.scrollTo(0, 450);
    })
    $('#prev').on('click', function(){
     prevPage(previous)
+    window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
@@ -183,9 +185,11 @@ $('#loginSubmit').on('click', function(){
     })
    $('#next').on('click', function(){
     nextPage(next)
+    window.scrollTo(0, 450);
    })
    $('#prev').on('click', function(){
     prevPage(previous)
+    window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
@@ -213,9 +217,11 @@ $('#loginSubmit').on('click', function(){
     })
    $('#next').on('click', function(){
     nextPage(next)
+    window.scrollTo(0, 450);
    })
    $('#prev').on('click', function(){
     prevPage(prev)
+    window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
