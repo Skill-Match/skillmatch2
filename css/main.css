@@ -64,7 +64,8 @@
 #upComing #skillProgress {
   position: relative;
   left: 13em;
-  bottom: 3em; }
+  bottom: 3em;
+  width: 35em; }
 #upComing #matchSubmit {
   padding: 15px;
   background-color: #1e8880;
@@ -86,5 +87,9 @@
   width: 300px; }
 #upComing #parkAnchor {
   color: grey; }
+#upComing #next {
+  margin-bottom: 1em; }
+#upComing #prev {
+  margin-left: .5em; }
 
 /*# sourceMappingURL=main.css.map */

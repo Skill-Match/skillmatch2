@@ -94,6 +94,7 @@
     position: relative;
     left: 13em;
     bottom: 3em;
+    width: 35em;
   }
 
   #matchSubmit {
@@ -127,5 +128,12 @@
 
   #parkAnchor {
     color: grey;
+  }
+
+  #next {
+    margin-bottom: 1em;
+  }
+  #prev {
+    margin-left: .5em;
   }
 }
