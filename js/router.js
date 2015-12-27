@@ -98,6 +98,35 @@ $('#loginSubmit').on('click', function(){
     };
   }
 
+  function filterSport() {
+
+    var match = counter++
+    var match = new Match();
+          match.fetch({
+        url: "http://skill-match.herokuapp.com/api/matches/?sport=" + $("#sport").val(),
+
+        success: function(resp) {
+          console.log("YESYEYWDJKAHSGDF",resp);
+          var html = main({'data': resp.toJSON().results});
+          var mainTemplate = $("#mainTemplate").text();
+          var mainHTML = Mustache.render(mainTemplate, 'data');
+          $("#upComing").html(mainHTML);
+          $("#previousPage").hide();
+          $("#container").html(html);
+          $("#sport").on('change', function() {
+      filterSport();
+    })
+        },
+        error: function(err) {
+         console.log("nope")
+        }
+      });
+  }
+
+
+
+
+
     var match = new Match();
     match.fetch({
  success: function(resp) {
@@ -105,22 +134,25 @@ $('#loginSubmit').on('click', function(){
     var mainTemplate = $("#mainTemplate").text();
     var mainHTML = Mustache.render(mainTemplate, 'data');
     $("#upComing").html(mainHTML);
-
-
+    $("#previousPage").hide();
     $("#container").html(html);
-   console.log("success: ",resp)
-   $("#createMatchButton").on('click', function() {
+    console.log("success: ",resp)
+    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
-  });
- },
- error: function(err) {
-   console.log("nope")
- }
+    });
+    $("#sport").on('change', function() {
+      filterSport();
+    })
+   },
+   error: function(err) {
+     console.log("nope")
+   }
 });
 // End of backbone fetch for upcoming games
 
 // Click button for pagination to see more pages
 $("#nextPage").on('click', function() {
+  $("#previousPage").show();
   window.scrollTo(0, 450);
   counter++;
   var nextMatches = Backbone.PageableCollection.extend({
@@ -159,6 +191,7 @@ $("#nextPage").on('click', function() {
       url: 'https://skill-match.herokuapp.com/api/matches/',
       state: {
         firstPage: 1,
+        lastPage: null,
         currentPage: counter
       }
     });
@@ -998,6 +1031,5 @@ $('body').on('click', 'a', function (e){
   var href = $(this).attr('href').substr(1);
   router.navigate(href, {trigger:true});
 });
-
 
 module.exports = router;
