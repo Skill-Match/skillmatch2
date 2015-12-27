@@ -7,6 +7,11 @@
     margin: 20px 0px;
     height: 200px;
     width: 200px; }
+  #userprofile #logout {
+    text-decoration: underline;
+    font-size: 12px;
+    position: absolute;
+    right: 2em; }
   #userprofile img {
     height: 200px;
     width: 200px; }
