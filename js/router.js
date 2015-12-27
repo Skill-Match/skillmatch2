@@ -106,7 +106,6 @@ $('#loginSubmit').on('click', function(){
         url: "http://skill-match.herokuapp.com/api/matches/?sport=" + $("#sport").val(),
 
         success: function(resp) {
-          console.log("YESYEYWDJKAHSGDF",resp);
           var html = main({'data': resp.toJSON().results});
           var mainTemplate = $("#mainTemplate").text();
           var mainHTML = Mustache.render(mainTemplate, 'data');
@@ -115,17 +114,13 @@ $('#loginSubmit').on('click', function(){
           $("#container").html(html);
           $("#sport").on('change', function() {
       filterSport();
-    })
+    });
         },
         error: function(err) {
          console.log("nope")
         }
       });
   }
-
-
-
-
 
     var match = new Match();
     match.fetch({
@@ -151,65 +146,65 @@ $('#loginSubmit').on('click', function(){
 // End of backbone fetch for upcoming games
 
 // Click button for pagination to see more pages
-$("#nextPage").on('click', function() {
-  $("#previousPage").show();
-  window.scrollTo(0, 450);
-  counter++;
-  var nextMatches = Backbone.PageableCollection.extend({
-    model: Match,
-    url: 'https://skill-match.herokuapp.com/api/matches/',
-    state:{
-     firstPage: 1,
-     currentPage: counter
-   }
-  }); // End of pagination
+// $("#nextPage").on('click', function() {
+//   $("#previousPage").show();
+//   window.scrollTo(0, 450);
+//   counter++;
+//   var nextMatches = Backbone.PageableCollection.extend({
+//     model: Match,
+//     url: 'https://skill-match.herokuapp.com/api/matches/',
+//     state:{
+//      firstPage: 1,
+//      currentPage: counter
+//    }
+//   }); // End of pagination
 
   // Using Backbone fetch to GET the up coming matches
-  var nextMatch = new nextMatches();
-  nextMatch.fetch({
-    success: function(resp) {
-    console.log("success", resp);
-    var html = main({'data': resp.toJSON()[0].results});
-    var mainTemplate = $("#mainTemplate").text();
-    var mainHTML = Mustache.render(mainTemplate, 'data');
-    $("#upComing").html(mainHTML);
-    $("#container").html(html);
-    },
-    error: function(err) {
-      console.log("error", err);
-    }
-  }); // End of the fetch
-}); // End of the next page click function
+  // var nextMatch = new nextMatches();
+  // nextMatch.fetch({
+  //   success: function(resp) {
+  //   console.log("success", resp);
+  //   var html = main({'data': resp.toJSON()[0].results});
+  //   var mainTemplate = $("#mainTemplate").text();
+  //   var mainHTML = Mustache.render(mainTemplate, 'data');
+  //   $("#upComing").html(mainHTML);
+  //   $("#container").html(html);
+  //   },
+  //   error: function(err) {
+  //     console.log("error", err);
+  //   }
+  // }); // End of the fetch
+// }); // End of the next page click function
 
   // Click button for pagination to return to the pages
-  $("#previousPage").on('click', function(e) {
-    e.preventDefault();
-    window.scrollTo(0, 450);
-    counter--;
-    var previousMatches = BackbonePagination.extend({
-      model: Match,
-      url: 'https://skill-match.herokuapp.com/api/matches/',
-      state: {
-        firstPage: 1,
-        lastPage: null,
-        currentPage: counter
-      }
-    });
-    var previousMatch = new previousMatches();
-    previousMatch.fetch({
-    success: function(resp) {
-    console.log("success", resp);
-    var html = main({'data': resp.toJSON()[0].results});
-    var mainTemplate = $("#mainTemplate").text();
-    var mainHTML = Mustache.render(mainTemplate, 'data');
-    $("#upComing").html(mainHTML);
-    $("#container").html(html);
-    },
-    error: function(err) {
-      console.log("error", err);
-    }
-  });
-}); // End of return page click function
+  // $("#previousPage").on('click', function(e) {
+  //   e.preventDefault();
+  //   window.scrollTo(0, 450);
+  //   counter--;
+  //   var previousMatches = BackbonePagination.extend({
+  //     model: Match,
+  //     url: 'https://skill-match.herokuapp.com/api/matches/',
+  //     state: {
+  //       firstPage: 1,
+  //       lastPage: null,
+  //       currentPage: counter
+  //     }
+  //   });
+  //   var previousMatch = new previousMatches();
+  //   previousMatch.fetch({
+  //   success: function(resp) {
+  //   console.log("success", resp);
+  //   var html = main({'data': resp.toJSON()[0].results});
+  //   var mainTemplate = $("#mainTemplate").text();
+  //   var mainHTML = Mustache.render(mainTemplate, 'data');
+  //   $("#upComing").html(mainHTML);
+  //   $("#container").html(html);
+  //   },
+  //   error: function(err) {
+  //     console.log("error", err);
+  //   }
+  // });
+// }); // End of return page click function
   }
 });
 ////////////////////////////////////////////////////////////
