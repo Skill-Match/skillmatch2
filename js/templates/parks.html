@@ -1,17 +1,16 @@
 <div id="parksContainer">
-<button id="locate">Show my location</button>
   {{#data}}
-  <ul>
+  <ul id="parks">
     <li class="parkName"><a href="/parksDetail/{{id}}">{{name}}</a></li>
     <li><img id="parksImage"src="{{image_url}}"></li>
     <li><a id="parkMatch" type="submit" href="/createMatch">Create Match</a></li>
     <li>{{rating}}/5</li>
     <li><a href="{{url}}"> Yelp Park Review</a></li>
-    <li>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</li>
+    <li>{{display_address1}} </br> {{display_address3}}</li>
   </ul>
   {{/data}}
-
+  </div>
+<button id="locate">Show my location</button>
   <button id="backPark"> Back </button>
   <button id="nextPark"> Next </button>
-</div>
 

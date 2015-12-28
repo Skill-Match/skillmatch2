@@ -1,11 +1,34 @@
 #parksContainer {
-  display: inline-block; }
-  #parksContainer ul {
-    list-style: none; }
-  #parksContainer .parkName {
-    font-size: 1em; }
+  display: inline-block;
+  margin: 2%; }
+  #parksContainer #parks {
+    display: inline-block;
+    list-style: none;
+    width: 20em;
+    text-align: center;
+    padding: 0 0 10px 0;
+    border-radius: 10%;
+    border-top: none;
+    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);
+    background-color: #D8DFEA;
+    margin: auto;
+    margin-right: 10px;
+    margin-bottom: 20px; }
+    #parksContainer #parks .parkName {
+      padding-top: 10px;
+      width: 20em;
+      border-top-right-radius: 1em;
+      border-top-left-radius: 1em;
+      background-color: #1e8880;
+      text-align: center;
+      height: 2em;
+      width: auto; }
+      #parksContainer #parks .parkName a {
+        text-decoration: none;
+        font-size: 1em;
+        color: white; }
   #parksContainer #parksImage {
-    width: 8em;
-    height: 75px; }
+    width: 15em;
+    height: 100px; }
 
 /*# sourceMappingURL=parks.css.map */
