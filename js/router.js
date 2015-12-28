@@ -504,6 +504,7 @@ router.on('route:match', function(id, username) {
         $("#decline").hide();
         $("#update").hide();
         $("#cancel").hide();
+        $("#leaveMatch").hide();
         console.log(Cookie.get('uid'));
         if ( Cookie.get('uid') == creator) {
           $("#join").hide();
@@ -513,9 +514,14 @@ router.on('route:match', function(id, username) {
           $("#update").show();
           $("#cancel").show();
         };
+        if(open == true) {
+          $("#confirm").hide();
+          $("#decline").hide();
+        }
         if(confirm == true){
           $("#confirm").hide();
           $("#decline").hide();
+          $("#leaveMatch").show();
         }
         if(open == false){
           $("#join").hide();
