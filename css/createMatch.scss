@@ -1,10 +1,24 @@
 #createMatchPage {
-
+  background-color: #D8DFEA;
   height: 35em;
   width: 50%;
+  margin: 0% 25%;
+  text-align: center;
+  box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.50);
+
+  h3 {
+    padding-top: 1em;
+    color: white;
+    background-color: #1e8880;
+    border: solid #1e8880 1px;
+    height: 50px;
+  }
 
   ul {
     list-style-type: none;
+  }
+  li {
+    margin-top: 10px;
   }
   input {
     font-size: 18px;
@@ -19,9 +33,21 @@
     font-size: 18px;
     margin: 10px 5px 5px;
     border: none;
-    width: 300px;
+    width: 315px;
     padding: 8px 10px;
     border-radius: 5px;
+  }
+
+  textarea {
+    width: 320px;
+    margin-right: -40px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  #addSkill {
+    margin-right: 50px;
   }
 
   #createMatch {

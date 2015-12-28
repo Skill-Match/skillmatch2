@@ -4,9 +4,10 @@
 	width: 50%;
 	margin: 0% 25%;
 	text-align: center;
+	box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.50);
 	#signupHeader{
 		height: 75px;
-		background-color: #356b66;
+		background-color: #1e8880;
 	h2{
 		padding-top: 25px;
 		color: white;
@@ -29,16 +30,21 @@
 		border: none;
 		border-radius: 5px;
 		position: relative;
-		left: 50px; 
+		left: 50px;
 	}
 	#remail{
 		position: relative;
 		left: 22px;
 	}
+
+	#rerpass {
+		margin-right: 4em;
+	}
+
 	.rgen{
 		width: 30px;
 		margin: 0;
-		padding:0;  
+		padding:0;
 	}
 	#gender{
 		position: relative;
@@ -51,7 +57,7 @@
 	.register {
   	text-decoration: none;
     padding: 15px;
-    background-color: #356b66;
+    background-color: #1e8880;
     color: white;
     border: none;
     border-radius: 20px;
