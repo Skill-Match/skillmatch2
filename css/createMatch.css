@@ -32,7 +32,9 @@
   #createMatchPage textarea {
     width: 320px;
     margin-right: -40px;
-    height: 50px; }
+    height: 50px;
+    border-radius: 5px;
+    border: none; }
   #createMatchPage #addSkill {
     margin-right: 50px; }
   #createMatchPage #createMatch {
