@@ -19,7 +19,42 @@
 </div>
 
 <div id="yourMatches">
+
 {{#data}}
+{{#is_confirmed}}
+<h2 class="matchTitle"> Upcoming Match </h2>
+<a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a>
+<ul>
+  <a href="/match/{{id}}" id="dateHome"><li> {{date}}</li></a>
+  <li> {{time}}</li>
+  <li> {{sport}}</li>
+  <li> {{park_name}} </li>
+  </br>
+  <li> Created By: <a id="profileName" href="/profile/{{creator}}"> {{creator_name}} </a> </li>
+  <li>  <a id="matchDetail" type="sumbit" href="/match/{{id}}"> Details </a> </li>
+   <li id="skillProgressHome"> Skill Level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
+</ul>
+{{/is_confirmed}}
+{{/data}}
+{{#data}}
+{{#is_open}}
+<h2 class="matchTitle"> Pending Match </h2>
+<a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a>
+<ul>
+  <a href="/match/{{id}}" id="dateHome"><li> {{date}}</li></a>
+  <li> {{time}}</li>
+  <li> {{sport}}</li>
+  <li> {{park_name}} </li>
+  </br>
+  <li> Created By: <a id="profileName" href="/profile/{{creator}}"> {{creator_name}} </a> </li>
+  <li>  <a id="matchDetail" type="sumbit" href="/match/{{id}}"> Details </a> </li>
+   <li id="skillProgressHome"> Skill Level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
+</ul>
+{{/is_open}}
+{{/data}}
+{{#data}}
+{{#is_completed}}
+<h2 class="matchTitle"> Match History </h2>
 <a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a>
 <ul>
   <a href="/match/{{id}}" id="dateHome"><li> {{date}}</li></a>
@@ -32,6 +67,7 @@
    <li id="skillProgressHome"> Skill Level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
    <li><a id="goToFeedback" href="/feedback/{{id}}"> Feedback </a></li>
 </ul>
+{{/is_completed}}
 {{/data}}
 
 </div>
