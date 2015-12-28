@@ -84,7 +84,7 @@ $('#loginSubmit').on('click', function(){
         Cookie.set('uid', user_id);
         Cookie.set('userName', user);
         $('#nav').html(homeBtn);
-        $('#nav').append('<a id="logout"> Logout </a>');
+        $('#nav').append('<a id="logout"> (Logout) </a>');
         homeBtn.setAttribute('href', '/home/'+username);
         router.navigate('/home/' + username , {trigger:true})
       });

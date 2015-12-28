@@ -63,9 +63,9 @@
   top: 2em; }
 #upComing #skillProgress {
   position: relative;
-  left: 13em;
-  bottom: 3em;
-  width: 35em; }
+  left: 33em;
+  bottom: 7em;
+  width: 5em; }
 #upComing #matchSubmit {
   padding: 15px;
   background-color: #1e8880;
@@ -75,8 +75,8 @@
   box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
   outline: none;
   position: relative;
-  bottom: 4.5em;
-  left: 45em; }
+  bottom: 8.5em;
+  left: 65em; }
 #upComing #matchSubmit:active {
   box-shadow: none; }
 #upComing .creatorName {
