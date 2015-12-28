@@ -1,7 +1,7 @@
 <div id="createMatchPage">
   <h3> Create Game you would like to play </h3>
   <ul id="create">
-    <li> Sport:</li>
+    <li> Sport:
       <select id="addSport" name="Sport">
         <option value="Tennis">Tennis</option>
         <option value="Basketball">Basketball</option>
@@ -9,11 +9,12 @@
         <option value="Soccer">Soccer</option>
         <option value="Other">Other</option>
       </select>
-    <li> Description:</li> <textarea id="addDescription" cols="30" placeholder="What kind of match you are looking for?"></textarea>
-    <li> Date:</li>  <input id="addDate" type="date">
-    <li> Time:</li> <input id="addTime" type="time">
-    <li> Skill: 1-100</li> <input id="addSkill" type="range" min="0" max="100" step="1" value="0">
-    <li> Park: </br><select id="addPark" name="park">
+      </li>
+    <li> Date: <input id="addDate" type="date"></li>
+    <li> Time:<input id="addTime" type="time"></li>
+    <li><textarea id="addDescription" cols="30" placeholder="What kind of match you are looking for?"></textarea></li>
+    <li> Skill: 1-100 <input id="addSkill" type="range" min="0" max="100" step="1" value="0"></li>
+    <li> Park:<select id="addPark" name="park">
     {{#park}}
     <option value="{{id}}">{{name}}</option>
     {{/park}}
