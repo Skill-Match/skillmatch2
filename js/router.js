@@ -900,6 +900,15 @@ router.on('route:feedback', function(id, username){
     $("#addCrowdFeedback").val("");
     $("#addPunctualityFeedback").val("");
   });
+  $('#skillInfo').hover(function(){
+    $('#skillRating').toggleClass();
+  });
+  $("#skillInfo2").hover(function() {
+    $("#funRating").toggleClass();
+  });
+  $("#skillInfo3").hover(function() {
+    $("#crowdRating").toggleClass();
+  })
 });
 
 /////////////////////////////////////////////////////////////////////////////
@@ -1066,5 +1075,7 @@ $('body').on('click', 'a', function (e){
   var href = $(this).attr('href').substr(1);
   router.navigate(href, {trigger:true});
 });
-
+$('body').on('hover', 'span', function (e){
+  e.preventDefault();
+});
 module.exports = router;
