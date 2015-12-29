@@ -13,14 +13,15 @@
     <li> Date: <input id="addDate" type="date"></li>
     <li> Time:<input id="addTime" type="time"></li>
     <li><textarea id="addDescription" cols="30" placeholder="What kind of match you are looking for?"></textarea></li>
-    <li> Skill: 1-100 <input id="addSkill" type="range" min="0" max="100" step="1" value="0"></li>
     <li> Park:<select id="addPark" name="park">
     {{#park}}
     <option value="{{id}}">{{name}}</option>
     {{/park}}
     </select>
     </li>
-    <li><button id="createMatch" type="submit">Submit</button></li>
+
+    <li> <label>Skill: 1-100</label><input id="addSkill" type="range" min="0" max="100" step="1" value="0"></li>
   </ul>
+  <button id="createMatch" type="submit">Submit</button>
 </div>
 
