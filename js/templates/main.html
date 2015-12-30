@@ -16,6 +16,7 @@
 
 </div>
 {{#data}}
+{{#is_open}}
 <a href="/match/{{id}}"><img id="sportImage"src="{{img_url}}"></a>
   <ul>
     <li class="description"> <a href="/match/{{id}}"> {{date}}</a></li>
@@ -29,6 +30,7 @@
     </progress></li>
     <li><a id="matchSubmit" type="sumbit" href="/match/{{id}}"> Join </a></li>
 </ul>
+{{/is_open}}
 {{/data}}
 <div id="pagination">
 <button id="prev">Prev</button>
