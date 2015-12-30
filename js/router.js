@@ -123,6 +123,9 @@ $('#loginSubmit').on('click', function(){
    $('#prev').on('click', function(){
     prevPage(previous)
    })
+      $("#createMatchButton").on('click', function() {
+    router.navigate('/createMatch', {trigger: true});
+   });
         },
         error: function(err) {
          console.log("nope")
