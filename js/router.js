@@ -509,7 +509,7 @@ router.on('route:match', function(id, username) {
         $("#cancel").hide();
         $("#leaveMatch").hide();
         console.log(Cookie.get('uid'));
-        if ( Cookie.get('uid') == creator) {
+        if (Cookie.get('uid') == creator) {
           $("#join").hide();
           $("#leaveMatch").hide();
           $("#confirm").show();
