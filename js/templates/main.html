@@ -16,18 +16,16 @@
 
 </div>
 {{#data}}
-<a href="/match/{{id}}"><img id="sportImage"src="{{img_url}}"></a>
   <ul>
-    <li class="description"> <a href="/match/{{id}}"> {{date}}</a></li>
-    <li class="description">  {{time}}</li>
-    <li class="description">{{sport}}</li>
-    <li class="description"> <a id="parkAnchor" href="/parksDetail/{{park}}">{{park_name}}</a></li>
-    </br>
-    <li class="description"> Created By: <a href="/profile/{{creator}}" class="creatorName"> {{creator_name}} </a></li>
-    <!-- <li><img class="pic" src="http://placehold.it/"></li> -->
+    <li id="sportImage"><a href="/match/{{id}}"><img src="{{img_url}}"></a></li>
+    <li class="description"> <a href="/match/{{id}}">{{date}}</a></br>
+    {{time}}</br>
+    {{sport}}</br>
+    <a id="parkAnchor" href="/parksDetail/{{park}}">{{park_name}}</a></br>
+    Created By: <a href="/profile/{{creator}}" class="creatorName"> {{creator_name}} </a></li>
     <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
     </progress></li>
-    <li><a id="matchSubmit" type="sumbit" href="/match/{{id}}"> Join </a></li>
+    <li id="matchSubmit"><a type="sumbit" href="/match/{{id}}"> Join </a></li>
 </ul>
 {{/data}}
 <div id="pagination">

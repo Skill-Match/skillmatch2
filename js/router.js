@@ -518,6 +518,10 @@ router.on('route:match', function(id, username) {
           $("#confirm").hide();
           $("#decline").hide();
         }
+        if(open == false) {
+          $("#confirm").show();
+          $("#decline").show();
+        }
         if(confirm == true){
           $("#confirm").hide();
           $("#decline").hide();
