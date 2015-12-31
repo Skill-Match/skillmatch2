@@ -44,8 +44,11 @@
 
   #sportImage {
     display: inline-block;
+    position: relative;
+    top: 2em;
+    width:40% ;
     img{
-    width: 60%;
+    width: 65%;
     margin: 2em;
     }
   }
@@ -65,7 +68,7 @@
     padding: 0;
     height: auto;
     background-color: white;
-    
+
   }
 
   ul:nth-last-child(1){
@@ -79,24 +82,23 @@
 
   li {
     list-style-type: none;
-    padding-bottom: 5px;
-    margin: 1%;
   }
 
   .description {
     display: inline-block;
     position: relative;
-    bottom: 3em;
-    font-size: 1em;
+    font-size: 1.2em;
     width: 9em;
-    margin:1em;
+    right: 4em;
+    bottom: 6em;
+    line-height: 33px;
   }
 
   #skillProgress {
     display: inline-block;
     position: relative;
-    bottom: 5em;
-    margin: 1em;
+    top: 2em;
+    right: 28em;
     width: 30%;
     .skill{
       width: 80%;
@@ -113,13 +115,31 @@
     outline: none;
     display: inline-block;
     position: relative;
-    left: 4%;
-    bottom: 5em;
+    left: 50em;
+    bottom: 12em;
     margin: 1em;
   }
 
   #matchSubmit:active {
     box-shadow: none;
+  }
+
+  #profilePic {
+    border-radius: 100%;
+    height: 120px;
+    position: relative;
+    right: 25em;
+    top: 1em;
+  }
+
+  #players {
+    display: inline-block;
+  }
+
+  #profileName {
+    position: relative;
+    right: 30em;
+    top: 2em;
   }
 
   .creatorName {

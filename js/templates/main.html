@@ -25,13 +25,13 @@
 {{#is_open}}
   <ul>
     <li id="sportImage"><a href="/match/{{id}}"><img src="{{img_url}}"></a></li>
-    <li class="description"> <a href="/match/{{id}}">{{date}}</a></br>
-    {{time}}</br>
-    {{sport}}</br>
+    <li class="description"> <a href="/match/{{id}}">{{date}}</a>
+    {{time}}
     <a id="parkAnchor" href="/parksDetail/{{park}}">{{park_name}}</a></li>
+    <li><p id="matchDescription">{{description}}</p></li>
     <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
     </progress></li>
-<li id="players">{{#players}}<a href="/profile/{{id}}"><img src="{{profile.pic_url}}">{{username}}</a>{{/players}}</li>    
+<li id="players">{{#players}}<a href="/profile/{{id}}"><img id="profilePic" src="{{profile.pic_url}}"></a><a href="/profile/{{id}}"id="profileName">{{username}}</a>{{/players}}</li>
 <li id="matchSubmit"><a type="sumbit" href="/match/{{id}}"> Join </a></li>
 </ul>
 {{/is_open}}

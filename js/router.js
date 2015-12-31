@@ -978,7 +978,8 @@ router.on('route:feedback', function(id, username){
       skill: $("#addSkillFeedback").val(),
       sportsmanship: $("#addFunFeedback").val(),
       availability: $("#addCrowdFeedback").val(),
-      punctuality: $("#addPunctualityFeedback").val()
+      punctuality: $("#addPunctualityFeedback").val(),
+      player: id
     });
     feedbackAdd.save(null, {
       url: 'https://skill-match.herokuapp.com/api/feedbacks/create/',

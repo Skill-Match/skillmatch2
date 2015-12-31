@@ -9,6 +9,8 @@
     <li id="matchSkill"> Skill:<progress class="skill" value="{{skill_level}}" max="100"></progress></li>
     </br>
     <li>Created By: <a href="/profile/{{creator}}">{{creator_name}}</a></li>
+    <li> Feedback for players: {{#players}}
+    <ul id="playersFeedback"><li><a id="player" href="/feedback/{{id}}">{{username}}</a></li></ul>{{/players}}</li>
   </ul>
     <button id="join"> Join </button>
     <a id="confirm" href="/"> Confirm Match </a>
