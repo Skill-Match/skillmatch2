@@ -13,9 +13,19 @@
   #feedbackContainer #submitFeedback:active {
     box-shadow: none; }
   #feedbackContainer #skillInfo {
-    height: 100px;
-    width: 100px;
-    background-color: green; }
+    position: relative;
+    top: 1em; }
+  #feedbackContainer #skillRating {
+    position: relative;
+    top: 1em; }
+  #feedbackContainer #skillInfo2 {
+    position: relative;
+    right: 10.81em;
+    top: 1em; }
+  #feedbackContainer #skillInfo3 {
+    position: relative;
+    right: 10.81em;
+    top: 1em; }
   #feedbackContainer .hidden {
     display: none; }
 

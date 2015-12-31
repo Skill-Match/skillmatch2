@@ -1,25 +1,16 @@
-#!/usr/bin/env node
+var static = require( 'node-static' ),
+    port = 8080,
+    http = require( 'http' );
 
-// This is a little middleware so that we can preserve pushState
-var server = require('pushstate-server');
+// config
+var file = new static.Server( './index.html', {
+    cache: 3600,
+    gzip: true
+} );
 
-server.start({
- port: process.env.PORT || 8090,
- directory: './'
-});
-
-// Then we run webpack dev server
-var WebpackDevServer = require("webpack-dev-server");
-var webpack = require("webpack");
-
-var compiler = webpack(process.argv[2] == 'hot' ? require('./webpack.config.hot.js') : require('./webpack.config.js'));
-var devServer = new WebpackDevServer(compiler, {
-
-   stats: {colors: true},
-   contentBase: 'http://localhost:8090/',
-   publicPath: 'http://localhost:8080/',
-
-   hot: process.argv[2] == 'hot'
-});
-
-devServer.listen(8080, "localhost", function() {});
+// serve
+http.createServer( function ( request, response ) {
+    request.addListener( 'end', function () {
+        file.serve( request, response );
+    } ).resume();
+} ).listen( port );

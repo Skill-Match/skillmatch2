@@ -12,6 +12,7 @@ require("../css/feedback.css");
 require("../css/parks.css");
 require("../css/parksDetail.css");
 
+
 $(document).ready(function() {
   var Cookie = require('js-cookie');
   var Router = require('./router.js');

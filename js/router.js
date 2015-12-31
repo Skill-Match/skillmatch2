@@ -21,6 +21,7 @@ var matchModel = require('./models/matchModel.js')
 var parks = require('./templates/parks.html');
 var parksDetail = require('./templates/parksDetail.html');
 var counter = 1;
+
 ////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
@@ -98,6 +99,86 @@ $('#loginSubmit').on('click', function(){
     backboneSync(method,model,options);
     };
   }
+
+  function geoFindMe() {
+  function success(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    console.log('latitude '+latitude);
+    console.log('longitude '+longitude);
+    var match = new Match();
+    match.fetch({
+      url: 'https://skill-match.herokuapp.com/api/matches/?lat='+ latitude + '&long=' + longitude,
+ success: function(resp) {
+    var html = main({'data': resp.toJSON().results});
+    var mainTemplate = $("#mainTemplate").text();
+    var mainHTML = Mustache.render(mainTemplate, 'data');
+    var next = resp.toJSON().next;
+    var previous = resp.toJSON().previous;
+    $("#upComing").html(mainHTML);
+    $("#container").html(html);
+   console.log("success: ",resp)
+   $("#sport").on('change', function() {
+      filterSport();
+    })
+   $('#next').on('click', function(){
+    nextPage(next)
+    window.scrollTo(0, 450);
+   })
+   $('#prev').on('click', function(){
+    prevPage(prev)
+    window.scrollTo(0, 450);
+   })
+   $("#createMatchButton").on('click', function() {
+    router.navigate('/createMatch', {trigger: true});
+   });
+ },
+ error: function(err) {
+   console.log("nope")
+ }
+});
+  };
+
+  function error() {
+  };
+
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+
+  function matchesAround(zip) {
+    var match = new Match();
+    match.fetch({
+      url: 'http://skill-match.herokuapp.com/api/matches/?zip='+zip,
+ success: function(resp) {
+    var html = main({'data': resp.toJSON().results});
+    var mainTemplate = $("#mainTemplate").text();
+    var mainHTML = Mustache.render(mainTemplate, 'data');
+    var next = resp.toJSON().next;
+    var previous = resp.toJSON().previous;
+    $("#upComing").html(mainHTML);
+    $("#container").html(html);
+   console.log("success: ",resp)
+   $("#sport").on('change', function() {
+      filterSport();
+    })
+   $('#next').on('click', function(){
+    nextPage(next)
+    window.scrollTo(0, 450);
+   })
+   $('#prev').on('click', function(){
+    prevPage(prev)
+    window.scrollTo(0, 450);
+   })
+   $("#createMatchButton").on('click', function() {
+    router.navigate('/createMatch', {trigger: true});
+   });
+ },
+ error: function(err) {
+   console.log("nope")
+ }
+});
+  };
+
 
   function filterSport() {
 
@@ -213,6 +294,7 @@ $('#loginSubmit').on('click', function(){
     var mainHTML = Mustache.render(mainTemplate, 'data');
     var next = resp.toJSON().next;
     var previous = resp.toJSON().previous;
+    var zip = $("#areaInput").val();
     $("#upComing").html(mainHTML);
     $("#container").html(html);
    console.log("success: ",resp)
@@ -230,6 +312,12 @@ $('#loginSubmit').on('click', function(){
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
    });
+   $("#area").on('click', function() {
+    geoFindMe();
+   });
+   $("#submitArea").on('click', function() {
+    matchesAround();
+   })
  },
  error: function(err) {
    console.log("nope")

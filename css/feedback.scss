@@ -19,9 +19,25 @@
     box-shadow: none;
   }
   #skillInfo {
-    height:100px;
-    width:100px;
-    background-color:green;
+    position:relative;
+    top:1em;
+  }
+  #skillRating {
+    position: relative;
+    top: 1em;
+  }
+  #skillInfo2 {
+    position: relative;
+    right: 10.81em;
+    top: 1em;
+  }
+  #funRating {
+
+  }
+  #skillInfo3 {
+    position: relative;
+    right: 10.81em;
+    top: 1em;
   }
   .hidden{
     display:none;
