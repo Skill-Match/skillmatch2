@@ -609,6 +609,10 @@ router.on('route:match', function(id, username) {
           $("#confirm").hide();
           $("#decline").hide();
         }
+        if(open == false) {
+          $("#confirm").show();
+          $("#decline").show();
+        }
         if(confirm == true){
           $("#confirm").hide();
           $("#decline").hide();
@@ -1014,6 +1018,35 @@ function geoFindMe() {
     var longitude = position.coords.longitude;
     console.log('latitude '+latitude);
     console.log('longitude '+longitude);
+    var nextPages = new Park()
+    nextPages.fetch({
+       url: 'https://skill-match.herokuapp.com/api/parks/?lat='+latitude+'&long='+longitude,
+ success: function(resp) {
+      var html = parks({'data': resp.toJSON().results});
+      var parkTemplate = $("#parkTemplate").text();
+      var parkHTML = Mustache.render(parkTemplate, "data");
+      var next = resp.toJSON().next;
+      var previous = resp.toJSON().previous;
+      $("#parksContainer").html(parkHTML);
+      $("#container").html(html);
+      console.log("success", resp);
+       console.log("success: ",resp)
+       $('#nextPark').on('click', function(){
+        nextPage(next)
+        window.scrollTo(0, 450);
+       })
+       $('#backPark').on('click', function(){
+        prevPage(previous)
+        window.scrollTo(0, 450);
+       })
+       $('#locate').on('click', function(){
+      geoFindMe()
+    })
+     },
+     error: function(err) {
+       console.log("nope")
+     }
+    });
   };
 
   function error() {
@@ -1021,6 +1054,38 @@ function geoFindMe() {
 
   navigator.geolocation.getCurrentPosition(success, error);
 }
+
+function zipCode(zip) {
+    var nextPages = new Park()
+    nextPages.fetch({
+       url: 'http://skill-match.herokuapp.com/api/parks/?zip='+zip,
+ success: function(resp) {
+      var html = parks({'data': resp.toJSON().results});
+      var parkTemplate = $("#parkTemplate").text();
+      var parkHTML = Mustache.render(parkTemplate, "data");
+      var next = resp.toJSON().next;
+      var previous = resp.toJSON().previous;
+      $("#parksContainer").html(parkHTML);
+      $("#container").html(html);
+      console.log("success", resp);
+       console.log("success: ",resp)
+       $('#nextPark').on('click', function(){
+        nextPage(next)
+        window.scrollTo(0, 450);
+       })
+       $('#backPark').on('click', function(){
+        prevPage(previous)
+        window.scrollTo(0, 450);
+       })
+       $('#locate').on('click', function(){
+      geoFindMe()
+    })
+     },
+     error: function(err) {
+       console.log("nope")
+     }
+    });
+  }
 
 
   function nextPage(next){
@@ -1108,6 +1173,7 @@ var Park = Backbone.Model.extend({
       var parkHTML = Mustache.render(parkTemplate, "data");
       var next = resp.toJSON().next;
       var previous = resp.toJSON().previous;
+      var zip = $('#zipcode').val();
       $("#parksContainer").html(parkHTML);
       $("#container").html(html);
       console.log("success", resp);
@@ -1122,6 +1188,9 @@ var Park = Backbone.Model.extend({
       $('#locate').on('click', function(){
   geoFindMe()
 })
+      $('#zip').on('click', function(){
+        zipCode()
+      })
     },
     error: function(err) {
       console.log("error", err);

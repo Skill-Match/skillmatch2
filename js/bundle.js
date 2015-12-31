@@ -9317,7 +9317,11 @@
 
 
 	// module
+<<<<<<< HEAD
 	exports.push([module.id, "body {\n  background-color: #324053;\n  font-family: 'Ubuntu', sans-serif;\n}\n#title {\n  font-size: 40px;\n  margin-left: 1em;\n}\n\n#skillMatch {\n  position: absolute;\n  top: .8em;\n  left: 3em;\n}\n\nh1 {\n  color: white;\n}\nimg {\n  height: 5%;\n  width: 5%;\n}\n#nav {\n  position: absolute;\n  right: 5em;\n  top: 1.5em;\n}\n#nav a {\n  font-size: 30px;\n  color: white;\n  text-decoration: none;\n}\n\n#nav #logout {\n  font-size: 13px;\n  margin-left: 15px;\n}\n#nav a:hover {\n  text-decoration: underline;\n}\n#nav li {\n  list-style-type: none;\n  display: inline-block;\n}\n#logIn a {\n  color: white;\n  text-decoration: none;\n}\n#signUp a {\n  color: white;\n  list-style-type: none;\n  text-decoration: none;\n  font-size: 15px;\n}\n#title a {\n  color: white;\n  text-decoration: none;\n}\n#container {\n  background-color: #f5f2ec;\n}\ninput {\n  font-size: 15px;\n  margin: 1em .5em .5em;\n  border: none;\n  width: 150px;\n  padding: 8px 10px;\n  border-radius: 5px;\n}\nbutton {\n  margin-top: 1.5em;\n  padding: 8px;\n  background-color:#f5f2ec;\n  border: none;\n  border-radius: 10px;\n  box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);\n  outline: none;\n}\nbutton:active {\n  box-shadow: none;\n}\n.footerNav {\n  font-size: 10px;\n  color: white;\n  text-decoration: none;\n  margin-right: .5em;\n  margin-left: .5em;\n}\n.footerNav ul {\n  margin-bottom: 3em;\n\n}\n#footer li{\n  display: inline-block;\n}\n#footer ul {\n  padding-left: 65%;\n}\n#footer p {\n  color: white;\n  font-size: 8px;\n}", ""]);
+=======
+	exports.push([module.id, "body {\n  background-color: #324053;\n  font-family: 'Ubuntu', sans-serif;\n}\n#header{\n  height: 5em;\n  width: 100%;\n}\n#title{\n    width: 40%;\n    display: inline-block;\n    color: white;\n  }\n#logo {\n    display: inline-block;\n    width: 8%;\n  }\n#logo img{\n    height: 80px;\n    width: 80px;\n  }\n  #nav{\n    list-style: none;\n    display: inline-block;\n    width: 40%;\n  }\n#container {\n  background-color: #f5f2ec;\n}\ninput {\n  font-size: 15px;\n  margin: 1em .5em .5em;\n  border: none;\n  width: 150px;\n  padding: 8px 10px;\n  border-radius: 5px;\n}\nbutton {\n  margin-top: 1.5em;\n  padding: 8px;\n  background-color:#f5f2ec;\n  border: none;\n  border-radius: 10px;\n  box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);\n  outline: none;\n}\nbutton:active {\n  box-shadow: none;\n}\n.footerNav {\n  font-size: 10px;\n  color: white;\n  text-decoration: none;\n  margin-right: .5em;\n  margin-left: .5em;\n}\n.footerNav ul {\n  margin-bottom: 3em;\n\n}\n#footer li{\n  display: inline-block;\n}\n#footer ul {\n  padding-left: 65%;\n}\n#footer p {\n  color: white;\n  font-size: 8px;\n}", ""]);
+>>>>>>> domingo
 
 	// exports
 
@@ -9707,7 +9711,11 @@
 
 
 	// module
+<<<<<<< HEAD
 	exports.push([module.id, "#imageContainer {\n  background-image: url(\"/images/tennis.jpg\");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 350px;\n  box-shadow: -1px 5px 4px 0px rgba(0, 0, 0, 0.5); }\n  #imageContainer #createMatchButton {\n    position: absolute;\n    top: 370px;\n    left: 330px;\n    color: white;\n    background-color: #ef3122;\n    font-size: 30px;\n    border-radius: 15px;\n    border: none;\n    outline: none;\n    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5); }\n  #imageContainer #createMatchButton:active {\n    box-shadow: 0 0 0 0;\n    font-size: 29px; }\n  #imageContainer #mission {\n    position: absolute;\n    top: 250px;\n    left: 200px;\n    font-size: 40px;\n    color: white; }\n\n#upComing select {\n  font-size: 18px;\n  margin: 1em .5em .5em;\n  border: none;\n  padding: 8px 10px;\n  border-radius: 5px;\n  background-color: #e3e3e3; }\n#upComing #sportImage {\n  margin-left: 50px;\n  margin-top: 1px;\n  margin-right: 50px; }\n#upComing a {\n  text-decoration: none;\n  color: black; }\n#upComing a:hover {\n  text-decoration: underline; }\n#upComing ul {\n  border-bottom: 1px solid #4f1e47;\n  width: 1200px;\n  margin-left: 20px; }\n#upComing ul:nth-last-child(1) {\n  border-bottom: none;\n  padding-bottom: 20px; }\n#upComing li:nth-last-child(1) {\n  margin-bottom: 35px; }\n#upComing li {\n  list-style-type: none;\n  padding-bottom: 5px; }\n#upComing img {\n  height: 200px;\n  width: 200px;\n  float: left;\n  margin: 0 15px;\n  margin-top: -26px; }\n#upComing .description {\n  position: relative;\n  top: 2em; }\n#upComing #skillProgress {\n  position: relative;\n  left: 33em;\n  bottom: 7em;\n  width: 5em; }\n#upComing #matchSubmit {\n  padding: 15px;\n  background-color: #1e8880;\n  color: white;\n  border: none;\n  border-radius: 20px;\n  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n  outline: none;\n  position: relative;\n  bottom: 8.5em;\n  left: 65em; }\n#upComing #matchSubmit:active {\n  box-shadow: none; }\n#upComing .creatorName {\n  color: #00bfff; }\n#upComing .creatorName:hover {\n  text-decoration: underline; }\n#upComing .skill {\n  width: 300px; }\n#upComing #parkAnchor {\n  color: grey; }\n#upComing #next {\n  margin-bottom: 1em; }\n#upComing #prev {\n  margin-left: .5em; }\n\n/*# sourceMappingURL=main.css.map */\n", ""]);
+=======
+	exports.push([module.id, "#imageContainer {\n  width: 100%;\n  background-image: url(\"/images/tennis.jpg\");\n  background-position: center;\n  background-repeat: no-repeat;\n  height: 350px; }\n  #imageContainer #over {\n    position: relative;\n    top: 45%;\n    left: 20%;\n    font-size: 2em; }\n  #imageContainer #createMatchButton {\n    color: white;\n    background-color: #ef3122;\n    border-radius: 15px;\n    border: none;\n    outline: none;\n    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5); }\n  #imageContainer #createMatchButton:active {\n    box-shadow: 0 0 0 0;\n    font-size: 29px; }\n  #imageContainer #mission {\n    color: white;\n    width: 60%; }\n\n#upComing {\n  width: 80%;\n  margin: 2% 10%; }\n  #upComing select {\n    font-size: 18px;\n    margin: 1em .5em .5em;\n    border: none;\n    padding: 8px 10px;\n    border-radius: 5px;\n    background-color: #e3e3e3; }\n  #upComing #sportImage {\n    display: inline-block; }\n    #upComing #sportImage img {\n      width: 60%;\n      margin: 2em; }\n  #upComing a {\n    text-decoration: none;\n    color: black; }\n  #upComing a:hover {\n    text-decoration: underline; }\n  #upComing ul {\n    border-bottom: 1px solid #4f1e47;\n    width: 100%;\n    padding: 0;\n    height: auto;\n    background-color: white; }\n  #upComing ul:nth-last-child(1) {\n    border-bottom: none;\n    padding-bottom: 20px; }\n  #upComing li:nth-last-child(1) {\n    margin-bottom: 35px; }\n  #upComing li {\n    list-style-type: none;\n    padding-bottom: 5px;\n    margin: 1%; }\n  #upComing .description {\n    display: inline-block;\n    position: relative;\n    bottom: 3em;\n    font-size: 1em;\n    width: 9em;\n    margin: 1em; }\n  #upComing #skillProgress {\n    display: inline-block;\n    position: relative;\n    bottom: 5em;\n    margin: 1em;\n    width: 30%; }\n    #upComing #skillProgress .skill {\n      width: 80%; }\n  #upComing #matchSubmit {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    display: inline-block;\n    position: relative;\n    left: 4%;\n    bottom: 5em;\n    margin: 1em; }\n  #upComing #matchSubmit:active {\n    box-shadow: none; }\n  #upComing .creatorName {\n    color: #00bfff; }\n  #upComing .creatorName:hover {\n    text-decoration: underline; }\n  #upComing .skill {\n    width: 300px; }\n  #upComing #parkAnchor {\n    color: grey; }\n  #upComing #next {\n    margin-bottom: 1em; }\n  #upComing #prev {\n    margin-left: .5em; }\n\n/*# sourceMappingURL=main.css.map */\n", ""]);
+>>>>>>> domingo
 
 	// exports
 
@@ -9827,7 +9835,11 @@
 
 
 	// module
+<<<<<<< HEAD
 	exports.push([module.id, "#createMatchPage {\n  background-color: #e3e3e3;\n  height: 35em;\n  width: 50%;\n  margin: 0% 25%;\n  text-align: center;\n  box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.5);\n  /* Chrome/ Opera */ }\n  #createMatchPage h2 {\n    padding-top: 1em;\n    color: white;\n    background-color: #1e8880;\n    border: solid #1e8880 1px;\n    height: 50px; }\n  #createMatchPage ul {\n    list-style-type: none; }\n  #createMatchPage li {\n    margin-top: 10px; }\n  #createMatchPage input {\n    font-size: 18px;\n    margin: 10px 5px 5px;\n    border: none;\n    width: 300px;\n    padding: 8px 10px;\n    border-radius: 5px; }\n  #createMatchPage select {\n    font-size: 18px;\n    margin: 10px 5px 5px;\n    border: none;\n    width: 315px;\n    padding: 8px 10px;\n    border-radius: 5px; }\n  #createMatchPage textarea {\n    width: 320px;\n    margin-right: -40px;\n    height: 50px;\n    border-radius: 5px;\n    border: none; }\n  #createMatchPage label {\n    position: relative;\n    bottom: 2em; }\n  #createMatchPage #createMatch {\n    margin-top: 15px;\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: relative;\n    bottom: 2em; }\n  #createMatchPage #createMatch:active {\n    box-shadow: none; }\n  #createMatchPage input[type='range'] {\n    align-self: center;\n    border: solid 0 transparent;\n    border-width: 0 1.25em;\n    padding: 0;\n    width: 16.125em;\n    height: 5.25em;\n    opacity: .65;\n    background: linear-gradient(90deg, #d5cebc 0.125em, transparent 0.125em) repeat-x 0 2.5em content-box;\n    background-size: 0.5em 1em;\n    font-size: 1em;\n    cursor: pointer; }\n  #createMatchPage input[type='range'], #createMatchPage input[type='range']::-webkit-slider-runnable-track, #createMatchPage input[type='range']::-webkit-slider-thumb {\n    -webkit-appearance: none; }\n  #createMatchPage input[type='range']::-webkit-slider-runnable-track {\n    position: relative;\n    width: 16.125em;\n    height: 1.75em;\n    background: linear-gradient(#d5cebc, #d5cebc) no-repeat 50% 0;\n    background-size: 16.125em 0.375em; }\n  #createMatchPage input[type='range']::-webkit-slider-thumb {\n    position: relative;\n    margin-left: -0.0625em;\n    margin-top: 0.25em;\n    border: none;\n    border-radius: 50% 50% 0;\n    background: currentColor;\n    width: 1.25em;\n    height: 1.25em;\n    box-shadow: 1.1875em 1.1875em 0 -0.5625em, 1.25em 1.25em 0 -0.5625em, 1.3125em 1.3125em 0 -0.5625em, 1.375em 1.375em 0 -0.5625em, 1.4375em 1.4375em 0 -0.5625em, 1.5em 1.5em 0 -0.5625em, 1.5625em 1.5625em 0 -0.5625em, 1.625em 1.625em 0 -0.5625em, 1.6875em 1.6875em 0 -0.5625em, 1.75em 1.75em 0 -0.5625em, 1.8125em 1.8125em 0 -0.5625em, 1.875em 1.875em 0 -0.5625em, 1.9375em 1.9375em 0 -0.5625em, 2em 2em 0 -0.5625em, 2.0625em 2.0625em 0 -0.5625em, 2.125em 2.125em 0 -0.5625em, 2.1875em 2.1875em 0 -0.5625em, 2.25em 2.25em 0 -0.5625em, 2.3125em 2.3125em 0 -0.5625em, 2.375em 2.375em 0 -0.5625em;\n    transform: translate(1px, -1.75888em) rotate(45deg); }\n  #createMatchPage input[type='range']::-webkit-slider-runnable-track:before, #createMatchPage input[type='range']::-webkit-slider-runnable-track:after, #createMatchPage input[type='range'] /deep/ #track:before, #createMatchPage input[type='range'] /deep/ #track:after {\n    position: absolute;\n    z-index: 2;\n    top: 0;\n    left: 0;\n    width: 0.5625em;\n    height: 100%;\n    background: #e3e3e3;\n    content: ''; }\n  #createMatchPage input[type='range']::-webkit-slider-runnable-track:after, #createMatchPage input[type='range'] /deep/ #track:after {\n    right: 0;\n    left: auto; }\n  #createMatchPage input[type='range']::-webkit-slider-thumb:before, #createMatchPage input[type='range'] /deep/ #thumb:before {\n    position: absolute;\n    top: 50%;\n    right: 50%;\n    width: 16.125em;\n    transform-origin: 100% 0;\n    transform: rotate(-45deg) translate(0.0625em, 0.88388em);\n    height: 1.75em;\n    box-shadow: inset 0 0.375em currentColor;\n    background: linear-gradient(90deg, currentColor 0.125em, transparent 0.125em) repeat-x 0 100%;\n    background-size: 0.5em 1em;\n    color: inherit;\n    content: ''; }\n  #createMatchPage input[type='range']:nth-of-type(1) {\n    color: #ef3122; }\n  #createMatchPage input[type='range']:focus {\n    outline: none;\n    opacity: .99; }\n  #createMatchPage input[type='range']:not(*:root) {\n    overflow: hidden;\n    width: 17.25em;\n    background-position: 0.5625em 2.5em; }\n\n/*# sourceMappingURL=createMatch.css.map */\n", ""]);
+=======
+	exports.push([module.id, "#createMatchPage {\n  background-color: #e3e3e3;\n  height: 35em;\n  width: 50%;\n  margin: 0% 25%;\n  text-align: center;\n  box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.5); }\n  #createMatchPage h2 {\n    padding-top: 1em;\n    color: white;\n    background-color: #1e8880;\n    border: solid #1e8880 1px;\n    height: 50px; }\n  #createMatchPage ul {\n    list-style-type: none; }\n  #createMatchPage li {\n    margin-top: 10px; }\n  #createMatchPage input {\n    font-size: 18px;\n    margin: 10px 5px 5px;\n    border: none;\n    width: 300px;\n    padding: 8px 10px;\n    border-radius: 5px; }\n  #createMatchPage select {\n    font-size: 18px;\n    margin: 10px 5px 5px;\n    border: none;\n    width: 315px;\n    padding: 8px 10px;\n    border-radius: 5px; }\n  #createMatchPage textarea {\n    width: 320px;\n    margin-right: -40px;\n    height: 50px;\n    border-radius: 5px;\n    border: none; }\n  #createMatchPage #addSkill {\n    margin-right: 50px; }\n  #createMatchPage #createMatch {\n    margin-top: 15px;\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #createMatchPage #createMatch:active {\n    box-shadow: none; }\n\n/*# sourceMappingURL=creatematch.css.map */\n", ""]);
+>>>>>>> domingo
 
 	// exports
 
@@ -10027,7 +10039,11 @@
 
 
 	// module
+<<<<<<< HEAD
 	exports.push([module.id, "#feedbackContainer {\n  height: 35em; }\n  #feedbackContainer #feedbackForm {\n    padding: 2em; }\n  #feedbackContainer #submitFeedback {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #feedbackContainer #submitFeedback:active {\n    box-shadow: none; }\n  #feedbackContainer #skillInfo {\n    position: relative;\n    top: 1em; }\n  #feedbackContainer #skillRating {\n    position: relative;\n    top: 1em; }\n  #feedbackContainer #skillInfo2 {\n    position: relative;\n    right: 10.81em;\n    top: 1em; }\n  #feedbackContainer #skillInfo3 {\n    position: relative;\n    right: 10.81em;\n    top: 1em; }\n  #feedbackContainer .hidden {\n    display: none; }\n\n/*# sourceMappingURL=feedback.css.map */\n", ""]);
+=======
+	exports.push([module.id, "#feedbackContainer {\n  height: 35em; }\n  #feedbackContainer #feedbackForm {\n    padding: 2em; }\n  #feedbackContainer #submitFeedback {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n  #feedbackContainer #submitFeedback:active {\n    box-shadow: none; }\n\n/*# sourceMappingURL=feedback.css.map */\n", ""]);
+>>>>>>> domingo
 
 	// exports
 
@@ -10067,7 +10083,11 @@
 
 
 	// module
+<<<<<<< HEAD
 	exports.push([module.id, "#parksContainer {\n  display: inline-block;\n  margin: 2%; }\n  #parksContainer #parks {\n    display: inline-block;\n    list-style: none;\n    width: 20em;\n    text-align: center;\n    padding: 0 0 10px 0;\n    border-radius: 10%;\n    border-top: none;\n    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);\n    background-color: #D8DFEA;\n    margin: auto;\n    margin-right: 10px;\n    margin-bottom: 20px; }\n    #parksContainer #parks .parkName {\n      padding-top: 10px;\n      width: 20em;\n      border-top-right-radius: 1em;\n      border-top-left-radius: 1em;\n      background-color: #1e8880;\n      text-align: center;\n      height: 2em;\n      width: auto; }\n      #parksContainer #parks .parkName a {\n        text-decoration: none;\n        font-size: 1em;\n        color: white; }\n  #parksContainer #parksImage {\n    width: 15em;\n    height: 100px; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
+=======
+	exports.push([module.id, "#parksContainer {\n  width: 90%;\n  display: inline-block;\n  margin: 5%; }\n  #parksContainer #parks {\n    background-color: white;\n    list-style: none;\n    border-bottom: 1px solid #4f1e47; }\n    #parksContainer #parks .parkName a {\n      text-decoration: none;\n      font-size: 1em;\n      color: white; }\n  #parksContainer #parksImage {\n    width: 15em;\n    height: 100px; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
+>>>>>>> domingo
 
 	// exports
 
@@ -10362,6 +10382,7 @@
 	    };
 	  }
 
+<<<<<<< HEAD
 	  function geoFindMe() {
 	  function success(position) {
 	    var latitude  = position.coords.latitude;
@@ -10371,12 +10392,50 @@
 	    var match = new Match();
 	    match.fetch({
 	      url: 'https://skill-match.herokuapp.com/api/matches/?lat='+ latitude + '&long=' + longitude,
+=======
+	  function filterSport() {
+
+	    var match = counter++
+	    var match = new Match();
+	          match.fetch({
+	        url: "http://skill-match.herokuapp.com/api/matches/?sport=" + $("#sport").val(),
+
+	        success: function(resp) {
+	          var html = main({'data': resp.toJSON().results});
+	          var mainTemplate = $("#mainTemplate").text();
+	          var mainHTML = Mustache.render(mainTemplate, 'data');
+	          var next = resp.toJSON().next;
+	          var previous = resp.toJSON().previous;
+	          $("#upComing").html(mainHTML);
+	          $("#container").html(html);
+	          $("#sport").on('change', function() {
+	      filterSport();
+	    });
+	          $('#next').on('click', function(){
+	    nextPage(next)
+	   })
+	   $('#prev').on('click', function(){
+	    prevPage(previous)
+	   })
+	        },
+	        error: function(err) {
+	         console.log("nope")
+	        }
+	      });
+	  }
+
+	  function nextPage(next){
+	    var nextPages = new Match();
+	    nextPages.fetch({
+	       url: next,
+>>>>>>> domingo
 	 success: function(resp) {
 	    var html = main({'data': resp.toJSON().results});
 	    var mainTemplate = $("#mainTemplate").text();
 	    var mainHTML = Mustache.render(mainTemplate, 'data');
 	    var next = resp.toJSON().next;
 	    var previous = resp.toJSON().previous;
+<<<<<<< HEAD
 	    $("#upComing").html(mainHTML);
 	    $("#container").html(html);
 	   console.log("success: ",resp)
@@ -10421,6 +10480,14 @@
 	    $("#container").html(html);
 	   console.log("success: ",resp)
 	   $("#sport").on('change', function() {
+=======
+	    console.log(next);
+	    console.log(previous);
+	    $("#upComing").html(mainHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp)
+	    $("#sport").on('change', function() {
+>>>>>>> domingo
 	      filterSport();
 	    })
 	   $('#next').on('click', function(){
@@ -10428,7 +10495,11 @@
 	    window.scrollTo(0, 450);
 	   })
 	   $('#prev').on('click', function(){
+<<<<<<< HEAD
 	    prevPage(prev)
+=======
+	    prevPage(previous)
+>>>>>>> domingo
 	    window.scrollTo(0, 450);
 	   })
 	   $("#createMatchButton").on('click', function() {
@@ -10439,6 +10510,7 @@
 	   console.log("nope")
 	 }
 	});
+<<<<<<< HEAD
 	  };
 
 
@@ -10480,6 +10552,14 @@
 	    var nextPages = new Match();
 	    nextPages.fetch({
 	       url: next,
+=======
+	  }
+
+	  function prevPage(previous){
+	    var prevPages = new Match();
+	    prevPages.fetch({
+	       url: previous,
+>>>>>>> domingo
 	 success: function(resp) {
 	    var html = main({'data': resp.toJSON().results});
 	    var mainTemplate = $("#mainTemplate").text();
@@ -10491,7 +10571,11 @@
 	    $("#upComing").html(mainHTML);
 	    $("#container").html(html);
 	   console.log("success: ",resp)
+<<<<<<< HEAD
 	    $("#sport").on('change', function() {
+=======
+	   $("#sport").on('change', function() {
+>>>>>>> domingo
 	      filterSport();
 	    })
 	   $('#next').on('click', function(){
@@ -10512,18 +10596,26 @@
 	});
 	  }
 
+<<<<<<< HEAD
 	  function prevPage(previous){
 	    var prevPages = new Match();
 	    prevPages.fetch({
 	       url: previous,
+=======
+	    var match = new Match();
+	    match.fetch({
+>>>>>>> domingo
 	 success: function(resp) {
 	    var html = main({'data': resp.toJSON().results});
 	    var mainTemplate = $("#mainTemplate").text();
 	    var mainHTML = Mustache.render(mainTemplate, 'data');
 	    var next = resp.toJSON().next;
 	    var previous = resp.toJSON().previous;
+<<<<<<< HEAD
 	    console.log(next);
 	    console.log(previous);
+=======
+>>>>>>> domingo
 	    $("#upComing").html(mainHTML);
 	    $("#container").html(html);
 	   console.log("success: ",resp)
@@ -10535,6 +10627,7 @@
 	    window.scrollTo(0, 450);
 	   })
 	   $('#prev').on('click', function(){
+<<<<<<< HEAD
 	    prevPage(previous)
 	    window.scrollTo(0, 450);
 	   })
@@ -10568,18 +10661,23 @@
 	    window.scrollTo(0, 450);
 	   })
 	   $('#prev').on('click', function(){
+=======
+>>>>>>> domingo
 	    prevPage(prev)
 	    window.scrollTo(0, 450);
 	   })
 	   $("#createMatchButton").on('click', function() {
 	    router.navigate('/createMatch', {trigger: true});
 	   });
+<<<<<<< HEAD
 	   $("#area").on('click', function() {
 	    geoFindMe();
 	   });
 	   $("#submitArea").on('click', function() {
 	    matchesAround();
 	   })
+=======
+>>>>>>> domingo
 	 },
 	 error: function(err) {
 	   console.log("nope")
@@ -10871,6 +10969,13 @@
 	          $("#confirm").hide();
 	          $("#decline").hide();
 	        }
+<<<<<<< HEAD
+=======
+	        if(open == false) {
+	          $("#confirm").show();
+	          $("#decline").show();
+	        }
+>>>>>>> domingo
 	        if(confirm == true){
 	          $("#confirm").hide();
 	          $("#decline").hide();
@@ -11276,6 +11381,38 @@
 	    var longitude = position.coords.longitude;
 	    console.log('latitude '+latitude);
 	    console.log('longitude '+longitude);
+<<<<<<< HEAD
+=======
+	    var nextPages = new Park()
+	    nextPages.fetch({
+	       url: 'https://skill-match.herokuapp.com/api/parks/?lat='+latitude+'&long='+longitude,
+	 success: function(resp) {
+	      var html = parks({'data': resp.toJSON().results});
+	      var parkTemplate = $("#parkTemplate").text();
+	      var parkHTML = Mustache.render(parkTemplate, "data");
+	      var next = resp.toJSON().next;
+	      var previous = resp.toJSON().previous;
+	      $("#parksContainer").html(parkHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	       console.log("success: ",resp)
+	       $('#nextPark').on('click', function(){
+	        nextPage(next)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#backPark').on('click', function(){
+	        prevPage(previous)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#locate').on('click', function(){
+	      geoFindMe()
+	    })
+	     },
+	     error: function(err) {
+	       console.log("nope")
+	     }
+	    });
+>>>>>>> domingo
 	  };
 
 	  function error() {
@@ -11284,6 +11421,41 @@
 	  navigator.geolocation.getCurrentPosition(success, error);
 	}
 
+<<<<<<< HEAD
+=======
+	function zipCode(zip) {
+	    var nextPages = new Park()
+	    nextPages.fetch({
+	       url: 'http://skill-match.herokuapp.com/api/parks/?zip='+zip,
+	 success: function(resp) {
+	      var html = parks({'data': resp.toJSON().results});
+	      var parkTemplate = $("#parkTemplate").text();
+	      var parkHTML = Mustache.render(parkTemplate, "data");
+	      var next = resp.toJSON().next;
+	      var previous = resp.toJSON().previous;
+	      $("#parksContainer").html(parkHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	       console.log("success: ",resp)
+	       $('#nextPark').on('click', function(){
+	        nextPage(next)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#backPark').on('click', function(){
+	        prevPage(previous)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#locate').on('click', function(){
+	      geoFindMe()
+	    })
+	     },
+	     error: function(err) {
+	       console.log("nope")
+	     }
+	    });
+	  }
+
+>>>>>>> domingo
 
 	  function nextPage(next){
 	    var nextPages = new Park()
@@ -11370,6 +11542,10 @@
 	      var parkHTML = Mustache.render(parkTemplate, "data");
 	      var next = resp.toJSON().next;
 	      var previous = resp.toJSON().previous;
+<<<<<<< HEAD
+=======
+	      var zip = $('#zipcode').val();
+>>>>>>> domingo
 	      $("#parksContainer").html(parkHTML);
 	      $("#container").html(html);
 	      console.log("success", resp);
@@ -11384,6 +11560,9 @@
 	      $('#locate').on('click', function(){
 	  geoFindMe()
 	})
+	      $('#zip').on('click', function(){
+	        zipCode()
+	      })
 	    },
 	    error: function(err) {
 	      console.log("error", err);
@@ -11428,9 +11607,13 @@
 	  var href = $(this).attr('href').substr(1);
 	  router.navigate(href, {trigger:true});
 	});
+<<<<<<< HEAD
 	$('body').on('hover', 'span', function (e){
 	  e.preventDefault();
 	});
+=======
+
+>>>>>>> domingo
 	module.exports = router;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
@@ -17668,14 +17851,22 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(37);
+<<<<<<< HEAD
 	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Re-Enter PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  <span id=\"reenterMessage\"></span>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PHONE:</label>");t.b("\n" + i);t.b("  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">");t.b("\n" + i);t.b("   </br>");t.b("\n" + i);t.b("  <label>Text Alerts:</label>");t.b("\n" + i);t.b("  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  <button class=\"register\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>Re-Enter PASSWORD:</label>\n  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">\n  <span id=\"reenterMessage\"></span>\n  </br>\n  <label>PHONE:</label>\n  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">\n   </br>\n  <label>Text Alerts:</label>\n  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  <button class=\"register\" type=\"submit\">Submit</button>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
+=======
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Re-Enter PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  <span id=\"reenterMessage\"></span>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PHONE:</label>");t.b("\n" + i);t.b("  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">");t.b("\n" + i);t.b("   </br>");t.b("\n" + i);t.b("  <label>Text Alerts:</label>");t.b("\n" + i);t.b("  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Upload an Image:</label>");t.b("\n" + i);t.b("  <input id=\"user\" type=\"file\" placeholder=\"upload\">");t.b("\n" + i);t.b("  <button class=\"register\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>Re-Enter PASSWORD:</label>\n  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">\n  <span id=\"reenterMessage\"></span>\n  </br>\n  <label>PHONE:</label>\n  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">\n   </br>\n  <label>Text Alerts:</label>\n  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  </br>\n  <label>Upload an Image:</label>\n  <input id=\"user\" type=\"file\" placeholder=\"upload\">\n  <button class=\"register\" type=\"submit\">Submit</button>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
+>>>>>>> domingo
 
 /***/ },
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(37);
+<<<<<<< HEAD
 	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);t.b("<div id=\"filter\">");t.b("\n" + i);t.b("  <select id=\"sport\">");t.b("\n" + i);t.b("    <option>Filter Sport</option>");t.b("\n" + i);t.b("    <option value=\"tennis\">Tennis</option>");t.b("\n" + i);t.b("    <option value=\"basketball\">Basketball</option>");t.b("\n" + i);t.b("    <option value=\"football\">Football</option>");t.b("\n" + i);t.b("    <option value=\"soccer\">Soccer</option>");t.b("\n" + i);t.b("    <option value=\"other\">Other</option>");t.b("\n" + i);t.b("  </select>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"areaSearch\">");t.b("\n" + i);t.b("<input type=\"text\" id=\"areaInput\" placeholder=\"Area Code\">");t.b("\n" + i);t.b("<button type=\"submit\" id=\"submitArea\"> Search </button>");t.b("\n" + i);t.b("<button type=\"submit\" id=\"area\"> Area </button>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,777,1515,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("\n" + i);t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> ");t.b(t.v(t.f("date",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li class=\"description\">  ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"description\">");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"description\"> <a id=\"parkAnchor\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <li class=\"description\"> Created By: <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\" class=\"creatorName\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("    <!-- <li><img class=\"pic\" src=\"http://placehold.it/\"></li> -->");t.b("\n" + i);t.b("    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("    </progress></li>");t.b("\n" + i);t.b("    <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n");t.b("\n" + i);});c.pop();}t.b("<div id=\"pagination\">");t.b("\n" + i);t.b("<button id=\"prev\">Prev</button>");t.b("\n" + i);t.b("<button id=\"next\">Next</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"imageContainer\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n</div>\n<div id=\"upComing\">\n<div id=\"filter\">\n  <select id=\"sport\">\n    <option>Filter Sport</option>\n    <option value=\"tennis\">Tennis</option>\n    <option value=\"basketball\">Basketball</option>\n    <option value=\"football\">Football</option>\n    <option value=\"soccer\">Soccer</option>\n    <option value=\"other\">Other</option>\n  </select>\n</div>\n<div id=\"areaSearch\">\n<input type=\"text\" id=\"areaInput\" placeholder=\"Area Code\">\n<button type=\"submit\" id=\"submitArea\"> Search </button>\n<button type=\"submit\" id=\"area\"> Area </button>\n{{#data}}\n\n<a href=\"/match/{{id}}\"><img id=\"sportImage\"src=\"{{img_url}}\"></a>\n  <ul>\n    <li class=\"description\"> <a href=\"/match/{{id}}\"> {{date}}</a></li>\n    <li class=\"description\">  {{time}}</li>\n    <li class=\"description\">{{sport}}</li>\n    <li class=\"description\"> <a id=\"parkAnchor\" href=\"/parksDetail/{{park}}\">{{park_name}}</a></li>\n    </br>\n    <li class=\"description\"> Created By: <a href=\"/profile/{{creator}}\" class=\"creatorName\"> {{creator_name}} </a></li>\n    <!-- <li><img class=\"pic\" src=\"http://placehold.it/\"></li> -->\n    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n    </progress></li>\n    <li><a id=\"matchSubmit\" type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n\n{{/data}}\n<div id=\"pagination\">\n<button id=\"prev\">Prev</button>\n<button id=\"next\">Next</button>\n</div>\n</div>\n", H);return T.render.apply(T, arguments); };
+=======
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <div id=\"over\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);t.b("<div id=\"filter\">");t.b("\n" + i);t.b("  <select id=\"sport\">");t.b("\n" + i);t.b("    <option>Filter Sport</option>");t.b("\n" + i);t.b("    <option value=\"tennis\">Tennis</option>");t.b("\n" + i);t.b("    <option value=\"basketball\">Basketball</option>");t.b("\n" + i);t.b("    <option value=\"football\">Football</option>");t.b("\n" + i);t.b("    <option value=\"soccer\">Soccer</option>");t.b("\n" + i);t.b("    <option value=\"other\">Other</option>");t.b("\n" + i);t.b("  </select>");t.b("\n" + i);t.b("<h3>Open Matches</h3>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,641,1246,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li id=\"sportImage\"><a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a></li>");t.b("\n" + i);t.b("    <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("date",c,p,0)));t.b("</a></br>");t.b("\n" + i);t.b("    ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("    ");t.b(t.v(t.f("sport",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("    <a id=\"parkAnchor\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("    </progress></li>");t.b("\n" + i);t.b("<li id=\"players\">");if(t.s(t.f("players",c,p,1),c,p,0,1062,1143,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\">Creator ");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b("</li>    ");t.b("\n" + i);t.b("<li id=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}t.b("<div id=\"pagination\">");t.b("\n" + i);t.b("<button id=\"prev\">Prev</button>");t.b("\n" + i);t.b("<button id=\"next\">Next</button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"imageContainer\">\n  <div id=\"over\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n  </div>\n</div>\n<div id=\"upComing\">\n<div id=\"filter\">\n  <select id=\"sport\">\n    <option>Filter Sport</option>\n    <option value=\"tennis\">Tennis</option>\n    <option value=\"basketball\">Basketball</option>\n    <option value=\"football\">Football</option>\n    <option value=\"soccer\">Soccer</option>\n    <option value=\"other\">Other</option>\n  </select>\n<h3>Open Matches</h3>\n</div>\n{{#data}}\n  <ul>\n    <li id=\"sportImage\"><a href=\"/match/{{id}}\"><img src=\"{{img_url}}\"></a></li>\n    <li class=\"description\"> <a href=\"/match/{{id}}\">{{date}}</a></br>\n    {{time}}</br>\n    {{sport}}</br>\n    <a id=\"parkAnchor\" href=\"/parksDetail/{{park}}\">{{park_name}}</a></li>\n    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n    </progress></li>\n<li id=\"players\">{{#players}}<a href=\"/profile/{{id}}\"><img src=\"{{profile.pic_url}}\">Creator {{username}}</a>{{/players}}</li>    \n<li id=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n{{/data}}\n<div id=\"pagination\">\n<button id=\"prev\">Prev</button>\n<button id=\"next\">Next</button>\n</div>\n</div>\n", H);return T.render.apply(T, arguments); };
+>>>>>>> domingo
 
 /***/ },
 /* 42 */
@@ -17717,14 +17908,22 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(37);
+<<<<<<< HEAD
 	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h2> Create Game you would like to play </h2>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("    <li> Date: <input id=\"addDate\" type=\"date\"></li>");t.b("\n" + i);t.b("    <li> Time:<input id=\"addTime\" type=\"time\"></li>");t.b("\n" + i);t.b("    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>");t.b("\n" + i);t.b("    <li> Park:<select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,710,760,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n");t.b("\n" + i);t.b("    <li> <label>Skill: 1-100</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h2> Create Game you would like to play </h2>\n  <ul id=\"create\">\n    <li> Sport:\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n      </li>\n    <li> Date: <input id=\"addDate\" type=\"date\"></li>\n    <li> Time:<input id=\"addTime\" type=\"time\"></li>\n    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>\n    <li> Park:<select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n\n    <li> <label>Skill: 1-100</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Submit</button>\n</div>\n\n", H);return T.render.apply(T, arguments); };
+=======
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h2> Create Game you would like to play </h2>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("    <li> Date: <input id=\"addDate\" type=\"date\"></li>");t.b("\n" + i);t.b("    <li> Time:<input id=\"addTime\" type=\"time\"></li>");t.b("\n" + i);t.b("    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>");t.b("\n" + i);t.b("    <li> Skill: 1-100 <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>");t.b("\n" + i);t.b("    <li> Park:<select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,809,859,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h2> Create Game you would like to play </h2>\n  <ul id=\"create\">\n    <li> Sport:\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n      </li>\n    <li> Date: <input id=\"addDate\" type=\"date\"></li>\n    <li> Time:<input id=\"addTime\" type=\"time\"></li>\n    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>\n    <li> Skill: 1-100 <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>\n    <li> Park:<select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n    <li><button id=\"createMatch\" type=\"submit\">Submit</button></li>\n  </ul>\n</div>\n\n", H);return T.render.apply(T, arguments); };
+>>>>>>> domingo
 
 /***/ },
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(37);
+<<<<<<< HEAD
 	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"feedbackContainer\">");t.b("\n" + i);t.b("  <form id=\"feedbackForm\">");t.b("\n" + i);t.b("  <span id=\"skillInfo\"> i </span>");t.b("\n" + i);t.b("  <span id=\"skillRating\" class=\"hidden\"> - On a scale from 1 - 100 Please rate the players skill </span>");t.b("\n" + i);t.b("  <h3>Skill level of player</h3>");t.b("\n" + i);t.b("    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <span id=\"skillInfo2\"> i </span>");t.b("\n" + i);t.b("       <span id=\"funRating\" class=\"hidden\"> On a scale from 1 - 100 Please rate how fun the match was</span>");t.b("\n" + i);t.b("<h3>How fun was the match</h3>");t.b("\n" + i);t.b("    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <span id=\"skillInfo3\"> i </span>");t.b("\n" + i);t.b("    <span id=\"crowdRating\" class=\"hidden\"> On a scale from 1 - 5 Please tell us how crowded the park was </span>");t.b("\n" + i);t.b("<h3>Crowd level</h3>");t.b("\n" + i);t.b("    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">");t.b("\n" + i);t.b("      <option value=\"No Show\">No Show</option>");t.b("\n" + i);t.b("      <option value=\"On Time\">On Time</option>");t.b("\n" + i);t.b("      <option value=\"Little bit late\">Little Late</option>");t.b("\n" + i);t.b("      <option value=\"Over 10 min late\">Over 10 mins late</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"feedbackContainer\">\n  <form id=\"feedbackForm\">\n  <span id=\"skillInfo\"> i </span>\n  <span id=\"skillRating\" class=\"hidden\"> - On a scale from 1 - 100 Please rate the players skill </span>\n  <h3>Skill level of player</h3>\n    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <span id=\"skillInfo2\"> i </span>\n       <span id=\"funRating\" class=\"hidden\"> On a scale from 1 - 100 Please rate how fun the match was</span>\n<h3>How fun was the match</h3>\n    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <span id=\"skillInfo3\"> i </span>\n    <span id=\"crowdRating\" class=\"hidden\"> On a scale from 1 - 5 Please tell us how crowded the park was </span>\n<h3>Crowd level</h3>\n    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n    </br>\n    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">\n      <option value=\"No Show\">No Show</option>\n      <option value=\"On Time\">On Time</option>\n      <option value=\"Little bit late\">Little Late</option>\n      <option value=\"Over 10 min late\">Over 10 mins late</option>\n    </select>\n  </form>\n  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>\n</div>", H);return T.render.apply(T, arguments); };
+=======
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"feedbackContainer\">");t.b("\n" + i);t.b("  <form id=\"feedbackForm\">");t.b("\n" + i);t.b("  <h3>Skill level of player</h3>");t.b("\n" + i);t.b("    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>How fun was the match</h3>");t.b("\n" + i);t.b("    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>Crowd level</h3>");t.b("\n" + i);t.b("    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">");t.b("\n" + i);t.b("      <option value=\"No Show\">No Show</option>");t.b("\n" + i);t.b("      <option value=\"On Time\">On Time</option>");t.b("\n" + i);t.b("      <option value=\"Little bit late\">Little Late</option>");t.b("\n" + i);t.b("      <option value=\"Over 10 min late\">Over 10 mins late</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"feedbackContainer\">\n  <form id=\"feedbackForm\">\n  <h3>Skill level of player</h3>\n    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>How fun was the match</h3>\n    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>Crowd level</h3>\n    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n    </br>\n    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">\n      <option value=\"No Show\">No Show</option>\n      <option value=\"On Time\">On Time</option>\n      <option value=\"Little bit late\">Little Late</option>\n      <option value=\"Over 10 min late\">Over 10 mins late</option>\n    </select>\n  </form>\n  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>\n</div>", H);return T.render.apply(T, arguments); };
+>>>>>>> domingo
 
 /***/ },
 /* 49 */
@@ -17761,7 +17960,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(37);
+<<<<<<< HEAD
 	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,415,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul id=\"parks\">");t.b("\n" + i);t.b("    <li class=\"parkName\"><a href=\"/parksDetail/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li><img id=\"parksImage\"src=\"");t.b(t.v(t.f("image_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("rating",c,p,0)));t.b("/5</li>");t.b("\n" + i);t.b("    <li><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("  </div>");t.b("\n" + i);t.b("<button id=\"locate\">Show my location</button>");t.b("\n" + i);t.b("  <button id=\"backPark\"> Back </button>");t.b("\n" + i);t.b("  <button id=\"nextPark\"> Next </button>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n  {{#data}}\n  <ul id=\"parks\">\n    <li class=\"parkName\"><a href=\"/parksDetail/{{id}}\">{{name}}</a></li>\n    <li><img id=\"parksImage\"src=\"{{image_url}}\"></li>\n    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>\n    <li>{{rating}}/5</li>\n    <li><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li>{{display_address1}} </br> {{display_address3}}</li>\n  </ul>\n  {{/data}}\n  </div>\n<button id=\"locate\">Show my location</button>\n  <button id=\"backPark\"> Back </button>\n  <button id=\"nextPark\"> Next </button>\n\n", H);return T.render.apply(T, arguments); };
+=======
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,415,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul id=\"parks\">");t.b("\n" + i);t.b("    <li class=\"parkName\"><a href=\"/parksDetail/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li><img id=\"parksImage\"src=\"");t.b(t.v(t.f("image_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("rating",c,p,0)));t.b("/5</li>");t.b("\n" + i);t.b("    <li><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("  </div>");t.b("\n" + i);t.b("<button id=\"locate\">Show my location</button>");t.b("\n" + i);t.b("<label>Input location</label><input id=\"zipcode\" type=\"text\" /><button id=\"zip\">submit</button>");t.b("\n" + i);t.b("  <button id=\"backPark\"> Back </button>");t.b("\n" + i);t.b("  <button id=\"nextPark\"> Next </button>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n  {{#data}}\n  <ul id=\"parks\">\n    <li class=\"parkName\"><a href=\"/parksDetail/{{id}}\">{{name}}</a></li>\n    <li><img id=\"parksImage\"src=\"{{image_url}}\"></li>\n    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>\n    <li>{{rating}}/5</li>\n    <li><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li>{{display_address1}} </br> {{display_address3}}</li>\n  </ul>\n  {{/data}}\n  </div>\n<button id=\"locate\">Show my location</button>\n<label>Input location</label><input id=\"zipcode\" type=\"text\" /><button id=\"zip\">submit</button>\n  <button id=\"backPark\"> Back </button>\n  <button id=\"nextPark\"> Next </button>\n\n", H);return T.render.apply(T, arguments); };
+>>>>>>> domingo
 
 /***/ },
 /* 52 */

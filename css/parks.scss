@@ -1,29 +1,14 @@
 #parksContainer{
+	width: 90%;
 	display: inline-block;
-	margin: 2%;
+	margin: 5%;
 	#parks{
-		display: inline-block;
+		background-color: white;
 		list-style: none;
-		width: 20em;
-		text-align: center;
-		padding: 0 0 10px 0;
-		border-radius: 10%;
-		border-top: none;
-		box-shadow: 10px 10px 8px 0px rgba(0,0,0,0.50);
-		background-color: #D8DFEA;
-		margin: auto;
-		margin-right: 10px;
-		margin-bottom: 20px;
+		border-bottom: 1px solid #4f1e47;
 		
 		.parkName{
-		padding-top: 10px;
-		width: 20em;
-		border-top-right-radius: 1em;
-		border-top-left-radius: 1em;
-		background-color: #1e8880;
-		text-align: center;
-		height: 2em;
-		width: auto;
+		
 	
 		a{
 			text-decoration: none;
