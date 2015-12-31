@@ -1,15 +1,17 @@
 #imageContainer {
+  width: 100%;
   background-image: url("/images/tennis.jpg");
   background-position: center;
   background-repeat: no-repeat;
   height: 350px; }
+  #imageContainer #over {
+    position: relative;
+    top: 45%;
+    left: 20%;
+    font-size: 2em; }
   #imageContainer #createMatchButton {
-    position: absolute;
-    top: 370px;
-    left: 330px;
     color: white;
     background-color: #ef3122;
-    font-size: 30px;
     border-radius: 15px;
     border: none;
     outline: none;
@@ -18,11 +20,8 @@
     box-shadow: 0 0 0 0;
     font-size: 29px; }
   #imageContainer #mission {
-    position: absolute;
-    top: 250px;
-    left: 200px;
-    font-size: 40px;
-    color: white; }
+    color: white;
+    width: 60%; }
 
 #upComing {
   width: 80%;
@@ -37,8 +36,7 @@
   #upComing #sportImage {
     display: inline-block; }
     #upComing #sportImage img {
-      height: 100%;
-      width: 70%;
+      width: 60%;
       margin: 2em; }
   #upComing a {
     text-decoration: none;
@@ -49,7 +47,8 @@
     border-bottom: 1px solid #4f1e47;
     width: 100%;
     padding: 0;
-    height: 10%; }
+    height: auto;
+    background-color: white; }
   #upComing ul:nth-last-child(1) {
     border-bottom: none;
     padding-bottom: 20px; }
@@ -69,8 +68,11 @@
   #upComing #skillProgress {
     display: inline-block;
     position: relative;
-    bottom: 3em;
-    margin: 1em; }
+    bottom: 5em;
+    margin: 1em;
+    width: 30%; }
+    #upComing #skillProgress .skill {
+      width: 80%; }
   #upComing #matchSubmit {
     padding: 15px;
     background-color: #1e8880;
@@ -81,7 +83,7 @@
     outline: none;
     display: inline-block;
     position: relative;
-    left: 5%;
+    left: 4%;
     bottom: 5em;
     margin: 1em; }
   #upComing #matchSubmit:active {
