@@ -65,7 +65,8 @@ var Matches = Backbone.Collection.extend({
   model: Match,
   url: 'https://skill-match.herokuapp.com/api/matches/'
 });
-$('#loginSubmit').on('click', function(){
+$('#loginSubmit').on('click', function(e){
+          e.preventDefault();
           var username = $("#username").val();
           var password = $("#password").val();
           var homeBtn = document.createElement('a');

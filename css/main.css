@@ -34,10 +34,11 @@
     border-radius: 5px;
     background-color: #e3e3e3; }
   #upComing #sportImage {
-    display: inline-block; }
+    display: inline-block;
+    width: 15%; }
     #upComing #sportImage img {
-      width: 60%;
-      margin: 2em; }
+      width: 80%;
+      margin: 1em; }
   #upComing a {
     text-decoration: none;
     color: black; }
@@ -61,18 +62,28 @@
   #upComing .description {
     display: inline-block;
     position: relative;
-    bottom: 3em;
+    bottom: 7em;
     font-size: 1em;
-    width: 9em;
-    margin: 1em; }
+    width: 17%;
+    margin: 1em;
+    line-height: 1.7em; }
   #upComing #skillProgress {
     display: inline-block;
     position: relative;
-    bottom: 5em;
+    bottom: 7em;
     margin: 1em;
     width: 30%; }
     #upComing #skillProgress .skill {
       width: 80%; }
+  #upComing #players {
+    display: inline-block;
+    position: relative;
+    top: 3em;
+    right: 55%;
+    width: 20%; }
+    #upComing #players img {
+      border-radius: 100%;
+      width: 60%; }
   #upComing #matchSubmit {
     padding: 15px;
     background-color: #1e8880;
@@ -83,8 +94,8 @@
     outline: none;
     display: inline-block;
     position: relative;
-    left: 4%;
-    bottom: 5em;
+    bottom: 7em;
+    left: 70%;
     margin: 1em; }
   #upComing #matchSubmit:active {
     box-shadow: none; }
