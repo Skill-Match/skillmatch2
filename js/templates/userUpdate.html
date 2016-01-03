@@ -1,6 +1,6 @@
 <div id="updatePage">
 <div id="signupHeader">
-<h2>REGISTER</h2>
+<h2>Update Profile</h2>
 </div>
 {{#update}}
 <form id="signupForm">
@@ -28,8 +28,8 @@
   Female <input class="rgen" type="radio" name="Gender" value="Female">
   Other <input class="rgen" type="radio" name="Gender" value="Other">
   </br>
+  <label>Age:</label>
   <select id="rage" name="age">
-  <option value="{{age}}">{{age}}</option>
   <option value="Under 16">Under 16</option>
   <option value="16-19">16-19</option>
   <option value="20's">20's</option>
@@ -39,7 +39,7 @@
   <option value="60+">60 +</option>
 </select></br>
   </br>
-  <label>Upload an Image:</label>
+  <label id="imageUpload">Upload an Image:</label>
   <input id="user" type="file" placeholder="upload">
   <button class="register" type="submit">Submit</button>
 </form>
