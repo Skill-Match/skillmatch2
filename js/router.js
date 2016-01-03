@@ -467,6 +467,12 @@ router.on('route:home', function(username, id){
   });
 
       $('#createMatch').on('click', function(){
+         function success(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    console.log('latitude '+latitude);
+    console.log('longitude '+longitude);
+  }
           router.navigate('/createMatch', {trigger: true});
         })
     },
