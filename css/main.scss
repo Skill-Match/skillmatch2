@@ -66,6 +66,7 @@
     padding: 0;
     height: auto;
     background-color: white;
+    float: left;
     
   }
 
@@ -81,35 +82,23 @@
   li {
     list-style-type: none;
     padding-bottom: 5px;
-    margin: 1%;
+    width: 20%;
   }
 
   .description {
     display: inline-block;
-    position: relative;
-    bottom: 7em;
     font-size: 1em;
-    width: 17%;
-    margin:1em;
     line-height: 1.7em;
   }
 
   #skillProgress {
     display: inline-block;
-    position: relative;
-    bottom: 7em;
-    margin: 1em;
-    width: 30%;
     .skill{
       width: 80%;
     }
   }
   #players{
     display: inline-block;
-    position: relative;
-    top:3em; 
-    right: 55%;
-    width: 20%;
     img{
       border-radius: 100%; 
       width: 60%;
@@ -125,10 +114,6 @@
     box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
     outline: none;
     display: inline-block;
-    position: relative;
-    bottom: 7em;
-    left: 70%;
-    margin: 1em;
   }
 
   #matchSubmit:active {
