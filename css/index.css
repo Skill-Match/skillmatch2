@@ -2,12 +2,11 @@ body {
   background-color: #324053;
   font-family: 'Ubuntu', sans-serif;
 }
-#header{
-  height: 5em;
+#header {
+  height: 6em;
   width: 100%;
 }
-#title{
-    width: 40%;
+#title {
     display: inline-block;
     color: white;
   }
