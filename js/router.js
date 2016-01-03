@@ -21,6 +21,7 @@ var matchModel = require('./models/matchModel.js');
 var parks = require('./templates/parks.html');
 var parksDetail = require('./templates/parksDetail.html');
 var parkCreateMatch = require('./templates/parkCreateMatch.html');
+var parkCreatePage = require('./templates/parkCreatePage.html');
 var counter = 1;
 
 ////////////////////////////////////////////////////////////
@@ -42,6 +43,7 @@ var Router = Backbone.Router.extend({
     "home/:username":"home",
     "parks":"parks",
     "parkCreateMatch/:id":"parkCreateMatch",
+    "parkCreatePage":"parkCreatePage",
     "parksDetail/:id":"parksDetail",
     "":"index"
   },
@@ -798,7 +800,6 @@ router.on('route:createMatch', function(id, username) {
 });
 
 router.on('route:parkCreateMatch', function(id, name) {
-  console.log("TESTETS")
   var ParkMatch = Backbone.Model.extend({
     initialize: function () {
     },
@@ -850,8 +851,37 @@ router.on('route:parkCreateMatch', function(id, name) {
     error: function(err) {
       console.log('error', err);
     }
-  })
+  });
+});
 
+router.on('route:parkCreatePage', function(id, name) {
+  var parkCreate = Backbone.Model.extend({
+    initialize: function(){
+    },
+    defaults: {
+      sport: null,
+      other: null,
+      num_courts: null
+    },
+    url: "http://skill-match.herokuapp.com/api/courts/"
+    var newPark = new parkCreate();
+    $("#createCourt").on('click', function() {
+      newPark.set ({
+        park: park,
+        sport: $("#addNewParkSport").val(),
+        other: $("#addOtherParkSport").val(),
+        num: $("#addNumCourts").val()
+      }),
+      newPark.save ({
+        success: function(resp) {
+          console.log('success', resp);
+        },
+        error: function(err) {
+          console.log('error', err);
+        }
+      })
+    })
+  })
 })
 
 var feedbackContainer = Backbone.Model.extend({
