@@ -24,6 +24,8 @@ var parkCreateMatch = require('./templates/parkCreateMatch.html');
 var parkCreatePage = require('./templates/parkCreatePage.html');
 var counter = 1;
 
+
+
 ////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
@@ -1348,7 +1350,8 @@ router.on('route:parksDetail', function(id, name){
     error: function(err) {
       console.log("error", err);
     }
-});
+  });
+
 });
 ////////////////////////////////////////////////////////////////////////////////
 $('body').on('click', 'a', function (e){
