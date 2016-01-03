@@ -22,7 +22,10 @@ var matchModel = require('./models/matchModel.js');
 var parks = require('./templates/parks.html');
 var parksDetail = require('./templates/parksDetail.html');
 var parkCreateMatch = require('./templates/parkCreateMatch.html');
+var parkCreatePage = require('./templates/parkCreatePage.html');
 var counter = 1;
+
+
 
 ////////////////////////////////////////////////////////////
 
@@ -44,6 +47,7 @@ var Router = Backbone.Router.extend({
     "home/:username":"home",
     "parks":"parks",
     "parkCreateMatch/:id":"parkCreateMatch",
+    "parkCreatePage/:id":"parkCreatePage",
     "parksDetail/:id":"parksDetail",
     "":"index"
   },
@@ -867,7 +871,6 @@ router.on('route:createMatch', function(id, username) {
 });
 
 router.on('route:parkCreateMatch', function(id, name) {
-  console.log("TESTETS")
   var ParkMatch = Backbone.Model.extend({
     initialize: function () {
     },
@@ -919,9 +922,59 @@ router.on('route:parkCreateMatch', function(id, name) {
     error: function(err) {
       console.log('error', err);
     }
-  })
+  });
+});
 
-})
+router.on('route:parkCreatePage', function(id, name) {
+  var html = parkCreatePage;
+  $("#container").html(html);
+  var parkCreate = Backbone.Model.extend({
+    initialize: function(){
+    },
+    defaults: {
+      sport: null,
+      other: null,
+      num_courts: null,
+      lat: null,
+      long: null
+    },
+    url: "http://skill-match.herokuapp.com/api/courts/"
+  });
+    function geoFindMe() {
+    function success(position) {
+      var latitude  = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      console.log('latitude '+latitude);
+      console.log('longitude '+longitude);
+      var newPark = new parkCreate();
+       newPark.set ({
+        park: id,
+        sport: $("#addNewParkSport").val(),
+        other: $("#addOtherParkSport").val(),
+        num_courts: $("#addNumCourts").val(),
+        lat: latitude,
+        long: longitude
+      });
+      newPark.save (null, {
+        success: function(resp) {
+          console.log('success', resp);
+          router.navigate("/parks", {trigger:true});
+        },
+        error: function(err) {
+          console.log('error', err);
+        }
+      })
+    }
+      function error(err) {
+      console.log("error", err);
+    }
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+
+    $("#createCourtButton").on('click', function() {
+      geoFindMe();
+    })
+  })
 
 var feedbackContainer = Backbone.Model.extend({
   initialize: function() {
@@ -1357,7 +1410,7 @@ var Park = Backbone.Model.extend({
 /////////////////////////////////////////////////////////////////////////////
 // This page is a more indepth look at the park you have choosen and we display the parks match history.
 // Soon it will include all a list of sports available at the park.
-router.on('route:parksDetail', function(id){
+router.on('route:parksDetail', function(id, name){
   var Park = Backbone.Model.extend({
     initialize: function () {
     },
@@ -1384,7 +1437,8 @@ router.on('route:parksDetail', function(id){
     error: function(err) {
       console.log("error", err);
     }
-});
+  });
+
 });
 ////////////////////////////////////////////////////////////////////////////////
 $('body').on('click', 'a', function (e){
