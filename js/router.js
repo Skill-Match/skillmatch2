@@ -865,27 +865,45 @@ router.on('route:parkCreatePage', function(id, name) {
     defaults: {
       sport: null,
       other: null,
-      num_courts: null
+      num_courts: null,
+      lat: null,
+      long: null
     },
     url: "http://skill-match.herokuapp.com/api/courts/"
   });
-    var newPark = new parkCreate();
-    $("#createCourtButton").on('click', function() {
-      newPark.set ({
+    function geoFindMe() {
+    function success(position) {
+      var latitude  = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      console.log('latitude '+latitude);
+      console.log('longitude '+longitude);
+      var newPark = new parkCreate();
+       newPark.set ({
         park: id,
         sport: $("#addNewParkSport").val(),
         other: $("#addOtherParkSport").val(),
-        num_courts: $("#addNumCourts").val()
-      }),
-      newPark.save ({
+        num_courts: $("#addNumCourts").val(),
+        lat: latitude,
+        long: longitude
+      });
+      newPark.save (null, {
         success: function(resp) {
           console.log('success', resp);
+          router.navigate("/parks", {trigger:true});
         },
         error: function(err) {
           console.log('error', err);
         }
       })
-      router.navigate('/parksDetail/'+id, {trigger: true});
+    }
+      function error(err) {
+      console.log("error", err);
+    }
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+
+    $("#createCourtButton").on('click', function() {
+      geoFindMe();
     })
   })
 
