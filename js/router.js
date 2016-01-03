@@ -334,6 +334,7 @@ $('#loginSubmit').on('click', function(e){
 // Creating the router for the sign up
 var router = new Router();
 router.on('route:signup', function(){
+
   var html = signup;
         $("#container").html(html);
 var User = Backbone.Model.extend({
@@ -353,7 +354,7 @@ var User = Backbone.Model.extend({
   },
   url: 'https://skill-match.herokuapp.com/api/users/create/'
 });
-$('#rtxt').prop('checked', true)
+$('#rtxt').prop('checked', true);
 $(".register").on('click', function(e) {
   e.preventDefault();
    user = new User();
