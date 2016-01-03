@@ -6,9 +6,10 @@
   height: 350px;
   box-shadow: -1px 5px 8px 0px rgba(0,0,0,0.50);
   #over{
+    display: inline-block;
     position: relative;
-    top: 45%;
-    left: 20%;
+    top: 25%;
+    left: 13%;
     font-size: 2em;
   }
   #createMatchButton {
@@ -27,7 +28,7 @@
 
   #mission {
     color: white;
-    width: 60%;
+    width: 100%;
   }
 }
 
@@ -46,9 +47,9 @@
   #sportImage {
     display: inline-block;
     width: 15%;
+    margin: 1% 2%;
     img{
     width: 80%;
-    margin: 1em;
     }
   }
 
@@ -90,6 +91,8 @@
     display: inline-block;
     font-size: 1em;
     line-height: 1.7em;
+    width: 40%;
+    margin: 1% 2%;
   }
 
   #skillProgress {
@@ -100,21 +103,26 @@
   }
   #players{
     display: inline-block;
+    width: 30%;
+    margin-left: 5%;
     img{
-      border-radius: 100%;
-      width: 60%;
+      border-radius: 100%; 
+      width: 30%;
     }
   }
 
   #matchSubmit {
-    padding: 15px;
+    padding: .5em 1em;
     background-color: #1e8880;
+    font-size: 1em;
     color: white;
     border: none;
     border-radius: 20px;
     box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
     outline: none;
+    width: 10%;
     display: inline-block;
+    margin: 3%;
   }
 
   #matchSubmit:active {

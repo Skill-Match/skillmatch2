@@ -6,9 +6,10 @@
   height: 350px;
   box-shadow: -1px 5px 8px 0px rgba(0, 0, 0, 0.5); }
   #imageContainer #over {
+    display: inline-block;
     position: relative;
-    top: 45%;
-    left: 20%;
+    top: 25%;
+    left: 13%;
     font-size: 2em; }
   #imageContainer #createMatchButton {
     color: white;
@@ -22,7 +23,7 @@
     font-size: 29px; }
   #imageContainer #mission {
     color: white;
-    width: 60%; }
+    width: 100%; }
 
 #upComing {
   width: 80%;
@@ -36,10 +37,10 @@
     background-color: #e3e3e3; }
   #upComing #sportImage {
     display: inline-block;
-    width: 15%; }
+    width: 15%;
+    margin: 1% 2%; }
     #upComing #sportImage img {
-      width: 80%;
-      margin: 1em; }
+      width: 80%; }
   #upComing a {
     text-decoration: none;
     color: black; }
@@ -64,25 +65,32 @@
   #upComing .description {
     display: inline-block;
     font-size: 1em;
-    line-height: 1.7em; }
+    line-height: 1.7em;
+    width: 40%;
+    margin: 1% 2%; }
   #upComing #skillProgress {
     display: inline-block; }
     #upComing #skillProgress .skill {
       width: 80%; }
   #upComing #players {
-    display: inline-block; }
+    display: inline-block;
+    width: 30%;
+    margin-left: 5%; }
     #upComing #players img {
       border-radius: 100%;
-      width: 60%; }
+      width: 30%; }
   #upComing #matchSubmit {
-    padding: 15px;
+    padding: .5em 1em;
     background-color: #1e8880;
+    font-size: 1em;
     color: white;
     border: none;
     border-radius: 20px;
     box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
     outline: none;
-    display: inline-block; }
+    width: 10%;
+    display: inline-block;
+    margin: 3%; }
   #upComing #matchSubmit:active {
     box-shadow: none; }
   #upComing .creatorName {
