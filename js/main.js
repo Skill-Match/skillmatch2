@@ -12,6 +12,7 @@ require("../css/profile.css");
 require("../css/feedback.css");
 require("../css/parks.css");
 require("../css/parksDetail.css");
+require("../css/userUpdate.css");
 
 
 $(document).ready(function() {
