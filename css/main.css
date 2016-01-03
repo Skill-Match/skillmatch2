@@ -3,7 +3,8 @@
   background-image: url("/images/tennis.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px; }
+  height: 350px;
+  box-shadow: -1px 5px 8px 0px rgba(0, 0, 0, 0.5); }
   #imageContainer #over {
     position: relative;
     top: 45%;
