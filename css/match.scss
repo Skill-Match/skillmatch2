@@ -3,7 +3,6 @@
   li {
     list-style-type: none;
     margin-bottom: 15px;
-    padding-left: 220px;
   }
 
   ul {
@@ -109,7 +108,11 @@
   #parkLink {
     color: black;
   }
-   #parkLink:hover {
-      text-decoration: underline;
-    }
+  #parkLink:hover {
+    text-decoration: underline;
+  }
+  #playersFeedback {
+    display: inline-block;
+    padding: 0;
+  }
 }

@@ -1,24 +1,32 @@
 <div id="feedbackContainer">
-  <form id="feedbackForm">
-  <span id="skillInfo"> i </span>
-  <span id="skillRating" class="hidden"> - On a scale from 1 - 100 Please rate the players skill </span>
+{{#data}}
+<ul>
+<li>
+  <form class="feedbackForm">
+  <h3>{{username}}</h3>
+  <span class="skillInfo"> i </span>
+  <input class="pid" type="text" value="{{id}}" / >
+  <span class="skillRating" class="hidden"> - On a scale from 1 - 100 Please rate the players skill </span>
   <h3>Skill level of player</h3>
-    <input id="addSkillFeedback" type="range" min="0" max="100" step="1" value="0">
-    <span id="skillInfo2"> i </span>
-       <span id="funRating" class="hidden"> On a scale from 1 - 100 Please rate how fun the match was</span>
+    <input class="addSkillFeedback" type="range" min="0" max="100" step="1" value="0">
+    <span class="skillInfo2"> i </span>
+       <span class="funRating" class="hidden"> On a scale from 1 - 100 Please rate how fun the match was</span>
 <h3>How fun was the match</h3>
-    <input id="addFunFeedback"  type="range" min="0" max="100" step="1" value="0">
-    <span id="skillInfo3"> i </span>
-    <span id="crowdRating" class="hidden"> On a scale from 1 - 5 Please tell us how crowded the park was </span>
+    <input class="addFunFeedback"  type="range" min="0" max="100" step="1" value="0">
+    <span class="skillInfo3"> i </span>
+    <span class="crowdRating" class="hidden"> On a scale from 1 - 5 Please tell us how crowded the park was </span>
 <h3>Crowd level</h3>
-    <input id="addCrowdFeedback"  type="range" min="0" max="5" step="1" value="0">
+    <input class="addCrowdFeedback"  type="range" min="0" max="5" step="1" value="0">
     </br>
-    <select id="addPunctualityFeedback" name="Punctuality">
+    <select class="addPunctualityFeedback" name="Punctuality">
       <option value="No Show">No Show</option>
       <option value="On Time">On Time</option>
       <option value="Little bit late">Little Late</option>
       <option value="Over 10 min late">Over 10 mins late</option>
     </select>
   </form>
-  <button id="submitFeedback" type="sumbit"> Feedback </button>
+  <button class="submitFeedback" type="sumbit"> Feedback </button>
+  {{/data}}
+  </li>
+  </ul>
 </div>

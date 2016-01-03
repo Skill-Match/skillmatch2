@@ -1,0 +1,26 @@
+<div id="parkMatchPage">
+  <h2> Create Game you would like to play </h2>
+  <ul id="parkCreate">
+    <li> Sport:
+      <select id="addParkSport" name="Sport">
+        <option value="Tennis">Tennis</option>
+        <option value="Basketball">Basketball</option>
+        <option value="Football">Football</option>
+        <option value="Soccer">Soccer</option>
+        <option value="Other">Other</option>
+      </select>
+      </li>
+    <li> Date: <input id="addParkDate" type="date"></li>
+    <li> Time:<input id="addParkTime" type="time"></li>
+    <li><textarea id="addParkDescription" cols="30" placeholder="What kind of match you are looking for?"></textarea></li>
+    <li> Park:<select id="addParkCreate" name="park">
+    {{#park}}
+    <option value="{{id}}">{{name}}</option>
+    {{/park}}
+    </select>
+    </li>
+
+    <li> <label>Skill: 1-100</label><input id="addParkSkill" type="range" min="0" max="100" step="1" value="0"></li>
+  </ul>
+  <button id="createParkMatches" type="submit">Submit</button>
+</div>

@@ -17,9 +17,10 @@ var profile = require('./templates/profile.html');
 var createMatch = require('./templates/createMatch.html');
 var feedback = require('./templates/feedback.html');
 var home = require('./templates/home.html');
-var matchModel = require('./models/matchModel.js')
+var matchModel = require('./models/matchModel.js');
 var parks = require('./templates/parks.html');
 var parksDetail = require('./templates/parksDetail.html');
+var parkCreateMatch = require('./templates/parkCreateMatch.html');
 var counter = 1;
 
 ////////////////////////////////////////////////////////////
@@ -40,6 +41,7 @@ var Router = Backbone.Router.extend({
     "challenge/:id":"challenge",
     "home/:username":"home",
     "parks":"parks",
+    "parkCreateMatch/:id":"parkCreateMatch",
     "parksDetail/:id":"parksDetail",
     "":"index"
   },
@@ -334,6 +336,7 @@ $('#loginSubmit').on('click', function(e){
 // Creating the router for the sign up
 var router = new Router();
 router.on('route:signup', function(){
+
   var html = signup;
         $("#container").html(html);
 var User = Backbone.Model.extend({
@@ -353,7 +356,7 @@ var User = Backbone.Model.extend({
   },
   url: 'https://skill-match.herokuapp.com/api/users/create/'
 });
-$('#rtxt').prop('checked', true)
+$('#rtxt').prop('checked', true);
 $(".register").on('click', function(e) {
   e.preventDefault();
    user = new User();
@@ -597,7 +600,6 @@ router.on('route:match', function(id, username) {
         $("#update").hide();
         $("#cancel").hide();
         $("#leaveMatch").hide();
-        console.log(Cookie.get('uid'));
         if (Cookie.get('uid') == creator) {
           $("#join").hide();
           $("#leaveMatch").hide();
@@ -651,7 +653,6 @@ router.on('route:match', function(id, username) {
       url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
     });
       $("#join").on('click', function() {
-        console.log(id)
         var join = new Join();
         join.set({id:id})
           join.save(null, {
@@ -758,7 +759,6 @@ router.on('route:createMatch', function(id, username) {
     var createMatchHTML = Mustache.render(createMatchTemplate, 'park');
     $("#create").html(createMatchHTML);
     $("#container").html(html);
-
    console.log("success: ",resp)
   $("#createMatch").on('click', function(e) {
     e.preventDefault();
@@ -796,6 +796,63 @@ router.on('route:createMatch', function(id, username) {
 
 });
 });
+
+router.on('route:parkCreateMatch', function(id, name) {
+  console.log("TESTETS")
+  var ParkMatch = Backbone.Model.extend({
+    initialize: function () {
+    },
+  defaults: {
+    id: null,
+    name: null
+  },
+  url: 'https://skill-match.herokuapp.com/api/parks/'+id+"/"
+});
+  var ParkMatches = Backbone.Collection.extend({
+  model: ParkMatch,
+  url: 'https://skill-match.herokuapp.com/api/parks/'+id+"/"
+});
+  var parkMatch = new ParkMatch();
+  parkMatch.fetch({
+    success: function(resp) {
+      var html = parkCreateMatch({'park': resp.toJSON()});
+      var createParkTemplate = $("#createParkTemplate").text();
+      var createParkHTML = Mustache.render(createParkTemplate, 'park');
+      $("#parkMatchPage").html(createParkHTML);
+      $("#container").html(html);
+      console.log(html);
+
+      console.log('success',resp);
+    $("#createParkMatches").on('click', function(e) {
+      e.preventDefault();
+      match = new matchContainer();
+      match.set({
+        park: $("#addParkCreate").val(),
+        description: $("#addParkDescription").val(),
+        sport: $("#addParkSport").val(),
+        skill_level: $("#addParkSkill").val(),
+        date: $("#addParkDate").val(),
+        time: $("#addParkTime").val()
+      })
+      match.save(null, {
+        url: "https://skill-match.herokuapp.com/api/matches/",
+        success: function(resp) {
+          console.log("success", resp);
+          var id = resp.toJSON().id;
+          router.navigate('/match/' + id, {trigger: true});
+        },
+        error: function(err) {
+          console.log("error", err);
+        }
+      })
+    })
+  },
+    error: function(err) {
+      console.log('error', err);
+    }
+  })
+
+})
 
 var feedbackContainer = Backbone.Model.extend({
   initialize: function() {
@@ -968,50 +1025,80 @@ var matchDetail = new matchContainer(id);
 ////////////////////////////////////////////////////////////////////////////////
 // This page gives you the ability to leave Feedback on completed matches
 router.on('route:feedback', function(id, username){
-  var html = feedback;
-  $("#container").html(html);
-  $("#submitFeedback").on('click', function() {
-    console.log("test");
-    var html = feedback;
-    feedbackAdd = new feedbackContainer();
-    feedbackAdd.set({
-      match: id,
-      skill: $("#addSkillFeedback").val(),
-      sportsmanship: $("#addFunFeedback").val(),
-      availability: $("#addCrowdFeedback").val(),
-      punctuality: $("#addPunctualityFeedback").val()
-    });
-    feedbackAdd.save(null, {
-      url: 'https://skill-match.herokuapp.com/api/feedbacks/create/',
-      success: function(resp) {
-        console.log("success", resp);
-        router.navigate('/match/' + id, {trigger: true});
-      },
-      error: function(err) {
-        console.log("error", err);
-      }
-    });
-    $("#addSkillFeedback").val("");
-    $("#addFunFeedback").val("");
-    $("#addCrowdFeedback").val("");
-    $("#addPunctualityFeedback").val("");
+  var matchContainer = Backbone.Model.extend({
+  initialize: function() {
+  },
+  defaults: {
+    park: null,
+    sport: null,
+    skill_level: null,
+    date: null,
+    time: null
+    },
+    Model: matchContainer,
+    url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
   });
-  $('#skillInfo').hover(function(){
-    $('#skillRating').toggleClass();
+var Matches = Backbone.Collection.extend({
+  model: matchContainer,
+  url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
+});
+var feedMatch = new Matches();
+  feedMatch.fetch({
+    success: function(resp) {
+      var html = feedback({'data': resp.toJSON()[0].players});
+      var feedTemplate = $("#feedTemplate").text();
+      var feedHTML = Mustache.render(feedTemplate, 'data');
+      $('#feedbackContainer').html(feedHTML);
+      $("#container").html(html);
+      console.log('success', resp.toJSON());
+       $(".submitFeedback").on('click', function() {
+    // feedbackAdd = new feedbackContainer();
+    // feedbackAdd.set({
+    //   skill: $(".addSkillFeedback").val(),
+    //   sportsmanship: $(".addFunFeedback").val(),
+    //   availability: $(".addCrowdFeedback").val(),
+    //   punctuality: $(".addPunctualityFeedback").val(),
+    //   match: id,
+    //   player: $(".pid").val()
+    // });
+    // feedbackAdd.save(null, {
+    //   url: 'https://skill-match.herokuapp.com/api/feedbacks/create/',
+    //   success: function(resp) {
+    //     console.log("success", resp);
+    //     router.navigate('/match/' + id, {trigger: true});
+    //   },
+    //   error: function(err) {
+    //     console.log("error", err);
+    //   }
+    // });
+    // $(".addSkillFeedback").val("");
+    // $(".addFunFeedback").val("");
+    // $(".addCrowdFeedback").val("");
+    // $(".addPunctualityFeedback").val("");
+    console.log($(".pid").val());
   });
-  $("#skillInfo2").hover(function() {
-    $("#funRating").toggleClass();
+  $('.skillInfo').hover(function(){
+    $('.skillRating').toggleClass();
   });
-  $("#skillInfo3").hover(function() {
-    $("#crowdRating").toggleClass();
+  $(".skillInfo2").hover(function() {
+    $(".funRating").toggleClass();
+  });
+  $(".skillInfo3").hover(function() {
+    $(".crowdRating").toggleClass();
   })
+    },
+    error: function(err) {
+      console.log('error', err);
+    }
+  })
+
 });
 
 /////////////////////////////////////////////////////////////////////////////
 // Routes to parks page where we fetch and display parks from Api
 // BackbonePagination is used here to page through all parks in Api
 // We used a counter to along with BackbonePagination get the next page of parks
-router.on('route:parks', function() {
+router.on('route:parks', function(id, name) {
 
 function geoFindMe() {
   function success(position) {
