@@ -12,6 +12,7 @@ var main = require('./templates/main.html');
 var parkList = require('./templates/parkList.html');
 var match = require('./templates/match.html');
 var updatematch = require('./templates/updatematch.html');
+var userUpdate = require('./templates/userUpdate.html');
 var history = require('./templates/history.html');
 var profile = require('./templates/profile.html');
 var createMatch = require('./templates/createMatch.html');
@@ -36,6 +37,7 @@ var Router = Backbone.Router.extend({
     "match/:id":"match",
     "updatematch/:id":"updatematch",
     "signup":"signup",
+    "userUpdate/:id":"userUpdate",
     "profile/:creator":"profile",
     "createMatch":"createMatch",
     "challenge/:id":"challenge",
@@ -397,7 +399,7 @@ if ($("#rpass").val() === ($("#rerpass").val())) {
 
 ////////////////////////////////////////////////////////////
 // Creating the router for the home page
-router.on('route:home', function(username){
+router.on('route:home', function(username, id){
   var Match = Backbone.Model.extend({
   initialize: function () {
   },
@@ -479,7 +481,74 @@ router.on('route:home', function(username){
   });
 }); // End of home router
 ////////////////////////////////////////////////////////////
+router.on('route:userUpdate', function(id){
+var profileContainer = Backbone.Model.extend({
+    initialize: function() {
+    },
+    defaults: {
+      id: null,
+      username: null,
+      password: null,
+      profile: {
+        gender: null,
+        age: null,
+        phone_number: null,
+        wants_texts: null
 
+      }
+    },
+    Model: profileContainer,
+    url: 'https://skill-match.herokuapp.com/api/users/'+id+'/'
+  });
+  var Profiles = Backbone.Collection.extend({
+    Model: profileContainer,
+    url: 'https://skill-match.herokuapp.com/api/users/'+id+'/'
+  });
+var userProfile = new Profiles(id);
+    userProfile.fetch({
+      success: function(resp) {
+      var html = userUpdate({'update': resp.toJSON()});
+      var updateTemplate = $("#updateTemplate").text();
+      var updateHTML = Mustache.render(updateTemplate, 'update');
+      $("#updatePage").html(updateHTML);
+      $("#container").html(html);
+      console.log('success', resp.toJSON());
+
+    $('#rtxt').prop('checked', true)
+    $(".register").on('click', function(e) {
+      
+    e.preventDefault();
+    userProfile = new profileContainer({id:id});
+    userProfile.set({
+    username: $("#ruser").val(),
+     email: $("#remail").val(),
+     password:$("#rpass").val(),
+     profile: {
+     gender: $(".rgen").val(),
+     age: $("#rage").val(),
+     phone_number: $("#rnumber").val(),
+     wants_texts: $("#rtxt").is(':checked')
+    }
+  });
+  userProfile.save(null, {
+    url: 'https://skill-match.herokuapp.com/api/users/'+id+'/',
+      success: function(resp) {
+        console.log("success", resp);
+      },
+      error: function(err) {
+        console.log("error", err);
+      }
+  });
+      
+  });
+
+      },
+      error: function(err) {
+        console.log("error", err);
+      }
+        })
+
+})
 //////////////////////////////////////////////////////////////////////////////////////
 // Player Profile page
 

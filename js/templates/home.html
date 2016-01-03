@@ -2,10 +2,11 @@
 
 <div id="userprofile">
 {{#user}}
+<a href="/userUpdate/{{id}}">Update Profile</a>
   <ul>
 
-    <li><img id="homeProfileImg" src="{{profile.pic_url}}"></li>
-    <li class="mainDescription"> Username: {{username}} </li>
+    <li class="editPic"><img id="homeProfileImg" src="{{profile.pic_url}}"></li>
+    <li class="edit" class="mainDescription"> Username: {{username}} </li>
     <li class="mainDescription"> Age: {{profile.age}} </li>
     <li class="mainDescription"> Gender: {{profile.gender}}</li>
     <li class="mainDescription"> Sportsmanship: <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
@@ -63,7 +64,6 @@
   <li> {{park_name}} </li>
   </br>
   <li> Created By: <a id="profileName" href="/profile/{{creator}}"> {{creator_name}} </a> </li>
-  <li> Feedback of Players:<a href="/feedback/{{#data}}{{id}}{{/data}}">{{#players}}{{username}}{{/players}}</a></li>
   <li>  <a id="matchDetail" type="sumbit" href="/match/{{id}}"> Details </a> </li>
    <li id="skillProgressHome"> Skill Level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
    <li><a id="goToFeedback" href="/feedback/{{id}}"> Feedback </a></li>

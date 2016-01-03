@@ -1,0 +1,47 @@
+<div id="updatePage">
+<div id="signupHeader">
+<h2>REGISTER</h2>
+</div>
+{{#update}}
+<form id="signupForm">
+  <label>USERNAME:</label>
+  <input id="ruser" type="text" placeholder="Username" value="{{username}}">
+  </br>
+   <label>EMAIL:</label>
+  <input id="remail" type="email" placeholder="Email" value="{{email}}">
+  </br>
+  <label>PASSWORD:</label>
+  <input id="rpass" type="password" placeholder="Password">
+  </br>
+  <label>Re-Enter PASSWORD:</label>
+  <input id="rerpass" type="password" placeholder="Password">
+  <span id="reenterMessage"></span>
+  </br>
+  <label>PHONE:</label>
+  <input id="rnumber" type="text" placeholder="Phone Number" value="{{phone_number}}">
+   </br>
+  <label>Text Alerts:</label>
+  <input id="rtxt" type="checkbox" checked="checked">
+  </br>
+  <label id="gender">GENDER:</label>
+  Male <input class="rgen" type="radio" name="Gender" value="Male">
+  Female <input class="rgen" type="radio" name="Gender" value="Female">
+  Other <input class="rgen" type="radio" name="Gender" value="Other">
+  </br>
+  <select id="rage" name="age">
+  <option value="{{age}}">{{age}}</option>
+  <option value="Under 16">Under 16</option>
+  <option value="16-19">16-19</option>
+  <option value="20's">20's</option>
+  <option value="30's">30's</option>
+  <option value="40's">40's</option>
+  <option value="50's">50's</option>
+  <option value="60+">60 +</option>
+</select></br>
+  </br>
+  <label>Upload an Image:</label>
+  <input id="user" type="file" placeholder="upload">
+  <button class="register" type="submit">Submit</button>
+</form>
+{{/update}}
+</div>
