@@ -4,6 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 350px;
+  box-shadow: -1px 5px 8px 0px rgba(0,0,0,0.50);
   #over{
     display: inline-block;
     position: relative;
@@ -19,18 +20,15 @@
     outline: none;
     box-shadow: 10px 10px 8px 0px rgba(0,0,0,0.50);
   }
-
   #createMatchButton:active {
     box-shadow: 0 0 0 0;
     font-size: 29px;
   }
-
   #mission {
     color: white;
     width: 100%;
   }
 }
-
 #upComing {
   width: 80%;
   margin: 2% 10%;
@@ -42,7 +40,6 @@
     border-radius: 5px;
     background-color: #e3e3e3;
   }
-
   #sportImage {
     display: inline-block;
     width: 15%;
@@ -56,29 +53,23 @@
     bottom: 1em;
     }
   }
-
   a {
     text-decoration: none;
     color: black;
   }
-
   a:hover {
     text-decoration: underline;
   }
-
   ul {
     width: 100%;
     padding: 0;
     height: 18em;
     background-color: white;
     float: left;
-    
   }
-
   li:nth-last-child(1){
     margin-bottom:35px;
   }
-
   li {
     list-style-type: none;
     padding-bottom: 5px;
@@ -98,7 +89,6 @@
     left: 3em;
     bottom: 7em;
   }
-
   #skillProgress {
     position: relative;
     right: 15%;
@@ -120,30 +110,25 @@
     bottom: 6em;
     }
   }
-
   #areaSearch {
     display: inline-block;
   }
-
   #areaInput {
     line-height: normal;
     position: relative;
     left: 15%;
     bottom: 2.2em;
   }
-
   #submitArea {
     position: relative;
     bottom: 2.2em;
     left: 18%;
   }
-
   #area {
     position: relative;
     bottom: 2.2em;
     left: 20%;
   }
-
   #matchSubmit {
     padding: .5em 1em;
     background-color: #1e8880;
@@ -158,33 +143,25 @@
     position: relative;
     left: 46.5%;
     bottom: 12em;
-
     a {
       color: white;
     }
   }
-
-
   #matchSubmit:active {
     box-shadow: none;
   }
-
   .creatorName {
     color: #00bfff;
   }
-
   .creatorName:hover {
     text-decoration: underline;
   }
-
   .skill {
     width: 300px;
   }
-
   #parkAnchor {
     color: grey;
   }
-
   #next {
     margin-bottom: 1em;
   }
