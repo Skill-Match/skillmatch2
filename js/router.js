@@ -139,7 +139,7 @@ $('#loginSubmit').on('click', function(e){
     window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
-    router.navigate('/createMatch', {trigger: true});
+    router.navigate('/parks', {trigger: true});
    });
    $("#area").on('click', function() {
     geoFindMe();
