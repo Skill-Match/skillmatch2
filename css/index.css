@@ -3,28 +3,42 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 #header {
-  height: 6em;
+  height: 6.5em;
   width: 100%;
 }
 #title {
     display: inline-block;
     color: white;
+    position: relative;
+    bottom: 25%;
   }
 #logo {
     display: inline-block;
     width: 8%;
+    margin-left: 2%;
+    margin-top: 1%;
   }
 #logo img{
     height: 80px;
     width: 80px;
   }
   #nav{
+    float: right;
+    position: relative;
     list-style: none;
+    right: 7%;
+    top: 22%;
     display: inline-block;
-    width: 40%;
   }
 #container {
   background-color: #f5f2ec;
+}
+#signUp {
+  float: right;
+  position: relative;
+  left: 18%;
+  bottom: 1.5em;
+  color: white;
 }
 input {
   font-size: 15px;
