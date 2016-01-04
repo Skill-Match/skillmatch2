@@ -30,10 +30,20 @@ body {
     top: 22%;
     display: inline-block;
   }
+  #nav a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+  }
+  #nav #logout {
+    font-size: 12px;
+    margin-left: 5px;
+  }
 #container {
   background-color: #f5f2ec;
 }
-#signUp {
+#nav #signUp {
+  font-size: 17px;
   float: right;
   position: relative;
   left: 18%;
