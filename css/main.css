@@ -74,10 +74,16 @@
     position: relative;
     left: 3em;
     bottom: 7em; }
+  #upComing #gameDescription {
+    display: inline-block;
+    position: relative;
+    left: 48%;
+    bottom: 17.5em;
+    width: 38%; }
   #upComing #skillProgress {
     position: relative;
     right: 15%;
-    bottom: 7em;
+    bottom: 5em;
     display: inline-block; }
     #upComing #skillProgress .skill {
       width: 150%; }
@@ -89,7 +95,7 @@
       border-radius: 100%;
       width: 30%;
       position: relative;
-      left: 80%;
+      right: 56%;
       bottom: 6em; }
   #upComing #areaSearch {
     display: inline-block; }
@@ -118,8 +124,8 @@
     display: inline-block;
     margin: 3%;
     position: relative;
-    left: 46.5%;
-    bottom: 12em; }
+    left: 9.5%;
+    bottom: 10em; }
     #upComing #matchSubmit a {
       color: white; }
   #upComing #matchSubmit:active {

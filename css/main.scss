@@ -72,7 +72,7 @@
     height: 18em;
     background-color: white;
     float: left;
-    
+
   }
 
   li:nth-last-child(1){
@@ -99,10 +99,18 @@
     bottom: 7em;
   }
 
+  #gameDescription {
+    display: inline-block;
+    position: relative;
+    left: 48%;
+    bottom: 17.5em;
+    width: 38%;
+  }
+
   #skillProgress {
     position: relative;
     right: 15%;
-    bottom: 7em;
+    bottom: 5em;
     display: inline-block;
     .skill{
       width: 150%;
@@ -116,7 +124,7 @@
     border-radius: 100%;
     width: 30%;
     position: relative;
-    left: 80%;
+    right: 56%;
     bottom: 6em;
     }
   }
@@ -156,8 +164,8 @@
     display: inline-block;
     margin: 3%;
     position: relative;
-    left: 46.5%;
-    bottom: 12em;
+    left: 9.5%;
+    bottom: 10em;
 
     a {
       color: white;

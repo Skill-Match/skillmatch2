@@ -34,8 +34,10 @@
     {{time}}</br>
     {{distance}} Miles </br>
     <a id="parkAnchor" href="/parksDetail/{{park}}">{{park_name}}</a></li>
+
     <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
     </progress></li>
+    <li id="gameDescription">{{description}}</li>
 <li id="players">{{#players}}<a href="/profile/{{id}}"><img src="{{small_img}}"></a>{{/players}} <img id="empty"src="https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png"></li>
 <li id="matchSubmit"><a type="sumbit" href="/match/{{id}}"> Join </a></li>
 </ul>
