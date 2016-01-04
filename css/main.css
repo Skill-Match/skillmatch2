@@ -81,7 +81,7 @@
     bottom: 7em;
     display: inline-block; }
     #upComing #skillProgress .skill {
-      width: 20em; }
+      width: 150%; }
   #upComing #players {
     display: inline-block;
     width: 30%;
