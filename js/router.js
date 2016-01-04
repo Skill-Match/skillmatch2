@@ -141,6 +141,12 @@ $('#loginSubmit').on('click', function(e){
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
    });
+   $("#area").on('click', function() {
+    geoFindMe();
+   });
+   $("#submitArea").on('click', function() {
+    matchesAround();
+   })
  },
  error: function(err) {
    console.log("nope")
@@ -181,6 +187,12 @@ $('#loginSubmit').on('click', function(e){
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
    });
+   $("#area").on('click', function() {
+    geoFindMe();
+   });
+   $("#submitArea").on('click', function() {
+    matchesAround();
+   })
  },
  error: function(err) {
    console.log("nope")
@@ -216,6 +228,12 @@ $('#loginSubmit').on('click', function(e){
       $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
    });
+      $("#area").on('click', function() {
+    geoFindMe();
+   });
+   $("#submitArea").on('click', function() {
+    matchesAround();
+   })
         },
         error: function(err) {
          console.log("nope")
@@ -252,6 +270,12 @@ $('#loginSubmit').on('click', function(e){
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
    });
+   $("#area").on('click', function() {
+    geoFindMe();
+   });
+   $("#submitArea").on('click', function() {
+    matchesAround();
+   })
  },
  error: function(err) {
    console.log("nope")
@@ -288,6 +312,12 @@ $('#loginSubmit').on('click', function(e){
    $("#createMatchButton").on('click', function() {
     router.navigate('/createMatch', {trigger: true});
    });
+   $("#area").on('click', function() {
+    geoFindMe();
+   });
+   $("#submitArea").on('click', function() {
+    matchesAround();
+   })
  },
  error: function(err) {
    console.log("nope")

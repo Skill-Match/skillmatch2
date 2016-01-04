@@ -1,12 +1,16 @@
 <div id="parksContainer">
   {{#data}}
   <ul id="parks">
-    <li class="parkName"><a href="/parksDetail/{{id}}">{{name}}</a></li>
-    <li><img id="parksImage"src="{{image_url}}"></li>
-    <li><a id="parkMatch" type="submit" href="/parkCreateMatch/{{id}}">Create Match at this park!</a></li>
-    <li>{{rating}}/5</li>
-    <li><a href="{{url}}"> Yelp Park Review</a></li>
-    <li>{{display_address1}} </br> {{display_address3}}</li>
+    <li id="parkPic"><img id="parksImage"src="{{image_url}}"></li>
+    <li id="parkDet"><a href="/parksDetail/{{id}}">{{name}}</a></br>{{rating}}/5</br><a href="{{url}}"> Yelp Park Review</a></li>
+    <li>{{display_address1}} </br> {{display_address3}}</br>{{distance}}</li>
+    <li id="courtSet">
+        {{#court_set}}
+        <ul id="available">
+          <li><img src="{{img_url}}"></br>{{sport}}</li>
+        </ul>
+        {{/court_set}}</li>
+    <li id="parkMatch"><a type="submit" href="/parkCreateMatch/{{id}}">Create Match Here</a></li>
   </ul>
   {{/data}}
   </div>

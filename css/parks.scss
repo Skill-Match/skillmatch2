@@ -3,22 +3,61 @@
 	display: inline-block;
 	margin: 5%;
 	#parks{
+		padding: 0;
+		float: left;
+		height: auto;
+		width: 100%;
 		background-color: white;
 		list-style: none;
 		border-bottom: 1px solid #4f1e47;
-		
+
+		li{
+			display: inline-block;
+			width: 20%;
+		}
 		.parkName{
 		
 	
 		a{
 			text-decoration: none;
 			font-size: 1em;
-			color: white;
+			color: black;
 		}	
 	}
+	#parkPic{
+		width: 10%;
 	}
-	#parksImage{
-		width: 15em;
-		height: 100px;
+	#parkDet{
+		a{
+			text-decoration: none;
+			font-size: 1em;
+			color: black;
+		}
+	}
+	#available{
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		img{
+			width: 100%;
+		}
+	}
+	#parkMatch{
+		position: relative;
+		left: 15%;
+		bottom: 2.5em;
+		width: 10%;
+		color: white;
+	    background-color: #ef3122;
+	    border-radius: 15px;
+	    border: none;
+	    outline: none;
+	    box-shadow: 10px 10px 8px 0px rgba(0,0,0,0.50);
+	    text-align: center;
+	    a{
+	    	color: white;
+	    	text-decoration: none;
+	    }
+	}
 	}
 }
