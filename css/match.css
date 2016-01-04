@@ -19,7 +19,7 @@
     position: relative;
     left: 24%;
     bottom: 14em;
-    height: 110px; }
+    width: 7%; }
   #matchDetailContainer .skill {
     width: 59%; }
   #matchDetailContainer #join {
@@ -32,7 +32,7 @@
     outline: none;
     position: relative;
     left: 70%;
-    bottom: 28.2em; }
+    bottom: 26.2em; }
   #matchDetailContainer #join:active {
     box-shadow: none; }
   #matchDetailContainer #confirm {
@@ -77,7 +77,10 @@
   #matchDetailContainer #update {
     font-size: 12px; }
   #matchDetailContainer #cancelEdit {
-    padding-left: 50px; }
+    display: inline-block;
+    position: relative;
+    right: 5%;
+    bottom: 14em; }
     #matchDetailContainer #cancelEdit a {
       color: black; }
     #matchDetailContainer #cancelEdit a:hover {
