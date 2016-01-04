@@ -47,21 +47,20 @@
   #upComing a:hover {
     text-decoration: underline; }
   #upComing ul {
-    border-bottom: 1px solid #4f1e47;
     width: 100%;
     padding: 0;
     height: auto;
     background-color: white;
     float: left; }
-  #upComing ul:nth-last-child(1) {
-    border-bottom: none;
-    padding-bottom: 20px; }
   #upComing li:nth-last-child(1) {
     margin-bottom: 35px; }
   #upComing li {
     list-style-type: none;
     padding-bottom: 5px;
     width: 20%; }
+  #upComing h3 {
+    display: inline-block;
+    float: left; }
   #upComing .description {
     display: inline-block;
     font-size: 1em;
@@ -79,6 +78,21 @@
     #upComing #players img {
       border-radius: 100%;
       width: 30%; }
+  #upComing #areaSearch {
+    display: inline-block; }
+  #upComing #areaInput {
+    line-height: normal;
+    position: relative;
+    left: 15%;
+    bottom: 2.2em; }
+  #upComing #submitArea {
+    position: relative;
+    bottom: 2.2em;
+    left: 18%; }
+  #upComing #area {
+    position: relative;
+    bottom: 2.2em;
+    left: 20%; }
   #upComing #matchSubmit {
     padding: .5em 1em;
     background-color: #1e8880;

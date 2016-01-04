@@ -18,12 +18,14 @@
     <option value="other">Other</option>
     <option value="">All</option>
   </select>
-<h3>Open Matches</h3>
+
 </div>
 <div id="areaSearch">
 <input type="text" id="areaInput" placeholder="Area Code">
 <button type="submit" id="submitArea"> Search </button>
-<button type="submit" id="area"> Area </button>
+<button type="submit" id="area"> Around You</button>
+</div>
+<h3>Open Matches</h3>
 {{#data}}
 {{#is_open}}
   <ul>
@@ -41,5 +43,4 @@
 <div id="pagination">
 <button id="prev">Prev</button>
 <button id="next">Next</button>
-</div>
 </div>

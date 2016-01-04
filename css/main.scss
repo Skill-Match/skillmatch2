@@ -63,18 +63,12 @@
   }
 
   ul {
-    border-bottom: 1px solid #4f1e47;
     width: 100%;
     padding: 0;
     height: auto;
     background-color: white;
     float: left;
 
-  }
-
-  ul:nth-last-child(1){
-    border-bottom:none;
-    padding-bottom:20px;
   }
 
   li:nth-last-child(1){
@@ -86,7 +80,10 @@
     padding-bottom: 5px;
     width: 20%;
   }
-
+  h3 {
+    display: inline-block;
+    float: left;
+  }
   .description {
     display: inline-block;
     font-size: 1em;
@@ -106,9 +103,32 @@
     width: 30%;
     margin-left: 5%;
     img{
-      border-radius: 100%; 
+      border-radius: 100%;
       width: 30%;
     }
+  }
+
+  #areaSearch {
+    display: inline-block;
+  }
+
+  #areaInput {
+    line-height: normal;
+    position: relative;
+    left: 15%;
+    bottom: 2.2em;
+  }
+
+  #submitArea {
+    position: relative;
+    bottom: 2.2em;
+    left: 18%;
+  }
+
+  #area {
+    position: relative;
+    bottom: 2.2em;
+    left: 20%;
   }
 
   #matchSubmit {
