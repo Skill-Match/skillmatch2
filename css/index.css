@@ -27,7 +27,7 @@ body {
     position: relative;
     list-style: none;
     right: 7%;
-    top: 22%;
+    top: 1em;
     display: inline-block;
   }
   #nav a {

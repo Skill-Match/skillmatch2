@@ -1,17 +1,16 @@
 <div id="matchDetailContainer">
   {{#data}}
   <img id="sportImage"src="{{img_url}}">
-  <ul>
+  <ul id="matchJoin">
+    <li id="matchSkill"> Skill:<progress class="skill" value="{{skill_level}}" max="100"></progress></li>
     <li> {{date}}</li>
     <li> {{time}}</li>
     <li> {{sport}} </li>
     <li><a href="/parksDetail/{{park}}" id="parkLink"> {{park_name}} </a></li>
-    <li id="matchSkill"> Skill:<progress class="skill" value="{{skill_level}}" max="100"></progress></li>
-    </br>
+    <li id="matchDescription"> {{description}}</li>
     <li>Created By: <a href="/profile/{{creator}}">{{creator_name}}</a></li>
-    <li> Feedback for players:
-    <ul id="playersFeedback">{{#players}}<li><a id="player" href="/feedback/{{#data}}{{id}}{{/data}}">{{username}}</a></li></ul>{{/players}}</li>
-  </ul>
+    </ul>
+    <img id="playerImage" src="https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png"></li>
     <button id="join"> Join </button>
     <a id="confirm" href="/"> Confirm Match </a>
     <a id="decline" href="/"> Decline Match </a>
@@ -19,7 +18,6 @@
     <a id="cancel" href="/"> Cancel Match </a>
     <a id="update" href="/updatematch/{{id}}">Edit Match</a>
     </div>
-   <div id="matchDescription"> <p> {{description}} </p>
    </div>
    <a id="leaveMatch" href="/"> Leave Match </a>
   {{/data}}

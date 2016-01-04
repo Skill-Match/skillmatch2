@@ -185,7 +185,7 @@ $('#loginSubmit').on('click', function(e){
     window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
-    router.navigate('/createMatch', {trigger: true});
+    router.navigate('/parks', {trigger: true});
    });
    $("#area").on('click', function() {
     geoFindMe();
@@ -226,7 +226,7 @@ $('#loginSubmit').on('click', function(e){
     prevPage(previous)
    })
       $("#createMatchButton").on('click', function() {
-    router.navigate('/createMatch', {trigger: true});
+    router.navigate('/parks', {trigger: true});
    });
       $("#area").on('click', function() {
     geoFindMe();
@@ -268,7 +268,7 @@ $('#loginSubmit').on('click', function(e){
     window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
-    router.navigate('/createMatch', {trigger: true});
+    router.navigate('/parks', {trigger: true});
    });
    $("#area").on('click', function() {
     geoFindMe();
@@ -310,7 +310,7 @@ $('#loginSubmit').on('click', function(e){
     window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
-    router.navigate('/createMatch', {trigger: true});
+    router.navigate('/parks', {trigger: true});
    });
    $("#area").on('click', function() {
     geoFindMe();
@@ -349,7 +349,7 @@ $('#loginSubmit').on('click', function(e){
     window.scrollTo(0, 450);
    })
    $("#createMatchButton").on('click', function() {
-    router.navigate('/createMatch', {trigger: true});
+    router.navigate('/parks', {trigger: true});
    });
    $("#area").on('click', function() {
     geoFindMe();
@@ -433,7 +433,7 @@ if ($("#rpass").val() === ($("#rerpass").val())) {
 
 ////////////////////////////////////////////////////////////
 // Creating the router for the home page
-router.on('route:home', function(username, id){
+router.on('route:home', function(username, id) {
   var Match = Backbone.Model.extend({
   initialize: function () {
   },
@@ -507,7 +507,7 @@ router.on('route:home', function(username, id){
     console.log('latitude '+latitude);
     console.log('longitude '+longitude);
   }
-          router.navigate('/createMatch', {trigger: true});
+          router.navigate('/parks', {trigger: true});
         })
     },
     error: function(err) {

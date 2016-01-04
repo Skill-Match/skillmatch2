@@ -1,19 +1,27 @@
 #matchDetailContainer {
   height: 30em; }
   #matchDetailContainer li {
-    list-style-type: none;
-    margin-bottom: 15px; }
-  #matchDetailContainer ul {
-    padding-top: 60px; }
-  #matchDetailContainer a {
-    text-decoration: none; }
+    list-style-type: none; }
+  #matchDetailContainer #playersFeedback {
+    width: 20px; }
+  #matchDetailContainer #matchJoin {
+    width: 35%;
+    position: relative;
+    left: 20%;
+    bottom: 15.2em; }
+    #matchDetailContainer #matchJoin li {
+      margin-bottom: 10px; }
   #matchDetailContainer #matchSkill {
-    position: absolute;
-    left: 16em;
-    top: 11.35em; }
+    position: relative;
+    left: 66%;
+    top: 6em; }
+  #matchDetailContainer #playerImage {
+    position: relative;
+    left: 24%;
+    bottom: 14em;
+    height: 110px; }
   #matchDetailContainer .skill {
-    width: 300px;
-    margin-left: 8px; }
+    width: 59%; }
   #matchDetailContainer #join {
     padding: 15px 30px;
     background-color: #1e8880;
@@ -22,9 +30,9 @@
     border-radius: 20px;
     box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
     outline: none;
-    position: absolute;
-    left: 5em;
-    top: 25em; }
+    position: relative;
+    left: 70%;
+    bottom: 28.2em; }
   #matchDetailContainer #join:active {
     box-shadow: none; }
   #matchDetailContainer #confirm {
@@ -54,18 +62,20 @@
   #matchDetailContainer #decline:active {
     box-shadow: none; }
   #matchDetailContainer #sportImage {
-    height: 200px;
-    width: 200px;
-    float: left;
-    margin-top: 40px;
-    margin-left: 20px; }
+    display: inline-block;
+    width: 20%;
+    margin: 1% 2%;
+    position: relative;
+    top: 4em; }
+    #matchDetailContainer #sportImage img {
+      width: 140%;
+      height: 14em;
+      position: relative;
+      bottom: 1em; }
   #matchDetailContainer #cancel {
     font-size: 12px; }
   #matchDetailContainer #update {
     font-size: 12px; }
-  #matchDetailContainer #matchDescription {
-    width: 600px;
-    padding-left: 240px; }
   #matchDetailContainer #cancelEdit {
     padding-left: 50px; }
     #matchDetailContainer #cancelEdit a {

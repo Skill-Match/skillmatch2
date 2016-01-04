@@ -2,26 +2,37 @@
   height: 30em;
   li {
     list-style-type: none;
-    margin-bottom: 15px;
+  }
+  #playersFeedback {
+    width: 20px;
   }
 
-  ul {
-    padding-top: 60px;
+  #matchJoin {
+    width: 35%;
+    position: relative;
+    left: 20%;
+    bottom: 15.2em;
 
+    li {
+      margin-bottom: 10px;
+    }
   }
 
-  a {
-    text-decoration: none;
-  }
   #matchSkill {
-    position: absolute;
-    left:16em;
-    top: 11.35em;
+    position: relative;
+    left: 66%;
+    top: 6em;
+  }
+
+  #playerImage {
+    position: relative;
+    left: 24%;
+    bottom: 14em;
+    height: 110px;
   }
 
   .skill {
-    width: 300px;
-    margin-left: 8px;
+    width: 59%;
   }
 
   #join {
@@ -32,9 +43,9 @@
     border-radius: 20px;
     box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
     outline: none;
-    position: absolute;
-    left: 5em;
-    top: 25em;
+    position: relative;
+    left: 70%;
+    bottom: 28.2em;
   }
 
   #join:active {
@@ -74,14 +85,18 @@
   #decline:active {
     box-shadow: none;
   }
-
-
   #sportImage {
-    height: 200px;
-    width: 200px;
-    float: left;
-    margin-top: 40px;
-    margin-left: 20px;
+    display: inline-block;
+    width: 20%;
+    margin: 1% 2%;
+    position: relative;
+    top: 4em;
+    img {
+      width: 140%;
+      height: 14em;
+      position: relative;
+      bottom: 1em;
+    }
   }
 
   #cancel {
@@ -92,10 +107,6 @@
     font-size: 12px;
   }
 
-  #matchDescription {
-    width: 600px;
-    padding-left: 240px;
-  }
   #cancelEdit {
     padding-left: 50px;
     a {
