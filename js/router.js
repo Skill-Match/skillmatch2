@@ -526,7 +526,7 @@ var userProfile = new Profiles(id);
 
     $('#rtxt').prop('checked', true)
     $(".register").on('click', function(e) {
-      
+
     e.preventDefault();
     userProfile = new profileContainer({id:id});
     userProfile.set({
@@ -549,7 +549,7 @@ var userProfile = new Profiles(id);
         console.log("error", err);
       }
   });
-      
+
   });
 
       },
@@ -1455,4 +1455,4 @@ $('body').on('click', 'a', function (e){
 $('body').on('hover', 'span', function (e){
   e.preventDefault();
 });
-module.exports = router;
+module.exports = router;// This is just a sample script. Paste your real code (javascript or HTML) here.
