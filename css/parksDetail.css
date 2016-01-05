@@ -1,4 +1,15 @@
 #parksPage * {
-  display: inline-block; }
+  display: inline-block;
+  margin: 0; }
+#parksPage #parksDetail {
+  background-color: #e3e3e3;
+  height: 250px;
+  font-size: 20px;
+  border-bottom: solid black 1px;
+  width: 100%; }
+  #parksPage #parksDetail #googleMaps2 {
+    position: relative;
+    top: .5em;
+    right: 1%; }
 
 /*# sourceMappingURL=parksDetail.css.map */
