@@ -1,30 +1,30 @@
 <div id="parksContainer">
+  <label>Input location</label><input id="zipcode" type="text" placeholder="Zip Code" /><button id="zip">Search</button>
+  <button id="locate">Show my location</button>
   {{#data}}
-  <ul id="parks">
-    <li id="parkPic"><img id="parksImage"src="{{image_url}}"></li>
+  <ul class="parks">
     <li>
-  <iframe
-  width="200"
-  height="200"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ
-    &q={{name}}+{{postal_code}}">
-</iframe>
-</li>
-    <li id="parkDet"><a href="/parksDetail/{{id}}">{{name}}</a></br>{{rating}}/5</br><a class="yelp" href="{{url}}"> Yelp Park Review</a></li>
-    <li>{{display_address1}} </br> {{display_address3}}</br>{{distance}}</li>
-    <li id="courtSet">
-        {{#court_set}}
-        <ul id="available">
-          <li><img src="{{img_url}}"></br>{{sport}}</li>
-        </ul>
-        {{/court_set}}</li>
-    <li id="parkMatch"><a type="submit" href="/parkCreateMatch/{{id}}">Create Match Here</a></li>
-  </ul>
+      <iframe
+      id="googleMaps"
+      width="300"
+      height="300"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ
+        &q={{name}}+{{display_address3}}&zoom=12">
+      </iframe>
+    </li>
+    <li id="parkPic"><img class="parksImage"src="{{image_url}}"></li>
+    <li id="parkDet"><a href="/parksDetail/{{id}}"><div id="parkName">{{name}}</div></a>{{rating}}/5</br><a href="{{url}}"> Yelp Park Review</a></li>
+    <li class="parkAddress">{{display_address1}} </br> {{display_address3}}</br>{{distance}} Miles</li>
+    <li class="parkMatch"><a type="submit" href="/parkCreateMatch/{{id}}">Create Match</a></li>
+    <li class="availableSports">
+    {{#court_set}}
+    <img class="sportPic"src="{{img_url}}">
+    {{/court_set}}
+    </li>
+    </ul>
   {{/data}}
   </div>
-<button id="locate">Show my location</button>
-<label>Input location</label><input id="zipcode" type="text" /><button id="zip">submit</button>
   <button id="backPark"> Back </button>
   <button id="nextPark"> Next </button>
 

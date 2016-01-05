@@ -1,23 +1,4 @@
-#parksPage #parksDetail {
-  font-size: 2em;
-  text-align: center; }
-#parksPage a {
-  text-decoration: none;
-  color: #324053; }
-#parksPage a:hover {
-  text-decoration: underline; }
-#parksPage #parkImage {
-  width: 200px;
-  height: 200px; }
-#parksPage ul {
-  list-style: none; }
-#parksPage .parkMatches {
-  font-size: 2em;
-  margin-top: 20px; }
-  #parksPage .parkMatches li:nth-child(5n+0) {
-    border-bottom: 1px solid black; }
-  #parksPage .parkMatches #sportImage {
-    width: 200px;
-    height: 200px; }
+#parksPage * {
+  display: inline-block; }
 
 /*# sourceMappingURL=parksDetail.css.map */

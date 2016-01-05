@@ -1,38 +1,63 @@
 #parksContainer {
   width: 90%;
   display: inline-block;
-  margin: 5%; }
-  #parksContainer #parks {
+  margin: 5%;
+  margin-top: 2%; }
+  #parksContainer #zip {
+    margin-left: 1%; }
+  #parksContainer .parks {
     padding: 0;
     float: left;
-    height: auto;
+    height: 20em;
     width: 100%;
     background-color: white;
-    list-style: none;
-    border-bottom: 1px solid #4f1e47; }
-    #parksContainer #parks li {
+    list-style: none; }
+    #parksContainer .parks li {
       display: inline-block;
       width: 20%; }
-    #parksContainer #parks .parkName a {
+    #parksContainer .parks a {
       text-decoration: none;
       font-size: 1em;
       color: black; }
-    #parksContainer #parks #parkPic {
-      width: 10%; }
-    #parksContainer #parks #parkDet a {
-      text-decoration: none;
-      font-size: 1em;
-      color: black; }
-    #parksContainer #parks #available {
-      padding: 0;
-      list-style: none;
-      text-align: center; }
-      #parksContainer #parks #available img {
-        width: 100%; }
-    #parksContainer #parks #parkMatch {
+    #parksContainer .parks .availableSports {
+      float: left;
+      width: 45%;
+      list-style-type: none;
       position: relative;
-      left: 15%;
-      bottom: 2.5em;
+      left: 40%;
+      bottom: 8em; }
+      #parksContainer .parks .availableSports .sportPic {
+        width: 19%;
+        padding-right: 0.1em; }
+    #parksContainer .parks #googleMaps {
+      float: left;
+      position: relative;
+      top: .5em;
+      left: 10%; }
+    #parksContainer .parks .parksImage {
+      position: relative;
+      left: 88%;
+      bottom: 12.3em; }
+    #parksContainer .parks #parkName {
+      font-size: 1.2em; }
+    #parksContainer .parks #parkPic {
+      width: 10%; }
+    #parksContainer .parks #parkDet {
+      position: relative;
+      left: 8%;
+      bottom: 14em; }
+      #parksContainer .parks #parkDet a {
+        text-decoration: none;
+        font-size: 1em;
+        color: black; }
+    #parksContainer .parks .parkAddress {
+      position: relative;
+      right: 22.2%;
+      bottom: 8.5em; }
+    #parksContainer .parks .parkMatch {
+      position: relative;
+      left: 8%;
+      bottom: 10.5em;
       width: 10%;
       color: white;
       background-color: #ef3122;
@@ -40,9 +65,13 @@
       border: none;
       outline: none;
       box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);
-      text-align: center; }
-      #parksContainer #parks #parkMatch a {
-        color: white;
-        text-decoration: none; }
+      text-align: center;
+      padding: 1%;
+      font-size: 18px; }
+    #parksContainer .parks .parkMatch:active {
+      box-shadow: none; }
+    #parksContainer .parks a {
+      color: white;
+      text-decoration: none; }
 
 /*# sourceMappingURL=parks.css.map */
