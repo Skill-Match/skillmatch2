@@ -10,7 +10,7 @@ var login = require('./templates/login.html');
 var signup = require('./templates/signup.html');
 var main = require('./templates/main.html');
 var parkList = require('./templates/parkList.html');
-var match = require('./templates/match.html');
+var matchPage = require('./templates/match.html');
 var updatematch = require('./templates/updatematch.html');
 var userUpdate = require('./templates/userUpdate.html');
 var history = require('./templates/history.html');
@@ -24,6 +24,7 @@ var parksDetail = require('./templates/parksDetail.html');
 var parkCreateMatch = require('./templates/parkCreateMatch.html');
 var parkCreatePage = require('./templates/parkCreatePage.html');
 var counter = 1;
+var jQuery = require("jquery");
 
 
 
@@ -691,21 +692,6 @@ var Matches = Backbone.Collection.extend({
 // Match Detail Page
 
 router.on('route:match', function(id, username) {
-//   function geoFindMe() {
-//   function success(position) {
-//     var latitude  = position.coords.latitude;
-//     var longitude = position.coords.longitude;
-//     var park = $('#parkName').val()
-//     console.log('latitude '+latitude);
-//     console.log('longitude '+longitude);
-//     directions.setAttribute('src', 'https://www.google.com/maps/embed/v1/directions?origin='+latitude+" "+longitude+'&destination='+park+'&key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ')
-//   };
-
-//   function error() {
-//   };
-
-//   navigator.geolocation.getCurrentPosition(success, error);
-// }
     var matchDetail = new matchContainer();
     matchDetail.fetch({
       url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
@@ -715,7 +701,7 @@ router.on('route:match', function(id, username) {
         var confirm = resp.toJSON().is_confirmed;
         var completed = resp.toJSON().is_completed;
         var open = resp.toJSON().is_open;
-        var html = match({"data": resp.toJSON()});
+        var html = matchPage({"data": resp.toJSON()});
         console.log("success", resp);
         var matchTemplate = $("#matchTemplate").text();
         var matchHTML = Mustache.render(matchTemplate, 'data');
@@ -965,16 +951,16 @@ router.on('route:parkCreateMatch', function(id, name) {
         time: $("#addParkTime").val()
       })
       match.save(null, {
-        url: "https://skill-match.herokuapp.com/api/matches/",
-        success: function(resp) {
-          console.log("success", resp);
-          var id = resp.toJSON().id;
-          router.navigate('/match/' + id, {trigger: true});
-        },
-        error: function(err) {
-          console.log("error", err);
-        }
-      })
+    url: 'https://skill-match.herokuapp.com/api/matches/',
+      success: function(resp) {
+        console.log("success", resp);
+        var id = resp.toJSON().id;
+        router.navigate('/match/' + id, {trigger: true});
+      },
+      error: function(err) {
+        console.log("error", err);
+      }
+  });
     })
   },
     error: function(err) {
@@ -982,57 +968,6 @@ router.on('route:parkCreateMatch', function(id, name) {
     }
   });
 });
-
-router.on('route:parkCreatePage', function(id, name) {
-  var html = parkCreatePage;
-  $("#container").html(html);
-  var parkCreate = Backbone.Model.extend({
-    initialize: function(){
-    },
-    defaults: {
-      sport: null,
-      other: null,
-      num_courts: null,
-      lat: null,
-      long: null
-    },
-    url: "http://skill-match.herokuapp.com/api/courts/"
-  });
-    function geoFindMe() {
-    function success(position) {
-      var latitude  = position.coords.latitude;
-      var longitude = position.coords.longitude;
-      console.log('latitude '+latitude);
-      console.log('longitude '+longitude);
-      var newPark = new parkCreate();
-       newPark.set ({
-        park: id,
-        sport: $("#addNewParkSport").val(),
-        other: $("#addOtherParkSport").val(),
-        num_courts: $("#addNumCourts").val(),
-        lat: latitude,
-        long: longitude
-      });
-      newPark.save (null, {
-        success: function(resp) {
-          console.log('success', resp);
-          router.navigate("/parks", {trigger:true});
-        },
-        error: function(err) {
-          console.log('error', err);
-        }
-      })
-    }
-      function error(err) {
-      console.log("error", err);
-    }
-    navigator.geolocation.getCurrentPosition(success, error);
-  }
-
-    $("#createCourtButton").on('click', function() {
-      geoFindMe();
-    })
-  })
 
 var feedbackContainer = Backbone.Model.extend({
   initialize: function() {
@@ -1461,6 +1396,55 @@ router.on('route:parksDetail', function(id, name){
       $("#parksDetail").html(parksDetailHTML);
       $("#container").html(html);
       console.log("success", resp);
+      $('.add').on('click', function(){
+        $('dialog').toggleClass();
+        var parkCreate = Backbone.Model.extend({
+    initialize: function(){
+    },
+    defaults: {
+      sport: null,
+      other: null,
+      num_courts: null,
+      lat: null,
+      long: null
+    },
+    url: "http://skill-match.herokuapp.com/api/courts/"
+  });
+    function geoFindMe() {
+    function success(position) {
+      var latitude  = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      console.log('latitude '+latitude);
+      console.log('longitude '+longitude);
+      var newPark = new parkCreate();
+       newPark.set ({
+        park: id,
+        sport: $(".addNewParkSport").val(),
+        other: $(".addOtherParkSport").val(),
+        num_courts: $(".addNumCourts").val(),
+        lat: latitude,
+        long: longitude
+      });
+      newPark.save (null, {
+        success: function(resp) {
+          console.log('success', resp);
+          router.navigate("/parks", {trigger:true});
+        },
+        error: function(err) {
+          console.log('error', err);
+        }
+      })
+    }
+      function error(err) {
+      console.log("error", err);
+    }
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+
+    $(".createCourtButton").on('click', function() {
+      geoFindMe();
+    })
+      })
     },
     error: function(err) {
       console.log("error", err);

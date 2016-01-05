@@ -73,5 +73,9 @@
     #parksContainer .parks a {
       color: white;
       text-decoration: none; }
+    #parksContainer .parks #updateDetails {
+      position: relative;
+      left: 100%;
+      top: 6em; }
 
 /*# sourceMappingURL=parks.css.map */

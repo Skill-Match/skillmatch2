@@ -21,6 +21,21 @@
       <li>
         <a href="{{url}}"> Yelp Park Review</a>
       </li>
+      <li><button class="add">add court</button><dialog open class='hidden'>
+  <form class="addSport">
+    <select class="addNewParkSport" placeholder="Add New Sport">
+      <option value="Tennis">Tennis</option>
+      <option value="Football">Footballl</option>
+      <option value="Soccer">Soccer</option>
+      <option value="Basketball">Basketball</option>
+      <option value="Pickleball">Pickleball</option>
+    </select>
+    <label>Optional</label>
+    <input type="text" class="addOtherParkSport" placeholder="Add other sport">
+    <input type="text" class="addNumCourts" placeholder="Number of courts">
+  </form>
+  <button type="submit" class="createCourtButton">Create Court</button>
+</dialog></li>
     </ul>
     <p>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>
     <a id="createCourtAnchor" href="/parkCreatePage/{{id}}">Create Court</a>

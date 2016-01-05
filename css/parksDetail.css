@@ -1,6 +1,11 @@
 #parksPage * {
   display: inline-block;
   margin: 0; }
+#parksPage .hidden {
+  display: none; }
+#parksPage dialog {
+  width: 60%;
+  margin: 0 20%; }
 #parksPage #parksDetail {
   background-color: #e3e3e3;
   height: 250px;

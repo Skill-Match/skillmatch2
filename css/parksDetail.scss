@@ -3,6 +3,13 @@
     display: inline-block;
     margin: 0;
   }
+  .hidden{
+      display: none
+    }
+    dialog{
+      width: 60%;
+      margin: 0 20%;
+    }
   #parksDetail {
     background-color: #e3e3e3;
     height: 250px;

@@ -25,7 +25,7 @@
 <button type="submit" id="area"> Use Location </button></br>
 <div id="locating"></div>
 </div>
-<h3>Open Matches</h3>
+<h2>Open Matches</h2>
 {{#data}}
 {{#is_open}}
   <ul>
@@ -36,7 +36,7 @@
     <a id="parkAnchor" href="/parksDetail/{{park}}">{{park_name}}</a></li>
     <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
     </progress></li>
-<li id="players">{{#players}}<a href="/profile/{{id}}"><img src="{{small_img}}"></a>{{/players}} <img src="https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png"></li>
+<li class="players">{{#players}}<a href="/profile/{{id}}"><img src="{{small_img}}"></a><a class="name">{{username}}</a>{{/players}} <img class="empty" src="http://res.cloudinary.com/skill-match/image/upload/c_scale,w_50/v1451856777/Man_cqggt4.png"></li>
 <li id="matchSubmit"><a type="sumbit" href="/match/{{id}}"> Join </a></li>
 </ul>
 {{/is_open}}
