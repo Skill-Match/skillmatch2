@@ -2,6 +2,7 @@
 	width: 90%;
 	display: inline-block;
 	margin: 5%;
+	margin-top: 2%;
 	#zip {
 		margin-left: 1%;
 	}
@@ -17,12 +18,23 @@
 			display: inline-block;
 			width: 20%;
 		}
-
 		a{
 			text-decoration: none;
 			font-size: 1em;
 			color: black;
 		}
+		.availableSports {
+		float:left;
+		width: 45%;
+		list-style-type: none;
+		position: relative;
+		left: 40%;
+		bottom:8em;
+		.sportPic {
+			width: 19%;
+    padding-right: 0.1em;
+		}
+	}
 		#googleMaps {
 			float: left;
 			position: relative;
@@ -80,14 +92,4 @@
 		  }
 		}
 	}
-	.availableSports {
-		list-style-type: none;
-		.sportPic {
-    width: 8%;
-    float: left;
-    position: relative;
-    left: 39%;
-    margin-right: 15px;
-    bottom: 9em;
-		}
-	}
+
