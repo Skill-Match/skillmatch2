@@ -21,8 +21,11 @@
       <li>
         <a href="{{url}}"> Yelp Park Review</a>
       </li>
+      <li>
+        <p>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>
+      </li>
     </ul>
-    <p>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>
+
     <a id="createCourtAnchor" href="/parkCreatePage/{{id}}">Create Court</a>
     <a id="parkMatch" type="submit" href="/parkCreateMatch/{{id}}">Create Match</a>
     {{#court_set}}

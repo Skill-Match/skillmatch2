@@ -11,5 +11,8 @@
     position: relative;
     top: .5em;
     right: 1%; }
+#parksPage .parkName {
+  position: relative;
+  bottom: 6em; }
 
 /*# sourceMappingURL=parksDetail.css.map */
