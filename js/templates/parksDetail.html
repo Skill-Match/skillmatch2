@@ -1,21 +1,34 @@
 <div id="parksPage">
   {{#data}}
   <div id="parksDetail">
-  <a href="{{url}}"><img id="parkImage"src="{{image_url}}"></a>
-    <h2 class="parkName">{{name}}</h2>
-
     <ul>
-      <li>{{rating}}/5</li>
-      <li><a href="{{url}}"> Yelp Park Review</a></li>
+      <li>
+        <iframe
+          id="googleMaps2"
+          width="225"
+          height="225"
+          frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ
+          &q={{name}}+{{display_address3}}&zoom=12">
+        </iframe>
+      </li>
+      <li>
+        <h2 class="parkName">{{name}}</h2>
+      </li>
+      <li>
+        {{rating}}/5
+      </li>
+      <li>
+        <a href="{{url}}"> Yelp Park Review</a>
+      </li>
     </ul>
     <p>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>
     <a id="createCourtAnchor" href="/parkCreatePage/{{id}}">Create Court</a>
     <a id="parkMatch" type="submit" href="/parkCreateMatch/{{id}}">Create Match</a>
+    {{#court_set}}
+      <img src="{{small_sport_img}}"/>
+    {{/court_set}}
   </div>
-         {{#court_set}}
-
-            <li><img src="{{small_sport_img}}"/></li>
-          {{/court_set}}
     <ul class="parkMatches">
       {{#match_set}}
         {{#is_open}}
