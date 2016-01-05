@@ -1,7 +1,7 @@
 <div id="parksPage">
   {{#data}}
   <div id="parksDetail">
-    <ul>
+    <ul id="parksProfile">
       <li>
         <iframe
           id="googleMaps2"
@@ -13,32 +13,34 @@
         </iframe>
       </li>
       <li>
-        <h2 class="parkName">{{name}}</h2>
+        <h3 class="parkName">{{name}}</h3>
+        <p class="parkAddress">{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>
+        </br>
+        <p class="yelp">{{rating}}/5</p>
+        <a class="yelp" href="{{url}}"> Yelp Park Review</a>
+        <img src="{{small_sport_img}}"/>
       </li>
-      <li>
-        {{rating}}/5
-      </li>
-      <li>
-        <a href="{{url}}"> Yelp Park Review</a>
-      </li>
+      {{#court_set}}
+        <li>
+          <img id="sportIcon" src="{{small_sport_img}}"/>
+        </li>
+      {{/court_set}}
     </ul>
-    <p>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>
-    <a id="createCourtAnchor" href="/parkCreatePage/{{id}}">Create Court</a>
+    <a id="createCourtAnchor" href="/parkCreatePage/{{id}}">Add Sport</a>
     <a id="parkMatch" type="submit" href="/parkCreateMatch/{{id}}">Create Match</a>
-    {{#court_set}}
-      <img src="{{small_sport_img}}"/>
-    {{/court_set}}
   </div>
-    <ul class="parkMatches">
-      {{#match_set}}
-        {{#is_open}}
-          <li><img id="sportImage"src="{{img_url}}"></li>
-          <li class="match"><a href="/profile/{{creator}}" class="creatorName"> {{creator_name}} </a></li>
-          <li class="match">{{sport}}</li>
-          <li class="match"> Date: {{date}}</li>
-          <li class="match"> Time: {{time}}</li>
-        {{/is_open}}
-      {{/match_set}}
-    </ul>
+     {{#match_set}}
+      {{#is_open}}
+       <ul class="parkMatches">
+          <li id="sportImage"><a href="/match/{{id}}"><img src="{{img_url}}"></a></br></li>
+          <li class="description"> <a href="/match/{{id}}">{{date}}</a>
+          {{time}}</br>
+          <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
+          </progress></li>
+          <li class="players">{{#players}}<a href="/profile/{{id}}"><img class="smallImg"src="{{small_img}}"></a>{{/players}}
+           <li class="matchSubmit"><a type="sumbit" href="/match/{{id}}"> Join </a></li>
+        </ul>
+      {{/is_open}}
+    {{/match_set}}
   {{/data}}
 </div>

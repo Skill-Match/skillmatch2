@@ -9,11 +9,105 @@
     font-size: 20px;
     border-bottom: solid black 1px;
     width: 100%;
-
-    #googleMaps2 {
+    ul {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  #googleMaps2 {
+    position: relative;
+    top: .5em;
+    left: 7%;
+  }
+  .parkName {
+    position: relative;
+    bottom: 7em;
+    left: 6%;
+  }
+  .parkAddress {
+    position: relative;
+    bottom: 4.5em;
+    right: 34.5%;
+  }
+  .yelp {
+    position: relative;
+    bottom: 4.5em;
+    left: 6%;
+  }
+  #sportIcon {
+    position: relative;
+    right: 13em;
+  }
+  #parkMatch {
+    padding: 10px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+    text-decoration: none;
+    position: relative;
+    bottom: 8em;
+    left: 65%;
+  }
+  #createCourtAnchor {
+    padding: 10px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+    outline: none;
+    text-decoration: none;
+    position: relative;
+    bottom: 5em;
+    left: 75.4%;
+  }
+  .parkMatches {
+    background-color: #fff;
+    width: 70%;
+    margin: 1% 16%;
+    padding: 0;
+    height: 15em;
+      #sportImage {
+        img {
+        width: 80%;
+        margin: 5%;
+      }
+    }
+    .description {
       position: relative;
-      top: .5em;
-      right: 1%;
+      bottom: 11em;
+      right: 3%;
+    }
+    #skillProgress {
+      position: relative;
+      bottom: 8em;
+      right: 24.5%;
+    }
+    .players {
+      position: relative;
+      right: 50%;
+      bottom: 2em;
+    }
+    .matchSubmit {
+      position: relative;
+      bottom: 6em;
+      right: 0%;
+      padding: 10px;
+      background-color: #1e8880;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+      outline: none;
+      a {
+      text-decoration: none;
+      color: white
+      }
     }
   }
 }
+
+

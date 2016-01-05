@@ -7,9 +7,86 @@
   font-size: 20px;
   border-bottom: solid black 1px;
   width: 100%; }
-  #parksPage #parksDetail #googleMaps2 {
+  #parksPage #parksDetail ul {
+    width: 100%;
+    padding: 0; }
+#parksPage #googleMaps2 {
+  position: relative;
+  top: .5em;
+  left: 7%; }
+#parksPage .parkName {
+  position: relative;
+  bottom: 7em;
+  left: 6%; }
+#parksPage .parkAddress {
+  position: relative;
+  bottom: 4.5em;
+  right: 34.5%; }
+#parksPage .yelp {
+  position: relative;
+  bottom: 4.5em;
+  left: 6%; }
+#parksPage #sportIcon {
+  position: relative;
+  right: 13em; }
+#parksPage #parkMatch {
+  padding: 10px;
+  background-color: #1e8880;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  bottom: 8em;
+  left: 65%; }
+#parksPage #createCourtAnchor {
+  padding: 10px;
+  background-color: #1e8880;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  bottom: 5em;
+  left: 75.4%; }
+#parksPage .parkMatches {
+  background-color: #fff;
+  width: 70%;
+  margin: 1% 16%;
+  padding: 0;
+  height: 15em; }
+  #parksPage .parkMatches #sportImage img {
+    width: 80%;
+    margin: 5%; }
+  #parksPage .parkMatches .description {
     position: relative;
-    top: .5em;
-    right: 1%; }
+    bottom: 11em;
+    right: 3%; }
+  #parksPage .parkMatches #skillProgress {
+    position: relative;
+    bottom: 8em;
+    right: 24.5%; }
+  #parksPage .parkMatches .players {
+    position: relative;
+    right: 50%;
+    bottom: 2em; }
+  #parksPage .parkMatches .matchSubmit {
+    position: relative;
+    bottom: 6em;
+    right: 0%;
+    padding: 10px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none; }
+    #parksPage .parkMatches .matchSubmit a {
+      text-decoration: none;
+      color: white; }
 
 /*# sourceMappingURL=parksDetail.css.map */

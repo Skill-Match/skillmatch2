@@ -24,10 +24,10 @@ body {
   }
   #nav{
     float: right;
-    position: relative;
+    position: absolute;
     list-style: none;
     right: 7%;
-    bottom: -1em;
+    top: 1em;
     display: inline-block;
   }
   #nav a {
