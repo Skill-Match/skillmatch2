@@ -37,7 +37,7 @@
     #parksContainer .parks .parksImage {
       position: relative;
       left: 88%;
-      bottom: 12.3em; }
+      bottom: 12em; }
     #parksContainer .parks #parkName {
       font-size: 1.2em; }
     #parksContainer .parks #parkPic {
@@ -45,7 +45,7 @@
     #parksContainer .parks #parkDet {
       position: relative;
       left: 8%;
-      bottom: 14em; }
+      bottom: 15em; }
       #parksContainer .parks #parkDet a {
         text-decoration: none;
         font-size: 1em;
