@@ -2,18 +2,18 @@
   width: 90%;
   display: inline-block;
   margin: 5%; }
+  #parksContainer #zip {
+    margin-left: 1%; }
   #parksContainer .parks {
     padding: 0;
     float: left;
     height: 20em;
     width: 100%;
     background-color: white;
-    list-style: none;
-    border-bottom: 1px solid #4f1e47; }
+    list-style: none; }
     #parksContainer .parks li {
       display: inline-block;
-      width: 20%;
-      margin-bottom: 5px; }
+      width: 20%; }
     #parksContainer .parks a {
       text-decoration: none;
       font-size: 1em;
@@ -27,6 +27,8 @@
       position: relative;
       left: 88%;
       bottom: 12.3em; }
+    #parksContainer .parks #parkName {
+      font-size: 1.2em; }
     #parksContainer .parks #parkPic {
       width: 10%; }
     #parksContainer .parks #parkDet {
@@ -55,6 +57,8 @@
       text-align: center;
       padding: 1%;
       font-size: 18px; }
+    #parksContainer .parks .parkMatch:active {
+      box-shadow: none; }
     #parksContainer .parks a {
       color: white;
       text-decoration: none; }

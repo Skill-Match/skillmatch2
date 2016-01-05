@@ -63,7 +63,7 @@
 
 	$(document).ready(function() {
 	  var Cookie = __webpack_require__(34);
-	  var Router = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./router.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	  var Router = __webpack_require__(35);
 	});
 
 
@@ -9320,7 +9320,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #324053;\n  font-family: 'Ubuntu', sans-serif;\n}\n#header {\n  height: 6.5em;\n  width: 100%;\n}\n#title {\n    display: inline-block;\n    color: white;\n    position: relative;\n    bottom: 25%;\n  }\n#logo {\n    display: inline-block;\n    width: 8%;\n    margin-left: 2%;\n    margin-top: 1%;\n  }\n#logo img{\n    height: 80px;\n    width: 80px;\n  }\n  #nav{\n    float: right;\n    position: relative;\n    list-style: none;\n    right: 7%;\n    top: 22%;\n    display: inline-block;\n  }\n  #nav a {\n    font-size: 30px;\n    color: white;\n    text-decoration: none;\n  }\n  #nav #logout {\n    font-size: 12px;\n    margin-left: 5px;\n  }\n#container {\n  background-color: #f5f2ec;\n}\n#nav #signUp {\n  font-size: 17px;\n  float: right;\n  position: relative;\n  left: 18%;\n  bottom: 1.5em;\n  color: white;\n}\ninput {\n  font-size: 15px;\n  margin: 1em .5em .5em;\n  border: none;\n  width: 150px;\n  padding: 8px 10px;\n  border-radius: 5px;\n}\nbutton {\n  margin-top: 1.5em;\n  padding: 8px;\n  background-color:#f5f2ec;\n  border: none;\n  border-radius: 10px;\n  box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);\n  outline: none;\n}\nbutton:active {\n  box-shadow: none;\n}\n.footerNav {\n  font-size: 10px;\n  color: white;\n  text-decoration: none;\n  margin-right: .5em;\n  margin-left: .5em;\n}\n.footerNav ul {\n  margin-bottom: 3em;\n\n}\n#footer li{\n  display: inline-block;\n}\n#footer ul {\n  padding-left: 65%;\n}\n#footer p {\n  color: white;\n  font-size: 8px;\n}", ""]);
+	exports.push([module.id, "body {\n  background-color: #324053;\n  font-family: 'Ubuntu', sans-serif;\n}\n#header {\n  height: 6.5em;\n  width: 100%;\n}\n#title {\n    display: inline-block;\n    color: white;\n    position: relative;\n    bottom: 25%;\n  }\n#logo {\n    display: inline-block;\n    width: 8%;\n    margin-left: 2%;\n    margin-top: 1%;\n  }\n#logo img{\n    height: 80px;\n    width: 80px;\n  }\n  #nav{\n    float: right;\n    position: relative;\n    list-style: none;\n    right: 7%;\n    top: 1em;\n    display: inline-block;\n  }\n  #nav a {\n    font-size: 30px;\n    color: white;\n    text-decoration: none;\n  }\n  #nav #logout {\n    font-size: 12px;\n    margin-left: 5px;\n  }\n#container {\n  background-color: #f5f2ec;\n}\n#nav #signUp {\n  font-size: 17px;\n  float: right;\n  position: relative;\n  left: 18%;\n  bottom: 1.5em;\n  color: white;\n}\ninput {\n  font-size: 15px;\n  margin: 1em .5em .5em;\n  border: none;\n  width: 150px;\n  padding: 8px 10px;\n  border-radius: 5px;\n}\nbutton {\n  margin-top: 1.5em;\n  padding: 8px;\n  background-color:#f5f2ec;\n  border: none;\n  border-radius: 10px;\n  box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);\n  outline: none;\n}\nbutton:active {\n  box-shadow: none;\n}\n.footerNav {\n  font-size: 10px;\n  color: white;\n  text-decoration: none;\n  margin-right: .5em;\n  margin-left: .5em;\n}\n.footerNav ul {\n  margin-bottom: 3em;\n\n}\n#footer li{\n  display: inline-block;\n}\n#footer ul {\n  padding-left: 65%;\n}\n#footer p {\n  color: white;\n  font-size: 8px;\n}", ""]);
 
 	// exports
 
@@ -9950,7 +9950,7 @@
 
 
 	// module
-	exports.push([module.id, "#matchDetailContainer {\n  height: 30em; }\n  #matchDetailContainer li {\n    list-style-type: none;\n    margin-bottom: 15px; }\n  #matchDetailContainer ul {\n    padding-top: 60px; }\n  #matchDetailContainer a {\n    text-decoration: none; }\n  #matchDetailContainer #matchSkill {\n    position: absolute;\n    left: 16em;\n    top: 11.35em; }\n  #matchDetailContainer .skill {\n    width: 300px;\n    margin-left: 8px; }\n  #matchDetailContainer #join {\n    padding: 15px 30px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    left: 5em;\n    top: 25em; }\n  #matchDetailContainer #join:active {\n    box-shadow: none; }\n  #matchDetailContainer #confirm {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    top: 26em;\n    left: 3em; }\n  #matchDetailContainer #confirm:active {\n    box-shadow: none; }\n  #matchDetailContainer #decline {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    top: 30em;\n    left: 3em; }\n  #matchDetailContainer #decline:active {\n    box-shadow: none; }\n  #matchDetailContainer #sportImage {\n    height: 200px;\n    width: 200px;\n    float: left;\n    margin-top: 40px;\n    margin-left: 20px; }\n  #matchDetailContainer #cancel {\n    font-size: 12px; }\n  #matchDetailContainer #update {\n    font-size: 12px; }\n  #matchDetailContainer #matchDescription {\n    width: 600px;\n    padding-left: 240px; }\n  #matchDetailContainer #cancelEdit {\n    padding-left: 50px; }\n    #matchDetailContainer #cancelEdit a {\n      color: black; }\n    #matchDetailContainer #cancelEdit a:hover {\n      text-decoration: underline; }\n  #matchDetailContainer #parkLink {\n    color: black; }\n  #matchDetailContainer #parkLink:hover {\n    text-decoration: underline; }\n  #matchDetailContainer #playersFeedback {\n    display: inline-block;\n    padding: 0; }\n\n/*# sourceMappingURL=match.css.map */\n", ""]);
+	exports.push([module.id, "#matchDetailContainer {\n  height: 30em; }\n  #matchDetailContainer li {\n    list-style-type: none; }\n  #matchDetailContainer #playersFeedback {\n    width: 20px; }\n  #matchDetailContainer #matchJoin {\n    width: 35%;\n    position: relative;\n    left: 20%;\n    bottom: 15.2em; }\n    #matchDetailContainer #matchJoin li {\n      margin-bottom: 10px; }\n  #matchDetailContainer #matchSkill {\n    position: relative;\n    left: 66%;\n    top: 6em; }\n  #matchDetailContainer #playerImage {\n    position: relative;\n    left: 24%;\n    bottom: 14em;\n    width: 7%; }\n  #matchDetailContainer .skill {\n    width: 59%; }\n  #matchDetailContainer #join {\n    padding: 15px 30px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: relative;\n    left: 70%;\n    bottom: 26.2em; }\n  #matchDetailContainer #join:active {\n    box-shadow: none; }\n  #matchDetailContainer #confirm {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    top: 26em;\n    left: 3em; }\n  #matchDetailContainer #confirm:active {\n    box-shadow: none; }\n  #matchDetailContainer #decline {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: absolute;\n    top: 30em;\n    left: 3em; }\n  #matchDetailContainer #decline:active {\n    box-shadow: none; }\n  #matchDetailContainer #sportImage {\n    display: inline-block;\n    width: 20%;\n    margin: 1% 2%;\n    position: relative;\n    top: 4em; }\n    #matchDetailContainer #sportImage img {\n      width: 140%;\n      height: 14em;\n      position: relative;\n      bottom: 1em; }\n  #matchDetailContainer #cancel {\n    font-size: 12px; }\n  #matchDetailContainer #update {\n    font-size: 12px; }\n  #matchDetailContainer #cancelEdit {\n    display: inline-block;\n    position: relative;\n    right: 5%;\n    bottom: 14em; }\n    #matchDetailContainer #cancelEdit a {\n      color: black; }\n    #matchDetailContainer #cancelEdit a:hover {\n      text-decoration: underline; }\n  #matchDetailContainer #parkLink {\n    color: black; }\n  #matchDetailContainer #parkLink:hover {\n    text-decoration: underline; }\n  #matchDetailContainer #playersFeedback {\n    display: inline-block;\n    padding: 0; }\n\n/*# sourceMappingURL=match.css.map */\n", ""]);
 
 	// exports
 
@@ -10110,7 +10110,7 @@
 
 
 	// module
-	exports.push([module.id, "#parksContainer {\n  width: 90%;\n  display: inline-block;\n  margin: 5%; }\n  #parksContainer #parks {\n    padding: 0;\n    float: left;\n    height: auto;\n    width: 100%;\n    background-color: white;\n    list-style: none;\n    border-bottom: 1px solid #4f1e47; }\n    #parksContainer #parks li {\n      display: inline-block;\n      width: 20%; }\n    #parksContainer #parks .parkName a {\n      text-decoration: none;\n      font-size: 1em;\n      color: black; }\n    #parksContainer #parks #parkPic {\n      width: 10%; }\n    #parksContainer #parks #parkDet a {\n      text-decoration: none;\n      font-size: 1em;\n      color: black; }\n    #parksContainer #parks #available {\n      padding: 0;\n      list-style: none;\n      text-align: center; }\n      #parksContainer #parks #available img {\n        width: 100%; }\n    #parksContainer #parks #parkMatch {\n      position: relative;\n      left: 15%;\n      bottom: 2.5em;\n      width: 10%;\n      color: white;\n      background-color: #ef3122;\n      border-radius: 15px;\n      border: none;\n      outline: none;\n      box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);\n      text-align: center; }\n      #parksContainer #parks #parkMatch a {\n        color: white;\n        text-decoration: none; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
+	exports.push([module.id, "#parksContainer {\n  width: 90%;\n  display: inline-block;\n  margin: 5%; }\n  #parksContainer #zip {\n    margin-left: 1%; }\n  #parksContainer .parks {\n    padding: 0;\n    float: left;\n    height: 20em;\n    width: 100%;\n    background-color: white;\n    list-style: none;\n    border-bottom: 1px solid #4f1e47; }\n    #parksContainer .parks li {\n      display: inline-block;\n      width: 20%; }\n    #parksContainer .parks a {\n      text-decoration: none;\n      font-size: 1em;\n      color: black; }\n    #parksContainer .parks #googleMaps {\n      float: left;\n      position: relative;\n      top: .5em;\n      left: 10%; }\n    #parksContainer .parks .parksImage {\n      position: relative;\n      left: 88%;\n      bottom: 12.3em; }\n    #parksContainer .parks #parkName {\n      font-size: 1.2em; }\n    #parksContainer .parks #parkPic {\n      width: 10%; }\n    #parksContainer .parks #parkDet {\n      position: relative;\n      left: 8%;\n      bottom: 14em; }\n      #parksContainer .parks #parkDet a {\n        text-decoration: none;\n        font-size: 1em;\n        color: black; }\n    #parksContainer .parks .parkAddress {\n      position: relative;\n      right: 22.2%;\n      bottom: 8.5em; }\n    #parksContainer .parks .parkMatch {\n      position: relative;\n      left: 8%;\n      bottom: 10.5em;\n      width: 10%;\n      color: white;\n      background-color: #ef3122;\n      border-radius: 15px;\n      border: none;\n      outline: none;\n      box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);\n      text-align: center;\n      padding: 1%;\n      font-size: 18px; }\n    #parksContainer .parks .parkMatch:active {\n      box-shadow: none; }\n    #parksContainer .parks a {\n      color: white;\n      text-decoration: none; }\n\n.availableSports {\n  list-style-type: none; }\n  .availableSports .sportPic {\n    width: 8%;\n    float: left;\n    position: relative;\n    left: 39%;\n    margin-right: 15px;\n    bottom: 9em; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
 
 	// exports
 
@@ -10339,6 +10339,7857 @@
 		return init();
 	}));
 
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {////////////////////////////////////////////////////////////
+	// Requiring in all JS libraries
+	// Requiring in all templates
+	// Setting global variables
+	var Backbone = __webpack_require__(36);
+	var Mustache = __webpack_require__(38);
+	var Cookie = __webpack_require__(34);
+	var BackbonePagination = __webpack_require__(39)
+	var login = __webpack_require__(40);
+	var signup = __webpack_require__(44);
+	var main = __webpack_require__(45);
+	var parkList = __webpack_require__(46);
+	var match = __webpack_require__(47);
+	var updatematch = __webpack_require__(48);
+	var userUpdate = __webpack_require__(49);
+	var history = __webpack_require__(50);
+	var profile = __webpack_require__(51);
+	var createMatch = __webpack_require__(52);
+	var feedback = __webpack_require__(53);
+	var home = __webpack_require__(54);
+	var matchModel = __webpack_require__(55);
+	var parks = __webpack_require__(56);
+	var parksDetail = __webpack_require__(57);
+	var parkCreateMatch = __webpack_require__(58);
+	var parkCreatePage = __webpack_require__(59);
+	var counter = 1;
+
+
+
+	////////////////////////////////////////////////////////////
+
+	////////////////////////////////////////////////////////////
+	// Creating routers for navigation
+	var Router = Backbone.Router.extend({
+	  initialize: function () {
+	    Backbone.history.start({pushState: true});
+	  },
+	  routes: {
+	    "feedback/:id":"feedback",
+	    "match/:id":"match",
+	    "updatematch/:id":"updatematch",
+	    "signup":"signup",
+	    "userUpdate/:id":"userUpdate",
+	    "profile/:creator":"profile",
+	    "createMatch":"createMatch",
+	    "challenge/:id":"challenge",
+	    "home/:username":"home",
+	    "parks":"parks",
+	    "parkCreateMatch/:id":"parkCreateMatch",
+	    "parkCreatePage/:id":"parkCreatePage",
+	    "parksDetail/:id":"parksDetail",
+	    "":"index"
+	  },
+	  index: function (username) {
+	    var Match = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    creator: null,
+	    creator_name: null,
+	    description: null,
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	  },
+	  url: 'https://skill-match.herokuapp.com/api/matches/'
+	});
+
+	// Using Backbone fetch to GET the up coming matches
+	var Matches = Backbone.Collection.extend({
+	  model: Match,
+	  url: 'https://skill-match.herokuapp.com/api/matches/'
+	});
+	$('#loginSubmit').on('click', function(e){
+	          e.preventDefault();
+	          var username = $("#username").val();
+	          var password = $("#password").val();
+	          var homeBtn = document.createElement('a');
+	          var link = document.createTextNode("Hello, " + username);
+	          homeBtn.appendChild(link);
+	          $.ajax({
+	        url:"https://skill-match.herokuapp.com/api/api-token-auth/",
+	        method:'POST',
+	        data: {username: username, password:password}
+	      }).then(function(resp){
+	        setToken(resp.token);
+	        console.log(resp);
+	        var user_id = resp.user_id;
+	        var user = resp.username;
+	        var token = resp.token;
+	        Cookie.set('token', token);
+	        Cookie.set('uid', user_id);
+	        Cookie.set('userName', user);
+	        $('#nav').html(homeBtn);
+	        $('#nav').append('<a id="logout"> (Logout) </a>');
+	        homeBtn.setAttribute('href', '/home/'+username);
+	        router.navigate('/home/' + username , {trigger:true})
+	      });
+	    });
+	    function setToken(token) {
+	  var backboneSync = Backbone.sync;
+	  Backbone.sync = function(method,model,options) {
+	    options.headers = {
+	      'Authorization': 'Token ' + token
+	    };
+	    backboneSync(method,model,options);
+	    };
+	  }
+
+	  function geoFindMe() {
+	  function success(position) {
+	    var latitude  = position.coords.latitude;
+	    var longitude = position.coords.longitude;
+	    console.log('latitude '+latitude);
+	    console.log('longitude '+longitude);
+	    var match = new Match();
+	    match.fetch({
+	      url: 'https://skill-match.herokuapp.com/api/matches/?lat='+ latitude + '&long=' + longitude,
+	 success: function(resp) {
+	    var html = main({'data': resp.toJSON().results});
+	    var mainTemplate = $("#mainTemplate").text();
+	    var mainHTML = Mustache.render(mainTemplate, 'data');
+	    var next = resp.toJSON().next;
+	    var previous = resp.toJSON().previous;
+	    $("#upComing").html(mainHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp)
+	   $("#sport").on('change', function() {
+	      filterSport();
+	    })
+	   $('#next').on('click', function(){
+	    nextPage(next)
+	    window.scrollTo(0, 450);
+	   })
+	   $('#prev').on('click', function(){
+	    prevPage(prev)
+	    window.scrollTo(0, 450);
+	   })
+	   $("#createMatchButton").on('click', function() {
+	    router.navigate('/parks', {trigger: true});
+	   });
+	   $("#area").on('click', function() {
+	    geoFindMe();
+	   });
+	   $("#submitArea").on('click', function() {
+	    matchesAround();
+	   })
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+	});
+	  };
+
+	  function error() {
+	  };
+
+	  navigator.geolocation.getCurrentPosition(success, error);
+	}
+
+	  function matchesAround(zip) {
+	    var match = new Match();
+	    match.fetch({
+	      url: 'http://skill-match.herokuapp.com/api/matches/?zip='+zip,
+	 success: function(resp) {
+	    var html = main({'data': resp.toJSON().results});
+	    var mainTemplate = $("#mainTemplate").text();
+	    var mainHTML = Mustache.render(mainTemplate, 'data');
+	    var next = resp.toJSON().next;
+	    var previous = resp.toJSON().previous;
+	    $("#upComing").html(mainHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp)
+	   $("#sport").on('change', function() {
+	      filterSport();
+	    })
+	   $('#next').on('click', function(){
+	    nextPage(next)
+	    window.scrollTo(0, 450);
+	   })
+	   $('#prev').on('click', function(){
+	    prevPage(prev)
+	    window.scrollTo(0, 450);
+	   })
+	   $("#createMatchButton").on('click', function() {
+	    router.navigate('/parks', {trigger: true});
+	   });
+	   $("#area").on('click', function() {
+	    geoFindMe();
+	   });
+	   $("#submitArea").on('click', function() {
+	    matchesAround();
+	   })
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+	});
+	  };
+
+
+	  function filterSport() {
+
+	    var match = counter++
+	    var match = new Match();
+	          match.fetch({
+	        url: "http://skill-match.herokuapp.com/api/matches/?sport=" + $("#sport").val(),
+
+	        success: function(resp) {
+	          var html = main({'data': resp.toJSON().results});
+	          var mainTemplate = $("#mainTemplate").text();
+	          var mainHTML = Mustache.render(mainTemplate, 'data');
+	          var next = resp.toJSON().next;
+	          var previous = resp.toJSON().previous;
+	          $("#upComing").html(mainHTML);
+	          $("#container").html(html);
+	          $("#sport").on('change', function() {
+	      filterSport();
+	    });
+	          $('#next').on('click', function(){
+	    nextPage(next)
+	   })
+	   $('#prev').on('click', function(){
+	    prevPage(previous)
+	   })
+	      $("#createMatchButton").on('click', function() {
+	    router.navigate('/parks', {trigger: true});
+	   });
+	      $("#area").on('click', function() {
+	    geoFindMe();
+	   });
+	   $("#submitArea").on('click', function() {
+	    matchesAround();
+	   })
+	        },
+	        error: function(err) {
+	         console.log("nope")
+	        }
+	      });
+	  }
+
+	  function nextPage(next){
+	    var nextPages = new Match();
+	    nextPages.fetch({
+	       url: next,
+	 success: function(resp) {
+	    var html = main({'data': resp.toJSON().results});
+	    var mainTemplate = $("#mainTemplate").text();
+	    var mainHTML = Mustache.render(mainTemplate, 'data');
+	    var next = resp.toJSON().next;
+	    var previous = resp.toJSON().previous;
+	    console.log(next);
+	    console.log(previous);
+	    $("#upComing").html(mainHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp)
+	    $("#sport").on('change', function() {
+	      filterSport();
+	    })
+	   $('#next').on('click', function(){
+	    nextPage(next)
+	    window.scrollTo(0, 450);
+	   })
+	   $('#prev').on('click', function(){
+	    prevPage(previous)
+	    window.scrollTo(0, 450);
+	   })
+	   $("#createMatchButton").on('click', function() {
+	    router.navigate('/parks', {trigger: true});
+	   });
+	   $("#area").on('click', function() {
+	    geoFindMe();
+	   });
+	   $("#submitArea").on('click', function() {
+	    matchesAround();
+	   })
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+	});
+	  }
+
+	  function prevPage(previous){
+	    var prevPages = new Match();
+	    prevPages.fetch({
+	       url: previous,
+	 success: function(resp) {
+	    var html = main({'data': resp.toJSON().results});
+	    var mainTemplate = $("#mainTemplate").text();
+	    var mainHTML = Mustache.render(mainTemplate, 'data');
+	    var next = resp.toJSON().next;
+	    var previous = resp.toJSON().previous;
+	    console.log(next);
+	    console.log(previous);
+	    $("#upComing").html(mainHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp)
+	   $("#sport").on('change', function() {
+	      filterSport();
+	    })
+	   $('#next').on('click', function(){
+	    nextPage(next)
+	    window.scrollTo(0, 450);
+	   })
+	   $('#prev').on('click', function(){
+	    prevPage(previous)
+	    window.scrollTo(0, 450);
+	   })
+	   $("#createMatchButton").on('click', function() {
+	    router.navigate('/parks', {trigger: true});
+	   });
+	   $("#area").on('click', function() {
+	    geoFindMe();
+	   });
+	   $("#submitArea").on('click', function() {
+	    matchesAround();
+	   })
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+	});
+	  }
+
+	    var match = new Match();
+	    match.fetch({
+	 success: function(resp) {
+	    var html = main({'data': resp.toJSON().results});
+	    var mainTemplate = $("#mainTemplate").text();
+	    var mainHTML = Mustache.render(mainTemplate, 'data');
+	    var next = resp.toJSON().next;
+	    var previous = resp.toJSON().previous;
+	    var zip = $("#areaInput").val();
+	    $("#upComing").html(mainHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp)
+	   $("#sport").on('change', function() {
+	      filterSport();
+	    })
+	   $('#next').on('click', function(){
+	    nextPage(next)
+	    window.scrollTo(0, 450);
+	   })
+	   $('#prev').on('click', function(){
+	    prevPage(prev)
+	    window.scrollTo(0, 450);
+	   })
+	   $("#createMatchButton").on('click', function() {
+	    router.navigate('/parks', {trigger: true});
+	   });
+	   $("#area").on('click', function() {
+	    geoFindMe();
+	   });
+	   $("#submitArea").on('click', function() {
+	    matchesAround();
+	   })
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+	});
+	// End of backbone fetch for upcoming games
+
+	   }
+	});
+	////////////////////////////////////////////////////////////
+
+	////////////////////////////////////////////////////////////
+	// Creating the router for the sign up
+	var router = new Router();
+	router.on('route:signup', function(){
+
+	  var html = signup;
+	        $("#container").html(html);
+	var User = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    username: null,
+	    email: null,
+	    password: null,
+	    profile: {
+	        gender: null,
+	        age: null,
+	        phone_number: null,
+	        wants_texts: false
+	    }
+
+	  },
+	  url: 'https://skill-match.herokuapp.com/api/users/create/'
+	});
+	$('#rtxt').prop('checked', true);
+	$(".register").on('click', function(e) {
+	  e.preventDefault();
+	   user = new User();
+	   user.set({
+	     username: $("#ruser").val(),
+	     email: $("#remail").val(),
+	     password:$("#rpass").val(),
+	     profile: {
+	     gender: $(".rgen").val(),
+	     age: $("#rage").val(),
+	     phone_number: $("#rnumber").val(),
+	     wants_texts: $("#rtxt").is(':checked')
+	    }
+	  })
+	  var Users = Backbone.Collection.extend({
+	    model: User,
+	    url: 'https://skill-match.herokuapp.com/api/users/create/'
+	});
+	var UserCollection = new Users();
+	if ($("#rpass").val() === ($("#rerpass").val())) {
+	  user.save(null, {
+	   success: function(resp) {
+	     console.log("success: ",resp)
+	     console.log("New user added.");
+	     router.navigate("/?home=home", {trigger: true})
+	   },
+	   error: function(err) {
+	     console.log("nope")
+	    }
+	  });
+	  } else {
+	    alert("Sorry, you entered the wrong password. Please try again.");
+	    router.navigate("/signup", {trigger: true});
+	  }
+	 });
+	}); // End of the sign up router
+	////////////////////////////////////////////////////////////
+
+	////////////////////////////////////////////////////////////
+	// Creating the router for the home page
+	router.on('route:home', function(username, id) {
+	  var Match = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    description: null,
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	      },
+	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	});
+	  var Matches = Backbone.Collection.extend({
+	  model: Match,
+	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	});
+	    var match = new Match();
+	    match.fetch({
+	 success: function(resp) {
+	    var html = home({'data': resp.toJSON().results});
+	    var homeTemplate = $("#homeTemplate").text();
+	    var homeHTML = Mustache.render(homeTemplate, 'data');
+	    $("#yourMatches").html(homeHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp);
+
+
+	    var profileContainer = Backbone.Model.extend({
+	    initialize: function() {
+	    },
+	    defaults: {
+	      id: null,
+	      username: null,
+	      profile: {
+	        gender: null,
+	        age: null,
+	        skill: null,
+	        sportsmanship: null
+	      }
+	    },
+	    Model: profileContainer,
+	    url: 'https://skill-match.herokuapp.com/api/users/'+Cookie.get('uid')+'/'
+	  });
+	  var Profiles = Backbone.Collection.extend({
+	    Model: profileContainer,
+	    url: 'https://skill-match.herokuapp.com/api/users/'+Cookie.get('uid')+'/'
+	  });
+	  var userProfile = new Profiles();
+	  userProfile.fetch({
+	    success: function(resp) {
+	      var userhtml =home({'user': resp.toJSON()});
+	      var userTemplate = $("#userTemplate").text();
+	      var userHTML = Mustache.render(userTemplate, 'user');
+	      $("#userprofile").html(userhtml);
+	      console.log('success', resp.toJSON());
+
+	       $("#logout").on('click', function() {
+	    console.log("COOKIETESTTEST!")
+	    Cookie.remove('token');
+	    Cookie.remove('userName');
+	    Cookie.remove('uid');
+	    router.navigate('/?home=home');
+	    location.reload();
+	  });
+
+	      $('#createMatch').on('click', function(){
+	         function success(position) {
+	    var latitude  = position.coords.latitude;
+	    var longitude = position.coords.longitude;
+	    console.log('latitude '+latitude);
+	    console.log('longitude '+longitude);
+	  }
+	          router.navigate('/parks', {trigger: true});
+	        })
+	    },
+	    error: function(err) {
+	      console.log('error', err);
+	    }
+	  })
+	 },
+	  error: function(err) {
+	      console.log("nope")
+	    }
+	  });
+	}); // End of home router
+	////////////////////////////////////////////////////////////
+	router.on('route:userUpdate', function(id){
+	var profileContainer = Backbone.Model.extend({
+	    initialize: function() {
+	    },
+	    defaults: {
+	      id: null,
+	      username: null,
+	      password: null,
+	      profile: {
+	        gender: null,
+	        age: null,
+	        phone_number: null,
+	        wants_texts: null
+
+	      }
+	    },
+	    Model: profileContainer,
+	    url: 'https://skill-match.herokuapp.com/api/users/'+id+'/'
+	  });
+	  var Profiles = Backbone.Collection.extend({
+	    Model: profileContainer,
+	    url: 'https://skill-match.herokuapp.com/api/users/'+id+'/'
+	  });
+	var userProfile = new Profiles(id);
+	    userProfile.fetch({
+	      success: function(resp) {
+	      var html = userUpdate({'update': resp.toJSON()});
+	      var updateTemplate = $("#updateTemplate").text();
+	      var updateHTML = Mustache.render(updateTemplate, 'update');
+	      $("#updatePage").html(updateHTML);
+	      $("#container").html(html);
+	      console.log('success', resp.toJSON());
+
+	    $('#rtxt').prop('checked', true)
+	    $(".register").on('click', function(e) {
+
+	    e.preventDefault();
+	    userProfile = new profileContainer({id:id});
+	    userProfile.set({
+	    username: $("#ruser").val(),
+	     email: $("#remail").val(),
+	     password:$("#rpass").val(),
+	     profile: {
+	     gender: $(".rgen").val(),
+	     age: $("#rage").val(),
+	     phone_number: $("#rnumber").val(),
+	     wants_texts: $("#rtxt").is(':checked')
+	    }
+	  });
+	  userProfile.save(null, {
+	    url: 'https://skill-match.herokuapp.com/api/users/'+id+'/',
+	      success: function(resp) {
+	        console.log("success", resp);
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	  });
+
+	  });
+
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	        })
+
+	})
+	//////////////////////////////////////////////////////////////////////////////////////
+	// Player Profile page
+
+	router.on('route:profile', function(creator, username) {
+	  var profileContainer = Backbone.Model.extend({
+	    initialize: function() {
+	    },
+	    defaults: {
+	      id: null,
+	      username: null,
+	      profile: {
+	        gender: null,
+	        age: null,
+	        sportsmanship: null
+	      },
+	      skill_set: {
+	        sport: null,
+	        skill: null,
+	        num_feedbacks: null
+	      }
+	    },
+	    Model: profileContainer,
+	    url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
+	  });
+	  var Profiles = Backbone.Collection.extend({
+	    Model: profileContainer,
+	    url: 'https://skill-match.herokuapp.com/api/users/' + creator +'/'
+	  });
+	  var userProfile = new Profiles();
+	  userProfile.fetch({
+	    success: function(resp) {
+	      var html = profile({'data': resp.toJSON()});
+	      var profileTemplate = $("#profileTemplate").text();
+	      var profileHTML = Mustache.render(profileTemplate, 'data');
+	      var id = resp.toJSON()[0].id;
+	      var username = resp.toJSON()[0].username;
+	      $("#profileContainer").html(profileHTML);
+	      $("#container").html(html);
+	      console.log('success', resp.toJSON());
+	      $('#challenge').on('click', function(){
+	        router.navigate('/challenge/' + id, {trigger: true});
+	      })
+
+	      var Match = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    description: null,
+	    park_name: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	      },
+	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	});
+	  var Matches = Backbone.Collection.extend({
+	  model: Match,
+	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	});
+	      var userMatches = new Match();
+	  userMatches.fetch({
+	    success: function(resp) {
+	      var historyhtml = history({'history': resp.toJSON().results});
+	      var historyTemplate = $("#historyTemplate").text();
+	      var historyHTML = Mustache.render(historyTemplate, 'history');
+	      $("#historyContainer").html(historyhtml);
+	      console.log('success', resp.toJSON());
+	    },
+	    error: function(err) {
+	      console.log('error', err);
+	    }
+	  })
+	    },
+	    error: function(err) {
+	      console.log('error', err);
+	    }
+	  })
+	});
+
+	var matchContainer = Backbone.Model.extend({
+	  initialize: function() {
+	  },
+	  defaults: {
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	    },
+	    Model: matchContainer,
+	    url: 'https://skill-match.herokuapp.com/api/matches/'
+	  });
+	var Matches = Backbone.Collection.extend({
+	  model: matchContainer,
+	  url: 'https://skill-match.herokuapp.com/api/matches/'
+	});
+
+	//////////////////////////////////////////////////////////////////////////////////////
+	// Match Detail Page
+
+	router.on('route:match', function(id, username) {
+	    var matchDetail = new matchContainer();
+	    matchDetail.fetch({
+	      url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
+	      success: function(resp) {
+	        var creator = resp.toJSON().creator;
+	        var confirm = resp.toJSON().is_confirmed;
+	        var open = resp.toJSON().is_open;
+	        var html = match({"data": resp.toJSON()});
+	        console.log("success", resp);
+	        var matchTemplate = $("#matchTemplate").text();
+	        var matchHTML = Mustache.render(matchTemplate, 'data');
+	        $("#matchDetailContainer").html(matchHTML);
+	        $("#container").html(html);
+	        $("#confirm").hide();
+	        $("#decline").hide();
+	        $("#update").hide();
+	        $("#cancel").hide();
+	        $("#leaveMatch").hide();
+	        if (Cookie.get('uid') == creator) {
+	          $("#join").hide();
+	          $("#leaveMatch").hide();
+	          $("#confirm").show();
+	          $("#decline").show();
+	          $("#update").show();
+	          $("#cancel").show();
+	        };
+	        if(open == true) {
+	          $("#confirm").hide();
+	          $("#decline").hide();
+	        }
+	        if(open == false) {
+	          $("#confirm").show();
+	          $("#decline").show();
+	        }
+	        if(confirm == true){
+	          $("#confirm").hide();
+	          $("#decline").hide();
+	          $("#leaveMatch").show();
+	        }
+	        if(open == false){
+	          $("#join").hide();
+	        }
+
+	        $('#homeBtn').on('click', function(){
+	          router.navigate('/home/' + player, {trigger: true});
+	        })
+	        $('#cancel').on('click', function(){
+	          var matchDetail = new matchContainer({id:id});
+	        matchDetail.destroy({
+	           url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
+	          success: function(resp){
+	           console.log("success", resp);
+	          },
+	          error : function() {
+	            console.log("error")
+	          }
+	        })
+	         })
+	        var Join = Backbone.Model.extend({
+	      initialize: function () {
+	      },
+	      defaults: {},
+
+	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
+	    });
+
+	      var Joins = Backbone.Collection.extend({
+	      model: Join,
+	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
+	    });
+	      $("#join").on('click', function() {
+	        var join = new Join();
+	        join.set({id:id})
+	          join.save(null, {
+	      success: function(resp) {
+	        console.log("success", resp);
+	        router.navigate('/home/' + Cookie.get('userName'), {trigger: true});
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	  });
+	    });
+	      var Confirm = Backbone.Model.extend({
+	        defaults: {},
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
+	      });
+
+	      var Confirms = Backbone.Collection.extend ({
+	        model: Confirm,
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
+	      });
+	      $("#confirm").on('click', function() {
+	        var confirm = new Confirm();
+	        confirm.set({id:id})
+	        confirm.save(null, {
+	          success: function(resp) {
+	            console.log("success", resp);
+	          },
+	          error: function(err) {
+	            console.log("error", err);
+	          }
+	        });
+	      });
+	      var Decline = Backbone.Model.extend({
+	        defaults: {},
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
+	      });
+	      var Declines = Backbone.Collection.extend({
+	        model: Decline,
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/decline/'
+	      });
+	      $("#decline").on('click', function(){
+	        var decline = new Decline();
+	        decline.set({id:id})
+	        decline.save(null, {
+	          success: function(resp) {
+	            console.log("success", resp);
+	          },
+	          error: function(err) {
+	            console.log("error", err);
+	          }
+	        })
+	      });
+
+	      var LeaveMatch = Backbone.Model.extend({
+	        defaults: {},
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/leave/'
+	      });
+
+	      var LeaveMatches = Backbone.Collection.extend({
+	        model: LeaveMatch,
+	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/leave/'
+	      });
+	      $("#leaveMatch").on('click', function() {
+	        var leaveMatch = new LeaveMatch();
+	        leaveMatch.set({id: id})
+	        leaveMatch.save(null, {
+	          success: function(resp) {
+	            console.log('success', resp);
+	          },
+	          error: function(err) {
+	            console.log('error', err);
+	          }
+	        })
+	      })
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	      })
+	    });
+
+	//////////////////////////////////////////////////////////////////////////////////////
+	// Match Creation Page
+	router.on('route:createMatch', function(id, username) {
+	  var Park = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    id: null,
+	    name: null
+	      },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	  var Parks = Backbone.Collection.extend({
+	  model: Park,
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	    var park = new Parks();
+	    park.fetch({
+	 success: function(resp) {
+	    var html = createMatch({'park': resp.toJSON()[0].results});
+	    var createMatchTemplate = $("#mainTemplate").text();
+	    var createMatchHTML = Mustache.render(createMatchTemplate, 'park');
+	    $("#create").html(createMatchHTML);
+	    $("#container").html(html);
+	   console.log("success: ",resp)
+	  $("#createMatch").on('click', function(e) {
+	    e.preventDefault();
+	    update = new matchContainer();
+	    update.set({
+	    park: $("#addPark").val(),
+	    description: $("#addDescription").val(),
+	    sport: $("#addSport").val(),
+	    skill_level:$("#addSkill").val(),
+	    date: $("#addDate").val(),
+	    time: $("#addTime").val()
+	  });
+	  update.save(null, {
+	    url: 'https://skill-match.herokuapp.com/api/matches/',
+	      success: function(resp) {
+	        console.log("success", resp);
+	        var id = resp.toJSON().id;
+	        router.navigate('/match/' + id, {trigger: true});
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	  });
+	      $("#addPark").val("");
+	      $("#addDescription").val("");
+	      $("#addSport").val("");
+	      $("#addSkill").val("");
+	      $("#addDate").val("");
+	      $("#addTime").val("");
+	  });
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+
+	});
+	});
+
+	router.on('route:parkCreateMatch', function(id, name) {
+	  var ParkMatch = Backbone.Model.extend({
+	    initialize: function () {
+	    },
+	  defaults: {
+	    id: null,
+	    name: null
+	  },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'+id+"/"
+	});
+	  var ParkMatches = Backbone.Collection.extend({
+	  model: ParkMatch,
+	  url: 'https://skill-match.herokuapp.com/api/parks/'+id+"/"
+	});
+	  var parkMatch = new ParkMatch();
+	  parkMatch.fetch({
+	    success: function(resp) {
+	      var html = parkCreateMatch({'park': resp.toJSON()});
+	      var createParkTemplate = $("#createParkTemplate").text();
+	      var createParkHTML = Mustache.render(createParkTemplate, 'park');
+	      $("#parkMatchPage").html(createParkHTML);
+	      $("#container").html(html);
+	      console.log(html);
+
+	      console.log('success',resp);
+	    $("#createParkMatches").on('click', function(e) {
+	      e.preventDefault();
+	      match = new matchContainer();
+	      match.set({
+	        park: $("#addParkCreate").val(),
+	        description: $("#addParkDescription").val(),
+	        sport: $("#addParkSport").val(),
+	        skill_level: $("#addParkSkill").val(),
+	        date: $("#addParkDate").val(),
+	        time: $("#addParkTime").val()
+	      })
+	      match.save(null, {
+	        url: "https://skill-match.herokuapp.com/api/matches/",
+	        success: function(resp) {
+	          console.log("success", resp);
+	          var id = resp.toJSON().id;
+	          router.navigate('/match/' + id, {trigger: true});
+	        },
+	        error: function(err) {
+	          console.log("error", err);
+	        }
+	      })
+	    })
+	  },
+	    error: function(err) {
+	      console.log('error', err);
+	    }
+	  });
+	});
+
+	router.on('route:parkCreatePage', function(id, name) {
+	  var html = parkCreatePage;
+	  $("#container").html(html);
+	  var parkCreate = Backbone.Model.extend({
+	    initialize: function(){
+	    },
+	    defaults: {
+	      sport: null,
+	      other: null,
+	      num_courts: null,
+	      lat: null,
+	      long: null
+	    },
+	    url: "http://skill-match.herokuapp.com/api/courts/"
+	  });
+	    function geoFindMe() {
+	    function success(position) {
+	      var latitude  = position.coords.latitude;
+	      var longitude = position.coords.longitude;
+	      console.log('latitude '+latitude);
+	      console.log('longitude '+longitude);
+	      var newPark = new parkCreate();
+	       newPark.set ({
+	        park: id,
+	        sport: $("#addNewParkSport").val(),
+	        other: $("#addOtherParkSport").val(),
+	        num_courts: $("#addNumCourts").val(),
+	        lat: latitude,
+	        long: longitude
+	      });
+	      newPark.save (null, {
+	        success: function(resp) {
+	          console.log('success', resp);
+	          router.navigate("/parks", {trigger:true});
+	        },
+	        error: function(err) {
+	          console.log('error', err);
+	        }
+	      })
+	    }
+	      function error(err) {
+	      console.log("error", err);
+	    }
+	    navigator.geolocation.getCurrentPosition(success, error);
+	  }
+
+	    $("#createCourtButton").on('click', function() {
+	      geoFindMe();
+	    })
+	  })
+
+	var feedbackContainer = Backbone.Model.extend({
+	  initialize: function() {
+	  },
+	  defaults: {
+	    skill: null,
+	    sportsmanship: null,
+	    punctuality: null,
+	    availability: null
+	  },
+	  Model: feedbackContainer,
+	  url: 'https://skill-match.herokuapp.com/api/feedbacks/create/'
+	});
+
+	//////////////////////////////////////////////////////////////////////////////////////
+	// Match Update Page
+
+	router.on('route:challenge', function(id) {
+	  var Park = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    id: null,
+	    name: null
+	      },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	  var Parks = Backbone.Collection.extend({
+	  model: Park,
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	    var park = new Parks();
+	    park.fetch({
+	 success: function(resp) {
+	    var html = createMatch({'park': resp.toJSON()[0].results});
+	    var challengeMatchTemplate = $("#mainTemplate").text();
+	    var challengeMatchHTML = Mustache.render(challengeMatchTemplate, 'park');
+	    $("#challenge").html(challengeMatchHTML);
+	    $("#container").html(html);
+
+	   console.log("success: ",resp)
+	  $("#createMatch").on('click', function(e) {
+	    e.preventDefault();
+	    challenge = new matchContainer();
+	    challenge.set({
+	    challenge: id,
+	    park: $("#addPark").val(),
+	    description: $("#addDescription").val(),
+	    sport: $("#addSport").val(),
+	    skill_level:$("#addSkill").val(),
+	    date: $("#addDate").val(),
+	    time: $("#addTime").val(),
+	  });
+	  challenge.save(null, {
+	    url: 'https://skill-match.herokuapp.com/api/matches/challenge/',
+	      success: function(resp) {
+	        console.log("success", resp);
+	        var id = resp.toJSON().id;
+	        router.navigate('/match/' + id, {trigger: true});
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	  });
+	      $("#addPark").val("");
+	      $("#addDescription").val("");
+	      $("#addSport").val("");
+	      $("#addSkill").val("");
+	      $("#addDate").val("");
+	      $("#addTime").val("");
+	  });
+	 },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+
+	});
+	});
+
+
+	router.on('route:updatematch', function(id){
+	  var matchContainer = Backbone.Model.extend({
+	  initialize: function() {
+	  },
+	  defaults: {
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	    },
+	    Model: matchContainer,
+	    url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
+	  });
+	var Matches = Backbone.Collection.extend({
+	  model: matchContainer,
+	  url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
+	});
+	var matchDetail = new matchContainer(id);
+	    matchDetail.fetch({
+	      success: function(resp) {
+	        var html = updatematch({"data": resp.toJSON()});
+	        console.log("success", resp);
+	        var updatematchTemplate = $("#updatematchTemplate").text();
+	        var updatematchHTML = Mustache.render(updatematchTemplate, 'data');
+	        $("#updatematch").html(updatematchHTML);
+	        $("#container").html(html);
+
+	  var Park = Backbone.Model.extend({
+	  initialize: function () {
+	  },
+	  defaults: {
+	    id: null,
+	    name: null
+	      },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	  var Parks = Backbone.Collection.extend({
+	  model: Park,
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	  var park = new Parks();
+	    park.fetch({
+	 success: function(resp) {
+	    var parks = parkList({'park': resp.toJSON()[0].results});
+	    var parksTemplate = $("#parksTemplate").text();
+	    var parksHTML = Mustache.render(parksTemplate, 'park');
+	    $("#addPark").html(parks);
+	     },
+	 error: function(err) {
+	   console.log("nope")
+	 }
+	 })
+	    $("#updateMatch").on('click', function(e) {
+	    e.preventDefault();
+	    matchDetail = new matchContainer({id:id});
+	    matchDetail.set({
+	    park: $("#addPark").val(),
+	    description: $("#addDescription").val(),
+	    sport: $("#addSport").val(),
+	    skill_level:$("#addSkill").val(),
+	    date: $("#addDate").val(),
+	    time: $("#addTime").val()
+	  });
+	  matchDetail.save(null, {
+	    url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
+	      success: function(resp) {
+	        console.log("success", resp);
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	  });
+	      $("#addPark").val("");
+	      $("#addDescription").val("");
+	      $("#addSport").val("");
+	      $("#addSkill").val("");
+	      $("#addDate").val("");
+	      $("#addTime").val("");
+	  });
+
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	        })
+
+	})
+
+	////////////////////////////////////////////////////////////////////////////////
+	// This page gives you the ability to leave Feedback on completed matches
+	router.on('route:feedback', function(id, username){
+	  var matchContainer = Backbone.Model.extend({
+	  initialize: function() {
+	  },
+	  defaults: {
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	    },
+	    Model: matchContainer,
+	    url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
+	  });
+	var Matches = Backbone.Collection.extend({
+	  model: matchContainer,
+	  url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
+	});
+	var feedMatch = new Matches();
+	  feedMatch.fetch({
+	    success: function(resp) {
+	      var html = feedback({'data': resp.toJSON()[0].players});
+	      var feedTemplate = $("#feedTemplate").text();
+	      var feedHTML = Mustache.render(feedTemplate, 'data');
+	      $('#feedbackContainer').html(feedHTML);
+	      $("#container").html(html);
+	      console.log('success', resp.toJSON());
+	       $(".submitFeedback").on('click', function() {
+	    // feedbackAdd = new feedbackContainer();
+	    // feedbackAdd.set({
+	    //   skill: $(".addSkillFeedback").val(),
+	    //   sportsmanship: $(".addFunFeedback").val(),
+	    //   availability: $(".addCrowdFeedback").val(),
+	    //   punctuality: $(".addPunctualityFeedback").val(),
+	    //   match: id,
+	    //   player: $(".pid").val()
+	    // });
+	    // feedbackAdd.save(null, {
+	    //   url: 'https://skill-match.herokuapp.com/api/feedbacks/create/',
+	    //   success: function(resp) {
+	    //     console.log("success", resp);
+	    //     router.navigate('/match/' + id, {trigger: true});
+	    //   },
+	    //   error: function(err) {
+	    //     console.log("error", err);
+	    //   }
+	    // });
+	    // $(".addSkillFeedback").val("");
+	    // $(".addFunFeedback").val("");
+	    // $(".addCrowdFeedback").val("");
+	    // $(".addPunctualityFeedback").val("");
+	    console.log($(".pid").val());
+	  });
+	  $('.skillInfo').hover(function(){
+	    $('.skillRating').toggleClass();
+	  });
+	  $(".skillInfo2").hover(function() {
+	    $(".funRating").toggleClass();
+	  });
+	  $(".skillInfo3").hover(function() {
+	    $(".crowdRating").toggleClass();
+	  })
+	    },
+	    error: function(err) {
+	      console.log('error', err);
+	    }
+	  })
+
+	});
+
+	/////////////////////////////////////////////////////////////////////////////
+	// Routes to parks page where we fetch and display parks from Api
+	// BackbonePagination is used here to page through all parks in Api
+	// We used a counter to along with BackbonePagination get the next page of parks
+	router.on('route:parks', function(id, name) {
+
+	function geoFindMe() {
+	  function success(position) {
+	    var latitude  = position.coords.latitude;
+	    var longitude = position.coords.longitude;
+	    console.log('latitude '+latitude);
+	    console.log('longitude '+longitude);
+	    var nextPages = new Park()
+	    nextPages.fetch({
+	       url: 'https://skill-match.herokuapp.com/api/parks/?lat='+latitude+'&long='+longitude,
+	 success: function(resp) {
+	      var html = parks({'data': resp.toJSON().results});
+	      var parkTemplate = $("#parkTemplate").text();
+	      var parkHTML = Mustache.render(parkTemplate, "data");
+	      var next = resp.toJSON().next;
+	      var previous = resp.toJSON().previous;
+	      $("#parksContainer").html(parkHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	       console.log("success: ",resp)
+	       $('#nextPark').on('click', function(){
+	        nextPage(next)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#backPark').on('click', function(){
+	        prevPage(previous)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#locate').on('click', function(){
+	      geoFindMe()
+	    })
+	     },
+	     error: function(err) {
+	       console.log("nope")
+	     }
+	    });
+	  };
+
+	  function error() {
+	  };
+
+	  navigator.geolocation.getCurrentPosition(success, error);
+	}
+
+	function zipCode(zip) {
+	    var nextPages = new Park()
+	    nextPages.fetch({
+	       url: 'http://skill-match.herokuapp.com/api/parks/?zip='+zip,
+	 success: function(resp) {
+	      var html = parks({'data': resp.toJSON().results});
+	      var parkTemplate = $("#parkTemplate").text();
+	      var parkHTML = Mustache.render(parkTemplate, "data");
+	      var next = resp.toJSON().next;
+	      var previous = resp.toJSON().previous;
+	      $("#parksContainer").html(parkHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	       console.log("success: ",resp)
+	       $('#nextPark').on('click', function(){
+	        nextPage(next)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#backPark').on('click', function(){
+	        prevPage(previous)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#locate').on('click', function(){
+	      geoFindMe()
+	    })
+	     },
+	     error: function(err) {
+	       console.log("nope")
+	     }
+	    });
+	  }
+
+
+	  function nextPage(next){
+	    var nextPages = new Park()
+	    nextPages.fetch({
+	       url: next,
+	 success: function(resp) {
+	      var html = parks({'data': resp.toJSON().results});
+	      var parkTemplate = $("#parkTemplate").text();
+	      var parkHTML = Mustache.render(parkTemplate, "data");
+	      var next = resp.toJSON().next;
+	      var previous = resp.toJSON().previous;
+	      $("#parksContainer").html(parkHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	       console.log("success: ",resp)
+	       $('#nextPark').on('click', function(){
+	        nextPage(next)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#backPark').on('click', function(){
+	        prevPage(previous)
+	        window.scrollTo(0, 450);
+	       })
+	       $('#locate').on('click', function(){
+	      geoFindMe()
+	    })
+	     },
+	     error: function(err) {
+	       console.log("nope")
+	     }
+	    });
+	      }
+
+	  function prevPage(previous){
+	    var prevPages = new Park()
+	    prevPages.fetch({
+	       url: previous,
+	 success: function(resp) {
+	      var html = parks({'data': resp.toJSON().results});
+	      var parkTemplate = $("#parkTemplate").text();
+	      var parkHTML = Mustache.render(parkTemplate, "data");
+	      var next = resp.toJSON().next;
+	      var previous = resp.toJSON().previous;
+	      $("#parksContainer").html(parkHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	     console.log("success: ",resp)
+	     $('#nextPark').on('click', function(){
+	      nextPage(next)
+	      window.scrollTo(0, 450);
+	     })
+	     $('#backPark').on('click', function(){
+	      prevPage(previous)
+	      window.scrollTo(0, 450);
+	     })
+	     $('#locate').on('click', function(){
+	    geoFindMe()
+	  })
+	   },
+	   error: function(err) {
+	     console.log("nope")
+	   }
+	  });
+	    }
+
+	var Park = Backbone.Model.extend({
+	    initialize: function () {
+	    },
+	    defaults: {
+	    id: null,
+	    name: null
+	    },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	  var Parks = Backbone.Collection.extend({
+	    model: Park,
+	    url: 'https://skill-match.herokuapp.com/api/parks/'
+	});
+	  var park = new Park();
+	  park.fetch ({
+	    success: function(resp) {
+	      var html = parks({'data': resp.toJSON().results});
+	      var parkTemplate = $("#parkTemplate").text();
+	      var parkHTML = Mustache.render(parkTemplate, "data");
+	      var next = resp.toJSON().next;
+	      var previous = resp.toJSON().previous;
+	      var zip = $('#zipcode').val();
+	      $("#parksContainer").html(parkHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	       $('#nextPark').on('click', function(){
+	    nextPage(next)
+	    window.scrollTo(0, 450);
+	   })
+	   $('#backPark').on('click', function(){
+	    prevPage(previous)
+	    window.scrollTo(0, 450);
+	   })
+	      $('#locate').on('click', function(){
+	  geoFindMe()
+	})
+	      $('#zip').on('click', function(){
+	        zipCode()
+	      })
+	    },
+	    error: function(err) {
+	      console.log("error", err);
+	    }
+	  });
+	  });
+	/////////////////////////////////////////////////////////////////////////////
+	// This page is a more indepth look at the park you have choosen and we display the parks match history.
+	// Soon it will include all a list of sports available at the park.
+	router.on('route:parksDetail', function(id, name){
+	  var Park = Backbone.Model.extend({
+	    initialize: function () {
+	    },
+	    defaults: {
+	    id: null,
+	    name: null
+	    },
+	  url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+	});
+	  var Parks = Backbone.Collection.extend({
+	    model: Park,
+	    url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+	});
+	  var park = new Park();
+	  park.fetch ({
+	    success: function(resp) {
+	      var html = parksDetail({'data': resp.toJSON()});
+	      var parksDetailTemplate = $("#parksDetailTemplate").text();
+	      var parksDetailHTML = Mustache.render(parksDetailTemplate, "data");
+	      $("#parksDetail").html(parksDetailHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	    },
+	    error: function(err) {
+	      console.log("error", err);
+	    }
+	  });
+
+	});
+	////////////////////////////////////////////////////////////////////////////////
+	$('body').on('click', 'a', function (e){
+	  e.preventDefault();
+	  var href = $(this).attr('href').substr(1);
+	  router.navigate(href, {trigger:true});
+	});
+	$('body').on('hover', 'span', function (e){
+	  e.preventDefault();
+	});
+	module.exports = router;// This is just a sample script. Paste your real code (javascript or HTML) here.
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {//     Backbone.js 1.2.3
+
+	//     (c) 2010-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	//     Backbone may be freely distributed under the MIT license.
+	//     For all details and documentation:
+	//     http://backbonejs.org
+
+	(function(factory) {
+
+	  // Establish the root object, `window` (`self`) in the browser, or `global` on the server.
+	  // We use `self` instead of `window` for `WebWorker` support.
+	  var root = (typeof self == 'object' && self.self == self && self) ||
+	            (typeof global == 'object' && global.global == global && global);
+
+	  // Set up Backbone appropriately for the environment. Start with AMD.
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(37), __webpack_require__(1), exports], __WEBPACK_AMD_DEFINE_RESULT__ = function(_, $, exports) {
+	      // Export global even in AMD case in case this script is loaded with
+	      // others that may still expect a global Backbone.
+	      root.Backbone = factory(root, exports, _, $);
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+	  // Next for Node.js or CommonJS. jQuery may not be needed as a module.
+	  } else if (typeof exports !== 'undefined') {
+	    var _ = require('underscore'), $;
+	    try { $ = require('jquery'); } catch(e) {}
+	    factory(root, exports, _, $);
+
+	  // Finally, as a browser global.
+	  } else {
+	    root.Backbone = factory(root, {}, root._, (root.jQuery || root.Zepto || root.ender || root.$));
+	  }
+
+	}(function(root, Backbone, _, $) {
+
+	  // Initial Setup
+	  // -------------
+
+	  // Save the previous value of the `Backbone` variable, so that it can be
+	  // restored later on, if `noConflict` is used.
+	  var previousBackbone = root.Backbone;
+
+	  // Create a local reference to a common array method we'll want to use later.
+	  var slice = Array.prototype.slice;
+
+	  // Current version of the library. Keep in sync with `package.json`.
+	  Backbone.VERSION = '1.2.3';
+
+	  // For Backbone's purposes, jQuery, Zepto, Ender, or My Library (kidding) owns
+	  // the `$` variable.
+	  Backbone.$ = $;
+
+	  // Runs Backbone.js in *noConflict* mode, returning the `Backbone` variable
+	  // to its previous owner. Returns a reference to this Backbone object.
+	  Backbone.noConflict = function() {
+	    root.Backbone = previousBackbone;
+	    return this;
+	  };
+
+	  // Turn on `emulateHTTP` to support legacy HTTP servers. Setting this option
+	  // will fake `"PATCH"`, `"PUT"` and `"DELETE"` requests via the `_method` parameter and
+	  // set a `X-Http-Method-Override` header.
+	  Backbone.emulateHTTP = false;
+
+	  // Turn on `emulateJSON` to support legacy servers that can't deal with direct
+	  // `application/json` requests ... this will encode the body as
+	  // `application/x-www-form-urlencoded` instead and will send the model in a
+	  // form param named `model`.
+	  Backbone.emulateJSON = false;
+
+	  // Proxy Backbone class methods to Underscore functions, wrapping the model's
+	  // `attributes` object or collection's `models` array behind the scenes.
+	  //
+	  // collection.filter(function(model) { return model.get('age') > 10 });
+	  // collection.each(this.addView);
+	  //
+	  // `Function#apply` can be slow so we use the method's arg count, if we know it.
+	  var addMethod = function(length, method, attribute) {
+	    switch (length) {
+	      case 1: return function() {
+	        return _[method](this[attribute]);
+	      };
+	      case 2: return function(value) {
+	        return _[method](this[attribute], value);
+	      };
+	      case 3: return function(iteratee, context) {
+	        return _[method](this[attribute], cb(iteratee, this), context);
+	      };
+	      case 4: return function(iteratee, defaultVal, context) {
+	        return _[method](this[attribute], cb(iteratee, this), defaultVal, context);
+	      };
+	      default: return function() {
+	        var args = slice.call(arguments);
+	        args.unshift(this[attribute]);
+	        return _[method].apply(_, args);
+	      };
+	    }
+	  };
+	  var addUnderscoreMethods = function(Class, methods, attribute) {
+	    _.each(methods, function(length, method) {
+	      if (_[method]) Class.prototype[method] = addMethod(length, method, attribute);
+	    });
+	  };
+
+	  // Support `collection.sortBy('attr')` and `collection.findWhere({id: 1})`.
+	  var cb = function(iteratee, instance) {
+	    if (_.isFunction(iteratee)) return iteratee;
+	    if (_.isObject(iteratee) && !instance._isModel(iteratee)) return modelMatcher(iteratee);
+	    if (_.isString(iteratee)) return function(model) { return model.get(iteratee); };
+	    return iteratee;
+	  };
+	  var modelMatcher = function(attrs) {
+	    var matcher = _.matches(attrs);
+	    return function(model) {
+	      return matcher(model.attributes);
+	    };
+	  };
+
+	  // Backbone.Events
+	  // ---------------
+
+	  // A module that can be mixed in to *any object* in order to provide it with
+	  // a custom event channel. You may bind a callback to an event with `on` or
+	  // remove with `off`; `trigger`-ing an event fires all callbacks in
+	  // succession.
+	  //
+	  //     var object = {};
+	  //     _.extend(object, Backbone.Events);
+	  //     object.on('expand', function(){ alert('expanded'); });
+	  //     object.trigger('expand');
+	  //
+	  var Events = Backbone.Events = {};
+
+	  // Regular expression used to split event strings.
+	  var eventSplitter = /\s+/;
+
+	  // Iterates over the standard `event, callback` (as well as the fancy multiple
+	  // space-separated events `"change blur", callback` and jQuery-style event
+	  // maps `{event: callback}`).
+	  var eventsApi = function(iteratee, events, name, callback, opts) {
+	    var i = 0, names;
+	    if (name && typeof name === 'object') {
+	      // Handle event maps.
+	      if (callback !== void 0 && 'context' in opts && opts.context === void 0) opts.context = callback;
+	      for (names = _.keys(name); i < names.length ; i++) {
+	        events = eventsApi(iteratee, events, names[i], name[names[i]], opts);
+	      }
+	    } else if (name && eventSplitter.test(name)) {
+	      // Handle space separated event names by delegating them individually.
+	      for (names = name.split(eventSplitter); i < names.length; i++) {
+	        events = iteratee(events, names[i], callback, opts);
+	      }
+	    } else {
+	      // Finally, standard events.
+	      events = iteratee(events, name, callback, opts);
+	    }
+	    return events;
+	  };
+
+	  // Bind an event to a `callback` function. Passing `"all"` will bind
+	  // the callback to all events fired.
+	  Events.on = function(name, callback, context) {
+	    return internalOn(this, name, callback, context);
+	  };
+
+	  // Guard the `listening` argument from the public API.
+	  var internalOn = function(obj, name, callback, context, listening) {
+	    obj._events = eventsApi(onApi, obj._events || {}, name, callback, {
+	        context: context,
+	        ctx: obj,
+	        listening: listening
+	    });
+
+	    if (listening) {
+	      var listeners = obj._listeners || (obj._listeners = {});
+	      listeners[listening.id] = listening;
+	    }
+
+	    return obj;
+	  };
+
+	  // Inversion-of-control versions of `on`. Tell *this* object to listen to
+	  // an event in another object... keeping track of what it's listening to
+	  // for easier unbinding later.
+	  Events.listenTo =  function(obj, name, callback) {
+	    if (!obj) return this;
+	    var id = obj._listenId || (obj._listenId = _.uniqueId('l'));
+	    var listeningTo = this._listeningTo || (this._listeningTo = {});
+	    var listening = listeningTo[id];
+
+	    // This object is not listening to any other events on `obj` yet.
+	    // Setup the necessary references to track the listening callbacks.
+	    if (!listening) {
+	      var thisId = this._listenId || (this._listenId = _.uniqueId('l'));
+	      listening = listeningTo[id] = {obj: obj, objId: id, id: thisId, listeningTo: listeningTo, count: 0};
+	    }
+
+	    // Bind callbacks on obj, and keep track of them on listening.
+	    internalOn(obj, name, callback, this, listening);
+	    return this;
+	  };
+
+	  // The reducing API that adds a callback to the `events` object.
+	  var onApi = function(events, name, callback, options) {
+	    if (callback) {
+	      var handlers = events[name] || (events[name] = []);
+	      var context = options.context, ctx = options.ctx, listening = options.listening;
+	      if (listening) listening.count++;
+
+	      handlers.push({ callback: callback, context: context, ctx: context || ctx, listening: listening });
+	    }
+	    return events;
+	  };
+
+	  // Remove one or many callbacks. If `context` is null, removes all
+	  // callbacks with that function. If `callback` is null, removes all
+	  // callbacks for the event. If `name` is null, removes all bound
+	  // callbacks for all events.
+	  Events.off =  function(name, callback, context) {
+	    if (!this._events) return this;
+	    this._events = eventsApi(offApi, this._events, name, callback, {
+	        context: context,
+	        listeners: this._listeners
+	    });
+	    return this;
+	  };
+
+	  // Tell this object to stop listening to either specific events ... or
+	  // to every object it's currently listening to.
+	  Events.stopListening =  function(obj, name, callback) {
+	    var listeningTo = this._listeningTo;
+	    if (!listeningTo) return this;
+
+	    var ids = obj ? [obj._listenId] : _.keys(listeningTo);
+
+	    for (var i = 0; i < ids.length; i++) {
+	      var listening = listeningTo[ids[i]];
+
+	      // If listening doesn't exist, this object is not currently
+	      // listening to obj. Break out early.
+	      if (!listening) break;
+
+	      listening.obj.off(name, callback, this);
+	    }
+	    if (_.isEmpty(listeningTo)) this._listeningTo = void 0;
+
+	    return this;
+	  };
+
+	  // The reducing API that removes a callback from the `events` object.
+	  var offApi = function(events, name, callback, options) {
+	    if (!events) return;
+
+	    var i = 0, listening;
+	    var context = options.context, listeners = options.listeners;
+
+	    // Delete all events listeners and "drop" events.
+	    if (!name && !callback && !context) {
+	      var ids = _.keys(listeners);
+	      for (; i < ids.length; i++) {
+	        listening = listeners[ids[i]];
+	        delete listeners[listening.id];
+	        delete listening.listeningTo[listening.objId];
+	      }
+	      return;
+	    }
+
+	    var names = name ? [name] : _.keys(events);
+	    for (; i < names.length; i++) {
+	      name = names[i];
+	      var handlers = events[name];
+
+	      // Bail out if there are no events stored.
+	      if (!handlers) break;
+
+	      // Replace events if there are any remaining.  Otherwise, clean up.
+	      var remaining = [];
+	      for (var j = 0; j < handlers.length; j++) {
+	        var handler = handlers[j];
+	        if (
+	          callback && callback !== handler.callback &&
+	            callback !== handler.callback._callback ||
+	              context && context !== handler.context
+	        ) {
+	          remaining.push(handler);
+	        } else {
+	          listening = handler.listening;
+	          if (listening && --listening.count === 0) {
+	            delete listeners[listening.id];
+	            delete listening.listeningTo[listening.objId];
+	          }
+	        }
+	      }
+
+	      // Update tail event if the list has any events.  Otherwise, clean up.
+	      if (remaining.length) {
+	        events[name] = remaining;
+	      } else {
+	        delete events[name];
+	      }
+	    }
+	    if (_.size(events)) return events;
+	  };
+
+	  // Bind an event to only be triggered a single time. After the first time
+	  // the callback is invoked, its listener will be removed. If multiple events
+	  // are passed in using the space-separated syntax, the handler will fire
+	  // once for each event, not once for a combination of all events.
+	  Events.once =  function(name, callback, context) {
+	    // Map the event into a `{event: once}` object.
+	    var events = eventsApi(onceMap, {}, name, callback, _.bind(this.off, this));
+	    return this.on(events, void 0, context);
+	  };
+
+	  // Inversion-of-control versions of `once`.
+	  Events.listenToOnce =  function(obj, name, callback) {
+	    // Map the event into a `{event: once}` object.
+	    var events = eventsApi(onceMap, {}, name, callback, _.bind(this.stopListening, this, obj));
+	    return this.listenTo(obj, events);
+	  };
+
+	  // Reduces the event callbacks into a map of `{event: onceWrapper}`.
+	  // `offer` unbinds the `onceWrapper` after it has been called.
+	  var onceMap = function(map, name, callback, offer) {
+	    if (callback) {
+	      var once = map[name] = _.once(function() {
+	        offer(name, once);
+	        callback.apply(this, arguments);
+	      });
+	      once._callback = callback;
+	    }
+	    return map;
+	  };
+
+	  // Trigger one or many events, firing all bound callbacks. Callbacks are
+	  // passed the same arguments as `trigger` is, apart from the event name
+	  // (unless you're listening on `"all"`, which will cause your callback to
+	  // receive the true name of the event as the first argument).
+	  Events.trigger =  function(name) {
+	    if (!this._events) return this;
+
+	    var length = Math.max(0, arguments.length - 1);
+	    var args = Array(length);
+	    for (var i = 0; i < length; i++) args[i] = arguments[i + 1];
+
+	    eventsApi(triggerApi, this._events, name, void 0, args);
+	    return this;
+	  };
+
+	  // Handles triggering the appropriate event callbacks.
+	  var triggerApi = function(objEvents, name, cb, args) {
+	    if (objEvents) {
+	      var events = objEvents[name];
+	      var allEvents = objEvents.all;
+	      if (events && allEvents) allEvents = allEvents.slice();
+	      if (events) triggerEvents(events, args);
+	      if (allEvents) triggerEvents(allEvents, [name].concat(args));
+	    }
+	    return objEvents;
+	  };
+
+	  // A difficult-to-believe, but optimized internal dispatch function for
+	  // triggering events. Tries to keep the usual cases speedy (most internal
+	  // Backbone events have 3 arguments).
+	  var triggerEvents = function(events, args) {
+	    var ev, i = -1, l = events.length, a1 = args[0], a2 = args[1], a3 = args[2];
+	    switch (args.length) {
+	      case 0: while (++i < l) (ev = events[i]).callback.call(ev.ctx); return;
+	      case 1: while (++i < l) (ev = events[i]).callback.call(ev.ctx, a1); return;
+	      case 2: while (++i < l) (ev = events[i]).callback.call(ev.ctx, a1, a2); return;
+	      case 3: while (++i < l) (ev = events[i]).callback.call(ev.ctx, a1, a2, a3); return;
+	      default: while (++i < l) (ev = events[i]).callback.apply(ev.ctx, args); return;
+	    }
+	  };
+
+	  // Aliases for backwards compatibility.
+	  Events.bind   = Events.on;
+	  Events.unbind = Events.off;
+
+	  // Allow the `Backbone` object to serve as a global event bus, for folks who
+	  // want global "pubsub" in a convenient place.
+	  _.extend(Backbone, Events);
+
+	  // Backbone.Model
+	  // --------------
+
+	  // Backbone **Models** are the basic data object in the framework --
+	  // frequently representing a row in a table in a database on your server.
+	  // A discrete chunk of data and a bunch of useful, related methods for
+	  // performing computations and transformations on that data.
+
+	  // Create a new model with the specified attributes. A client id (`cid`)
+	  // is automatically generated and assigned for you.
+	  var Model = Backbone.Model = function(attributes, options) {
+	    var attrs = attributes || {};
+	    options || (options = {});
+	    this.cid = _.uniqueId(this.cidPrefix);
+	    this.attributes = {};
+	    if (options.collection) this.collection = options.collection;
+	    if (options.parse) attrs = this.parse(attrs, options) || {};
+	    attrs = _.defaults({}, attrs, _.result(this, 'defaults'));
+	    this.set(attrs, options);
+	    this.changed = {};
+	    this.initialize.apply(this, arguments);
+	  };
+
+	  // Attach all inheritable methods to the Model prototype.
+	  _.extend(Model.prototype, Events, {
+
+	    // A hash of attributes whose current and previous value differ.
+	    changed: null,
+
+	    // The value returned during the last failed validation.
+	    validationError: null,
+
+	    // The default name for the JSON `id` attribute is `"id"`. MongoDB and
+	    // CouchDB users may want to set this to `"_id"`.
+	    idAttribute: 'id',
+
+	    // The prefix is used to create the client id which is used to identify models locally.
+	    // You may want to override this if you're experiencing name clashes with model ids.
+	    cidPrefix: 'c',
+
+	    // Initialize is an empty function by default. Override it with your own
+	    // initialization logic.
+	    initialize: function(){},
+
+	    // Return a copy of the model's `attributes` object.
+	    toJSON: function(options) {
+	      return _.clone(this.attributes);
+	    },
+
+	    // Proxy `Backbone.sync` by default -- but override this if you need
+	    // custom syncing semantics for *this* particular model.
+	    sync: function() {
+	      return Backbone.sync.apply(this, arguments);
+	    },
+
+	    // Get the value of an attribute.
+	    get: function(attr) {
+	      return this.attributes[attr];
+	    },
+
+	    // Get the HTML-escaped value of an attribute.
+	    escape: function(attr) {
+	      return _.escape(this.get(attr));
+	    },
+
+	    // Returns `true` if the attribute contains a value that is not null
+	    // or undefined.
+	    has: function(attr) {
+	      return this.get(attr) != null;
+	    },
+
+	    // Special-cased proxy to underscore's `_.matches` method.
+	    matches: function(attrs) {
+	      return !!_.iteratee(attrs, this)(this.attributes);
+	    },
+
+	    // Set a hash of model attributes on the object, firing `"change"`. This is
+	    // the core primitive operation of a model, updating the data and notifying
+	    // anyone who needs to know about the change in state. The heart of the beast.
+	    set: function(key, val, options) {
+	      if (key == null) return this;
+
+	      // Handle both `"key", value` and `{key: value}` -style arguments.
+	      var attrs;
+	      if (typeof key === 'object') {
+	        attrs = key;
+	        options = val;
+	      } else {
+	        (attrs = {})[key] = val;
+	      }
+
+	      options || (options = {});
+
+	      // Run validation.
+	      if (!this._validate(attrs, options)) return false;
+
+	      // Extract attributes and options.
+	      var unset      = options.unset;
+	      var silent     = options.silent;
+	      var changes    = [];
+	      var changing   = this._changing;
+	      this._changing = true;
+
+	      if (!changing) {
+	        this._previousAttributes = _.clone(this.attributes);
+	        this.changed = {};
+	      }
+
+	      var current = this.attributes;
+	      var changed = this.changed;
+	      var prev    = this._previousAttributes;
+
+	      // For each `set` attribute, update or delete the current value.
+	      for (var attr in attrs) {
+	        val = attrs[attr];
+	        if (!_.isEqual(current[attr], val)) changes.push(attr);
+	        if (!_.isEqual(prev[attr], val)) {
+	          changed[attr] = val;
+	        } else {
+	          delete changed[attr];
+	        }
+	        unset ? delete current[attr] : current[attr] = val;
+	      }
+
+	      // Update the `id`.
+	      this.id = this.get(this.idAttribute);
+
+	      // Trigger all relevant attribute changes.
+	      if (!silent) {
+	        if (changes.length) this._pending = options;
+	        for (var i = 0; i < changes.length; i++) {
+	          this.trigger('change:' + changes[i], this, current[changes[i]], options);
+	        }
+	      }
+
+	      // You might be wondering why there's a `while` loop here. Changes can
+	      // be recursively nested within `"change"` events.
+	      if (changing) return this;
+	      if (!silent) {
+	        while (this._pending) {
+	          options = this._pending;
+	          this._pending = false;
+	          this.trigger('change', this, options);
+	        }
+	      }
+	      this._pending = false;
+	      this._changing = false;
+	      return this;
+	    },
+
+	    // Remove an attribute from the model, firing `"change"`. `unset` is a noop
+	    // if the attribute doesn't exist.
+	    unset: function(attr, options) {
+	      return this.set(attr, void 0, _.extend({}, options, {unset: true}));
+	    },
+
+	    // Clear all attributes on the model, firing `"change"`.
+	    clear: function(options) {
+	      var attrs = {};
+	      for (var key in this.attributes) attrs[key] = void 0;
+	      return this.set(attrs, _.extend({}, options, {unset: true}));
+	    },
+
+	    // Determine if the model has changed since the last `"change"` event.
+	    // If you specify an attribute name, determine if that attribute has changed.
+	    hasChanged: function(attr) {
+	      if (attr == null) return !_.isEmpty(this.changed);
+	      return _.has(this.changed, attr);
+	    },
+
+	    // Return an object containing all the attributes that have changed, or
+	    // false if there are no changed attributes. Useful for determining what
+	    // parts of a view need to be updated and/or what attributes need to be
+	    // persisted to the server. Unset attributes will be set to undefined.
+	    // You can also pass an attributes object to diff against the model,
+	    // determining if there *would be* a change.
+	    changedAttributes: function(diff) {
+	      if (!diff) return this.hasChanged() ? _.clone(this.changed) : false;
+	      var old = this._changing ? this._previousAttributes : this.attributes;
+	      var changed = {};
+	      for (var attr in diff) {
+	        var val = diff[attr];
+	        if (_.isEqual(old[attr], val)) continue;
+	        changed[attr] = val;
+	      }
+	      return _.size(changed) ? changed : false;
+	    },
+
+	    // Get the previous value of an attribute, recorded at the time the last
+	    // `"change"` event was fired.
+	    previous: function(attr) {
+	      if (attr == null || !this._previousAttributes) return null;
+	      return this._previousAttributes[attr];
+	    },
+
+	    // Get all of the attributes of the model at the time of the previous
+	    // `"change"` event.
+	    previousAttributes: function() {
+	      return _.clone(this._previousAttributes);
+	    },
+
+	    // Fetch the model from the server, merging the response with the model's
+	    // local attributes. Any changed attributes will trigger a "change" event.
+	    fetch: function(options) {
+	      options = _.extend({parse: true}, options);
+	      var model = this;
+	      var success = options.success;
+	      options.success = function(resp) {
+	        var serverAttrs = options.parse ? model.parse(resp, options) : resp;
+	        if (!model.set(serverAttrs, options)) return false;
+	        if (success) success.call(options.context, model, resp, options);
+	        model.trigger('sync', model, resp, options);
+	      };
+	      wrapError(this, options);
+	      return this.sync('read', this, options);
+	    },
+
+	    // Set a hash of model attributes, and sync the model to the server.
+	    // If the server returns an attributes hash that differs, the model's
+	    // state will be `set` again.
+	    save: function(key, val, options) {
+	      // Handle both `"key", value` and `{key: value}` -style arguments.
+	      var attrs;
+	      if (key == null || typeof key === 'object') {
+	        attrs = key;
+	        options = val;
+	      } else {
+	        (attrs = {})[key] = val;
+	      }
+
+	      options = _.extend({validate: true, parse: true}, options);
+	      var wait = options.wait;
+
+	      // If we're not waiting and attributes exist, save acts as
+	      // `set(attr).save(null, opts)` with validation. Otherwise, check if
+	      // the model will be valid when the attributes, if any, are set.
+	      if (attrs && !wait) {
+	        if (!this.set(attrs, options)) return false;
+	      } else {
+	        if (!this._validate(attrs, options)) return false;
+	      }
+
+	      // After a successful server-side save, the client is (optionally)
+	      // updated with the server-side state.
+	      var model = this;
+	      var success = options.success;
+	      var attributes = this.attributes;
+	      options.success = function(resp) {
+	        // Ensure attributes are restored during synchronous saves.
+	        model.attributes = attributes;
+	        var serverAttrs = options.parse ? model.parse(resp, options) : resp;
+	        if (wait) serverAttrs = _.extend({}, attrs, serverAttrs);
+	        if (serverAttrs && !model.set(serverAttrs, options)) return false;
+	        if (success) success.call(options.context, model, resp, options);
+	        model.trigger('sync', model, resp, options);
+	      };
+	      wrapError(this, options);
+
+	      // Set temporary attributes if `{wait: true}` to properly find new ids.
+	      if (attrs && wait) this.attributes = _.extend({}, attributes, attrs);
+
+	      var method = this.isNew() ? 'create' : (options.patch ? 'patch' : 'update');
+	      if (method === 'patch' && !options.attrs) options.attrs = attrs;
+	      var xhr = this.sync(method, this, options);
+
+	      // Restore attributes.
+	      this.attributes = attributes;
+
+	      return xhr;
+	    },
+
+	    // Destroy this model on the server if it was already persisted.
+	    // Optimistically removes the model from its collection, if it has one.
+	    // If `wait: true` is passed, waits for the server to respond before removal.
+	    destroy: function(options) {
+	      options = options ? _.clone(options) : {};
+	      var model = this;
+	      var success = options.success;
+	      var wait = options.wait;
+
+	      var destroy = function() {
+	        model.stopListening();
+	        model.trigger('destroy', model, model.collection, options);
+	      };
+
+	      options.success = function(resp) {
+	        if (wait) destroy();
+	        if (success) success.call(options.context, model, resp, options);
+	        if (!model.isNew()) model.trigger('sync', model, resp, options);
+	      };
+
+	      var xhr = false;
+	      if (this.isNew()) {
+	        _.defer(options.success);
+	      } else {
+	        wrapError(this, options);
+	        xhr = this.sync('delete', this, options);
+	      }
+	      if (!wait) destroy();
+	      return xhr;
+	    },
+
+	    // Default URL for the model's representation on the server -- if you're
+	    // using Backbone's restful methods, override this to change the endpoint
+	    // that will be called.
+	    url: function() {
+	      var base =
+	        _.result(this, 'urlRoot') ||
+	        _.result(this.collection, 'url') ||
+	        urlError();
+	      if (this.isNew()) return base;
+	      var id = this.get(this.idAttribute);
+	      return base.replace(/[^\/]$/, '$&/') + encodeURIComponent(id);
+	    },
+
+	    // **parse** converts a response into the hash of attributes to be `set` on
+	    // the model. The default implementation is just to pass the response along.
+	    parse: function(resp, options) {
+	      return resp;
+	    },
+
+	    // Create a new model with identical attributes to this one.
+	    clone: function() {
+	      return new this.constructor(this.attributes);
+	    },
+
+	    // A model is new if it has never been saved to the server, and lacks an id.
+	    isNew: function() {
+	      return !this.has(this.idAttribute);
+	    },
+
+	    // Check if the model is currently in a valid state.
+	    isValid: function(options) {
+	      return this._validate({}, _.defaults({validate: true}, options));
+	    },
+
+	    // Run validation against the next complete set of model attributes,
+	    // returning `true` if all is well. Otherwise, fire an `"invalid"` event.
+	    _validate: function(attrs, options) {
+	      if (!options.validate || !this.validate) return true;
+	      attrs = _.extend({}, this.attributes, attrs);
+	      var error = this.validationError = this.validate(attrs, options) || null;
+	      if (!error) return true;
+	      this.trigger('invalid', this, error, _.extend(options, {validationError: error}));
+	      return false;
+	    }
+
+	  });
+
+	  // Underscore methods that we want to implement on the Model, mapped to the
+	  // number of arguments they take.
+	  var modelMethods = { keys: 1, values: 1, pairs: 1, invert: 1, pick: 0,
+	      omit: 0, chain: 1, isEmpty: 1 };
+
+	  // Mix in each Underscore method as a proxy to `Model#attributes`.
+	  addUnderscoreMethods(Model, modelMethods, 'attributes');
+
+	  // Backbone.Collection
+	  // -------------------
+
+	  // If models tend to represent a single row of data, a Backbone Collection is
+	  // more analogous to a table full of data ... or a small slice or page of that
+	  // table, or a collection of rows that belong together for a particular reason
+	  // -- all of the messages in this particular folder, all of the documents
+	  // belonging to this particular author, and so on. Collections maintain
+	  // indexes of their models, both in order, and for lookup by `id`.
+
+	  // Create a new **Collection**, perhaps to contain a specific type of `model`.
+	  // If a `comparator` is specified, the Collection will maintain
+	  // its models in sort order, as they're added and removed.
+	  var Collection = Backbone.Collection = function(models, options) {
+	    options || (options = {});
+	    if (options.model) this.model = options.model;
+	    if (options.comparator !== void 0) this.comparator = options.comparator;
+	    this._reset();
+	    this.initialize.apply(this, arguments);
+	    if (models) this.reset(models, _.extend({silent: true}, options));
+	  };
+
+	  // Default options for `Collection#set`.
+	  var setOptions = {add: true, remove: true, merge: true};
+	  var addOptions = {add: true, remove: false};
+
+	  // Splices `insert` into `array` at index `at`.
+	  var splice = function(array, insert, at) {
+	    at = Math.min(Math.max(at, 0), array.length);
+	    var tail = Array(array.length - at);
+	    var length = insert.length;
+	    for (var i = 0; i < tail.length; i++) tail[i] = array[i + at];
+	    for (i = 0; i < length; i++) array[i + at] = insert[i];
+	    for (i = 0; i < tail.length; i++) array[i + length + at] = tail[i];
+	  };
+
+	  // Define the Collection's inheritable methods.
+	  _.extend(Collection.prototype, Events, {
+
+	    // The default model for a collection is just a **Backbone.Model**.
+	    // This should be overridden in most cases.
+	    model: Model,
+
+	    // Initialize is an empty function by default. Override it with your own
+	    // initialization logic.
+	    initialize: function(){},
+
+	    // The JSON representation of a Collection is an array of the
+	    // models' attributes.
+	    toJSON: function(options) {
+	      return this.map(function(model) { return model.toJSON(options); });
+	    },
+
+	    // Proxy `Backbone.sync` by default.
+	    sync: function() {
+	      return Backbone.sync.apply(this, arguments);
+	    },
+
+	    // Add a model, or list of models to the set. `models` may be Backbone
+	    // Models or raw JavaScript objects to be converted to Models, or any
+	    // combination of the two.
+	    add: function(models, options) {
+	      return this.set(models, _.extend({merge: false}, options, addOptions));
+	    },
+
+	    // Remove a model, or a list of models from the set.
+	    remove: function(models, options) {
+	      options = _.extend({}, options);
+	      var singular = !_.isArray(models);
+	      models = singular ? [models] : _.clone(models);
+	      var removed = this._removeModels(models, options);
+	      if (!options.silent && removed) this.trigger('update', this, options);
+	      return singular ? removed[0] : removed;
+	    },
+
+	    // Update a collection by `set`-ing a new list of models, adding new ones,
+	    // removing models that are no longer present, and merging models that
+	    // already exist in the collection, as necessary. Similar to **Model#set**,
+	    // the core operation for updating the data contained by the collection.
+	    set: function(models, options) {
+	      if (models == null) return;
+
+	      options = _.defaults({}, options, setOptions);
+	      if (options.parse && !this._isModel(models)) models = this.parse(models, options);
+
+	      var singular = !_.isArray(models);
+	      models = singular ? [models] : models.slice();
+
+	      var at = options.at;
+	      if (at != null) at = +at;
+	      if (at < 0) at += this.length + 1;
+
+	      var set = [];
+	      var toAdd = [];
+	      var toRemove = [];
+	      var modelMap = {};
+
+	      var add = options.add;
+	      var merge = options.merge;
+	      var remove = options.remove;
+
+	      var sort = false;
+	      var sortable = this.comparator && (at == null) && options.sort !== false;
+	      var sortAttr = _.isString(this.comparator) ? this.comparator : null;
+
+	      // Turn bare objects into model references, and prevent invalid models
+	      // from being added.
+	      var model;
+	      for (var i = 0; i < models.length; i++) {
+	        model = models[i];
+
+	        // If a duplicate is found, prevent it from being added and
+	        // optionally merge it into the existing model.
+	        var existing = this.get(model);
+	        if (existing) {
+	          if (merge && model !== existing) {
+	            var attrs = this._isModel(model) ? model.attributes : model;
+	            if (options.parse) attrs = existing.parse(attrs, options);
+	            existing.set(attrs, options);
+	            if (sortable && !sort) sort = existing.hasChanged(sortAttr);
+	          }
+	          if (!modelMap[existing.cid]) {
+	            modelMap[existing.cid] = true;
+	            set.push(existing);
+	          }
+	          models[i] = existing;
+
+	        // If this is a new, valid model, push it to the `toAdd` list.
+	        } else if (add) {
+	          model = models[i] = this._prepareModel(model, options);
+	          if (model) {
+	            toAdd.push(model);
+	            this._addReference(model, options);
+	            modelMap[model.cid] = true;
+	            set.push(model);
+	          }
+	        }
+	      }
+
+	      // Remove stale models.
+	      if (remove) {
+	        for (i = 0; i < this.length; i++) {
+	          model = this.models[i];
+	          if (!modelMap[model.cid]) toRemove.push(model);
+	        }
+	        if (toRemove.length) this._removeModels(toRemove, options);
+	      }
+
+	      // See if sorting is needed, update `length` and splice in new models.
+	      var orderChanged = false;
+	      var replace = !sortable && add && remove;
+	      if (set.length && replace) {
+	        orderChanged = this.length != set.length || _.some(this.models, function(model, index) {
+	          return model !== set[index];
+	        });
+	        this.models.length = 0;
+	        splice(this.models, set, 0);
+	        this.length = this.models.length;
+	      } else if (toAdd.length) {
+	        if (sortable) sort = true;
+	        splice(this.models, toAdd, at == null ? this.length : at);
+	        this.length = this.models.length;
+	      }
+
+	      // Silently sort the collection if appropriate.
+	      if (sort) this.sort({silent: true});
+
+	      // Unless silenced, it's time to fire all appropriate add/sort events.
+	      if (!options.silent) {
+	        for (i = 0; i < toAdd.length; i++) {
+	          if (at != null) options.index = at + i;
+	          model = toAdd[i];
+	          model.trigger('add', model, this, options);
+	        }
+	        if (sort || orderChanged) this.trigger('sort', this, options);
+	        if (toAdd.length || toRemove.length) this.trigger('update', this, options);
+	      }
+
+	      // Return the added (or merged) model (or models).
+	      return singular ? models[0] : models;
+	    },
+
+	    // When you have more items than you want to add or remove individually,
+	    // you can reset the entire set with a new list of models, without firing
+	    // any granular `add` or `remove` events. Fires `reset` when finished.
+	    // Useful for bulk operations and optimizations.
+	    reset: function(models, options) {
+	      options = options ? _.clone(options) : {};
+	      for (var i = 0; i < this.models.length; i++) {
+	        this._removeReference(this.models[i], options);
+	      }
+	      options.previousModels = this.models;
+	      this._reset();
+	      models = this.add(models, _.extend({silent: true}, options));
+	      if (!options.silent) this.trigger('reset', this, options);
+	      return models;
+	    },
+
+	    // Add a model to the end of the collection.
+	    push: function(model, options) {
+	      return this.add(model, _.extend({at: this.length}, options));
+	    },
+
+	    // Remove a model from the end of the collection.
+	    pop: function(options) {
+	      var model = this.at(this.length - 1);
+	      return this.remove(model, options);
+	    },
+
+	    // Add a model to the beginning of the collection.
+	    unshift: function(model, options) {
+	      return this.add(model, _.extend({at: 0}, options));
+	    },
+
+	    // Remove a model from the beginning of the collection.
+	    shift: function(options) {
+	      var model = this.at(0);
+	      return this.remove(model, options);
+	    },
+
+	    // Slice out a sub-array of models from the collection.
+	    slice: function() {
+	      return slice.apply(this.models, arguments);
+	    },
+
+	    // Get a model from the set by id.
+	    get: function(obj) {
+	      if (obj == null) return void 0;
+	      var id = this.modelId(this._isModel(obj) ? obj.attributes : obj);
+	      return this._byId[obj] || this._byId[id] || this._byId[obj.cid];
+	    },
+
+	    // Get the model at the given index.
+	    at: function(index) {
+	      if (index < 0) index += this.length;
+	      return this.models[index];
+	    },
+
+	    // Return models with matching attributes. Useful for simple cases of
+	    // `filter`.
+	    where: function(attrs, first) {
+	      return this[first ? 'find' : 'filter'](attrs);
+	    },
+
+	    // Return the first model with matching attributes. Useful for simple cases
+	    // of `find`.
+	    findWhere: function(attrs) {
+	      return this.where(attrs, true);
+	    },
+
+	    // Force the collection to re-sort itself. You don't need to call this under
+	    // normal circumstances, as the set will maintain sort order as each item
+	    // is added.
+	    sort: function(options) {
+	      var comparator = this.comparator;
+	      if (!comparator) throw new Error('Cannot sort a set without a comparator');
+	      options || (options = {});
+
+	      var length = comparator.length;
+	      if (_.isFunction(comparator)) comparator = _.bind(comparator, this);
+
+	      // Run sort based on type of `comparator`.
+	      if (length === 1 || _.isString(comparator)) {
+	        this.models = this.sortBy(comparator);
+	      } else {
+	        this.models.sort(comparator);
+	      }
+	      if (!options.silent) this.trigger('sort', this, options);
+	      return this;
+	    },
+
+	    // Pluck an attribute from each model in the collection.
+	    pluck: function(attr) {
+	      return _.invoke(this.models, 'get', attr);
+	    },
+
+	    // Fetch the default set of models for this collection, resetting the
+	    // collection when they arrive. If `reset: true` is passed, the response
+	    // data will be passed through the `reset` method instead of `set`.
+	    fetch: function(options) {
+	      options = _.extend({parse: true}, options);
+	      var success = options.success;
+	      var collection = this;
+	      options.success = function(resp) {
+	        var method = options.reset ? 'reset' : 'set';
+	        collection[method](resp, options);
+	        if (success) success.call(options.context, collection, resp, options);
+	        collection.trigger('sync', collection, resp, options);
+	      };
+	      wrapError(this, options);
+	      return this.sync('read', this, options);
+	    },
+
+	    // Create a new instance of a model in this collection. Add the model to the
+	    // collection immediately, unless `wait: true` is passed, in which case we
+	    // wait for the server to agree.
+	    create: function(model, options) {
+	      options = options ? _.clone(options) : {};
+	      var wait = options.wait;
+	      model = this._prepareModel(model, options);
+	      if (!model) return false;
+	      if (!wait) this.add(model, options);
+	      var collection = this;
+	      var success = options.success;
+	      options.success = function(model, resp, callbackOpts) {
+	        if (wait) collection.add(model, callbackOpts);
+	        if (success) success.call(callbackOpts.context, model, resp, callbackOpts);
+	      };
+	      model.save(null, options);
+	      return model;
+	    },
+
+	    // **parse** converts a response into a list of models to be added to the
+	    // collection. The default implementation is just to pass it through.
+	    parse: function(resp, options) {
+	      return resp;
+	    },
+
+	    // Create a new collection with an identical list of models as this one.
+	    clone: function() {
+	      return new this.constructor(this.models, {
+	        model: this.model,
+	        comparator: this.comparator
+	      });
+	    },
+
+	    // Define how to uniquely identify models in the collection.
+	    modelId: function (attrs) {
+	      return attrs[this.model.prototype.idAttribute || 'id'];
+	    },
+
+	    // Private method to reset all internal state. Called when the collection
+	    // is first initialized or reset.
+	    _reset: function() {
+	      this.length = 0;
+	      this.models = [];
+	      this._byId  = {};
+	    },
+
+	    // Prepare a hash of attributes (or other model) to be added to this
+	    // collection.
+	    _prepareModel: function(attrs, options) {
+	      if (this._isModel(attrs)) {
+	        if (!attrs.collection) attrs.collection = this;
+	        return attrs;
+	      }
+	      options = options ? _.clone(options) : {};
+	      options.collection = this;
+	      var model = new this.model(attrs, options);
+	      if (!model.validationError) return model;
+	      this.trigger('invalid', this, model.validationError, options);
+	      return false;
+	    },
+
+	    // Internal method called by both remove and set.
+	    _removeModels: function(models, options) {
+	      var removed = [];
+	      for (var i = 0; i < models.length; i++) {
+	        var model = this.get(models[i]);
+	        if (!model) continue;
+
+	        var index = this.indexOf(model);
+	        this.models.splice(index, 1);
+	        this.length--;
+
+	        if (!options.silent) {
+	          options.index = index;
+	          model.trigger('remove', model, this, options);
+	        }
+
+	        removed.push(model);
+	        this._removeReference(model, options);
+	      }
+	      return removed.length ? removed : false;
+	    },
+
+	    // Method for checking whether an object should be considered a model for
+	    // the purposes of adding to the collection.
+	    _isModel: function (model) {
+	      return model instanceof Model;
+	    },
+
+	    // Internal method to create a model's ties to a collection.
+	    _addReference: function(model, options) {
+	      this._byId[model.cid] = model;
+	      var id = this.modelId(model.attributes);
+	      if (id != null) this._byId[id] = model;
+	      model.on('all', this._onModelEvent, this);
+	    },
+
+	    // Internal method to sever a model's ties to a collection.
+	    _removeReference: function(model, options) {
+	      delete this._byId[model.cid];
+	      var id = this.modelId(model.attributes);
+	      if (id != null) delete this._byId[id];
+	      if (this === model.collection) delete model.collection;
+	      model.off('all', this._onModelEvent, this);
+	    },
+
+	    // Internal method called every time a model in the set fires an event.
+	    // Sets need to update their indexes when models change ids. All other
+	    // events simply proxy through. "add" and "remove" events that originate
+	    // in other collections are ignored.
+	    _onModelEvent: function(event, model, collection, options) {
+	      if ((event === 'add' || event === 'remove') && collection !== this) return;
+	      if (event === 'destroy') this.remove(model, options);
+	      if (event === 'change') {
+	        var prevId = this.modelId(model.previousAttributes());
+	        var id = this.modelId(model.attributes);
+	        if (prevId !== id) {
+	          if (prevId != null) delete this._byId[prevId];
+	          if (id != null) this._byId[id] = model;
+	        }
+	      }
+	      this.trigger.apply(this, arguments);
+	    }
+
+	  });
+
+	  // Underscore methods that we want to implement on the Collection.
+	  // 90% of the core usefulness of Backbone Collections is actually implemented
+	  // right here:
+	  var collectionMethods = { forEach: 3, each: 3, map: 3, collect: 3, reduce: 4,
+	      foldl: 4, inject: 4, reduceRight: 4, foldr: 4, find: 3, detect: 3, filter: 3,
+	      select: 3, reject: 3, every: 3, all: 3, some: 3, any: 3, include: 3, includes: 3,
+	      contains: 3, invoke: 0, max: 3, min: 3, toArray: 1, size: 1, first: 3,
+	      head: 3, take: 3, initial: 3, rest: 3, tail: 3, drop: 3, last: 3,
+	      without: 0, difference: 0, indexOf: 3, shuffle: 1, lastIndexOf: 3,
+	      isEmpty: 1, chain: 1, sample: 3, partition: 3, groupBy: 3, countBy: 3,
+	      sortBy: 3, indexBy: 3};
+
+	  // Mix in each Underscore method as a proxy to `Collection#models`.
+	  addUnderscoreMethods(Collection, collectionMethods, 'models');
+
+	  // Backbone.View
+	  // -------------
+
+	  // Backbone Views are almost more convention than they are actual code. A View
+	  // is simply a JavaScript object that represents a logical chunk of UI in the
+	  // DOM. This might be a single item, an entire list, a sidebar or panel, or
+	  // even the surrounding frame which wraps your whole app. Defining a chunk of
+	  // UI as a **View** allows you to define your DOM events declaratively, without
+	  // having to worry about render order ... and makes it easy for the view to
+	  // react to specific changes in the state of your models.
+
+	  // Creating a Backbone.View creates its initial element outside of the DOM,
+	  // if an existing element is not provided...
+	  var View = Backbone.View = function(options) {
+	    this.cid = _.uniqueId('view');
+	    _.extend(this, _.pick(options, viewOptions));
+	    this._ensureElement();
+	    this.initialize.apply(this, arguments);
+	  };
+
+	  // Cached regex to split keys for `delegate`.
+	  var delegateEventSplitter = /^(\S+)\s*(.*)$/;
+
+	  // List of view options to be set as properties.
+	  var viewOptions = ['model', 'collection', 'el', 'id', 'attributes', 'className', 'tagName', 'events'];
+
+	  // Set up all inheritable **Backbone.View** properties and methods.
+	  _.extend(View.prototype, Events, {
+
+	    // The default `tagName` of a View's element is `"div"`.
+	    tagName: 'div',
+
+	    // jQuery delegate for element lookup, scoped to DOM elements within the
+	    // current view. This should be preferred to global lookups where possible.
+	    $: function(selector) {
+	      return this.$el.find(selector);
+	    },
+
+	    // Initialize is an empty function by default. Override it with your own
+	    // initialization logic.
+	    initialize: function(){},
+
+	    // **render** is the core function that your view should override, in order
+	    // to populate its element (`this.el`), with the appropriate HTML. The
+	    // convention is for **render** to always return `this`.
+	    render: function() {
+	      return this;
+	    },
+
+	    // Remove this view by taking the element out of the DOM, and removing any
+	    // applicable Backbone.Events listeners.
+	    remove: function() {
+	      this._removeElement();
+	      this.stopListening();
+	      return this;
+	    },
+
+	    // Remove this view's element from the document and all event listeners
+	    // attached to it. Exposed for subclasses using an alternative DOM
+	    // manipulation API.
+	    _removeElement: function() {
+	      this.$el.remove();
+	    },
+
+	    // Change the view's element (`this.el` property) and re-delegate the
+	    // view's events on the new element.
+	    setElement: function(element) {
+	      this.undelegateEvents();
+	      this._setElement(element);
+	      this.delegateEvents();
+	      return this;
+	    },
+
+	    // Creates the `this.el` and `this.$el` references for this view using the
+	    // given `el`. `el` can be a CSS selector or an HTML string, a jQuery
+	    // context or an element. Subclasses can override this to utilize an
+	    // alternative DOM manipulation API and are only required to set the
+	    // `this.el` property.
+	    _setElement: function(el) {
+	      this.$el = el instanceof Backbone.$ ? el : Backbone.$(el);
+	      this.el = this.$el[0];
+	    },
+
+	    // Set callbacks, where `this.events` is a hash of
+	    //
+	    // *{"event selector": "callback"}*
+	    //
+	    //     {
+	    //       'mousedown .title':  'edit',
+	    //       'click .button':     'save',
+	    //       'click .open':       function(e) { ... }
+	    //     }
+	    //
+	    // pairs. Callbacks will be bound to the view, with `this` set properly.
+	    // Uses event delegation for efficiency.
+	    // Omitting the selector binds the event to `this.el`.
+	    delegateEvents: function(events) {
+	      events || (events = _.result(this, 'events'));
+	      if (!events) return this;
+	      this.undelegateEvents();
+	      for (var key in events) {
+	        var method = events[key];
+	        if (!_.isFunction(method)) method = this[method];
+	        if (!method) continue;
+	        var match = key.match(delegateEventSplitter);
+	        this.delegate(match[1], match[2], _.bind(method, this));
+	      }
+	      return this;
+	    },
+
+	    // Add a single event listener to the view's element (or a child element
+	    // using `selector`). This only works for delegate-able events: not `focus`,
+	    // `blur`, and not `change`, `submit`, and `reset` in Internet Explorer.
+	    delegate: function(eventName, selector, listener) {
+	      this.$el.on(eventName + '.delegateEvents' + this.cid, selector, listener);
+	      return this;
+	    },
+
+	    // Clears all callbacks previously bound to the view by `delegateEvents`.
+	    // You usually don't need to use this, but may wish to if you have multiple
+	    // Backbone views attached to the same DOM element.
+	    undelegateEvents: function() {
+	      if (this.$el) this.$el.off('.delegateEvents' + this.cid);
+	      return this;
+	    },
+
+	    // A finer-grained `undelegateEvents` for removing a single delegated event.
+	    // `selector` and `listener` are both optional.
+	    undelegate: function(eventName, selector, listener) {
+	      this.$el.off(eventName + '.delegateEvents' + this.cid, selector, listener);
+	      return this;
+	    },
+
+	    // Produces a DOM element to be assigned to your view. Exposed for
+	    // subclasses using an alternative DOM manipulation API.
+	    _createElement: function(tagName) {
+	      return document.createElement(tagName);
+	    },
+
+	    // Ensure that the View has a DOM element to render into.
+	    // If `this.el` is a string, pass it through `$()`, take the first
+	    // matching element, and re-assign it to `el`. Otherwise, create
+	    // an element from the `id`, `className` and `tagName` properties.
+	    _ensureElement: function() {
+	      if (!this.el) {
+	        var attrs = _.extend({}, _.result(this, 'attributes'));
+	        if (this.id) attrs.id = _.result(this, 'id');
+	        if (this.className) attrs['class'] = _.result(this, 'className');
+	        this.setElement(this._createElement(_.result(this, 'tagName')));
+	        this._setAttributes(attrs);
+	      } else {
+	        this.setElement(_.result(this, 'el'));
+	      }
+	    },
+
+	    // Set attributes from a hash on this view's element.  Exposed for
+	    // subclasses using an alternative DOM manipulation API.
+	    _setAttributes: function(attributes) {
+	      this.$el.attr(attributes);
+	    }
+
+	  });
+
+	  // Backbone.sync
+	  // -------------
+
+	  // Override this function to change the manner in which Backbone persists
+	  // models to the server. You will be passed the type of request, and the
+	  // model in question. By default, makes a RESTful Ajax request
+	  // to the model's `url()`. Some possible customizations could be:
+	  //
+	  // * Use `setTimeout` to batch rapid-fire updates into a single request.
+	  // * Send up the models as XML instead of JSON.
+	  // * Persist models via WebSockets instead of Ajax.
+	  //
+	  // Turn on `Backbone.emulateHTTP` in order to send `PUT` and `DELETE` requests
+	  // as `POST`, with a `_method` parameter containing the true HTTP method,
+	  // as well as all requests with the body as `application/x-www-form-urlencoded`
+	  // instead of `application/json` with the model in a param named `model`.
+	  // Useful when interfacing with server-side languages like **PHP** that make
+	  // it difficult to read the body of `PUT` requests.
+	  Backbone.sync = function(method, model, options) {
+	    var type = methodMap[method];
+
+	    // Default options, unless specified.
+	    _.defaults(options || (options = {}), {
+	      emulateHTTP: Backbone.emulateHTTP,
+	      emulateJSON: Backbone.emulateJSON
+	    });
+
+	    // Default JSON-request options.
+	    var params = {type: type, dataType: 'json'};
+
+	    // Ensure that we have a URL.
+	    if (!options.url) {
+	      params.url = _.result(model, 'url') || urlError();
+	    }
+
+	    // Ensure that we have the appropriate request data.
+	    if (options.data == null && model && (method === 'create' || method === 'update' || method === 'patch')) {
+	      params.contentType = 'application/json';
+	      params.data = JSON.stringify(options.attrs || model.toJSON(options));
+	    }
+
+	    // For older servers, emulate JSON by encoding the request into an HTML-form.
+	    if (options.emulateJSON) {
+	      params.contentType = 'application/x-www-form-urlencoded';
+	      params.data = params.data ? {model: params.data} : {};
+	    }
+
+	    // For older servers, emulate HTTP by mimicking the HTTP method with `_method`
+	    // And an `X-HTTP-Method-Override` header.
+	    if (options.emulateHTTP && (type === 'PUT' || type === 'DELETE' || type === 'PATCH')) {
+	      params.type = 'POST';
+	      if (options.emulateJSON) params.data._method = type;
+	      var beforeSend = options.beforeSend;
+	      options.beforeSend = function(xhr) {
+	        xhr.setRequestHeader('X-HTTP-Method-Override', type);
+	        if (beforeSend) return beforeSend.apply(this, arguments);
+	      };
+	    }
+
+	    // Don't process data on a non-GET request.
+	    if (params.type !== 'GET' && !options.emulateJSON) {
+	      params.processData = false;
+	    }
+
+	    // Pass along `textStatus` and `errorThrown` from jQuery.
+	    var error = options.error;
+	    options.error = function(xhr, textStatus, errorThrown) {
+	      options.textStatus = textStatus;
+	      options.errorThrown = errorThrown;
+	      if (error) error.call(options.context, xhr, textStatus, errorThrown);
+	    };
+
+	    // Make the request, allowing the user to override any Ajax options.
+	    var xhr = options.xhr = Backbone.ajax(_.extend(params, options));
+	    model.trigger('request', model, xhr, options);
+	    return xhr;
+	  };
+
+	  // Map from CRUD to HTTP for our default `Backbone.sync` implementation.
+	  var methodMap = {
+	    'create': 'POST',
+	    'update': 'PUT',
+	    'patch':  'PATCH',
+	    'delete': 'DELETE',
+	    'read':   'GET'
+	  };
+
+	  // Set the default implementation of `Backbone.ajax` to proxy through to `$`.
+	  // Override this if you'd like to use a different library.
+	  Backbone.ajax = function() {
+	    return Backbone.$.ajax.apply(Backbone.$, arguments);
+	  };
+
+	  // Backbone.Router
+	  // ---------------
+
+	  // Routers map faux-URLs to actions, and fire events when routes are
+	  // matched. Creating a new one sets its `routes` hash, if not set statically.
+	  var Router = Backbone.Router = function(options) {
+	    options || (options = {});
+	    if (options.routes) this.routes = options.routes;
+	    this._bindRoutes();
+	    this.initialize.apply(this, arguments);
+	  };
+
+	  // Cached regular expressions for matching named param parts and splatted
+	  // parts of route strings.
+	  var optionalParam = /\((.*?)\)/g;
+	  var namedParam    = /(\(\?)?:\w+/g;
+	  var splatParam    = /\*\w+/g;
+	  var escapeRegExp  = /[\-{}\[\]+?.,\\\^$|#\s]/g;
+
+	  // Set up all inheritable **Backbone.Router** properties and methods.
+	  _.extend(Router.prototype, Events, {
+
+	    // Initialize is an empty function by default. Override it with your own
+	    // initialization logic.
+	    initialize: function(){},
+
+	    // Manually bind a single named route to a callback. For example:
+	    //
+	    //     this.route('search/:query/p:num', 'search', function(query, num) {
+	    //       ...
+	    //     });
+	    //
+	    route: function(route, name, callback) {
+	      if (!_.isRegExp(route)) route = this._routeToRegExp(route);
+	      if (_.isFunction(name)) {
+	        callback = name;
+	        name = '';
+	      }
+	      if (!callback) callback = this[name];
+	      var router = this;
+	      Backbone.history.route(route, function(fragment) {
+	        var args = router._extractParameters(route, fragment);
+	        if (router.execute(callback, args, name) !== false) {
+	          router.trigger.apply(router, ['route:' + name].concat(args));
+	          router.trigger('route', name, args);
+	          Backbone.history.trigger('route', router, name, args);
+	        }
+	      });
+	      return this;
+	    },
+
+	    // Execute a route handler with the provided parameters.  This is an
+	    // excellent place to do pre-route setup or post-route cleanup.
+	    execute: function(callback, args, name) {
+	      if (callback) callback.apply(this, args);
+	    },
+
+	    // Simple proxy to `Backbone.history` to save a fragment into the history.
+	    navigate: function(fragment, options) {
+	      Backbone.history.navigate(fragment, options);
+	      return this;
+	    },
+
+	    // Bind all defined routes to `Backbone.history`. We have to reverse the
+	    // order of the routes here to support behavior where the most general
+	    // routes can be defined at the bottom of the route map.
+	    _bindRoutes: function() {
+	      if (!this.routes) return;
+	      this.routes = _.result(this, 'routes');
+	      var route, routes = _.keys(this.routes);
+	      while ((route = routes.pop()) != null) {
+	        this.route(route, this.routes[route]);
+	      }
+	    },
+
+	    // Convert a route string into a regular expression, suitable for matching
+	    // against the current location hash.
+	    _routeToRegExp: function(route) {
+	      route = route.replace(escapeRegExp, '\\$&')
+	                   .replace(optionalParam, '(?:$1)?')
+	                   .replace(namedParam, function(match, optional) {
+	                     return optional ? match : '([^/?]+)';
+	                   })
+	                   .replace(splatParam, '([^?]*?)');
+	      return new RegExp('^' + route + '(?:\\?([\\s\\S]*))?$');
+	    },
+
+	    // Given a route, and a URL fragment that it matches, return the array of
+	    // extracted decoded parameters. Empty or unmatched parameters will be
+	    // treated as `null` to normalize cross-browser behavior.
+	    _extractParameters: function(route, fragment) {
+	      var params = route.exec(fragment).slice(1);
+	      return _.map(params, function(param, i) {
+	        // Don't decode the search params.
+	        if (i === params.length - 1) return param || null;
+	        return param ? decodeURIComponent(param) : null;
+	      });
+	    }
+
+	  });
+
+	  // Backbone.History
+	  // ----------------
+
+	  // Handles cross-browser history management, based on either
+	  // [pushState](http://diveintohtml5.info/history.html) and real URLs, or
+	  // [onhashchange](https://developer.mozilla.org/en-US/docs/DOM/window.onhashchange)
+	  // and URL fragments. If the browser supports neither (old IE, natch),
+	  // falls back to polling.
+	  var History = Backbone.History = function() {
+	    this.handlers = [];
+	    this.checkUrl = _.bind(this.checkUrl, this);
+
+	    // Ensure that `History` can be used outside of the browser.
+	    if (typeof window !== 'undefined') {
+	      this.location = window.location;
+	      this.history = window.history;
+	    }
+	  };
+
+	  // Cached regex for stripping a leading hash/slash and trailing space.
+	  var routeStripper = /^[#\/]|\s+$/g;
+
+	  // Cached regex for stripping leading and trailing slashes.
+	  var rootStripper = /^\/+|\/+$/g;
+
+	  // Cached regex for stripping urls of hash.
+	  var pathStripper = /#.*$/;
+
+	  // Has the history handling already been started?
+	  History.started = false;
+
+	  // Set up all inheritable **Backbone.History** properties and methods.
+	  _.extend(History.prototype, Events, {
+
+	    // The default interval to poll for hash changes, if necessary, is
+	    // twenty times a second.
+	    interval: 50,
+
+	    // Are we at the app root?
+	    atRoot: function() {
+	      var path = this.location.pathname.replace(/[^\/]$/, '$&/');
+	      return path === this.root && !this.getSearch();
+	    },
+
+	    // Does the pathname match the root?
+	    matchRoot: function() {
+	      var path = this.decodeFragment(this.location.pathname);
+	      var root = path.slice(0, this.root.length - 1) + '/';
+	      return root === this.root;
+	    },
+
+	    // Unicode characters in `location.pathname` are percent encoded so they're
+	    // decoded for comparison. `%25` should not be decoded since it may be part
+	    // of an encoded parameter.
+	    decodeFragment: function(fragment) {
+	      return decodeURI(fragment.replace(/%25/g, '%2525'));
+	    },
+
+	    // In IE6, the hash fragment and search params are incorrect if the
+	    // fragment contains `?`.
+	    getSearch: function() {
+	      var match = this.location.href.replace(/#.*/, '').match(/\?.+/);
+	      return match ? match[0] : '';
+	    },
+
+	    // Gets the true hash value. Cannot use location.hash directly due to bug
+	    // in Firefox where location.hash will always be decoded.
+	    getHash: function(window) {
+	      var match = (window || this).location.href.match(/#(.*)$/);
+	      return match ? match[1] : '';
+	    },
+
+	    // Get the pathname and search params, without the root.
+	    getPath: function() {
+	      var path = this.decodeFragment(
+	        this.location.pathname + this.getSearch()
+	      ).slice(this.root.length - 1);
+	      return path.charAt(0) === '/' ? path.slice(1) : path;
+	    },
+
+	    // Get the cross-browser normalized URL fragment from the path or hash.
+	    getFragment: function(fragment) {
+	      if (fragment == null) {
+	        if (this._usePushState || !this._wantsHashChange) {
+	          fragment = this.getPath();
+	        } else {
+	          fragment = this.getHash();
+	        }
+	      }
+	      return fragment.replace(routeStripper, '');
+	    },
+
+	    // Start the hash change handling, returning `true` if the current URL matches
+	    // an existing route, and `false` otherwise.
+	    start: function(options) {
+	      if (History.started) throw new Error('Backbone.history has already been started');
+	      History.started = true;
+
+	      // Figure out the initial configuration. Do we need an iframe?
+	      // Is pushState desired ... is it available?
+	      this.options          = _.extend({root: '/'}, this.options, options);
+	      this.root             = this.options.root;
+	      this._wantsHashChange = this.options.hashChange !== false;
+	      this._hasHashChange   = 'onhashchange' in window && (document.documentMode === void 0 || document.documentMode > 7);
+	      this._useHashChange   = this._wantsHashChange && this._hasHashChange;
+	      this._wantsPushState  = !!this.options.pushState;
+	      this._hasPushState    = !!(this.history && this.history.pushState);
+	      this._usePushState    = this._wantsPushState && this._hasPushState;
+	      this.fragment         = this.getFragment();
+
+	      // Normalize root to always include a leading and trailing slash.
+	      this.root = ('/' + this.root + '/').replace(rootStripper, '/');
+
+	      // Transition from hashChange to pushState or vice versa if both are
+	      // requested.
+	      if (this._wantsHashChange && this._wantsPushState) {
+
+	        // If we've started off with a route from a `pushState`-enabled
+	        // browser, but we're currently in a browser that doesn't support it...
+	        if (!this._hasPushState && !this.atRoot()) {
+	          var root = this.root.slice(0, -1) || '/';
+	          this.location.replace(root + '#' + this.getPath());
+	          // Return immediately as browser will do redirect to new url
+	          return true;
+
+	        // Or if we've started out with a hash-based route, but we're currently
+	        // in a browser where it could be `pushState`-based instead...
+	        } else if (this._hasPushState && this.atRoot()) {
+	          this.navigate(this.getHash(), {replace: true});
+	        }
+
+	      }
+
+	      // Proxy an iframe to handle location events if the browser doesn't
+	      // support the `hashchange` event, HTML5 history, or the user wants
+	      // `hashChange` but not `pushState`.
+	      if (!this._hasHashChange && this._wantsHashChange && !this._usePushState) {
+	        this.iframe = document.createElement('iframe');
+	        this.iframe.src = 'javascript:0';
+	        this.iframe.style.display = 'none';
+	        this.iframe.tabIndex = -1;
+	        var body = document.body;
+	        // Using `appendChild` will throw on IE < 9 if the document is not ready.
+	        var iWindow = body.insertBefore(this.iframe, body.firstChild).contentWindow;
+	        iWindow.document.open();
+	        iWindow.document.close();
+	        iWindow.location.hash = '#' + this.fragment;
+	      }
+
+	      // Add a cross-platform `addEventListener` shim for older browsers.
+	      var addEventListener = window.addEventListener || function (eventName, listener) {
+	        return attachEvent('on' + eventName, listener);
+	      };
+
+	      // Depending on whether we're using pushState or hashes, and whether
+	      // 'onhashchange' is supported, determine how we check the URL state.
+	      if (this._usePushState) {
+	        addEventListener('popstate', this.checkUrl, false);
+	      } else if (this._useHashChange && !this.iframe) {
+	        addEventListener('hashchange', this.checkUrl, false);
+	      } else if (this._wantsHashChange) {
+	        this._checkUrlInterval = setInterval(this.checkUrl, this.interval);
+	      }
+
+	      if (!this.options.silent) return this.loadUrl();
+	    },
+
+	    // Disable Backbone.history, perhaps temporarily. Not useful in a real app,
+	    // but possibly useful for unit testing Routers.
+	    stop: function() {
+	      // Add a cross-platform `removeEventListener` shim for older browsers.
+	      var removeEventListener = window.removeEventListener || function (eventName, listener) {
+	        return detachEvent('on' + eventName, listener);
+	      };
+
+	      // Remove window listeners.
+	      if (this._usePushState) {
+	        removeEventListener('popstate', this.checkUrl, false);
+	      } else if (this._useHashChange && !this.iframe) {
+	        removeEventListener('hashchange', this.checkUrl, false);
+	      }
+
+	      // Clean up the iframe if necessary.
+	      if (this.iframe) {
+	        document.body.removeChild(this.iframe);
+	        this.iframe = null;
+	      }
+
+	      // Some environments will throw when clearing an undefined interval.
+	      if (this._checkUrlInterval) clearInterval(this._checkUrlInterval);
+	      History.started = false;
+	    },
+
+	    // Add a route to be tested when the fragment changes. Routes added later
+	    // may override previous routes.
+	    route: function(route, callback) {
+	      this.handlers.unshift({route: route, callback: callback});
+	    },
+
+	    // Checks the current URL to see if it has changed, and if it has,
+	    // calls `loadUrl`, normalizing across the hidden iframe.
+	    checkUrl: function(e) {
+	      var current = this.getFragment();
+
+	      // If the user pressed the back button, the iframe's hash will have
+	      // changed and we should use that for comparison.
+	      if (current === this.fragment && this.iframe) {
+	        current = this.getHash(this.iframe.contentWindow);
+	      }
+
+	      if (current === this.fragment) return false;
+	      if (this.iframe) this.navigate(current);
+	      this.loadUrl();
+	    },
+
+	    // Attempt to load the current URL fragment. If a route succeeds with a
+	    // match, returns `true`. If no defined routes matches the fragment,
+	    // returns `false`.
+	    loadUrl: function(fragment) {
+	      // If the root doesn't match, no routes can match either.
+	      if (!this.matchRoot()) return false;
+	      fragment = this.fragment = this.getFragment(fragment);
+	      return _.some(this.handlers, function(handler) {
+	        if (handler.route.test(fragment)) {
+	          handler.callback(fragment);
+	          return true;
+	        }
+	      });
+	    },
+
+	    // Save a fragment into the hash history, or replace the URL state if the
+	    // 'replace' option is passed. You are responsible for properly URL-encoding
+	    // the fragment in advance.
+	    //
+	    // The options object can contain `trigger: true` if you wish to have the
+	    // route callback be fired (not usually desirable), or `replace: true`, if
+	    // you wish to modify the current URL without adding an entry to the history.
+	    navigate: function(fragment, options) {
+	      if (!History.started) return false;
+	      if (!options || options === true) options = {trigger: !!options};
+
+	      // Normalize the fragment.
+	      fragment = this.getFragment(fragment || '');
+
+	      // Don't include a trailing slash on the root.
+	      var root = this.root;
+	      if (fragment === '' || fragment.charAt(0) === '?') {
+	        root = root.slice(0, -1) || '/';
+	      }
+	      var url = root + fragment;
+
+	      // Strip the hash and decode for matching.
+	      fragment = this.decodeFragment(fragment.replace(pathStripper, ''));
+
+	      if (this.fragment === fragment) return;
+	      this.fragment = fragment;
+
+	      // If pushState is available, we use it to set the fragment as a real URL.
+	      if (this._usePushState) {
+	        this.history[options.replace ? 'replaceState' : 'pushState']({}, document.title, url);
+
+	      // If hash changes haven't been explicitly disabled, update the hash
+	      // fragment to store history.
+	      } else if (this._wantsHashChange) {
+	        this._updateHash(this.location, fragment, options.replace);
+	        if (this.iframe && (fragment !== this.getHash(this.iframe.contentWindow))) {
+	          var iWindow = this.iframe.contentWindow;
+
+	          // Opening and closing the iframe tricks IE7 and earlier to push a
+	          // history entry on hash-tag change.  When replace is true, we don't
+	          // want this.
+	          if (!options.replace) {
+	            iWindow.document.open();
+	            iWindow.document.close();
+	          }
+
+	          this._updateHash(iWindow.location, fragment, options.replace);
+	        }
+
+	      // If you've told us that you explicitly don't want fallback hashchange-
+	      // based history, then `navigate` becomes a page refresh.
+	      } else {
+	        return this.location.assign(url);
+	      }
+	      if (options.trigger) return this.loadUrl(fragment);
+	    },
+
+	    // Update the hash location, either replacing the current entry, or adding
+	    // a new one to the browser history.
+	    _updateHash: function(location, fragment, replace) {
+	      if (replace) {
+	        var href = location.href.replace(/(javascript:|#).*$/, '');
+	        location.replace(href + '#' + fragment);
+	      } else {
+	        // Some browsers require that `hash` contains a leading #.
+	        location.hash = '#' + fragment;
+	      }
+	    }
+
+	  });
+
+	  // Create the default Backbone.history.
+	  Backbone.history = new History;
+
+	  // Helpers
+	  // -------
+
+	  // Helper function to correctly set up the prototype chain for subclasses.
+	  // Similar to `goog.inherits`, but uses a hash of prototype properties and
+	  // class properties to be extended.
+	  var extend = function(protoProps, staticProps) {
+	    var parent = this;
+	    var child;
+
+	    // The constructor function for the new subclass is either defined by you
+	    // (the "constructor" property in your `extend` definition), or defaulted
+	    // by us to simply call the parent constructor.
+	    if (protoProps && _.has(protoProps, 'constructor')) {
+	      child = protoProps.constructor;
+	    } else {
+	      child = function(){ return parent.apply(this, arguments); };
+	    }
+
+	    // Add static properties to the constructor function, if supplied.
+	    _.extend(child, parent, staticProps);
+
+	    // Set the prototype chain to inherit from `parent`, without calling
+	    // `parent` constructor function.
+	    var Surrogate = function(){ this.constructor = child; };
+	    Surrogate.prototype = parent.prototype;
+	    child.prototype = new Surrogate;
+
+	    // Add prototype properties (instance properties) to the subclass,
+	    // if supplied.
+	    if (protoProps) _.extend(child.prototype, protoProps);
+
+	    // Set a convenience property in case the parent's prototype is needed
+	    // later.
+	    child.__super__ = parent.prototype;
+
+	    return child;
+	  };
+
+	  // Set up inheritance for the model, collection, router, view and history.
+	  Model.extend = Collection.extend = Router.extend = View.extend = History.extend = extend;
+
+	  // Throw an error when a URL is needed, and none is supplied.
+	  var urlError = function() {
+	    throw new Error('A "url" property or function must be specified');
+	  };
+
+	  // Wrap an optional error callback with a fallback error event.
+	  var wrapError = function(model, options) {
+	    var error = options.error;
+	    options.error = function(resp) {
+	      if (error) error.call(options.context, model, resp, options);
+	      model.trigger('error', model, resp, options);
+	    };
+	  };
+
+	  return Backbone;
+
+	}));
+
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
+	//     http://underscorejs.org
+	//     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	//     Underscore may be freely distributed under the MIT license.
+
+	(function() {
+
+	  // Baseline setup
+	  // --------------
+
+	  // Establish the root object, `window` in the browser, or `exports` on the server.
+	  var root = this;
+
+	  // Save the previous value of the `_` variable.
+	  var previousUnderscore = root._;
+
+	  // Save bytes in the minified (but not gzipped) version:
+	  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
+
+	  // Create quick reference variables for speed access to core prototypes.
+	  var
+	    push             = ArrayProto.push,
+	    slice            = ArrayProto.slice,
+	    toString         = ObjProto.toString,
+	    hasOwnProperty   = ObjProto.hasOwnProperty;
+
+	  // All **ECMAScript 5** native function implementations that we hope to use
+	  // are declared here.
+	  var
+	    nativeIsArray      = Array.isArray,
+	    nativeKeys         = Object.keys,
+	    nativeBind         = FuncProto.bind,
+	    nativeCreate       = Object.create;
+
+	  // Naked function reference for surrogate-prototype-swapping.
+	  var Ctor = function(){};
+
+	  // Create a safe reference to the Underscore object for use below.
+	  var _ = function(obj) {
+	    if (obj instanceof _) return obj;
+	    if (!(this instanceof _)) return new _(obj);
+	    this._wrapped = obj;
+	  };
+
+	  // Export the Underscore object for **Node.js**, with
+	  // backwards-compatibility for the old `require()` API. If we're in
+	  // the browser, add `_` as a global object.
+	  if (true) {
+	    if (typeof module !== 'undefined' && module.exports) {
+	      exports = module.exports = _;
+	    }
+	    exports._ = _;
+	  } else {
+	    root._ = _;
+	  }
+
+	  // Current version.
+	  _.VERSION = '1.8.3';
+
+	  // Internal function that returns an efficient (for current engines) version
+	  // of the passed-in callback, to be repeatedly applied in other Underscore
+	  // functions.
+	  var optimizeCb = function(func, context, argCount) {
+	    if (context === void 0) return func;
+	    switch (argCount == null ? 3 : argCount) {
+	      case 1: return function(value) {
+	        return func.call(context, value);
+	      };
+	      case 2: return function(value, other) {
+	        return func.call(context, value, other);
+	      };
+	      case 3: return function(value, index, collection) {
+	        return func.call(context, value, index, collection);
+	      };
+	      case 4: return function(accumulator, value, index, collection) {
+	        return func.call(context, accumulator, value, index, collection);
+	      };
+	    }
+	    return function() {
+	      return func.apply(context, arguments);
+	    };
+	  };
+
+	  // A mostly-internal function to generate callbacks that can be applied
+	  // to each element in a collection, returning the desired result — either
+	  // identity, an arbitrary callback, a property matcher, or a property accessor.
+	  var cb = function(value, context, argCount) {
+	    if (value == null) return _.identity;
+	    if (_.isFunction(value)) return optimizeCb(value, context, argCount);
+	    if (_.isObject(value)) return _.matcher(value);
+	    return _.property(value);
+	  };
+	  _.iteratee = function(value, context) {
+	    return cb(value, context, Infinity);
+	  };
+
+	  // An internal function for creating assigner functions.
+	  var createAssigner = function(keysFunc, undefinedOnly) {
+	    return function(obj) {
+	      var length = arguments.length;
+	      if (length < 2 || obj == null) return obj;
+	      for (var index = 1; index < length; index++) {
+	        var source = arguments[index],
+	            keys = keysFunc(source),
+	            l = keys.length;
+	        for (var i = 0; i < l; i++) {
+	          var key = keys[i];
+	          if (!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
+	        }
+	      }
+	      return obj;
+	    };
+	  };
+
+	  // An internal function for creating a new object that inherits from another.
+	  var baseCreate = function(prototype) {
+	    if (!_.isObject(prototype)) return {};
+	    if (nativeCreate) return nativeCreate(prototype);
+	    Ctor.prototype = prototype;
+	    var result = new Ctor;
+	    Ctor.prototype = null;
+	    return result;
+	  };
+
+	  var property = function(key) {
+	    return function(obj) {
+	      return obj == null ? void 0 : obj[key];
+	    };
+	  };
+
+	  // Helper for collection methods to determine whether a collection
+	  // should be iterated as an array or as an object
+	  // Related: http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength
+	  // Avoids a very nasty iOS 8 JIT bug on ARM-64. #2094
+	  var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
+	  var getLength = property('length');
+	  var isArrayLike = function(collection) {
+	    var length = getLength(collection);
+	    return typeof length == 'number' && length >= 0 && length <= MAX_ARRAY_INDEX;
+	  };
+
+	  // Collection Functions
+	  // --------------------
+
+	  // The cornerstone, an `each` implementation, aka `forEach`.
+	  // Handles raw objects in addition to array-likes. Treats all
+	  // sparse array-likes as if they were dense.
+	  _.each = _.forEach = function(obj, iteratee, context) {
+	    iteratee = optimizeCb(iteratee, context);
+	    var i, length;
+	    if (isArrayLike(obj)) {
+	      for (i = 0, length = obj.length; i < length; i++) {
+	        iteratee(obj[i], i, obj);
+	      }
+	    } else {
+	      var keys = _.keys(obj);
+	      for (i = 0, length = keys.length; i < length; i++) {
+	        iteratee(obj[keys[i]], keys[i], obj);
+	      }
+	    }
+	    return obj;
+	  };
+
+	  // Return the results of applying the iteratee to each element.
+	  _.map = _.collect = function(obj, iteratee, context) {
+	    iteratee = cb(iteratee, context);
+	    var keys = !isArrayLike(obj) && _.keys(obj),
+	        length = (keys || obj).length,
+	        results = Array(length);
+	    for (var index = 0; index < length; index++) {
+	      var currentKey = keys ? keys[index] : index;
+	      results[index] = iteratee(obj[currentKey], currentKey, obj);
+	    }
+	    return results;
+	  };
+
+	  // Create a reducing function iterating left or right.
+	  function createReduce(dir) {
+	    // Optimized iterator function as using arguments.length
+	    // in the main function will deoptimize the, see #1991.
+	    function iterator(obj, iteratee, memo, keys, index, length) {
+	      for (; index >= 0 && index < length; index += dir) {
+	        var currentKey = keys ? keys[index] : index;
+	        memo = iteratee(memo, obj[currentKey], currentKey, obj);
+	      }
+	      return memo;
+	    }
+
+	    return function(obj, iteratee, memo, context) {
+	      iteratee = optimizeCb(iteratee, context, 4);
+	      var keys = !isArrayLike(obj) && _.keys(obj),
+	          length = (keys || obj).length,
+	          index = dir > 0 ? 0 : length - 1;
+	      // Determine the initial value if none is provided.
+	      if (arguments.length < 3) {
+	        memo = obj[keys ? keys[index] : index];
+	        index += dir;
+	      }
+	      return iterator(obj, iteratee, memo, keys, index, length);
+	    };
+	  }
+
+	  // **Reduce** builds up a single result from a list of values, aka `inject`,
+	  // or `foldl`.
+	  _.reduce = _.foldl = _.inject = createReduce(1);
+
+	  // The right-associative version of reduce, also known as `foldr`.
+	  _.reduceRight = _.foldr = createReduce(-1);
+
+	  // Return the first value which passes a truth test. Aliased as `detect`.
+	  _.find = _.detect = function(obj, predicate, context) {
+	    var key;
+	    if (isArrayLike(obj)) {
+	      key = _.findIndex(obj, predicate, context);
+	    } else {
+	      key = _.findKey(obj, predicate, context);
+	    }
+	    if (key !== void 0 && key !== -1) return obj[key];
+	  };
+
+	  // Return all the elements that pass a truth test.
+	  // Aliased as `select`.
+	  _.filter = _.select = function(obj, predicate, context) {
+	    var results = [];
+	    predicate = cb(predicate, context);
+	    _.each(obj, function(value, index, list) {
+	      if (predicate(value, index, list)) results.push(value);
+	    });
+	    return results;
+	  };
+
+	  // Return all the elements for which a truth test fails.
+	  _.reject = function(obj, predicate, context) {
+	    return _.filter(obj, _.negate(cb(predicate)), context);
+	  };
+
+	  // Determine whether all of the elements match a truth test.
+	  // Aliased as `all`.
+	  _.every = _.all = function(obj, predicate, context) {
+	    predicate = cb(predicate, context);
+	    var keys = !isArrayLike(obj) && _.keys(obj),
+	        length = (keys || obj).length;
+	    for (var index = 0; index < length; index++) {
+	      var currentKey = keys ? keys[index] : index;
+	      if (!predicate(obj[currentKey], currentKey, obj)) return false;
+	    }
+	    return true;
+	  };
+
+	  // Determine if at least one element in the object matches a truth test.
+	  // Aliased as `any`.
+	  _.some = _.any = function(obj, predicate, context) {
+	    predicate = cb(predicate, context);
+	    var keys = !isArrayLike(obj) && _.keys(obj),
+	        length = (keys || obj).length;
+	    for (var index = 0; index < length; index++) {
+	      var currentKey = keys ? keys[index] : index;
+	      if (predicate(obj[currentKey], currentKey, obj)) return true;
+	    }
+	    return false;
+	  };
+
+	  // Determine if the array or object contains a given item (using `===`).
+	  // Aliased as `includes` and `include`.
+	  _.contains = _.includes = _.include = function(obj, item, fromIndex, guard) {
+	    if (!isArrayLike(obj)) obj = _.values(obj);
+	    if (typeof fromIndex != 'number' || guard) fromIndex = 0;
+	    return _.indexOf(obj, item, fromIndex) >= 0;
+	  };
+
+	  // Invoke a method (with arguments) on every item in a collection.
+	  _.invoke = function(obj, method) {
+	    var args = slice.call(arguments, 2);
+	    var isFunc = _.isFunction(method);
+	    return _.map(obj, function(value) {
+	      var func = isFunc ? method : value[method];
+	      return func == null ? func : func.apply(value, args);
+	    });
+	  };
+
+	  // Convenience version of a common use case of `map`: fetching a property.
+	  _.pluck = function(obj, key) {
+	    return _.map(obj, _.property(key));
+	  };
+
+	  // Convenience version of a common use case of `filter`: selecting only objects
+	  // containing specific `key:value` pairs.
+	  _.where = function(obj, attrs) {
+	    return _.filter(obj, _.matcher(attrs));
+	  };
+
+	  // Convenience version of a common use case of `find`: getting the first object
+	  // containing specific `key:value` pairs.
+	  _.findWhere = function(obj, attrs) {
+	    return _.find(obj, _.matcher(attrs));
+	  };
+
+	  // Return the maximum element (or element-based computation).
+	  _.max = function(obj, iteratee, context) {
+	    var result = -Infinity, lastComputed = -Infinity,
+	        value, computed;
+	    if (iteratee == null && obj != null) {
+	      obj = isArrayLike(obj) ? obj : _.values(obj);
+	      for (var i = 0, length = obj.length; i < length; i++) {
+	        value = obj[i];
+	        if (value > result) {
+	          result = value;
+	        }
+	      }
+	    } else {
+	      iteratee = cb(iteratee, context);
+	      _.each(obj, function(value, index, list) {
+	        computed = iteratee(value, index, list);
+	        if (computed > lastComputed || computed === -Infinity && result === -Infinity) {
+	          result = value;
+	          lastComputed = computed;
+	        }
+	      });
+	    }
+	    return result;
+	  };
+
+	  // Return the minimum element (or element-based computation).
+	  _.min = function(obj, iteratee, context) {
+	    var result = Infinity, lastComputed = Infinity,
+	        value, computed;
+	    if (iteratee == null && obj != null) {
+	      obj = isArrayLike(obj) ? obj : _.values(obj);
+	      for (var i = 0, length = obj.length; i < length; i++) {
+	        value = obj[i];
+	        if (value < result) {
+	          result = value;
+	        }
+	      }
+	    } else {
+	      iteratee = cb(iteratee, context);
+	      _.each(obj, function(value, index, list) {
+	        computed = iteratee(value, index, list);
+	        if (computed < lastComputed || computed === Infinity && result === Infinity) {
+	          result = value;
+	          lastComputed = computed;
+	        }
+	      });
+	    }
+	    return result;
+	  };
+
+	  // Shuffle a collection, using the modern version of the
+	  // [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
+	  _.shuffle = function(obj) {
+	    var set = isArrayLike(obj) ? obj : _.values(obj);
+	    var length = set.length;
+	    var shuffled = Array(length);
+	    for (var index = 0, rand; index < length; index++) {
+	      rand = _.random(0, index);
+	      if (rand !== index) shuffled[index] = shuffled[rand];
+	      shuffled[rand] = set[index];
+	    }
+	    return shuffled;
+	  };
+
+	  // Sample **n** random values from a collection.
+	  // If **n** is not specified, returns a single random element.
+	  // The internal `guard` argument allows it to work with `map`.
+	  _.sample = function(obj, n, guard) {
+	    if (n == null || guard) {
+	      if (!isArrayLike(obj)) obj = _.values(obj);
+	      return obj[_.random(obj.length - 1)];
+	    }
+	    return _.shuffle(obj).slice(0, Math.max(0, n));
+	  };
+
+	  // Sort the object's values by a criterion produced by an iteratee.
+	  _.sortBy = function(obj, iteratee, context) {
+	    iteratee = cb(iteratee, context);
+	    return _.pluck(_.map(obj, function(value, index, list) {
+	      return {
+	        value: value,
+	        index: index,
+	        criteria: iteratee(value, index, list)
+	      };
+	    }).sort(function(left, right) {
+	      var a = left.criteria;
+	      var b = right.criteria;
+	      if (a !== b) {
+	        if (a > b || a === void 0) return 1;
+	        if (a < b || b === void 0) return -1;
+	      }
+	      return left.index - right.index;
+	    }), 'value');
+	  };
+
+	  // An internal function used for aggregate "group by" operations.
+	  var group = function(behavior) {
+	    return function(obj, iteratee, context) {
+	      var result = {};
+	      iteratee = cb(iteratee, context);
+	      _.each(obj, function(value, index) {
+	        var key = iteratee(value, index, obj);
+	        behavior(result, value, key);
+	      });
+	      return result;
+	    };
+	  };
+
+	  // Groups the object's values by a criterion. Pass either a string attribute
+	  // to group by, or a function that returns the criterion.
+	  _.groupBy = group(function(result, value, key) {
+	    if (_.has(result, key)) result[key].push(value); else result[key] = [value];
+	  });
+
+	  // Indexes the object's values by a criterion, similar to `groupBy`, but for
+	  // when you know that your index values will be unique.
+	  _.indexBy = group(function(result, value, key) {
+	    result[key] = value;
+	  });
+
+	  // Counts instances of an object that group by a certain criterion. Pass
+	  // either a string attribute to count by, or a function that returns the
+	  // criterion.
+	  _.countBy = group(function(result, value, key) {
+	    if (_.has(result, key)) result[key]++; else result[key] = 1;
+	  });
+
+	  // Safely create a real, live array from anything iterable.
+	  _.toArray = function(obj) {
+	    if (!obj) return [];
+	    if (_.isArray(obj)) return slice.call(obj);
+	    if (isArrayLike(obj)) return _.map(obj, _.identity);
+	    return _.values(obj);
+	  };
+
+	  // Return the number of elements in an object.
+	  _.size = function(obj) {
+	    if (obj == null) return 0;
+	    return isArrayLike(obj) ? obj.length : _.keys(obj).length;
+	  };
+
+	  // Split a collection into two arrays: one whose elements all satisfy the given
+	  // predicate, and one whose elements all do not satisfy the predicate.
+	  _.partition = function(obj, predicate, context) {
+	    predicate = cb(predicate, context);
+	    var pass = [], fail = [];
+	    _.each(obj, function(value, key, obj) {
+	      (predicate(value, key, obj) ? pass : fail).push(value);
+	    });
+	    return [pass, fail];
+	  };
+
+	  // Array Functions
+	  // ---------------
+
+	  // Get the first element of an array. Passing **n** will return the first N
+	  // values in the array. Aliased as `head` and `take`. The **guard** check
+	  // allows it to work with `_.map`.
+	  _.first = _.head = _.take = function(array, n, guard) {
+	    if (array == null) return void 0;
+	    if (n == null || guard) return array[0];
+	    return _.initial(array, array.length - n);
+	  };
+
+	  // Returns everything but the last entry of the array. Especially useful on
+	  // the arguments object. Passing **n** will return all the values in
+	  // the array, excluding the last N.
+	  _.initial = function(array, n, guard) {
+	    return slice.call(array, 0, Math.max(0, array.length - (n == null || guard ? 1 : n)));
+	  };
+
+	  // Get the last element of an array. Passing **n** will return the last N
+	  // values in the array.
+	  _.last = function(array, n, guard) {
+	    if (array == null) return void 0;
+	    if (n == null || guard) return array[array.length - 1];
+	    return _.rest(array, Math.max(0, array.length - n));
+	  };
+
+	  // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
+	  // Especially useful on the arguments object. Passing an **n** will return
+	  // the rest N values in the array.
+	  _.rest = _.tail = _.drop = function(array, n, guard) {
+	    return slice.call(array, n == null || guard ? 1 : n);
+	  };
+
+	  // Trim out all falsy values from an array.
+	  _.compact = function(array) {
+	    return _.filter(array, _.identity);
+	  };
+
+	  // Internal implementation of a recursive `flatten` function.
+	  var flatten = function(input, shallow, strict, startIndex) {
+	    var output = [], idx = 0;
+	    for (var i = startIndex || 0, length = getLength(input); i < length; i++) {
+	      var value = input[i];
+	      if (isArrayLike(value) && (_.isArray(value) || _.isArguments(value))) {
+	        //flatten current level of array or arguments object
+	        if (!shallow) value = flatten(value, shallow, strict);
+	        var j = 0, len = value.length;
+	        output.length += len;
+	        while (j < len) {
+	          output[idx++] = value[j++];
+	        }
+	      } else if (!strict) {
+	        output[idx++] = value;
+	      }
+	    }
+	    return output;
+	  };
+
+	  // Flatten out an array, either recursively (by default), or just one level.
+	  _.flatten = function(array, shallow) {
+	    return flatten(array, shallow, false);
+	  };
+
+	  // Return a version of the array that does not contain the specified value(s).
+	  _.without = function(array) {
+	    return _.difference(array, slice.call(arguments, 1));
+	  };
+
+	  // Produce a duplicate-free version of the array. If the array has already
+	  // been sorted, you have the option of using a faster algorithm.
+	  // Aliased as `unique`.
+	  _.uniq = _.unique = function(array, isSorted, iteratee, context) {
+	    if (!_.isBoolean(isSorted)) {
+	      context = iteratee;
+	      iteratee = isSorted;
+	      isSorted = false;
+	    }
+	    if (iteratee != null) iteratee = cb(iteratee, context);
+	    var result = [];
+	    var seen = [];
+	    for (var i = 0, length = getLength(array); i < length; i++) {
+	      var value = array[i],
+	          computed = iteratee ? iteratee(value, i, array) : value;
+	      if (isSorted) {
+	        if (!i || seen !== computed) result.push(value);
+	        seen = computed;
+	      } else if (iteratee) {
+	        if (!_.contains(seen, computed)) {
+	          seen.push(computed);
+	          result.push(value);
+	        }
+	      } else if (!_.contains(result, value)) {
+	        result.push(value);
+	      }
+	    }
+	    return result;
+	  };
+
+	  // Produce an array that contains the union: each distinct element from all of
+	  // the passed-in arrays.
+	  _.union = function() {
+	    return _.uniq(flatten(arguments, true, true));
+	  };
+
+	  // Produce an array that contains every item shared between all the
+	  // passed-in arrays.
+	  _.intersection = function(array) {
+	    var result = [];
+	    var argsLength = arguments.length;
+	    for (var i = 0, length = getLength(array); i < length; i++) {
+	      var item = array[i];
+	      if (_.contains(result, item)) continue;
+	      for (var j = 1; j < argsLength; j++) {
+	        if (!_.contains(arguments[j], item)) break;
+	      }
+	      if (j === argsLength) result.push(item);
+	    }
+	    return result;
+	  };
+
+	  // Take the difference between one array and a number of other arrays.
+	  // Only the elements present in just the first array will remain.
+	  _.difference = function(array) {
+	    var rest = flatten(arguments, true, true, 1);
+	    return _.filter(array, function(value){
+	      return !_.contains(rest, value);
+	    });
+	  };
+
+	  // Zip together multiple lists into a single array -- elements that share
+	  // an index go together.
+	  _.zip = function() {
+	    return _.unzip(arguments);
+	  };
+
+	  // Complement of _.zip. Unzip accepts an array of arrays and groups
+	  // each array's elements on shared indices
+	  _.unzip = function(array) {
+	    var length = array && _.max(array, getLength).length || 0;
+	    var result = Array(length);
+
+	    for (var index = 0; index < length; index++) {
+	      result[index] = _.pluck(array, index);
+	    }
+	    return result;
+	  };
+
+	  // Converts lists into objects. Pass either a single array of `[key, value]`
+	  // pairs, or two parallel arrays of the same length -- one of keys, and one of
+	  // the corresponding values.
+	  _.object = function(list, values) {
+	    var result = {};
+	    for (var i = 0, length = getLength(list); i < length; i++) {
+	      if (values) {
+	        result[list[i]] = values[i];
+	      } else {
+	        result[list[i][0]] = list[i][1];
+	      }
+	    }
+	    return result;
+	  };
+
+	  // Generator function to create the findIndex and findLastIndex functions
+	  function createPredicateIndexFinder(dir) {
+	    return function(array, predicate, context) {
+	      predicate = cb(predicate, context);
+	      var length = getLength(array);
+	      var index = dir > 0 ? 0 : length - 1;
+	      for (; index >= 0 && index < length; index += dir) {
+	        if (predicate(array[index], index, array)) return index;
+	      }
+	      return -1;
+	    };
+	  }
+
+	  // Returns the first index on an array-like that passes a predicate test
+	  _.findIndex = createPredicateIndexFinder(1);
+	  _.findLastIndex = createPredicateIndexFinder(-1);
+
+	  // Use a comparator function to figure out the smallest index at which
+	  // an object should be inserted so as to maintain order. Uses binary search.
+	  _.sortedIndex = function(array, obj, iteratee, context) {
+	    iteratee = cb(iteratee, context, 1);
+	    var value = iteratee(obj);
+	    var low = 0, high = getLength(array);
+	    while (low < high) {
+	      var mid = Math.floor((low + high) / 2);
+	      if (iteratee(array[mid]) < value) low = mid + 1; else high = mid;
+	    }
+	    return low;
+	  };
+
+	  // Generator function to create the indexOf and lastIndexOf functions
+	  function createIndexFinder(dir, predicateFind, sortedIndex) {
+	    return function(array, item, idx) {
+	      var i = 0, length = getLength(array);
+	      if (typeof idx == 'number') {
+	        if (dir > 0) {
+	            i = idx >= 0 ? idx : Math.max(idx + length, i);
+	        } else {
+	            length = idx >= 0 ? Math.min(idx + 1, length) : idx + length + 1;
+	        }
+	      } else if (sortedIndex && idx && length) {
+	        idx = sortedIndex(array, item);
+	        return array[idx] === item ? idx : -1;
+	      }
+	      if (item !== item) {
+	        idx = predicateFind(slice.call(array, i, length), _.isNaN);
+	        return idx >= 0 ? idx + i : -1;
+	      }
+	      for (idx = dir > 0 ? i : length - 1; idx >= 0 && idx < length; idx += dir) {
+	        if (array[idx] === item) return idx;
+	      }
+	      return -1;
+	    };
+	  }
+
+	  // Return the position of the first occurrence of an item in an array,
+	  // or -1 if the item is not included in the array.
+	  // If the array is large and already in sort order, pass `true`
+	  // for **isSorted** to use binary search.
+	  _.indexOf = createIndexFinder(1, _.findIndex, _.sortedIndex);
+	  _.lastIndexOf = createIndexFinder(-1, _.findLastIndex);
+
+	  // Generate an integer Array containing an arithmetic progression. A port of
+	  // the native Python `range()` function. See
+	  // [the Python documentation](http://docs.python.org/library/functions.html#range).
+	  _.range = function(start, stop, step) {
+	    if (stop == null) {
+	      stop = start || 0;
+	      start = 0;
+	    }
+	    step = step || 1;
+
+	    var length = Math.max(Math.ceil((stop - start) / step), 0);
+	    var range = Array(length);
+
+	    for (var idx = 0; idx < length; idx++, start += step) {
+	      range[idx] = start;
+	    }
+
+	    return range;
+	  };
+
+	  // Function (ahem) Functions
+	  // ------------------
+
+	  // Determines whether to execute a function as a constructor
+	  // or a normal function with the provided arguments
+	  var executeBound = function(sourceFunc, boundFunc, context, callingContext, args) {
+	    if (!(callingContext instanceof boundFunc)) return sourceFunc.apply(context, args);
+	    var self = baseCreate(sourceFunc.prototype);
+	    var result = sourceFunc.apply(self, args);
+	    if (_.isObject(result)) return result;
+	    return self;
+	  };
+
+	  // Create a function bound to a given object (assigning `this`, and arguments,
+	  // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
+	  // available.
+	  _.bind = function(func, context) {
+	    if (nativeBind && func.bind === nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
+	    if (!_.isFunction(func)) throw new TypeError('Bind must be called on a function');
+	    var args = slice.call(arguments, 2);
+	    var bound = function() {
+	      return executeBound(func, bound, context, this, args.concat(slice.call(arguments)));
+	    };
+	    return bound;
+	  };
+
+	  // Partially apply a function by creating a version that has had some of its
+	  // arguments pre-filled, without changing its dynamic `this` context. _ acts
+	  // as a placeholder, allowing any combination of arguments to be pre-filled.
+	  _.partial = function(func) {
+	    var boundArgs = slice.call(arguments, 1);
+	    var bound = function() {
+	      var position = 0, length = boundArgs.length;
+	      var args = Array(length);
+	      for (var i = 0; i < length; i++) {
+	        args[i] = boundArgs[i] === _ ? arguments[position++] : boundArgs[i];
+	      }
+	      while (position < arguments.length) args.push(arguments[position++]);
+	      return executeBound(func, bound, this, this, args);
+	    };
+	    return bound;
+	  };
+
+	  // Bind a number of an object's methods to that object. Remaining arguments
+	  // are the method names to be bound. Useful for ensuring that all callbacks
+	  // defined on an object belong to it.
+	  _.bindAll = function(obj) {
+	    var i, length = arguments.length, key;
+	    if (length <= 1) throw new Error('bindAll must be passed function names');
+	    for (i = 1; i < length; i++) {
+	      key = arguments[i];
+	      obj[key] = _.bind(obj[key], obj);
+	    }
+	    return obj;
+	  };
+
+	  // Memoize an expensive function by storing its results.
+	  _.memoize = function(func, hasher) {
+	    var memoize = function(key) {
+	      var cache = memoize.cache;
+	      var address = '' + (hasher ? hasher.apply(this, arguments) : key);
+	      if (!_.has(cache, address)) cache[address] = func.apply(this, arguments);
+	      return cache[address];
+	    };
+	    memoize.cache = {};
+	    return memoize;
+	  };
+
+	  // Delays a function for the given number of milliseconds, and then calls
+	  // it with the arguments supplied.
+	  _.delay = function(func, wait) {
+	    var args = slice.call(arguments, 2);
+	    return setTimeout(function(){
+	      return func.apply(null, args);
+	    }, wait);
+	  };
+
+	  // Defers a function, scheduling it to run after the current call stack has
+	  // cleared.
+	  _.defer = _.partial(_.delay, _, 1);
+
+	  // Returns a function, that, when invoked, will only be triggered at most once
+	  // during a given window of time. Normally, the throttled function will run
+	  // as much as it can, without ever going more than once per `wait` duration;
+	  // but if you'd like to disable the execution on the leading edge, pass
+	  // `{leading: false}`. To disable execution on the trailing edge, ditto.
+	  _.throttle = function(func, wait, options) {
+	    var context, args, result;
+	    var timeout = null;
+	    var previous = 0;
+	    if (!options) options = {};
+	    var later = function() {
+	      previous = options.leading === false ? 0 : _.now();
+	      timeout = null;
+	      result = func.apply(context, args);
+	      if (!timeout) context = args = null;
+	    };
+	    return function() {
+	      var now = _.now();
+	      if (!previous && options.leading === false) previous = now;
+	      var remaining = wait - (now - previous);
+	      context = this;
+	      args = arguments;
+	      if (remaining <= 0 || remaining > wait) {
+	        if (timeout) {
+	          clearTimeout(timeout);
+	          timeout = null;
+	        }
+	        previous = now;
+	        result = func.apply(context, args);
+	        if (!timeout) context = args = null;
+	      } else if (!timeout && options.trailing !== false) {
+	        timeout = setTimeout(later, remaining);
+	      }
+	      return result;
+	    };
+	  };
+
+	  // Returns a function, that, as long as it continues to be invoked, will not
+	  // be triggered. The function will be called after it stops being called for
+	  // N milliseconds. If `immediate` is passed, trigger the function on the
+	  // leading edge, instead of the trailing.
+	  _.debounce = function(func, wait, immediate) {
+	    var timeout, args, context, timestamp, result;
+
+	    var later = function() {
+	      var last = _.now() - timestamp;
+
+	      if (last < wait && last >= 0) {
+	        timeout = setTimeout(later, wait - last);
+	      } else {
+	        timeout = null;
+	        if (!immediate) {
+	          result = func.apply(context, args);
+	          if (!timeout) context = args = null;
+	        }
+	      }
+	    };
+
+	    return function() {
+	      context = this;
+	      args = arguments;
+	      timestamp = _.now();
+	      var callNow = immediate && !timeout;
+	      if (!timeout) timeout = setTimeout(later, wait);
+	      if (callNow) {
+	        result = func.apply(context, args);
+	        context = args = null;
+	      }
+
+	      return result;
+	    };
+	  };
+
+	  // Returns the first function passed as an argument to the second,
+	  // allowing you to adjust arguments, run code before and after, and
+	  // conditionally execute the original function.
+	  _.wrap = function(func, wrapper) {
+	    return _.partial(wrapper, func);
+	  };
+
+	  // Returns a negated version of the passed-in predicate.
+	  _.negate = function(predicate) {
+	    return function() {
+	      return !predicate.apply(this, arguments);
+	    };
+	  };
+
+	  // Returns a function that is the composition of a list of functions, each
+	  // consuming the return value of the function that follows.
+	  _.compose = function() {
+	    var args = arguments;
+	    var start = args.length - 1;
+	    return function() {
+	      var i = start;
+	      var result = args[start].apply(this, arguments);
+	      while (i--) result = args[i].call(this, result);
+	      return result;
+	    };
+	  };
+
+	  // Returns a function that will only be executed on and after the Nth call.
+	  _.after = function(times, func) {
+	    return function() {
+	      if (--times < 1) {
+	        return func.apply(this, arguments);
+	      }
+	    };
+	  };
+
+	  // Returns a function that will only be executed up to (but not including) the Nth call.
+	  _.before = function(times, func) {
+	    var memo;
+	    return function() {
+	      if (--times > 0) {
+	        memo = func.apply(this, arguments);
+	      }
+	      if (times <= 1) func = null;
+	      return memo;
+	    };
+	  };
+
+	  // Returns a function that will be executed at most one time, no matter how
+	  // often you call it. Useful for lazy initialization.
+	  _.once = _.partial(_.before, 2);
+
+	  // Object Functions
+	  // ----------------
+
+	  // Keys in IE < 9 that won't be iterated by `for key in ...` and thus missed.
+	  var hasEnumBug = !{toString: null}.propertyIsEnumerable('toString');
+	  var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',
+	                      'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
+
+	  function collectNonEnumProps(obj, keys) {
+	    var nonEnumIdx = nonEnumerableProps.length;
+	    var constructor = obj.constructor;
+	    var proto = (_.isFunction(constructor) && constructor.prototype) || ObjProto;
+
+	    // Constructor is a special case.
+	    var prop = 'constructor';
+	    if (_.has(obj, prop) && !_.contains(keys, prop)) keys.push(prop);
+
+	    while (nonEnumIdx--) {
+	      prop = nonEnumerableProps[nonEnumIdx];
+	      if (prop in obj && obj[prop] !== proto[prop] && !_.contains(keys, prop)) {
+	        keys.push(prop);
+	      }
+	    }
+	  }
+
+	  // Retrieve the names of an object's own properties.
+	  // Delegates to **ECMAScript 5**'s native `Object.keys`
+	  _.keys = function(obj) {
+	    if (!_.isObject(obj)) return [];
+	    if (nativeKeys) return nativeKeys(obj);
+	    var keys = [];
+	    for (var key in obj) if (_.has(obj, key)) keys.push(key);
+	    // Ahem, IE < 9.
+	    if (hasEnumBug) collectNonEnumProps(obj, keys);
+	    return keys;
+	  };
+
+	  // Retrieve all the property names of an object.
+	  _.allKeys = function(obj) {
+	    if (!_.isObject(obj)) return [];
+	    var keys = [];
+	    for (var key in obj) keys.push(key);
+	    // Ahem, IE < 9.
+	    if (hasEnumBug) collectNonEnumProps(obj, keys);
+	    return keys;
+	  };
+
+	  // Retrieve the values of an object's properties.
+	  _.values = function(obj) {
+	    var keys = _.keys(obj);
+	    var length = keys.length;
+	    var values = Array(length);
+	    for (var i = 0; i < length; i++) {
+	      values[i] = obj[keys[i]];
+	    }
+	    return values;
+	  };
+
+	  // Returns the results of applying the iteratee to each element of the object
+	  // In contrast to _.map it returns an object
+	  _.mapObject = function(obj, iteratee, context) {
+	    iteratee = cb(iteratee, context);
+	    var keys =  _.keys(obj),
+	          length = keys.length,
+	          results = {},
+	          currentKey;
+	      for (var index = 0; index < length; index++) {
+	        currentKey = keys[index];
+	        results[currentKey] = iteratee(obj[currentKey], currentKey, obj);
+	      }
+	      return results;
+	  };
+
+	  // Convert an object into a list of `[key, value]` pairs.
+	  _.pairs = function(obj) {
+	    var keys = _.keys(obj);
+	    var length = keys.length;
+	    var pairs = Array(length);
+	    for (var i = 0; i < length; i++) {
+	      pairs[i] = [keys[i], obj[keys[i]]];
+	    }
+	    return pairs;
+	  };
+
+	  // Invert the keys and values of an object. The values must be serializable.
+	  _.invert = function(obj) {
+	    var result = {};
+	    var keys = _.keys(obj);
+	    for (var i = 0, length = keys.length; i < length; i++) {
+	      result[obj[keys[i]]] = keys[i];
+	    }
+	    return result;
+	  };
+
+	  // Return a sorted list of the function names available on the object.
+	  // Aliased as `methods`
+	  _.functions = _.methods = function(obj) {
+	    var names = [];
+	    for (var key in obj) {
+	      if (_.isFunction(obj[key])) names.push(key);
+	    }
+	    return names.sort();
+	  };
+
+	  // Extend a given object with all the properties in passed-in object(s).
+	  _.extend = createAssigner(_.allKeys);
+
+	  // Assigns a given object with all the own properties in the passed-in object(s)
+	  // (https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+	  _.extendOwn = _.assign = createAssigner(_.keys);
+
+	  // Returns the first key on an object that passes a predicate test
+	  _.findKey = function(obj, predicate, context) {
+	    predicate = cb(predicate, context);
+	    var keys = _.keys(obj), key;
+	    for (var i = 0, length = keys.length; i < length; i++) {
+	      key = keys[i];
+	      if (predicate(obj[key], key, obj)) return key;
+	    }
+	  };
+
+	  // Return a copy of the object only containing the whitelisted properties.
+	  _.pick = function(object, oiteratee, context) {
+	    var result = {}, obj = object, iteratee, keys;
+	    if (obj == null) return result;
+	    if (_.isFunction(oiteratee)) {
+	      keys = _.allKeys(obj);
+	      iteratee = optimizeCb(oiteratee, context);
+	    } else {
+	      keys = flatten(arguments, false, false, 1);
+	      iteratee = function(value, key, obj) { return key in obj; };
+	      obj = Object(obj);
+	    }
+	    for (var i = 0, length = keys.length; i < length; i++) {
+	      var key = keys[i];
+	      var value = obj[key];
+	      if (iteratee(value, key, obj)) result[key] = value;
+	    }
+	    return result;
+	  };
+
+	   // Return a copy of the object without the blacklisted properties.
+	  _.omit = function(obj, iteratee, context) {
+	    if (_.isFunction(iteratee)) {
+	      iteratee = _.negate(iteratee);
+	    } else {
+	      var keys = _.map(flatten(arguments, false, false, 1), String);
+	      iteratee = function(value, key) {
+	        return !_.contains(keys, key);
+	      };
+	    }
+	    return _.pick(obj, iteratee, context);
+	  };
+
+	  // Fill in a given object with default properties.
+	  _.defaults = createAssigner(_.allKeys, true);
+
+	  // Creates an object that inherits from the given prototype object.
+	  // If additional properties are provided then they will be added to the
+	  // created object.
+	  _.create = function(prototype, props) {
+	    var result = baseCreate(prototype);
+	    if (props) _.extendOwn(result, props);
+	    return result;
+	  };
+
+	  // Create a (shallow-cloned) duplicate of an object.
+	  _.clone = function(obj) {
+	    if (!_.isObject(obj)) return obj;
+	    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
+	  };
+
+	  // Invokes interceptor with the obj, and then returns obj.
+	  // The primary purpose of this method is to "tap into" a method chain, in
+	  // order to perform operations on intermediate results within the chain.
+	  _.tap = function(obj, interceptor) {
+	    interceptor(obj);
+	    return obj;
+	  };
+
+	  // Returns whether an object has a given set of `key:value` pairs.
+	  _.isMatch = function(object, attrs) {
+	    var keys = _.keys(attrs), length = keys.length;
+	    if (object == null) return !length;
+	    var obj = Object(object);
+	    for (var i = 0; i < length; i++) {
+	      var key = keys[i];
+	      if (attrs[key] !== obj[key] || !(key in obj)) return false;
+	    }
+	    return true;
+	  };
+
+
+	  // Internal recursive comparison function for `isEqual`.
+	  var eq = function(a, b, aStack, bStack) {
+	    // Identical objects are equal. `0 === -0`, but they aren't identical.
+	    // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
+	    if (a === b) return a !== 0 || 1 / a === 1 / b;
+	    // A strict comparison is necessary because `null == undefined`.
+	    if (a == null || b == null) return a === b;
+	    // Unwrap any wrapped objects.
+	    if (a instanceof _) a = a._wrapped;
+	    if (b instanceof _) b = b._wrapped;
+	    // Compare `[[Class]]` names.
+	    var className = toString.call(a);
+	    if (className !== toString.call(b)) return false;
+	    switch (className) {
+	      // Strings, numbers, regular expressions, dates, and booleans are compared by value.
+	      case '[object RegExp]':
+	      // RegExps are coerced to strings for comparison (Note: '' + /a/i === '/a/i')
+	      case '[object String]':
+	        // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
+	        // equivalent to `new String("5")`.
+	        return '' + a === '' + b;
+	      case '[object Number]':
+	        // `NaN`s are equivalent, but non-reflexive.
+	        // Object(NaN) is equivalent to NaN
+	        if (+a !== +a) return +b !== +b;
+	        // An `egal` comparison is performed for other numeric values.
+	        return +a === 0 ? 1 / +a === 1 / b : +a === +b;
+	      case '[object Date]':
+	      case '[object Boolean]':
+	        // Coerce dates and booleans to numeric primitive values. Dates are compared by their
+	        // millisecond representations. Note that invalid dates with millisecond representations
+	        // of `NaN` are not equivalent.
+	        return +a === +b;
+	    }
+
+	    var areArrays = className === '[object Array]';
+	    if (!areArrays) {
+	      if (typeof a != 'object' || typeof b != 'object') return false;
+
+	      // Objects with different constructors are not equivalent, but `Object`s or `Array`s
+	      // from different frames are.
+	      var aCtor = a.constructor, bCtor = b.constructor;
+	      if (aCtor !== bCtor && !(_.isFunction(aCtor) && aCtor instanceof aCtor &&
+	                               _.isFunction(bCtor) && bCtor instanceof bCtor)
+	                          && ('constructor' in a && 'constructor' in b)) {
+	        return false;
+	      }
+	    }
+	    // Assume equality for cyclic structures. The algorithm for detecting cyclic
+	    // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
+
+	    // Initializing stack of traversed objects.
+	    // It's done here since we only need them for objects and arrays comparison.
+	    aStack = aStack || [];
+	    bStack = bStack || [];
+	    var length = aStack.length;
+	    while (length--) {
+	      // Linear search. Performance is inversely proportional to the number of
+	      // unique nested structures.
+	      if (aStack[length] === a) return bStack[length] === b;
+	    }
+
+	    // Add the first object to the stack of traversed objects.
+	    aStack.push(a);
+	    bStack.push(b);
+
+	    // Recursively compare objects and arrays.
+	    if (areArrays) {
+	      // Compare array lengths to determine if a deep comparison is necessary.
+	      length = a.length;
+	      if (length !== b.length) return false;
+	      // Deep compare the contents, ignoring non-numeric properties.
+	      while (length--) {
+	        if (!eq(a[length], b[length], aStack, bStack)) return false;
+	      }
+	    } else {
+	      // Deep compare objects.
+	      var keys = _.keys(a), key;
+	      length = keys.length;
+	      // Ensure that both objects contain the same number of properties before comparing deep equality.
+	      if (_.keys(b).length !== length) return false;
+	      while (length--) {
+	        // Deep compare each member
+	        key = keys[length];
+	        if (!(_.has(b, key) && eq(a[key], b[key], aStack, bStack))) return false;
+	      }
+	    }
+	    // Remove the first object from the stack of traversed objects.
+	    aStack.pop();
+	    bStack.pop();
+	    return true;
+	  };
+
+	  // Perform a deep comparison to check if two objects are equal.
+	  _.isEqual = function(a, b) {
+	    return eq(a, b);
+	  };
+
+	  // Is a given array, string, or object empty?
+	  // An "empty" object has no enumerable own-properties.
+	  _.isEmpty = function(obj) {
+	    if (obj == null) return true;
+	    if (isArrayLike(obj) && (_.isArray(obj) || _.isString(obj) || _.isArguments(obj))) return obj.length === 0;
+	    return _.keys(obj).length === 0;
+	  };
+
+	  // Is a given value a DOM element?
+	  _.isElement = function(obj) {
+	    return !!(obj && obj.nodeType === 1);
+	  };
+
+	  // Is a given value an array?
+	  // Delegates to ECMA5's native Array.isArray
+	  _.isArray = nativeIsArray || function(obj) {
+	    return toString.call(obj) === '[object Array]';
+	  };
+
+	  // Is a given variable an object?
+	  _.isObject = function(obj) {
+	    var type = typeof obj;
+	    return type === 'function' || type === 'object' && !!obj;
+	  };
+
+	  // Add some isType methods: isArguments, isFunction, isString, isNumber, isDate, isRegExp, isError.
+	  _.each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error'], function(name) {
+	    _['is' + name] = function(obj) {
+	      return toString.call(obj) === '[object ' + name + ']';
+	    };
+	  });
+
+	  // Define a fallback version of the method in browsers (ahem, IE < 9), where
+	  // there isn't any inspectable "Arguments" type.
+	  if (!_.isArguments(arguments)) {
+	    _.isArguments = function(obj) {
+	      return _.has(obj, 'callee');
+	    };
+	  }
+
+	  // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
+	  // IE 11 (#1621), and in Safari 8 (#1929).
+	  if (typeof /./ != 'function' && typeof Int8Array != 'object') {
+	    _.isFunction = function(obj) {
+	      return typeof obj == 'function' || false;
+	    };
+	  }
+
+	  // Is a given object a finite number?
+	  _.isFinite = function(obj) {
+	    return isFinite(obj) && !isNaN(parseFloat(obj));
+	  };
+
+	  // Is the given value `NaN`? (NaN is the only number which does not equal itself).
+	  _.isNaN = function(obj) {
+	    return _.isNumber(obj) && obj !== +obj;
+	  };
+
+	  // Is a given value a boolean?
+	  _.isBoolean = function(obj) {
+	    return obj === true || obj === false || toString.call(obj) === '[object Boolean]';
+	  };
+
+	  // Is a given value equal to null?
+	  _.isNull = function(obj) {
+	    return obj === null;
+	  };
+
+	  // Is a given variable undefined?
+	  _.isUndefined = function(obj) {
+	    return obj === void 0;
+	  };
+
+	  // Shortcut function for checking if an object has a given property directly
+	  // on itself (in other words, not on a prototype).
+	  _.has = function(obj, key) {
+	    return obj != null && hasOwnProperty.call(obj, key);
+	  };
+
+	  // Utility Functions
+	  // -----------------
+
+	  // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
+	  // previous owner. Returns a reference to the Underscore object.
+	  _.noConflict = function() {
+	    root._ = previousUnderscore;
+	    return this;
+	  };
+
+	  // Keep the identity function around for default iteratees.
+	  _.identity = function(value) {
+	    return value;
+	  };
+
+	  // Predicate-generating functions. Often useful outside of Underscore.
+	  _.constant = function(value) {
+	    return function() {
+	      return value;
+	    };
+	  };
+
+	  _.noop = function(){};
+
+	  _.property = property;
+
+	  // Generates a function for a given object that returns a given property.
+	  _.propertyOf = function(obj) {
+	    return obj == null ? function(){} : function(key) {
+	      return obj[key];
+	    };
+	  };
+
+	  // Returns a predicate for checking whether an object has a given set of
+	  // `key:value` pairs.
+	  _.matcher = _.matches = function(attrs) {
+	    attrs = _.extendOwn({}, attrs);
+	    return function(obj) {
+	      return _.isMatch(obj, attrs);
+	    };
+	  };
+
+	  // Run a function **n** times.
+	  _.times = function(n, iteratee, context) {
+	    var accum = Array(Math.max(0, n));
+	    iteratee = optimizeCb(iteratee, context, 1);
+	    for (var i = 0; i < n; i++) accum[i] = iteratee(i);
+	    return accum;
+	  };
+
+	  // Return a random integer between min and max (inclusive).
+	  _.random = function(min, max) {
+	    if (max == null) {
+	      max = min;
+	      min = 0;
+	    }
+	    return min + Math.floor(Math.random() * (max - min + 1));
+	  };
+
+	  // A (possibly faster) way to get the current timestamp as an integer.
+	  _.now = Date.now || function() {
+	    return new Date().getTime();
+	  };
+
+	   // List of HTML entities for escaping.
+	  var escapeMap = {
+	    '&': '&amp;',
+	    '<': '&lt;',
+	    '>': '&gt;',
+	    '"': '&quot;',
+	    "'": '&#x27;',
+	    '`': '&#x60;'
+	  };
+	  var unescapeMap = _.invert(escapeMap);
+
+	  // Functions for escaping and unescaping strings to/from HTML interpolation.
+	  var createEscaper = function(map) {
+	    var escaper = function(match) {
+	      return map[match];
+	    };
+	    // Regexes for identifying a key that needs to be escaped
+	    var source = '(?:' + _.keys(map).join('|') + ')';
+	    var testRegexp = RegExp(source);
+	    var replaceRegexp = RegExp(source, 'g');
+	    return function(string) {
+	      string = string == null ? '' : '' + string;
+	      return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;
+	    };
+	  };
+	  _.escape = createEscaper(escapeMap);
+	  _.unescape = createEscaper(unescapeMap);
+
+	  // If the value of the named `property` is a function then invoke it with the
+	  // `object` as context; otherwise, return it.
+	  _.result = function(object, property, fallback) {
+	    var value = object == null ? void 0 : object[property];
+	    if (value === void 0) {
+	      value = fallback;
+	    }
+	    return _.isFunction(value) ? value.call(object) : value;
+	  };
+
+	  // Generate a unique integer id (unique within the entire client session).
+	  // Useful for temporary DOM ids.
+	  var idCounter = 0;
+	  _.uniqueId = function(prefix) {
+	    var id = ++idCounter + '';
+	    return prefix ? prefix + id : id;
+	  };
+
+	  // By default, Underscore uses ERB-style template delimiters, change the
+	  // following template settings to use alternative delimiters.
+	  _.templateSettings = {
+	    evaluate    : /<%([\s\S]+?)%>/g,
+	    interpolate : /<%=([\s\S]+?)%>/g,
+	    escape      : /<%-([\s\S]+?)%>/g
+	  };
+
+	  // When customizing `templateSettings`, if you don't want to define an
+	  // interpolation, evaluation or escaping regex, we need one that is
+	  // guaranteed not to match.
+	  var noMatch = /(.)^/;
+
+	  // Certain characters need to be escaped so that they can be put into a
+	  // string literal.
+	  var escapes = {
+	    "'":      "'",
+	    '\\':     '\\',
+	    '\r':     'r',
+	    '\n':     'n',
+	    '\u2028': 'u2028',
+	    '\u2029': 'u2029'
+	  };
+
+	  var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
+
+	  var escapeChar = function(match) {
+	    return '\\' + escapes[match];
+	  };
+
+	  // JavaScript micro-templating, similar to John Resig's implementation.
+	  // Underscore templating handles arbitrary delimiters, preserves whitespace,
+	  // and correctly escapes quotes within interpolated code.
+	  // NB: `oldSettings` only exists for backwards compatibility.
+	  _.template = function(text, settings, oldSettings) {
+	    if (!settings && oldSettings) settings = oldSettings;
+	    settings = _.defaults({}, settings, _.templateSettings);
+
+	    // Combine delimiters into one regular expression via alternation.
+	    var matcher = RegExp([
+	      (settings.escape || noMatch).source,
+	      (settings.interpolate || noMatch).source,
+	      (settings.evaluate || noMatch).source
+	    ].join('|') + '|$', 'g');
+
+	    // Compile the template source, escaping string literals appropriately.
+	    var index = 0;
+	    var source = "__p+='";
+	    text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
+	      source += text.slice(index, offset).replace(escaper, escapeChar);
+	      index = offset + match.length;
+
+	      if (escape) {
+	        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";
+	      } else if (interpolate) {
+	        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
+	      } else if (evaluate) {
+	        source += "';\n" + evaluate + "\n__p+='";
+	      }
+
+	      // Adobe VMs need the match returned to produce the correct offest.
+	      return match;
+	    });
+	    source += "';\n";
+
+	    // If a variable is not specified, place data values in local scope.
+	    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
+
+	    source = "var __t,__p='',__j=Array.prototype.join," +
+	      "print=function(){__p+=__j.call(arguments,'');};\n" +
+	      source + 'return __p;\n';
+
+	    try {
+	      var render = new Function(settings.variable || 'obj', '_', source);
+	    } catch (e) {
+	      e.source = source;
+	      throw e;
+	    }
+
+	    var template = function(data) {
+	      return render.call(this, data, _);
+	    };
+
+	    // Provide the compiled source as a convenience for precompilation.
+	    var argument = settings.variable || 'obj';
+	    template.source = 'function(' + argument + '){\n' + source + '}';
+
+	    return template;
+	  };
+
+	  // Add a "chain" function. Start chaining a wrapped Underscore object.
+	  _.chain = function(obj) {
+	    var instance = _(obj);
+	    instance._chain = true;
+	    return instance;
+	  };
+
+	  // OOP
+	  // ---------------
+	  // If Underscore is called as a function, it returns a wrapped object that
+	  // can be used OO-style. This wrapper holds altered versions of all the
+	  // underscore functions. Wrapped objects may be chained.
+
+	  // Helper function to continue chaining intermediate results.
+	  var result = function(instance, obj) {
+	    return instance._chain ? _(obj).chain() : obj;
+	  };
+
+	  // Add your own custom functions to the Underscore object.
+	  _.mixin = function(obj) {
+	    _.each(_.functions(obj), function(name) {
+	      var func = _[name] = obj[name];
+	      _.prototype[name] = function() {
+	        var args = [this._wrapped];
+	        push.apply(args, arguments);
+	        return result(this, func.apply(_, args));
+	      };
+	    });
+	  };
+
+	  // Add all of the Underscore functions to the wrapper object.
+	  _.mixin(_);
+
+	  // Add all mutator Array functions to the wrapper.
+	  _.each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
+	    var method = ArrayProto[name];
+	    _.prototype[name] = function() {
+	      var obj = this._wrapped;
+	      method.apply(obj, arguments);
+	      if ((name === 'shift' || name === 'splice') && obj.length === 0) delete obj[0];
+	      return result(this, obj);
+	    };
+	  });
+
+	  // Add all accessor Array functions to the wrapper.
+	  _.each(['concat', 'join', 'slice'], function(name) {
+	    var method = ArrayProto[name];
+	    _.prototype[name] = function() {
+	      return result(this, method.apply(this._wrapped, arguments));
+	    };
+	  });
+
+	  // Extracts the result from a wrapped and chained object.
+	  _.prototype.value = function() {
+	    return this._wrapped;
+	  };
+
+	  // Provide unwrapping proxy for some methods used in engine operations
+	  // such as arithmetic and JSON stringification.
+	  _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;
+
+	  _.prototype.toString = function() {
+	    return '' + this._wrapped;
+	  };
+
+	  // AMD registration happens at the end for compatibility with AMD loaders
+	  // that may not enforce next-turn semantics on modules. Even though general
+	  // practice for AMD registration is to be anonymous, underscore registers
+	  // as a named module because, like jQuery, it is a base library that is
+	  // popular enough to be bundled in a third party lib, but not be part of
+	  // an AMD load request. Those cases could generate an error when an
+	  // anonymous define() is called outside of a loader request.
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+	      return _;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  }
+	}.call(this));
+
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * mustache.js - Logic-less {{mustache}} templates with JavaScript
+	 * http://github.com/janl/mustache.js
+	 */
+
+	/*global define: false Mustache: true*/
+
+	(function defineMustache (global, factory) {
+	  if (typeof exports === 'object' && exports && typeof exports.nodeName !== 'string') {
+	    factory(exports); // CommonJS
+	  } else if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)); // AMD
+	  } else {
+	    global.Mustache = {};
+	    factory(Mustache); // script, wsh, asp
+	  }
+	}(this, function mustacheFactory (mustache) {
+
+	  var objectToString = Object.prototype.toString;
+	  var isArray = Array.isArray || function isArrayPolyfill (object) {
+	    return objectToString.call(object) === '[object Array]';
+	  };
+
+	  function isFunction (object) {
+	    return typeof object === 'function';
+	  }
+
+	  /**
+	   * More correct typeof string handling array
+	   * which normally returns typeof 'object'
+	   */
+	  function typeStr (obj) {
+	    return isArray(obj) ? 'array' : typeof obj;
+	  }
+
+	  function escapeRegExp (string) {
+	    return string.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&');
+	  }
+
+	  /**
+	   * Null safe way of checking whether or not an object,
+	   * including its prototype, has a given property
+	   */
+	  function hasProperty (obj, propName) {
+	    return obj != null && typeof obj === 'object' && (propName in obj);
+	  }
+
+	  // Workaround for https://issues.apache.org/jira/browse/COUCHDB-577
+	  // See https://github.com/janl/mustache.js/issues/189
+	  var regExpTest = RegExp.prototype.test;
+	  function testRegExp (re, string) {
+	    return regExpTest.call(re, string);
+	  }
+
+	  var nonSpaceRe = /\S/;
+	  function isWhitespace (string) {
+	    return !testRegExp(nonSpaceRe, string);
+	  }
+
+	  var entityMap = {
+	    '&': '&amp;',
+	    '<': '&lt;',
+	    '>': '&gt;',
+	    '"': '&quot;',
+	    "'": '&#39;',
+	    '/': '&#x2F;'
+	  };
+
+	  function escapeHtml (string) {
+	    return String(string).replace(/[&<>"'\/]/g, function fromEntityMap (s) {
+	      return entityMap[s];
+	    });
+	  }
+
+	  var whiteRe = /\s*/;
+	  var spaceRe = /\s+/;
+	  var equalsRe = /\s*=/;
+	  var curlyRe = /\s*\}/;
+	  var tagRe = /#|\^|\/|>|\{|&|=|!/;
+
+	  /**
+	   * Breaks up the given `template` string into a tree of tokens. If the `tags`
+	   * argument is given here it must be an array with two string values: the
+	   * opening and closing tags used in the template (e.g. [ "<%", "%>" ]). Of
+	   * course, the default is to use mustaches (i.e. mustache.tags).
+	   *
+	   * A token is an array with at least 4 elements. The first element is the
+	   * mustache symbol that was used inside the tag, e.g. "#" or "&". If the tag
+	   * did not contain a symbol (i.e. {{myValue}}) this element is "name". For
+	   * all text that appears outside a symbol this element is "text".
+	   *
+	   * The second element of a token is its "value". For mustache tags this is
+	   * whatever else was inside the tag besides the opening symbol. For text tokens
+	   * this is the text itself.
+	   *
+	   * The third and fourth elements of the token are the start and end indices,
+	   * respectively, of the token in the original template.
+	   *
+	   * Tokens that are the root node of a subtree contain two more elements: 1) an
+	   * array of tokens in the subtree and 2) the index in the original template at
+	   * which the closing tag for that section begins.
+	   */
+	  function parseTemplate (template, tags) {
+	    if (!template)
+	      return [];
+
+	    var sections = [];     // Stack to hold section tokens
+	    var tokens = [];       // Buffer to hold the tokens
+	    var spaces = [];       // Indices of whitespace tokens on the current line
+	    var hasTag = false;    // Is there a {{tag}} on the current line?
+	    var nonSpace = false;  // Is there a non-space char on the current line?
+
+	    // Strips all whitespace tokens array for the current line
+	    // if there was a {{#tag}} on it and otherwise only space.
+	    function stripSpace () {
+	      if (hasTag && !nonSpace) {
+	        while (spaces.length)
+	          delete tokens[spaces.pop()];
+	      } else {
+	        spaces = [];
+	      }
+
+	      hasTag = false;
+	      nonSpace = false;
+	    }
+
+	    var openingTagRe, closingTagRe, closingCurlyRe;
+	    function compileTags (tagsToCompile) {
+	      if (typeof tagsToCompile === 'string')
+	        tagsToCompile = tagsToCompile.split(spaceRe, 2);
+
+	      if (!isArray(tagsToCompile) || tagsToCompile.length !== 2)
+	        throw new Error('Invalid tags: ' + tagsToCompile);
+
+	      openingTagRe = new RegExp(escapeRegExp(tagsToCompile[0]) + '\\s*');
+	      closingTagRe = new RegExp('\\s*' + escapeRegExp(tagsToCompile[1]));
+	      closingCurlyRe = new RegExp('\\s*' + escapeRegExp('}' + tagsToCompile[1]));
+	    }
+
+	    compileTags(tags || mustache.tags);
+
+	    var scanner = new Scanner(template);
+
+	    var start, type, value, chr, token, openSection;
+	    while (!scanner.eos()) {
+	      start = scanner.pos;
+
+	      // Match any text between tags.
+	      value = scanner.scanUntil(openingTagRe);
+
+	      if (value) {
+	        for (var i = 0, valueLength = value.length; i < valueLength; ++i) {
+	          chr = value.charAt(i);
+
+	          if (isWhitespace(chr)) {
+	            spaces.push(tokens.length);
+	          } else {
+	            nonSpace = true;
+	          }
+
+	          tokens.push([ 'text', chr, start, start + 1 ]);
+	          start += 1;
+
+	          // Check for whitespace on the current line.
+	          if (chr === '\n')
+	            stripSpace();
+	        }
+	      }
+
+	      // Match the opening tag.
+	      if (!scanner.scan(openingTagRe))
+	        break;
+
+	      hasTag = true;
+
+	      // Get the tag type.
+	      type = scanner.scan(tagRe) || 'name';
+	      scanner.scan(whiteRe);
+
+	      // Get the tag value.
+	      if (type === '=') {
+	        value = scanner.scanUntil(equalsRe);
+	        scanner.scan(equalsRe);
+	        scanner.scanUntil(closingTagRe);
+	      } else if (type === '{') {
+	        value = scanner.scanUntil(closingCurlyRe);
+	        scanner.scan(curlyRe);
+	        scanner.scanUntil(closingTagRe);
+	        type = '&';
+	      } else {
+	        value = scanner.scanUntil(closingTagRe);
+	      }
+
+	      // Match the closing tag.
+	      if (!scanner.scan(closingTagRe))
+	        throw new Error('Unclosed tag at ' + scanner.pos);
+
+	      token = [ type, value, start, scanner.pos ];
+	      tokens.push(token);
+
+	      if (type === '#' || type === '^') {
+	        sections.push(token);
+	      } else if (type === '/') {
+	        // Check section nesting.
+	        openSection = sections.pop();
+
+	        if (!openSection)
+	          throw new Error('Unopened section "' + value + '" at ' + start);
+
+	        if (openSection[1] !== value)
+	          throw new Error('Unclosed section "' + openSection[1] + '" at ' + start);
+	      } else if (type === 'name' || type === '{' || type === '&') {
+	        nonSpace = true;
+	      } else if (type === '=') {
+	        // Set the tags for the next time around.
+	        compileTags(value);
+	      }
+	    }
+
+	    // Make sure there are no open sections when we're done.
+	    openSection = sections.pop();
+
+	    if (openSection)
+	      throw new Error('Unclosed section "' + openSection[1] + '" at ' + scanner.pos);
+
+	    return nestTokens(squashTokens(tokens));
+	  }
+
+	  /**
+	   * Combines the values of consecutive text tokens in the given `tokens` array
+	   * to a single token.
+	   */
+	  function squashTokens (tokens) {
+	    var squashedTokens = [];
+
+	    var token, lastToken;
+	    for (var i = 0, numTokens = tokens.length; i < numTokens; ++i) {
+	      token = tokens[i];
+
+	      if (token) {
+	        if (token[0] === 'text' && lastToken && lastToken[0] === 'text') {
+	          lastToken[1] += token[1];
+	          lastToken[3] = token[3];
+	        } else {
+	          squashedTokens.push(token);
+	          lastToken = token;
+	        }
+	      }
+	    }
+
+	    return squashedTokens;
+	  }
+
+	  /**
+	   * Forms the given array of `tokens` into a nested tree structure where
+	   * tokens that represent a section have two additional items: 1) an array of
+	   * all tokens that appear in that section and 2) the index in the original
+	   * template that represents the end of that section.
+	   */
+	  function nestTokens (tokens) {
+	    var nestedTokens = [];
+	    var collector = nestedTokens;
+	    var sections = [];
+
+	    var token, section;
+	    for (var i = 0, numTokens = tokens.length; i < numTokens; ++i) {
+	      token = tokens[i];
+
+	      switch (token[0]) {
+	      case '#':
+	      case '^':
+	        collector.push(token);
+	        sections.push(token);
+	        collector = token[4] = [];
+	        break;
+	      case '/':
+	        section = sections.pop();
+	        section[5] = token[2];
+	        collector = sections.length > 0 ? sections[sections.length - 1][4] : nestedTokens;
+	        break;
+	      default:
+	        collector.push(token);
+	      }
+	    }
+
+	    return nestedTokens;
+	  }
+
+	  /**
+	   * A simple string scanner that is used by the template parser to find
+	   * tokens in template strings.
+	   */
+	  function Scanner (string) {
+	    this.string = string;
+	    this.tail = string;
+	    this.pos = 0;
+	  }
+
+	  /**
+	   * Returns `true` if the tail is empty (end of string).
+	   */
+	  Scanner.prototype.eos = function eos () {
+	    return this.tail === '';
+	  };
+
+	  /**
+	   * Tries to match the given regular expression at the current position.
+	   * Returns the matched text if it can match, the empty string otherwise.
+	   */
+	  Scanner.prototype.scan = function scan (re) {
+	    var match = this.tail.match(re);
+
+	    if (!match || match.index !== 0)
+	      return '';
+
+	    var string = match[0];
+
+	    this.tail = this.tail.substring(string.length);
+	    this.pos += string.length;
+
+	    return string;
+	  };
+
+	  /**
+	   * Skips all text until the given regular expression can be matched. Returns
+	   * the skipped string, which is the entire tail if no match can be made.
+	   */
+	  Scanner.prototype.scanUntil = function scanUntil (re) {
+	    var index = this.tail.search(re), match;
+
+	    switch (index) {
+	    case -1:
+	      match = this.tail;
+	      this.tail = '';
+	      break;
+	    case 0:
+	      match = '';
+	      break;
+	    default:
+	      match = this.tail.substring(0, index);
+	      this.tail = this.tail.substring(index);
+	    }
+
+	    this.pos += match.length;
+
+	    return match;
+	  };
+
+	  /**
+	   * Represents a rendering context by wrapping a view object and
+	   * maintaining a reference to the parent context.
+	   */
+	  function Context (view, parentContext) {
+	    this.view = view;
+	    this.cache = { '.': this.view };
+	    this.parent = parentContext;
+	  }
+
+	  /**
+	   * Creates a new context using the given view with this context
+	   * as the parent.
+	   */
+	  Context.prototype.push = function push (view) {
+	    return new Context(view, this);
+	  };
+
+	  /**
+	   * Returns the value of the given name in this context, traversing
+	   * up the context hierarchy if the value is absent in this context's view.
+	   */
+	  Context.prototype.lookup = function lookup (name) {
+	    var cache = this.cache;
+
+	    var value;
+	    if (cache.hasOwnProperty(name)) {
+	      value = cache[name];
+	    } else {
+	      var context = this, names, index, lookupHit = false;
+
+	      while (context) {
+	        if (name.indexOf('.') > 0) {
+	          value = context.view;
+	          names = name.split('.');
+	          index = 0;
+
+	          /**
+	           * Using the dot notion path in `name`, we descend through the
+	           * nested objects.
+	           *
+	           * To be certain that the lookup has been successful, we have to
+	           * check if the last object in the path actually has the property
+	           * we are looking for. We store the result in `lookupHit`.
+	           *
+	           * This is specially necessary for when the value has been set to
+	           * `undefined` and we want to avoid looking up parent contexts.
+	           **/
+	          while (value != null && index < names.length) {
+	            if (index === names.length - 1)
+	              lookupHit = hasProperty(value, names[index]);
+
+	            value = value[names[index++]];
+	          }
+	        } else {
+	          value = context.view[name];
+	          lookupHit = hasProperty(context.view, name);
+	        }
+
+	        if (lookupHit)
+	          break;
+
+	        context = context.parent;
+	      }
+
+	      cache[name] = value;
+	    }
+
+	    if (isFunction(value))
+	      value = value.call(this.view);
+
+	    return value;
+	  };
+
+	  /**
+	   * A Writer knows how to take a stream of tokens and render them to a
+	   * string, given a context. It also maintains a cache of templates to
+	   * avoid the need to parse the same template twice.
+	   */
+	  function Writer () {
+	    this.cache = {};
+	  }
+
+	  /**
+	   * Clears all cached templates in this writer.
+	   */
+	  Writer.prototype.clearCache = function clearCache () {
+	    this.cache = {};
+	  };
+
+	  /**
+	   * Parses and caches the given `template` and returns the array of tokens
+	   * that is generated from the parse.
+	   */
+	  Writer.prototype.parse = function parse (template, tags) {
+	    var cache = this.cache;
+	    var tokens = cache[template];
+
+	    if (tokens == null)
+	      tokens = cache[template] = parseTemplate(template, tags);
+
+	    return tokens;
+	  };
+
+	  /**
+	   * High-level method that is used to render the given `template` with
+	   * the given `view`.
+	   *
+	   * The optional `partials` argument may be an object that contains the
+	   * names and templates of partials that are used in the template. It may
+	   * also be a function that is used to load partial templates on the fly
+	   * that takes a single argument: the name of the partial.
+	   */
+	  Writer.prototype.render = function render (template, view, partials) {
+	    var tokens = this.parse(template);
+	    var context = (view instanceof Context) ? view : new Context(view);
+	    return this.renderTokens(tokens, context, partials, template);
+	  };
+
+	  /**
+	   * Low-level method that renders the given array of `tokens` using
+	   * the given `context` and `partials`.
+	   *
+	   * Note: The `originalTemplate` is only ever used to extract the portion
+	   * of the original template that was contained in a higher-order section.
+	   * If the template doesn't use higher-order sections, this argument may
+	   * be omitted.
+	   */
+	  Writer.prototype.renderTokens = function renderTokens (tokens, context, partials, originalTemplate) {
+	    var buffer = '';
+
+	    var token, symbol, value;
+	    for (var i = 0, numTokens = tokens.length; i < numTokens; ++i) {
+	      value = undefined;
+	      token = tokens[i];
+	      symbol = token[0];
+
+	      if (symbol === '#') value = this.renderSection(token, context, partials, originalTemplate);
+	      else if (symbol === '^') value = this.renderInverted(token, context, partials, originalTemplate);
+	      else if (symbol === '>') value = this.renderPartial(token, context, partials, originalTemplate);
+	      else if (symbol === '&') value = this.unescapedValue(token, context);
+	      else if (symbol === 'name') value = this.escapedValue(token, context);
+	      else if (symbol === 'text') value = this.rawValue(token);
+
+	      if (value !== undefined)
+	        buffer += value;
+	    }
+
+	    return buffer;
+	  };
+
+	  Writer.prototype.renderSection = function renderSection (token, context, partials, originalTemplate) {
+	    var self = this;
+	    var buffer = '';
+	    var value = context.lookup(token[1]);
+
+	    // This function is used to render an arbitrary template
+	    // in the current context by higher-order sections.
+	    function subRender (template) {
+	      return self.render(template, context, partials);
+	    }
+
+	    if (!value) return;
+
+	    if (isArray(value)) {
+	      for (var j = 0, valueLength = value.length; j < valueLength; ++j) {
+	        buffer += this.renderTokens(token[4], context.push(value[j]), partials, originalTemplate);
+	      }
+	    } else if (typeof value === 'object' || typeof value === 'string' || typeof value === 'number') {
+	      buffer += this.renderTokens(token[4], context.push(value), partials, originalTemplate);
+	    } else if (isFunction(value)) {
+	      if (typeof originalTemplate !== 'string')
+	        throw new Error('Cannot use higher-order sections without the original template');
+
+	      // Extract the portion of the original template that the section contains.
+	      value = value.call(context.view, originalTemplate.slice(token[3], token[5]), subRender);
+
+	      if (value != null)
+	        buffer += value;
+	    } else {
+	      buffer += this.renderTokens(token[4], context, partials, originalTemplate);
+	    }
+	    return buffer;
+	  };
+
+	  Writer.prototype.renderInverted = function renderInverted (token, context, partials, originalTemplate) {
+	    var value = context.lookup(token[1]);
+
+	    // Use JavaScript's definition of falsy. Include empty arrays.
+	    // See https://github.com/janl/mustache.js/issues/186
+	    if (!value || (isArray(value) && value.length === 0))
+	      return this.renderTokens(token[4], context, partials, originalTemplate);
+	  };
+
+	  Writer.prototype.renderPartial = function renderPartial (token, context, partials) {
+	    if (!partials) return;
+
+	    var value = isFunction(partials) ? partials(token[1]) : partials[token[1]];
+	    if (value != null)
+	      return this.renderTokens(this.parse(value), context, partials, value);
+	  };
+
+	  Writer.prototype.unescapedValue = function unescapedValue (token, context) {
+	    var value = context.lookup(token[1]);
+	    if (value != null)
+	      return value;
+	  };
+
+	  Writer.prototype.escapedValue = function escapedValue (token, context) {
+	    var value = context.lookup(token[1]);
+	    if (value != null)
+	      return mustache.escape(value);
+	  };
+
+	  Writer.prototype.rawValue = function rawValue (token) {
+	    return token[1];
+	  };
+
+	  mustache.name = 'mustache.js';
+	  mustache.version = '2.2.0';
+	  mustache.tags = [ '{{', '}}' ];
+
+	  // All high-level mustache.* functions use this writer.
+	  var defaultWriter = new Writer();
+
+	  /**
+	   * Clears all cached templates in the default writer.
+	   */
+	  mustache.clearCache = function clearCache () {
+	    return defaultWriter.clearCache();
+	  };
+
+	  /**
+	   * Parses and caches the given template in the default writer and returns the
+	   * array of tokens it contains. Doing this ahead of time avoids the need to
+	   * parse templates on the fly as they are rendered.
+	   */
+	  mustache.parse = function parse (template, tags) {
+	    return defaultWriter.parse(template, tags);
+	  };
+
+	  /**
+	   * Renders the `template` with the given `view` and `partials` using the
+	   * default writer.
+	   */
+	  mustache.render = function render (template, view, partials) {
+	    if (typeof template !== 'string') {
+	      throw new TypeError('Invalid template! Template should be a "string" ' +
+	                          'but "' + typeStr(template) + '" was given as the first ' +
+	                          'argument for mustache#render(template, view, partials)');
+	    }
+
+	    return defaultWriter.render(template, view, partials);
+	  };
+
+	  // This is here for backwards compatibility with 0.4.x.,
+	  /*eslint-disable */ // eslint wants camel cased function name
+	  mustache.to_html = function to_html (template, view, partials, send) {
+	    /*eslint-enable*/
+
+	    var result = mustache.render(template, view, partials);
+
+	    if (isFunction(send)) {
+	      send(result);
+	    } else {
+	      return result;
+	    }
+	  };
+
+	  // Export the escaping function so that the user may override it.
+	  // See https://github.com/janl/mustache.js/issues/244
+	  mustache.escape = escapeHtml;
+
+	  // Export these mainly for testing, but also for advanced usage.
+	  mustache.Scanner = Scanner;
+	  mustache.Context = Context;
+	  mustache.Writer = Writer;
+
+	}));
+
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	  backbone.paginator 2.0.0
+	  http://github.com/backbone-paginator/backbone.paginator
+
+	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
+	  Licensed under the MIT @license.
+	*/
+
+	(function (factory) {
+
+	  // CommonJS
+	  if (true) {
+	    module.exports = factory(__webpack_require__(37), __webpack_require__(36));
+	  }
+	  // AMD
+	  else if (typeof define == "function" && define.amd) {
+	    define(["underscore", "backbone"], factory);
+	  }
+	  // Browser
+	  else if (typeof _ !== "undefined" && typeof Backbone !== "undefined") {
+	    var oldPageableCollection = Backbone.PageableCollection;
+	    var PageableCollection = factory(_, Backbone);
+
+	    /**
+	       __BROWSER ONLY__
+
+	       If you already have an object named `PageableCollection` attached to the
+	       `Backbone` module, you can use this to return a local reference to this
+	       Backbone.PageableCollection class and reset the name
+	       Backbone.PageableCollection to its previous definition.
+
+	           // The left hand side gives you a reference to this
+	           // Backbone.PageableCollection implementation, the right hand side
+	           // resets Backbone.PageableCollection to your other
+	           // Backbone.PageableCollection.
+	           var PageableCollection = Backbone.PageableCollection.noConflict();
+
+	       @static
+	       @member Backbone.PageableCollection
+	       @return {Backbone.PageableCollection}
+	    */
+	    Backbone.PageableCollection.noConflict = function () {
+	      Backbone.PageableCollection = oldPageableCollection;
+	      return PageableCollection;
+	    };
+	  }
+
+	}(function (_, Backbone) {
+
+	  "use strict";
+
+	  var _extend = _.extend;
+	  var _omit = _.omit;
+	  var _clone = _.clone;
+	  var _each = _.each;
+	  var _pick = _.pick;
+	  var _contains = _.contains;
+	  var _isEmpty = _.isEmpty;
+	  var _pairs = _.pairs;
+	  var _invert = _.invert;
+	  var _isArray = _.isArray;
+	  var _isFunction = _.isFunction;
+	  var _isObject = _.isObject;
+	  var _keys = _.keys;
+	  var _isUndefined = _.isUndefined;
+	  var ceil = Math.ceil;
+	  var floor = Math.floor;
+	  var max = Math.max;
+
+	  var BBColProto = Backbone.Collection.prototype;
+
+	  function finiteInt (val, name) {
+	    if (!_.isNumber(val) || _.isNaN(val) || !_.isFinite(val) || ~~val !== val) {
+	      throw new TypeError("`" + name + "` must be a finite integer");
+	    }
+	    return val;
+	  }
+
+	  function queryStringToParams (qs) {
+	    var kvp, k, v, ls, params = {}, decode = decodeURIComponent;
+	    var kvps = qs.split('&');
+	    for (var i = 0, l = kvps.length; i < l; i++) {
+	      var param = kvps[i];
+	      kvp = param.split('='), k = kvp[0], v = kvp[1] || true;
+	      k = decode(k), v = decode(v), ls = params[k];
+	      if (_isArray(ls)) ls.push(v);
+	      else if (ls) params[k] = [ls, v];
+	      else params[k] = v;
+	    }
+	    return params;
+	  }
+
+	  // hack to make sure the whatever event handlers for this event is run
+	  // before func is, and the event handlers that func will trigger.
+	  function runOnceAtLastHandler (col, event, func) {
+	    var eventHandlers = col._events[event];
+	    if (eventHandlers && eventHandlers.length) {
+	      var lastHandler = eventHandlers[eventHandlers.length - 1];
+	      var oldCallback = lastHandler.callback;
+	      lastHandler.callback = function () {
+	        try {
+	          oldCallback.apply(this, arguments);
+	          func();
+	        }
+	        catch (e) {
+	          throw e;
+	        }
+	        finally {
+	          lastHandler.callback = oldCallback;
+	        }
+	      };
+	    }
+	    else func();
+	  }
+
+	  var PARAM_TRIM_RE = /[\s'"]/g;
+	  var URL_TRIM_RE = /[<>\s'"]/g;
+
+	  /**
+	     Drop-in replacement for Backbone.Collection. Supports server-side and
+	     client-side pagination and sorting. Client-side mode also support fully
+	     multi-directional synchronization of changes between pages.
+
+	     @class Backbone.PageableCollection
+	     @extends Backbone.Collection
+	  */
+	  var PageableCollection = Backbone.PageableCollection = Backbone.Collection.extend({
+
+	    /**
+	       The container object to store all pagination states.
+
+	       You can override the default state by extending this class or specifying
+	       them in an `options` hash to the constructor.
+
+	       @property {Object} state
+
+	       @property {0|1} [state.firstPage=1] The first page index. Set to 0 if
+	       your server API uses 0-based indices. You should only override this value
+	       during extension, initialization or reset by the server after
+	       fetching. This value should be read only at other times.
+
+	       @property {number} [state.lastPage=null] The last page index. This value
+	       is __read only__ and it's calculated based on whether `firstPage` is 0 or
+	       1, during bootstrapping, fetching and resetting. Please don't change this
+	       value under any circumstances.
+
+	       @property {number} [state.currentPage=null] The current page index. You
+	       should only override this value during extension, initialization or reset
+	       by the server after fetching. This value should be read only at other
+	       times. Can be a 0-based or 1-based index, depending on whether
+	       `firstPage` is 0 or 1. If left as default, it will be set to `firstPage`
+	       on initialization.
+
+	       @property {number} [state.pageSize=25] How many records to show per
+	       page. This value is __read only__ after initialization, if you want to
+	       change the page size after initialization, you must call #setPageSize.
+
+	       @property {number} [state.totalPages=null] How many pages there are. This
+	       value is __read only__ and it is calculated from `totalRecords`.
+
+	       @property {number} [state.totalRecords=null] How many records there
+	       are. This value is __required__ under server mode. This value is optional
+	       for client mode as the number will be the same as the number of models
+	       during bootstrapping and during fetching, either supplied by the server
+	       in the metadata, or calculated from the size of the response.
+
+	       @property {string} [state.sortKey=null] The model attribute to use for
+	       sorting.
+
+	       @property {-1|0|1} [state.order=-1] The order to use for sorting. Specify
+	       -1 for ascending order or 1 for descending order. If 0, no client side
+	       sorting will be done and the order query parameter will not be sent to
+	       the server during a fetch.
+	    */
+	    state: {
+	      firstPage: 1,
+	      lastPage: null,
+	      currentPage: null,
+	      pageSize: 25,
+	      totalPages: null,
+	      totalRecords: null,
+	      sortKey: null,
+	      order: -1
+	    },
+
+	    /**
+	       @property {"server"|"client"|"infinite"} [mode="server"] The mode of
+	       operations for this collection. `"server"` paginates on the server-side,
+	       `"client"` paginates on the client-side and `"infinite"` paginates on the
+	       server-side for APIs that do not support `totalRecords`.
+	    */
+	    mode: "server",
+
+	    /**
+	       A translation map to convert Backbone.PageableCollection state attributes
+	       to the query parameters accepted by your server API.
+
+	       You can override the default state by extending this class or specifying
+	       them in `options.queryParams` object hash to the constructor.
+
+	       @property {Object} queryParams
+	       @property {string} [queryParams.currentPage="page"]
+	       @property {string} [queryParams.pageSize="per_page"]
+	       @property {string} [queryParams.totalPages="total_pages"]
+	       @property {string} [queryParams.totalRecords="total_entries"]
+	       @property {string} [queryParams.sortKey="sort_by"]
+	       @property {string} [queryParams.order="order"]
+	       @property {string} [queryParams.directions={"-1": "asc", "1": "desc"}] A
+	       map for translating a Backbone.PageableCollection#state.order constant to
+	       the ones your server API accepts.
+	    */
+	    queryParams: {
+	      currentPage: "page",
+	      pageSize: "per_page",
+	      totalPages: "total_pages",
+	      totalRecords: "total_entries",
+	      sortKey: "sort_by",
+	      order: "order",
+	      directions: {
+	        "-1": "asc",
+	        "1": "desc"
+	      }
+	    },
+
+	    /**
+	       __CLIENT MODE ONLY__
+
+	       This collection is the internal storage for the bootstrapped or fetched
+	       models. You can use this if you want to operate on all the pages.
+
+	       @property {Backbone.Collection} fullCollection
+	    */
+
+	    /**
+	       Given a list of models or model attributues, bootstraps the full
+	       collection in client mode or infinite mode, or just the page you want in
+	       server mode.
+
+	       If you want to initialize a collection to a different state than the
+	       default, you can specify them in `options.state`. Any state parameters
+	       supplied will be merged with the default. If you want to change the
+	       default mapping from #state keys to your server API's query parameter
+	       names, you can specifiy an object hash in `option.queryParams`. Likewise,
+	       any mapping provided will be merged with the default. Lastly, all
+	       Backbone.Collection constructor options are also accepted.
+
+	       See:
+
+	       - Backbone.PageableCollection#state
+	       - Backbone.PageableCollection#queryParams
+	       - [Backbone.Collection#initialize](http://backbonejs.org/#Collection-constructor)
+
+	       @param {Array.<Object>} [models]
+
+	       @param {Object} [options]
+
+	       @param {function(*, *): number} [options.comparator] If specified, this
+	       comparator is set to the current page under server mode, or the #fullCollection
+	       otherwise.
+
+	       @param {boolean} [options.full] If `false` and either a
+	       `options.comparator` or `sortKey` is defined, the comparator is attached
+	       to the current page. Default is `true` under client or infinite mode and
+	       the comparator will be attached to the #fullCollection.
+
+	       @param {Object} [options.state] The state attributes overriding the defaults.
+
+	       @param {string} [options.state.sortKey] The model attribute to use for
+	       sorting. If specified instead of `options.comparator`, a comparator will
+	       be automatically created using this value, and optionally a sorting order
+	       specified in `options.state.order`. The comparator is then attached to
+	       the new collection instance.
+
+	       @param {-1|1} [options.state.order] The order to use for sorting. Specify
+	       -1 for ascending order and 1 for descending order.
+
+	       @param {Object} [options.queryParam]
+	    */
+	    constructor: function (models, options) {
+
+	      BBColProto.constructor.apply(this, arguments);
+
+	      options = options || {};
+
+	      var mode = this.mode = options.mode || this.mode || PageableProto.mode;
+
+	      var queryParams = _extend({}, PageableProto.queryParams, this.queryParams,
+	                                options.queryParams || {});
+
+	      queryParams.directions = _extend({},
+	                                       PageableProto.queryParams.directions,
+	                                       this.queryParams.directions,
+	                                       queryParams.directions || {});
+
+	      this.queryParams = queryParams;
+
+	      var state = this.state = _extend({}, PageableProto.state, this.state,
+	                                       options.state || {});
+
+	      state.currentPage = state.currentPage == null ?
+	        state.firstPage :
+	        state.currentPage;
+
+	      if (!_isArray(models)) models = models ? [models] : [];
+	      models = models.slice();
+
+	      if (mode != "server" && state.totalRecords == null && !_isEmpty(models)) {
+	        state.totalRecords = models.length;
+	      }
+
+	      this.switchMode(mode, _extend({fetch: false,
+	                                     resetState: false,
+	                                     models: models}, options));
+
+	      var comparator = options.comparator;
+
+	      if (state.sortKey && !comparator) {
+	        this.setSorting(state.sortKey, state.order, options);
+	      }
+
+	      if (mode != "server") {
+	        var fullCollection = this.fullCollection;
+
+	        if (comparator && options.full) {
+	          this.comparator = null;
+	          fullCollection.comparator = comparator;
+	        }
+
+	        if (options.full) fullCollection.sort();
+
+	        // make sure the models in the current page and full collection have the
+	        // same references
+	        if (models && !_isEmpty(models)) {
+	          this.reset(models, _extend({silent: true}, options));
+	          this.getPage(state.currentPage);
+	          models.splice.apply(models, [0, models.length].concat(this.models));
+	        }
+	      }
+
+	      this._initState = _clone(this.state);
+	    },
+
+	    /**
+	       Makes a Backbone.Collection that contains all the pages.
+
+	       @private
+	       @param {Array.<Object|Backbone.Model>} models
+	       @param {Object} options Options for Backbone.Collection constructor.
+	       @return {Backbone.Collection}
+	    */
+	    _makeFullCollection: function (models, options) {
+
+	      var properties = ["url", "model", "sync", "comparator"];
+	      var thisProto = this.constructor.prototype;
+	      var i, length, prop;
+
+	      var proto = {};
+	      for (i = 0, length = properties.length; i < length; i++) {
+	        prop = properties[i];
+	        if (!_isUndefined(thisProto[prop])) {
+	          proto[prop] = thisProto[prop];
+	        }
+	      }
+
+	      var fullCollection = new (Backbone.Collection.extend(proto))(models, options);
+
+	      for (i = 0, length = properties.length; i < length; i++) {
+	        prop = properties[i];
+	        if (this[prop] !== thisProto[prop]) {
+	          fullCollection[prop] = this[prop];
+	        }
+	      }
+
+	      return fullCollection;
+	    },
+
+	    /**
+	       Factory method that returns a Backbone event handler that responses to
+	       the `add`, `remove`, `reset`, and the `sort` events. The returned event
+	       handler will synchronize the current page collection and the full
+	       collection's models.
+
+	       @private
+
+	       @param {Backbone.PageableCollection} pageCol
+	       @param {Backbone.Collection} fullCol
+
+	       @return {function(string, Backbone.Model, Backbone.Collection, Object)}
+	       Collection event handler
+	    */
+	    _makeCollectionEventHandler: function (pageCol, fullCol) {
+
+	      return function collectionEventHandler (event, model, collection, options) {
+
+	        var handlers = pageCol._handlers;
+	        _each(_keys(handlers), function (event) {
+	          var handler = handlers[event];
+	          pageCol.off(event, handler);
+	          fullCol.off(event, handler);
+	        });
+
+	        var state = _clone(pageCol.state);
+	        var firstPage = state.firstPage;
+	        var currentPage = firstPage === 0 ?
+	          state.currentPage :
+	          state.currentPage - 1;
+	        var pageSize = state.pageSize;
+	        var pageStart = currentPage * pageSize, pageEnd = pageStart + pageSize;
+
+	        if (event == "add") {
+	          var pageIndex, fullIndex, addAt, colToAdd, options = options || {};
+	          if (collection == fullCol) {
+	            fullIndex = fullCol.indexOf(model);
+	            if (fullIndex >= pageStart && fullIndex < pageEnd) {
+	              colToAdd = pageCol;
+	              pageIndex = addAt = fullIndex - pageStart;
+	            }
+	          }
+	          else {
+	            pageIndex = pageCol.indexOf(model);
+	            fullIndex = pageStart + pageIndex;
+	            colToAdd = fullCol;
+	            var addAt = !_isUndefined(options.at) ?
+	              options.at + pageStart :
+	              fullIndex;
+	          }
+
+	          if (!options.onRemove) {
+	            ++state.totalRecords;
+	            delete options.onRemove;
+	          }
+
+	          pageCol.state = pageCol._checkState(state);
+
+	          if (colToAdd) {
+	            colToAdd.add(model, _extend({}, options || {}, {at: addAt}));
+	            var modelToRemove = pageIndex >= pageSize ?
+	              model :
+	              !_isUndefined(options.at) && addAt < pageEnd && pageCol.length > pageSize ?
+	              pageCol.at(pageSize) :
+	              null;
+	            if (modelToRemove) {
+	              runOnceAtLastHandler(collection, event, function () {
+	                pageCol.remove(modelToRemove, {onAdd: true});
+	              });
+	            }
+	          }
+	        }
+
+	        // remove the model from the other collection as well
+	        if (event == "remove") {
+	          if (!options.onAdd) {
+	            // decrement totalRecords and update totalPages and lastPage
+	            if (!--state.totalRecords) {
+	              state.totalRecords = null;
+	              state.totalPages = null;
+	            }
+	            else {
+	              var totalPages = state.totalPages = ceil(state.totalRecords / pageSize);
+	              state.lastPage = firstPage === 0 ? totalPages - 1 : totalPages || firstPage;
+	              if (state.currentPage > totalPages) state.currentPage = state.lastPage;
+	            }
+	            pageCol.state = pageCol._checkState(state);
+
+	            var nextModel, removedIndex = options.index;
+	            if (collection == pageCol) {
+	              if (nextModel = fullCol.at(pageEnd)) {
+	                runOnceAtLastHandler(pageCol, event, function () {
+	                  pageCol.push(nextModel, {onRemove: true});
+	                });
+	              }
+	              else if (!pageCol.length && state.totalRecords) {
+	                pageCol.reset(fullCol.models.slice(pageStart - pageSize, pageEnd - pageSize),
+	                              _extend({}, options, {parse: false}));
+	              }
+	              fullCol.remove(model);
+	            }
+	            else if (removedIndex >= pageStart && removedIndex < pageEnd) {
+	              if (nextModel = fullCol.at(pageEnd - 1)) {
+	                runOnceAtLastHandler(pageCol, event, function() {
+	                  pageCol.push(nextModel, {onRemove: true});
+	                });
+	              }
+	              pageCol.remove(model);
+	              if (!pageCol.length && state.totalRecords) {
+	                pageCol.reset(fullCol.models.slice(pageStart - pageSize, pageEnd - pageSize),
+	                              _extend({}, options, {parse: false}));
+	              }
+	            }
+	          }
+	          else delete options.onAdd;
+	        }
+
+	        if (event == "reset") {
+	          options = collection;
+	          collection = model;
+
+	          // Reset that's not a result of getPage
+	          if (collection == pageCol && options.from == null &&
+	              options.to == null) {
+	            var head = fullCol.models.slice(0, pageStart);
+	            var tail = fullCol.models.slice(pageStart + pageCol.models.length);
+	            fullCol.reset(head.concat(pageCol.models).concat(tail), options);
+	          }
+	          else if (collection == fullCol) {
+	            if (!(state.totalRecords = fullCol.models.length)) {
+	              state.totalRecords = null;
+	              state.totalPages = null;
+	            }
+	            if (pageCol.mode == "client") {
+	              state.lastPage = state.currentPage = state.firstPage;
+	            }
+	            pageCol.state = pageCol._checkState(state);
+	            pageCol.reset(fullCol.models.slice(pageStart, pageEnd),
+	                          _extend({}, options, {parse: false}));
+	          }
+	        }
+
+	        if (event == "sort") {
+	          options = collection;
+	          collection = model;
+	          if (collection === fullCol) {
+	            pageCol.reset(fullCol.models.slice(pageStart, pageEnd),
+	                          _extend({}, options, {parse: false}));
+	          }
+	        }
+
+	        _each(_keys(handlers), function (event) {
+	          var handler = handlers[event];
+	          _each([pageCol, fullCol], function (col) {
+	            col.on(event, handler);
+	            var callbacks = col._events[event] || [];
+	            callbacks.unshift(callbacks.pop());
+	          });
+	        });
+	      };
+	    },
+
+	    /**
+	       Sanity check this collection's pagination states. Only perform checks
+	       when all the required pagination state values are defined and not null.
+	       If `totalPages` is undefined or null, it is set to `totalRecords` /
+	       `pageSize`. `lastPage` is set according to whether `firstPage` is 0 or 1
+	       when no error occurs.
+
+	       @private
+
+	       @throws {TypeError} If `totalRecords`, `pageSize`, `currentPage` or
+	       `firstPage` is not a finite integer.
+
+	       @throws {RangeError} If `pageSize`, `currentPage` or `firstPage` is out
+	       of bounds.
+
+	       @return {Object} Returns the `state` object if no error was found.
+	    */
+	    _checkState: function (state) {
+
+	      var mode = this.mode;
+	      var links = this.links;
+	      var totalRecords = state.totalRecords;
+	      var pageSize = state.pageSize;
+	      var currentPage = state.currentPage;
+	      var firstPage = state.firstPage;
+	      var totalPages = state.totalPages;
+
+	      if (totalRecords != null && pageSize != null && currentPage != null &&
+	          firstPage != null && (mode == "infinite" ? links : true)) {
+
+	        totalRecords = finiteInt(totalRecords, "totalRecords");
+	        pageSize = finiteInt(pageSize, "pageSize");
+	        currentPage = finiteInt(currentPage, "currentPage");
+	        firstPage = finiteInt(firstPage, "firstPage");
+
+	        if (pageSize < 1) {
+	          throw new RangeError("`pageSize` must be >= 1");
+	        }
+
+	        totalPages = state.totalPages = ceil(totalRecords / pageSize);
+
+	        if (firstPage < 0 || firstPage > 1) {
+	          throw new RangeError("`firstPage must be 0 or 1`");
+	        }
+
+	        state.lastPage = firstPage === 0 ? max(0, totalPages - 1) : totalPages || firstPage;
+
+	        if (mode == "infinite") {
+	          if (!links[currentPage + '']) {
+	            throw new RangeError("No link found for page " + currentPage);
+	          }
+	        }
+	        else if (currentPage < firstPage ||
+	                 (totalPages > 0 &&
+	                  (firstPage ? currentPage > totalPages : currentPage >= totalPages))) {
+	          throw new RangeError("`currentPage` must be firstPage <= currentPage " +
+	                               (firstPage ? ">" : ">=") +
+	                               " totalPages if " + firstPage + "-based. Got " +
+	                               currentPage + '.');
+	        }
+	      }
+
+	      return state;
+	    },
+
+	    /**
+	       Change the page size of this collection.
+
+	       Under most if not all circumstances, you should call this method to
+	       change the page size of a pageable collection because it will keep the
+	       pagination state sane. By default, the method will recalculate the
+	       current page number to one that will retain the current page's models
+	       when increasing the page size. When decreasing the page size, this method
+	       will retain the last models to the current page that will fit into the
+	       smaller page size.
+
+	       If `options.first` is true, changing the page size will also reset the
+	       current page back to the first page instead of trying to be smart.
+
+	       For server mode operations, changing the page size will trigger a #fetch
+	       and subsequently a `reset` event.
+
+	       For client mode operations, changing the page size will `reset` the
+	       current page by recalculating the current page boundary on the client
+	       side.
+
+	       If `options.fetch` is true, a fetch can be forced if the collection is in
+	       client mode.
+
+	       @param {number} pageSize The new page size to set to #state.
+	       @param {Object} [options] {@link #fetch} options.
+	       @param {boolean} [options.first=false] Reset the current page number to
+	       the first page if `true`.
+	       @param {boolean} [options.fetch] If `true`, force a fetch in client mode.
+
+	       @throws {TypeError} If `pageSize` is not a finite integer.
+	       @throws {RangeError} If `pageSize` is less than 1.
+
+	       @chainable
+	       @return {XMLHttpRequest|Backbone.PageableCollection} The XMLHttpRequest
+	       from fetch or this.
+	    */
+	    setPageSize: function (pageSize, options) {
+	      pageSize = finiteInt(pageSize, "pageSize");
+
+	      options = options || {first: false};
+
+	      var state = this.state;
+	      var totalPages = ceil(state.totalRecords / pageSize);
+	      var currentPage = totalPages ?
+	          max(state.firstPage, floor(totalPages * state.currentPage / state.totalPages)) :
+	        state.firstPage;
+
+	      state = this.state = this._checkState(_extend({}, state, {
+	        pageSize: pageSize,
+	        currentPage: options.first ? state.firstPage : currentPage,
+	        totalPages: totalPages
+	      }));
+
+	      return this.getPage(state.currentPage, _omit(options, ["first"]));
+	    },
+
+	    /**
+	       Switching between client, server and infinite mode.
+
+	       If switching from client to server mode, the #fullCollection is emptied
+	       first and then deleted and a fetch is immediately issued for the current
+	       page from the server. Pass `false` to `options.fetch` to skip fetching.
+
+	       If switching to infinite mode, and if `options.models` is given for an
+	       array of models, #links will be populated with a URL per page, using the
+	       default URL for this collection.
+
+	       If switching from server to client mode, all of the pages are immediately
+	       refetched. If you have too many pages, you can pass `false` to
+	       `options.fetch` to skip fetching.
+
+	       If switching to any mode from infinite mode, the #links will be deleted.
+
+	       @param {"server"|"client"|"infinite"} [mode] The mode to switch to.
+
+	       @param {Object} [options]
+
+	       @param {boolean} [options.fetch=true] If `false`, no fetching is done.
+
+	       @param {boolean} [options.resetState=true] If 'false', the state is not
+	       reset, but checked for sanity instead.
+
+	       @chainable
+	       @return {XMLHttpRequest|Backbone.PageableCollection} The XMLHttpRequest
+	       from fetch or this if `options.fetch` is `false`.
+	    */
+	    switchMode: function (mode, options) {
+
+	      if (!_contains(["server", "client", "infinite"], mode)) {
+	        throw new TypeError('`mode` must be one of "server", "client" or "infinite"');
+	      }
+
+	      options = options || {fetch: true, resetState: true};
+
+	      var state = this.state = options.resetState ?
+	        _clone(this._initState) :
+	        this._checkState(_extend({}, this.state));
+
+	      this.mode = mode;
+
+	      var self = this;
+	      var fullCollection = this.fullCollection;
+	      var handlers = this._handlers = this._handlers || {}, handler;
+	      if (mode != "server" && !fullCollection) {
+	        fullCollection = this._makeFullCollection(options.models || [], options);
+	        fullCollection.pageableCollection = this;
+	        this.fullCollection = fullCollection;
+	        var allHandler = this._makeCollectionEventHandler(this, fullCollection);
+	        _each(["add", "remove", "reset", "sort"], function (event) {
+	          handlers[event] = handler = _.bind(allHandler, {}, event);
+	          self.on(event, handler);
+	          fullCollection.on(event, handler);
+	        });
+	        fullCollection.comparator = this._fullComparator;
+	      }
+	      else if (mode == "server" && fullCollection) {
+	        _each(_keys(handlers), function (event) {
+	          handler = handlers[event];
+	          self.off(event, handler);
+	          fullCollection.off(event, handler);
+	        });
+	        delete this._handlers;
+	        this._fullComparator = fullCollection.comparator;
+	        delete this.fullCollection;
+	      }
+
+	      if (mode == "infinite") {
+	        var links = this.links = {};
+	        var firstPage = state.firstPage;
+	        var totalPages = ceil(state.totalRecords / state.pageSize);
+	        var lastPage = firstPage === 0 ? max(0, totalPages - 1) : totalPages || firstPage;
+	        for (var i = state.firstPage; i <= lastPage; i++) {
+	          links[i] = this.url;
+	        }
+	      }
+	      else if (this.links) delete this.links;
+
+	      return options.fetch ?
+	        this.fetch(_omit(options, "fetch", "resetState")) :
+	        this;
+	    },
+
+	    /**
+	       @return {boolean} `true` if this collection can page backward, `false`
+	       otherwise.
+	    */
+	    hasPreviousPage: function () {
+	      var state = this.state;
+	      var currentPage = state.currentPage;
+	      if (this.mode != "infinite") return currentPage > state.firstPage;
+	      return !!this.links[currentPage - 1];
+	    },
+
+	    /**
+	       @return {boolean} `true` if this collection can page forward, `false`
+	       otherwise.
+	    */
+	    hasNextPage: function () {
+	      var state = this.state;
+	      var currentPage = this.state.currentPage;
+	      if (this.mode != "infinite") return currentPage < state.lastPage;
+	      return !!this.links[currentPage + 1];
+	    },
+
+	    /**
+	       Fetch the first page in server mode, or reset the current page of this
+	       collection to the first page in client or infinite mode.
+
+	       @param {Object} options {@link #getPage} options.
+
+	       @chainable
+	       @return {XMLHttpRequest|Backbone.PageableCollection} The XMLHttpRequest
+	       from fetch or this.
+	    */
+	    getFirstPage: function (options) {
+	      return this.getPage("first", options);
+	    },
+
+	    /**
+	       Fetch the previous page in server mode, or reset the current page of this
+	       collection to the previous page in client or infinite mode.
+
+	       @param {Object} options {@link #getPage} options.
+
+	       @chainable
+	       @return {XMLHttpRequest|Backbone.PageableCollection} The XMLHttpRequest
+	       from fetch or this.
+	    */
+	    getPreviousPage: function (options) {
+	      return this.getPage("prev", options);
+	    },
+
+	    /**
+	       Fetch the next page in server mode, or reset the current page of this
+	       collection to the next page in client mode.
+
+	       @param {Object} options {@link #getPage} options.
+
+	       @chainable
+	       @return {XMLHttpRequest|Backbone.PageableCollection} The XMLHttpRequest
+	       from fetch or this.
+	    */
+	    getNextPage: function (options) {
+	      return this.getPage("next", options);
+	    },
+
+	    /**
+	       Fetch the last page in server mode, or reset the current page of this
+	       collection to the last page in client mode.
+
+	       @param {Object} options {@link #getPage} options.
+
+	       @chainable
+	       @return {XMLHttpRequest|Backbone.PageableCollection} The XMLHttpRequest
+	       from fetch or this.
+	    */
+	    getLastPage: function (options) {
+	      return this.getPage("last", options);
+	    },
+
+	    /**
+	       Given a page index, set #state.currentPage to that index. If this
+	       collection is in server mode, fetch the page using the updated state,
+	       otherwise, reset the current page of this collection to the page
+	       specified by `index` in client mode. If `options.fetch` is true, a fetch
+	       can be forced in client mode before resetting the current page. Under
+	       infinite mode, if the index is less than the current page, a reset is
+	       done as in client mode. If the index is greater than the current page
+	       number, a fetch is made with the results **appended** to #fullCollection.
+	       The current page will then be reset after fetching.
+
+	       @param {number|string} index The page index to go to, or the page name to
+	       look up from #links in infinite mode.
+	       @param {Object} [options] {@link #fetch} options or
+	       [reset](http://backbonejs.org/#Collection-reset) options for client mode
+	       when `options.fetch` is `false`.
+	       @param {boolean} [options.fetch=false] If true, force a {@link #fetch} in
+	       client mode.
+
+	       @throws {TypeError} If `index` is not a finite integer under server or
+	       client mode, or does not yield a URL from #links under infinite mode.
+
+	       @throws {RangeError} If `index` is out of bounds.
+
+	       @chainable
+	       @return {XMLHttpRequest|Backbone.PageableCollection} The XMLHttpRequest
+	       from fetch or this.
+	    */
+	    getPage: function (index, options) {
+
+	      var mode = this.mode, fullCollection = this.fullCollection;
+
+	      options = options || {fetch: false};
+
+	      var state = this.state,
+	      firstPage = state.firstPage,
+	      currentPage = state.currentPage,
+	      lastPage = state.lastPage,
+	      pageSize = state.pageSize;
+
+	      var pageNum = index;
+	      switch (index) {
+	        case "first": pageNum = firstPage; break;
+	        case "prev": pageNum = currentPage - 1; break;
+	        case "next": pageNum = currentPage + 1; break;
+	        case "last": pageNum = lastPage; break;
+	        default: pageNum = finiteInt(index, "index");
+	      }
+
+	      this.state = this._checkState(_extend({}, state, {currentPage: pageNum}));
+
+	      options.from = currentPage, options.to = pageNum;
+
+	      var pageStart = (firstPage === 0 ? pageNum : pageNum - 1) * pageSize;
+	      var pageModels = fullCollection && fullCollection.length ?
+	        fullCollection.models.slice(pageStart, pageStart + pageSize) :
+	        [];
+	      if ((mode == "client" || (mode == "infinite" && !_isEmpty(pageModels))) &&
+	          !options.fetch) {
+	        this.reset(pageModels, _omit(options, "fetch"));
+	        return this;
+	      }
+
+	      if (mode == "infinite") options.url = this.links[pageNum];
+
+	      return this.fetch(_omit(options, "fetch"));
+	    },
+
+	    /**
+	       Fetch the page for the provided item offset in server mode, or reset the current page of this
+	       collection to the page for the provided item offset in client mode.
+
+	       @param {Object} options {@link #getPage} options.
+
+	       @chainable
+	       @return {XMLHttpRequest|Backbone.PageableCollection} The XMLHttpRequest
+	       from fetch or this.
+	    */
+	    getPageByOffset: function (offset, options) {
+	      if (offset < 0) {
+	        throw new RangeError("`offset must be > 0`");
+	      }
+	      offset = finiteInt(offset);
+
+	      var page = floor(offset / this.state.pageSize);
+	      if (this.state.firstPage !== 0) page++;
+	      if (page > this.state.lastPage) page = this.state.lastPage;
+	      return this.getPage(page, options);
+	    },
+
+	    /**
+	       Overidden to make `getPage` compatible with Zepto.
+
+	       @param {string} method
+	       @param {Backbone.Model|Backbone.Collection} model
+	       @param {Object} [options]
+
+	       @return {XMLHttpRequest}
+	    */
+	    sync: function (method, model, options) {
+	      var self = this;
+	      if (self.mode == "infinite") {
+	        var success = options.success;
+	        var currentPage = self.state.currentPage;
+	        options.success = function (resp, status, xhr) {
+	          var links = self.links;
+	          var newLinks = self.parseLinks(resp, _extend({xhr: xhr}, options));
+	          if (newLinks.first) links[self.state.firstPage] = newLinks.first;
+	          if (newLinks.prev) links[currentPage - 1] = newLinks.prev;
+	          if (newLinks.next) links[currentPage + 1] = newLinks.next;
+	          if (success) success(resp, status, xhr);
+	        };
+	      }
+
+	      return (BBColProto.sync || Backbone.sync).call(self, method, model, options);
+	    },
+
+	    /**
+	       Parse pagination links from the server response. Only valid under
+	       infinite mode.
+
+	       Given a response body and a XMLHttpRequest object, extract pagination
+	       links from them for infinite paging.
+
+	       This default implementation parses the RFC 5988 `Link` header and extract
+	       3 links from it - `first`, `prev`, `next`. Any subclasses overriding this
+	       method __must__ return an object hash having only the keys
+	       above. However, simply returning a `next` link or an empty hash if there
+	       are no more links should be enough for most implementations.
+
+	       @param {*} resp The deserialized response body.
+	       @param {Object} [options]
+	       @param {XMLHttpRequest} [options.xhr] The XMLHttpRequest object for this
+	       response.
+	       @return {Object}
+	    */
+	    parseLinks: function (resp, options) {
+	      var links = {};
+	      var linkHeader = options.xhr.getResponseHeader("Link");
+	      if (linkHeader) {
+	        var relations = ["first", "prev", "next"];
+	        _each(linkHeader.split(","), function (linkValue) {
+	          var linkParts = linkValue.split(";");
+	          var url = linkParts[0].replace(URL_TRIM_RE, '');
+	          var params = linkParts.slice(1);
+	          _each(params, function (param) {
+	            var paramParts = param.split("=");
+	            var key = paramParts[0].replace(PARAM_TRIM_RE, '');
+	            var value = paramParts[1].replace(PARAM_TRIM_RE, '');
+	            if (key == "rel" && _contains(relations, value)) links[value] = url;
+	          });
+	        });
+	      }
+
+	      return links;
+	    },
+
+	    /**
+	       Parse server response data.
+
+	       This default implementation assumes the response data is in one of two
+	       structures:
+
+	           [
+	             {}, // Your new pagination state
+	             [{}, ...] // An array of JSON objects
+	           ]
+
+	       Or,
+
+	           [{}] // An array of JSON objects
+
+	       The first structure is the preferred form because the pagination states
+	       may have been updated on the server side, sending them down again allows
+	       this collection to update its states. If the response has a pagination
+	       state object, it is checked for errors.
+
+	       The second structure is the
+	       [Backbone.Collection#parse](http://backbonejs.org/#Collection-parse)
+	       default.
+
+	       **Note:** this method has been further simplified since 1.1.7. While
+	       existing #parse implementations will continue to work, new code is
+	       encouraged to override #parseState and #parseRecords instead.
+
+	       @param {Object} resp The deserialized response data from the server.
+	       @param {Object} the options for the ajax request
+
+	       @return {Array.<Object>} An array of model objects
+	    */
+	    parse: function (resp, options) {
+	      var newState = this.parseState(resp, _clone(this.queryParams), _clone(this.state), options);
+	      if (newState) this.state = this._checkState(_extend({}, this.state, newState));
+	      return this.parseRecords(resp, options);
+	    },
+
+	    /**
+	       Parse server response for server pagination state updates. Not applicable
+	       under infinite mode.
+
+	       This default implementation first checks whether the response has any
+	       state object as documented in #parse. If it exists, a state object is
+	       returned by mapping the server state keys to this pageable collection
+	       instance's query parameter keys using `queryParams`.
+
+	       It is __NOT__ neccessary to return a full state object complete with all
+	       the mappings defined in #queryParams. Any state object resulted is merged
+	       with a copy of the current pageable collection state and checked for
+	       sanity before actually updating. Most of the time, simply providing a new
+	       `totalRecords` value is enough to trigger a full pagination state
+	       recalculation.
+
+	           parseState: function (resp, queryParams, state, options) {
+	             return {totalRecords: resp.total_entries};
+	           }
+
+	       If you want to use header fields use:
+
+	           parseState: function (resp, queryParams, state, options) {
+	               return {totalRecords: options.xhr.getResponseHeader("X-total")};
+	           }
+
+	       This method __MUST__ return a new state object instead of directly
+	       modifying the #state object. The behavior of directly modifying #state is
+	       undefined.
+
+	       @param {Object} resp The deserialized response data from the server.
+	       @param {Object} queryParams A copy of #queryParams.
+	       @param {Object} state A copy of #state.
+	       @param {Object} [options] The options passed through from
+	       `parse`. (backbone >= 0.9.10 only)
+
+	       @return {Object} A new (partial) state object.
+	     */
+	    parseState: function (resp, queryParams, state, options) {
+	      if (resp && resp.length === 2 && _isObject(resp[0]) && _isArray(resp[1])) {
+
+	        var newState = _clone(state);
+	        var serverState = resp[0];
+
+	        _each(_pairs(_omit(queryParams, "directions")), function (kvp) {
+	          var k = kvp[0], v = kvp[1];
+	          var serverVal = serverState[v];
+	          if (!_isUndefined(serverVal) && !_.isNull(serverVal)) newState[k] = serverState[v];
+	        });
+
+	        if (serverState.order) {
+	          newState.order = _invert(queryParams.directions)[serverState.order] * 1;
+	        }
+
+	        return newState;
+	      }
+	    },
+
+	    /**
+	       Parse server response for an array of model objects.
+
+	       This default implementation first checks whether the response has any
+	       state object as documented in #parse. If it exists, the array of model
+	       objects is assumed to be the second element, otherwise the entire
+	       response is returned directly.
+
+	       @param {Object} resp The deserialized response data from the server.
+	       @param {Object} [options] The options passed through from the
+	       `parse`. (backbone >= 0.9.10 only)
+
+	       @return {Array.<Object>} An array of model objects
+	     */
+	    parseRecords: function (resp, options) {
+	      if (resp && resp.length === 2 && _isObject(resp[0]) && _isArray(resp[1])) {
+	        return resp[1];
+	      }
+
+	      return resp;
+	    },
+
+	    /**
+	       Fetch a page from the server in server mode, or all the pages in client
+	       mode. Under infinite mode, the current page is refetched by default and
+	       then reset.
+
+	       The query string is constructed by translating the current pagination
+	       state to your server API query parameter using #queryParams. The current
+	       page will reset after fetch.
+
+	       @param {Object} [options] Accepts all
+	       [Backbone.Collection#fetch](http://backbonejs.org/#Collection-fetch)
+	       options.
+
+	       @return {XMLHttpRequest}
+	    */
+	    fetch: function (options) {
+
+	      options = options || {};
+
+	      var state = this._checkState(this.state);
+
+	      var mode = this.mode;
+
+	      if (mode == "infinite" && !options.url) {
+	        options.url = this.links[state.currentPage];
+	      }
+
+	      var data = options.data || {};
+
+	      // dedup query params
+	      var url = options.url || this.url || "";
+	      if (_isFunction(url)) url = url.call(this);
+	      var qsi = url.indexOf('?');
+	      if (qsi != -1) {
+	        _extend(data, queryStringToParams(url.slice(qsi + 1)));
+	        url = url.slice(0, qsi);
+	      }
+
+	      options.url = url;
+	      options.data = data;
+
+	      // map params except directions
+	      var queryParams = this.mode == "client" ?
+	        _pick(this.queryParams, "sortKey", "order") :
+	        _omit(_pick(this.queryParams, _keys(PageableProto.queryParams)),
+	              "directions");
+
+	      var i, kvp, k, v, kvps = _pairs(queryParams), thisCopy = _clone(this);
+	      for (i = 0; i < kvps.length; i++) {
+	        kvp = kvps[i], k = kvp[0], v = kvp[1];
+	        v = _isFunction(v) ? v.call(thisCopy) : v;
+	        if (state[k] != null && v != null) {
+	          data[v] = state[k];
+	        }
+	      }
+
+	      // fix up sorting parameters
+	      if (state.sortKey && state.order) {
+	        var o = _isFunction(queryParams.order) ?
+	          queryParams.order.call(thisCopy) :
+	          queryParams.order;
+	        data[o] = this.queryParams.directions[state.order + ""];
+	      }
+	      else if (!state.sortKey) delete data[queryParams.order];
+
+	      // map extra query parameters
+	      var extraKvps = _pairs(_omit(this.queryParams,
+	                                   _keys(PageableProto.queryParams)));
+	      for (i = 0; i < extraKvps.length; i++) {
+	        kvp = extraKvps[i];
+	        v = kvp[1];
+	        v = _isFunction(v) ? v.call(thisCopy) : v;
+	        if (v != null) data[kvp[0]] = v;
+	      }
+
+	      if (mode != "server") {
+	        var self = this, fullCol = this.fullCollection;
+	        var success = options.success;
+	        options.success = function (col, resp, opts) {
+
+	          // make sure the caller's intent is obeyed
+	          opts = opts || {};
+	          if (_isUndefined(options.silent)) delete opts.silent;
+	          else opts.silent = options.silent;
+
+	          var models = col.models;
+	          if (mode == "client") fullCol.reset(models, opts);
+	          else {
+	            fullCol.add(models, _extend({at: fullCol.length},
+	                                        _extend(opts, {parse: false})));
+	            self.trigger("reset", self, opts);
+	          }
+
+	          if (success) success(col, resp, opts);
+	        };
+
+	        // silent the first reset from backbone
+	        return BBColProto.fetch.call(this, _extend({}, options, {silent: true}));
+	      }
+
+	      return BBColProto.fetch.call(this, options);
+	    },
+
+	    /**
+	       Convenient method for making a `comparator` sorted by a model attribute
+	       identified by `sortKey` and ordered by `order`.
+
+	       Like a Backbone.Collection, a Backbone.PageableCollection will maintain
+	       the __current page__ in sorted order on the client side if a `comparator`
+	       is attached to it. If the collection is in client mode, you can attach a
+	       comparator to #fullCollection to have all the pages reflect the global
+	       sorting order by specifying an option `full` to `true`. You __must__ call
+	       `sort` manually or #fullCollection.sort after calling this method to
+	       force a resort.
+
+	       While you can use this method to sort the current page in server mode,
+	       the sorting order may not reflect the global sorting order due to the
+	       additions or removals of the records on the server since the last
+	       fetch. If you want the most updated page in a global sorting order, it is
+	       recommended that you set #state.sortKey and optionally #state.order, and
+	       then call #fetch.
+
+	       @protected
+
+	       @param {string} [sortKey=this.state.sortKey] See `state.sortKey`.
+	       @param {number} [order=this.state.order] See `state.order`.
+	       @param {(function(Backbone.Model, string): Object) | string} [sortValue] See #setSorting.
+
+	       See [Backbone.Collection.comparator](http://backbonejs.org/#Collection-comparator).
+	    */
+	    _makeComparator: function (sortKey, order, sortValue) {
+	      var state = this.state;
+
+	      sortKey = sortKey || state.sortKey;
+	      order = order || state.order;
+
+	      if (!sortKey || !order) return;
+
+	      if (!sortValue) sortValue = function (model, attr) {
+	        return model.get(attr);
+	      };
+
+	      return function (left, right) {
+	        var l = sortValue(left, sortKey), r = sortValue(right, sortKey), t;
+	        if (order === 1) t = l, l = r, r = t;
+	        if (l === r) return 0;
+	        else if (l < r) return -1;
+	        return 1;
+	      };
+	    },
+
+	    /**
+	       Adjusts the sorting for this pageable collection.
+
+	       Given a `sortKey` and an `order`, sets `state.sortKey` and
+	       `state.order`. A comparator can be applied on the client side to sort in
+	       the order defined if `options.side` is `"client"`. By default the
+	       comparator is applied to the #fullCollection. Set `options.full` to
+	       `false` to apply a comparator to the current page under any mode. Setting
+	       `sortKey` to `null` removes the comparator from both the current page and
+	       the full collection.
+
+	       If a `sortValue` function is given, it will be passed the `(model,
+	       sortKey)` arguments and is used to extract a value from the model during
+	       comparison sorts. If `sortValue` is not given, `model.get(sortKey)` is
+	       used for sorting.
+
+	       @chainable
+
+	       @param {string} sortKey See `state.sortKey`.
+	       @param {number} [order=this.state.order] See `state.order`.
+	       @param {Object} [options]
+	       @param {"server"|"client"} [options.side] By default, `"client"` if
+	       `mode` is `"client"`, `"server"` otherwise.
+	       @param {boolean} [options.full=true]
+	       @param {(function(Backbone.Model, string): Object) | string} [options.sortValue]
+	    */
+	    setSorting: function (sortKey, order, options) {
+
+	      var state = this.state;
+
+	      state.sortKey = sortKey;
+	      state.order = order = order || state.order;
+
+	      var fullCollection = this.fullCollection;
+
+	      var delComp = false, delFullComp = false;
+
+	      if (!sortKey) delComp = delFullComp = true;
+
+	      var mode = this.mode;
+	      options = _extend({side: mode == "client" ? mode : "server", full: true},
+	                        options);
+
+	      var comparator = this._makeComparator(sortKey, order, options.sortValue);
+
+	      var full = options.full, side = options.side;
+
+	      if (side == "client") {
+	        if (full) {
+	          if (fullCollection) fullCollection.comparator = comparator;
+	          delComp = true;
+	        }
+	        else {
+	          this.comparator = comparator;
+	          delFullComp = true;
+	        }
+	      }
+	      else if (side == "server" && !full) {
+	        this.comparator = comparator;
+	      }
+
+	      if (delComp) this.comparator = null;
+	      if (delFullComp && fullCollection) fullCollection.comparator = null;
+
+	      return this;
+	    }
+
+	  });
+
+	  var PageableProto = PageableCollection.prototype;
+
+	  return PageableCollection;
+
+	}));
+
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"loginPage\">");t.b("\n" + i);t.b("<form id=\"loginForm\">");t.b("\n" + i);t.b("<div id=\"loginHeader\">");t.b("\n" + i);t.b("  <h2>LOG IN</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("  <label>Username:</label>");t.b("\n" + i);t.b("  <input id=\"username\" type=\"text\" placeholder=\"USERNAME\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Password: </label>");t.b("\n" + i);t.b("  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <button id=\"loginSubmit\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("  <a class=\"register\" type=\"submit\" href=\"/signup\">SignUp</a>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"loginPage\">\n<form id=\"loginForm\">\n<div id=\"loginHeader\">\n  <h2>LOG IN</h2>\n</div>\n  <label>Username:</label>\n  <input id=\"username\" type=\"text\" placeholder=\"USERNAME\">\n  </br>\n  <label>Password: </label>\n  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">\n  </br>\n  <button id=\"loginSubmit\" type=\"submit\">Submit</button>\n  <a class=\"register\" type=\"submit\" href=\"/signup\">SignUp</a>\n</form>\n</div>\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	 *  Copyright 2011 Twitter, Inc.
+	 *  Licensed under the Apache License, Version 2.0 (the "License");
+	 *  you may not use this file except in compliance with the License.
+	 *  You may obtain a copy of the License at
+	 *
+	 *  http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 *  Unless required by applicable law or agreed to in writing, software
+	 *  distributed under the License is distributed on an "AS IS" BASIS,
+	 *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 *  See the License for the specific language governing permissions and
+	 *  limitations under the License.
+	 */
+
+	// This file is for use with Node.js. See dist/ for browser files.
+
+	var Hogan = __webpack_require__(42);
+	Hogan.Template = __webpack_require__(43).Template;
+	Hogan.template = Hogan.Template;
+	module.exports = Hogan;
+
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	 *  Copyright 2011 Twitter, Inc.
+	 *  Licensed under the Apache License, Version 2.0 (the "License");
+	 *  you may not use this file except in compliance with the License.
+	 *  You may obtain a copy of the License at
+	 *
+	 *  http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 *  Unless required by applicable law or agreed to in writing, software
+	 *  distributed under the License is distributed on an "AS IS" BASIS,
+	 *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 *  See the License for the specific language governing permissions and
+	 *  limitations under the License.
+	 */
+
+	(function (Hogan) {
+	  // Setup regex  assignments
+	  // remove whitespace according to Mustache spec
+	  var rIsWhitespace = /\S/,
+	      rQuot = /\"/g,
+	      rNewline =  /\n/g,
+	      rCr = /\r/g,
+	      rSlash = /\\/g,
+	      rLineSep = /\u2028/,
+	      rParagraphSep = /\u2029/;
+
+	  Hogan.tags = {
+	    '#': 1, '^': 2, '<': 3, '$': 4,
+	    '/': 5, '!': 6, '>': 7, '=': 8, '_v': 9,
+	    '{': 10, '&': 11, '_t': 12
+	  };
+
+	  Hogan.scan = function scan(text, delimiters) {
+	    var len = text.length,
+	        IN_TEXT = 0,
+	        IN_TAG_TYPE = 1,
+	        IN_TAG = 2,
+	        state = IN_TEXT,
+	        tagType = null,
+	        tag = null,
+	        buf = '',
+	        tokens = [],
+	        seenTag = false,
+	        i = 0,
+	        lineStart = 0,
+	        otag = '{{',
+	        ctag = '}}';
+
+	    function addBuf() {
+	      if (buf.length > 0) {
+	        tokens.push({tag: '_t', text: new String(buf)});
+	        buf = '';
+	      }
+	    }
+
+	    function lineIsWhitespace() {
+	      var isAllWhitespace = true;
+	      for (var j = lineStart; j < tokens.length; j++) {
+	        isAllWhitespace =
+	          (Hogan.tags[tokens[j].tag] < Hogan.tags['_v']) ||
+	          (tokens[j].tag == '_t' && tokens[j].text.match(rIsWhitespace) === null);
+	        if (!isAllWhitespace) {
+	          return false;
+	        }
+	      }
+
+	      return isAllWhitespace;
+	    }
+
+	    function filterLine(haveSeenTag, noNewLine) {
+	      addBuf();
+
+	      if (haveSeenTag && lineIsWhitespace()) {
+	        for (var j = lineStart, next; j < tokens.length; j++) {
+	          if (tokens[j].text) {
+	            if ((next = tokens[j+1]) && next.tag == '>') {
+	              // set indent to token value
+	              next.indent = tokens[j].text.toString()
+	            }
+	            tokens.splice(j, 1);
+	          }
+	        }
+	      } else if (!noNewLine) {
+	        tokens.push({tag:'\n'});
+	      }
+
+	      seenTag = false;
+	      lineStart = tokens.length;
+	    }
+
+	    function changeDelimiters(text, index) {
+	      var close = '=' + ctag,
+	          closeIndex = text.indexOf(close, index),
+	          delimiters = trim(
+	            text.substring(text.indexOf('=', index) + 1, closeIndex)
+	          ).split(' ');
+
+	      otag = delimiters[0];
+	      ctag = delimiters[delimiters.length - 1];
+
+	      return closeIndex + close.length - 1;
+	    }
+
+	    if (delimiters) {
+	      delimiters = delimiters.split(' ');
+	      otag = delimiters[0];
+	      ctag = delimiters[1];
+	    }
+
+	    for (i = 0; i < len; i++) {
+	      if (state == IN_TEXT) {
+	        if (tagChange(otag, text, i)) {
+	          --i;
+	          addBuf();
+	          state = IN_TAG_TYPE;
+	        } else {
+	          if (text.charAt(i) == '\n') {
+	            filterLine(seenTag);
+	          } else {
+	            buf += text.charAt(i);
+	          }
+	        }
+	      } else if (state == IN_TAG_TYPE) {
+	        i += otag.length - 1;
+	        tag = Hogan.tags[text.charAt(i + 1)];
+	        tagType = tag ? text.charAt(i + 1) : '_v';
+	        if (tagType == '=') {
+	          i = changeDelimiters(text, i);
+	          state = IN_TEXT;
+	        } else {
+	          if (tag) {
+	            i++;
+	          }
+	          state = IN_TAG;
+	        }
+	        seenTag = i;
+	      } else {
+	        if (tagChange(ctag, text, i)) {
+	          tokens.push({tag: tagType, n: trim(buf), otag: otag, ctag: ctag,
+	                       i: (tagType == '/') ? seenTag - otag.length : i + ctag.length});
+	          buf = '';
+	          i += ctag.length - 1;
+	          state = IN_TEXT;
+	          if (tagType == '{') {
+	            if (ctag == '}}') {
+	              i++;
+	            } else {
+	              cleanTripleStache(tokens[tokens.length - 1]);
+	            }
+	          }
+	        } else {
+	          buf += text.charAt(i);
+	        }
+	      }
+	    }
+
+	    filterLine(seenTag, true);
+
+	    return tokens;
+	  }
+
+	  function cleanTripleStache(token) {
+	    if (token.n.substr(token.n.length - 1) === '}') {
+	      token.n = token.n.substring(0, token.n.length - 1);
+	    }
+	  }
+
+	  function trim(s) {
+	    if (s.trim) {
+	      return s.trim();
+	    }
+
+	    return s.replace(/^\s*|\s*$/g, '');
+	  }
+
+	  function tagChange(tag, text, index) {
+	    if (text.charAt(index) != tag.charAt(0)) {
+	      return false;
+	    }
+
+	    for (var i = 1, l = tag.length; i < l; i++) {
+	      if (text.charAt(index + i) != tag.charAt(i)) {
+	        return false;
+	      }
+	    }
+
+	    return true;
+	  }
+
+	  // the tags allowed inside super templates
+	  var allowedInSuper = {'_t': true, '\n': true, '$': true, '/': true};
+
+	  function buildTree(tokens, kind, stack, customTags) {
+	    var instructions = [],
+	        opener = null,
+	        tail = null,
+	        token = null;
+
+	    tail = stack[stack.length - 1];
+
+	    while (tokens.length > 0) {
+	      token = tokens.shift();
+
+	      if (tail && tail.tag == '<' && !(token.tag in allowedInSuper)) {
+	        throw new Error('Illegal content in < super tag.');
+	      }
+
+	      if (Hogan.tags[token.tag] <= Hogan.tags['$'] || isOpener(token, customTags)) {
+	        stack.push(token);
+	        token.nodes = buildTree(tokens, token.tag, stack, customTags);
+	      } else if (token.tag == '/') {
+	        if (stack.length === 0) {
+	          throw new Error('Closing tag without opener: /' + token.n);
+	        }
+	        opener = stack.pop();
+	        if (token.n != opener.n && !isCloser(token.n, opener.n, customTags)) {
+	          throw new Error('Nesting error: ' + opener.n + ' vs. ' + token.n);
+	        }
+	        opener.end = token.i;
+	        return instructions;
+	      } else if (token.tag == '\n') {
+	        token.last = (tokens.length == 0) || (tokens[0].tag == '\n');
+	      }
+
+	      instructions.push(token);
+	    }
+
+	    if (stack.length > 0) {
+	      throw new Error('missing closing tag: ' + stack.pop().n);
+	    }
+
+	    return instructions;
+	  }
+
+	  function isOpener(token, tags) {
+	    for (var i = 0, l = tags.length; i < l; i++) {
+	      if (tags[i].o == token.n) {
+	        token.tag = '#';
+	        return true;
+	      }
+	    }
+	  }
+
+	  function isCloser(close, open, tags) {
+	    for (var i = 0, l = tags.length; i < l; i++) {
+	      if (tags[i].c == close && tags[i].o == open) {
+	        return true;
+	      }
+	    }
+	  }
+
+	  function stringifySubstitutions(obj) {
+	    var items = [];
+	    for (var key in obj) {
+	      items.push('"' + esc(key) + '": function(c,p,t,i) {' + obj[key] + '}');
+	    }
+	    return "{ " + items.join(",") + " }";
+	  }
+
+	  function stringifyPartials(codeObj) {
+	    var partials = [];
+	    for (var key in codeObj.partials) {
+	      partials.push('"' + esc(key) + '":{name:"' + esc(codeObj.partials[key].name) + '", ' + stringifyPartials(codeObj.partials[key]) + "}");
+	    }
+	    return "partials: {" + partials.join(",") + "}, subs: " + stringifySubstitutions(codeObj.subs);
+	  }
+
+	  Hogan.stringify = function(codeObj, text, options) {
+	    return "{code: function (c,p,i) { " + Hogan.wrapMain(codeObj.code) + " }," + stringifyPartials(codeObj) +  "}";
+	  }
+
+	  var serialNo = 0;
+	  Hogan.generate = function(tree, text, options) {
+	    serialNo = 0;
+	    var context = { code: '', subs: {}, partials: {} };
+	    Hogan.walk(tree, context);
+
+	    if (options.asString) {
+	      return this.stringify(context, text, options);
+	    }
+
+	    return this.makeTemplate(context, text, options);
+	  }
+
+	  Hogan.wrapMain = function(code) {
+	    return 'var t=this;t.b(i=i||"");' + code + 'return t.fl();';
+	  }
+
+	  Hogan.template = Hogan.Template;
+
+	  Hogan.makeTemplate = function(codeObj, text, options) {
+	    var template = this.makePartials(codeObj);
+	    template.code = new Function('c', 'p', 'i', this.wrapMain(codeObj.code));
+	    return new this.template(template, text, this, options);
+	  }
+
+	  Hogan.makePartials = function(codeObj) {
+	    var key, template = {subs: {}, partials: codeObj.partials, name: codeObj.name};
+	    for (key in template.partials) {
+	      template.partials[key] = this.makePartials(template.partials[key]);
+	    }
+	    for (key in codeObj.subs) {
+	      template.subs[key] = new Function('c', 'p', 't', 'i', codeObj.subs[key]);
+	    }
+	    return template;
+	  }
+
+	  function esc(s) {
+	    return s.replace(rSlash, '\\\\')
+	            .replace(rQuot, '\\\"')
+	            .replace(rNewline, '\\n')
+	            .replace(rCr, '\\r')
+	            .replace(rLineSep, '\\u2028')
+	            .replace(rParagraphSep, '\\u2029');
+	  }
+
+	  function chooseMethod(s) {
+	    return (~s.indexOf('.')) ? 'd' : 'f';
+	  }
+
+	  function createPartial(node, context) {
+	    var prefix = "<" + (context.prefix || "");
+	    var sym = prefix + node.n + serialNo++;
+	    context.partials[sym] = {name: node.n, partials: {}};
+	    context.code += 't.b(t.rp("' +  esc(sym) + '",c,p,"' + (node.indent || '') + '"));';
+	    return sym;
+	  }
+
+	  Hogan.codegen = {
+	    '#': function(node, context) {
+	      context.code += 'if(t.s(t.' + chooseMethod(node.n) + '("' + esc(node.n) + '",c,p,1),' +
+	                      'c,p,0,' + node.i + ',' + node.end + ',"' + node.otag + " " + node.ctag + '")){' +
+	                      't.rs(c,p,' + 'function(c,p,t){';
+	      Hogan.walk(node.nodes, context);
+	      context.code += '});c.pop();}';
+	    },
+
+	    '^': function(node, context) {
+	      context.code += 'if(!t.s(t.' + chooseMethod(node.n) + '("' + esc(node.n) + '",c,p,1),c,p,1,0,0,"")){';
+	      Hogan.walk(node.nodes, context);
+	      context.code += '};';
+	    },
+
+	    '>': createPartial,
+	    '<': function(node, context) {
+	      var ctx = {partials: {}, code: '', subs: {}, inPartial: true};
+	      Hogan.walk(node.nodes, ctx);
+	      var template = context.partials[createPartial(node, context)];
+	      template.subs = ctx.subs;
+	      template.partials = ctx.partials;
+	    },
+
+	    '$': function(node, context) {
+	      var ctx = {subs: {}, code: '', partials: context.partials, prefix: node.n};
+	      Hogan.walk(node.nodes, ctx);
+	      context.subs[node.n] = ctx.code;
+	      if (!context.inPartial) {
+	        context.code += 't.sub("' + esc(node.n) + '",c,p,i);';
+	      }
+	    },
+
+	    '\n': function(node, context) {
+	      context.code += write('"\\n"' + (node.last ? '' : ' + i'));
+	    },
+
+	    '_v': function(node, context) {
+	      context.code += 't.b(t.v(t.' + chooseMethod(node.n) + '("' + esc(node.n) + '",c,p,0)));';
+	    },
+
+	    '_t': function(node, context) {
+	      context.code += write('"' + esc(node.text) + '"');
+	    },
+
+	    '{': tripleStache,
+
+	    '&': tripleStache
+	  }
+
+	  function tripleStache(node, context) {
+	    context.code += 't.b(t.t(t.' + chooseMethod(node.n) + '("' + esc(node.n) + '",c,p,0)));';
+	  }
+
+	  function write(s) {
+	    return 't.b(' + s + ');';
+	  }
+
+	  Hogan.walk = function(nodelist, context) {
+	    var func;
+	    for (var i = 0, l = nodelist.length; i < l; i++) {
+	      func = Hogan.codegen[nodelist[i].tag];
+	      func && func(nodelist[i], context);
+	    }
+	    return context;
+	  }
+
+	  Hogan.parse = function(tokens, text, options) {
+	    options = options || {};
+	    return buildTree(tokens, '', [], options.sectionTags || []);
+	  }
+
+	  Hogan.cache = {};
+
+	  Hogan.cacheKey = function(text, options) {
+	    return [text, !!options.asString, !!options.disableLambda, options.delimiters, !!options.modelGet].join('||');
+	  }
+
+	  Hogan.compile = function(text, options) {
+	    options = options || {};
+	    var key = Hogan.cacheKey(text, options);
+	    var template = this.cache[key];
+
+	    if (template) {
+	      var partials = template.partials;
+	      for (var name in partials) {
+	        delete partials[name].instance;
+	      }
+	      return template;
+	    }
+
+	    template = this.generate(this.parse(this.scan(text, options.delimiters), text, options), text, options);
+	    return this.cache[key] = template;
+	  }
+	})( true ? exports : Hogan);
+
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	 *  Copyright 2011 Twitter, Inc.
+	 *  Licensed under the Apache License, Version 2.0 (the "License");
+	 *  you may not use this file except in compliance with the License.
+	 *  You may obtain a copy of the License at
+	 *
+	 *  http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 *  Unless required by applicable law or agreed to in writing, software
+	 *  distributed under the License is distributed on an "AS IS" BASIS,
+	 *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 *  See the License for the specific language governing permissions and
+	 *  limitations under the License.
+	 */
+
+	var Hogan = {};
+
+	(function (Hogan) {
+	  Hogan.Template = function (codeObj, text, compiler, options) {
+	    codeObj = codeObj || {};
+	    this.r = codeObj.code || this.r;
+	    this.c = compiler;
+	    this.options = options || {};
+	    this.text = text || '';
+	    this.partials = codeObj.partials || {};
+	    this.subs = codeObj.subs || {};
+	    this.buf = '';
+	  }
+
+	  Hogan.Template.prototype = {
+	    // render: replaced by generated code.
+	    r: function (context, partials, indent) { return ''; },
+
+	    // variable escaping
+	    v: hoganEscape,
+
+	    // triple stache
+	    t: coerceToString,
+
+	    render: function render(context, partials, indent) {
+	      return this.ri([context], partials || {}, indent);
+	    },
+
+	    // render internal -- a hook for overrides that catches partials too
+	    ri: function (context, partials, indent) {
+	      return this.r(context, partials, indent);
+	    },
+
+	    // ensurePartial
+	    ep: function(symbol, partials) {
+	      var partial = this.partials[symbol];
+
+	      // check to see that if we've instantiated this partial before
+	      var template = partials[partial.name];
+	      if (partial.instance && partial.base == template) {
+	        return partial.instance;
+	      }
+
+	      if (typeof template == 'string') {
+	        if (!this.c) {
+	          throw new Error("No compiler available.");
+	        }
+	        template = this.c.compile(template, this.options);
+	      }
+
+	      if (!template) {
+	        return null;
+	      }
+
+	      // We use this to check whether the partials dictionary has changed
+	      this.partials[symbol].base = template;
+
+	      if (partial.subs) {
+	        // Make sure we consider parent template now
+	        if (!partials.stackText) partials.stackText = {};
+	        for (key in partial.subs) {
+	          if (!partials.stackText[key]) {
+	            partials.stackText[key] = (this.activeSub !== undefined && partials.stackText[this.activeSub]) ? partials.stackText[this.activeSub] : this.text;
+	          }
+	        }
+	        template = createSpecializedPartial(template, partial.subs, partial.partials,
+	          this.stackSubs, this.stackPartials, partials.stackText);
+	      }
+	      this.partials[symbol].instance = template;
+
+	      return template;
+	    },
+
+	    // tries to find a partial in the current scope and render it
+	    rp: function(symbol, context, partials, indent) {
+	      var partial = this.ep(symbol, partials);
+	      if (!partial) {
+	        return '';
+	      }
+
+	      return partial.ri(context, partials, indent);
+	    },
+
+	    // render a section
+	    rs: function(context, partials, section) {
+	      var tail = context[context.length - 1];
+
+	      if (!isArray(tail)) {
+	        section(context, partials, this);
+	        return;
+	      }
+
+	      for (var i = 0; i < tail.length; i++) {
+	        context.push(tail[i]);
+	        section(context, partials, this);
+	        context.pop();
+	      }
+	    },
+
+	    // maybe start a section
+	    s: function(val, ctx, partials, inverted, start, end, tags) {
+	      var pass;
+
+	      if (isArray(val) && val.length === 0) {
+	        return false;
+	      }
+
+	      if (typeof val == 'function') {
+	        val = this.ms(val, ctx, partials, inverted, start, end, tags);
+	      }
+
+	      pass = !!val;
+
+	      if (!inverted && pass && ctx) {
+	        ctx.push((typeof val == 'object') ? val : ctx[ctx.length - 1]);
+	      }
+
+	      return pass;
+	    },
+
+	    // find values with dotted names
+	    d: function(key, ctx, partials, returnFound) {
+	      var found,
+	          names = key.split('.'),
+	          val = this.f(names[0], ctx, partials, returnFound),
+	          doModelGet = this.options.modelGet,
+	          cx = null;
+
+	      if (key === '.' && isArray(ctx[ctx.length - 2])) {
+	        val = ctx[ctx.length - 1];
+	      } else {
+	        for (var i = 1; i < names.length; i++) {
+	          found = findInScope(names[i], val, doModelGet);
+	          if (found !== undefined) {
+	            cx = val;
+	            val = found;
+	          } else {
+	            val = '';
+	          }
+	        }
+	      }
+
+	      if (returnFound && !val) {
+	        return false;
+	      }
+
+	      if (!returnFound && typeof val == 'function') {
+	        ctx.push(cx);
+	        val = this.mv(val, ctx, partials);
+	        ctx.pop();
+	      }
+
+	      return val;
+	    },
+
+	    // find values with normal names
+	    f: function(key, ctx, partials, returnFound) {
+	      var val = false,
+	          v = null,
+	          found = false,
+	          doModelGet = this.options.modelGet;
+
+	      for (var i = ctx.length - 1; i >= 0; i--) {
+	        v = ctx[i];
+	        val = findInScope(key, v, doModelGet);
+	        if (val !== undefined) {
+	          found = true;
+	          break;
+	        }
+	      }
+
+	      if (!found) {
+	        return (returnFound) ? false : "";
+	      }
+
+	      if (!returnFound && typeof val == 'function') {
+	        val = this.mv(val, ctx, partials);
+	      }
+
+	      return val;
+	    },
+
+	    // higher order templates
+	    ls: function(func, cx, partials, text, tags) {
+	      var oldTags = this.options.delimiters;
+
+	      this.options.delimiters = tags;
+	      this.b(this.ct(coerceToString(func.call(cx, text)), cx, partials));
+	      this.options.delimiters = oldTags;
+
+	      return false;
+	    },
+
+	    // compile text
+	    ct: function(text, cx, partials) {
+	      if (this.options.disableLambda) {
+	        throw new Error('Lambda features disabled.');
+	      }
+	      return this.c.compile(text, this.options).render(cx, partials);
+	    },
+
+	    // template result buffering
+	    b: function(s) { this.buf += s; },
+
+	    fl: function() { var r = this.buf; this.buf = ''; return r; },
+
+	    // method replace section
+	    ms: function(func, ctx, partials, inverted, start, end, tags) {
+	      var textSource,
+	          cx = ctx[ctx.length - 1],
+	          result = func.call(cx);
+
+	      if (typeof result == 'function') {
+	        if (inverted) {
+	          return true;
+	        } else {
+	          textSource = (this.activeSub && this.subsText && this.subsText[this.activeSub]) ? this.subsText[this.activeSub] : this.text;
+	          return this.ls(result, cx, partials, textSource.substring(start, end), tags);
+	        }
+	      }
+
+	      return result;
+	    },
+
+	    // method replace variable
+	    mv: function(func, ctx, partials) {
+	      var cx = ctx[ctx.length - 1];
+	      var result = func.call(cx);
+
+	      if (typeof result == 'function') {
+	        return this.ct(coerceToString(result.call(cx)), cx, partials);
+	      }
+
+	      return result;
+	    },
+
+	    sub: function(name, context, partials, indent) {
+	      var f = this.subs[name];
+	      if (f) {
+	        this.activeSub = name;
+	        f(context, partials, this, indent);
+	        this.activeSub = false;
+	      }
+	    }
+
+	  };
+
+	  //Find a key in an object
+	  function findInScope(key, scope, doModelGet) {
+	    var val;
+
+	    if (scope && typeof scope == 'object') {
+
+	      if (scope[key] !== undefined) {
+	        val = scope[key];
+
+	      // try lookup with get for backbone or similar model data
+	      } else if (doModelGet && scope.get && typeof scope.get == 'function') {
+	        val = scope.get(key);
+	      }
+	    }
+
+	    return val;
+	  }
+
+	  function createSpecializedPartial(instance, subs, partials, stackSubs, stackPartials, stackText) {
+	    function PartialTemplate() {};
+	    PartialTemplate.prototype = instance;
+	    function Substitutions() {};
+	    Substitutions.prototype = instance.subs;
+	    var key;
+	    var partial = new PartialTemplate();
+	    partial.subs = new Substitutions();
+	    partial.subsText = {};  //hehe. substext.
+	    partial.buf = '';
+
+	    stackSubs = stackSubs || {};
+	    partial.stackSubs = stackSubs;
+	    partial.subsText = stackText;
+	    for (key in subs) {
+	      if (!stackSubs[key]) stackSubs[key] = subs[key];
+	    }
+	    for (key in stackSubs) {
+	      partial.subs[key] = stackSubs[key];
+	    }
+
+	    stackPartials = stackPartials || {};
+	    partial.stackPartials = stackPartials;
+	    for (key in partials) {
+	      if (!stackPartials[key]) stackPartials[key] = partials[key];
+	    }
+	    for (key in stackPartials) {
+	      partial.partials[key] = stackPartials[key];
+	    }
+
+	    return partial;
+	  }
+
+	  var rAmp = /&/g,
+	      rLt = /</g,
+	      rGt = />/g,
+	      rApos = /\'/g,
+	      rQuot = /\"/g,
+	      hChars = /[&<>\"\']/;
+
+	  function coerceToString(val) {
+	    return String((val === null || val === undefined) ? '' : val);
+	  }
+
+	  function hoganEscape(str) {
+	    str = coerceToString(str);
+	    return hChars.test(str) ?
+	      str
+	        .replace(rAmp, '&amp;')
+	        .replace(rLt, '&lt;')
+	        .replace(rGt, '&gt;')
+	        .replace(rApos, '&#39;')
+	        .replace(rQuot, '&quot;') :
+	      str;
+	  }
+
+	  var isArray = Array.isArray || function(a) {
+	    return Object.prototype.toString.call(a) === '[object Array]';
+	  };
+
+	})( true ? exports : Hogan);
+
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Re-Enter PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  <span id=\"reenterMessage\"></span>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PHONE:</label>");t.b("\n" + i);t.b("  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">");t.b("\n" + i);t.b("   </br>");t.b("\n" + i);t.b("  <label>Text Alerts:</label>");t.b("\n" + i);t.b("  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Upload an Image:</label>");t.b("\n" + i);t.b("  <input id=\"rpic\" type=\"file\" enctype=\"multipart/form-data\">");t.b("\n" + i);t.b("  <button class=\"register\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>Re-Enter PASSWORD:</label>\n  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">\n  <span id=\"reenterMessage\"></span>\n  </br>\n  <label>PHONE:</label>\n  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">\n   </br>\n  <label>Text Alerts:</label>\n  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  </br>\n  <label>Upload an Image:</label>\n  <input id=\"rpic\" type=\"file\" enctype=\"multipart/form-data\">\n  <button class=\"register\" type=\"submit\">Submit</button>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <div id=\"over\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);t.b("<div id=\"filter\">");t.b("\n" + i);t.b("  <select id=\"sport\">");t.b("\n" + i);t.b("    <option>Filter Sport</option>");t.b("\n" + i);t.b("    <option value=\"tennis\">Tennis</option>");t.b("\n" + i);t.b("    <option value=\"basketball\">Basketball</option>");t.b("\n" + i);t.b("    <option value=\"football\">Football</option>");t.b("\n" + i);t.b("    <option value=\"soccer\">Soccer</option>");t.b("\n" + i);t.b("    <option value=\"pickleball\">Pickleball</option>");t.b("\n" + i);t.b("    <option value=\"volleyball\">Volleyball</option>");t.b("\n" + i);t.b("    <option value=\"other\">Other</option>");t.b("\n" + i);t.b("    <option value=\"\">All</option>");t.b("\n" + i);t.b("  </select>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"areaSearch\">");t.b("\n" + i);t.b("<input type=\"text\" id=\"areaInput\" placeholder=\"Zip Code\">");t.b("\n" + i);t.b("<button type=\"submit\" id=\"submitArea\"> Search </button>");t.b("\n" + i);t.b("<button type=\"submit\" id=\"area\"> Use Location </button>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<h3>Open Matches</h3>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,976,1668,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,989,1655,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li id=\"sportImage\"><a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a></br></li>");t.b("\n" + i);t.b("    <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("date",c,p,0)));t.b("</a>");t.b("\n" + i);t.b("    ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("    ");t.b(t.v(t.f("distance",c,p,0)));t.b(" Miles </br>");t.b("\n" + i);t.b("    <a id=\"parkAnchor\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("    </progress></li>");t.b("\n" + i);t.b("<li id=\"players\">");if(t.s(t.f("players",c,p,1),c,p,0,1420,1475,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\"></a>");});c.pop();}t.b(" <img src=\"https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png\"></li>");t.b("\n" + i);t.b("<li id=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("<div id=\"pagination\">");t.b("\n" + i);t.b("<button id=\"prev\">Prev</button>");t.b("\n" + i);t.b("<button id=\"next\">Next</button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"imageContainer\">\n  <div id=\"over\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n  </div>\n</div>\n<div id=\"upComing\">\n<div id=\"filter\">\n  <select id=\"sport\">\n    <option>Filter Sport</option>\n    <option value=\"tennis\">Tennis</option>\n    <option value=\"basketball\">Basketball</option>\n    <option value=\"football\">Football</option>\n    <option value=\"soccer\">Soccer</option>\n    <option value=\"pickleball\">Pickleball</option>\n    <option value=\"volleyball\">Volleyball</option>\n    <option value=\"other\">Other</option>\n    <option value=\"\">All</option>\n  </select>\n</div>\n<div id=\"areaSearch\">\n<input type=\"text\" id=\"areaInput\" placeholder=\"Zip Code\">\n<button type=\"submit\" id=\"submitArea\"> Search </button>\n<button type=\"submit\" id=\"area\"> Use Location </button>\n</div>\n<h3>Open Matches</h3>\n{{#data}}\n{{#is_open}}\n  <ul>\n    <li id=\"sportImage\"><a href=\"/match/{{id}}\"><img src=\"{{img_url}}\"></a></br></li>\n    <li class=\"description\"> <a href=\"/match/{{id}}\">{{date}}</a>\n    {{time}}</br>\n    {{distance}} Miles </br>\n    <a id=\"parkAnchor\" href=\"/parksDetail/{{park}}\">{{park_name}}</a></li>\n    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n    </progress></li>\n<li id=\"players\">{{#players}}<a href=\"/profile/{{id}}\"><img src=\"{{small_img}}\"></a>{{/players}} <img src=\"https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png\"></li>\n<li id=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n{{/is_open}}\n{{/data}}\n<div id=\"pagination\">\n<button id=\"prev\">Prev</button>\n<button id=\"next\">Next</button>\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,47,97,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("</select>");return t.fl(); },partials: {}, subs: {  }}, "<select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n</select>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"matchDetailContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,43,951,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("  <ul id=\"matchJoin\">");t.b("\n" + i);t.b("    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> ");t.b(t.v(t.f("sport",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li><a href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\" id=\"parkLink\"> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("    <li id=\"matchDescription\"> ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>Created By: <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\">");t.b(t.v(t.f("creator_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);t.b("    <img id=\"playerImage\" src=\"https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png\"></li>");t.b("\n" + i);t.b("    <button id=\"join\"> Join </button>");t.b("\n" + i);t.b("    <a id=\"confirm\" href=\"/\"> Confirm Match </a>");t.b("\n" + i);t.b("    <a id=\"decline\" href=\"/\"> Decline Match </a>");t.b("\n" + i);t.b("    <div id=\"cancelEdit\">");t.b("\n" + i);t.b("    <a id=\"cancel\" href=\"/\"> Cancel Match </a>");t.b("\n" + i);t.b("    <a id=\"update\" href=\"/updatematch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Edit Match</a>");t.b("\n" + i);t.b("    </div>");t.b("\n" + i);t.b("   </div>");t.b("\n" + i);t.b("   <a id=\"leaveMatch\" href=\"/\"> Leave Match </a>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"matchDetailContainer\">\n  {{#data}}\n  <img id=\"sportImage\"src=\"{{img_url}}\">\n  <ul id=\"matchJoin\">\n    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n    <li> {{date}}</li>\n    <li> {{time}}</li>\n    <li> {{sport}} </li>\n    <li><a href=\"/parksDetail/{{park}}\" id=\"parkLink\"> {{park_name}} </a></li>\n    <li id=\"matchDescription\"> {{description}}</li>\n    <li>Created By: <a href=\"/profile/{{creator}}\">{{creator_name}}</a></li>\n    </ul>\n    <img id=\"playerImage\" src=\"https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png\"></li>\n    <button id=\"join\"> Join </button>\n    <a id=\"confirm\" href=\"/\"> Confirm Match </a>\n    <a id=\"decline\" href=\"/\"> Decline Match </a>\n    <div id=\"cancelEdit\">\n    <a id=\"cancel\" href=\"/\"> Cancel Match </a>\n    <a id=\"update\" href=\"/updatematch/{{id}}\">Edit Match</a>\n    </div>\n   </div>\n   <a id=\"leaveMatch\" href=\"/\"> Leave Match </a>\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"UpMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,82,973,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <a id=\"updateMatch\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Update Match</a>");t.b("\n" + i);t.b("  <ul id=\"update\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\" value\"");t.b(t.v(t.f("sport",c,p,0)));t.b("\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">");t.b(t.v(t.f("description",c,p,0)));t.b("</textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\" value=\"");t.b(t.v(t.f("date",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\" value=\"");t.b(t.v(t.f("time",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='");t.b(t.v(t.f("skill_level",c,p,0)));t.b("'>");t.b("\n" + i);t.b("    <li> Park:</br><select id=\"addPark\" name=\"park\"></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"UpMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  {{#data}}\n  <a id=\"updateMatch\" href=\"/match/{{id}}\">Update Match</a>\n  <ul id=\"update\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\" value\"{{sport}}\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">{{description}}</textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\" value=\"{{date}}\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\" value=\"{{time}}\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='{{skill_level}}'>\n    <li> Park:</br><select id=\"addPark\" name=\"park\"></li>\n  </ul>\n  {{/data}}\n</div>\n\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"updatePage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>Update Profile</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);if(t.s(t.f("update",c,p,1),c,p,0,88,1548,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\" value=\"");t.b(t.v(t.f("username",c,p,0)));t.b("\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\" value=\"");t.b(t.v(t.f("email",c,p,0)));t.b("\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Re-Enter PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  <span id=\"reenterMessage\"></span>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PHONE:</label>");t.b("\n" + i);t.b("  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\" value=\"");t.b(t.v(t.f("phone_number",c,p,0)));t.b("\">");t.b("\n" + i);t.b("   </br>");t.b("\n" + i);t.b("  <label>Text Alerts:</label>");t.b("\n" + i);t.b("  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Age:</label>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"imageUpload\">Upload an Image:</label>");t.b("\n" + i);t.b("  <input id=\"user\" type=\"file\" placeholder=\"upload\">");t.b("\n" + i);t.b("  <button class=\"register\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"updatePage\">\n<div id=\"signupHeader\">\n<h2>Update Profile</h2>\n</div>\n{{#update}}\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\" value=\"{{username}}\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\" value=\"{{email}}\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>Re-Enter PASSWORD:</label>\n  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">\n  <span id=\"reenterMessage\"></span>\n  </br>\n  <label>PHONE:</label>\n  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\" value=\"{{phone_number}}\">\n   </br>\n  <label>Text Alerts:</label>\n  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <label>Age:</label>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  </br>\n  <label id=\"imageUpload\">Upload an Image:</label>\n  <input id=\"user\" type=\"file\" placeholder=\"upload\">\n  <button class=\"register\" type=\"submit\">Submit</button>\n</form>\n{{/update}}\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("<h2>Match History:</h2>");t.b("\n" + i);if(t.s(t.f("history",c,p,1),c,p,0,64,360,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_completed",c,p,1),c,p,0,84,342,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("   	<ul id =\"test\">");t.b("\n" + i);t.b("      <li>This match was completed on, ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("      <li>");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("      <li>");t.b(t.v(t.f("park_name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("      <li><a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a></li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"historyContainer\">\n<h2>Match History:</h2>\n{{#history}}\n  {{#is_completed}}\n    <img id=\"sportImage\"src=\"{{img_url}}\">\n   \t<ul id =\"test\">\n      <li>This match was completed on, {{date}}</li>\n      <li>{{sport}}</li>\n      <li>{{park_name}}</li>\n      <li><a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a></li>\n    </ul>\n  {{/is_completed}}\n{{/history}}\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"profileContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,661,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<button id=\"challenge\">challenge</button>");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li><img id=\"userProfileImg\" src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("     <li class=\"profileDescription\"> Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\">");if(t.s(t.f("skill_set",c,p,1),c,p,0,534,627,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");t.b(t.v(t.f("sport",c,p,0)));t.b(" Skill:");t.b("\n" + i);t.b("     <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n");t.b("\n" + i);});c.pop();}t.b("     </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"profileContainer\">\n{{#data}}\n<button id=\"challenge\">challenge</button>\n  <ul>\n    <li><img id=\"userProfileImg\" src=\"{{profile.pic_url}}\"></li>\n    <li class=\"profileDescription\"> Username: {{username}} </li>\n    <li class=\"profileDescription\"> Age: {{profile.age}} </li>\n    <li class=\"profileDescription\"> Gender: {{profile.gender}}</li>\n     <li class=\"profileDescription\"> Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n    <li class=\"profileDescription\">{{#skill_set}} {{sport}} Skill:\n     <progress class=\"skill\" value=\"{{skill}}\" max=\"100\"></progress>\n\n     {{/skill_set}}\n     </li>\n  </ul>\n{{/data}}\n</div>\n\n<div id=\"historyContainer\">\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h2> Create Game you would like to play </h2>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Pickleball\">Pickleball</option>");t.b("\n" + i);t.b("        <option value=\"Volleyball\">Volleyball</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("    <li> Date: <input id=\"addDate\" type=\"date\"></li>");t.b("\n" + i);t.b("    <li> Time:<input id=\"addTime\" type=\"time\"></li>");t.b("\n" + i);t.b("    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>");t.b("\n" + i);t.b("    <li> Park:<select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,820,870,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n");t.b("\n" + i);t.b("    <li> <label>Skill: 1-100</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h2> Create Game you would like to play </h2>\n  <ul id=\"create\">\n    <li> Sport:\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Pickleball\">Pickleball</option>\n        <option value=\"Volleyball\">Volleyball</option>\n        <option value=\"Other\">Other</option>\n      </select>\n      </li>\n    <li> Date: <input id=\"addDate\" type=\"date\"></li>\n    <li> Time:<input id=\"addTime\" type=\"time\"></li>\n    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>\n    <li> Park:<select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n\n    <li> <label>Skill: 1-100</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Submit</button>\n</div>\n\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"feedbackContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,38,1337,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<ul>");t.b("\n" + i);t.b("<li>");t.b("\n" + i);t.b("  <form class=\"feedbackForm\">");t.b("\n" + i);t.b("  <h3>");t.b(t.v(t.f("username",c,p,0)));t.b("</h3>");t.b("\n" + i);t.b("  <span class=\"skillInfo\"> i </span>");t.b("\n" + i);t.b("  <input class=\"pid\" type=\"text\" value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\" / >");t.b("\n" + i);t.b("  <span class=\"skillRating\" class=\"hidden\"> - On a scale from 1 - 100 Please rate the players skill </span>");t.b("\n" + i);t.b("  <h3>Skill level of player</h3>");t.b("\n" + i);t.b("    <input class=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <span class=\"skillInfo2\"> i </span>");t.b("\n" + i);t.b("       <span class=\"funRating\" class=\"hidden\"> On a scale from 1 - 100 Please rate how fun the match was</span>");t.b("\n" + i);t.b("<h3>How fun was the match</h3>");t.b("\n" + i);t.b("    <input class=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <span class=\"skillInfo3\"> i </span>");t.b("\n" + i);t.b("    <span class=\"crowdRating\" class=\"hidden\"> On a scale from 1 - 5 Please tell us how crowded the park was </span>");t.b("\n" + i);t.b("<h3>Crowd level</h3>");t.b("\n" + i);t.b("    <input class=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select class=\"addPunctualityFeedback\" name=\"Punctuality\">");t.b("\n" + i);t.b("      <option value=\"No Show\">No Show</option>");t.b("\n" + i);t.b("      <option value=\"On Time\">On Time</option>");t.b("\n" + i);t.b("      <option value=\"Little bit late\">Little Late</option>");t.b("\n" + i);t.b("      <option value=\"Over 10 min late\">Over 10 mins late</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button class=\"submitFeedback\" type=\"sumbit\"> Feedback </button>");t.b("\n" + i);});c.pop();}t.b("  </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"feedbackContainer\">\n{{#data}}\n<ul>\n<li>\n  <form class=\"feedbackForm\">\n  <h3>{{username}}</h3>\n  <span class=\"skillInfo\"> i </span>\n  <input class=\"pid\" type=\"text\" value=\"{{id}}\" / >\n  <span class=\"skillRating\" class=\"hidden\"> - On a scale from 1 - 100 Please rate the players skill </span>\n  <h3>Skill level of player</h3>\n    <input class=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <span class=\"skillInfo2\"> i </span>\n       <span class=\"funRating\" class=\"hidden\"> On a scale from 1 - 100 Please rate how fun the match was</span>\n<h3>How fun was the match</h3>\n    <input class=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <span class=\"skillInfo3\"> i </span>\n    <span class=\"crowdRating\" class=\"hidden\"> On a scale from 1 - 5 Please tell us how crowded the park was </span>\n<h3>Crowd level</h3>\n    <input class=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n    </br>\n    <select class=\"addPunctualityFeedback\" name=\"Punctuality\">\n      <option value=\"No Show\">No Show</option>\n      <option value=\"On Time\">On Time</option>\n      <option value=\"Little bit late\">Little Late</option>\n      <option value=\"Over 10 min late\">Over 10 mins late</option>\n    </select>\n  </form>\n  <button class=\"submitFeedback\" type=\"sumbit\"> Feedback </button>\n  {{/data}}\n  </li>\n  </ul>\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"userprofile\">");t.b("\n" + i);if(t.s(t.f("user",c,p,1),c,p,0,127,833,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/userUpdate/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Update Profile</a>");t.b("\n" + i);t.b("  <ul>");t.b("\n");t.b("\n" + i);t.b("    <li class=\"editPic\"><img id=\"homeProfileImg\" src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li class=\"edit\" class=\"mainDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"mainDescription\">");if(t.s(t.f("skill_set",c,p,1),c,p,0,644,736,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");t.b(t.v(t.f("sport",c,p,0)));t.b(" Skill:");t.b("\n" + i);t.b("     <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);});c.pop();}t.b("     </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Create Match</button>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"yourMatches\">");t.b("\n");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,884,1483,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_confirmed",c,p,1),c,p,0,902,1465,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<h2 class=\"matchTitle\"> Upcoming Match </h2>");t.b("\n" + i);t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\"><li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li></a>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}if(t.s(t.f("data",c,p,1),c,p,0,1502,2090,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,1515,2077,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<h2 class=\"matchTitle\"> Pending Match </h2>");t.b("\n" + i);t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\"><li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li></a>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}if(t.s(t.f("data",c,p,1),c,p,0,2109,2779,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_completed",c,p,1),c,p,0,2127,2761,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<h2 class=\"matchTitle\"> Match History </h2>");t.b("\n" + i);t.b("<a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\"><li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li></a>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("   <li><a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"userprofile\">\n{{#user}}\n<a href=\"/userUpdate/{{id}}\">Update Profile</a>\n  <ul>\n\n    <li class=\"editPic\"><img id=\"homeProfileImg\" src=\"{{profile.pic_url}}\"></li>\n    <li class=\"edit\" class=\"mainDescription\"> Username: {{username}} </li>\n    <li class=\"mainDescription\"> Age: {{profile.age}} </li>\n    <li class=\"mainDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"mainDescription\"> Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n    <li class=\"mainDescription\">{{#skill_set}} {{sport}} Skill:\n     <progress class=\"skill\" value=\"{{skill}}\" max=\"100\"></progress>\n     {{/skill_set}}\n     </li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Create Match</button>\n{{/user}}\n</div>\n\n<div id=\"yourMatches\">\n\n{{#data}}\n{{#is_confirmed}}\n<h2 class=\"matchTitle\"> Upcoming Match </h2>\n<a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\"></a>\n<ul>\n  <a href=\"/match/{{id}}\" id=\"dateHome\"><li> {{date}}</li></a>\n  <li> {{time}}</li>\n  <li> {{sport}}</li>\n  <li> {{park_name}} </li>\n  </br>\n  <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n</ul>\n{{/is_confirmed}}\n{{/data}}\n{{#data}}\n{{#is_open}}\n<h2 class=\"matchTitle\"> Pending Match </h2>\n<a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\"></a>\n<ul>\n  <a href=\"/match/{{id}}\" id=\"dateHome\"><li> {{date}}</li></a>\n  <li> {{time}}</li>\n  <li> {{sport}}</li>\n  <li> {{park_name}} </li>\n  </br>\n  <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n</ul>\n{{/is_open}}\n{{/data}}\n{{#data}}\n{{#is_completed}}\n<h2 class=\"matchTitle\"> Match History </h2>\n<a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\"></a>\n<ul>\n  <a href=\"/match/{{id}}\" id=\"dateHome\"><li> {{date}}</li></a>\n  <li> {{time}}</li>\n  <li> {{sport}}</li>\n  <li> {{park_name}} </li>\n  </br>\n  <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n   <li><a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a></li>\n</ul>\n{{/is_completed}}\n{{/data}}\n\n</div>\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Backbone = __webpack_require__(36);
+
+	var matchContainer = Backbone.Model.extend({
+	  initialize: function() {
+	  },
+	  defaults: {
+	    title: null,
+	    description: null,
+	    park: null,
+	    sport: null,
+	    skill_level: null,
+	    date: null,
+	    time: null
+	    },
+	    Model: matchContainer,
+	    url: 'https://skill-match.herokuapp.com/api/matches/'
+	  });
+	 module.exports = matchContainer;
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);t.b("  <label>Input location</label><input id=\"zipcode\" type=\"text\" placeholder=\"Zip Code\" /><button id=\"zip\">Search</button>");t.b("\n" + i);t.b("  <button id=\"locate\">Show my location</button>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,206,1091,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul class=\"parks\">");t.b("\n" + i);t.b("    <li>");t.b("\n" + i);t.b("      <iframe");t.b("\n" + i);t.b("      id=\"googleMaps\"");t.b("\n" + i);t.b("      width=\"300\"");t.b("\n" + i);t.b("      height=\"300\"");t.b("\n" + i);t.b("      frameborder=\"0\" style=\"border:0\"");t.b("\n");t.b("\n" + i);t.b("      src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ");t.b("\n" + i);t.b("        &q=");t.b(t.v(t.f("name",c,p,0)));t.b("+");t.b(t.v(t.f("display_address3",c,p,0)));t.b("&zoom=12\">");t.b("\n" + i);t.b("      </iframe>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li id=\"parkPic\"><img class=\"parksImage\"src=\"");t.b(t.v(t.f("image_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li id=\"parkDet\"><a href=\"/parksDetail/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><div id=\"parkName\">");t.b(t.v(t.f("name",c,p,0)));t.b("</div></a>");t.b(t.v(t.f("rating",c,p,0)));t.b("/5</br><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li class=\"parkAddress\">");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</br>");t.b(t.v(t.f("distance",c,p,0)));t.b(" Miles</li>");t.b("\n" + i);t.b("    <li class=\"parkMatch\"><a type=\"submit\" href=\"/parkCreateMatch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Create Match</a></li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);t.b("    <ul class=\"availableSports\">");t.b("\n" + i);if(t.s(t.f("court_set",c,p,1),c,p,0,1006,1064,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <li><img class=\"sportPic\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);});c.pop();}t.b("    </ul>");t.b("\n" + i);});c.pop();}t.b("  </div>");t.b("\n" + i);t.b("  <button id=\"backPark\"> Back </button>");t.b("\n" + i);t.b("  <button id=\"nextPark\"> Next </button>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n  <label>Input location</label><input id=\"zipcode\" type=\"text\" placeholder=\"Zip Code\" /><button id=\"zip\">Search</button>\n  <button id=\"locate\">Show my location</button>\n  {{#data}}\n  <ul class=\"parks\">\n    <li>\n      <iframe\n      id=\"googleMaps\"\n      width=\"300\"\n      height=\"300\"\n      frameborder=\"0\" style=\"border:0\"\n\n      src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ\n        &q={{name}}+{{display_address3}}&zoom=12\">\n      </iframe>\n    </li>\n    <li id=\"parkPic\"><img class=\"parksImage\"src=\"{{image_url}}\"></li>\n    <li id=\"parkDet\"><a href=\"/parksDetail/{{id}}\"><div id=\"parkName\">{{name}}</div></a>{{rating}}/5</br><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li class=\"parkAddress\">{{display_address1}} </br> {{display_address3}}</br>{{distance}} Miles</li>\n    <li class=\"parkMatch\"><a type=\"submit\" href=\"/parkCreateMatch/{{id}}\">Create Match</a></li>\n    </ul>\n    <ul class=\"availableSports\">\n    {{#court_set}}\n    <li><img class=\"sportPic\"src=\"{{img_url}}\"></li>\n    {{/court_set}}\n    </ul>\n  {{/data}}\n  </div>\n  <button id=\"backPark\"> Back </button>\n  <button id=\"nextPark\"> Next </button>\n\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksPage\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,32,1038,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<div id=\"parksDetail\">");t.b("\n" + i);t.b("  <h2 class=\"parkName\"><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</a></h2>");t.b("\n" + i);t.b("  <a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"><img id=\"parkImage\"src=\"");t.b(t.v(t.f("image_url",c,p,0)));t.b("\"></a>");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>");t.b("\n" + i);t.b("    <li>");t.b(t.v(t.f("rating",c,p,0)));t.b("/5</li>");t.b("\n" + i);t.b("    <li><a href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <p>");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address2",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</p>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);if(t.s(t.f("court_set",c,p,1),c,p,0,461,558,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("          <ul>");t.b("\n" + i);t.b("            <li><img src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\" /></br>");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("          </ul>");t.b("\n" + i);});c.pop();}t.b("    </div>");t.b("\n");t.b("\n" + i);t.b("    <ul class=\"parkMatches\">");if(t.s(t.f("match_set",c,p,1),c,p,0,627,932,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("\n" + i);t.b("        <li><img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("        <li class=\"match\"><a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\" class=\"creatorName\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("        <li class=\"match\">");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("        <li class=\"match\"> Date: ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("        <li class=\"match\"> Time: ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);});c.pop();}t.b("     </ul>");t.b("\n" + i);t.b("     <a id=\"createCourtAnchor\" href=\"/parkCreatePage/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Create Court</a>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksPage\">\n  {{#data}}\n<div id=\"parksDetail\">\n  <h2 class=\"parkName\"><a href=\"{{url}}\">{{name}}</a></h2>\n  <a href=\"{{url}}\"><img id=\"parkImage\"src=\"{{image_url}}\"></a>\n  <ul>\n    <li><a id=\"parkMatch\" type=\"submit\" href=\"/createMatch\">Create Match</a></li>\n    <li>{{rating}}/5</li>\n    <li><a href=\"{{url}}\"> Yelp Park Review</a></li>\n    <p>{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>\n    </ul>\n    {{#court_set}}\n          <ul>\n            <li><img src=\"{{img_url}}\" /></br>{{sport}}</li>\n          </ul>\n    {{/court_set}}\n    </div>\n\n    <ul class=\"parkMatches\">{{#match_set}}\n        <li><img id=\"sportImage\"src=\"{{img_url}}\"></li>\n        <li class=\"match\"><a href=\"/profile/{{creator}}\" class=\"creatorName\"> {{creator_name}} </a></li>\n        <li class=\"match\">{{sport}}</li>\n        <li class=\"match\"> Date: {{date}}</li>\n        <li class=\"match\"> Time: {{time}}</li>\n        {{/match_set}}\n     </ul>\n     <a id=\"createCourtAnchor\" href=\"/parkCreatePage/{{id}}\">Create Court</a>\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parkMatchPage\">");t.b("\n" + i);t.b("  <h2> Create Game you would like to play </h2>");t.b("\n" + i);t.b("  <ul id=\"parkCreate\">");t.b("\n" + i);t.b("    <li> Sport:");t.b("\n" + i);t.b("      <select id=\"addParkSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("    <li> Date: <input id=\"addParkDate\" type=\"date\"></li>");t.b("\n" + i);t.b("    <li> Time:<input id=\"addParkTime\" type=\"time\"></li>");t.b("\n" + i);t.b("    <li><textarea id=\"addParkDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>");t.b("\n" + i);t.b("    <li> Park:<select id=\"addParkCreate\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,734,784,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n");t.b("\n" + i);t.b("    <li> <label>Skill: 1-100</label><input id=\"addParkSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createParkMatches\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parkMatchPage\">\n  <h2> Create Game you would like to play </h2>\n  <ul id=\"parkCreate\">\n    <li> Sport:\n      <select id=\"addParkSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n      </li>\n    <li> Date: <input id=\"addParkDate\" type=\"date\"></li>\n    <li> Time:<input id=\"addParkTime\" type=\"time\"></li>\n    <li><textarea id=\"addParkDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>\n    <li> Park:<select id=\"addParkCreate\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n\n    <li> <label>Skill: 1-100</label><input id=\"addParkSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>\n  </ul>\n  <button id=\"createParkMatches\" type=\"submit\">Submit</button>\n</div>\n", H);return T.render.apply(T, arguments); };
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createCourt\">");t.b("\n" + i);t.b("  <form>");t.b("\n" + i);t.b("    <select id=\"addNewParkSport\" placeholder=\"Add New Sport\">");t.b("\n" + i);t.b("      <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("      <option value=\"Football\">Footballl</option>");t.b("\n" + i);t.b("      <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("      <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("      <option value=\"Pickleball\">Pickleball</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("    <label>Optional</label>");t.b("\n" + i);t.b("    <input type=\"text\" id=\"addOtherParkSport\" placeholder=\"Add other sport\">");t.b("\n" + i);t.b("    <input type=\"text\" id=\"addNumCourts\" placeholder=\"Add number of courts\">");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button type=\"submit\" id=\"createCourtButton\">Create Court</button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createCourt\">\n  <form>\n    <select id=\"addNewParkSport\" placeholder=\"Add New Sport\">\n      <option value=\"Tennis\">Tennis</option>\n      <option value=\"Football\">Footballl</option>\n      <option value=\"Soccer\">Soccer</option>\n      <option value=\"Basketball\">Basketball</option>\n      <option value=\"Pickleball\">Pickleball</option>\n    </select>\n    <label>Optional</label>\n    <input type=\"text\" id=\"addOtherParkSport\" placeholder=\"Add other sport\">\n    <input type=\"text\" id=\"addNumCourts\" placeholder=\"Add number of courts\">\n  </form>\n  <button type=\"submit\" id=\"createCourtButton\">Create Court</button>\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ }
 /******/ ]);
