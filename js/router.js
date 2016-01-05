@@ -10,7 +10,7 @@ var login = require('./templates/login.html');
 var signup = require('./templates/signup.html');
 var main = require('./templates/main.html');
 var parkList = require('./templates/parkList.html');
-var match = require('./templates/match.html');
+var matchPage = require('./templates/match.html');
 var updatematch = require('./templates/updatematch.html');
 var userUpdate = require('./templates/userUpdate.html');
 var history = require('./templates/history.html');
@@ -710,12 +710,12 @@ router.on('route:match', function(id, username) {
     matchDetail.fetch({
       url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
       success: function(resp) {
-        var park = resp.toJSON().park_name; 
+        var park = resp.toJSON().park_name;
         var creator = resp.toJSON().creator;
         var confirm = resp.toJSON().is_confirmed;
         var completed = resp.toJSON().is_completed;
         var open = resp.toJSON().is_open;
-        var html = match({"data": resp.toJSON()});
+        var html = matchPage({"data": resp.toJSON()});
         console.log("success", resp);
         var matchTemplate = $("#matchTemplate").text();
         var matchHTML = Mustache.render(matchTemplate, 'data');
