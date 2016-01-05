@@ -2,37 +2,49 @@
   width: 90%;
   display: inline-block;
   margin: 5%; }
-  #parksContainer #parks {
+  #parksContainer .parks {
     padding: 0;
     float: left;
-    height: auto;
+    height: 20em;
     width: 100%;
     background-color: white;
     list-style: none;
     border-bottom: 1px solid #4f1e47; }
-    #parksContainer #parks li {
+    #parksContainer .parks li {
       display: inline-block;
-      width: 20%; }
-    #parksContainer #parks .parkName a {
+      width: 20%;
+      margin-bottom: 5px; }
+    #parksContainer .parks a {
       text-decoration: none;
       font-size: 1em;
       color: black; }
-    #parksContainer #parks #parkPic {
-      width: 10%; }
-    #parksContainer #parks #parkDet a {
-      text-decoration: none;
-      font-size: 1em;
-      color: black; }
-    #parksContainer #parks #available {
-      padding: 0;
-      list-style: none;
-      text-align: center; }
-      #parksContainer #parks #available img {
-        width: 100%; }
-    #parksContainer #parks #parkMatch {
+    #parksContainer .parks #googleMaps {
+      float: left;
       position: relative;
-      left: 15%;
-      bottom: 2.5em;
+      top: .5em;
+      left: 10%; }
+    #parksContainer .parks .parksImage {
+      position: relative;
+      left: 88%;
+      bottom: 12.3em; }
+    #parksContainer .parks #parkPic {
+      width: 10%; }
+    #parksContainer .parks #parkDet {
+      position: relative;
+      left: 8%;
+      bottom: 14em; }
+      #parksContainer .parks #parkDet a {
+        text-decoration: none;
+        font-size: 1em;
+        color: black; }
+    #parksContainer .parks .parkAddress {
+      position: relative;
+      right: 22.2%;
+      bottom: 8.5em; }
+    #parksContainer .parks .parkMatch {
+      position: relative;
+      left: 8%;
+      bottom: 10.5em;
       width: 10%;
       color: white;
       background-color: #ef3122;
@@ -40,9 +52,21 @@
       border: none;
       outline: none;
       box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);
-      text-align: center; }
-      #parksContainer #parks #parkMatch a {
-        color: white;
-        text-decoration: none; }
+      text-align: center;
+      padding: 1%;
+      font-size: 18px; }
+    #parksContainer .parks a {
+      color: white;
+      text-decoration: none; }
+
+.availableSports {
+  list-style-type: none; }
+  .availableSports .sportPic {
+    width: 8%;
+    float: left;
+    position: relative;
+    left: 39%;
+    margin-right: 15px;
+    bottom: 9em; }
 
 /*# sourceMappingURL=parks.css.map */
