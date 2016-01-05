@@ -26,29 +26,21 @@
         </li>
       {{/court_set}}
     </ul>
-            <a id="createCourtAnchor" href="/parkCreatePage/{{id}}">Add Sport</a>
-        <a id="parkMatch" type="submit" href="/parkCreateMatch/{{id}}">Create Match</a>
+    <a id="createCourtAnchor" href="/parkCreatePage/{{id}}">Add Sport</a>
+    <a id="parkMatch" type="submit" href="/parkCreateMatch/{{id}}">Create Match</a>
   </div>
-    <ul class="parkMatches">
-      {{#match_set}}
-        {{#is_open}}
-          <li>
-            <img class="sportImage"src="{{img_url}}">
-          </li>
-          <li class="match">
-            <a href="/profile/{{creator}}" class="creatorName"> {{creator_name}} </a>
-          </li>
-          <li class="match">
-            {{sport}}
-          </li>
-          <li class="match">
-            Date: {{date}}
-          </li>
-          <li class="match">
-            Time: {{time}}
-          </li>
-        {{/is_open}}
-      {{/match_set}}
-    </ul>
+     {{#match_set}}
+      {{#is_open}}
+       <ul class="parkMatches">
+          <li id="sportImage"><a href="/match/{{id}}"><img src="{{img_url}}"></a></br></li>
+          <li class="description"> <a href="/match/{{id}}">{{date}}</a>
+          {{time}}</br>
+          <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
+          </progress></li>
+          <li class="matchSubmit"><a type="sumbit" href="/match/{{id}}"> Join </a></li>
+          <li class="players">{{#players}}<a href="/profile/{{id}}"><img class="smallImg"src="{{small_img}}"></a>{{/players}}
+        </ul>
+      {{/is_open}}
+    {{/match_set}}
   {{/data}}
 </div>

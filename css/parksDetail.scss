@@ -60,4 +60,49 @@
     bottom: 5em;
     left: 75.4%;
   }
+  .parkMatches {
+    background-color: #fff;
+    width: 70%;
+    margin: 1% 16%;
+    padding: 0;
+    height: 15em;
+      #sportImage {
+        img {
+        width: 80%;
+        margin: 5%;
+      }
+    }
+    .description {
+      position: relative;
+      bottom: 11em;
+      right: 3%;
+    }
+    #skillProgress {
+      position: relative;
+      bottom: 8em;
+      right: 24.5%;
+    }
+    .players {
+      position: relative;
+      right: 55%;
+      bottom: 2em;
+    }
+    .matchSubmit {
+      position: relative;
+      bottom: 6em;
+      padding: 10px;
+      background-color: #1e8880;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);
+      outline: none;
+      a {
+      text-decoration: none;
+      color: white
+      }
+    }
+  }
 }
+
+
