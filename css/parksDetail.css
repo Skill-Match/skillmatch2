@@ -17,15 +17,18 @@
 #parksPage .parkName {
   position: relative;
   bottom: 7em;
-  left: 4%; }
+  left: 6%; }
 #parksPage .parkAddress {
   position: relative;
-  bottom: 5.5em;
-  right: 54.5%; }
+  bottom: 4.5em;
+  right: 34.5%; }
 #parksPage .yelp {
   position: relative;
-  bottom: 5.5em;
-  left: 4%; }
+  bottom: 4.5em;
+  left: 6%; }
+#parksPage #sportIcon {
+  position: relative;
+  right: 13em; }
 #parksPage #parkMatch {
   padding: 10px;
   background-color: #1e8880;
@@ -69,11 +72,12 @@
     right: 24.5%; }
   #parksPage .parkMatches .players {
     position: relative;
-    right: 55%;
+    right: 50%;
     bottom: 2em; }
   #parksPage .parkMatches .matchSubmit {
     position: relative;
     bottom: 6em;
+    right: 0%;
     padding: 10px;
     background-color: #1e8880;
     color: white;
