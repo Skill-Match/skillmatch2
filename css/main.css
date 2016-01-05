@@ -37,15 +37,12 @@
     background-color: #e3e3e3; }
   #upComing #sportImage {
     display: inline-block;
-    width: 15%;
+    width: 23%;
     margin: 1% 2%;
     position: relative;
     top: 2em; }
     #upComing #sportImage img {
-      width: 140%;
-      height: 14em;
-      position: relative;
-      bottom: 1em; }
+      width: 100%; }
   #upComing a {
     text-decoration: none;
     color: black; }
@@ -63,9 +60,10 @@
     list-style-type: none;
     padding-bottom: 5px;
     width: 20%; }
-  #upComing h3 {
+  #upComing h2 {
     display: inline-block;
-    float: left; }
+    float: left;
+    margin-bottom: 0; }
   #upComing .description {
     display: inline-block;
     font-size: 1em;
@@ -73,7 +71,6 @@
     width: 40%;
     margin: 1% 2%;
     position: relative;
-    left: 3em;
     bottom: 7em; }
   #upComing #skillProgress {
     position: relative;
@@ -81,17 +78,24 @@
     bottom: 5em;
     display: inline-block; }
     #upComing #skillProgress .skill {
-      width: 150%; }
-  #upComing #players {
+      width: 100%; }
+  #upComing .players {
     display: inline-block;
     width: 30%;
-    margin-left: 5%; }
-    #upComing #players img {
+    margin-left: 5%;
+    position: relative;
+    left: 25%;
+    bottom: 5.5em; }
+    #upComing .players img {
       border-radius: 100%;
-      width: 30%;
+      width: 30%; }
+    #upComing .players .name {
       position: relative;
-      left: 80%;
-      bottom: 6em; }
+      right: 20%;
+      top: 1em; }
+    #upComing .players .empty {
+      opacity: 0.3;
+      border: 2px dashed black; }
   #upComing #areaSearch {
     display: inline-block; }
   #upComing #areaInput {

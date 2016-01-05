@@ -25,6 +25,21 @@
           <img id="sportIcon" src="{{small_sport_img}}"/>
         </li>
       {{/court_set}}
+      <li><button class="add">add court</button><dialog open class='hidden'>
+  <form class="addSport">
+    <select class="addNewParkSport" placeholder="Add New Sport">
+      <option value="Tennis">Tennis</option>
+      <option value="Football">Footballl</option>
+      <option value="Soccer">Soccer</option>
+      <option value="Basketball">Basketball</option>
+      <option value="Pickleball">Pickleball</option>
+    </select>
+    <label>Optional</label>
+    <input type="text" class="addOtherParkSport" placeholder="Add other sport">
+    <input type="text" class="addNumCourts" placeholder="Number of courts">
+  </form>
+  <button type="submit" class="createCourtButton">Create Court</button>
+</dialog></li>
     </ul>
     <a id="createCourtAnchor" href="/parkCreatePage/{{id}}">Add Sport</a>
     <a id="parkMatch" type="submit" href="/parkCreateMatch/{{id}}">Create Match</a>

@@ -42,15 +42,12 @@
   }
   #sportImage {
     display: inline-block;
-    width: 15%;
+    width: 23%;
     margin: 1% 2%;
     position: relative;
     top: 2em;
     img{
-    width: 140%;
-    height: 14em;
-    position: relative;
-    bottom: 1em;
+    width: 100%;
     }
   }
   a {
@@ -75,9 +72,10 @@
     padding-bottom: 5px;
     width: 20%;
   }
-  h3 {
+  h2 {
     display: inline-block;
     float: left;
+    margin-bottom: 0
   }
   .description {
     display: inline-block;
@@ -86,7 +84,6 @@
     width: 40%;
     margin: 1% 2%;
     position: relative;
-    left: 3em;
     bottom: 7em;
   }
   #skillProgress {
@@ -95,19 +92,29 @@
     bottom: 5em;
     display: inline-block;
     .skill{
-      width: 150%;
+      width: 100%;
     }
   }
-  #players{
+  .players{
     display: inline-block;
     width: 30%;
     margin-left: 5%;
+    position: relative;
+    left: 25%;
+    bottom: 5.5em;
     img{
     border-radius: 100%;
     width: 30%;
-    position: relative;
-    left: 80%;
-    bottom: 6em;
+    }
+    .name{
+      position: relative;
+      right: 20%;
+      top: 1em;
+    }
+    .empty{
+      opacity: 0.3;
+      border: 2px dashed black;
+
     }
   }
   #areaSearch {
