@@ -156,14 +156,14 @@ $('#loginSubmit').on('click', function(e){
 
   function error() {
   };
-
+  $('#areaInput').val("Locating…");
   navigator.geolocation.getCurrentPosition(success, error);
 }
 
-  function matchesAround(zip) {
+  function matchesAround() {
     var match = new Match();
     match.fetch({
-      url: 'http://skill-match.herokuapp.com/api/matches/?zip='+zip,
+      url: 'http://skill-match.herokuapp.com/api/matches/?zip='+$('#areaInput').val(),
  success: function(resp) {
     var html = main({'data': resp.toJSON().results});
     var mainTemplate = $("#mainTemplate").text();
@@ -198,6 +198,7 @@ $('#loginSubmit').on('click', function(e){
    console.log("nope")
  }
 });
+$('#areaInput').val("Locating…");
   };
 
 
@@ -333,7 +334,6 @@ $('#loginSubmit').on('click', function(e){
     var mainHTML = Mustache.render(mainTemplate, 'data');
     var next = resp.toJSON().next;
     var previous = resp.toJSON().previous;
-    var zip = $("#areaInput").val();
     $("#upComing").html(mainHTML);
     $("#container").html(html);
    console.log("success: ",resp)
@@ -713,6 +713,7 @@ router.on('route:match', function(id, username) {
         var park = resp.toJSON().park_name; 
         var creator = resp.toJSON().creator;
         var confirm = resp.toJSON().is_confirmed;
+        var completed = resp.toJSON().is_completed;
         var open = resp.toJSON().is_open;
         var html = match({"data": resp.toJSON()});
         console.log("success", resp);
@@ -733,13 +734,15 @@ router.on('route:match', function(id, username) {
           $("#update").show();
           $("#cancel").show();
         };
-        if(open == true) {
-          $("#confirm").hide();
-          $("#decline").hide();
-        }
         if(open == false) {
           $("#confirm").show();
           $("#decline").show();
+          $("#update").hide();
+        $("#cancel").hide();
+        }
+        if(completed == true){
+          $("#confirm").hide();
+          $("#decline").hide();
         }
         if(confirm == true){
           $("#confirm").hide();
