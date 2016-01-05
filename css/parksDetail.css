@@ -7,12 +7,48 @@
   font-size: 20px;
   border-bottom: solid black 1px;
   width: 100%; }
-  #parksPage #parksDetail #googleMaps2 {
-    position: relative;
-    top: .5em;
-    right: 1%; }
+  #parksPage #parksDetail ul {
+    width: 100%;
+    padding: 0; }
+#parksPage #googleMaps2 {
+  position: relative;
+  top: .5em;
+  left: 7%; }
 #parksPage .parkName {
   position: relative;
-  bottom: 6em; }
+  bottom: 7em;
+  left: 4%; }
+#parksPage .parkAddress {
+  position: relative;
+  bottom: 5.5em;
+  right: 54.5%; }
+#parksPage .yelp {
+  position: relative;
+  bottom: 5.5em;
+  left: 4%; }
+#parksPage #parkMatch {
+  padding: 10px;
+  background-color: #1e8880;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  bottom: 8em;
+  left: 65%; }
+#parksPage #createCourtAnchor {
+  padding: 10px;
+  background-color: #1e8880;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  bottom: 5em;
+  left: 75.4%; }
 
 /*# sourceMappingURL=parksDetail.css.map */
