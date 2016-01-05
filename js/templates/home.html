@@ -2,15 +2,13 @@
 
 <div id="userprofile">
 {{#user}}
-<a href="/userUpdate/{{id}}">Update Profile</a>
   <ul>
-
-    <li class="editPic"><img id="homeProfileImg" src="{{profile.pic_url}}"></li>
-    <li class="edit" class="mainDescription"> Username: {{username}} </li>
-    <li class="mainDescription"> Age: {{profile.age}} </li>
-    <li class="mainDescription"> Gender: {{profile.gender}}</li>
-    <li class="mainDescription"> Sportsmanship: <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
-    <li class="mainDescription">{{#skill_set}} {{sport}} Skill:
+    <li class="homeProfileImg" ><img src="{{profile.pic_url}}"></li>
+    <li class="userDes"> Username: {{username}}<br>
+    Age: {{profile.age}}<br>
+    Gender: {{profile.gender}}<br>
+    Sportsmanship: <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress><br>
+    {{#skill_set}} {{sport}} Skill:
      <progress class="skill" value="{{skill}}" max="100"></progress>
      {{/skill_set}}
      </li>
@@ -18,57 +16,60 @@
   <button id="createMatch" type="submit">Create Match</button>
 {{/user}}
 </div>
-
-<div id="yourMatches">
-
+<div id="youMatches">
+<div id="pending">
 {{#data}}
 {{#is_confirmed}}
-<h2 class="matchTitle"> Upcoming Match </h2>
-<a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a>
+<h2>Pending</h2>
 <ul>
+  <li><a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a></li>
   <a href="/match/{{id}}" id="dateHome"><li> {{date}}</li></a>
-  <li> {{time}}</li>
-  <li> {{sport}}</li>
-  <li> {{park_name}} </li>
-  </br>
+  <li> {{time}}</br>
+  {{sport}}</br>
+  {{park_name}} </li>
   <li> Created By: <a id="profileName" href="/profile/{{creator}}"> {{creator_name}} </a> </li>
   <li>  <a id="matchDetail" type="sumbit" href="/match/{{id}}"> Details </a> </li>
    <li id="skillProgressHome"> Skill Level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
+   <li class="playing">{{#players}}<img src="{{small_img}}"><a href="/profile/{{id}}" class="name">{{username}}</a>{{/players}}</li>
 </ul>
 {{/is_confirmed}}
 {{/data}}
+</div>
+<div id="upcoming">
 {{#data}}
 {{#is_open}}
-<h2 class="matchTitle"> Pending Match </h2>
-<a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a>
+<h2>Upcoming</h2>
 <ul>
+  <li><a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a></li>
   <a href="/match/{{id}}" id="dateHome"><li> {{date}}</li></a>
-  <li> {{time}}</li>
-  <li> {{sport}}</li>
-  <li> {{park_name}} </li>
-  </br>
+  <li> {{time}}</br>
+  {{sport}}</br>
+  {{park_name}} </li>
   <li> Created By: <a id="profileName" href="/profile/{{creator}}"> {{creator_name}} </a> </li>
   <li>  <a id="matchDetail" type="sumbit" href="/match/{{id}}"> Details </a> </li>
    <li id="skillProgressHome"> Skill Level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
+   <li class="playing">{{#players}}<img src="{{small_img}}"><a href="/profile/{{id}}" class="name">{{username}}</a>{{/players}}</li>
 </ul>
 {{/is_open}}
 {{/data}}
+</div>
+<div id="history">
 {{#data}}
 {{#is_completed}}
-<h2 class="matchTitle"> Match History </h2>
-<a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a>
+<h2>History</h2>
 <ul>
+  <li><a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a></li>
   <a href="/match/{{id}}" id="dateHome"><li> {{date}}</li></a>
-  <li> {{time}}</li>
-  <li> {{sport}}</li>
-  <li> {{park_name}} </li>
-  </br>
+  <li> {{time}}</br>
+       {{sport}}</br>
+       {{park_name}}</li>
   <li> Created By: <a id="profileName" href="/profile/{{creator}}"> {{creator_name}} </a> </li>
   <li>  <a id="matchDetail" type="sumbit" href="/match/{{id}}"> Details </a> </li>
    <li id="skillProgressHome"> Skill Level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
+   <li class="playing">{{#players}}<img src="{{small_img}}"><a href="/profile/{{id}}" class="name">{{username}}</a>{{/players}}</li>
    <li><a id="goToFeedback" href="/feedback/{{id}}"> Feedback </a></li>
 </ul>
 {{/is_completed}}
 {{/data}}
-
+</div>
 </div>

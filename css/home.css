@@ -2,26 +2,29 @@
   background-color: #e3e3e3;
   height: 250px;
   font-size: 20px;
-  border-bottom: solid black 1px; }
-  #userprofile #homeProfileIm4rg {
-    margin: 20px 0px;
-    height: 200px;
-    width: 200px; }
+  border-bottom: solid black 1px;
+  width: 100%; }
+  #userprofile ul {
+    width: 100%;
+    padding: 0; }
+  #userprofile li {
+    display: inline-block;
+    width: 30%; }
+  #userprofile .homeProfileImg {
+    width: 10%;
+    margin-right: 5%; }
+    #userprofile .homeProfileImg img {
+      height: 200px;
+      width: 200px; }
+  #userprofile .userDes {
+    position: relative;
+    bottom: 2em;
+    left: 5%; }
   #userprofile #logout {
     text-decoration: underline;
     font-size: 12px;
     position: absolute;
     right: 2em; }
-  #userprofile img {
-    height: 200px;
-    width: 200px; }
-  #userprofile .mainDescription {
-    position: relative;
-    left: 12em;
-    bottom: 10em;
-    margin-bottom: 5px; }
-  #userprofile li {
-    list-style-type: none; }
   #userprofile #createMatch {
     padding: 15px;
     background-color: #1e8880;
@@ -30,57 +33,78 @@
     border-radius: 20px;
     box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
     outline: none;
-    position: absolute;
+    position: relative;
     left: 35em;
-    top: 10em; }
+    bottom: 7em; }
   #userprofile #createMatch:active {
     box-shadow: none; }
 
-#yourMatches a {
-  color: black; }
-#yourMatches ul {
-  border-bottom: 1px solid #4f1e47;
-  margin-left: 20px;
-  width: 1200px;
-  height: 230px; }
-#yourMatches ul:nth-last-child(1) {
-  border-bottom: none;
-  padding-bottom: 20px; }
-#yourMatches li {
-  list-style-type: none;
-  padding-bottom: 5px; }
-#yourMatches #profileName {
-  text-decoration: none;
-  color: #00bfff; }
-#yourMatches #profileName:hover {
-  text-decoration: underline; }
-#yourMatches #skillProgressHome {
-  position: relative;
-  left: 20em;
-  bottom: 5em; }
-#yourMatches .skill {
-  width: 300px; }
-#yourMatches #sportImage {
-  float: left;
-  height: 200px;
-  width: 200px;
-  margin-left: 25px;
-  margin-right: 50px; }
-#yourMatches #dateHome {
-  text-decoration: none; }
-#yourMatches #dateHome:hover {
-  text-decoration: underline; }
-#yourMatches #goToFeedback {
-  position: relative;
-  left: 825px;
-  bottom: 100px;
-  padding: 15px 30px;
-  background-color: #1e8880;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-  outline: none; }
+#youMatches {
+  width: 90%; }
+  #youMatches ul {
+    width: 100%;
+    padding: 0;
+    margin: 3% 5%;
+    height: 13.5em;
+    background-color: white; }
+  #youMatches h2 {
+    display: none;
+    margin-left: 5%; }
+  #youMatches #pending h2:first-child {
+    display: inherit; }
+  #youMatches #upcoming h2:first-child {
+    display: inherit; }
+  #youMatches #history h2:first-child {
+    display: inherit; }
+  #youMatches a {
+    color: black; }
+  #youMatches ul:nth-last-child(1) {
+    border-bottom: none;
+    padding-bottom: 20px; }
+  #youMatches li {
+    list-style-type: none;
+    padding-bottom: 5px; }
+  #youMatches #profileName {
+    text-decoration: none;
+    color: #00bfff; }
+  #youMatches .playing img {
+    position: relative;
+    bottom: 2.5em; }
+  #youMatches .playing .name {
+    position: relative;
+    right: 2.5em;
+    bottom: 1.5em;
+    text-decoration: none; }
+  #youMatches #profileName:hover {
+    text-decoration: underline; }
+  #youMatches #skillProgressHome {
+    display: inline-block;
+    position: relative;
+    left: 10em;
+    bottom: 5em;
+    width: 10%; }
+  #youMatches .skill {
+    width: 300px; }
+  #youMatches #sportImage {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: .5em 2em; }
+  #youMatches #dateHome {
+    text-decoration: none; }
+  #youMatches #dateHome:hover {
+    text-decoration: underline; }
+  #youMatches #goToFeedback {
+    position: relative;
+    left: 47em;
+    bottom: 10em;
+    padding: 15px 10px;
+    background-color: #1e8880;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none;
+    text-decoration: none; }
 
 /*# sourceMappingURL=home.css.map */

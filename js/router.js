@@ -691,10 +691,26 @@ var Matches = Backbone.Collection.extend({
 // Match Detail Page
 
 router.on('route:match', function(id, username) {
+//   function geoFindMe() {
+//   function success(position) {
+//     var latitude  = position.coords.latitude;
+//     var longitude = position.coords.longitude;
+//     var park = $('#parkName').val()
+//     console.log('latitude '+latitude);
+//     console.log('longitude '+longitude);
+//     directions.setAttribute('src', 'https://www.google.com/maps/embed/v1/directions?origin='+latitude+" "+longitude+'&destination='+park+'&key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ')
+//   };
+
+//   function error() {
+//   };
+
+//   navigator.geolocation.getCurrentPosition(success, error);
+// }
     var matchDetail = new matchContainer();
     matchDetail.fetch({
       url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
       success: function(resp) {
+        var park = resp.toJSON().park_name; 
         var creator = resp.toJSON().creator;
         var confirm = resp.toJSON().is_confirmed;
         var open = resp.toJSON().is_open;
@@ -737,6 +753,9 @@ router.on('route:match', function(id, username) {
         $('#homeBtn').on('click', function(){
           router.navigate('/home/' + player, {trigger: true});
         })
+        // $('#findMatch').on('click', function(){
+        //   geoFindMe()
+        // })
         $('#cancel').on('click', function(){
           var matchDetail = new matchContainer({id:id});
         matchDetail.destroy({
