@@ -82,23 +82,24 @@
   height: 15em; }
   #parksPage .parkMatches #sportImage img {
     width: 80%;
-    margin: 5%; }
+    margin: 5%;
+    position: relative;
+    top: 1.5em; }
   #parksPage .parkMatches .description {
     position: relative;
-    bottom: 11em;
+    bottom: 7em;
     right: 3%; }
   #parksPage .parkMatches #skillProgress {
     position: relative;
-    bottom: 8em;
-    right: 24.5%; }
+    bottom: 4em;
+    right: 23%; }
   #parksPage .parkMatches .players {
     position: relative;
     right: 50%;
     bottom: 2em; }
   #parksPage .parkMatches .matchSubmit {
     position: relative;
-    bottom: 6em;
-    right: 0%;
+    bottom: 4em;
     padding: 10px;
     background-color: #1e8880;
     color: white;
@@ -109,5 +110,8 @@
     #parksPage .parkMatches .matchSubmit a {
       text-decoration: none;
       color: white; }
+  #parksPage .parkMatches .smallImg {
+    position: relative;
+    top: 2em; }
 
 /*# sourceMappingURL=parksDetail.css.map */

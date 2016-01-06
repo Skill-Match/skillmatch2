@@ -99,17 +99,19 @@
         img {
         width: 80%;
         margin: 5%;
+        position: relative;
+        top: 1.5em;
       }
     }
     .description {
       position: relative;
-      bottom: 11em;
+      bottom: 7em;
       right: 3%;
     }
     #skillProgress {
       position: relative;
-      bottom: 8em;
-      right: 24.5%;
+      bottom: 4em;
+      right: 23%;
     }
     .players {
       position: relative;
@@ -118,8 +120,7 @@
     }
     .matchSubmit {
       position: relative;
-      bottom: 6em;
-      right: 0%;
+      bottom: 4em;
       padding: 10px;
       background-color: #1e8880;
       color: white;
@@ -131,6 +132,10 @@
       text-decoration: none;
       color: white
       }
+    }
+    .smallImg {
+      position: relative;
+      top: 2em;
     }
   }
 }
