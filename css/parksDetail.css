@@ -1,6 +1,9 @@
 #parksPage * {
   display: inline-block;
   margin: 0; }
+#parksPage h2 {
+  position: relative;
+  left: 17%; }
 #parksPage .hidden {
   display: none; }
 #parksPage dialog {
