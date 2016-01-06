@@ -19,7 +19,7 @@
 <div id="youMatches">
 <div id="pending">
 {{#data}}
-{{#is_confirmed}}
+{{^is_confirmed}}
 <h2>Pending</h2>
 <ul>
   <li><a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a></li>

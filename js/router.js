@@ -938,7 +938,9 @@ router.on('route:parkCreateMatch', function(id, name) {
       $("#parkMatchPage").html(createParkHTML);
       $("#container").html(html);
       console.log(html);
-
+      $('#skillInfo').hover(function(){
+      $('#hiddenMessage').toggleClass();
+    })
       console.log('success',resp);
     $("#createParkMatches").on('click', function(e) {
       e.preventDefault();

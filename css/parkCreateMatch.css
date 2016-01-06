@@ -15,7 +15,8 @@
   #parkMatchPage ul {
     list-style-type: none; }
   #parkMatchPage li {
-    margin-top: 10px; }
+    margin-top: 10px;
+    display: inline-block; }
   #parkMatchPage input {
     font-size: 18px;
     margin: 10px 5px 5px;
@@ -39,8 +40,14 @@
   #parkMatchPage label {
     position: relative;
     bottom: 2em; }
+  #parkMatchPage .hidden {
+    display: none; }
+  #parkMatchPage dialog {
+    width: 30%; }
+  #parkMatchPage #hiddenMessage {
+    z-index: 2;
+    margin-left: 3%; }
   #parkMatchPage #createParkMatches {
-    margin-top: 15px;
     padding: 15px;
     background-color: #1e8880;
     color: white;

@@ -50,6 +50,15 @@ body {
   bottom: 1.5em;
   color: white;
 }
+
+#signUp:hover {
+  text-decoration: underline;
+}
+
+#logout:hover {
+  text-decoration: underline;
+}
+
 input {
   font-size: 15px;
   margin: 1em .5em .5em;
