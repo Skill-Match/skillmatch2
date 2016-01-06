@@ -9,6 +9,20 @@
     dialog{
       width: 60%;
       margin: 0 20%;
+      z-index: 2;
+      .close{
+        text-decoration: none;
+        border-radius: 100%;
+        background-color: transparent;
+        padding: .0em .3em .1em 0.3em;
+        outline: none;
+        text-align: center;
+        position: relative;
+        left: 80%;
+        bottom: 3.5em;
+        color: black;
+        box-shadow: none;
+      }
     }
   #parksDetail {
     background-color: #e3e3e3;

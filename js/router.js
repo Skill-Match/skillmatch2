@@ -1438,12 +1438,20 @@ router.on('route:parksDetail', function(id, name){
       function error(err) {
       console.log("error", err);
     }
-    $('dialog').html("Adding your sport...");
     navigator.geolocation.getCurrentPosition(success, error);
   }
 
     $(".createCourtButton").on('click', function() {
       geoFindMe();
+    })
+    $('.close').on('click', function(){
+      $('dialog').toggleClass();
+      $(".createCourtButton").on('click', function() {
+      geoFindMe();
+    })
+      $('.close').on('click', function(){
+      $('dialog').toggleClass();
+    })
     })
       })
     },
