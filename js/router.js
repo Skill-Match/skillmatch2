@@ -373,7 +373,6 @@ $('#areaInput').val("Locating…");
 // Creating the router for the sign up
 var router = new Router();
 router.on('route:signup', function(){
-
   var html = signup;
         $("#container").html(html);
 var User = Backbone.Model.extend({
@@ -492,14 +491,13 @@ router.on('route:home', function(username, id) {
       $("#userprofile").html(userhtml);
       console.log('success', resp.toJSON());
 
-       $("#logout").on('click', function() {
-    console.log("COOKIETESTTEST!")
-    Cookie.remove('token');
-    Cookie.remove('userName');
-    Cookie.remove('uid');
-    router.navigate('/?home=home');
-    location.reload();
-  });
+    $("#logout").on('click', function() {
+      Cookie.remove('token');
+      Cookie.remove('userName');
+      Cookie.remove('uid');
+      router.navigate('/?home=home');
+      location.reload();
+    });
 
       $('#createMatch').on('click', function(){
          function success(position) {
@@ -594,6 +592,9 @@ var userProfile = new Profiles(id);
 // Player Profile page
 
 router.on('route:profile', function(creator, username) {
+  if(Cookie.get('uid')==creator) {
+    router.navigate('/home/' + Cookie.get('userName'), {trigger: true})
+  }
   var profileContainer = Backbone.Model.extend({
     initialize: function() {
     },
@@ -715,8 +716,8 @@ router.on('route:match', function(id, username) {
         if (Cookie.get('uid') == creator) {
           $("#join").hide();
           $("#leaveMatch").hide();
-          $("#confirm").show();
-          $("#decline").show();
+          $("#confirm").hide();
+          $("#decline").hide();
           $("#update").show();
           $("#cancel").show();
         };
@@ -1350,6 +1351,9 @@ var Park = Backbone.Model.extend({
       $("#parksContainer").html(parkHTML);
       $("#container").html(html);
       console.log("success", resp);
+        $(".yelpReview").on('click', function() {
+         window.open($(this).attr('href'));
+  })
        $('#nextPark').on('click', function(){
     nextPage(next)
     window.scrollTo(0, 450);
@@ -1396,6 +1400,9 @@ router.on('route:parksDetail', function(id, name){
       $("#parksDetail").html(parksDetailHTML);
       $("#container").html(html);
       console.log("success", resp);
+          $("#yelpReview").on('click', function() {
+         window.open($("#yelpReview").attr('href'));
+       });
       $('#createCourt').on('click', function(){
         $('dialog').toggleClass();
         var parkCreate = Backbone.Model.extend({
