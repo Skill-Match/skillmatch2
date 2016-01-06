@@ -1344,10 +1344,6 @@ function zipCode(zip) {
    }
   });
 }
-$("#searchPark").on('click', function(e) {
-        e.preventDefault();
-        searchPark();
-      });
   function searchPark() {
     var search = new Park()
     search.fetch({
@@ -1381,6 +1377,10 @@ $("#searchPark").on('click', function(e) {
     }
   })
 }
+$("#searchPark").on('click', function(e) {
+        e.preventDefault();
+        searchPark();
+      });
 
 var Park = Backbone.Model.extend({
     initialize: function () {
