@@ -5,7 +5,7 @@
   <ul class="parks">
     <li>
       <iframe
-      id="googleMaps"
+      class="googleMaps"
       width="300"
       height="300"
       frameborder="0" style="border:0"
@@ -13,10 +13,9 @@
         &q={{name}}+{{display_address3}}&zoom=12">
       </iframe>
     </li>
-    <li id="parkPic"><img class="parksImage"src="{{image_url}}"></li>
-    <li id="parkDet"><a href="/parksDetail/{{id}}"><div id="parkName">{{name}}</div></a>{{rating}}/5</br><a class="yelpReview" href="{{url}}"> Yelp Park Review</a></li>
-    <li class="parkAddress">{{display_address1}} </br> {{display_address3}}</br>{{distance}} Miles</li>
+    <li class="parkPic"><img class="parksImage"src="{{image_url}}"></br>{{display_address1}}</br> {{display_address3}}</br>{{distance}} Miles</li>
     <li class="parkMatch"><a type="submit" href="/parkCreateMatch/{{id}}">Create Match</a></li>
+    <li class="parkDet"><div class="parkName"><a href="/parksDetail/{{id}}">{{name}}</a></div></br><img src="{{rating_img_url}}"></br><a class="yelpReview" href="{{url}}"> Yelp Park Review</a></li>
     <li class="availableSports">
     {{#court_set}}
     <img class="sportPic"src="{{img_url}}">

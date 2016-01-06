@@ -1225,14 +1225,14 @@ function geoFindMe() {
 
   function error() {
   };
-
+    $('#zipcode').val("Locating…");
   navigator.geolocation.getCurrentPosition(success, error);
 }
 
 function zipCode(zip) {
     var nextPages = new Park()
     nextPages.fetch({
-       url: 'http://skill-match.herokuapp.com/api/parks/?zip='+zip,
+       url: 'http://skill-match.herokuapp.com/api/parks/?zip='+$('#zipcode').val(),
  success: function(resp) {
       var html = parks({'data': resp.toJSON().results});
       var parkTemplate = $("#parkTemplate").text();
@@ -1259,6 +1259,8 @@ function zipCode(zip) {
        console.log("nope")
      }
     });
+    $('#zipcode').val("Locating…");
+  navigator.geolocation.getCurrentPosition(success, error);
   }
 
 
