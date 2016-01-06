@@ -1396,7 +1396,7 @@ router.on('route:parksDetail', function(id, name){
       $("#parksDetail").html(parksDetailHTML);
       $("#container").html(html);
       console.log("success", resp);
-      $('.add').on('click', function(){
+      $('#createCourt').on('click', function(){
         $('dialog').toggleClass();
         var parkCreate = Backbone.Model.extend({
     initialize: function(){
@@ -1438,6 +1438,7 @@ router.on('route:parksDetail', function(id, name){
       function error(err) {
       console.log("error", err);
     }
+    $('dialog').html("Adding your sport...");
     navigator.geolocation.getCurrentPosition(success, error);
   }
 
