@@ -92,7 +92,7 @@
     #upComing .players .name {
       position: relative;
       right: 20%;
-      top: 1em; }
+      top: .5em; }
     #upComing .players .empty {
       opacity: 0.3;
       border: 2px dashed black; }
