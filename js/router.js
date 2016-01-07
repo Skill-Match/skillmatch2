@@ -1194,6 +1194,10 @@ router.on('route:parks', function(id, name) {
             e.preventDefault();
             window.open($(this).attr('href'));
           });
+           $('#zip').on('click', function(e){
+        e.preventDefault();
+        zipCode()
+      });
      },
      error: function(err) {
        console.log("nope")
@@ -1238,6 +1242,10 @@ router.on('route:parks', function(id, name) {
           e.preventDefault();
           window.open($(this).attr('href'));
         });
+         $('#zip').on('click', function(e){
+        e.preventDefault();
+        zipCode()
+      });
       },
      error: function(err) {
        console.log("nope")
@@ -1278,6 +1286,10 @@ router.on('route:parks', function(id, name) {
         e.preventDefault();
         window.open($(this).attr('href'));
       });
+       $('#zip').on('click', function(e){
+        e.preventDefault();
+        zipCode()
+      });
      },
      error: function(err) {
        console.log("nope")
@@ -1317,6 +1329,10 @@ router.on('route:parks', function(id, name) {
           e.preventDefault();
           window.open($(this).attr('href'));
         });
+         $('#zip').on('click', function(e){
+        e.preventDefault();
+        zipCode()
+      });
       },
       error: function(err) {
         console.log("nope")
@@ -1353,6 +1369,10 @@ router.on('route:parks', function(id, name) {
           e.preventDefault();
           window.open($(this).attr('href'));
         });
+         $('#zip').on('click', function(e){
+        e.preventDefault();
+        zipCode()
+      });
       },
       error: function(err) {
         console.log("error", err);
