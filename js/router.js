@@ -1136,16 +1136,15 @@ router.on('route:feedback', function(id, username){
     $("#addCrowdFeedback").val("");
     $("#addPunctualityFeedback").val("");
   });
-
-    $('#skillLevel').hover(function(){
-      $('#skillLevelinfo').toggleClass();
-    })
-    $('#Sportsmanship').hover(function(){
-      $('#Sportsmanshipinfo').toggleClass();
-    })
-    $('#crowd').hover(function(){
-      $('#crowdinfo').toggleClass();
-    })
+  $('#skillLevel').hover(function(){
+    $('#skillLevelinfo').toggleClass();
+  });
+  $('#Sportsmanship').hover(function(){
+    $('#Sportsmanshipinfo').toggleClass();
+  });
+  $('#crowd').hover(function(){
+    $('#crowdinfo').toggleClass();
+  });
 });
 
 /////////////////////////////////////////////////////////////////////////////
@@ -1153,162 +1152,155 @@ router.on('route:feedback', function(id, username){
 // BackbonePagination is used here to page through all parks in Api
 // We used a counter to along with BackbonePagination get the next page of parks
 router.on('route:parks', function(id, name) {
-
-function geoFindMe() {
-  function success(position) {
-    var latitude  = position.coords.latitude;
-    var longitude = position.coords.longitude;
-    console.log('latitude '+latitude);
-    console.log('longitude '+longitude);
-    var nextPages = new Park()
-    nextPages.fetch({
-       url: 'https://skill-match.herokuapp.com/api/parks/?lat='+latitude+'&long='+longitude,
- success: function(resp) {
-      var html = parks({'data': resp.toJSON().results});
-      var parkTemplate = $("#parkTemplate").text();
-      var parkHTML = Mustache.render(parkTemplate, "data");
-      var next = resp.toJSON().next;
-      var previous = resp.toJSON().previous;
-      $("#parksContainer").html(parkHTML);
-      $("#container").html(html);
-      console.log("success", resp);
-       console.log("success: ",resp)
-       $('#nextPark').on('click', function(){
-        nextPage(next)
-        window.scrollTo(0, 450);
-       })
-       $('#backPark').on('click', function(){
-        prevPage(previous)
-        window.scrollTo(0, 450);
-       })
-       $('#locate').on('click', function(){
-      geoFindMe()
-    })
-     },
-     error: function(err) {
-       console.log("nope")
-     }
-    });
-  };
-
+  function geoFindMe() {
+    function success(position) {
+      var latitude  = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      console.log('latitude '+latitude);
+      console.log('longitude '+longitude);
+      var nextPages = new Park()
+      nextPages.fetch({
+        url: 'https://skill-match.herokuapp.com/api/parks/?lat='+latitude+'&long='+longitude,
+        success: function(resp) {
+          var html = parks({'data': resp.toJSON().results});
+          var parkTemplate = $("#parkTemplate").text();
+          var parkHTML = Mustache.render(parkTemplate, "data");
+          var next = resp.toJSON().next;
+          var previous = resp.toJSON().previous;
+          $("#parksContainer").html(parkHTML);
+          $("#container").html(html);
+          console.log("success", resp);
+          console.log("success: ",resp)
+          $('#nextPark').on('click', function(){
+            nextPage(next)
+            window.scrollTo(0, 450);
+          });
+          $('#backPark').on('click', function(){
+            prevPage(previous)
+            window.scrollTo(0, 450);
+          });
+          $('#locate').on('click', function(){
+            geoFindMe()
+          });
+        },
+        error: function(err) {
+          console.log("nope")
+        }
+      });
+    };
   function error() {
   };
     $('#zipcode').val("Locating…");
-  navigator.geolocation.getCurrentPosition(success, error);
-}
-
-function zipCode(zip) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+  function zipCode(zip) {
     var nextPages = new Park()
     nextPages.fetch({
-       url: 'http://skill-match.herokuapp.com/api/parks/?zip='+$('#zipcode').val(),
- success: function(resp) {
-      var html = parks({'data': resp.toJSON().results});
-      var parkTemplate = $("#parkTemplate").text();
-      var parkHTML = Mustache.render(parkTemplate, "data");
-      var next = resp.toJSON().next;
-      var previous = resp.toJSON().previous;
-      $("#parksContainer").html(parkHTML);
-      $("#container").html(html);
-      console.log("success", resp);
-       console.log("success: ",resp)
-       $('#nextPark').on('click', function(){
-        nextPage(next)
-        window.scrollTo(0, 450);
-       })
-       $('#backPark').on('click', function(){
-        prevPage(previous)
-        window.scrollTo(0, 450);
-       })
-       $('#locate').on('click', function(){
-      geoFindMe()
-    })
-     },
-     error: function(err) {
-       console.log("nope")
-     }
+      url: 'http://skill-match.herokuapp.com/api/parks/?zip='+$('#zipcode').val(),
+      success: function(resp) {
+        var html = parks({'data': resp.toJSON().results});
+        var parkTemplate = $("#parkTemplate").text();
+        var parkHTML = Mustache.render(parkTemplate, "data");
+        var next = resp.toJSON().next;
+        var previous = resp.toJSON().previous;
+        $("#parksContainer").html(parkHTML);
+        $("#container").html(html);
+        console.log("success", resp);
+        console.log("success: ",resp)
+        $('#nextPark').on('click', function(){
+          nextPage(next)
+          window.scrollTo(0, 450);
+        })
+        $('#backPark').on('click', function(){
+          prevPage(previous)
+          window.scrollTo(0, 450);
+        })
+        $('#locate').on('click', function(){
+          geoFindMe()
+        });
+      },
+      error: function(err) {
+        console.log("nope")
+      }
     });
     $('#zipcode').val("Locating…");
-  navigator.geolocation.getCurrentPosition(success, error);
+    navigator.geolocation.getCurrentPosition(success, error);
   }
-
-
   function nextPage(next){
     var nextPages = new Park()
     nextPages.fetch({
-       url: next,
- success: function(resp) {
-      var html = parks({'data': resp.toJSON().results});
-      var parkTemplate = $("#parkTemplate").text();
-      var parkHTML = Mustache.render(parkTemplate, "data");
-      var next = resp.toJSON().next;
-      var previous = resp.toJSON().previous;
-      $("#parksContainer").html(parkHTML);
-      $("#container").html(html);
-      console.log("success", resp);
-       console.log("success: ",resp)
-       $('#nextPark').on('click', function(){
-        nextPage(next)
-        window.scrollTo(0, 450);
-       })
-       $('#backPark').on('click', function(){
-        prevPage(previous)
-        window.scrollTo(0, 450);
-       })
-       $('#locate').on('click', function(){
-      geoFindMe()
-    })
+      url: next,
+      success: function(resp) {
+        var html = parks({'data': resp.toJSON().results});
+        var parkTemplate = $("#parkTemplate").text();
+        var parkHTML = Mustache.render(parkTemplate, "data");
+        var next = resp.toJSON().next;
+        var previous = resp.toJSON().previous;
+        $("#parksContainer").html(parkHTML);
+        $("#container").html(html);
+        console.log("success", resp);
+        console.log("success: ",resp)
+        $('#nextPark').on('click', function(){
+          nextPage(next)
+          window.scrollTo(0, 450);
+        });
+        $('#backPark').on('click', function(){
+          prevPage(previous)
+          window.scrollTo(0, 450);
+        });
+        $('#locate').on('click', function(){
+          geoFindMe()
+        })
      },
      error: function(err) {
        console.log("nope")
      }
     });
-      }
-
-  function prevPage(previous){
+  }
+  function prevPage(previous) {
     var prevPages = new Park()
     prevPages.fetch({
-       url: previous,
- success: function(resp) {
-      var html = parks({'data': resp.toJSON().results});
-      var parkTemplate = $("#parkTemplate").text();
-      var parkHTML = Mustache.render(parkTemplate, "data");
-      var next = resp.toJSON().next;
-      var previous = resp.toJSON().previous;
-      $("#parksContainer").html(parkHTML);
-      $("#container").html(html);
-      console.log("success", resp);
-     console.log("success: ",resp)
-     $('#nextPark').on('click', function(){
-      nextPage(next)
-      window.scrollTo(0, 450);
-     })
-     $('#backPark').on('click', function(){
-      prevPage(previous)
-      window.scrollTo(0, 450);
-     })
-     $('#locate').on('click', function(){
-    geoFindMe()
-  })
-   },
-   error: function(err) {
-     console.log("nope")
-   }
-  });
-    }
-
-var Park = Backbone.Model.extend({
+      url: previous,
+      success: function(resp) {
+        var html = parks({'data': resp.toJSON().results});
+        var parkTemplate = $("#parkTemplate").text();
+        var parkHTML = Mustache.render(parkTemplate, "data");
+        var next = resp.toJSON().next;
+        var previous = resp.toJSON().previous;
+        $("#parksContainer").html(parkHTML);
+        $("#container").html(html);
+        console.log("success", resp);
+        console.log("success: ",resp)
+        $('#nextPark').on('click', function(){
+          nextPage(next)
+          window.scrollTo(0, 450);
+        });
+        $('#backPark').on('click', function(){
+          prevPage(previous)
+          window.scrollTo(0, 450);
+        });
+        $('#locate').on('click', function(){
+          geoFindMe()
+        });
+      },
+      error: function(err) {
+        console.log("nope")
+      }
+    });
+  }
+  var Park = Backbone.Model.extend({
     initialize: function () {
     },
     defaults: {
     id: null,
     name: null
     },
-  url: 'https://skill-match.herokuapp.com/api/parks/'
-});
+    url: 'https://skill-match.herokuapp.com/api/parks/'
+  });
   var Parks = Backbone.Collection.extend({
     model: Park,
     url: 'https://skill-match.herokuapp.com/api/parks/'
-});
+  });
   var park = new Park();
   park.fetch ({
     success: function(resp) {
@@ -1321,29 +1313,29 @@ var Park = Backbone.Model.extend({
       $("#parksContainer").html(parkHTML);
       $("#container").html(html);
       console.log("success", resp);
-        $(".yelpReview").on('click', function() {
+      $(".yelpReview").on('click', function() {
          window.open($(this).attr('href'));
-  })
-       $('#nextPark').on('click', function(){
-    nextPage(next)
-    window.scrollTo(0, 450);
-   })
-   $('#backPark').on('click', function(){
-    prevPage(previous)
-    window.scrollTo(0, 450);
-   })
+      });
+      $('#nextPark').on('click', function(){
+        nextPage(next)
+        window.scrollTo(0, 450);
+      });
+      $('#backPark').on('click', function(){
+        prevPage(previous)
+        window.scrollTo(0, 450);
+      });
       $('#locate').on('click', function(){
-  geoFindMe()
-})
+        geoFindMe()
+      });
       $('#zip').on('click', function(){
         zipCode()
-      })
+      });
     },
     error: function(err) {
       console.log("error", err);
     }
   });
-  });
+});
 /////////////////////////////////////////////////////////////////////////////
 // This page is a more indepth look at the park you have choosen and we display the parks match history.
 // Soon it will include all a list of sports available at the park.
@@ -1355,12 +1347,12 @@ router.on('route:parksDetail', function(id, name){
     id: null,
     name: null
     },
-  url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
-});
+    url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+  });
   var Parks = Backbone.Collection.extend({
     model: Park,
     url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
-});
+  });
   var park = new Park();
   park.fetch ({
     success: function(resp) {
@@ -1370,73 +1362,71 @@ router.on('route:parksDetail', function(id, name){
       $("#parksDetail").html(parksDetailHTML);
       $("#container").html(html);
       console.log("success", resp);
-          $("#yelpReview").on('click', function() {
-         window.open($("#yelpReview").attr('href'));
-       });
+      $("#yelpReview").on('click', function() {
+        window.open($("#yelpReview").attr('href'));
+      });
       $('#createCourt').on('click', function(){
         $('dialog').toggleClass();
         var parkCreate = Backbone.Model.extend({
-    initialize: function(){
-    },
-    defaults: {
-      sport: null,
-      other: null,
-      num_courts: null,
-      lat: null,
-      long: null
-    },
-    url: "http://skill-match.herokuapp.com/api/courts/"
-  });
-    function geoFindMe() {
-    function success(position) {
-      var latitude  = position.coords.latitude;
-      var longitude = position.coords.longitude;
-      console.log('latitude '+latitude);
-      console.log('longitude '+longitude);
-      var newPark = new parkCreate();
-       newPark.set ({
-        park: id,
-        sport: $(".addNewParkSport").val(),
-        other: $(".addOtherParkSport").val(),
-        num_courts: $(".addNumCourts").val(),
-        lat: latitude,
-        long: longitude
-      });
-      newPark.save (null, {
-        success: function(resp) {
-          console.log('success', resp);
-          router.navigate("/parks", {trigger:true});
+        initialize: function(){
         },
-        error: function(err) {
-          console.log('error', err);
+        defaults: {
+          sport: null,
+          other: null,
+          num_courts: null,
+          lat: null,
+          long: null
+        },
+        url: "http://skill-match.herokuapp.com/api/courts/"
+      });
+      function geoFindMe() {
+        function success(position) {
+          var latitude  = position.coords.latitude;
+          var longitude = position.coords.longitude;
+          console.log('latitude '+latitude);
+          console.log('longitude '+longitude);
+          var newPark = new parkCreate();
+          newPark.set ({
+            park: id,
+            sport: $(".addNewParkSport").val(),
+            other: $(".addOtherParkSport").val(),
+            num_courts: $(".addNumCourts").val(),
+            lat: latitude,
+            long: longitude
+          });
+          newPark.save (null, {
+            success: function(resp) {
+              console.log('success', resp);
+              router.navigate("/parks", {trigger:true});
+            },
+            error: function(err) {
+            console.log('error', err);
+            }
+          })
         }
-      })
-    }
-      function error(err) {
-      console.log("error", err);
-    }
-    navigator.geolocation.getCurrentPosition(success, error);
-  }
-
-    $(".createCourtButton").on('click', function() {
-      geoFindMe();
-    })
-    $('.close').on('click', function(){
-      $('dialog').toggleClass();
+        function error(err) {
+          console.log("error", err);
+        }
+        navigator.geolocation.getCurrentPosition(success, error);
+      }
       $(".createCourtButton").on('click', function() {
-      geoFindMe();
-    })
+        geoFindMe();
+      });
       $('.close').on('click', function(){
-      $('dialog').toggleClass();
-    })
-    })
-      })
+        $('dialog').toggleClass();
+        $(".createCourtButton").on('click', function() {
+          geoFindMe();
+        });
+        $('.close').on('click', function(){
+          $('dialog').toggleClass();
+        });
+      });
+      });
     },
     error: function(err) {
       console.log("error", err);
     }
   });
-
 });
 ////////////////////////////////////////////////////////////////////////////////
 $('body').on('click', 'a', function (e){
@@ -1448,4 +1438,5 @@ $('body').on('click', 'a', function (e){
 $('body').on('hover', 'span', function (e){
   e.preventDefault();
 });
-module.exports = router;// This is just a sample script. Paste your real code (javascript or HTML) here.
+module.exports = router;
+// This is just a sample script. Paste your real code (javascript or HTML) here.
