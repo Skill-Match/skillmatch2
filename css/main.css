@@ -85,7 +85,8 @@
     margin-left: 5%;
     position: relative;
     left: 25%;
-    bottom: 5.5em; }
+    bottom: 5.5em;
+    text-decoration: none; }
     #upComing .players img {
       border-radius: 100%;
       width: 20%; }
