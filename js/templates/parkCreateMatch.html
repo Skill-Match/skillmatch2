@@ -11,18 +11,32 @@
         <option value="Volleyball">Volleyball</option>
         <option value="Other">Other</option>
       </select>
-      </li>
-    <li> Date: <input id="addParkDate" type="date"></li>
-    <li> Time:<input id="addParkTime" type="time"></li>
-    <li><textarea id="addParkDescription" cols="30" placeholder="What kind of match are you looking for?"></textarea></li>
-    <li><dialog  open id="hiddenMessage" class="hidden"><p>info: Approximate desired skill-level</br> Fun / Semi-Tough / Tough</p></dialog></li>
-    <li> Park:<select id="addParkCreate" name="park">
-    {{#park}}
-    <option value="{{id}}">{{name}}</option>
-    {{/park}}
-    </select>
     </li>
-    <li> <label id="skillInfo"> <img id="infoIcon"src="http://res.cloudinary.com/skill-match/image/upload/v1452121841/info_skdfxy.png"> Skill:</label><input id="addParkSkill" type="range" min="0" max="100" step="1" value="0"></li>
+    <li> Date:
+      <input id="addParkDate" type="date">
+    </li>
+    <li> Time:
+      <input id="addParkTime" type="time">
+    </li>
+    <li>
+      <textarea id="addParkDescription" cols="30" placeholder="What kind of match are you looking for?"></textarea>
+    </li>
+    <li>
+      <dialog open id="hiddenMessage" class="hidden">
+        <p>info: Approximate desired skill-level</br> Fun / Semi-Tough / Tough</p>
+      </dialog>
+    </li>
+    <li> Park:
+      <select id="addParkCreate" name="park">
+        {{#park}}
+        <option value="{{id}}">{{name}}</option>
+        {{/park}}
+      </select>
+    </li>
+    <li>
+      <label id="skillInfo"> <img id="infoIcon" src="http://res.cloudinary.com/skill-match/image/upload/v1452121841/info_skdfxy.png"> Skill:</label>
+      <input id="addParkSkill" type="range" min="0" max="100" step="1" value="0">
+    </li>
   </ul>
   <button id="createParkMatches" type="submit">Submit</button>
 </div>

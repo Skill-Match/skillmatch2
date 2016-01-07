@@ -13,8 +13,6 @@ require("../css/feedback.css");
 require("../css/parks.css");
 require("../css/parksDetail.css");
 require("../css/userUpdate.css");
-
-
 $(document).ready(function() {
   var Cookie = require('js-cookie');
   var Router = require('./router.js');

@@ -3,12 +3,7 @@
   <div id="parksDetail">
     <ul id="parksProfile">
       <li>
-        <iframe
-          id="googleMaps2"
-          width="225"
-          height="225"
-          frameborder="0" style="border:0"
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ
+        <iframe id="googleMaps2" width="225" height="225" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ
           &q={{name}}+{{display_address3}}&zoom=12">
         </iframe>
       </li>
@@ -16,49 +11,57 @@
         <h3 class="parkName">{{name}}</h3>
         <p class="parkAddress">{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>
         </br>
-        <p class="yelp"><img src="{{rating_img_url}}"></p>
+        <p class="yelp"><img src="{{rating_img_url}}">
+        </p>
         </br>
         <a class="yelp" id="yelpReview" href="{{url}}"> Yelp Park Review</a>
-        <img src="{{small_sport_img}}"/>
+        <img src="{{small_sport_img}}" />
       </li>
       {{#court_set}}
-        <li>
-          <img id="sportIcon" src="{{small_sport_img}}"/>
-        </li>
+      <li>
+        <img id="sportIcon" src="{{small_sport_img}}" />
+      </li>
       {{/court_set}}
-      <li><dialog open class='hidden'>
-  <form class="addSport">
-    <select class="addNewParkSport" placeholder="Add New Sport">
-      <option value="Tennis">Tennis</option>
-      <option value="Football">Footballl</option>
-      <option value="Soccer">Soccer</option>
-      <option value="Basketball">Basketball</option>
-      <option value="Pickleball">Pickleball</option>
-    </select>
-    <label>Optional</label>
-    <input type="text" class="addOtherParkSport" placeholder="Add other sport">
-    <input type="text" class="addNumCourts" placeholder="Number of courts">
-  </form>
-  <button type="submit" class="createCourtButton">Add Sport</button>
-  <button class="close">x</button>
-</dialog></li>
+      <li>
+        <dialog open class='hidden'>
+          <form class="addSport">
+            <select class="addNewParkSport" placeholder="Add New Sport">
+              <option value="Tennis">Tennis</option>
+              <option value="Football">Footballl</option>
+              <option value="Soccer">Soccer</option>
+              <option value="Basketball">Basketball</option>
+              <option value="Pickleball">Pickleball</option>
+            </select>
+            <label>Optional</label>
+            <input type="text" class="addOtherParkSport" placeholder="Add other sport">
+            <input type="text" class="addNumCourts" placeholder="Number of courts">
+          </form>
+          <button type="submit" class="createCourtButton">Add Sport</button>
+          <button class="close">x</button>
+        </dialog>
+      </li>
     </ul>
     <button id="createCourt">Add Sport</button>
     <a id="parkMatch" type="submit" href="/parkCreateMatch/{{id}}">Create Match</a>
   </div>
-    <h2> Open Matches </h2>
-     {{#match_set}}
-      {{#is_open}}
-       <ul class="parkMatches">
-          <li id="sportImage"><a href="/match/{{id}}"><img src="{{img_url}}"></a></br></li>
-          <li class="description"> <a href="/match/{{id}}">{{date}}</a>
-          {{time}}</br>
-          <li id="skillProgress"> Skill level <progress class="skill" value="{{skill_level}}" max="100">
-          </progress></li>
-          <li class="players">{{#players}}<a href="/profile/{{id}}"><img class="smallImg"src="{{small_img}}"></a>{{/players}}
-           <li class="matchSubmit"><a type="sumbit" href="/match/{{id}}"> Join </a></li>
-        </ul>
-      {{/is_open}}
-    {{/match_set}}
-  {{/data}}
+  <h2> Open Matches </h2> {{#match_set}} {{#is_open}}
+  <ul class="parkMatches">
+    <li id="sportImage">
+      <a href="/match/{{id}}"><img src="{{img_url}}">
+      </a>
+      </br>
+    </li>
+    <li class="description"> <a href="/match/{{id}}">{{date}}</a> {{time}}
+      </br>
+      <li id="skillProgress"> Skill level
+        <progress class="skill" value="{{skill_level}}" max="100">
+        </progress>
+      </li>
+      <li class="players">{{#players}}
+        <a href="/profile/{{id}}"><img class="smallImg" src="{{small_img}}">
+        </a>{{/players}}
+        <li class="matchSubmit"><a type="sumbit" href="/match/{{id}}"> Join </a>
+        </li>
+  </ul>
+  {{/is_open}} {{/match_set}} {{/data}}
 </div>

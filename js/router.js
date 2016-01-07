@@ -25,9 +25,6 @@ var parkCreateMatch = require('./templates/parkCreateMatch.html');
 var parkCreatePage = require('./templates/parkCreatePage.html');
 var counter = 1;
 var jQuery = require("jquery");
-
-
-
 ////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////

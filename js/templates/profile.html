@@ -1,19 +1,21 @@
 <div id="profileContainer">
-{{#data}}
-<button id="challenge">challenge</button>
+  {{#data}}
+  <button id="challenge">challenge</button>
   <ul>
-    <li><img id="userProfileImg" src="{{profile.pic_url}}"></li>
+    <li><img id="userProfileImg" src="{{profile.pic_url}}">
+    </li>
     <li class="profileDescription"> Username: {{username}} </li>
     <li class="profileDescription"> Age: {{profile.age}} </li>
     <li class="profileDescription"> Gender: {{profile.gender}}</li>
-     <li class="profileDescription"> Sportsmanship: <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress></li>
+    <li class="profileDescription"> Sportsmanship:
+      <progress class="skill" value="{{profile.sportsmanship}}" max="100"></progress>
+    </li>
     <li class="profileDescription">{{#skill_set}} {{sport}} Skill:
-     <progress class="skill" value="{{skill}}" max="100"></progress>
-
-     {{/skill_set}}
-     </li>
+      <progress class="skill" value="{{skill}}" max="100"></progress>
+      {{/skill_set}}
+    </li>
   </ul>
-{{/data}}
+  {{/data}}
 </div>
 
 <div id="historyContainer">

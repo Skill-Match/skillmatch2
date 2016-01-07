@@ -11,22 +11,20 @@
         <option value="Volleyball">Volleyball</option>
         <option value="Other">Other</option>
       </select>
-      </li>
+    </li>
     <li> Date: <input id="addDate" type="date"></li>
     <li> Time:<input id="addTime" type="time"></li>
     <li><textarea id="addDescription" cols="30" placeholder="What kind of match you are looking for?"></textarea></li>
     <li> Park:<select id="addPark" name="park">
     {{#park}}
-    <option value="{{id}}">{{name}}</option>
+      <option value="{{id}}">{{name}}</option>
     {{/park}}
     </select>
     </li>
-<<<<<<< HEAD
-
-    <li> <label>Skill:</label><input id="addSkill" type="range" min="0" max="100" step="1" value="0"></li>
-=======
-    <li> <label>Skill: 1-100</label><input id="addSkill" type="range" min="0" max="100" step="1" value="0"></li>
->>>>>>> nick
+    <li>
+      <label>Skill:</label>
+      <input id="addSkill" type="range" min="0" max="100" step="1" value="0">
+    </li>
   </ul>
   <button id="createMatch" type="submit">Submit</button>
 </div>
