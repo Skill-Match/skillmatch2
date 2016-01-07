@@ -81,10 +81,11 @@
   #matchDetailContainer #cancelEdit {
     display: inline-block;
     position: relative;
-    right: .6%;
+    right: 3%;
     bottom: 14em; }
     #matchDetailContainer #cancelEdit a {
-      color: black; }
+      color: black;
+      text-decoration: none; }
     #matchDetailContainer #cancelEdit a:hover {
       text-decoration: underline; }
   #matchDetailContainer #parkLink {
