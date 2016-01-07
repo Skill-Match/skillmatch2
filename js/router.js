@@ -69,6 +69,7 @@ var Router = Backbone.Router.extend({
     model: Match,
     url: 'https://skill-match.herokuapp.com/api/matches/'
   });
+  
   $('#loginSubmit').on('click', function(e){
     e.preventDefault();
     var username = $("#username").val();
@@ -92,7 +93,9 @@ var Router = Backbone.Router.extend({
       $('#nav').html(homeBtn);
       $('#nav').append('<a id="logout"> (Logout) </a>');
       homeBtn.setAttribute('href', '/home/'+username);
+      if (document.URL == 'http://localhost:8080/') {
       router.navigate('/home/' + username , {trigger:true})
+      };
     });
   });
   function setToken(token) {
@@ -1229,7 +1232,6 @@ router.on('route:parks', function(id, name) {
      }
     });
     $('#zipcode').val("Locating…");
-    navigator.geolocation.getCurrentPosition(success, error);
   }
   function nextPage(next){
     var nextPages = new Park()
@@ -1376,7 +1378,8 @@ router.on('route:parks', function(id, name) {
       $('#locate').on('click', function(){
         geoFindMe()
       });
-      $('#zip').on('click', function(){
+      $('#zip').on('click', function(e){
+        e.preventDefault();
         zipCode()
       });
       $("#searchPark").on('click', function(e) {
