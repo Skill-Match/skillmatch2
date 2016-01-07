@@ -32,7 +32,7 @@
     outline: none;
     position: relative;
     left: 70%;
-    bottom: 26.2em; }
+    bottom: 27em; }
   #matchDetailContainer #join:active {
     box-shadow: none; }
   #matchDetailContainer #confirm {
@@ -86,7 +86,8 @@
     #matchDetailContainer #cancelEdit a:hover {
       text-decoration: underline; }
   #matchDetailContainer #parkLink {
-    color: black; }
+    color: grey;
+    text-decoration: none; }
   #matchDetailContainer #parkLink:hover {
     text-decoration: underline; }
   #matchDetailContainer #playersFeedback {

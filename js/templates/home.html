@@ -37,7 +37,7 @@
 </div>
 <div id="upcoming">
 {{#data}}
-{{#is_open}}
+{{#is_confirmed}}
 <h2>Upcoming</h2>
 <ul>
   <li><a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}"></a></li>
@@ -50,7 +50,7 @@
    <li id="skillProgressHome"> Skill Level <progress class="skill" value="{{skill_level}}" max="100"></progress></li>
    <li class="playing">{{#players}}<img src="{{small_img}}"><a href="/profile/{{id}}" class="name">{{username}}</a>{{/players}}</li>
 </ul>
-{{/is_open}}
+{{/is_confirmed}}
 {{/data}}
 </div>
 <div id="history">

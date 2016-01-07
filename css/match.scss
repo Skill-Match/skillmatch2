@@ -45,7 +45,7 @@
     outline: none;
     position: relative;
     left: 70%;
-    bottom: 26.2em;
+    bottom: 27em;
   }
 
   #join:active {
@@ -120,7 +120,8 @@
     }
   }
   #parkLink {
-    color: black;
+    color: grey;
+    text-decoration: none;
   }
   #parkLink:hover {
     text-decoration: underline;
