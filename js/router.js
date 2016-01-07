@@ -958,8 +958,8 @@ router.on('route:parkCreateMatch', function(id, name) {
         var id = resp.toJSON().id;
         router.navigate('/match/' + id, {trigger: true});
       },
-      error: function(err) {
-        console.log("error", err);
+      error: function(status, error) {
+        console.log(error.responseJSON.date[0]);
       }
   });
     })
