@@ -960,8 +960,9 @@ router.on('route:parkCreateMatch', function(id, name) {
         var id = resp.toJSON().id;
         router.navigate('/match/' + id, {trigger: true});
       },
-      error: function(status, error) {
-        console.log(error.responseJSON.date[0]);
+      error: function(error, xhr) {
+
+        console.log(xhr.responseJSON.detail);
       }
   });
     })
@@ -1216,19 +1217,13 @@ function geoFindMe() {
         window.scrollTo(0, 450);
        })
        $('#locate').on('click', function(){
-        geoFindMe()
-      })
-        $("#searchPark").on('click', function(e) {
-          e.preventDefault();
-          searchPark();
-        });
+      geoFindMe()
+    })
      },
      error: function(err) {
        console.log("nope")
      }
-
     });
-
   };
 
   function error() {
@@ -1262,10 +1257,6 @@ function zipCode(zip) {
        $('#locate').on('click', function(){
       geoFindMe()
     })
-      $("#searchPark").on('click', function(e) {
-        e.preventDefault();
-        searchPark();
-      });
      },
      error: function(err) {
        console.log("nope")
@@ -1301,17 +1292,12 @@ function zipCode(zip) {
        $('#locate').on('click', function(){
       geoFindMe()
     })
-        $("#searchPark").on('click', function(e) {
-          e.preventDefault();
-          searchPark();
-        });
      },
      error: function(err) {
        console.log("nope")
      }
     });
       }
-
 
   function prevPage(previous){
     var prevPages = new Park()
@@ -1338,53 +1324,12 @@ function zipCode(zip) {
      $('#locate').on('click', function(){
     geoFindMe()
   })
-      $("#searchPark").on('click', function(e) {
-          e.preventDefault();
-          searchPark();
-        });
    },
    error: function(err) {
      console.log("nope")
    }
   });
-}
-  function searchPark() {
-    var search = new Park()
-    search.fetch({
-      url: "http://skill-match.herokuapp.com/api/parks/?search=" + $("#parkSearch").val(),
-      success: function(resp) {
-        var html = parks({'data': resp.toJSON().results});
-        var parkTemplate = $("#parkTemplate").text();
-        var parkHTML = Mustache.render(parkTemplate, "data");
-        $("#parksContainer").html(parkHTML);
-        $("#container").html(html);
-        console.log("success", resp);
-        $("#searchPark").on('click', function(e) {
-          e.preventDefault();
-          searchPark();
-        });
-        $('#nextPark').on('click', function(){
-        nextPage(next)
-        window.scrollTo(0, 450);
-      })
-      $('#backPark').on('click', function(){
-        prevPage(previous)
-        window.scrollTo(0, 450);
-      })
-      $('#locate').on('click', function(){
-        geoFindMe()
-      })
-
-    },
-    error: function(err) {
-      console.log("error", err);
     }
-  })
-}
-$("#searchPark").on('click', function(e) {
-        e.preventDefault();
-        searchPark();
-      });
 
 var Park = Backbone.Model.extend({
     initialize: function () {
@@ -1411,27 +1356,23 @@ var Park = Backbone.Model.extend({
       $("#parksContainer").html(parkHTML);
       $("#container").html(html);
       console.log("success", resp);
-      $(".yelpReview").on('click', function() {
-        window.open($(this).attr('href'));
-      })
-      $('#nextPark').on('click', function(){
-        nextPage(next)
-        window.scrollTo(0, 450);
-      })
-      $('#backPark').on('click', function(){
-        prevPage(previous)
-        window.scrollTo(0, 450);
-      })
+        $(".yelpReview").on('click', function() {
+         window.open($(this).attr('href'));
+  })
+       $('#nextPark').on('click', function(){
+    nextPage(next)
+    window.scrollTo(0, 450);
+   })
+   $('#backPark').on('click', function(){
+    prevPage(previous)
+    window.scrollTo(0, 450);
+   })
       $('#locate').on('click', function(){
   geoFindMe()
 })
       $('#zip').on('click', function(){
         zipCode()
       })
-      $("#searchPark").on('click', function(e) {
-          e.preventDefault();
-          searchPark();
-        });
     },
     error: function(err) {
       console.log("error", err);
