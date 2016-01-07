@@ -59,8 +59,6 @@
 	__webpack_require__(28);
 	__webpack_require__(30);
 	__webpack_require__(32);
-
-
 	$(document).ready(function() {
 	  var Cookie = __webpack_require__(34);
 	  var Router = __webpack_require__(35);
@@ -9990,7 +9988,7 @@
 
 
 	// module
-	exports.push([module.id, "#userprofile {\n  background-color: #e3e3e3;\n  height: 250px;\n  font-size: 20px;\n  border-bottom: solid black 1px;\n  width: 100%; }\n  #userprofile ul {\n    width: 100%;\n    padding: 0; }\n  #userprofile li {\n    display: inline-block;\n    width: 30%; }\n  #userprofile .homeProfileImg {\n    width: 10%;\n    margin: 0 2% 0 5%; }\n    #userprofile .homeProfileImg img {\n      height: 200px;\n      width: 200px; }\n  #userprofile .userDes {\n    position: relative;\n    bottom: 2em;\n    left: 5%; }\n  #userprofile #logout {\n    text-decoration: underline;\n    font-size: 12px;\n    position: absolute;\n    right: 2em; }\n  #userprofile #createMatch {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: relative;\n    left: 35em;\n    bottom: 7em; }\n  #userprofile #createMatch:active {\n    box-shadow: none; }\n\n#youMatches {\n  width: 90%; }\n  #youMatches ul {\n    width: 100%;\n    padding: 0;\n    margin: 3% 5%;\n    height: 13.5em;\n    background-color: white; }\n  #youMatches h2 {\n    display: none;\n    margin-left: 5%; }\n  #youMatches #pending h2:first-child {\n    display: inherit; }\n  #youMatches #upcoming h2:first-child {\n    display: inherit; }\n  #youMatches #history h2:first-child {\n    display: inherit; }\n  #youMatches a {\n    color: black; }\n  #youMatches ul:nth-last-child(1) {\n    border-bottom: none;\n    padding-bottom: 20px; }\n  #youMatches li {\n    list-style-type: none;\n    padding-bottom: 5px; }\n  #youMatches #profileName {\n    text-decoration: none;\n    color: #00bfff; }\n  #youMatches .playing img {\n    position: relative;\n    bottom: 2.5em; }\n  #youMatches .playing .name {\n    position: relative;\n    right: 2.5em;\n    bottom: 1.5em;\n    text-decoration: none; }\n  #youMatches #profileName:hover {\n    text-decoration: underline; }\n  #youMatches #skillProgressHome {\n    display: inline-block;\n    position: relative;\n    left: 40%;\n    bottom: 5em;\n    width: 10%; }\n  #youMatches .skill {\n    width: 10em; }\n  #youMatches #sportImage {\n    float: left;\n    height: 200px;\n    width: 200px;\n    margin: .5em 2em; }\n  #youMatches #dateHome {\n    text-decoration: none; }\n  #youMatches #dateHome:hover {\n    text-decoration: underline; }\n  #youMatches #goToFeedback {\n    position: relative;\n    left: 47em;\n    bottom: 10em;\n    padding: 15px 10px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    text-decoration: none; }\n\n/*# sourceMappingURL=home.css.map */\n", ""]);
+	exports.push([module.id, "#userprofile {\n  background-color: #e3e3e3;\n  height: 250px;\n  font-size: 20px;\n  border-bottom: solid black 1px;\n  width: 100%; }\n  #userprofile ul {\n    width: 100%;\n    padding: 0; }\n  #userprofile li {\n    display: inline-block;\n    width: 30%; }\n  #userprofile .homeProfileImg {\n    width: 10%;\n    margin: 0 2% 0 5%; }\n    #userprofile .homeProfileImg img {\n      height: 200px;\n      width: 200px; }\n  #userprofile .userDes {\n    position: relative;\n    bottom: 2em;\n    left: 5%;\n    margin-left: 1%; }\n  #userprofile #logout {\n    text-decoration: underline;\n    font-size: 12px;\n    position: absolute;\n    right: 2em; }\n  #userprofile #createMatch {\n    padding: 15px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    position: relative;\n    left: 35em;\n    bottom: 7em; }\n  #userprofile #createMatch:active {\n    box-shadow: none; }\n\n#youMatches {\n  width: 90%; }\n  #youMatches ul {\n    width: 100%;\n    padding: 0;\n    margin: 3% 5%;\n    height: 13.5em;\n    background-color: white; }\n  #youMatches h2 {\n    display: none;\n    margin-left: 5%; }\n  #youMatches #pending h2:first-child {\n    display: inherit; }\n  #youMatches #upcoming h2:first-child {\n    display: inherit; }\n  #youMatches #history h2:first-child {\n    display: inherit; }\n  #youMatches .parkslink {\n    text-decoration: none;\n    color: grey; }\n  #youMatches .parkslink:hover {\n    text-decoration: underline; }\n  #youMatches a {\n    color: black; }\n  #youMatches ul:nth-last-child(1) {\n    border-bottom: none;\n    padding-bottom: 20px; }\n  #youMatches li {\n    list-style-type: none;\n    padding-bottom: 5px; }\n  #youMatches #profileName {\n    text-decoration: none;\n    color: #00bfff; }\n  #youMatches .playing img {\n    position: relative;\n    bottom: 2.5em; }\n  #youMatches .playing .name {\n    position: relative;\n    right: 2.5em;\n    bottom: 1.5em;\n    text-decoration: none; }\n  #youMatches #profileName:hover {\n    text-decoration: underline; }\n  #youMatches #skillProgressHome {\n    display: inline-block;\n    position: relative;\n    left: 40%;\n    bottom: 5em;\n    width: 10%; }\n  #youMatches .skill {\n    width: 10em; }\n  #youMatches #sportImage {\n    float: left;\n    height: 200px;\n    width: 200px;\n    margin: .5em 2em; }\n  #youMatches #dateHome {\n    text-decoration: none; }\n  #youMatches #dateHome:hover {\n    text-decoration: underline; }\n  #youMatches #goToFeedback {\n    position: relative;\n    left: 47em;\n    bottom: 10em;\n    padding: 15px 10px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none;\n    text-decoration: none; }\n\n/*# sourceMappingURL=home.css.map */\n", ""]);
 
 	// exports
 
@@ -10110,7 +10108,7 @@
 
 
 	// module
-	exports.push([module.id, "#parksContainer {\n  width: 90%;\n  display: inline-block;\n  margin: 5%;\n  margin-top: 2%; }\n  #parksContainer #zip {\n    margin-left: 1%; }\n  #parksContainer .parks {\n    padding: 0 5%;\n    float: left;\n    height: 20em;\n    width: 90%;\n    background-color: white;\n    list-style: none; }\n    #parksContainer .parks li {\n      display: inline-block;\n      width: 20%; }\n    #parksContainer .parks a {\n      text-decoration: none;\n      font-size: 1em;\n      color: black; }\n    #parksContainer .parks .googleMaps {\n      display: inline-block;\n      float: left;\n      position: relative;\n      top: .5em;\n      left: 10%;\n      margin: 0 1%; }\n    #parksContainer .parks .parkName {\n      display: inline-block;\n      font-size: 2em; }\n    #parksContainer .parks .parkName:hover {\n      text-decoration: underline; }\n    #parksContainer .parks .parkPic {\n      display: inline-block;\n      position: relative;\n      left: 20%;\n      bottom: 1em;\n      width: 15%; }\n    #parksContainer .parks .parkDet {\n      display: inline-block;\n      position: relative;\n      right: 5%;\n      bottom: 13em;\n      width: 39%;\n      text-align: center; }\n      #parksContainer .parks .parkDet a {\n        text-decoration: none;\n        font-size: 1em;\n        color: black; }\n    #parksContainer .parks .parkAddress {\n      display: inline-block;\n      position: relative;\n      left: 32.5%;\n      bottom: 10em; }\n    #parksContainer .parks .parkMatch {\n      display: inline-block;\n      position: relative;\n      left: 55%;\n      bottom: 10em;\n      width: 10%;\n      color: white;\n      background-color: #ef3122;\n      border-radius: 15px;\n      border: none;\n      outline: none;\n      box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);\n      text-align: center;\n      padding: 1%;\n      font-size: 18px; }\n    #parksContainer .parks .availableSports {\n      display: inline-block;\n      float: left;\n      width: 45%;\n      list-style-type: none;\n      position: relative;\n      left: 60%;\n      bottom: 8em; }\n      #parksContainer .parks .availableSports .sportPic {\n        width: 19%;\n        padding-right: 0.1em; }\n    #parksContainer .parks .parkMatch:active {\n      box-shadow: none; }\n    #parksContainer .parks a {\n      color: white;\n      text-decoration: none; }\n    #parksContainer .parks #updateDetails {\n      position: relative;\n      left: 100%;\n      top: 6em; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
+	exports.push([module.id, "#parksContainer {\n  width: 90%;\n  display: inline-block;\n  margin: 5%;\n  margin-top: 2%; }\n  #parksContainer #zip {\n    margin-left: 1%; }\n  #parksContainer .parks {\n    padding: 0 5%;\n    float: left;\n    height: 20em;\n    width: 90%;\n    background-color: white;\n    list-style: none; }\n    #parksContainer .parks li {\n      display: inline-block;\n      width: 20%; }\n    #parksContainer .parks a {\n      text-decoration: none;\n      font-size: 1em;\n      color: black; }\n    #parksContainer .parks .googleMaps {\n      display: inline-block;\n      float: left;\n      position: relative;\n      top: .5em;\n      left: 10%;\n      margin: 0 1%; }\n    #parksContainer .parks .parkName {\n      display: inline-block;\n      font-size: 1.5em; }\n    #parksContainer .parks .parkName:hover {\n      text-decoration: underline; }\n    #parksContainer .parks .parkPic {\n      display: inline-block;\n      position: relative;\n      left: 20%;\n      bottom: 1em;\n      width: 15%; }\n    #parksContainer .parks .parkDet {\n      display: inline-block;\n      position: relative;\n      right: 5%;\n      bottom: 13em;\n      width: 39%;\n      text-align: center; }\n      #parksContainer .parks .parkDet a {\n        text-decoration: none;\n        font-size: 1em;\n        color: black; }\n    #parksContainer .parks .parkAddress {\n      display: inline-block;\n      position: relative;\n      left: 32.5%;\n      bottom: 10em; }\n    #parksContainer .parks .parkMatch {\n      display: inline-block;\n      position: relative;\n      left: 45%;\n      bottom: 10em;\n      width: 15%;\n      color: white;\n      background-color: #ef3122;\n      border-radius: 15px;\n      border: none;\n      outline: none;\n      box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);\n      text-align: center;\n      padding: 1%;\n      font-size: 18px; }\n    #parksContainer .parks .availableSports {\n      display: inline-block;\n      float: left;\n      width: 45%;\n      list-style-type: none;\n      position: relative;\n      left: 60%;\n      bottom: 8em; }\n      #parksContainer .parks .availableSports .sportPic {\n        width: 19%;\n        padding-right: 0.1em; }\n    #parksContainer .parks .parkMatch:active {\n      box-shadow: none; }\n    #parksContainer .parks a {\n      color: white;\n      text-decoration: none; }\n    #parksContainer .parks #updateDetails {\n      position: relative;\n      left: 100%;\n      top: 6em; }\n\n#backPark {\n  position: relative;\n  left: 5%;\n  bottom: 4em; }\n\n#nextPark {\n  position: relative;\n  left: 5.5%;\n  bottom: 4em; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
 
 	// exports
 
@@ -10150,7 +10148,7 @@
 
 
 	// module
-	exports.push([module.id, "#parksPage * {\n  display: inline-block;\n  margin: 0; }\n#parksPage h2 {\n  position: relative;\n  left: 17%; }\n#parksPage .hidden {\n  display: none; }\n#parksPage dialog {\n  width: 60%;\n  margin: 0 20%;\n  z-index: 2; }\n  #parksPage dialog .close {\n    text-decoration: none;\n    border-radius: 100%;\n    background-color: transparent;\n    padding: .0em .3em .1em 0.3em;\n    outline: none;\n    text-align: center;\n    position: relative;\n    bottom: 1.5em;\n    left: 25%;\n    color: black;\n    box-shadow: none; }\n#parksPage #parksDetail {\n  background-color: #e3e3e3;\n  height: 250px;\n  font-size: 20px;\n  border-bottom: solid black 1px;\n  width: 100%; }\n  #parksPage #parksDetail ul {\n    width: 100%;\n    padding: 0; }\n#parksPage #googleMaps2 {\n  position: relative;\n  top: .5em;\n  left: 7%; }\n#parksPage .parkName {\n  position: relative;\n  bottom: 7em;\n  left: 6%; }\n#parksPage .parkAddress {\n  position: relative;\n  bottom: 4.5em;\n  right: 34.5%; }\n#parksPage .yelp {\n  position: relative;\n  bottom: 4.5em;\n  left: 6%; }\n#parksPage #sportIcon {\n  position: relative;\n  right: 13em; }\n#parksPage #parkMatch {\n  padding: 10px;\n  background-color: #1e8880;\n  color: white;\n  border: none;\n  border-radius: 20px;\n  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n  outline: none;\n  text-decoration: none;\n  position: relative;\n  bottom: 8em;\n  left: 65%; }\n#parksPage #createCourt {\n  padding: 10px;\n  background-color: #1e8880;\n  color: white;\n  border: none;\n  border-radius: 20px;\n  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n  outline: none;\n  text-decoration: none;\n  position: relative;\n  bottom: 5em;\n  left: 75.4%; }\n#parksPage .parkMatches {\n  background-color: #fff;\n  width: 70%;\n  margin: 1% 16%;\n  padding: 0;\n  height: 15em; }\n  #parksPage .parkMatches #sportImage img {\n    width: 80%;\n    margin: 5%;\n    position: relative;\n    top: 1.5em; }\n  #parksPage .parkMatches .description {\n    position: relative;\n    bottom: 7em;\n    right: 3%; }\n  #parksPage .parkMatches #skillProgress {\n    position: relative;\n    bottom: 4em;\n    right: 23%; }\n  #parksPage .parkMatches .players {\n    position: relative;\n    right: 50%;\n    bottom: 2em; }\n  #parksPage .parkMatches .matchSubmit {\n    position: relative;\n    bottom: 4em;\n    padding: 10px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n    #parksPage .parkMatches .matchSubmit a {\n      text-decoration: none;\n      color: white; }\n  #parksPage .parkMatches .smallImg {\n    position: relative;\n    top: 2em; }\n\n/*# sourceMappingURL=parksDetail.css.map */\n", ""]);
+	exports.push([module.id, "#parksPage * {\n  display: inline-block;\n  margin: 0; }\n#parksPage h2 {\n  position: relative;\n  left: 17%; }\n#parksPage .hidden {\n  display: none; }\n#parksPage dialog {\n  width: 60%;\n  margin: 0 20%;\n  z-index: 2; }\n  #parksPage dialog .close {\n    text-decoration: none;\n    border-radius: 100%;\n    background-color: transparent;\n    padding: .0em .3em .1em 0.3em;\n    outline: none;\n    text-align: center;\n    position: relative;\n    bottom: 1.5em;\n    left: 25%;\n    color: black;\n    box-shadow: none; }\n#parksPage #parksDetail {\n  background-color: #e3e3e3;\n  height: 250px;\n  font-size: 20px;\n  border-bottom: solid black 1px;\n  width: 100%; }\n  #parksPage #parksDetail ul {\n    width: 100%;\n    padding: 0; }\n#parksPage #googleMaps2 {\n  position: relative;\n  top: .5em;\n  left: 7%; }\n#parksPage .parkName {\n  position: relative;\n  bottom: 6em;\n  left: 6%; }\n#parksPage .parkAddress {\n  position: relative;\n  bottom: 3.5em;\n  right: 34.5%; }\n#parksPage .yelp {\n  position: relative;\n  bottom: 3.5em;\n  left: 9.5%; }\n#parksPage #sportIcon {\n  position: relative;\n  right: 13em; }\n#parksPage #parkMatch {\n  padding: 10px;\n  background-color: #1e8880;\n  color: white;\n  border: none;\n  border-radius: 20px;\n  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n  outline: none;\n  text-decoration: none;\n  position: relative;\n  bottom: 8em;\n  left: 65%; }\n#parksPage #createCourt {\n  padding: 10px;\n  background-color: #1e8880;\n  color: white;\n  border: none;\n  border-radius: 20px;\n  box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n  outline: none;\n  text-decoration: none;\n  position: relative;\n  bottom: 5em;\n  left: 75.4%; }\n#parksPage .parkMatches {\n  background-color: #fff;\n  width: 70%;\n  margin: 1% 16%;\n  padding: 0;\n  height: 15em; }\n  #parksPage .parkMatches #sportImage img {\n    width: 80%;\n    margin: 5%;\n    position: relative;\n    top: 1.5em; }\n  #parksPage .parkMatches .description {\n    position: relative;\n    bottom: 7em;\n    right: 3%; }\n  #parksPage .parkMatches #skillProgress {\n    position: relative;\n    bottom: 4em;\n    right: 23%; }\n  #parksPage .parkMatches .players {\n    position: relative;\n    right: 50%;\n    bottom: 2em; }\n  #parksPage .parkMatches .matchSubmit {\n    position: relative;\n    bottom: 4em;\n    padding: 10px;\n    background-color: #1e8880;\n    color: white;\n    border: none;\n    border-radius: 20px;\n    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);\n    outline: none; }\n    #parksPage .parkMatches .matchSubmit a {\n      text-decoration: none;\n      color: white; }\n  #parksPage .parkMatches .smallImg {\n    position: relative;\n    top: 2em; }\n\n/*# sourceMappingURL=parksDetail.css.map */\n", ""]);
 
 	// exports
 
@@ -10355,25 +10353,20 @@
 	var login = __webpack_require__(40);
 	var signup = __webpack_require__(44);
 	var main = __webpack_require__(45);
-	var parkList = __webpack_require__(46);
-	var matchPage = __webpack_require__(47);
-	var updatematch = __webpack_require__(48);
-	var userUpdate = __webpack_require__(49);
-	var history = __webpack_require__(50);
-	var profile = __webpack_require__(51);
-	var createMatch = __webpack_require__(52);
-	var feedback = __webpack_require__(53);
-	var home = __webpack_require__(54);
-	var matchModel = __webpack_require__(55);
-	var parks = __webpack_require__(56);
-	var parksDetail = __webpack_require__(57);
-	var parkCreateMatch = __webpack_require__(58);
-	var parkCreatePage = __webpack_require__(59);
+	var matchPage = __webpack_require__(46);
+	var updatematch = __webpack_require__(47);
+	var userUpdate = __webpack_require__(48);
+	var history = __webpack_require__(49);
+	var profile = __webpack_require__(50);
+	var createMatch = __webpack_require__(51);
+	var feedback = __webpack_require__(52);
+	var home = __webpack_require__(53);
+	var parks = __webpack_require__(54);
+	var parksDetail = __webpack_require__(55);
+	var parkCreateMatch = __webpack_require__(56);
+	var parkCreatePage = __webpack_require__(57);
 	var counter = 1;
 	var jQuery = __webpack_require__(1);
-
-
-
 	////////////////////////////////////////////////////////////
 
 	////////////////////////////////////////////////////////////
@@ -10413,149 +10406,146 @@
 	    time: null
 	  },
 	  url: 'https://skill-match.herokuapp.com/api/matches/'
-	});
+	  });
 
-	// Using Backbone fetch to GET the up coming matches
-	var Matches = Backbone.Collection.extend({
-	  model: Match,
-	  url: 'https://skill-match.herokuapp.com/api/matches/'
-	});
-	$('#loginSubmit').on('click', function(e){
-	          e.preventDefault();
-	          var username = $("#username").val();
-	          var password = $("#password").val();
-	          var homeBtn = document.createElement('a');
-	          var link = document.createTextNode("Hello, " + username);
-	          homeBtn.appendChild(link);
-	          $.ajax({
-	        url:"https://skill-match.herokuapp.com/api/api-token-auth/",
-	        method:'POST',
-	        data: {username: username, password:password}
-	      }).then(function(resp){
-	        setToken(resp.token);
-	        console.log(resp);
-	        var user_id = resp.user_id;
-	        var user = resp.username;
-	        var token = resp.token;
-	        Cookie.set('token', token);
-	        Cookie.set('uid', user_id);
-	        Cookie.set('userName', user);
-	        $('#nav').html(homeBtn);
-	        $('#nav').append('<a id="logout"> (Logout) </a>');
-	        homeBtn.setAttribute('href', '/home/'+username);
-	        router.navigate('/home/' + username , {trigger:true})
-	      });
+	  // Using Backbone fetch to GET the up coming matches
+	  var Matches = Backbone.Collection.extend({
+	    model: Match,
+	    url: 'https://skill-match.herokuapp.com/api/matches/'
+	  });
+	  $('#loginSubmit').on('click', function(e){
+	    e.preventDefault();
+	    var username = $("#username").val();
+	    var password = $("#password").val();
+	    var homeBtn = document.createElement('a');
+	    var link = document.createTextNode("Hello, " + username);
+	    homeBtn.appendChild(link);
+	    $.ajax({
+	      url:"https://skill-match.herokuapp.com/api/api-token-auth/",
+	      method:'POST',
+	      data: {username: username, password:password}
+	    }).then(function(resp){
+	      setToken(resp.token);
+	      console.log(resp);
+	      var user_id = resp.user_id;
+	      var user = resp.username;
+	      var token = resp.token;
+	      Cookie.set('token', token);
+	      Cookie.set('uid', user_id);
+	      Cookie.set('userName', user);
+	      $('#nav').html(homeBtn);
+	      $('#nav').append('<a id="logout"> (Logout) </a>');
+	      homeBtn.setAttribute('href', '/home/'+username);
+	      router.navigate('/home/' + username , {trigger:true})
 	    });
-	    function setToken(token) {
-	  var backboneSync = Backbone.sync;
-	  Backbone.sync = function(method,model,options) {
-	    options.headers = {
-	      'Authorization': 'Token ' + token
-	    };
+	  });
+	  function setToken(token) {
+	    var backboneSync = Backbone.sync;
+	    Backbone.sync = function(method,model,options) {
+	      options.headers = {
+	        'Authorization': 'Token ' + token
+	      };
 	    backboneSync(method,model,options);
 	    };
 	  }
 
 	  function geoFindMe() {
-	  function success(position) {
-	    var latitude  = position.coords.latitude;
-	    var longitude = position.coords.longitude;
-	    console.log('latitude '+latitude);
-	    console.log('longitude '+longitude);
-	    var match = new Match();
-	    match.fetch({
-	      url: 'https://skill-match.herokuapp.com/api/matches/?lat='+ latitude + '&long=' + longitude,
-	 success: function(resp) {
-	    var html = main({'data': resp.toJSON().results});
-	    var mainTemplate = $("#mainTemplate").text();
-	    var mainHTML = Mustache.render(mainTemplate, 'data');
-	    var next = resp.toJSON().next;
-	    var previous = resp.toJSON().previous;
-	    $("#upComing").html(mainHTML);
-	    $("#container").html(html);
-	   console.log("success: ",resp)
-	   $("#sport").on('change', function() {
-	      filterSport();
-	    })
-	   $('#next').on('click', function(){
-	    nextPage(next)
-	    window.scrollTo(0, 450);
-	   })
-	   $('#prev').on('click', function(){
-	    prevPage(prev)
-	    window.scrollTo(0, 450);
-	   })
-	   $("#createMatchButton").on('click', function() {
-	    router.navigate('/parks', {trigger: true});
-	   });
-	   $("#area").on('click', function() {
-	    geoFindMe();
-	   });
-	   $("#submitArea").on('click', function() {
-	    matchesAround();
-	   })
-	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-	});
-	  };
-
+	    function success(position) {
+	      var latitude  = position.coords.latitude;
+	      var longitude = position.coords.longitude;
+	      console.log('latitude '+latitude);
+	      console.log('longitude '+longitude);
+	      var match = new Match();
+	      match.fetch({
+	        url: 'https://skill-match.herokuapp.com/api/matches/?lat='+ latitude + '&long=' + longitude,
+	        success: function(resp) {
+	          var html = main({'data': resp.toJSON().results});
+	          var mainTemplate = $("#mainTemplate").text();
+	          var mainHTML = Mustache.render(mainTemplate, 'data');
+	          var next = resp.toJSON().next;
+	          var previous = resp.toJSON().previous;
+	          $("#upComing").html(mainHTML);
+	          $("#container").html(html);
+	          console.log("success: ",resp)
+	          $("#sport").on('change', function() {
+	            filterSport();
+	          });
+	          $('#next').on('click', function(){
+	            nextPage(next)
+	            window.scrollTo(0, 450);
+	          });
+	          $('#prev').on('click', function(){
+	            prevPage(prev)
+	            window.scrollTo(0, 450);
+	          });
+	          $("#createMatchButton").on('click', function() {
+	            router.navigate('/parks', {trigger: true});
+	          });
+	          $("#area").on('click', function() {
+	            geoFindMe();
+	          });
+	          $("#submitArea").on('click', function() {
+	            matchesAround();
+	          });
+	        },
+	        error: function(err) {
+	          console.log("nope")
+	        }
+	      });
+	    };
 	  function error() {
 	  };
 	  $('#areaInput').val("Locating…");
-	  navigator.geolocation.getCurrentPosition(success, error);
-	}
+	    navigator.geolocation.getCurrentPosition(success, error);
+	  }
+
 
 	  function matchesAround() {
 	    var match = new Match();
 	    match.fetch({
 	      url: 'http://skill-match.herokuapp.com/api/matches/?zip='+$('#areaInput').val(),
-	 success: function(resp) {
-	    var html = main({'data': resp.toJSON().results});
-	    var mainTemplate = $("#mainTemplate").text();
-	    var mainHTML = Mustache.render(mainTemplate, 'data');
-	    var next = resp.toJSON().next;
-	    var previous = resp.toJSON().previous;
-	    $("#upComing").html(mainHTML);
-	    $("#container").html(html);
-	   console.log("success: ",resp)
-	   $("#sport").on('change', function() {
-	      filterSport();
-	    })
-	   $('#next').on('click', function(){
-	    nextPage(next)
-	    window.scrollTo(0, 450);
-	   })
-	   $('#prev').on('click', function(){
-	    prevPage(prev)
-	    window.scrollTo(0, 450);
-	   })
-	   $("#createMatchButton").on('click', function() {
-	    router.navigate('/parks', {trigger: true});
-	   });
-	   $("#area").on('click', function() {
-	    geoFindMe();
-	   });
-	   $("#submitArea").on('click', function() {
-	    matchesAround();
-	   })
-	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-	});
-	$('#areaInput').val("Locating…");
+	      success: function(resp) {
+	        var html = main({'data': resp.toJSON().results});
+	        var mainTemplate = $("#mainTemplate").text();
+	        var mainHTML = Mustache.render(mainTemplate, 'data');
+	        var next = resp.toJSON().next;
+	        var previous = resp.toJSON().previous;
+	        $("#upComing").html(mainHTML);
+	        $("#container").html(html);
+	        console.log("success: ",resp)
+	        $("#sport").on('change', function() {
+	          filterSport();
+	        });
+	        $('#next').on('click', function(){
+	          nextPage(next)
+	          window.scrollTo(0, 450);
+	        });
+	        $('#prev').on('click', function(){
+	          prevPage(prev)
+	          window.scrollTo(0, 450);
+	        });
+	        $("#createMatchButton").on('click', function() {
+	          router.navigate('/parks', {trigger: true});
+	        });
+	        $("#area").on('click', function() {
+	          geoFindMe();
+	        });
+	        $("#submitArea").on('click', function() {
+	          matchesAround();
+	        });
+	      },
+	      error: function(err) {
+	        console.log("nope")
+	      }
+	    });
+	    $('#areaInput').val("Locating…");
 	  };
 
-
 	  function filterSport() {
-
 	    var match = counter++
 	    var match = new Match();
-	          match.fetch({
-	        url: "http://skill-match.herokuapp.com/api/matches/?sport=" + $("#sport").val(),
-
+	    match.fetch({
+	      url: "http://skill-match.herokuapp.com/api/matches/?sport=" + $("#sport").val(),
 	        success: function(resp) {
 	          var html = main({'data': resp.toJSON().results});
 	          var mainTemplate = $("#mainTemplate").text();
@@ -10565,154 +10555,149 @@
 	          $("#upComing").html(mainHTML);
 	          $("#container").html(html);
 	          $("#sport").on('change', function() {
-	      filterSport();
-	    });
+	            filterSport();
+	          });
 	          $('#next').on('click', function(){
-	    nextPage(next)
-	   })
-	   $('#prev').on('click', function(){
-	    prevPage(previous)
-	   })
-	      $("#createMatchButton").on('click', function() {
-	    router.navigate('/parks', {trigger: true});
-	   });
-	      $("#area").on('click', function() {
-	    geoFindMe();
-	   });
-	   $("#submitArea").on('click', function() {
-	    matchesAround();
-	   })
+	            nextPage(next)
+	          });
+	          $('#prev').on('click', function(){
+	            prevPage(previous)
+	          });
+	          $("#createMatchButton").on('click', function() {
+	            router.navigate('/parks', {trigger: true});
+	          });
+	          $("#area").on('click', function() {
+	            geoFindMe();
+	          });
+	          $("#submitArea").on('click', function() {
+	            matchesAround();
+	          });
 	        },
 	        error: function(err) {
-	         console.log("nope")
+	          console.log("nope")
 	        }
-	      });
+	    });
 	  }
 
 	  function nextPage(next){
 	    var nextPages = new Match();
 	    nextPages.fetch({
-	       url: next,
-	 success: function(resp) {
-	    var html = main({'data': resp.toJSON().results});
-	    var mainTemplate = $("#mainTemplate").text();
-	    var mainHTML = Mustache.render(mainTemplate, 'data');
-	    var next = resp.toJSON().next;
-	    var previous = resp.toJSON().previous;
-	    console.log(next);
-	    console.log(previous);
-	    $("#upComing").html(mainHTML);
-	    $("#container").html(html);
-	   console.log("success: ",resp)
-	    $("#sport").on('change', function() {
-	      filterSport();
-	    })
-	   $('#next').on('click', function(){
-	    nextPage(next)
-	    window.scrollTo(0, 450);
-	   })
-	   $('#prev').on('click', function(){
-	    prevPage(previous)
-	    window.scrollTo(0, 450);
-	   })
-	   $("#createMatchButton").on('click', function() {
-	    router.navigate('/parks', {trigger: true});
-	   });
-	   $("#area").on('click', function() {
-	    geoFindMe();
-	   });
-	   $("#submitArea").on('click', function() {
-	    matchesAround();
-	   })
-	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-	});
+	      url: next,
+	      success: function(resp) {
+	        var html = main({'data': resp.toJSON().results});
+	        var mainTemplate = $("#mainTemplate").text();
+	        var mainHTML = Mustache.render(mainTemplate, 'data');
+	        var next = resp.toJSON().next;
+	        var previous = resp.toJSON().previous;
+	        console.log(next);
+	        console.log(previous);
+	        $("#upComing").html(mainHTML);
+	        $("#container").html(html);
+	        console.log("success: ",resp)
+	        $("#sport").on('change', function() {
+	          filterSport();
+	        });
+	        $('#prev').on('click', function(){
+	          prevPage(previous)
+	          window.scrollTo(0, 450);
+	        });
+	        $("#createMatchButton").on('click', function() {
+	          router.navigate('/parks', {trigger: true});
+	        });
+	        $("#area").on('click', function() {
+	          geoFindMe();
+	        });
+	        $("#submitArea").on('click', function() {
+	          matchesAround();
+	        });
+	      },
+	      error: function(err) {
+	        console.log("nope")
+	      }
+	    });
 	  }
 
 	  function prevPage(previous){
 	    var prevPages = new Match();
 	    prevPages.fetch({
-	       url: previous,
-	 success: function(resp) {
-	    var html = main({'data': resp.toJSON().results});
-	    var mainTemplate = $("#mainTemplate").text();
-	    var mainHTML = Mustache.render(mainTemplate, 'data');
-	    var next = resp.toJSON().next;
-	    var previous = resp.toJSON().previous;
-	    console.log(next);
-	    console.log(previous);
-	    $("#upComing").html(mainHTML);
-	    $("#container").html(html);
-	   console.log("success: ",resp)
-	   $("#sport").on('change', function() {
-	      filterSport();
-	    })
-	   $('#next').on('click', function(){
-	    nextPage(next)
-	    window.scrollTo(0, 450);
-	   })
-	   $('#prev').on('click', function(){
-	    prevPage(previous)
-	    window.scrollTo(0, 450);
-	   })
-	   $("#createMatchButton").on('click', function() {
-	    router.navigate('/parks', {trigger: true});
-	   });
-	   $("#area").on('click', function() {
-	    geoFindMe();
-	   });
-	   $("#submitArea").on('click', function() {
-	    matchesAround();
-	   })
-	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-	});
+	      url: previous,
+	      success: function(resp) {
+	        var html = main({'data': resp.toJSON().results});
+	        var mainTemplate = $("#mainTemplate").text();
+	        var mainHTML = Mustache.render(mainTemplate, 'data');
+	        var next = resp.toJSON().next;
+	        var previous = resp.toJSON().previous;
+	        console.log(next);
+	        console.log(previous);
+	        $("#upComing").html(mainHTML);
+	        $("#container").html(html);
+	        console.log("success: ",resp)
+	        $("#sport").on('change', function() {
+	          filterSport();
+	        });
+	        $('#next').on('click', function(){
+	          nextPage(next)
+	          window.scrollTo(0, 450);
+	        });
+	        $('#prev').on('click', function(){
+	          prevPage(previous)
+	          window.scrollTo(0, 450);
+	        });
+	        $("#createMatchButton").on('click', function() {
+	          router.navigate('/parks', {trigger: true});
+	        });
+	        $("#area").on('click', function() {
+	          geoFindMe();
+	        });
+	        $("#submitArea").on('click', function() {
+	          matchesAround();
+	        })
+	      },
+	      error: function(err) {
+	        console.log("nope")
+	      }
+	    });
 	  }
 
 	    var match = new Match();
 	    match.fetch({
-	 success: function(resp) {
-	    var html = main({'data': resp.toJSON().results});
-	    var mainTemplate = $("#mainTemplate").text();
-	    var mainHTML = Mustache.render(mainTemplate, 'data');
-	    var next = resp.toJSON().next;
-	    var previous = resp.toJSON().previous;
-	    $("#upComing").html(mainHTML);
-	    $("#container").html(html);
-	   console.log("success: ",resp)
-	   $("#sport").on('change', function() {
-	      filterSport();
-	    })
-	   $('#next').on('click', function(){
-	    nextPage(next)
-	    window.scrollTo(0, 450);
-	   })
-	   $('#prev').on('click', function(){
-	    prevPage(prev)
-	    window.scrollTo(0, 450);
-	   })
-	   $("#createMatchButton").on('click', function() {
-	    router.navigate('/parks', {trigger: true});
-	   });
-	   $("#area").on('click', function() {
-	    geoFindMe();
-	   });
-	   $("#submitArea").on('click', function() {
-	    matchesAround();
-	   })
-	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
+	      success: function(resp) {
+	        var html = main({'data': resp.toJSON().results});
+	        var mainTemplate = $("#mainTemplate").text();
+	        var mainHTML = Mustache.render(mainTemplate, 'data');
+	        var next = resp.toJSON().next;
+	        var previous = resp.toJSON().previous;
+	        $("#upComing").html(mainHTML);
+	        $("#container").html(html);
+	        console.log("success: ",resp)
+	        $("#sport").on('change', function() {
+	          filterSport();
+	        });
+	        $('#next').on('click', function(){
+	          nextPage(next)
+	          window.scrollTo(0, 450);
+	        });
+	        $('#prev').on('click', function(){
+	          prevPage(prev)
+	          window.scrollTo(0, 450);
+	        });
+	        $("#createMatchButton").on('click', function() {
+	          router.navigate('/parks', {trigger: true});
+	        });
+	        $("#area").on('click', function() {
+	          geoFindMe();
+	        });
+	        $("#submitArea").on('click', function() {
+	          matchesAround();
+	        });
+	      },
+	      error: function(err) {
+	        console.log("nope")
+	      }
+	    });
+	  }
 	});
 	// End of backbone fetch for upcoming games
-
-	   }
-	});
 	////////////////////////////////////////////////////////////
 
 	////////////////////////////////////////////////////////////
@@ -10720,61 +10705,61 @@
 	var router = new Router();
 	router.on('route:signup', function(){
 	  var html = signup;
-	        $("#container").html(html);
-	var User = Backbone.Model.extend({
-	  initialize: function () {
-	  },
-	  defaults: {
-	    username: null,
-	    email: null,
-	    password: null,
-	    profile: {
+	  $("#container").html(html);
+	  var User = Backbone.Model.extend({
+	    initialize: function () {
+	    },
+	    defaults: {
+	      username: null,
+	      email: null,
+	      password: null,
+	      profile: {
 	        gender: null,
 	        age: null,
 	        phone_number: null,
 	        wants_texts: false
+	      }
+	    },
+	    url: 'https://skill-match.herokuapp.com/api/users/create/'
+	  });
+	  $('#rtxt').prop('checked', true);
+	  $(".register").on('click', function(e) {
+	    e.preventDefault();
+	    user = new User();
+	    user.set({
+	      username: $("#ruser").val(),
+	      email: $("#remail").val(),
+	      password:$("#rpass").val(),
+	      profile: {
+	      gender: $(".rgen").val(),
+	      age: $("#rage").val(),
+	      phone_number: $("#rnumber").val(),
+	      wants_texts: $("#rtxt").is(':checked')
 	    }
-
-	  },
-	  url: 'https://skill-match.herokuapp.com/api/users/create/'
-	});
-	$('#rtxt').prop('checked', true);
-	$(".register").on('click', function(e) {
-	  e.preventDefault();
-	   user = new User();
-	   user.set({
-	     username: $("#ruser").val(),
-	     email: $("#remail").val(),
-	     password:$("#rpass").val(),
-	     profile: {
-	     gender: $(".rgen").val(),
-	     age: $("#rage").val(),
-	     phone_number: $("#rnumber").val(),
-	     wants_texts: $("#rtxt").is(':checked')
-	    }
-	  })
+	  });
 	  var Users = Backbone.Collection.extend({
 	    model: User,
 	    url: 'https://skill-match.herokuapp.com/api/users/create/'
-	});
-	var UserCollection = new Users();
-	if ($("#rpass").val() === ($("#rerpass").val())) {
-	  user.save(null, {
-	   success: function(resp) {
-	     console.log("success: ",resp)
-	     console.log("New user added.");
-	     router.navigate("/?home=home", {trigger: true})
-	   },
-	   error: function(err) {
-	     console.log("nope")
+	  });
+	  var UserCollection = new Users();
+	  if ($("#rpass").val() === ($("#rerpass").val())) {
+	    user.save(null, {
+	      success: function(resp) {
+	        console.log("success: ",resp)
+	        console.log("New user added.");
+	        router.navigate("/?home=home", {trigger: true})
+	      },
+	      error: function(err) {
+	        console.log("nope")
+	      }
+	    });
+	  } else {
+	      alert("Sorry, you entered the wrong password. Please try again.");
+	      router.navigate("/signup", {trigger: true});
 	    }
 	  });
-	  } else {
-	    alert("Sorry, you entered the wrong password. Please try again.");
-	    router.navigate("/signup", {trigger: true});
-	  }
-	 });
-	}); // End of the sign up router
+	});
+	// End of the sign up router
 	////////////////////////////////////////////////////////////
 
 	////////////////////////////////////////////////////////////
@@ -10790,84 +10775,81 @@
 	    skill_level: null,
 	    date: null,
 	    time: null
-	      },
+	  },
 	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
-	});
+	  });
 	  var Matches = Backbone.Collection.extend({
-	  model: Match,
-	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
-	});
-	    var match = new Match();
+	    model: Match,
+	    url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	  });
+	  var match = new Match();
 	    match.fetch({
-	 success: function(resp) {
-	    var html = home({'data': resp.toJSON().results});
-	    var homeTemplate = $("#homeTemplate").text();
-	    var homeHTML = Mustache.render(homeTemplate, 'data');
-	    $("#yourMatches").html(homeHTML);
-	    $("#container").html(html);
-	   console.log("success: ",resp);
-
-
-	    var profileContainer = Backbone.Model.extend({
-	    initialize: function() {
-	    },
-	    defaults: {
-	      id: null,
-	      username: null,
-	      profile: {
-	        gender: null,
-	        age: null,
-	        skill: null,
-	        sportsmanship: null
-	      }
-	    },
-	    Model: profileContainer,
-	    url: 'https://skill-match.herokuapp.com/api/users/'+Cookie.get('uid')+'/'
-	  });
-	  var Profiles = Backbone.Collection.extend({
-	    Model: profileContainer,
-	    url: 'https://skill-match.herokuapp.com/api/users/'+Cookie.get('uid')+'/'
-	  });
-	  var userProfile = new Profiles();
-	  userProfile.fetch({
-	    success: function(resp) {
-	      var userhtml =home({'user': resp.toJSON()});
-	      var userTemplate = $("#userTemplate").text();
-	      var userHTML = Mustache.render(userTemplate, 'user');
-	      $("#userprofile").html(userhtml);
-	      console.log('success', resp.toJSON());
-
-	    $("#logout").on('click', function() {
-	      Cookie.remove('token');
-	      Cookie.remove('userName');
-	      Cookie.remove('uid');
-	      router.navigate('/?home=home');
-	      location.reload();
-	    });
-
-	      $('#createMatch').on('click', function(){
-	         function success(position) {
-	    var latitude  = position.coords.latitude;
-	    var longitude = position.coords.longitude;
-	    console.log('latitude '+latitude);
-	    console.log('longitude '+longitude);
-	  }
+	      success: function(resp) {
+	        var html = home({'data': resp.toJSON().results});
+	        var homeTemplate = $("#homeTemplate").text();
+	        var homeHTML = Mustache.render(homeTemplate, 'data');
+	        $("#yourMatches").html(homeHTML);
+	        $("#container").html(html);
+	        console.log("success: ",resp);
+	        var profileContainer = Backbone.Model.extend({
+	        initialize: function() {
+	        },
+	        defaults: {
+	          id: null,
+	          username: null,
+	          profile: {
+	            gender: null,
+	            age: null,
+	            skill: null,
+	            sportsmanship: null
+	          }
+	        },
+	        Model: profileContainer,
+	        url: 'https://skill-match.herokuapp.com/api/users/'+Cookie.get('uid')+'/'
+	      });
+	      var Profiles = Backbone.Collection.extend({
+	        Model: profileContainer,
+	        url: 'https://skill-match.herokuapp.com/api/users/'+Cookie.get('uid')+'/'
+	      });
+	      var userProfile = new Profiles();
+	      userProfile.fetch({
+	        success: function(resp) {
+	        var userhtml =home({'user': resp.toJSON()});
+	        var userTemplate = $("#userTemplate").text();
+	        var userHTML = Mustache.render(userTemplate, 'user');
+	        $("#userprofile").html(userhtml);
+	        console.log('success', resp.toJSON());
+	        $("#logout").on('click', function() {
+	          Cookie.remove('token');
+	          Cookie.remove('userName');
+	          Cookie.remove('uid');
+	          router.navigate('/?home=home');
+	          location.reload();
+	        });
+	        $('#createMatch').on('click', function(){
+	          function success(position) {
+	            var latitude  = position.coords.latitude;
+	            var longitude = position.coords.longitude;
+	            console.log('latitude '+latitude);
+	            console.log('longitude '+longitude);
+	          }
 	          router.navigate('/parks', {trigger: true});
-	        })
+	          })
+	        },
+	        error: function(err) {
+	          console.log('error', err);
+	        }
+	      });
 	    },
 	    error: function(err) {
-	      console.log('error', err);
-	    }
-	  })
-	 },
-	  error: function(err) {
-	      console.log("nope")
+	      console.log("nope");
 	    }
 	  });
-	}); // End of home router
+	});
+	// End of home router
 	////////////////////////////////////////////////////////////
 	router.on('route:userUpdate', function(id){
-	var profileContainer = Backbone.Model.extend({
+	  var profileContainer = Backbone.Model.extend({
 	    initialize: function() {
 	    },
 	    defaults: {
@@ -10879,7 +10861,6 @@
 	        age: null,
 	        phone_number: null,
 	        wants_texts: null
-
 	      }
 	    },
 	    Model: profileContainer,
@@ -10889,7 +10870,7 @@
 	    Model: profileContainer,
 	    url: 'https://skill-match.herokuapp.com/api/users/'+id+'/'
 	  });
-	var userProfile = new Profiles(id);
+	  var userProfile = new Profiles(id);
 	    userProfile.fetch({
 	      success: function(resp) {
 	      var html = userUpdate({'update': resp.toJSON()});
@@ -10898,45 +10879,40 @@
 	      $("#updatePage").html(updateHTML);
 	      $("#container").html(html);
 	      console.log('success', resp.toJSON());
-
-	    $('#rtxt').prop('checked', true)
-	    $(".register").on('click', function(e) {
-
-	    e.preventDefault();
-	    userProfile = new profileContainer({id:id});
-	    userProfile.set({
-	    username: $("#ruser").val(),
-	     email: $("#remail").val(),
-	     password:$("#rpass").val(),
-	     profile: {
-	     gender: $(".rgen").val(),
-	     age: $("#rage").val(),
-	     phone_number: $("#rnumber").val(),
-	     wants_texts: $("#rtxt").is(':checked')
+	      $('#rtxt').prop('checked', true)
+	      $(".register").on('click', function(e) {
+	        e.preventDefault();
+	        userProfile = new profileContainer({id:id});
+	        userProfile.set({
+	          username: $("#ruser").val(),
+	          email: $("#remail").val(),
+	          password:$("#rpass").val(),
+	          profile: {
+	            gender: $(".rgen").val(),
+	            age: $("#rage").val(),
+	            phone_number: $("#rnumber").val(),
+	            wants_texts: $("#rtxt").is(':checked')
+	          }
+	        });
+	        userProfile.save(null, {
+	          url: 'https://skill-match.herokuapp.com/api/users/'+id+'/',
+	          success: function(resp) {
+	            console.log("success", resp);
+	          },
+	          error: function(err) {
+	          console.log("error", err);
+	          }
+	        });
+	      });
+	    },
+	    error: function(err) {
+	      console.log("error", err);
 	    }
 	  });
-	  userProfile.save(null, {
-	    url: 'https://skill-match.herokuapp.com/api/users/'+id+'/',
-	      success: function(resp) {
-	        console.log("success", resp);
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
-	  });
-
-	  });
-
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
-	        })
-
-	})
+	});
+	// End of userUpdate router
 	//////////////////////////////////////////////////////////////////////////////////////
 	// Player Profile page
-
 	router.on('route:profile', function(creator, username) {
 	  if(Cookie.get('uid')==creator) {
 	    router.navigate('/home/' + Cookie.get('userName'), {trigger: true})
@@ -10978,43 +10954,42 @@
 	      console.log('success', resp.toJSON());
 	      $('#challenge').on('click', function(){
 	        router.navigate('/challenge/' + id, {trigger: true});
-	      })
-
+	      });
 	      var Match = Backbone.Model.extend({
-	  initialize: function () {
-	  },
-	  defaults: {
-	    description: null,
-	    park_name: null,
-	    sport: null,
-	    skill_level: null,
-	    date: null,
-	    time: null
+	        initialize: function () {
 	      },
-	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
-	});
-	  var Matches = Backbone.Collection.extend({
-	  model: Match,
-	  url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
-	});
+	        defaults: {
+	          description: null,
+	          park_name: null,
+	          sport: null,
+	          skill_level: null,
+	          date: null,
+	          time: null
+	        },
+	        url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	        });
+	      var Matches = Backbone.Collection.extend({
+	        model: Match,
+	        url: 'http://skill-match.herokuapp.com/api/matches/?username=' + username
+	      });
 	      var userMatches = new Match();
-	  userMatches.fetch({
-	    success: function(resp) {
-	      var historyhtml = history({'history': resp.toJSON().results});
-	      var historyTemplate = $("#historyTemplate").text();
-	      var historyHTML = Mustache.render(historyTemplate, 'history');
-	      $("#historyContainer").html(historyhtml);
-	      console.log('success', resp.toJSON());
+	      userMatches.fetch({
+	        success: function(resp) {
+	        var historyhtml = history({'history': resp.toJSON().results});
+	        var historyTemplate = $("#historyTemplate").text();
+	        var historyHTML = Mustache.render(historyTemplate, 'history');
+	        $("#historyContainer").html(historyhtml);
+	          console.log('success', resp.toJSON());
+	        },
+	        error: function(err) {
+	          console.log('error', err);
+	        }
+	      });
 	    },
 	    error: function(err) {
 	      console.log('error', err);
 	    }
-	  })
-	    },
-	    error: function(err) {
-	      console.log('error', err);
-	    }
-	  })
+	  });
 	});
 
 	var matchContainer = Backbone.Model.extend({
@@ -11026,10 +11001,10 @@
 	    skill_level: null,
 	    date: null,
 	    time: null
-	    },
+	  },
 	    Model: matchContainer,
 	    url: 'https://skill-match.herokuapp.com/api/matches/'
-	  });
+	});
 	var Matches = Backbone.Collection.extend({
 	  model: matchContainer,
 	  url: 'https://skill-match.herokuapp.com/api/matches/'
@@ -11071,7 +11046,7 @@
 	          $("#confirm").show();
 	          $("#decline").show();
 	          $("#update").hide();
-	        $("#cancel").hide();
+	          $("#cancel").hide();
 	        }
 	        if(completed == true){
 	          $("#confirm").hide();
@@ -11085,55 +11060,49 @@
 	        if(open == false){
 	          $("#join").hide();
 	        }
-
 	        $('#homeBtn').on('click', function(){
 	          router.navigate('/home/' + player, {trigger: true});
 	        })
-	        // $('#findMatch').on('click', function(){
-	        //   geoFindMe()
-	        // })
 	        $('#cancel').on('click', function(){
 	          var matchDetail = new matchContainer({id:id});
-	        matchDetail.destroy({
-	           url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
-	          success: function(resp){
-	           console.log("success", resp);
-	          },
-	          error : function() {
-	            console.log("error")
-	          }
-	        })
-	         })
+	          matchDetail.destroy({
+	            url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
+	            success: function(resp){
+	              console.log("success", resp);
+	            },
+	            error : function() {
+	                console.log("error")
+	            }
+	          });
+	        });
 	        var Join = Backbone.Model.extend({
-	      initialize: function () {
-	      },
-	      defaults: {},
+	          initialize: function () {
+	          },
+	          defaults: {},
+	          url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
+	        });
 
-	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
-	    });
-
-	      var Joins = Backbone.Collection.extend({
-	      model: Join,
-	      url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
-	    });
-	      $("#join").on('click', function() {
-	        var join = new Join();
-	        join.set({id:id})
+	        var Joins = Backbone.Collection.extend({
+	          model: Join,
+	          url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/join/'
+	        });
+	        $("#join").on('click', function() {
+	          var join = new Join();
+	          join.set({id:id})
 	          join.save(null, {
-	      success: function(resp) {
-	        console.log("success", resp);
-	        router.navigate('/home/' + Cookie.get('userName'), {trigger: true});
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
-	  });
-	    });
+	            success: function(resp) {
+	              console.log("success", resp);
+	              router.navigate('/home/' + Cookie.get('userName'), {trigger: true});
+	            },
+	            error: function(err) {
+	              console.log("error", err);
+	            }
+	          });
+	        });
 	      var Confirm = Backbone.Model.extend({
 	        defaults: {},
 	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
 	      });
-
 	      var Confirms = Backbone.Collection.extend ({
 	        model: Confirm,
 	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/confirm/'
@@ -11170,12 +11139,10 @@
 	          }
 	        })
 	      });
-
 	      var LeaveMatch = Backbone.Model.extend({
 	        defaults: {},
 	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/leave/'
 	      });
-
 	      var LeaveMatches = Backbone.Collection.extend({
 	        model: LeaveMatch,
 	        url: 'https://skill-match.herokuapp.com/api/matches/' + id + '/leave/'
@@ -11192,89 +11159,90 @@
 	          }
 	        })
 	      })
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
-	      })
-	    });
-
+	    },
+	    error: function(err) {
+	      console.log("error", err);
+	    }
+	  })
+	});
+	// End of match page
 	//////////////////////////////////////////////////////////////////////////////////////
 	// Match Creation Page
 	router.on('route:createMatch', function(id, username) {
 	  var Park = Backbone.Model.extend({
-	  initialize: function () {
-	  },
-	  defaults: {
-	    id: null,
-	    name: null
-	      },
-	  url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
+	    initialize: function () {
+	    },
+	    defaults: {
+	      id: null,
+	      name: null
+	    },
+	    url: 'https://skill-match.herokuapp.com/api/parks/'
+	  });
 	  var Parks = Backbone.Collection.extend({
-	  model: Park,
-	  url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
-	    var park = new Parks();
-	    park.fetch({
-	 success: function(resp) {
-	    var html = createMatch({'park': resp.toJSON()[0].results});
-	    var createMatchTemplate = $("#mainTemplate").text();
-	    var createMatchHTML = Mustache.render(createMatchTemplate, 'park');
-	    $("#create").html(createMatchHTML);
-	    $("#container").html(html);
-	   console.log("success: ",resp)
-	  $("#createMatch").on('click', function(e) {
-	    e.preventDefault();
-	    update = new matchContainer();
-	    update.set({
-	    park: $("#addPark").val(),
-	    description: $("#addDescription").val(),
-	    sport: $("#addSport").val(),
-	    skill_level:$("#addSkill").val(),
-	    date: $("#addDate").val(),
-	    time: $("#addTime").val()
+	    model: Park,
+	    url: 'https://skill-match.herokuapp.com/api/parks/'
 	  });
-	  update.save(null, {
-	    url: 'https://skill-match.herokuapp.com/api/matches/',
-	      success: function(resp) {
-	        console.log("success", resp);
-	        var id = resp.toJSON().id;
-	        router.navigate('/match/' + id, {trigger: true});
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
+	  var park = new Parks();
+	  park.fetch({
+	    success: function(resp) {
+	      var html = createMatch({'park': resp.toJSON()[0].results});
+	      var createMatchTemplate = $("#mainTemplate").text();
+	      var createMatchHTML = Mustache.render(createMatchTemplate, 'park');
+	      $("#create").html(createMatchHTML);
+	      $("#container").html(html);
+	      console.log("success: ",resp)
+	      $("#createMatch").on('click', function(e) {
+	        e.preventDefault();
+	        update = new matchContainer();
+	        update.set({
+	          park: $("#addPark").val(),
+	          description: $("#addDescription").val(),
+	          sport: $("#addSport").val(),
+	          skill_level:$("#addSkill").val(),
+	          date: $("#addDate").val(),
+	          time: $("#addTime").val()
+	        });
+	        update.save(null, {
+	          url: 'https://skill-match.herokuapp.com/api/matches/',
+	          success: function(resp) {
+	            console.log("success", resp);
+	            var id = resp.toJSON().id;
+	            router.navigate('/match/' + id, {trigger: true});
+	          },
+	          error: function(err) {
+	            console.log("error", err);
+	          }
+	        });
+	        $("#addPark").val("");
+	        $("#addDescription").val("");
+	        $("#addSport").val("");
+	        $("#addSkill").val("");
+	        $("#addDate").val("");
+	        $("#addTime").val("");
+	      });
+	    },
+	    error: function(err) {
+	      console.log("nope")
+	    }
 	  });
-	      $("#addPark").val("");
-	      $("#addDescription").val("");
-	      $("#addSport").val("");
-	      $("#addSkill").val("");
-	      $("#addDate").val("");
-	      $("#addTime").val("");
-	  });
-	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-
 	});
-	});
+	// End of create match
+	//////////////////////////////////////////////////////////////////////////////////////
 
 	router.on('route:parkCreateMatch', function(id, name) {
 	  var ParkMatch = Backbone.Model.extend({
 	    initialize: function () {
 	    },
-	  defaults: {
-	    id: null,
-	    name: null
-	  },
-	  url: 'https://skill-match.herokuapp.com/api/parks/'+id+"/"
-	});
+	    defaults: {
+	      id: null,
+	      name: null
+	    },
+	    url: 'https://skill-match.herokuapp.com/api/parks/'+id+"/"
+	  });
 	  var ParkMatches = Backbone.Collection.extend({
-	  model: ParkMatch,
-	  url: 'https://skill-match.herokuapp.com/api/parks/'+id+"/"
-	});
+	    model: ParkMatch,
+	    url: 'https://skill-match.herokuapp.com/api/parks/'+id+"/"
+	  });
 	  var parkMatch = new ParkMatch();
 	  parkMatch.fetch({
 	    success: function(resp) {
@@ -11286,8 +11254,8 @@
 	      console.log(html);
 	      $('#skillInfo').hover(function(){
 	      $('#hiddenMessage').toggleClass();
-	    })
-	      console.log('success',resp);
+	    });
+	    console.log('success',resp);
 	    $("#createParkMatches").on('click', function(e) {
 	      e.preventDefault();
 	      match = new matchContainer();
@@ -11298,26 +11266,27 @@
 	        skill_level: $("#addParkSkill").val(),
 	        date: $("#addParkDate").val(),
 	        time: $("#addParkTime").val()
-	      })
+	      });
 	      match.save(null, {
-	    url: 'https://skill-match.herokuapp.com/api/matches/',
-	      success: function(resp) {
-	        console.log("success", resp);
-	        var id = resp.toJSON().id;
-	        router.navigate('/match/' + id, {trigger: true});
-	      },
-	      error: function(status, error) {
-	        console.log(error.responseJSON.date[0]);
-	      }
-	  });
-	    })
-	  },
+	        url: 'https://skill-match.herokuapp.com/api/matches/',
+	        success: function(resp) {
+	          console.log("success", resp);
+	          var id = resp.toJSON().id;
+	          router.navigate('/match/' + id, {trigger: true});
+	        },
+	        error: function(error, xhr) {
+	          console.log(xhr.responseJSON.detail);
+	          }
+	        });
+	      });
+	    },
 	    error: function(err) {
 	      console.log('error', err);
 	    }
 	  });
 	});
-
+	// End of park create match page
+	//////////////////////////////////////////////////////////////////////////////////////
 	var feedbackContainer = Backbone.Model.extend({
 	  initialize: function() {
 	  },
@@ -11330,10 +11299,8 @@
 	  Model: feedbackContainer,
 	  url: 'https://skill-match.herokuapp.com/api/feedbacks/create/'
 	});
-
+	// End of feedback container
 	//////////////////////////////////////////////////////////////////////////////////////
-	// Match Update Page
-
 	router.on('route:challenge', function(id) {
 	  var Park = Backbone.Model.extend({
 	  initialize: function () {
@@ -11341,151 +11308,145 @@
 	  defaults: {
 	    id: null,
 	    name: null
-	      },
+	  },
 	  url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
+	  });
 	  var Parks = Backbone.Collection.extend({
-	  model: Park,
-	  url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
-	    var park = new Parks();
-	    park.fetch({
-	 success: function(resp) {
-	    var html = createMatch({'park': resp.toJSON()[0].results});
-	    var challengeMatchTemplate = $("#mainTemplate").text();
-	    var challengeMatchHTML = Mustache.render(challengeMatchTemplate, 'park');
-	    $("#challenge").html(challengeMatchHTML);
-	    $("#container").html(html);
-
-	   console.log("success: ",resp)
-	  $("#createMatch").on('click', function(e) {
-	    e.preventDefault();
-	    challenge = new matchContainer();
-	    challenge.set({
-	    challenge: id,
-	    park: $("#addPark").val(),
-	    description: $("#addDescription").val(),
-	    sport: $("#addSport").val(),
-	    skill_level:$("#addSkill").val(),
-	    date: $("#addDate").val(),
-	    time: $("#addTime").val(),
+	    model: Park,
+	    url: 'https://skill-match.herokuapp.com/api/parks/'
 	  });
-	  challenge.save(null, {
-	    url: 'https://skill-match.herokuapp.com/api/matches/challenge/',
-	      success: function(resp) {
-	        console.log("success", resp);
-	        var id = resp.toJSON().id;
-	        router.navigate('/match/' + id, {trigger: true});
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
+	  var park = new Parks();
+	  park.fetch({
+	    success: function(resp) {
+	      var html = createMatch({'park': resp.toJSON()[0].results});
+	      var challengeMatchTemplate = $("#mainTemplate").text();
+	      var challengeMatchHTML = Mustache.render(challengeMatchTemplate, 'park');
+	      $("#challenge").html(challengeMatchHTML);
+	      $("#container").html(html);
+	      console.log("success: ",resp)
+	      $("#createMatch").on('click', function(e) {
+	        e.preventDefault();
+	        challenge = new matchContainer();
+	        challenge.set({
+	          challenge: id,
+	          park: $("#addPark").val(),
+	          description: $("#addDescription").val(),
+	          sport: $("#addSport").val(),
+	          skill_level:$("#addSkill").val(),
+	          date: $("#addDate").val(),
+	          time: $("#addTime").val(),
+	        });
+	        challenge.save(null, {
+	          url: 'https://skill-match.herokuapp.com/api/matches/challenge/',
+	           success: function(resp) {
+	            console.log("success", resp);
+	            var id = resp.toJSON().id;
+	            router.navigate('/match/' + id, {trigger: true});
+	          },
+	          error: function(err) {
+	            console.log("error", err);
+	          }
+	        });
+	        $("#addPark").val("");
+	        $("#addDescription").val("");
+	        $("#addSport").val("");
+	        $("#addSkill").val("");
+	        $("#addDate").val("");
+	        $("#addTime").val("");
+	      });
+	    },
+	    error: function(err) {
+	      console.log("nope")
+	    }
 	  });
-	      $("#addPark").val("");
-	      $("#addDescription").val("");
-	      $("#addSport").val("");
-	      $("#addSkill").val("");
-	      $("#addDate").val("");
-	      $("#addTime").val("");
-	  });
-	 },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-
-	});
 	});
 
-
+	//////////////////////////////////////////////////////////////////////////////////////
 	router.on('route:updatematch', function(id){
 	  var matchContainer = Backbone.Model.extend({
-	  initialize: function() {
-	  },
-	  defaults: {
-	    park: null,
-	    sport: null,
-	    skill_level: null,
-	    date: null,
-	    time: null
+	    initialize: function() {
+	    },
+	    defaults: {
+	      park: null,
+	      sport: null,
+	      skill_level: null,
+	      date: null,
+	      time: null
 	    },
 	    Model: matchContainer,
 	    url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
 	  });
-	var Matches = Backbone.Collection.extend({
-	  model: matchContainer,
-	  url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
-	});
-	var matchDetail = new matchContainer(id);
-	    matchDetail.fetch({
-	      success: function(resp) {
-	        var html = updatematch({"data": resp.toJSON()});
-	        console.log("success", resp);
-	        var updatematchTemplate = $("#updatematchTemplate").text();
-	        var updatematchHTML = Mustache.render(updatematchTemplate, 'data');
-	        $("#updatematch").html(updatematchHTML);
-	        $("#container").html(html);
-
-	  var Park = Backbone.Model.extend({
-	  initialize: function () {
-	  },
-	  defaults: {
-	    id: null,
-	    name: null
-	      },
-	  url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
-	  var Parks = Backbone.Collection.extend({
-	  model: Park,
-	  url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
-	  var park = new Parks();
-	    park.fetch({
-	 success: function(resp) {
-	    var parks = parkList({'park': resp.toJSON()[0].results});
-	    var parksTemplate = $("#parksTemplate").text();
-	    var parksHTML = Mustache.render(parksTemplate, 'park');
-	    $("#addPark").html(parks);
-	     },
-	 error: function(err) {
-	   console.log("nope")
-	 }
-	 })
-	    $("#updateMatch").on('click', function(e) {
-	    e.preventDefault();
-	    matchDetail = new matchContainer({id:id});
-	    matchDetail.set({
-	    park: $("#addPark").val(),
-	    description: $("#addDescription").val(),
-	    sport: $("#addSport").val(),
-	    skill_level:$("#addSkill").val(),
-	    date: $("#addDate").val(),
-	    time: $("#addTime").val()
+	  var Matches = Backbone.Collection.extend({
+	    model: matchContainer,
+	    url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/"
 	  });
-	  matchDetail.save(null, {
-	    url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
-	      success: function(resp) {
-	        console.log("success", resp);
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
-	  });
+	  var matchDetail = new matchContainer(id);
+	  matchDetail.fetch({
+	    success: function(resp) {
+	      var html = updatematch({"data": resp.toJSON()});
+	      console.log("success", resp);
+	      var updatematchTemplate = $("#updatematchTemplate").text();
+	      var updatematchHTML = Mustache.render(updatematchTemplate, 'data');
+	      $("#updatematch").html(updatematchHTML);
+	      $("#container").html(html);
+	      var Park = Backbone.Model.extend({
+	        initialize: function () {
+	        },
+	        defaults: {
+	          id: null,
+	          name: null
+	        },
+	        url: 'https://skill-match.herokuapp.com/api/parks/'
+	      });
+	      var Parks = Backbone.Collection.extend({
+	        model: Park,
+	        url: 'https://skill-match.herokuapp.com/api/parks/'
+	      });
+	      var park = new Parks();
+	      park.fetch({
+	        success: function(resp) {
+	          var parks = parkList({'park': resp.toJSON()[0].results});
+	          var parksTemplate = $("#parksTemplate").text();
+	          var parksHTML = Mustache.render(parksTemplate, 'park');
+	          $("#addPark").html(parks);
+	        },
+	        error: function(err) {
+	          console.log("nope")
+	        }
+	      });
+	      $("#updateMatch").on('click', function(e) {
+	        e.preventDefault();
+	        matchDetail = new matchContainer({id:id});
+	        matchDetail.set({
+	        park: $("#addPark").val(),
+	        description: $("#addDescription").val(),
+	        sport: $("#addSport").val(),
+	        skill_level:$("#addSkill").val(),
+	        date: $("#addDate").val(),
+	        time: $("#addTime").val()
+	      });
+	      matchDetail.save(null, {
+	        url: 'https://skill-match.herokuapp.com/api/matches/' +id +"/",
+	        success: function(resp) {
+	          console.log("success", resp);
+	        },
+	        error: function(err) {
+	          console.log("error", err);
+	        }
+	      });
 	      $("#addPark").val("");
 	      $("#addDescription").val("");
 	      $("#addSport").val("");
 	      $("#addSkill").val("");
 	      $("#addDate").val("");
 	      $("#addTime").val("");
+	      });
+	    },
+	    error: function(err) {
+	      console.log("error", err);
+	    }
 	  });
-
-	      },
-	      error: function(err) {
-	        console.log("error", err);
-	      }
-	        })
-
-	})
-
+	});
 	////////////////////////////////////////////////////////////////////////////////
 	// This page gives you the ability to leave Feedback on completed matches
 	router.on('route:feedback', function(id, username){
@@ -11516,16 +11477,15 @@
 	    $("#addCrowdFeedback").val("");
 	    $("#addPunctualityFeedback").val("");
 	  });
-
-	    $('#skillLevel').hover(function(){
-	      $('#skillLevelinfo').toggleClass();
-	    })
-	    $('#Sportsmanship').hover(function(){
-	      $('#Sportsmanshipinfo').toggleClass();
-	    })
-	    $('#crowd').hover(function(){
-	      $('#crowdinfo').toggleClass();
-	    })
+	  $('#skillLevel').hover(function(){
+	    $('#skillLevelinfo').toggleClass();
+	  });
+	  $('#Sportsmanship').hover(function(){
+	    $('#Sportsmanshipinfo').toggleClass();
+	  });
+	  $('#crowd').hover(function(){
+	    $('#crowdinfo').toggleClass();
+	  });
 	});
 
 	/////////////////////////////////////////////////////////////////////////////
@@ -11533,218 +11493,155 @@
 	// BackbonePagination is used here to page through all parks in Api
 	// We used a counter to along with BackbonePagination get the next page of parks
 	router.on('route:parks', function(id, name) {
-
-	function geoFindMe() {
-	  function success(position) {
-	    var latitude  = position.coords.latitude;
-	    var longitude = position.coords.longitude;
-	    console.log('latitude '+latitude);
-	    console.log('longitude '+longitude);
-	    var nextPages = new Park()
-	    nextPages.fetch({
-	       url: 'https://skill-match.herokuapp.com/api/parks/?lat='+latitude+'&long='+longitude,
-	 success: function(resp) {
-	      var html = parks({'data': resp.toJSON().results});
-	      var parkTemplate = $("#parkTemplate").text();
-	      var parkHTML = Mustache.render(parkTemplate, "data");
-	      var next = resp.toJSON().next;
-	      var previous = resp.toJSON().previous;
-	      $("#parksContainer").html(parkHTML);
-	      $("#container").html(html);
-	      console.log("success", resp);
-	       console.log("success: ",resp)
-	       $('#nextPark').on('click', function(){
-	        nextPage(next)
-	        window.scrollTo(0, 450);
-	       })
-	       $('#backPark').on('click', function(){
-	        prevPage(previous)
-	        window.scrollTo(0, 450);
-	       })
-	       $('#locate').on('click', function(){
-	        geoFindMe()
-	      })
-	        $("#searchPark").on('click', function(e) {
-	          e.preventDefault();
-	          searchPark();
-	        });
-	     },
-	     error: function(err) {
-	       console.log("nope")
-	     }
-
-	    });
-
-	  };
-
+	  function geoFindMe() {
+	    function success(position) {
+	      var latitude  = position.coords.latitude;
+	      var longitude = position.coords.longitude;
+	      console.log('latitude '+latitude);
+	      console.log('longitude '+longitude);
+	      var nextPages = new Park()
+	      nextPages.fetch({
+	        url: 'https://skill-match.herokuapp.com/api/parks/?lat='+latitude+'&long='+longitude,
+	        success: function(resp) {
+	          var html = parks({'data': resp.toJSON().results});
+	          var parkTemplate = $("#parkTemplate").text();
+	          var parkHTML = Mustache.render(parkTemplate, "data");
+	          var next = resp.toJSON().next;
+	          var previous = resp.toJSON().previous;
+	          $("#parksContainer").html(parkHTML);
+	          $("#container").html(html);
+	          console.log("success", resp);
+	          console.log("success: ",resp)
+	          $('#nextPark').on('click', function(){
+	            nextPage(next)
+	            window.scrollTo(0, 450);
+	          });
+	          $('#backPark').on('click', function(){
+	            prevPage(previous)
+	            window.scrollTo(0, 450);
+	          });
+	          $('#locate').on('click', function(){
+	            geoFindMe()
+	          });
+	        },
+	        error: function(err) {
+	          console.log("nope")
+	        }
+	      });
+	    };
 	  function error() {
 	  };
 	    $('#zipcode').val("Locating…");
-	  navigator.geolocation.getCurrentPosition(success, error);
-	}
-
-	function zipCode(zip) {
-	    var nextPages = new Park()
-	    nextPages.fetch({
-	       url: 'http://skill-match.herokuapp.com/api/parks/?zip='+$('#zipcode').val(),
-	 success: function(resp) {
-	      var html = parks({'data': resp.toJSON().results});
-	      var parkTemplate = $("#parkTemplate").text();
-	      var parkHTML = Mustache.render(parkTemplate, "data");
-	      var next = resp.toJSON().next;
-	      var previous = resp.toJSON().previous;
-	      $("#parksContainer").html(parkHTML);
-	      $("#container").html(html);
-	      console.log("success", resp);
-	       console.log("success: ",resp)
-	       $('#nextPark').on('click', function(){
-	        nextPage(next)
-	        window.scrollTo(0, 450);
-	       })
-	       $('#backPark').on('click', function(){
-	        prevPage(previous)
-	        window.scrollTo(0, 450);
-	       })
-	       $('#locate').on('click', function(){
-	      geoFindMe()
-	    })
-	      $("#searchPark").on('click', function(e) {
-	        e.preventDefault();
-	        searchPark();
-	      });
-	     },
-	     error: function(err) {
-	       console.log("nope")
-	     }
-	    });
-	    $('#zipcode').val("Locating…");
-	  navigator.geolocation.getCurrentPosition(success, error);
+	    navigator.geolocation.getCurrentPosition(success, error);
 	  }
-
-
-	  function nextPage(next){
+	  function zipCode(zip) {
 	    var nextPages = new Park()
 	    nextPages.fetch({
-	       url: next,
-	 success: function(resp) {
-	      var html = parks({'data': resp.toJSON().results});
-	      var parkTemplate = $("#parkTemplate").text();
-	      var parkHTML = Mustache.render(parkTemplate, "data");
-	      var next = resp.toJSON().next;
-	      var previous = resp.toJSON().previous;
-	      $("#parksContainer").html(parkHTML);
-	      $("#container").html(html);
-	      console.log("success", resp);
-	       console.log("success: ",resp)
-	       $('#nextPark').on('click', function(){
-	        nextPage(next)
-	        window.scrollTo(0, 450);
-	       })
-	       $('#backPark').on('click', function(){
-	        prevPage(previous)
-	        window.scrollTo(0, 450);
-	       })
-	       $('#locate').on('click', function(){
-	      geoFindMe()
-	    })
-	        $("#searchPark").on('click', function(e) {
-	          e.preventDefault();
-	          searchPark();
-	        });
-	     },
-	     error: function(err) {
-	       console.log("nope")
-	     }
-	    });
-	      }
-
-
-	  function prevPage(previous){
-	    var prevPages = new Park()
-	    prevPages.fetch({
-	       url: previous,
-	 success: function(resp) {
-	      var html = parks({'data': resp.toJSON().results});
-	      var parkTemplate = $("#parkTemplate").text();
-	      var parkHTML = Mustache.render(parkTemplate, "data");
-	      var next = resp.toJSON().next;
-	      var previous = resp.toJSON().previous;
-	      $("#parksContainer").html(parkHTML);
-	      $("#container").html(html);
-	      console.log("success", resp);
-	     console.log("success: ",resp)
-	     $('#nextPark').on('click', function(){
-	      nextPage(next)
-	      window.scrollTo(0, 450);
-	     })
-	     $('#backPark').on('click', function(){
-	      prevPage(previous)
-	      window.scrollTo(0, 450);
-	     })
-	     $('#locate').on('click', function(){
-	    geoFindMe()
-	  })
-	      $("#searchPark").on('click', function(e) {
-	          e.preventDefault();
-	          searchPark();
-	        });
-	   },
-	   error: function(err) {
-	     console.log("nope")
-	   }
-	  });
-	}
-	  function searchPark() {
-	    var search = new Park()
-	    search.fetch({
-	      url: "http://skill-match.herokuapp.com/api/parks/?search=" + $("#parkSearch").val(),
+	      url: 'http://skill-match.herokuapp.com/api/parks/?zip='+$('#zipcode').val(),
 	      success: function(resp) {
 	        var html = parks({'data': resp.toJSON().results});
 	        var parkTemplate = $("#parkTemplate").text();
 	        var parkHTML = Mustache.render(parkTemplate, "data");
+	        var next = resp.toJSON().next;
+	        var previous = resp.toJSON().previous;
 	        $("#parksContainer").html(parkHTML);
 	        $("#container").html(html);
 	        console.log("success", resp);
-	        $("#searchPark").on('click', function(e) {
-	          e.preventDefault();
-	          searchPark();
-	        });
+	        console.log("success: ",resp)
 	        $('#nextPark').on('click', function(){
-	        nextPage(next)
-	        window.scrollTo(0, 450);
-	      })
-	      $('#backPark').on('click', function(){
-	        prevPage(previous)
-	        window.scrollTo(0, 450);
-	      })
-	      $('#locate').on('click', function(){
-	        geoFindMe()
-	      })
-
-	    },
-	    error: function(err) {
-	      console.log("error", err);
-	    }
-	  })
-	}
-	$("#searchPark").on('click', function(e) {
-	        e.preventDefault();
-	        searchPark();
-	      });
-
-	var Park = Backbone.Model.extend({
+	          nextPage(next)
+	          window.scrollTo(0, 450);
+	        })
+	        $('#backPark').on('click', function(){
+	          prevPage(previous)
+	          window.scrollTo(0, 450);
+	        })
+	        $('#locate').on('click', function(){
+	          geoFindMe()
+	        });
+	      },
+	      error: function(err) {
+	        console.log("nope")
+	      }
+	    });
+	    $('#zipcode').val("Locating…");
+	    navigator.geolocation.getCurrentPosition(success, error);
+	  }
+	  function nextPage(next){
+	    var nextPages = new Park()
+	    nextPages.fetch({
+	      url: next,
+	      success: function(resp) {
+	        var html = parks({'data': resp.toJSON().results});
+	        var parkTemplate = $("#parkTemplate").text();
+	        var parkHTML = Mustache.render(parkTemplate, "data");
+	        var next = resp.toJSON().next;
+	        var previous = resp.toJSON().previous;
+	        $("#parksContainer").html(parkHTML);
+	        $("#container").html(html);
+	        console.log("success", resp);
+	        console.log("success: ",resp)
+	        $('#nextPark').on('click', function(){
+	          nextPage(next)
+	          window.scrollTo(0, 450);
+	        });
+	        $('#backPark').on('click', function(){
+	          prevPage(previous)
+	          window.scrollTo(0, 450);
+	        });
+	        $('#locate').on('click', function(){
+	          geoFindMe()
+	        })
+	     },
+	     error: function(err) {
+	       console.log("nope")
+	     }
+	    });
+	  }
+	  function prevPage(previous) {
+	    var prevPages = new Park()
+	    prevPages.fetch({
+	      url: previous,
+	      success: function(resp) {
+	        var html = parks({'data': resp.toJSON().results});
+	        var parkTemplate = $("#parkTemplate").text();
+	        var parkHTML = Mustache.render(parkTemplate, "data");
+	        var next = resp.toJSON().next;
+	        var previous = resp.toJSON().previous;
+	        $("#parksContainer").html(parkHTML);
+	        $("#container").html(html);
+	        console.log("success", resp);
+	        console.log("success: ",resp)
+	        $('#nextPark').on('click', function(){
+	          nextPage(next)
+	          window.scrollTo(0, 450);
+	        });
+	        $('#backPark').on('click', function(){
+	          prevPage(previous)
+	          window.scrollTo(0, 450);
+	        });
+	        $('#locate').on('click', function(){
+	          geoFindMe()
+	        });
+	      },
+	      error: function(err) {
+	        console.log("nope")
+	      }
+	    });
+	  }
+	  var Park = Backbone.Model.extend({
 	    initialize: function () {
 	    },
 	    defaults: {
 	    id: null,
 	    name: null
 	    },
-	  url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
+	    url: 'https://skill-match.herokuapp.com/api/parks/'
+	  });
 	  var Parks = Backbone.Collection.extend({
 	    model: Park,
 	    url: 'https://skill-match.herokuapp.com/api/parks/'
-	});
+	  });
 	  var park = new Park();
 	  park.fetch ({
 	    success: function(resp) {
@@ -11758,32 +11655,28 @@
 	      $("#container").html(html);
 	      console.log("success", resp);
 	      $(".yelpReview").on('click', function() {
-	        window.open($(this).attr('href'));
-	      })
+	         window.open($(this).attr('href'));
+	      });
 	      $('#nextPark').on('click', function(){
 	        nextPage(next)
 	        window.scrollTo(0, 450);
-	      })
+	      });
 	      $('#backPark').on('click', function(){
 	        prevPage(previous)
 	        window.scrollTo(0, 450);
-	      })
+	      });
 	      $('#locate').on('click', function(){
-	  geoFindMe()
-	})
+	        geoFindMe()
+	      });
 	      $('#zip').on('click', function(){
 	        zipCode()
-	      })
-	      $("#searchPark").on('click', function(e) {
-	          e.preventDefault();
-	          searchPark();
-	        });
+	      });
 	    },
 	    error: function(err) {
 	      console.log("error", err);
 	    }
 	  });
-	  });
+	});
 	/////////////////////////////////////////////////////////////////////////////
 	// This page is a more indepth look at the park you have choosen and we display the parks match history.
 	// Soon it will include all a list of sports available at the park.
@@ -11795,12 +11688,12 @@
 	    id: null,
 	    name: null
 	    },
-	  url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
-	});
+	    url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
+	  });
 	  var Parks = Backbone.Collection.extend({
 	    model: Park,
 	    url: 'https://skill-match.herokuapp.com/api/parks/'+id+'/'
-	});
+	  });
 	  var park = new Park();
 	  park.fetch ({
 	    success: function(resp) {
@@ -11810,84 +11703,82 @@
 	      $("#parksDetail").html(parksDetailHTML);
 	      $("#container").html(html);
 	      console.log("success", resp);
-	          $("#yelpReview").on('click', function() {
-	         window.open($("#yelpReview").attr('href'));
-	       });
+	      $("#yelpReview").on('click', function() {
+	        window.open($("#yelpReview").attr('href'));
+	      });
 	      $('#createCourt').on('click', function(){
 	        $('dialog').toggleClass();
 	        var parkCreate = Backbone.Model.extend({
-	    initialize: function(){
-	    },
-	    defaults: {
-	      sport: null,
-	      other: null,
-	      num_courts: null,
-	      lat: null,
-	      long: null
-	    },
-	    url: "http://skill-match.herokuapp.com/api/courts/"
-	  });
-	    function geoFindMe() {
-	    function success(position) {
-	      var latitude  = position.coords.latitude;
-	      var longitude = position.coords.longitude;
-	      console.log('latitude '+latitude);
-	      console.log('longitude '+longitude);
-	      var newPark = new parkCreate();
-	       newPark.set ({
-	        park: id,
-	        sport: $(".addNewParkSport").val(),
-	        other: $(".addOtherParkSport").val(),
-	        num_courts: $(".addNumCourts").val(),
-	        lat: latitude,
-	        long: longitude
-	      });
-	      newPark.save (null, {
-	        success: function(resp) {
-	          console.log('success', resp);
-	          router.navigate("/parks", {trigger:true});
+	        initialize: function(){
 	        },
-	        error: function(err) {
-	          console.log('error', err);
+	        defaults: {
+	          sport: null,
+	          other: null,
+	          num_courts: null,
+	          lat: null,
+	          long: null
+	        },
+	        url: "http://skill-match.herokuapp.com/api/courts/"
+	      });
+	      function geoFindMe() {
+	        function success(position) {
+	          var latitude  = position.coords.latitude;
+	          var longitude = position.coords.longitude;
+	          console.log('latitude '+latitude);
+	          console.log('longitude '+longitude);
+	          var newPark = new parkCreate();
+	          newPark.set ({
+	            park: id,
+	            sport: $(".addNewParkSport").val(),
+	            other: $(".addOtherParkSport").val(),
+	            num_courts: $(".addNumCourts").val(),
+	            lat: latitude,
+	            long: longitude
+	          });
+	          newPark.save (null, {
+	            success: function(resp) {
+	              console.log('success', resp);
+	              router.navigate("/parks", {trigger:true});
+	            },
+	            error: function(err) {
+	            console.log('error', err);
+	            }
+	          })
 	        }
-	      })
-	    }
-	      function error(err) {
-	      console.log("error", err);
-	    }
-	    navigator.geolocation.getCurrentPosition(success, error);
-	  }
-
-	    $(".createCourtButton").on('click', function() {
-	      geoFindMe();
-	    })
-	    $('.close').on('click', function(){
-	      $('dialog').toggleClass();
+	        function error(err) {
+	          console.log("error", err);
+	        }
+	        navigator.geolocation.getCurrentPosition(success, error);
+	      }
 	      $(".createCourtButton").on('click', function() {
-	      geoFindMe();
-	    })
+	        geoFindMe();
+	      });
 	      $('.close').on('click', function(){
-	      $('dialog').toggleClass();
-	    })
-	    })
-	      })
+	        $('dialog').toggleClass();
+	        $(".createCourtButton").on('click', function() {
+	          geoFindMe();
+	        });
+	        $('.close').on('click', function(){
+	          $('dialog').toggleClass();
+	        });
+	      });
+	      });
 	    },
 	    error: function(err) {
 	      console.log("error", err);
 	    }
 	  });
-
 	});
 	////////////////////////////////////////////////////////////////////////////////
 	$('body').on('click', 'a', function (e){
 	  e.preventDefault();
 	  var href = $(this).attr('href').substr(1);
 	  router.navigate(href, {trigger:true});
+	  window.scroll(0, 0);
 	});
 	$('body').on('hover', 'span', function (e){
 	  e.preventDefault();
 	});
-	module.exports = router;// This is just a sample script. Paste your real code (javascript or HTML) here.
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
@@ -17314,7 +17205,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"loginPage\">");t.b("\n" + i);t.b("<form id=\"loginForm\">");t.b("\n" + i);t.b("<div id=\"loginHeader\">");t.b("\n" + i);t.b("  <h2>LOG IN</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("  <label>Username:</label>");t.b("\n" + i);t.b("  <input id=\"username\" type=\"text\" placeholder=\"USERNAME\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Password: </label>");t.b("\n" + i);t.b("  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <button id=\"loginSubmit\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("  <a class=\"register\" type=\"submit\" href=\"/signup\">SignUp</a>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"loginPage\">\n<form id=\"loginForm\">\n<div id=\"loginHeader\">\n  <h2>LOG IN</h2>\n</div>\n  <label>Username:</label>\n  <input id=\"username\" type=\"text\" placeholder=\"USERNAME\">\n  </br>\n  <label>Password: </label>\n  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">\n  </br>\n  <button id=\"loginSubmit\" type=\"submit\">Submit</button>\n  <a class=\"register\" type=\"submit\" href=\"/signup\">SignUp</a>\n</form>\n</div>\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"loginPage\">");t.b("\n" + i);t.b("  <form id=\"loginForm\">");t.b("\n" + i);t.b("  <div id=\"loginHeader\">");t.b("\n" + i);t.b("    <h2>LOG IN</h2>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("  <label>Username:</label>");t.b("\n" + i);t.b("  <input id=\"username\" type=\"text\" placeholder=\"USERNAME\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Password:</label>");t.b("\n" + i);t.b("  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <button id=\"loginSubmit\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("  <a class=\"register\" type=\"submit\" href=\"/signup\">SignUp</a>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"loginPage\">\n  <form id=\"loginForm\">\n  <div id=\"loginHeader\">\n    <h2>LOG IN</h2>\n  </div>\n  <label>Username:</label>\n  <input id=\"username\" type=\"text\" placeholder=\"USERNAME\">\n  </br>\n  <label>Password:</label>\n  <input id=\"password\" type=\"password\" placeholder=\"PASSWORD\">\n  </br>\n  <button id=\"loginSubmit\" type=\"submit\">Submit</button>\n  <a class=\"register\" type=\"submit\" href=\"/signup\">SignUp</a>\n  </form>\n</div>\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 41 */
@@ -18124,124 +18015,94 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>REGISTER</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Re-Enter PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  <span id=\"reenterMessage\"></span>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PHONE:</label>");t.b("\n" + i);t.b("  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">");t.b("\n" + i);t.b("   </br>");t.b("\n" + i);t.b("  <label>Text Alerts:</label>");t.b("\n" + i);t.b("  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Upload an Image:</label>");t.b("\n" + i);t.b("  <input id=\"rpic\" type=\"file\" enctype=\"multipart/form-data\">");t.b("\n" + i);t.b("  <button class=\"register\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n<div id=\"signupHeader\">\n<h2>REGISTER</h2>\n</div>\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>Re-Enter PASSWORD:</label>\n  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">\n  <span id=\"reenterMessage\"></span>\n  </br>\n  <label>PHONE:</label>\n  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">\n   </br>\n  <label>Text Alerts:</label>\n  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"age\">Enter Age</option>\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  </br>\n  <label>Upload an Image:</label>\n  <input id=\"rpic\" type=\"file\" enctype=\"multipart/form-data\">\n  <button class=\"register\" type=\"submit\">Submit</button>\n</form>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"signupPage\">");t.b("\n" + i);t.b("  <div id=\"signupHeader\">");t.b("\n" + i);t.b("    <h2>REGISTER</h2>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("  <form id=\"signupForm\">");t.b("\n" + i);t.b("    <label>USERNAME:</label>");t.b("\n" + i);t.b("    <input id=\"ruser\" type=\"text\" placeholder=\"Username\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>EMAIL:</label>");t.b("\n" + i);t.b("    <input id=\"remail\" type=\"email\" placeholder=\"Email\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>PASSWORD:</label>");t.b("\n" + i);t.b("    <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>Re-Enter PASSWORD:</label>");t.b("\n" + i);t.b("    <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("    <span id=\"reenterMessage\"></span>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>PHONE:</label>");t.b("\n" + i);t.b("    <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>Text Alerts:</label>");t.b("\n" + i);t.b("    <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("    Male");t.b("\n" + i);t.b("    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\"> Female");t.b("\n" + i);t.b("    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\"> Other");t.b("\n" + i);t.b("    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("      <option value=\"age\">Enter Age</option>");t.b("\n" + i);t.b("      <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("      <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("      <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("      <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("      <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("      <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("      <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>Upload an Image:</label>");t.b("\n" + i);t.b("    <input id=\"rpic\" type=\"file\" enctype=\"multipart/form-data\">");t.b("\n" + i);t.b("    <button class=\"register\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"signupPage\">\n  <div id=\"signupHeader\">\n    <h2>REGISTER</h2>\n  </div>\n  <form id=\"signupForm\">\n    <label>USERNAME:</label>\n    <input id=\"ruser\" type=\"text\" placeholder=\"Username\">\n    </br>\n    <label>EMAIL:</label>\n    <input id=\"remail\" type=\"email\" placeholder=\"Email\">\n    </br>\n    <label>PASSWORD:</label>\n    <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n    </br>\n    <label>Re-Enter PASSWORD:</label>\n    <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">\n    <span id=\"reenterMessage\"></span>\n    </br>\n    <label>PHONE:</label>\n    <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\">\n    </br>\n    <label>Text Alerts:</label>\n    <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n    </br>\n    <label id=\"gender\">GENDER:</label>\n    Male\n    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\"> Female\n    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\"> Other\n    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n    </br>\n    <select id=\"rage\" name=\"age\">\n      <option value=\"age\">Enter Age</option>\n      <option value=\"Under 16\">Under 16</option>\n      <option value=\"16-19\">16-19</option>\n      <option value=\"20's\">20's</option>\n      <option value=\"30's\">30's</option>\n      <option value=\"40's\">40's</option>\n      <option value=\"50's\">50's</option>\n      <option value=\"60+\">60 +</option>\n    </select>\n    </br>\n    </br>\n    <label>Upload an Image:</label>\n    <input id=\"rpic\" type=\"file\" enctype=\"multipart/form-data\">\n    <button class=\"register\" type=\"submit\">Submit</button>\n  </form>\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <div id=\"over\">");t.b("\n" + i);t.b("  <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);t.b("<div id=\"filter\">");t.b("\n" + i);t.b("  <select id=\"sport\">");t.b("\n" + i);t.b("    <option>Filter Sport</option>");t.b("\n" + i);t.b("    <option value=\"tennis\">Tennis</option>");t.b("\n" + i);t.b("    <option value=\"basketball\">Basketball</option>");t.b("\n" + i);t.b("    <option value=\"football\">Football</option>");t.b("\n" + i);t.b("    <option value=\"soccer\">Soccer</option>");t.b("\n" + i);t.b("    <option value=\"pickleball\">Pickleball</option>");t.b("\n" + i);t.b("    <option value=\"volleyball\">Volleyball</option>");t.b("\n" + i);t.b("    <option value=\"other\">Other</option>");t.b("\n" + i);t.b("    <option value=\"\">All</option>");t.b("\n" + i);t.b("  </select>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"areaSearch\">");t.b("\n" + i);t.b("<input type=\"text\" id=\"areaInput\" placeholder=\"Zip Code\">");t.b("\n" + i);t.b("<button type=\"submit\" id=\"submitArea\"> Search </button>");t.b("\n" + i);t.b("<button type=\"submit\" id=\"area\"> Use Location </button></br>");t.b("\n" + i);t.b("<div id=\"locating\"></div>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<h2>Open Matches</h2>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,1007,1793,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,1020,1780,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li id=\"sportImage\"><a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a></br></li>");t.b("\n" + i);t.b("    <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("date",c,p,0)));t.b("</a>");t.b("\n" + i);t.b("    ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("    ");t.b(t.v(t.f("distance",c,p,0)));t.b(" Miles </br>");t.b("\n" + i);t.b("    <a id=\"parkAnchor\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("    </progress></li>");t.b("\n" + i);t.b("<li class=\"players\">");if(t.s(t.f("players",c,p,1),c,p,0,1454,1564,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\"></a><a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\" class=\"name\">");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b(" <img class=\"empty\" src=\"http://res.cloudinary.com/skill-match/image/upload/c_scale,w_50/v1451856777/Man_cqggt4.png\"></li>");t.b("\n" + i);t.b("<li id=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("<div id=\"pagination\">");t.b("\n" + i);t.b("<button id=\"prev\">Prev</button>");t.b("\n" + i);t.b("<button id=\"next\">Next</button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"imageContainer\">\n  <div id=\"over\">\n  <p id=\"mission\"> Find the Game for you... </p>\n  <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n  </div>\n</div>\n<div id=\"upComing\">\n<div id=\"filter\">\n  <select id=\"sport\">\n    <option>Filter Sport</option>\n    <option value=\"tennis\">Tennis</option>\n    <option value=\"basketball\">Basketball</option>\n    <option value=\"football\">Football</option>\n    <option value=\"soccer\">Soccer</option>\n    <option value=\"pickleball\">Pickleball</option>\n    <option value=\"volleyball\">Volleyball</option>\n    <option value=\"other\">Other</option>\n    <option value=\"\">All</option>\n  </select>\n</div>\n<div id=\"areaSearch\">\n<input type=\"text\" id=\"areaInput\" placeholder=\"Zip Code\">\n<button type=\"submit\" id=\"submitArea\"> Search </button>\n<button type=\"submit\" id=\"area\"> Use Location </button></br>\n<div id=\"locating\"></div>\n</div>\n<h2>Open Matches</h2>\n{{#data}}\n{{#is_open}}\n  <ul>\n    <li id=\"sportImage\"><a href=\"/match/{{id}}\"><img src=\"{{img_url}}\"></a></br></li>\n    <li class=\"description\"> <a href=\"/match/{{id}}\">{{date}}</a>\n    {{time}}</br>\n    {{distance}} Miles </br>\n    <a id=\"parkAnchor\" href=\"/parksDetail/{{park}}\">{{park_name}}</a></li>\n    <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n    </progress></li>\n<li class=\"players\">{{#players}}<a href=\"/profile/{{id}}\"><img src=\"{{small_img}}\"></a><a href=\"/profile/{{id}}\" class=\"name\">{{username}}</a>{{/players}} <img class=\"empty\" src=\"http://res.cloudinary.com/skill-match/image/upload/c_scale,w_50/v1451856777/Man_cqggt4.png\"></li>\n<li id=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n</ul>\n{{/is_open}}\n{{/data}}\n<div id=\"pagination\">\n<button id=\"prev\">Prev</button>\n<button id=\"next\">Next</button>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n" + i);t.b("<div id=\"imageContainer\">");t.b("\n" + i);t.b("  <div id=\"over\">");t.b("\n" + i);t.b("    <p id=\"mission\"> Find the Game for you... </p>");t.b("\n" + i);t.b("    <button id=\"createMatchButton\" type=\"submit\">Create Match</button>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);t.b("<div id=\"upComing\">");t.b("\n" + i);t.b("  <div id=\"filter\">");t.b("\n" + i);t.b("    <select id=\"sport\">");t.b("\n" + i);t.b("      <option>Filter Sport</option>");t.b("\n" + i);t.b("      <option value=\"tennis\">Tennis</option>");t.b("\n" + i);t.b("      <option value=\"basketball\">Basketball</option>");t.b("\n" + i);t.b("      <option value=\"football\">Football</option>");t.b("\n" + i);t.b("      <option value=\"soccer\">Soccer</option>");t.b("\n" + i);t.b("      <option value=\"pickleball\">Pickleball</option>");t.b("\n" + i);t.b("      <option value=\"volleyball\">Volleyball</option>");t.b("\n" + i);t.b("      <option value=\"other\">Other</option>");t.b("\n" + i);t.b("      <option value=\"\">All</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("  <div id=\"areaSearch\">");t.b("\n" + i);t.b("    <input type=\"text\" id=\"areaInput\" placeholder=\"Zip Code\">");t.b("\n" + i);t.b("    <button type=\"submit\" id=\"submitArea\"> Search </button>");t.b("\n" + i);t.b("    <button type=\"submit\" id=\"area\"> Use Location </button>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <div id=\"locating\"></div>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("  <h2>Open Matches</h2> ");if(t.s(t.f("data",c,p,1),c,p,0,1064,1937,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");if(t.s(t.f("is_open",c,p,1),c,p,0,1077,1924,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li id=\"sportImage\">");t.b("\n" + i);t.b("      <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("      </a>");t.b("\n" + i);t.b("      </br>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("date",c,p,0)));t.b("</a> ");t.b(t.v(t.f("time",c,p,0)));t.b("\n" + i);t.b("      </br>");t.b("\n" + i);t.b("      ");t.b(t.v(t.f("distance",c,p,0)));t.b(" Miles </br>");t.b("\n" + i);t.b("      <a id=\"parkAnchor\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li id=\"skillProgress\"> Skill level");t.b("\n" + i);t.b("      <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("      </progress>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"players\">");if(t.s(t.f("players",c,p,1),c,p,0,1566,1690,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("\n" + i);t.b("      <a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\">");t.b("\n" + i);t.b("      </a><a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\" class=\"name\">");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b(" <img class=\"empty\" src=\"http://res.cloudinary.com/skill-match/image/upload/c_scale,w_50/v1451856777/Man_cqggt4.png\">");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li id=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("  <div id=\"pagination\">");t.b("\n" + i);t.b("    <button id=\"prev\">Prev</button>");t.b("\n" + i);t.b("    <button id=\"next\">Next</button>");t.b("\n" + i);t.b("  </div>");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n<div id=\"imageContainer\">\n  <div id=\"over\">\n    <p id=\"mission\"> Find the Game for you... </p>\n    <button id=\"createMatchButton\" type=\"submit\">Create Match</button>\n  </div>\n</div>\n<div id=\"upComing\">\n  <div id=\"filter\">\n    <select id=\"sport\">\n      <option>Filter Sport</option>\n      <option value=\"tennis\">Tennis</option>\n      <option value=\"basketball\">Basketball</option>\n      <option value=\"football\">Football</option>\n      <option value=\"soccer\">Soccer</option>\n      <option value=\"pickleball\">Pickleball</option>\n      <option value=\"volleyball\">Volleyball</option>\n      <option value=\"other\">Other</option>\n      <option value=\"\">All</option>\n    </select>\n  </div>\n  <div id=\"areaSearch\">\n    <input type=\"text\" id=\"areaInput\" placeholder=\"Zip Code\">\n    <button type=\"submit\" id=\"submitArea\"> Search </button>\n    <button type=\"submit\" id=\"area\"> Use Location </button>\n    </br>\n    <div id=\"locating\"></div>\n  </div>\n  <h2>Open Matches</h2> {{#data}} {{#is_open}}\n  <ul>\n    <li id=\"sportImage\">\n      <a href=\"/match/{{id}}\"><img src=\"{{img_url}}\">\n      </a>\n      </br>\n    </li>\n    <li class=\"description\"> <a href=\"/match/{{id}}\">{{date}}</a> {{time}}\n      </br>\n      {{distance}} Miles </br>\n      <a id=\"parkAnchor\" href=\"/parksDetail/{{park}}\">{{park_name}}</a>\n    </li>\n    <li id=\"skillProgress\"> Skill level\n      <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n      </progress>\n    </li>\n    <li class=\"players\">{{#players}}\n      <a href=\"/profile/{{id}}\"><img src=\"{{small_img}}\">\n      </a><a href=\"/profile/{{id}}\" class=\"name\">{{username}}</a>{{/players}} <img class=\"empty\" src=\"http://res.cloudinary.com/skill-match/image/upload/c_scale,w_50/v1451856777/Man_cqggt4.png\">\n    </li>\n    <li id=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/{{id}}\"> Join </a>\n    </li>\n  </ul>\n  {{/is_open}} {{/data}}\n  <div id=\"pagination\">\n    <button id=\"prev\">Prev</button>\n    <button id=\"next\">Next</button>\n  </div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,47,97,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("</select>");return t.fl(); },partials: {}, subs: {  }}, "<select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n</select>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"matchDetailContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,43,1193,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("  <ul id=\"matchJoin\">");t.b("\n" + i);t.b("    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> ");t.b(t.v(t.f("sport",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li><a href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\" id=\"parkLink\"> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("    <li id=\"matchDescription\"> ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>Created By: <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\">");t.b(t.v(t.f("creator_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);t.b("    ");if(t.s(t.f("players",c,p,1),c,p,0,518,615,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\" class=\"name\"><img id=\"playerImage\" src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\">");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b("\n" + i);t.b("    <button id=\"join\"> Join </button>");t.b("\n" + i);t.b("    <a id=\"confirm\" href=\"/\"> Confirm Match </a>");t.b("\n" + i);t.b("    <a id=\"decline\" href=\"/\"> Decline Match </a>");t.b("\n" + i);t.b("    <div id=\"cancelEdit\">");t.b("\n" + i);t.b("    <a id=\"cancel\" href=\"/\"> Cancel Match </a>");t.b("\n" + i);t.b("    <a id=\"update\" href=\"/updatematch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Edit Match</a>");t.b("\n" + i);t.b("    </div>");t.b("\n" + i);t.b("   </div>");t.b("\n" + i);t.b("   <a id=\"leaveMatch\" href=\"/\"> Leave Match </a>");t.b("\n" + i);t.b("   <!-- <button id=\"findMatch\">Find This Match</button>");t.b("\n" + i);t.b("   <iframe id=\"directions\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" src=\"\"></iframe>");t.b("\n" + i);t.b("   <input id=\"parkName\" type=\"hidden\" value=\"");t.b(t.v(t.f("park_name",c,p,0)));t.b("\"> -->");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"matchDetailContainer\">\n  {{#data}}\n  <img id=\"sportImage\"src=\"{{img_url}}\">\n  <ul id=\"matchJoin\">\n    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n    <li> {{date}}</li>\n    <li> {{time}}</li>\n    <li> {{sport}} </li>\n    <li><a href=\"/parksDetail/{{park}}\" id=\"parkLink\"> {{park_name}} </a></li>\n    <li id=\"matchDescription\"> {{description}}</li>\n    <li>Created By: <a href=\"/profile/{{creator}}\">{{creator_name}}</a></li>\n    </ul>\n    {{#players}}<a href=\"/profile/{{id}}\" class=\"name\"><img id=\"playerImage\" src=\"{{small_img}}\">{{username}}</a>{{/players}}\n    <button id=\"join\"> Join </button>\n    <a id=\"confirm\" href=\"/\"> Confirm Match </a>\n    <a id=\"decline\" href=\"/\"> Decline Match </a>\n    <div id=\"cancelEdit\">\n    <a id=\"cancel\" href=\"/\"> Cancel Match </a>\n    <a id=\"update\" href=\"/updatematch/{{id}}\">Edit Match</a>\n    </div>\n   </div>\n   <a id=\"leaveMatch\" href=\"/\"> Leave Match </a>\n   <!-- <button id=\"findMatch\">Find This Match</button>\n   <iframe id=\"directions\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" src=\"\"></iframe>\n   <input id=\"parkName\" type=\"hidden\" value=\"{{park_name}}\"> -->\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"matchDetailContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,43,1174,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("  <ul id=\"matchJoin\">");t.b("\n" + i);t.b("    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li> ");t.b(t.v(t.f("sport",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li><a href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\" id=\"parkLink\"> ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </a></li>");t.b("\n" + i);t.b("    <li id=\"matchDescription\"> ");t.b(t.v(t.f("description",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li>Created By: <a href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\">");t.b(t.v(t.f("creator_name",c,p,0)));t.b("</a></li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);t.b("    <img id=\"playerImage\" src=\"https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png\"></li>");t.b("\n" + i);t.b("    <button id=\"join\"> Join </button>");t.b("\n" + i);t.b("    <a id=\"confirm\" href=\"/\"> Confirm Match </a>");t.b("\n" + i);t.b("    <a id=\"decline\" href=\"/\"> Decline Match </a>");t.b("\n" + i);t.b("    <div id=\"cancelEdit\">");t.b("\n" + i);t.b("    <a id=\"cancel\" href=\"/\"> Cancel Match </a>");t.b("\n" + i);t.b("    <a id=\"update\" href=\"/updatematch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Edit Match</a>");t.b("\n" + i);t.b("    </div>");t.b("\n" + i);t.b("   </div>");t.b("\n" + i);t.b("   <a id=\"leaveMatch\" href=\"/\"> Leave Match </a>");t.b("\n" + i);t.b("   <!-- <button id=\"findMatch\">Find This Match</button>");t.b("\n" + i);t.b("   <iframe id=\"directions\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" src=\"\"></iframe>");t.b("\n" + i);t.b("   <input id=\"parkName\" type=\"hidden\" value=\"");t.b(t.v(t.f("park_name",c,p,0)));t.b("\"> -->");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"matchDetailContainer\">\n  {{#data}}\n  <img id=\"sportImage\"src=\"{{img_url}}\">\n  <ul id=\"matchJoin\">\n    <li id=\"matchSkill\"> Skill:<progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n    <li> {{date}}</li>\n    <li> {{time}}</li>\n    <li> {{sport}} </li>\n    <li><a href=\"/parksDetail/{{park}}\" id=\"parkLink\"> {{park_name}} </a></li>\n    <li id=\"matchDescription\"> {{description}}</li>\n    <li>Created By: <a href=\"/profile/{{creator}}\">{{creator_name}}</a></li>\n    </ul>\n    <img id=\"playerImage\" src=\"https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png\"></li>\n    <button id=\"join\"> Join </button>\n    <a id=\"confirm\" href=\"/\"> Confirm Match </a>\n    <a id=\"decline\" href=\"/\"> Decline Match </a>\n    <div id=\"cancelEdit\">\n    <a id=\"cancel\" href=\"/\"> Cancel Match </a>\n    <a id=\"update\" href=\"/updatematch/{{id}}\">Edit Match</a>\n    </div>\n   </div>\n   <a id=\"leaveMatch\" href=\"/\"> Leave Match </a>\n   <!-- <button id=\"findMatch\">Find This Match</button>\n   <iframe id=\"directions\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" src=\"\"></iframe>\n   <input id=\"parkName\" type=\"hidden\" value=\"{{park_name}}\"> -->\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"UpMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3> ");if(t.s(t.f("data",c,p,1),c,p,0,80,985,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("\n" + i);t.b("  <a id=\"updateMatch\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Update Match</a>");t.b("\n" + i);t.b("  <ul id=\"update\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("    <select id=\"addSport\" name=\"Sport\" value \"");t.b(t.v(t.f("sport",c,p,0)));t.b("\">");t.b("\n" + i);t.b("      <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("      <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("      <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("      <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("      <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("    <li> Description:</li>");t.b("\n" + i);t.b("    <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">");t.b(t.v(t.f("description",c,p,0)));t.b("</textarea>");t.b("\n" + i);t.b("    <li> Date:</li>");t.b("\n" + i);t.b("    <input id=\"addDate\" type=\"date\" value=\"");t.b(t.v(t.f("date",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Time:</li>");t.b("\n" + i);t.b("    <input id=\"addTime\" type=\"time\" value=\"");t.b(t.v(t.f("time",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li>");t.b("\n" + i);t.b("    <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='");t.b(t.v(t.f("skill_level",c,p,0)));t.b("'>");t.b("\n" + i);t.b("    <li> Park:</br>");t.b("\n" + i);t.b("      <select id=\"addPark\" name=\"park\">");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"UpMatchPage\">\n  <h3> Create Game you would like to play </h3> {{#data}}\n  <a id=\"updateMatch\" href=\"/match/{{id}}\">Update Match</a>\n  <ul id=\"update\">\n    <li> Sport:</li>\n    <select id=\"addSport\" name=\"Sport\" value \"{{sport}}\">\n      <option value=\"Tennis\">Tennis</option>\n      <option value=\"Basketball\">Basketball</option>\n      <option value=\"Football\">Football</option>\n      <option value=\"Soccer\">Soccer</option>\n      <option value=\"Other\">Other</option>\n    </select>\n    <li> Description:</li>\n    <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">{{description}}</textarea>\n    <li> Date:</li>\n    <input id=\"addDate\" type=\"date\" value=\"{{date}}\">\n    <li> Time:</li>\n    <input id=\"addTime\" type=\"time\" value=\"{{time}}\">\n    <li> Skill: 1-100</li>\n    <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='{{skill_level}}'>\n    <li> Park:</br>\n      <select id=\"addPark\" name=\"park\">\n    </li>\n  </ul>\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"UpMatchPage\">");t.b("\n" + i);t.b("  <h3> Create Game you would like to play </h3>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,82,973,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <a id=\"updateMatch\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Update Match</a>");t.b("\n" + i);t.b("  <ul id=\"update\">");t.b("\n" + i);t.b("    <li> Sport:</li>");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\" value\"");t.b(t.v(t.f("sport",c,p,0)));t.b("\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">");t.b(t.v(t.f("description",c,p,0)));t.b("</textarea>");t.b("\n" + i);t.b("    <li> Date:</li>  <input id=\"addDate\" type=\"date\" value=\"");t.b(t.v(t.f("date",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Time:</li> <input id=\"addTime\" type=\"time\" value=\"");t.b(t.v(t.f("time",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='");t.b(t.v(t.f("skill_level",c,p,0)));t.b("'>");t.b("\n" + i);t.b("    <li> Park:</br><select id=\"addPark\" name=\"park\"></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"UpMatchPage\">\n  <h3> Create Game you would like to play </h3>\n  {{#data}}\n  <a id=\"updateMatch\" href=\"/match/{{id}}\">Update Match</a>\n  <ul id=\"update\">\n    <li> Sport:</li>\n      <select id=\"addSport\" name=\"Sport\" value\"{{sport}}\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    <li> Description:</li> <textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\">{{description}}</textarea>\n    <li> Date:</li>  <input id=\"addDate\" type=\"date\" value=\"{{date}}\">\n    <li> Time:</li> <input id=\"addTime\" type=\"time\" value=\"{{time}}\">\n    <li> Skill: 1-100</li> <input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value='{{skill_level}}'>\n    <li> Park:</br><select id=\"addPark\" name=\"park\"></li>\n  </ul>\n  {{/data}}\n</div>\n\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"updatePage\">");t.b("\n" + i);t.b("  <div id=\"signupHeader\">");t.b("\n" + i);t.b("    <h2>Update Profile</h2>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);if(t.s(t.f("update",c,p,1),c,p,0,98,1663,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <form id=\"signupForm\">");t.b("\n" + i);t.b("    <label>USERNAME:</label>");t.b("\n" + i);t.b("    <input id=\"ruser\" type=\"text\" placeholder=\"Username\" value=\"");t.b(t.v(t.f("username",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>EMAIL:</label>");t.b("\n" + i);t.b("    <input id=\"remail\" type=\"email\" placeholder=\"Email\" value=\"");t.b(t.v(t.f("email",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>PASSWORD:</label>");t.b("\n" + i);t.b("    <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>Re-Enter PASSWORD:</label>");t.b("\n" + i);t.b("    <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("    <span id=\"reenterMessage\"></span>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>PHONE:</label>");t.b("\n" + i);t.b("    <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\" value=\"");t.b(t.v(t.f("phone_number",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>Text Alerts:</label>");t.b("\n" + i);t.b("    <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("    Male");t.b("\n" + i);t.b("    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\"> Female");t.b("\n" + i);t.b("    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\"> Other");t.b("\n" + i);t.b("    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label>Age:</label>");t.b("\n" + i);t.b("    <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("      <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("      <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("      <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("      <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("      <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("      <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("      <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <label id=\"imageUpload\">Upload an Image:</label>");t.b("\n" + i);t.b("    <input id=\"user\" type=\"file\" placeholder=\"upload\">");t.b("\n" + i);t.b("    <button class=\"register\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"updatePage\">\n  <div id=\"signupHeader\">\n    <h2>Update Profile</h2>\n  </div>\n  {{#update}}\n  <form id=\"signupForm\">\n    <label>USERNAME:</label>\n    <input id=\"ruser\" type=\"text\" placeholder=\"Username\" value=\"{{username}}\">\n    </br>\n    <label>EMAIL:</label>\n    <input id=\"remail\" type=\"email\" placeholder=\"Email\" value=\"{{email}}\">\n    </br>\n    <label>PASSWORD:</label>\n    <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n    </br>\n    <label>Re-Enter PASSWORD:</label>\n    <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">\n    <span id=\"reenterMessage\"></span>\n    </br>\n    <label>PHONE:</label>\n    <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\" value=\"{{phone_number}}\">\n    </br>\n    <label>Text Alerts:</label>\n    <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n    </br>\n    <label id=\"gender\">GENDER:</label>\n    Male\n    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\"> Female\n    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\"> Other\n    <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n    </br>\n    <label>Age:</label>\n    <select id=\"rage\" name=\"age\">\n      <option value=\"Under 16\">Under 16</option>\n      <option value=\"16-19\">16-19</option>\n      <option value=\"20's\">20's</option>\n      <option value=\"30's\">30's</option>\n      <option value=\"40's\">40's</option>\n      <option value=\"50's\">50's</option>\n      <option value=\"60+\">60 +</option>\n    </select>\n    </br>\n    </br>\n    <label id=\"imageUpload\">Upload an Image:</label>\n    <input id=\"user\" type=\"file\" placeholder=\"upload\">\n    <button class=\"register\" type=\"submit\">Submit</button>\n  </form>\n  {{/update}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"updatePage\">");t.b("\n" + i);t.b("<div id=\"signupHeader\">");t.b("\n" + i);t.b("<h2>Update Profile</h2>");t.b("\n" + i);t.b("</div>");t.b("\n" + i);if(t.s(t.f("update",c,p,1),c,p,0,88,1548,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<form id=\"signupForm\">");t.b("\n" + i);t.b("  <label>USERNAME:</label>");t.b("\n" + i);t.b("  <input id=\"ruser\" type=\"text\" placeholder=\"Username\" value=\"");t.b(t.v(t.f("username",c,p,0)));t.b("\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("   <label>EMAIL:</label>");t.b("\n" + i);t.b("  <input id=\"remail\" type=\"email\" placeholder=\"Email\" value=\"");t.b(t.v(t.f("email",c,p,0)));t.b("\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Re-Enter PASSWORD:</label>");t.b("\n" + i);t.b("  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">");t.b("\n" + i);t.b("  <span id=\"reenterMessage\"></span>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>PHONE:</label>");t.b("\n" + i);t.b("  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\" value=\"");t.b(t.v(t.f("phone_number",c,p,0)));t.b("\">");t.b("\n" + i);t.b("   </br>");t.b("\n" + i);t.b("  <label>Text Alerts:</label>");t.b("\n" + i);t.b("  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"gender\">GENDER:</label>");t.b("\n" + i);t.b("  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">");t.b("\n" + i);t.b("  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">");t.b("\n" + i);t.b("  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label>Age:</label>");t.b("\n" + i);t.b("  <select id=\"rage\" name=\"age\">");t.b("\n" + i);t.b("  <option value=\"Under 16\">Under 16</option>");t.b("\n" + i);t.b("  <option value=\"16-19\">16-19</option>");t.b("\n" + i);t.b("  <option value=\"20's\">20's</option>");t.b("\n" + i);t.b("  <option value=\"30's\">30's</option>");t.b("\n" + i);t.b("  <option value=\"40's\">40's</option>");t.b("\n" + i);t.b("  <option value=\"50's\">50's</option>");t.b("\n" + i);t.b("  <option value=\"60+\">60 +</option>");t.b("\n" + i);t.b("</select></br>");t.b("\n" + i);t.b("  </br>");t.b("\n" + i);t.b("  <label id=\"imageUpload\">Upload an Image:</label>");t.b("\n" + i);t.b("  <input id=\"user\" type=\"file\" placeholder=\"upload\">");t.b("\n" + i);t.b("  <button class=\"register\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</form>");t.b("\n" + i);});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"updatePage\">\n<div id=\"signupHeader\">\n<h2>Update Profile</h2>\n</div>\n{{#update}}\n<form id=\"signupForm\">\n  <label>USERNAME:</label>\n  <input id=\"ruser\" type=\"text\" placeholder=\"Username\" value=\"{{username}}\">\n  </br>\n   <label>EMAIL:</label>\n  <input id=\"remail\" type=\"email\" placeholder=\"Email\" value=\"{{email}}\">\n  </br>\n  <label>PASSWORD:</label>\n  <input id=\"rpass\" type=\"password\" placeholder=\"Password\">\n  </br>\n  <label>Re-Enter PASSWORD:</label>\n  <input id=\"rerpass\" type=\"password\" placeholder=\"Password\">\n  <span id=\"reenterMessage\"></span>\n  </br>\n  <label>PHONE:</label>\n  <input id=\"rnumber\" type=\"text\" placeholder=\"Phone Number\" value=\"{{phone_number}}\">\n   </br>\n  <label>Text Alerts:</label>\n  <input id=\"rtxt\" type=\"checkbox\" checked=\"checked\">\n  </br>\n  <label id=\"gender\">GENDER:</label>\n  Male <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Male\">\n  Female <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Female\">\n  Other <input class=\"rgen\" type=\"radio\" name=\"Gender\" value=\"Other\">\n  </br>\n  <label>Age:</label>\n  <select id=\"rage\" name=\"age\">\n  <option value=\"Under 16\">Under 16</option>\n  <option value=\"16-19\">16-19</option>\n  <option value=\"20's\">20's</option>\n  <option value=\"30's\">30's</option>\n  <option value=\"40's\">40's</option>\n  <option value=\"50's\">50's</option>\n  <option value=\"60+\">60 +</option>\n</select></br>\n  </br>\n  <label id=\"imageUpload\">Upload an Image:</label>\n  <input id=\"user\" type=\"file\" placeholder=\"upload\">\n  <button class=\"register\" type=\"submit\">Submit</button>\n</form>\n{{/update}}\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("  <h2>Match History:</h2>");t.b("\n" + i);if(t.s(t.f("history",c,p,1),c,p,0,68,384,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_completed",c,p,1),c,p,0,90,364,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("      <img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("     	<ul id =\"test\">");t.b("\n" + i);t.b("        <li>This match was completed on, ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("        <li>");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("        <li>");t.b(t.v(t.f("park_name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("        <li><a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a></li>");t.b("\n" + i);t.b("      </ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"historyContainer\">\n  <h2>Match History:</h2>\n  {{#history}}\n    {{#is_completed}}\n      <img id=\"sportImage\"src=\"{{img_url}}\">\n     \t<ul id =\"test\">\n        <li>This match was completed on, {{date}}</li>\n        <li>{{sport}}</li>\n        <li>{{park_name}}</li>\n        <li><a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a></li>\n      </ul>\n    {{/is_completed}}\n  {{/history}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("<h2>Match History:</h2>");t.b("\n" + i);if(t.s(t.f("history",c,p,1),c,p,0,64,360,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_completed",c,p,1),c,p,0,84,342,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <img id=\"sportImage\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("   	<ul id =\"test\">");t.b("\n" + i);t.b("      <li>This match was completed on, ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("      <li>");t.b(t.v(t.f("sport",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("      <li>");t.b(t.v(t.f("park_name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("      <li><a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a></li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"historyContainer\">\n<h2>Match History:</h2>\n{{#history}}\n  {{#is_completed}}\n    <img id=\"sportImage\"src=\"{{img_url}}\">\n   \t<ul id =\"test\">\n      <li>This match was completed on, {{date}}</li>\n      <li>{{sport}}</li>\n      <li>{{park_name}}</li>\n      <li><a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a></li>\n    </ul>\n  {{/is_completed}}\n{{/history}}\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"profileContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,39,682,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <button id=\"challenge\">challenge</button>");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li><img id=\"userProfileImg\" src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Sportsmanship:");t.b("\n" + i);t.b("      <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\">");if(t.s(t.f("skill_set",c,p,1),c,p,0,553,647,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");t.b(t.v(t.f("sport",c,p,0)));t.b(" Skill:");t.b("\n" + i);t.b("      <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);});c.pop();}t.b("    </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"profileContainer\">\n  {{#data}}\n  <button id=\"challenge\">challenge</button>\n  <ul>\n    <li><img id=\"userProfileImg\" src=\"{{profile.pic_url}}\">\n    </li>\n    <li class=\"profileDescription\"> Username: {{username}} </li>\n    <li class=\"profileDescription\"> Age: {{profile.age}} </li>\n    <li class=\"profileDescription\"> Gender: {{profile.gender}}</li>\n    <li class=\"profileDescription\"> Sportsmanship:\n      <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress>\n    </li>\n    <li class=\"profileDescription\">{{#skill_set}} {{sport}} Skill:\n      <progress class=\"skill\" value=\"{{skill}}\" max=\"100\"></progress>\n      {{/skill_set}}\n    </li>\n  </ul>\n  {{/data}}\n</div>\n\n<div id=\"historyContainer\">\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"profileContainer\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,37,661,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<button id=\"challenge\">challenge</button>");t.b("\n" + i);t.b("  <ul>");t.b("\n" + i);t.b("    <li><img id=\"userProfileImg\" src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\"> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("     <li class=\"profileDescription\"> Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("    <li class=\"profileDescription\">");if(t.s(t.f("skill_set",c,p,1),c,p,0,534,627,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");t.b(t.v(t.f("sport",c,p,0)));t.b(" Skill:");t.b("\n" + i);t.b("     <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n");t.b("\n" + i);});c.pop();}t.b("     </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n");t.b("\n" + i);t.b("<div id=\"historyContainer\">");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"profileContainer\">\n{{#data}}\n<button id=\"challenge\">challenge</button>\n  <ul>\n    <li><img id=\"userProfileImg\" src=\"{{profile.pic_url}}\"></li>\n    <li class=\"profileDescription\"> Username: {{username}} </li>\n    <li class=\"profileDescription\"> Age: {{profile.age}} </li>\n    <li class=\"profileDescription\"> Gender: {{profile.gender}}</li>\n     <li class=\"profileDescription\"> Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress></li>\n    <li class=\"profileDescription\">{{#skill_set}} {{sport}} Skill:\n     <progress class=\"skill\" value=\"{{skill}}\" max=\"100\"></progress>\n\n     {{/skill_set}}\n     </li>\n  </ul>\n{{/data}}\n</div>\n\n<div id=\"historyContainer\">\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("w<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h2> Create Game you would like to play </h2>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Pickleball\">Pickleball</option>");t.b("\n" + i);t.b("        <option value=\"Volleyball\">Volleyball</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li> Date: <input id=\"addDate\" type=\"date\"></li>");t.b("\n" + i);t.b("    <li> Time:<input id=\"addTime\" type=\"time\"></li>");t.b("\n" + i);t.b("    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>");t.b("\n" + i);t.b("    <li> Park:<select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,819,871,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("      <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li> <label>Skill:</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "w<div id=\"createMatchPage\">\n  <h2> Create Game you would like to play </h2>\n  <ul id=\"create\">\n    <li> Sport:\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Pickleball\">Pickleball</option>\n        <option value=\"Volleyball\">Volleyball</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    </li>\n    <li> Date: <input id=\"addDate\" type=\"date\"></li>\n    <li> Time:<input id=\"addTime\" type=\"time\"></li>\n    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>\n    <li> Park:<select id=\"addPark\" name=\"park\">\n    {{#park}}\n      <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n    <li> <label>Skill:</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Submit</button>\n</div>\n\n", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"createMatchPage\">");t.b("\n" + i);t.b("  <h2> Create Game you would like to play </h2>");t.b("\n" + i);t.b("  <ul id=\"create\">");t.b("\n" + i);t.b("    <li> Sport:");t.b("\n" + i);t.b("      <select id=\"addSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Pickleball\">Pickleball</option>");t.b("\n" + i);t.b("        <option value=\"Volleyball\">Volleyball</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("    <li> Date: <input id=\"addDate\" type=\"date\"></li>");t.b("\n" + i);t.b("    <li> Time:<input id=\"addTime\" type=\"time\"></li>");t.b("\n" + i);t.b("    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>");t.b("\n" + i);t.b("    <li> Park:<select id=\"addPark\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,820,870,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("<<<<<<< HEAD");t.b("\n");t.b("\n" + i);t.b("    <li> <label>Skill:</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>");t.b("\n" + i);t.b("=======");t.b("\n" + i);t.b("    <li> <label>Skill: 1-100</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>");t.b("\n" + i);t.b(">>>>>>> nick");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</div>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"createMatchPage\">\n  <h2> Create Game you would like to play </h2>\n  <ul id=\"create\">\n    <li> Sport:\n      <select id=\"addSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Pickleball\">Pickleball</option>\n        <option value=\"Volleyball\">Volleyball</option>\n        <option value=\"Other\">Other</option>\n      </select>\n      </li>\n    <li> Date: <input id=\"addDate\" type=\"date\"></li>\n    <li> Time:<input id=\"addTime\" type=\"time\"></li>\n    <li><textarea id=\"addDescription\" cols=\"30\" placeholder=\"What kind of match you are looking for?\"></textarea></li>\n    <li> Park:<select id=\"addPark\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n<<<<<<< HEAD\n\n    <li> <label>Skill:</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>\n=======\n    <li> <label>Skill: 1-100</label><input id=\"addSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>\n>>>>>>> nick\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Submit</button>\n</div>\n\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"feedbackContainer\">");t.b("\n" + i);t.b("  <form id=\"feedbackForm\">");t.b("\n" + i);t.b("    <h3>Skill level of player <span id=\"skillLevel\" class=\"info\">[i]</span> </h3>");t.b("\n" + i);t.b("    <span id=\"skillLevelinfo\" class=\"hidden\">On a scale from 1 - 100 Please rate the players skill</span>");t.b("\n" + i);t.b("    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <h3>Sportsmanship <span id='Sportsmanship'class=\"info\">[i]</span></h3>");t.b("\n" + i);t.b("    <span id='Sportsmanshipinfo' class=\"hidden\">On a scale from 1 - 100 Please rate how fun the match was</span>");t.b("\n" + i);t.b("    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    <h3>Crowd level <span id=\"crowd\"class=\"info\">[i]</span></h3>");t.b("\n" + i);t.b("    <span id=\"crowdinfo\" class=\"hidden\">On a scale from 1 - 5 Please tell us how crowded the park was</span>");t.b("\n" + i);t.b("    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">");t.b("\n" + i);t.b("      <option value=\"On Time\">On Time</option>");t.b("\n" + i);t.b("      <option value=\"No Show\">No Show</option>");t.b("\n" + i);t.b("      <option value=\"Little bit late\">Little Late</option>");t.b("\n" + i);t.b("      <option value=\"Over 10 min late\">Over 10 mins late</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"feedbackContainer\">\n  <form id=\"feedbackForm\">\n    <h3>Skill level of player <span id=\"skillLevel\" class=\"info\">[i]</span> </h3>\n    <span id=\"skillLevelinfo\" class=\"hidden\">On a scale from 1 - 100 Please rate the players skill</span>\n    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <h3>Sportsmanship <span id='Sportsmanship'class=\"info\">[i]</span></h3>\n    <span id='Sportsmanshipinfo' class=\"hidden\">On a scale from 1 - 100 Please rate how fun the match was</span>\n    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    <h3>Crowd level <span id=\"crowd\"class=\"info\">[i]</span></h3>\n    <span id=\"crowdinfo\" class=\"hidden\">On a scale from 1 - 5 Please tell us how crowded the park was</span>\n    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n    </br>\n    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">\n      <option value=\"On Time\">On Time</option>\n      <option value=\"No Show\">No Show</option>\n      <option value=\"Little bit late\">Little Late</option>\n      <option value=\"Over 10 min late\">Over 10 mins late</option>\n    </select>\n  </form>\n  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"feedbackContainer\">");t.b("\n" + i);t.b("  <form id=\"feedbackForm\">");t.b("\n" + i);t.b("  <h3>Skill level of player <span id=\"skillLevel\" class=\"info\">[i]</span></h3>");t.b("\n" + i);t.b("    <span id=\"skillLevelinfo\" class=\"hidden\">On a scale from 1 - 100 Please rate the players skill</span>");t.b("\n" + i);t.b("    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>Sportsmanship <span id='Sportsmanship'class=\"info\">[i]</span></h3>");t.b("\n" + i);t.b("    <span id='Sportsmanshipinfo' class=\"hidden\">On a scale from 1 - 100 Please rate how fun the match was</span>");t.b("\n" + i);t.b("    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("<h3>Crowd level <span id=\"crowd\"class=\"info\">[i]</span></h3>");t.b("\n" + i);t.b("<span id=\"crowdinfo\" class=\"hidden\">On a scale from 1 - 5 Please tell us how crowded the park was</span>");t.b("\n" + i);t.b("    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </br>");t.b("\n" + i);t.b("    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">");t.b("\n" + i);t.b("      <option value=\"On Time\">On Time</option>");t.b("\n" + i);t.b("      <option value=\"No Show\">No Show</option>");t.b("\n" + i);t.b("      <option value=\"Little bit late\">Little Late</option>");t.b("\n" + i);t.b("      <option value=\"Over 10 min late\">Over 10 mins late</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"feedbackContainer\">\n  <form id=\"feedbackForm\">\n  <h3>Skill level of player <span id=\"skillLevel\" class=\"info\">[i]</span></h3>\n    <span id=\"skillLevelinfo\" class=\"hidden\">On a scale from 1 - 100 Please rate the players skill</span>\n    <input id=\"addSkillFeedback\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>Sportsmanship <span id='Sportsmanship'class=\"info\">[i]</span></h3>\n    <span id='Sportsmanshipinfo' class=\"hidden\">On a scale from 1 - 100 Please rate how fun the match was</span>\n    <input id=\"addFunFeedback\"  type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n<h3>Crowd level <span id=\"crowd\"class=\"info\">[i]</span></h3>\n<span id=\"crowdinfo\" class=\"hidden\">On a scale from 1 - 5 Please tell us how crowded the park was</span>\n    <input id=\"addCrowdFeedback\"  type=\"range\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n    </br>\n    <select id=\"addPunctualityFeedback\" name=\"Punctuality\">\n      <option value=\"On Time\">On Time</option>\n      <option value=\"No Show\">No Show</option>\n      <option value=\"Little bit late\">Little Late</option>\n      <option value=\"Over 10 min late\">Over 10 mins late</option>\n    </select>\n  </form>\n  <button id=\"submitFeedback\" type=\"sumbit\"> Feedback </button>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"userprofile\">");t.b("\n" + i);if(t.s(t.f("user",c,p,1),c,p,0,129,657,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"homeProfileImg\"><img src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"userDes\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b("\n" + i);t.b("      <br> Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b("\n" + i);t.b("      <br> Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("\n" + i);t.b("      <br> Sportsmanship:");t.b("\n" + i);t.b("      <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);t.b("      <br> ");if(t.s(t.f("skill_set",c,p,1),c,p,0,465,559,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");t.b(t.v(t.f("sport",c,p,0)));t.b(" Skill:");t.b("\n" + i);t.b("      <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);});c.pop();}t.b("    </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Create Match</button>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n" + i);t.b("<div id=\"youMatches\">");t.b("\n" + i);t.b("  <div id=\"pending\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,730,1596,"{{ }}")){t.rs(c,p,function(c,p,t){if(!t.s(t.f("is_confirmed",c,p,1),c,p,1,0,0,"")){t.b("    <h2>Pending</h2>");t.b("\n" + i);t.b("    <ul>");t.b("\n" + i);t.b("      <li>");t.b("\n" + i);t.b("        <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("        </a>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\">");t.b("\n" + i);t.b("        <li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("      </a>");t.b("\n" + i);t.b("      <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("        ");t.b(t.v(t.f("sport",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("        <a class=\"parkslink\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("      <li> <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("      <li id=\"skillProgressHome\"> Skill Level");t.b("\n" + i);t.b("        <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <li class=\"playing\">");if(t.s(t.f("players",c,p,1),c,p,0,1466,1546,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<img src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\"><a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\" class=\"name\">");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b("</li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);};});c.pop();}t.b("  </div>");t.b("\n" + i);t.b("  <div id=\"upcoming\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,1650,2511,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_confirmed",c,p,1),c,p,0,1668,2493,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <h2>Upcoming</h2>");t.b("\n" + i);t.b("    <ul>");t.b("\n" + i);t.b("      <li>");t.b("\n" + i);t.b("        <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("        </a>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\">");t.b("\n" + i);t.b("        <li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("      </a>");t.b("\n" + i);t.b("      <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("        ");t.b(t.v(t.f("sport",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("        <a class=\"parkslink\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a> </li>");t.b("\n" + i);t.b("      <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("      <li> <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("      <li id=\"skillProgressHome\"> Skill Level");t.b("\n" + i);t.b("        <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <li class=\"playing\">");if(t.s(t.f("players",c,p,1),c,p,0,2381,2461,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<img src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\"><a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\" class=\"name\">");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b("</li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("  </div>");t.b("\n" + i);t.b("  <div id=\"history\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,2564,3512,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_completed",c,p,1),c,p,0,2582,3494,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <h2>History</h2>");t.b("\n" + i);t.b("    <ul>");t.b("\n" + i);t.b("      <li>");t.b("\n" + i);t.b("        <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("        </a>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\">");t.b("\n" + i);t.b("        <li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("      </a>");t.b("\n" + i);t.b("      <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("        ");t.b(t.v(t.f("sport",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("        <a class=\"parkslink\" href=\"/parksDetail/");t.b(t.v(t.f("park",c,p,0)));t.b("\">");t.b(t.v(t.f("park_name",c,p,0)));t.b("</a>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("      <li> <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("      <li id=\"skillProgressHome\"> Skill Level");t.b("\n" + i);t.b("        <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <li class=\"playing\">");if(t.s(t.f("players",c,p,1),c,p,0,3300,3380,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<img src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\"><a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\" class=\"name\">");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b("</li>");t.b("\n" + i);t.b("      <li><a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("  </div>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"userprofile\">\n  {{#user}}\n  <ul>\n    <li class=\"homeProfileImg\"><img src=\"{{profile.pic_url}}\">\n    </li>\n    <li class=\"userDes\"> Username: {{username}}\n      <br> Age: {{profile.age}}\n      <br> Gender: {{profile.gender}}\n      <br> Sportsmanship:\n      <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress>\n      <br> {{#skill_set}} {{sport}} Skill:\n      <progress class=\"skill\" value=\"{{skill}}\" max=\"100\"></progress>\n      {{/skill_set}}\n    </li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Create Match</button>\n  {{/user}}\n</div>\n<div id=\"youMatches\">\n  <div id=\"pending\">\n    {{#data}} {{^is_confirmed}}\n    <h2>Pending</h2>\n    <ul>\n      <li>\n        <a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\">\n        </a>\n      </li>\n      <a href=\"/match/{{id}}\" id=\"dateHome\">\n        <li> {{date}}</li>\n      </a>\n      <li> {{time}}</br>\n        {{sport}}</br>\n        <a class=\"parkslink\" href=\"/parksDetail/{{park}}\">{{park_name}}</a>\n      </li>\n      <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n      <li> <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n      <li id=\"skillProgressHome\"> Skill Level\n        <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress>\n      </li>\n      <li class=\"playing\">{{#players}}<img src=\"{{small_img}}\"><a href=\"/profile/{{id}}\" class=\"name\">{{username}}</a>{{/players}}</li>\n    </ul>\n    {{/is_confirmed}} {{/data}}\n  </div>\n  <div id=\"upcoming\">\n    {{#data}} {{#is_confirmed}}\n    <h2>Upcoming</h2>\n    <ul>\n      <li>\n        <a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\">\n        </a>\n      </li>\n      <a href=\"/match/{{id}}\" id=\"dateHome\">\n        <li> {{date}}</li>\n      </a>\n      <li> {{time}}</br>\n        {{sport}}</br>\n        <a class=\"parkslink\" href=\"/parksDetail/{{park}}\">{{park_name}}</a> </li>\n      <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n      <li> <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n      <li id=\"skillProgressHome\"> Skill Level\n        <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress>\n      </li>\n      <li class=\"playing\">{{#players}}<img src=\"{{small_img}}\"><a href=\"/profile/{{id}}\" class=\"name\">{{username}}</a>{{/players}}</li>\n    </ul>\n    {{/is_confirmed}} {{/data}}\n  </div>\n  <div id=\"history\">\n    {{#data}} {{#is_completed}}\n    <h2>History</h2>\n    <ul>\n      <li>\n        <a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\">\n        </a>\n      </li>\n      <a href=\"/match/{{id}}\" id=\"dateHome\">\n        <li> {{date}}</li>\n      </a>\n      <li> {{time}}</br>\n        {{sport}}</br>\n        <a class=\"parkslink\" href=\"/parksDetail/{{park}}\">{{park_name}}</a>\n      </li>\n      <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n      <li> <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n      <li id=\"skillProgressHome\"> Skill Level\n        <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress>\n      </li>\n      <li class=\"playing\">{{#players}}<img src=\"{{small_img}}\"><a href=\"/profile/{{id}}\" class=\"name\">{{username}}</a>{{/players}}</li>\n      <li><a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a>\n      </li>\n    </ul>\n    {{/is_completed}} {{/data}}\n  </div>\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>");t.b("\n");t.b("\n" + i);t.b("<div id=\"userprofile\">");t.b("\n" + i);if(t.s(t.f("user",c,p,1),c,p,0,127,630,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul>");t.b("\n" + i);t.b("    <li class=\"homeProfileImg\" ><img src=\"");t.b(t.v(t.d("profile.pic_url",c,p,0)));t.b("\"></li>");t.b("\n" + i);t.b("    <li class=\"userDes\"> Username: ");t.b(t.v(t.f("username",c,p,0)));t.b("<br>");t.b("\n" + i);t.b("    Age: ");t.b(t.v(t.d("profile.age",c,p,0)));t.b("<br>");t.b("\n" + i);t.b("    Gender: ");t.b(t.v(t.d("profile.gender",c,p,0)));t.b("<br>");t.b("\n" + i);t.b("    Sportsmanship: <progress class=\"skill\" value=\"");t.b(t.v(t.d("profile.sportsmanship",c,p,0)));t.b("\" max=\"100\"></progress><br>");t.b("\n" + i);t.b("    ");if(t.s(t.f("skill_set",c,p,1),c,p,0,441,533,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");t.b(t.v(t.f("sport",c,p,0)));t.b(" Skill:");t.b("\n" + i);t.b("     <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill",c,p,0)));t.b("\" max=\"100\"></progress>");t.b("\n" + i);});c.pop();}t.b("     </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createMatch\" type=\"submit\">Create Match</button>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n" + i);t.b("<div id=\"youMatches\">");t.b("\n" + i);t.b("<div id=\"pending\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,697,1394,"{{ }}")){t.rs(c,p,function(c,p,t){if(!t.s(t.f("is_confirmed",c,p,1),c,p,1,0,0,"")){t.b("<h2>Pending</h2>");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <li><a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a></li>");t.b("\n" + i);t.b("  <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\"><li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li></a>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("  ");t.b(t.v(t.f("sport",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("  ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("   <li class=\"playing\">");if(t.s(t.f("players",c,p,1),c,p,0,1272,1352,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<img src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\"><a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\" class=\"name\">");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b("</li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);};});c.pop();}t.b("</div>");t.b("\n" + i);t.b("<div id=\"upcoming\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,1440,2138,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_confirmed",c,p,1),c,p,0,1458,2120,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<h2>Upcoming</h2>");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <li><a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a></li>");t.b("\n" + i);t.b("  <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\"><li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li></a>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("  ");t.b(t.v(t.f("sport",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("  ");t.b(t.v(t.f("park_name",c,p,0)));t.b(" </li>");t.b("\n" + i);t.b("  <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("   <li class=\"playing\">");if(t.s(t.f("players",c,p,1),c,p,0,2016,2096,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<img src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\"><a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\" class=\"name\">");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b("</li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");t.b("\n" + i);t.b("<div id=\"history\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,2183,2961,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_completed",c,p,1),c,p,0,2201,2943,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<h2>History</h2>");t.b("\n" + i);t.b("<ul>");t.b("\n" + i);t.b("  <li><a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img id=\"sportImage\" src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a></li>");t.b("\n" + i);t.b("  <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\" id=\"dateHome\"><li> ");t.b(t.v(t.f("date",c,p,0)));t.b("</li></a>");t.b("\n" + i);t.b("  <li> ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("       ");t.b(t.v(t.f("sport",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("       ");t.b(t.v(t.f("park_name",c,p,0)));t.b("</li>");t.b("\n" + i);t.b("  <li> Created By: <a id=\"profileName\" href=\"/profile/");t.b(t.v(t.f("creator",c,p,0)));t.b("\"> ");t.b(t.v(t.f("creator_name",c,p,0)));t.b(" </a> </li>");t.b("\n" + i);t.b("  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Details </a> </li>");t.b("\n" + i);t.b("   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\"></progress></li>");t.b("\n" + i);t.b("   <li class=\"playing\">");if(t.s(t.f("players",c,p,1),c,p,0,2767,2847,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<img src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\"><a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\" class=\"name\">");t.b(t.v(t.f("username",c,p,0)));t.b("</a>");});c.pop();}t.b("</li>");t.b("\n" + i);t.b("   <li><a id=\"goToFeedback\" href=\"/feedback/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Feedback </a></li>");t.b("\n" + i);t.b("</ul>");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</div>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>\n\n<div id=\"userprofile\">\n{{#user}}\n  <ul>\n    <li class=\"homeProfileImg\" ><img src=\"{{profile.pic_url}}\"></li>\n    <li class=\"userDes\"> Username: {{username}}<br>\n    Age: {{profile.age}}<br>\n    Gender: {{profile.gender}}<br>\n    Sportsmanship: <progress class=\"skill\" value=\"{{profile.sportsmanship}}\" max=\"100\"></progress><br>\n    {{#skill_set}} {{sport}} Skill:\n     <progress class=\"skill\" value=\"{{skill}}\" max=\"100\"></progress>\n     {{/skill_set}}\n     </li>\n  </ul>\n  <button id=\"createMatch\" type=\"submit\">Create Match</button>\n{{/user}}\n</div>\n<div id=\"youMatches\">\n<div id=\"pending\">\n{{#data}}\n{{^is_confirmed}}\n<h2>Pending</h2>\n<ul>\n  <li><a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\"></a></li>\n  <a href=\"/match/{{id}}\" id=\"dateHome\"><li> {{date}}</li></a>\n  <li> {{time}}</br>\n  {{sport}}</br>\n  {{park_name}} </li>\n  <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n   <li class=\"playing\">{{#players}}<img src=\"{{small_img}}\"><a href=\"/profile/{{id}}\" class=\"name\">{{username}}</a>{{/players}}</li>\n</ul>\n{{/is_confirmed}}\n{{/data}}\n</div>\n<div id=\"upcoming\">\n{{#data}}\n{{#is_confirmed}}\n<h2>Upcoming</h2>\n<ul>\n  <li><a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\"></a></li>\n  <a href=\"/match/{{id}}\" id=\"dateHome\"><li> {{date}}</li></a>\n  <li> {{time}}</br>\n  {{sport}}</br>\n  {{park_name}} </li>\n  <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n   <li class=\"playing\">{{#players}}<img src=\"{{small_img}}\"><a href=\"/profile/{{id}}\" class=\"name\">{{username}}</a>{{/players}}</li>\n</ul>\n{{/is_confirmed}}\n{{/data}}\n</div>\n<div id=\"history\">\n{{#data}}\n{{#is_completed}}\n<h2>History</h2>\n<ul>\n  <li><a href=\"/match/{{id}}\"><img id=\"sportImage\" src=\"{{img_url}}\"></a></li>\n  <a href=\"/match/{{id}}\" id=\"dateHome\"><li> {{date}}</li></a>\n  <li> {{time}}</br>\n       {{sport}}</br>\n       {{park_name}}</li>\n  <li> Created By: <a id=\"profileName\" href=\"/profile/{{creator}}\"> {{creator_name}} </a> </li>\n  <li>  <a id=\"matchDetail\" type=\"sumbit\" href=\"/match/{{id}}\"> Details </a> </li>\n   <li id=\"skillProgressHome\"> Skill Level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\"></progress></li>\n   <li class=\"playing\">{{#players}}<img src=\"{{small_img}}\"><a href=\"/profile/{{id}}\" class=\"name\">{{username}}</a>{{/players}}</li>\n   <li><a id=\"goToFeedback\" href=\"/feedback/{{id}}\"> Feedback </a></li>\n</ul>\n{{/is_completed}}\n{{/data}}\n</div>\n</div>", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);t.b("  <form>");t.b("\n" + i);t.b("    <label>Input location</label>");t.b("\n" + i);t.b("    <input id=\"zipcode\" type=\"text\" placeholder=\"Zip Code\" />");t.b("\n" + i);t.b("    <button id=\"zip\">Search</button>");t.b("\n");t.b("\n" + i);t.b("    <input id=\"parkSearch\" type=\"search\" placeholder=\"Search for a Park\">");t.b("\n" + i);t.b("    <button id=\"searchPark\">Search</button>");t.b("\n");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"locate\">Show my location</button>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,357,1298,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul class=\"parks\">");t.b("\n" + i);t.b("    <li>");t.b("\n" + i);t.b("      <iframe class=\"googleMaps\" width=\"300\" height=\"300\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ");t.b("\n" + i);t.b("        &q=");t.b(t.v(t.f("name",c,p,0)));t.b("+");t.b(t.v(t.f("display_address3",c,p,0)));t.b("&zoom=12\">");t.b("\n" + i);t.b("      </iframe>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"parkPic\"><img class=\"parksImage\" src=\"");t.b(t.v(t.f("image_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("      </br>");t.b(t.v(t.f("display_address1",c,p,0)));t.b("</br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</br>");t.b(t.v(t.f("distance",c,p,0)));t.b(" Miles</li>");t.b("\n" + i);t.b("    <li class=\"parkMatch\"><a type=\"submit\" href=\"/parkCreateMatch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Create Match</a>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"parkDet\">");t.b("\n" + i);t.b("      <div class=\"parkName\"><a href=\"/parksDetail/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</a>");t.b("\n" + i);t.b("      </div>");t.b("\n" + i);t.b("      </br><img src=\"");t.b(t.v(t.f("rating_img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("      </br><a class=\"yelpReview\" href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"availableSports\">");t.b("\n" + i);t.b("    <p>Available Sports</p>");t.b("\n" + i);if(t.s(t.f("court_set",c,p,1),c,p,0,1214,1263,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <img class=\"sportPic\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);});c.pop();}t.b("    </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}t.b("</div>");t.b("\n" + i);t.b("<button id=\"backPark\"> Back </button>");t.b("\n" + i);t.b("<button id=\"nextPark\"> Next </button>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n  <form>\n    <label>Input location</label>\n    <input id=\"zipcode\" type=\"text\" placeholder=\"Zip Code\" />\n    <button id=\"zip\">Search</button>\n\n    <input id=\"parkSearch\" type=\"search\" placeholder=\"Search for a Park\">\n    <button id=\"searchPark\">Search</button>\n\n  </form>\n  <button id=\"locate\">Show my location</button>\n  {{#data}}\n  <ul class=\"parks\">\n    <li>\n      <iframe class=\"googleMaps\" width=\"300\" height=\"300\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ\n        &q={{name}}+{{display_address3}}&zoom=12\">\n      </iframe>\n    </li>\n    <li class=\"parkPic\"><img class=\"parksImage\" src=\"{{image_url}}\">\n      </br>{{display_address1}}</br> {{display_address3}}</br>{{distance}} Miles</li>\n    <li class=\"parkMatch\"><a type=\"submit\" href=\"/parkCreateMatch/{{id}}\">Create Match</a>\n    </li>\n    <li class=\"parkDet\">\n      <div class=\"parkName\"><a href=\"/parksDetail/{{id}}\">{{name}}</a>\n      </div>\n      </br><img src=\"{{rating_img_url}}\">\n      </br><a class=\"yelpReview\" href=\"{{url}}\"> Yelp Park Review</a>\n    </li>\n    <li class=\"availableSports\">\n    <p>Available Sports</p>\n    {{#court_set}}\n    <img class=\"sportPic\"src=\"{{img_url}}\">\n    {{/court_set}}\n    </li>\n  </ul>\n  {{/data}}\n</div>\n<button id=\"backPark\"> Back </button>\n<button id=\"nextPark\"> Next </button>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Backbone = __webpack_require__(36);
-
-	var matchContainer = Backbone.Model.extend({
-	  initialize: function() {
-	  },
-	  defaults: {
-	    title: null,
-	    description: null,
-	    park: null,
-	    sport: null,
-	    skill_level: null,
-	    date: null,
-	    time: null
-	    },
-	    Model: matchContainer,
-	    url: 'https://skill-match.herokuapp.com/api/matches/'
-	  });
-	 module.exports = matchContainer;
+	var H = __webpack_require__(41);
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksPage\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,32,2560,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <div id=\"parksDetail\">");t.b("\n" + i);t.b("    <ul id=\"parksProfile\">");t.b("\n" + i);t.b("      <li>");t.b("\n" + i);t.b("        <iframe id=\"googleMaps2\" width=\"225\" height=\"225\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ");t.b("\n" + i);t.b("          &q=");t.b(t.v(t.f("name",c,p,0)));t.b("+");t.b(t.v(t.f("display_address3",c,p,0)));t.b("&zoom=12\">");t.b("\n" + i);t.b("        </iframe>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <li>");t.b("\n" + i);t.b("        <h3 class=\"parkName\">");t.b(t.v(t.f("name",c,p,0)));t.b("</h3>");t.b("\n" + i);t.b("        <p class=\"parkAddress\">");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address2",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</p>");t.b("\n" + i);t.b("        </br>");t.b("\n" + i);t.b("        <p class=\"yelp\"><img src=\"");t.b(t.v(t.f("rating_img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("        </p>");t.b("\n" + i);t.b("        </br>");t.b("\n" + i);t.b("        <a class=\"yelp\" id=\"yelpReview\" href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a>");t.b("\n" + i);t.b("        <img src=\"");t.b(t.v(t.f("small_sport_img",c,p,0)));t.b("\" />");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);if(t.s(t.f("court_set",c,p,1),c,p,0,773,860,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("      <li>");t.b("\n" + i);t.b("        <img id=\"sportIcon\" src=\"");t.b(t.v(t.f("small_sport_img",c,p,0)));t.b("\" />");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);});c.pop();}t.b("      <li>");t.b("\n" + i);t.b("        <dialog open class='hidden'>");t.b("\n" + i);t.b("          <form class=\"addSport\">");t.b("\n" + i);t.b("            <select class=\"addNewParkSport\" placeholder=\"Add New Sport\">");t.b("\n" + i);t.b("              <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("              <option value=\"Football\">Footballl</option>");t.b("\n" + i);t.b("              <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("              <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("              <option value=\"Pickleball\">Pickleball</option>");t.b("\n" + i);t.b("            </select>");t.b("\n" + i);t.b("            <label>Optional</label>");t.b("\n" + i);t.b("            <input type=\"text\" class=\"addOtherParkSport\" placeholder=\"Add other sport\">");t.b("\n" + i);t.b("            <input type=\"text\" class=\"addNumCourts\" placeholder=\"Number of courts\">");t.b("\n" + i);t.b("          </form>");t.b("\n" + i);t.b("          <button type=\"submit\" class=\"createCourtButton\">Add Sport</button>");t.b("\n" + i);t.b("          <button class=\"close\">x</button>");t.b("\n" + i);t.b("        </dialog>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);t.b("    <button id=\"createCourt\">Add Sport</button>");t.b("\n" + i);t.b("    <a id=\"parkMatch\" type=\"submit\" href=\"/parkCreateMatch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Create Match</a>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("  <h2> Open Matches </h2> ");if(t.s(t.f("match_set",c,p,1),c,p,0,1905,2545,"{{ }}")){t.rs(c,p,function(c,p,t){t.b(" ");if(t.s(t.f("is_open",c,p,1),c,p,0,1918,2532,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("\n" + i);t.b("  <ul class=\"parkMatches\">");t.b("\n" + i);t.b("    <li id=\"sportImage\">");t.b("\n" + i);t.b("      <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);t.b("      </a>");t.b("\n" + i);t.b("      </br>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("date",c,p,0)));t.b("</a> ");t.b(t.v(t.f("time",c,p,0)));t.b("\n" + i);t.b("      </br>");t.b("\n" + i);t.b("      <li id=\"skillProgress\"> Skill level");t.b("\n" + i);t.b("        <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("        </progress>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <li class=\"players\">");if(t.s(t.f("players",c,p,1),c,p,0,2324,2414,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("\n" + i);t.b("        <a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img class=\"smallImg\" src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\">");t.b("\n" + i);t.b("        </a>");});c.pop();}t.b("\n" + i);t.b("        <li class=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a>");t.b("\n" + i);t.b("        </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);});c.pop();}});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksPage\">\n  {{#data}}\n  <div id=\"parksDetail\">\n    <ul id=\"parksProfile\">\n      <li>\n        <iframe id=\"googleMaps2\" width=\"225\" height=\"225\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ\n          &q={{name}}+{{display_address3}}&zoom=12\">\n        </iframe>\n      </li>\n      <li>\n        <h3 class=\"parkName\">{{name}}</h3>\n        <p class=\"parkAddress\">{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>\n        </br>\n        <p class=\"yelp\"><img src=\"{{rating_img_url}}\">\n        </p>\n        </br>\n        <a class=\"yelp\" id=\"yelpReview\" href=\"{{url}}\"> Yelp Park Review</a>\n        <img src=\"{{small_sport_img}}\" />\n      </li>\n      {{#court_set}}\n      <li>\n        <img id=\"sportIcon\" src=\"{{small_sport_img}}\" />\n      </li>\n      {{/court_set}}\n      <li>\n        <dialog open class='hidden'>\n          <form class=\"addSport\">\n            <select class=\"addNewParkSport\" placeholder=\"Add New Sport\">\n              <option value=\"Tennis\">Tennis</option>\n              <option value=\"Football\">Footballl</option>\n              <option value=\"Soccer\">Soccer</option>\n              <option value=\"Basketball\">Basketball</option>\n              <option value=\"Pickleball\">Pickleball</option>\n            </select>\n            <label>Optional</label>\n            <input type=\"text\" class=\"addOtherParkSport\" placeholder=\"Add other sport\">\n            <input type=\"text\" class=\"addNumCourts\" placeholder=\"Number of courts\">\n          </form>\n          <button type=\"submit\" class=\"createCourtButton\">Add Sport</button>\n          <button class=\"close\">x</button>\n        </dialog>\n      </li>\n    </ul>\n    <button id=\"createCourt\">Add Sport</button>\n    <a id=\"parkMatch\" type=\"submit\" href=\"/parkCreateMatch/{{id}}\">Create Match</a>\n  </div>\n  <h2> Open Matches </h2> {{#match_set}} {{#is_open}}\n  <ul class=\"parkMatches\">\n    <li id=\"sportImage\">\n      <a href=\"/match/{{id}}\"><img src=\"{{img_url}}\">\n      </a>\n      </br>\n    </li>\n    <li class=\"description\"> <a href=\"/match/{{id}}\">{{date}}</a> {{time}}\n      </br>\n      <li id=\"skillProgress\"> Skill level\n        <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n        </progress>\n      </li>\n      <li class=\"players\">{{#players}}\n        <a href=\"/profile/{{id}}\"><img class=\"smallImg\" src=\"{{small_img}}\">\n        </a>{{/players}}\n        <li class=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/{{id}}\"> Join </a>\n        </li>\n  </ul>\n  {{/is_open}} {{/match_set}} {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksContainer\">");t.b("\n" + i);t.b("  <form>");t.b("\n" + i);t.b("  <label>Input location</label><input id=\"zipcode\" type=\"text\" placeholder=\"Zip Code\" /><button id=\"zip\">Search</button>");t.b("\n");t.b("\n" + i);t.b("  <input id=\"parkSearch\" type=\"search\" placeholder=\"Search for a Park\"><button id=\"searchPark\">Search</button>");t.b("\n");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button id=\"locate\">Show my location</button>");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,338,1237,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <ul class=\"parks\">");t.b("\n" + i);t.b("    <li>");t.b("\n" + i);t.b("      <iframe");t.b("\n" + i);t.b("      class=\"googleMaps\"");t.b("\n" + i);t.b("      width=\"300\"");t.b("\n" + i);t.b("      height=\"300\"");t.b("\n" + i);t.b("      frameborder=\"0\" style=\"border:0\"");t.b("\n" + i);t.b("      src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ");t.b("\n" + i);t.b("        &q=");t.b(t.v(t.f("name",c,p,0)));t.b("+");t.b(t.v(t.f("display_address3",c,p,0)));t.b("&zoom=12\">");t.b("\n" + i);t.b("      </iframe>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li class=\"parkPic\"><img class=\"parksImage\"src=\"");t.b(t.v(t.f("image_url",c,p,0)));t.b("\"></br>");t.b(t.v(t.f("display_address1",c,p,0)));t.b("</br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</br>");t.b(t.v(t.f("distance",c,p,0)));t.b(" Miles</li>");t.b("\n" + i);t.b("    <li class=\"parkMatch\"><a type=\"submit\" href=\"/parkCreateMatch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Create Match</a></li>");t.b("\n" + i);t.b("    <li class=\"parkDet\"><div class=\"parkName\"><a href=\"/parksDetail/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</a></div></br><img src=\"");t.b(t.v(t.f("rating_img_url",c,p,0)));t.b("\"></br><a class=\"yelpReview\" href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a></li>");t.b("\n" + i);t.b("    <li class=\"availableSports\">");t.b("\n" + i);if(t.s(t.f("court_set",c,p,1),c,p,0,1151,1200,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <img class=\"sportPic\"src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\">");t.b("\n" + i);});c.pop();}t.b("    </li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);});c.pop();}t.b("  </div>");t.b("\n" + i);t.b("  <button id=\"backPark\"> Back </button>");t.b("\n" + i);t.b("  <button id=\"nextPark\"> Next </button>");t.b("\n");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksContainer\">\n  <form>\n  <label>Input location</label><input id=\"zipcode\" type=\"text\" placeholder=\"Zip Code\" /><button id=\"zip\">Search</button>\n\n  <input id=\"parkSearch\" type=\"search\" placeholder=\"Search for a Park\"><button id=\"searchPark\">Search</button>\n\n  </form>\n  <button id=\"locate\">Show my location</button>\n  {{#data}}\n  <ul class=\"parks\">\n    <li>\n      <iframe\n      class=\"googleMaps\"\n      width=\"300\"\n      height=\"300\"\n      frameborder=\"0\" style=\"border:0\"\n      src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ\n        &q={{name}}+{{display_address3}}&zoom=12\">\n      </iframe>\n    </li>\n    <li class=\"parkPic\"><img class=\"parksImage\"src=\"{{image_url}}\"></br>{{display_address1}}</br> {{display_address3}}</br>{{distance}} Miles</li>\n    <li class=\"parkMatch\"><a type=\"submit\" href=\"/parkCreateMatch/{{id}}\">Create Match</a></li>\n    <li class=\"parkDet\"><div class=\"parkName\"><a href=\"/parksDetail/{{id}}\">{{name}}</a></div></br><img src=\"{{rating_img_url}}\"></br><a class=\"yelpReview\" href=\"{{url}}\"> Yelp Park Review</a></li>\n    <li class=\"availableSports\">\n    {{#court_set}}\n    <img class=\"sportPic\"src=\"{{img_url}}\">\n    {{/court_set}}\n    </li>\n    </ul>\n  {{/data}}\n  </div>\n  <button id=\"backPark\"> Back </button>\n  <button id=\"nextPark\"> Next </button>\n\n", H);return T.render.apply(T, arguments); };
+	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parkMatchPage\">");t.b("\n" + i);t.b("  <h2> Create Game you would like to play </h2>");t.b("\n" + i);t.b("  <ul id=\"parkCreate\">");t.b("\n" + i);t.b("    <li> Sport:");t.b("\n" + i);t.b("      <select id=\"addParkSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Pickleball\">Pickleball</option>");t.b("\n" + i);t.b("        <option value=\"Volleyball\">Volleyball</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li> Date:");t.b("\n" + i);t.b("      <input id=\"addParkDate\" type=\"date\">");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li> Time:");t.b("\n" + i);t.b("      <input id=\"addParkTime\" type=\"time\">");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li>");t.b("\n" + i);t.b("      <textarea id=\"addParkDescription\" cols=\"30\" placeholder=\"What kind of match are you looking for?\"></textarea>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li>");t.b("\n" + i);t.b("      <dialog open id=\"hiddenMessage\" class=\"hidden\">");t.b("\n" + i);t.b("        <p>info: Approximate desired skill-level</br> Fun / Semi-Tough / Tough</p>");t.b("\n" + i);t.b("      </dialog>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li> Park:");t.b("\n" + i);t.b("      <select id=\"addParkCreate\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,1060,1118,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("        <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("      </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li>");t.b("\n" + i);t.b("      <label id=\"skillInfo\"> <img id=\"infoIcon\" src=\"http://res.cloudinary.com/skill-match/image/upload/v1452121841/info_skdfxy.png\"> Skill:</label>");t.b("\n" + i);t.b("      <input id=\"addParkSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createParkMatches\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parkMatchPage\">\n  <h2> Create Game you would like to play </h2>\n  <ul id=\"parkCreate\">\n    <li> Sport:\n      <select id=\"addParkSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Pickleball\">Pickleball</option>\n        <option value=\"Volleyball\">Volleyball</option>\n        <option value=\"Other\">Other</option>\n      </select>\n    </li>\n    <li> Date:\n      <input id=\"addParkDate\" type=\"date\">\n    </li>\n    <li> Time:\n      <input id=\"addParkTime\" type=\"time\">\n    </li>\n    <li>\n      <textarea id=\"addParkDescription\" cols=\"30\" placeholder=\"What kind of match are you looking for?\"></textarea>\n    </li>\n    <li>\n      <dialog open id=\"hiddenMessage\" class=\"hidden\">\n        <p>info: Approximate desired skill-level</br> Fun / Semi-Tough / Tough</p>\n      </dialog>\n    </li>\n    <li> Park:\n      <select id=\"addParkCreate\" name=\"park\">\n        {{#park}}\n        <option value=\"{{id}}\">{{name}}</option>\n        {{/park}}\n      </select>\n    </li>\n    <li>\n      <label id=\"skillInfo\"> <img id=\"infoIcon\" src=\"http://res.cloudinary.com/skill-match/image/upload/v1452121841/info_skdfxy.png\"> Skill:</label>\n      <input id=\"addParkSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\">\n    </li>\n  </ul>\n  <button id=\"createParkMatches\" type=\"submit\">Submit</button>\n</div>", H);return T.render.apply(T, arguments); };
 
 /***/ },
 /* 57 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parksPage\">");t.b("\n" + i);if(t.s(t.f("data",c,p,1),c,p,0,32,2430,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("  <div id=\"parksDetail\">");t.b("\n" + i);t.b("    <ul id=\"parksProfile\">");t.b("\n" + i);t.b("      <li>");t.b("\n" + i);t.b("        <iframe");t.b("\n" + i);t.b("          id=\"googleMaps2\"");t.b("\n" + i);t.b("          width=\"225\"");t.b("\n" + i);t.b("          height=\"225\"");t.b("\n" + i);t.b("          frameborder=\"0\" style=\"border:0\"");t.b("\n" + i);t.b("          src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ");t.b("\n" + i);t.b("          &q=");t.b(t.v(t.f("name",c,p,0)));t.b("+");t.b(t.v(t.f("display_address3",c,p,0)));t.b("&zoom=12\">");t.b("\n" + i);t.b("        </iframe>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("      <li>");t.b("\n" + i);t.b("        <h3 class=\"parkName\">");t.b(t.v(t.f("name",c,p,0)));t.b("</h3>");t.b("\n" + i);t.b("        <p class=\"parkAddress\">");t.b(t.v(t.f("display_address1",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address2",c,p,0)));t.b(" </br> ");t.b(t.v(t.f("display_address3",c,p,0)));t.b("</p>");t.b("\n" + i);t.b("        </br>");t.b("\n" + i);t.b("        <p class=\"yelp\">");t.b(t.v(t.f("rating",c,p,0)));t.b("/5</p>");t.b("\n" + i);t.b("        <a class=\"yelp\" id=\"yelpReview\" href=\"");t.b(t.v(t.f("url",c,p,0)));t.b("\"> Yelp Park Review</a>");t.b("\n" + i);t.b("        <img src=\"");t.b(t.v(t.f("small_sport_img",c,p,0)));t.b("\"/>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);if(t.s(t.f("court_set",c,p,1),c,p,0,781,873,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("        <li>");t.b("\n" + i);t.b("          <img id=\"sportIcon\" src=\"");t.b(t.v(t.f("small_sport_img",c,p,0)));t.b("\"/>");t.b("\n" + i);t.b("        </li>");t.b("\n" + i);});c.pop();}t.b("      <li><dialog open class='hidden'>");t.b("\n" + i);t.b("  <form class=\"addSport\">");t.b("\n" + i);t.b("    <select class=\"addNewParkSport\" placeholder=\"Add New Sport\">");t.b("\n" + i);t.b("      <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("      <option value=\"Football\">Footballl</option>");t.b("\n" + i);t.b("      <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("      <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("      <option value=\"Pickleball\">Pickleball</option>");t.b("\n" + i);t.b("    </select>");t.b("\n" + i);t.b("    <label>Optional</label>");t.b("\n" + i);t.b("    <input type=\"text\" class=\"addOtherParkSport\" placeholder=\"Add other sport\">");t.b("\n" + i);t.b("    <input type=\"text\" class=\"addNumCourts\" placeholder=\"Number of courts\">");t.b("\n" + i);t.b("  </form>");t.b("\n" + i);t.b("  <button type=\"submit\" class=\"createCourtButton\">Add Sport</button>");t.b("\n" + i);t.b("  <button class=\"close\">x</button>");t.b("\n" + i);t.b("</dialog></li>");t.b("\n" + i);t.b("    </ul>");t.b("\n" + i);t.b("    <button id=\"createCourt\">Add Sport</button>");t.b("\n" + i);t.b("    <a id=\"parkMatch\" type=\"submit\" href=\"/parkCreateMatch/");t.b(t.v(t.f("id",c,p,0)));t.b("\">Create Match</a>");t.b("\n" + i);t.b("  </div>");t.b("\n" + i);t.b("    <h2> Open Matches </h2>");t.b("\n" + i);if(t.s(t.f("match_set",c,p,1),c,p,0,1789,2413,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("is_open",c,p,1),c,p,0,1808,2396,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("       <ul class=\"parkMatches\">");t.b("\n" + i);t.b("          <li id=\"sportImage\"><a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("img_url",c,p,0)));t.b("\"></a></br></li>");t.b("\n" + i);t.b("          <li class=\"description\"> <a href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("date",c,p,0)));t.b("</a>");t.b("\n" + i);t.b("          ");t.b(t.v(t.f("time",c,p,0)));t.b("</br>");t.b("\n" + i);t.b("          <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"");t.b(t.v(t.f("skill_level",c,p,0)));t.b("\" max=\"100\">");t.b("\n" + i);t.b("          </progress></li>");t.b("\n" + i);t.b("          <li class=\"players\">");if(t.s(t.f("players",c,p,1),c,p,0,2203,2274,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<a href=\"/profile/");t.b(t.v(t.f("id",c,p,0)));t.b("\"><img class=\"smallImg\"src=\"");t.b(t.v(t.f("small_img",c,p,0)));t.b("\"></a>");});c.pop();}t.b("\n" + i);t.b("           <li class=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/");t.b(t.v(t.f("id",c,p,0)));t.b("\"> Join </a></li>");t.b("\n" + i);t.b("        </ul>");t.b("\n" + i);});c.pop();}});c.pop();}});c.pop();}t.b("</div>");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parksPage\">\n  {{#data}}\n  <div id=\"parksDetail\">\n    <ul id=\"parksProfile\">\n      <li>\n        <iframe\n          id=\"googleMaps2\"\n          width=\"225\"\n          height=\"225\"\n          frameborder=\"0\" style=\"border:0\"\n          src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ\n          &q={{name}}+{{display_address3}}&zoom=12\">\n        </iframe>\n      </li>\n      <li>\n        <h3 class=\"parkName\">{{name}}</h3>\n        <p class=\"parkAddress\">{{display_address1}} </br> {{display_address2}} </br> {{display_address3}}</p>\n        </br>\n        <p class=\"yelp\">{{rating}}/5</p>\n        <a class=\"yelp\" id=\"yelpReview\" href=\"{{url}}\"> Yelp Park Review</a>\n        <img src=\"{{small_sport_img}}\"/>\n      </li>\n      {{#court_set}}\n        <li>\n          <img id=\"sportIcon\" src=\"{{small_sport_img}}\"/>\n        </li>\n      {{/court_set}}\n      <li><dialog open class='hidden'>\n  <form class=\"addSport\">\n    <select class=\"addNewParkSport\" placeholder=\"Add New Sport\">\n      <option value=\"Tennis\">Tennis</option>\n      <option value=\"Football\">Footballl</option>\n      <option value=\"Soccer\">Soccer</option>\n      <option value=\"Basketball\">Basketball</option>\n      <option value=\"Pickleball\">Pickleball</option>\n    </select>\n    <label>Optional</label>\n    <input type=\"text\" class=\"addOtherParkSport\" placeholder=\"Add other sport\">\n    <input type=\"text\" class=\"addNumCourts\" placeholder=\"Number of courts\">\n  </form>\n  <button type=\"submit\" class=\"createCourtButton\">Add Sport</button>\n  <button class=\"close\">x</button>\n</dialog></li>\n    </ul>\n    <button id=\"createCourt\">Add Sport</button>\n    <a id=\"parkMatch\" type=\"submit\" href=\"/parkCreateMatch/{{id}}\">Create Match</a>\n  </div>\n    <h2> Open Matches </h2>\n     {{#match_set}}\n      {{#is_open}}\n       <ul class=\"parkMatches\">\n          <li id=\"sportImage\"><a href=\"/match/{{id}}\"><img src=\"{{img_url}}\"></a></br></li>\n          <li class=\"description\"> <a href=\"/match/{{id}}\">{{date}}</a>\n          {{time}}</br>\n          <li id=\"skillProgress\"> Skill level <progress class=\"skill\" value=\"{{skill_level}}\" max=\"100\">\n          </progress></li>\n          <li class=\"players\">{{#players}}<a href=\"/profile/{{id}}\"><img class=\"smallImg\"src=\"{{small_img}}\"></a>{{/players}}\n           <li class=\"matchSubmit\"><a type=\"sumbit\" href=\"/match/{{id}}\"> Join </a></li>\n        </ul>\n      {{/is_open}}\n    {{/match_set}}\n  {{/data}}\n</div>", H);return T.render.apply(T, arguments); };
-
-/***/ },
-/* 58 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var H = __webpack_require__(41);
-	module.exports = function() { var T = new H.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"parkMatchPage\">");t.b("\n" + i);t.b("  <h2> Create Game you would like to play </h2>");t.b("\n" + i);t.b("  <ul id=\"parkCreate\">");t.b("\n" + i);t.b("    <li> Sport:");t.b("\n" + i);t.b("      <select id=\"addParkSport\" name=\"Sport\">");t.b("\n" + i);t.b("        <option value=\"Tennis\">Tennis</option>");t.b("\n" + i);t.b("        <option value=\"Basketball\">Basketball</option>");t.b("\n" + i);t.b("        <option value=\"Football\">Football</option>");t.b("\n" + i);t.b("        <option value=\"Soccer\">Soccer</option>");t.b("\n" + i);t.b("        <option value=\"Pickleball\">Pickleball</option>");t.b("\n" + i);t.b("        <option value=\"Volleyball\">Volleyball</option>");t.b("\n" + i);t.b("        <option value=\"Other\">Other</option>");t.b("\n" + i);t.b("      </select>");t.b("\n" + i);t.b("      </li>");t.b("\n" + i);t.b("    <li> Date: <input id=\"addParkDate\" type=\"date\"></li>");t.b("\n" + i);t.b("    <li> Time:<input id=\"addParkTime\" type=\"time\"></li>");t.b("\n" + i);t.b("    <li><textarea id=\"addParkDescription\" cols=\"30\" placeholder=\"What kind of match are you looking for?\"></textarea></li>");t.b("\n" + i);t.b("    <li><dialog  open id=\"hiddenMessage\" class=\"hidden\"><p>info: Approximate desired skill-level</br> Fun / Semi-Tough / Tough</p></dialog></li>");t.b("\n" + i);t.b("    <li> Park:<select id=\"addParkCreate\" name=\"park\">");t.b("\n" + i);if(t.s(t.f("park",c,p,1),c,p,0,989,1039,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("    <option value=\"");t.b(t.v(t.f("id",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</option>");t.b("\n" + i);});c.pop();}t.b("    </select>");t.b("\n" + i);t.b("    </li>");t.b("\n" + i);t.b("    <li> <label id=\"skillInfo\"> <img id=\"infoIcon\"src=\"http://res.cloudinary.com/skill-match/image/upload/v1452121841/info_skdfxy.png\"> Skill:</label><input id=\"addParkSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>");t.b("\n" + i);t.b("  </ul>");t.b("\n" + i);t.b("  <button id=\"createParkMatches\" type=\"submit\">Submit</button>");t.b("\n" + i);t.b("</div>");t.b("\n");return t.fl(); },partials: {}, subs: {  }}, "<div id=\"parkMatchPage\">\n  <h2> Create Game you would like to play </h2>\n  <ul id=\"parkCreate\">\n    <li> Sport:\n      <select id=\"addParkSport\" name=\"Sport\">\n        <option value=\"Tennis\">Tennis</option>\n        <option value=\"Basketball\">Basketball</option>\n        <option value=\"Football\">Football</option>\n        <option value=\"Soccer\">Soccer</option>\n        <option value=\"Pickleball\">Pickleball</option>\n        <option value=\"Volleyball\">Volleyball</option>\n        <option value=\"Other\">Other</option>\n      </select>\n      </li>\n    <li> Date: <input id=\"addParkDate\" type=\"date\"></li>\n    <li> Time:<input id=\"addParkTime\" type=\"time\"></li>\n    <li><textarea id=\"addParkDescription\" cols=\"30\" placeholder=\"What kind of match are you looking for?\"></textarea></li>\n    <li><dialog  open id=\"hiddenMessage\" class=\"hidden\"><p>info: Approximate desired skill-level</br> Fun / Semi-Tough / Tough</p></dialog></li>\n    <li> Park:<select id=\"addParkCreate\" name=\"park\">\n    {{#park}}\n    <option value=\"{{id}}\">{{name}}</option>\n    {{/park}}\n    </select>\n    </li>\n    <li> <label id=\"skillInfo\"> <img id=\"infoIcon\"src=\"http://res.cloudinary.com/skill-match/image/upload/v1452121841/info_skdfxy.png\"> Skill:</label><input id=\"addParkSkill\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" value=\"0\"></li>\n  </ul>\n  <button id=\"createParkMatches\" type=\"submit\">Submit</button>\n</div>\n", H);return T.render.apply(T, arguments); };
-
-/***/ },
-/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var H = __webpack_require__(41);
