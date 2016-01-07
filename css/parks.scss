@@ -6,6 +6,7 @@
 	#zip {
 		margin-left: 1%;
 	}
+
 	.parks{
 		padding: 0 5%;
 		float: left;
@@ -108,4 +109,14 @@
 		  }
 		}
 	}
+#backPark {
+	position: relative;
+	left: 5%;
+	bottom: 4em;
+}
 
+#nextPark {
+	position: relative;
+	left: 5.5%;
+	bottom: 4em;
+}

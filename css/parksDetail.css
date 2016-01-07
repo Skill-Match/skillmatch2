@@ -37,16 +37,16 @@
   left: 7%; }
 #parksPage .parkName {
   position: relative;
-  bottom: 7em;
+  bottom: 6em;
   left: 6%; }
 #parksPage .parkAddress {
   position: relative;
-  bottom: 4.5em;
+  bottom: 3.5em;
   right: 34.5%; }
 #parksPage .yelp {
   position: relative;
-  bottom: 4.5em;
-  left: 6%; }
+  bottom: 3.5em;
+  left: 9.5%; }
 #parksPage #sportIcon {
   position: relative;
   right: 13em; }
