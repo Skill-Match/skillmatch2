@@ -13,12 +13,14 @@
   #parksContainer #searchPark {
     margin-left: 1%; }
   #parksContainer .parks {
-    padding: 0 5%;
+    padding: 0 3%;
     float: left;
     height: 20em;
     width: 90%;
     background-color: white;
     list-style: none; }
+    #parksContainer .parks ul {
+      padding: 0; }
     #parksContainer .parks li {
       display: inline-block;
       width: 20%; }
@@ -35,8 +37,8 @@
       float: left;
       position: relative;
       top: .5em;
-      left: 10%;
-      margin: 0 1%; }
+      right: 3%;
+      padding-right: 1em; }
     #parksContainer .parks .parkName {
       display: inline-block;
       font-size: 1.5em; }
@@ -45,14 +47,15 @@
     #parksContainer .parks .parkPic {
       display: inline-block;
       position: relative;
-      left: 14%;
-      bottom: 6em;
+      left: 12%;
+      top: 3em;
+      margin-left: 1%;
       width: 15%; }
     #parksContainer .parks .parkDet {
       display: inline-block;
       position: relative;
       right: 5%;
-      bottom: 13em;
+      bottom: 3em;
       width: 39%;
       text-align: center; }
       #parksContainer .parks .parkDet a {
@@ -68,7 +71,7 @@
       display: inline-block;
       position: relative;
       left: 45%;
-      bottom: 10em;
+      bottom: -1em;
       width: 11%;
       color: white;
       background-color: #ef3122;
@@ -85,8 +88,8 @@
       width: 45%;
       list-style-type: none;
       position: relative;
-      left: 34%;
-      bottom: 6em; }
+      left: 13%;
+      top: 3em; }
       #parksContainer .parks .availableSports .sportPic {
         width: 19%;
         padding-right: 0.1em; }
