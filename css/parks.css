@@ -7,11 +7,15 @@
     margin-left: 1%; }
   #parksContainer #locate {
     position: relative;
-    top: .5em; }
+    bottom: 1em; }
   #parksContainer #parkSearch {
     margin-left: 1%; }
   #parksContainer #searchPark {
     margin-left: 1%; }
+  #parksContainer #searchForm {
+    position: relative;
+    left: 22%;
+    bottom: 2em; }
   #parksContainer .parks {
     padding: 0 3%;
     float: left;

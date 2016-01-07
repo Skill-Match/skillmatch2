@@ -9,7 +9,7 @@
 
 	#locate {
 		position: relative;
-		top: .5em;
+		bottom: 1em;
 	}
 
 	#parkSearch {
@@ -18,6 +18,11 @@
 
 	#searchPark {
 		margin-left: 1%;
+	}
+	#searchForm	{
+		position: relative;
+		left: 22%;
+		bottom: 2em;
 	}
 
 	.parks{
