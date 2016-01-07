@@ -47,15 +47,15 @@
     #parksContainer .parks .parkPic {
       display: inline-block;
       position: relative;
-      left: 12%;
-      top: 3em;
+      left: 8%;
+      top: 1em;
       margin-left: 1%;
       width: 15%; }
     #parksContainer .parks .parkDet {
       display: inline-block;
       position: relative;
       right: 5%;
-      bottom: 3em;
+      bottom: 4em;
       width: 39%;
       text-align: center; }
       #parksContainer .parks .parkDet a {
@@ -88,7 +88,7 @@
       width: 45%;
       list-style-type: none;
       position: relative;
-      left: 13%;
+      left: 9%;
       top: 3em; }
       #parksContainer .parks .availableSports .sportPic {
         width: 19%;

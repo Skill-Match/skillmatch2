@@ -62,18 +62,18 @@
 		.parkPic{
 	    display: inline-block;
 	    position: relative;
-	    left: 12%;
-	    top: 3em;
+	    left: 8%;
+	    top: 1em;
 	    margin-left: 1%;
 	    width: 15%;
 		}
 		.parkDet{
-		  display: inline-block;
-    	position: relative;
-    	right: 5%;
-    	bottom: 3em;
-    	width: 39%;
-    	text-align: center;
+	    display: inline-block;
+	    position: relative;
+	    right: 5%;
+	    bottom: 4em;
+	    width: 39%;
+	    text-align: center;
 			a{
 				text-decoration: none;
 				font-size: 1em;
@@ -104,12 +104,13 @@
 		}
 		.availableSports {
 	    display: inline-block;
-	    float: left;
-	    width: 45%;
-	    list-style-type: none;
-	    position: relative;
-	    left: 13%;
-	    top: 3em;
+    	float: left;
+    	width: 45%;
+    	list-style-type: none;
+    	position: relative;
+    	left: 9%;
+   	 	top: 3em;
+
 		.sportPic {
 			width: 19%;
     padding-right: 0.1em;
