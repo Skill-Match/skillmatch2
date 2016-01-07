@@ -958,8 +958,8 @@ router.on('route:parkCreateMatch', function(id, name) {
         var id = resp.toJSON().id;
         router.navigate('/match/' + id, {trigger: true});
       },
-      error: function(err) {
-        console.log("error", err);
+      error: function(status, error) {
+        console.log(error.responseJSON.date[0]);
       }
   });
     })
@@ -1231,14 +1231,14 @@ function geoFindMe() {
 
   function error() {
   };
-
+    $('#zipcode').val("Locating…");
   navigator.geolocation.getCurrentPosition(success, error);
 }
 
 function zipCode(zip) {
     var nextPages = new Park()
     nextPages.fetch({
-       url: 'http://skill-match.herokuapp.com/api/parks/?zip='+zip,
+       url: 'http://skill-match.herokuapp.com/api/parks/?zip='+$('#zipcode').val(),
  success: function(resp) {
       var html = parks({'data': resp.toJSON().results});
       var parkTemplate = $("#parkTemplate").text();
@@ -1269,6 +1269,8 @@ function zipCode(zip) {
        console.log("nope")
      }
     });
+    $('#zipcode').val("Locating…");
+  navigator.geolocation.getCurrentPosition(success, error);
   }
 
 

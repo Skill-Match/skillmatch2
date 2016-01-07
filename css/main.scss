@@ -97,19 +97,19 @@
   }
   .players{
     display: inline-block;
-    width: 30%;
+    width: 40%;
     margin-left: 5%;
     position: relative;
     left: 25%;
     bottom: 5.5em;
     img{
     border-radius: 100%;
-    width: 30%;
+    width: 20%;
     }
     .name{
       position: relative;
-      right: 20%;
-      top: .5em;
+      right: 17%;
+      top: 1em;
     }
     .empty{
       opacity: 0.3;
@@ -148,7 +148,7 @@
     display: inline-block;
     margin: 3%;
     position: relative;
-    left: 46.5%;
+    left: 40%;
     bottom: 10em;
     a {
       color: white;
