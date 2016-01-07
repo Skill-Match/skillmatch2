@@ -1,14 +1,14 @@
 <div id="historyContainer">
-<h2>Match History:</h2>
-{{#history}}
-  {{#is_completed}}
-    <img id="sportImage"src="{{img_url}}">
-   	<ul id ="test">
-      <li>This match was completed on, {{date}}</li>
-      <li>{{sport}}</li>
-      <li>{{park_name}}</li>
-      <li><a id="goToFeedback" href="/feedback/{{id}}"> Feedback </a></li>
-    </ul>
-  {{/is_completed}}
-{{/history}}
+  <h2>Match History:</h2>
+  {{#history}}
+    {{#is_completed}}
+      <img id="sportImage"src="{{img_url}}">
+     	<ul id ="test">
+        <li>This match was completed on, {{date}}</li>
+        <li>{{sport}}</li>
+        <li>{{park_name}}</li>
+        <li><a id="goToFeedback" href="/feedback/{{id}}"> Feedback </a></li>
+      </ul>
+    {{/is_completed}}
+  {{/history}}
 </div>

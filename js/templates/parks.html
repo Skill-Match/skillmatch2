@@ -1,35 +1,39 @@
 <div id="parksContainer">
   <form>
-  <label>Input location</label><input id="zipcode" type="text" placeholder="Zip Code" /><button id="zip">Search</button>
+    <label>Input location</label>
+    <input id="zipcode" type="text" placeholder="Zip Code" />
+    <button id="zip">Search</button>
 
-  <input id="parkSearch" type="search" placeholder="Search for a Park"><button id="searchPark">Search</button>
+    <input id="parkSearch" type="search" placeholder="Search for a Park">
+    <button id="searchPark">Search</button>
 
   </form>
   <button id="locate">Show my location</button>
   {{#data}}
   <ul class="parks">
     <li>
-      <iframe
-      class="googleMaps"
-      width="300"
-      height="300"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ
+      <iframe class="googleMaps" width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ
         &q={{name}}+{{display_address3}}&zoom=12">
       </iframe>
     </li>
-    <li class="parkPic"><img class="parksImage"src="{{image_url}}"></br>{{display_address1}}</br> {{display_address3}}</br>{{distance}} Miles</li>
-    <li class="parkMatch"><a type="submit" href="/parkCreateMatch/{{id}}">Create Match</a></li>
-    <li class="parkDet"><div class="parkName"><a href="/parksDetail/{{id}}">{{name}}</a></div></br><img src="{{rating_img_url}}"></br><a class="yelpReview" href="{{url}}"> Yelp Park Review</a></li>
+    <li class="parkPic"><img class="parksImage" src="{{image_url}}">
+      </br>{{display_address1}}</br> {{display_address3}}</br>{{distance}} Miles</li>
+    <li class="parkMatch"><a type="submit" href="/parkCreateMatch/{{id}}">Create Match</a>
+    </li>
+    <li class="parkDet">
+      <div class="parkName"><a href="/parksDetail/{{id}}">{{name}}</a>
+      </div>
+      </br><img src="{{rating_img_url}}">
+      </br><a class="yelpReview" href="{{url}}"> Yelp Park Review</a>
+    </li>
     <li class="availableSports">
     <p>Available Sports</p>
     {{#court_set}}
     <img class="sportPic"src="{{img_url}}">
     {{/court_set}}
     </li>
-    </ul>
+  </ul>
   {{/data}}
 </div>
-  <button id="backPark"> Back </button>
-  <button id="nextPark"> Next </button>
-
+<button id="backPark"> Back </button>
+<button id="nextPark"> Next </button>
