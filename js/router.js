@@ -1179,16 +1179,20 @@ router.on('route:parks', function(id, name) {
           $('#locate').on('click', function(){
             geoFindMe()
           });
-        },
-        error: function(err) {
-          console.log("nope")
-        }
-      });
-    };
+        $("#searchPark").on('click', function(e) {
+          e.preventDefault();
+          searchPark();
+        });
+     },
+     error: function(err) {
+       console.log("nope")
+     }
+    });
+  };
   function error() {
   };
-    $('#zipcode').val("Locating…");
-    navigator.geolocation.getCurrentPosition(success, error);
+  $('#zipcode').val("Locating…");
+  navigator.geolocation.getCurrentPosition(success, error);
   }
   function zipCode(zip) {
     var nextPages = new Park()
@@ -1207,18 +1211,22 @@ router.on('route:parks', function(id, name) {
         $('#nextPark').on('click', function(){
           nextPage(next)
           window.scrollTo(0, 450);
-        })
+        });
         $('#backPark').on('click', function(){
           prevPage(previous)
           window.scrollTo(0, 450);
-        })
+        });
         $('#locate').on('click', function(){
           geoFindMe()
         });
-      },
-      error: function(err) {
-        console.log("nope")
-      }
+        $("#searchPark").on('click', function(e) {
+        e.preventDefault();
+        searchPark();
+      });
+     },
+     error: function(err) {
+       console.log("nope")
+     }
     });
     $('#zipcode').val("Locating…");
     navigator.geolocation.getCurrentPosition(success, error);
@@ -1228,33 +1236,37 @@ router.on('route:parks', function(id, name) {
     nextPages.fetch({
       url: next,
       success: function(resp) {
-        var html = parks({'data': resp.toJSON().results});
-        var parkTemplate = $("#parkTemplate").text();
-        var parkHTML = Mustache.render(parkTemplate, "data");
-        var next = resp.toJSON().next;
-        var previous = resp.toJSON().previous;
-        $("#parksContainer").html(parkHTML);
-        $("#container").html(html);
-        console.log("success", resp);
-        console.log("success: ",resp)
-        $('#nextPark').on('click', function(){
-          nextPage(next)
-          window.scrollTo(0, 450);
-        });
-        $('#backPark').on('click', function(){
-          prevPage(previous)
-          window.scrollTo(0, 450);
-        });
-        $('#locate').on('click', function(){
-          geoFindMe()
-        })
+      var html = parks({'data': resp.toJSON().results});
+      var parkTemplate = $("#parkTemplate").text();
+      var parkHTML = Mustache.render(parkTemplate, "data");
+      var next = resp.toJSON().next;
+      var previous = resp.toJSON().previous;
+      $("#parksContainer").html(parkHTML);
+      $("#container").html(html);
+      console.log("success", resp);
+      console.log("success: ",resp)
+      $('#nextPark').on('click', function(){
+        nextPage(next)
+        window.scrollTo(0, 450);
+      });
+      $('#backPark').on('click', function(){
+        prevPage(previous)
+        window.scrollTo(0, 450);
+      });
+      $('#locate').on('click', function(){
+      geoFindMe()
+      });
+      $("#searchPark").on('click', function(e) {
+        e.preventDefault();
+        searchPark();
+      });
      },
      error: function(err) {
        console.log("nope")
      }
     });
   }
-  function prevPage(previous) {
+  function prevPage(previous){
     var prevPages = new Park()
     prevPages.fetch({
       url: previous,
@@ -1279,12 +1291,52 @@ router.on('route:parks', function(id, name) {
         $('#locate').on('click', function(){
           geoFindMe()
         });
+        $("#searchPark").on('click', function(e) {
+          e.preventDefault();
+          searchPark();
+        });
       },
       error: function(err) {
         console.log("nope")
       }
     });
   }
+  function searchPark() {
+    var search = new Park()
+    search.fetch({
+      url: "http://skill-match.herokuapp.com/api/parks/?search=" + $("#parkSearch").val(),
+      success: function(resp) {
+        var html = parks({'data': resp.toJSON().results});
+        var parkTemplate = $("#parkTemplate").text();
+        var parkHTML = Mustache.render(parkTemplate, "data");
+        $("#parksContainer").html(parkHTML);
+        $("#container").html(html);
+        console.log("success", resp);
+        $("#searchPark").on('click', function(e) {
+          e.preventDefault();
+          searchPark();
+        });
+        $('#nextPark').on('click', function(){
+          nextPage(next)
+          window.scrollTo(0, 450);
+        });
+        $('#backPark').on('click', function(){
+          prevPage(previous)
+          window.scrollTo(0, 450);
+        });
+        $('#locate').on('click', function(){
+          geoFindMe()
+        });
+      },
+      error: function(err) {
+        console.log("error", err);
+      }
+    })
+  }
+  $("#searchPark").on('click', function(e) {
+    e.preventDefault();
+    searchPark();
+  });
   var Park = Backbone.Model.extend({
     initialize: function () {
     },
@@ -1311,7 +1363,7 @@ router.on('route:parks', function(id, name) {
       $("#container").html(html);
       console.log("success", resp);
       $(".yelpReview").on('click', function() {
-         window.open($(this).attr('href'));
+        window.open($(this).attr('href'));
       });
       $('#nextPark').on('click', function(){
         nextPage(next)
@@ -1326,6 +1378,10 @@ router.on('route:parks', function(id, name) {
       });
       $('#zip').on('click', function(){
         zipCode()
+      });
+      $("#searchPark").on('click', function(e) {
+        e.preventDefault();
+        searchPark();
       });
     },
     error: function(err) {

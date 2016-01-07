@@ -7,6 +7,19 @@
 		margin-left: 1%;
 	}
 
+	#locate {
+		position: relative;
+		top: .5em;
+	}
+
+	#parkSearch {
+		margin-left: 1%;
+	}
+
+	#searchPark {
+		margin-left: 1%;
+	}
+
 	.parks{
 		padding: 0 5%;
 		float: left;
@@ -24,6 +37,11 @@
 			font-size: 1em;
 			color: black;
 		}
+		p {
+			display: inline-block;
+    	position: relative;
+    	bottom: 2em;
+		}
 		.googleMaps {
 			display: inline-block;
 			float: left;
@@ -40,11 +58,11 @@
 			text-decoration: underline;
 		}
 		.parkPic{
-			display: inline-block;
-			position: relative;
-    	left: 20%;
-    	bottom: 1em;
-			width: 15%;
+	    display: inline-block;
+	    position: relative;
+	    left: 14%;
+	    bottom: 6em;
+	    width: 15%;
 		}
 		.parkDet{
 			display: inline-block;
@@ -70,7 +88,7 @@
 	    position: relative;
 	    left:45%;
 	    bottom: 10em;
-	    width: 15%;
+	    width: 11%;
 	    color: white;
 	    background-color: #ef3122;
 	    border-radius: 15px;
@@ -82,13 +100,13 @@
 	    font-size: 18px;
 		}
 		.availableSports {
-			display: inline-block;
-		float:left;
-		width: 45%;
-		list-style-type: none;
-		position: relative;
-		left: 60%;
-		bottom:8em;
+	    display: inline-block;
+	    float: left;
+	    width: 45%;
+	    list-style-type: none;
+	    position: relative;
+	    left: 34%;
+	    bottom: 6em;
 		.sportPic {
 			width: 19%;
     padding-right: 0.1em;
