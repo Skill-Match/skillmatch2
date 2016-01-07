@@ -161,6 +161,7 @@ $('#loginSubmit').on('click', function(e){
   navigator.geolocation.getCurrentPosition(success, error);
 }
 
+
   function matchesAround() {
     var match = new Match();
     match.fetch({
@@ -204,7 +205,6 @@ $('#areaInput').val("Locating…");
 
 
   function filterSport() {
-
     var match = counter++
     var match = new Match();
           match.fetch({
@@ -363,10 +363,9 @@ $('#areaInput').val("Locating…");
    console.log("nope")
  }
 });
-// End of backbone fetch for upcoming games
-
-   }
+    }
 });
+// End of backbone fetch for upcoming games
 ////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
@@ -1480,7 +1479,7 @@ $('body').on('click', 'a', function (e){
   router.navigate(href, {trigger:true});
   window.scroll(0, 0);
 });
+
 $('body').on('hover', 'span', function (e){
   e.preventDefault();
 });
-module.exports = router;// This is just a sample script. Paste your real code (javascript or HTML) here.

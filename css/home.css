@@ -19,7 +19,8 @@
   #userprofile .userDes {
     position: relative;
     bottom: 2em;
-    left: 5%; }
+    left: 5%;
+    margin-left: 1%; }
   #userprofile #logout {
     text-decoration: underline;
     font-size: 12px;
@@ -56,6 +57,11 @@
     display: inherit; }
   #youMatches #history h2:first-child {
     display: inherit; }
+  #youMatches .parkslink {
+    text-decoration: none;
+    color: grey; }
+  #youMatches .parkslink:hover {
+    text-decoration: underline; }
   #youMatches a {
     color: black; }
   #youMatches ul:nth-last-child(1) {

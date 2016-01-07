@@ -10,7 +10,7 @@
     <li id="matchDescription"> {{description}}</li>
     <li>Created By: <a href="/profile/{{creator}}">{{creator_name}}</a></li>
     </ul>
-    <img id="playerImage" src="https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-128.png"></li>
+    {{#players}}<a href="/profile/{{id}}" class="name"><img id="playerImage" src="{{small_img}}">{{username}}</a>{{/players}}
     <button id="join"> Join </button>
     <a id="confirm" href="/"> Confirm Match </a>
     <a id="decline" href="/"> Decline Match </a>

@@ -24,6 +24,7 @@
     position: relative;
     bottom: 2em;
     left: 5%;
+    margin-left: 1%;
   }
 
   #logout {
@@ -78,6 +79,13 @@
     h2:first-child{
       display: inherit;
     }
+  }
+  .parkslink{
+    text-decoration: none;
+    color: grey;
+  }
+  .parkslink:hover{
+    text-decoration: underline;
   }
   a {
     color: black;
