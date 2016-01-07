@@ -1182,10 +1182,14 @@ router.on('route:parks', function(id, name) {
           $('#locate').on('click', function(){
             geoFindMe()
           });
-        $("#searchPark").on('click', function(e) {
-          e.preventDefault();
-          searchPark();
-        });
+          $("#searchPark").on('click', function(e) {
+            e.preventDefault();
+            searchPark();
+          });
+          $(".yelpReview").on('click', function(e) {
+            e.preventDefault();
+            window.open($(this).attr('href'));
+          });
      },
      error: function(err) {
        console.log("nope")
@@ -1223,10 +1227,14 @@ router.on('route:parks', function(id, name) {
           geoFindMe()
         });
         $("#searchPark").on('click', function(e) {
-        e.preventDefault();
-        searchPark();
-      });
-     },
+          e.preventDefault();
+          searchPark();
+        });
+        $(".yelpReview").on('click', function(e) {
+          e.preventDefault();
+          window.open($(this).attr('href'));
+        });
+      },
      error: function(err) {
        console.log("nope")
      }
@@ -1261,6 +1269,10 @@ router.on('route:parks', function(id, name) {
       $("#searchPark").on('click', function(e) {
         e.preventDefault();
         searchPark();
+      });
+      $(".yelpReview").on('click', function(e) {
+        e.preventDefault();
+        window.open($(this).attr('href'));
       });
      },
      error: function(err) {
@@ -1297,6 +1309,10 @@ router.on('route:parks', function(id, name) {
           e.preventDefault();
           searchPark();
         });
+        $(".yelpReview").on('click', function(e) {
+          e.preventDefault();
+          window.open($(this).attr('href'));
+        });
       },
       error: function(err) {
         console.log("nope")
@@ -1328,6 +1344,10 @@ router.on('route:parks', function(id, name) {
         });
         $('#locate').on('click', function(){
           geoFindMe()
+        });
+        $(".yelpReview").on('click', function(e) {
+          e.preventDefault();
+          window.open($(this).attr('href'));
         });
       },
       error: function(err) {
@@ -1487,9 +1507,11 @@ router.on('route:parksDetail', function(id, name){
 ////////////////////////////////////////////////////////////////////////////////
 $('body').on('click', 'a', function (e){
   e.preventDefault();
-  var href = $(this).attr('href').substr(1);
-  router.navigate(href, {trigger:true});
-  window.scroll(0, 0);
+  if (!$(this).hasClass("external")) {
+    var href = $(this).attr('href').substr(1);
+    router.navigate(href, {trigger:true});
+    window.scroll(0, 0);
+  }
 });
 $('body').on('hover', 'span', function (e){
   e.preventDefault();

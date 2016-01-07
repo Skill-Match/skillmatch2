@@ -46,7 +46,8 @@
 #parksPage .yelp {
   position: relative;
   bottom: 3.5em;
-  left: 9.5%; }
+  left: 9.5%;
+  color: black; }
 #parksPage #sportIcon {
   position: relative;
   right: 13em; }

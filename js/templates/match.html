@@ -8,7 +8,7 @@
     <li> {{sport}} </li>
     <li><a href="/parksDetail/{{park}}" id="parkLink"> {{park_name}} </a></li>
     <li id="matchDescription"> {{description}}</li>
-    <li>Created By: <a href="/profile/{{creator}}">{{creator_name}}</a></li>
+    <li>Created By: <a class="createdName" href="/profile/{{creator}}">{{creator_name}}</a></li>
     </ul>
     {{#players}}<a href="/profile/{{id}}" class="name"><img id="playerImage" src="{{small_img}}"></a>{{/players}}
     <button id="join"> Join </button>

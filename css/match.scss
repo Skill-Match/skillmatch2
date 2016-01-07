@@ -18,6 +18,10 @@
     }
   }
 
+  .createdName {
+    color: black;
+  }
+
   #matchSkill {
     position: relative;
     left: 66%;
@@ -110,10 +114,11 @@
   #cancelEdit {
     display: inline-block;
     position: relative;
-    right: .6%;
+    right: 3%;
     bottom: 14em;
     a {
       color: black;
+      text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
