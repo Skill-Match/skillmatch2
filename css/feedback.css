@@ -7,6 +7,9 @@
     text-align: center;
     width: 50%;
     margin: auto; }
+  #feedbackContainer .infoIcon {
+    position: relative;
+    top: .2em; }
   #feedbackContainer input[type='range'] {
     align-self: center;
     border: solid 0 transparent;

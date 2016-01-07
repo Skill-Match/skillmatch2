@@ -69,7 +69,7 @@ var Router = Backbone.Router.extend({
     model: Match,
     url: 'https://skill-match.herokuapp.com/api/matches/'
   });
-  
+
   $('#loginSubmit').on('click', function(e){
     e.preventDefault();
     var username = $("#username").val();
@@ -695,11 +695,13 @@ router.on('route:match', function(id, username) {
         $("#leaveMatch").hide();
         if (Cookie.get('uid') == creator) {
           $("#join").hide();
-          $("#leaveMatch").hide();
           $("#confirm").hide();
           $("#decline").hide();
           $("#update").show();
           $("#cancel").show();
+        };
+        if (Cookie.get('uid') == creator && open == true ) {
+
         };
         if(open == false) {
           $("#confirm").show();
@@ -707,14 +709,16 @@ router.on('route:match', function(id, username) {
           $("#update").hide();
           $("#cancel").hide();
         }
-        if(completed == true){
-          $("#confirm").hide();
-          $("#decline").hide();
-        }
         if(confirm == true){
           $("#confirm").hide();
-          $("#decline").hide();
           $("#leaveMatch").show();
+          $("#decline").hide();
+
+        }
+         if(completed == true){
+          $("#confirm").hide();
+          $("#decline").hide();
+          $("#leaveMatch").hide();
         }
         if(open == false){
           $("#join").hide();
