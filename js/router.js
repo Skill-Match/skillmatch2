@@ -1478,6 +1478,7 @@ $('body').on('click', 'a', function (e){
   e.preventDefault();
   var href = $(this).attr('href').substr(1);
   router.navigate(href, {trigger:true});
+  window.scroll(0, 0);
 });
 $('body').on('hover', 'span', function (e){
   e.preventDefault();
