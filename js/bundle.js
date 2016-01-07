@@ -10108,7 +10108,7 @@
 
 
 	// module
-	exports.push([module.id, "#parksContainer {\n  width: 90%;\n  display: inline-block;\n  margin: 5%;\n  margin-top: 2%; }\n  #parksContainer #zip {\n    margin-left: 1%; }\n  #parksContainer .parks {\n    padding: 0 5%;\n    float: left;\n    height: 20em;\n    width: 90%;\n    background-color: white;\n    list-style: none; }\n    #parksContainer .parks li {\n      display: inline-block;\n      width: 20%; }\n    #parksContainer .parks a {\n      text-decoration: none;\n      font-size: 1em;\n      color: black; }\n    #parksContainer .parks .googleMaps {\n      display: inline-block;\n      float: left;\n      position: relative;\n      top: .5em;\n      left: 10%;\n      margin: 0 1%; }\n    #parksContainer .parks .parkName {\n      display: inline-block;\n      font-size: 1.5em; }\n    #parksContainer .parks .parkName:hover {\n      text-decoration: underline; }\n    #parksContainer .parks .parkPic {\n      display: inline-block;\n      position: relative;\n      left: 20%;\n      bottom: 1em;\n      width: 15%; }\n    #parksContainer .parks .parkDet {\n      display: inline-block;\n      position: relative;\n      right: 5%;\n      bottom: 13em;\n      width: 39%;\n      text-align: center; }\n      #parksContainer .parks .parkDet a {\n        text-decoration: none;\n        font-size: 1em;\n        color: black; }\n    #parksContainer .parks .parkAddress {\n      display: inline-block;\n      position: relative;\n      left: 32.5%;\n      bottom: 10em; }\n    #parksContainer .parks .parkMatch {\n      display: inline-block;\n      position: relative;\n      left: 45%;\n      bottom: 10em;\n      width: 15%;\n      color: white;\n      background-color: #ef3122;\n      border-radius: 15px;\n      border: none;\n      outline: none;\n      box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);\n      text-align: center;\n      padding: 1%;\n      font-size: 18px; }\n    #parksContainer .parks .availableSports {\n      display: inline-block;\n      float: left;\n      width: 45%;\n      list-style-type: none;\n      position: relative;\n      left: 60%;\n      bottom: 8em; }\n      #parksContainer .parks .availableSports .sportPic {\n        width: 19%;\n        padding-right: 0.1em; }\n    #parksContainer .parks .parkMatch:active {\n      box-shadow: none; }\n    #parksContainer .parks a {\n      color: white;\n      text-decoration: none; }\n    #parksContainer .parks #updateDetails {\n      position: relative;\n      left: 100%;\n      top: 6em; }\n\n#backPark {\n  position: relative;\n  left: 5%;\n  bottom: 4em; }\n\n#nextPark {\n  position: relative;\n  left: 5.5%;\n  bottom: 4em; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
+	exports.push([module.id, "#parksContainer {\n  width: 90%;\n  display: inline-block;\n  margin: 5%;\n  margin-top: 2%; }\n  #parksContainer #zip {\n    margin-left: 1%; }\n  #parksContainer #locate {\n    position: relative;\n    top: .5em; }\n  #parksContainer #parkSearch {\n    margin-left: 1%; }\n  #parksContainer #searchPark {\n    margin-left: 1%; }\n  #parksContainer .parks {\n    padding: 0 5%;\n    float: left;\n    height: 20em;\n    width: 90%;\n    background-color: white;\n    list-style: none; }\n    #parksContainer .parks li {\n      display: inline-block;\n      width: 20%; }\n    #parksContainer .parks a {\n      text-decoration: none;\n      font-size: 1em;\n      color: black; }\n    #parksContainer .parks p {\n      display: inline-block;\n      position: relative;\n      bottom: 2em; }\n    #parksContainer .parks .googleMaps {\n      display: inline-block;\n      float: left;\n      position: relative;\n      top: .5em;\n      left: 10%;\n      margin: 0 1%; }\n    #parksContainer .parks .parkName {\n      display: inline-block;\n      font-size: 1.5em; }\n    #parksContainer .parks .parkName:hover {\n      text-decoration: underline; }\n    #parksContainer .parks .parkPic {\n      display: inline-block;\n      position: relative;\n      left: 14%;\n      bottom: 6em;\n      width: 15%; }\n    #parksContainer .parks .parkDet {\n      display: inline-block;\n      position: relative;\n      right: 5%;\n      bottom: 13em;\n      width: 39%;\n      text-align: center; }\n      #parksContainer .parks .parkDet a {\n        text-decoration: none;\n        font-size: 1em;\n        color: black; }\n    #parksContainer .parks .parkAddress {\n      display: inline-block;\n      position: relative;\n      left: 32.5%;\n      bottom: 10em; }\n    #parksContainer .parks .parkMatch {\n      display: inline-block;\n      position: relative;\n      left: 45%;\n      bottom: 10em;\n      width: 11%;\n      color: white;\n      background-color: #ef3122;\n      border-radius: 15px;\n      border: none;\n      outline: none;\n      box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);\n      text-align: center;\n      padding: 1%;\n      font-size: 18px; }\n    #parksContainer .parks .availableSports {\n      display: inline-block;\n      float: left;\n      width: 45%;\n      list-style-type: none;\n      position: relative;\n      left: 34%;\n      bottom: 6em; }\n      #parksContainer .parks .availableSports .sportPic {\n        width: 19%;\n        padding-right: 0.1em; }\n    #parksContainer .parks .parkMatch:active {\n      box-shadow: none; }\n    #parksContainer .parks a {\n      color: white;\n      text-decoration: none; }\n    #parksContainer .parks #updateDetails {\n      position: relative;\n      left: 100%;\n      top: 6em; }\n\n#backPark {\n  position: relative;\n  left: 5%;\n  bottom: 4em; }\n\n#nextPark {\n  position: relative;\n  left: 5.5%;\n  bottom: 4em; }\n\n/*# sourceMappingURL=parks.css.map */\n", ""]);
 
 	// exports
 
@@ -11523,16 +11523,20 @@
 	          $('#locate').on('click', function(){
 	            geoFindMe()
 	          });
-	        },
-	        error: function(err) {
-	          console.log("nope")
-	        }
-	      });
-	    };
+	        $("#searchPark").on('click', function(e) {
+	          e.preventDefault();
+	          searchPark();
+	        });
+	     },
+	     error: function(err) {
+	       console.log("nope")
+	     }
+	    });
+	  };
 	  function error() {
 	  };
-	    $('#zipcode').val("Locating…");
-	    navigator.geolocation.getCurrentPosition(success, error);
+	  $('#zipcode').val("Locating…");
+	  navigator.geolocation.getCurrentPosition(success, error);
 	  }
 	  function zipCode(zip) {
 	    var nextPages = new Park()
@@ -11551,18 +11555,22 @@
 	        $('#nextPark').on('click', function(){
 	          nextPage(next)
 	          window.scrollTo(0, 450);
-	        })
+	        });
 	        $('#backPark').on('click', function(){
 	          prevPage(previous)
 	          window.scrollTo(0, 450);
-	        })
+	        });
 	        $('#locate').on('click', function(){
 	          geoFindMe()
 	        });
-	      },
-	      error: function(err) {
-	        console.log("nope")
-	      }
+	        $("#searchPark").on('click', function(e) {
+	        e.preventDefault();
+	        searchPark();
+	      });
+	     },
+	     error: function(err) {
+	       console.log("nope")
+	     }
 	    });
 	    $('#zipcode').val("Locating…");
 	    navigator.geolocation.getCurrentPosition(success, error);
@@ -11572,33 +11580,37 @@
 	    nextPages.fetch({
 	      url: next,
 	      success: function(resp) {
-	        var html = parks({'data': resp.toJSON().results});
-	        var parkTemplate = $("#parkTemplate").text();
-	        var parkHTML = Mustache.render(parkTemplate, "data");
-	        var next = resp.toJSON().next;
-	        var previous = resp.toJSON().previous;
-	        $("#parksContainer").html(parkHTML);
-	        $("#container").html(html);
-	        console.log("success", resp);
-	        console.log("success: ",resp)
-	        $('#nextPark').on('click', function(){
-	          nextPage(next)
-	          window.scrollTo(0, 450);
-	        });
-	        $('#backPark').on('click', function(){
-	          prevPage(previous)
-	          window.scrollTo(0, 450);
-	        });
-	        $('#locate').on('click', function(){
-	          geoFindMe()
-	        })
+	      var html = parks({'data': resp.toJSON().results});
+	      var parkTemplate = $("#parkTemplate").text();
+	      var parkHTML = Mustache.render(parkTemplate, "data");
+	      var next = resp.toJSON().next;
+	      var previous = resp.toJSON().previous;
+	      $("#parksContainer").html(parkHTML);
+	      $("#container").html(html);
+	      console.log("success", resp);
+	      console.log("success: ",resp)
+	      $('#nextPark').on('click', function(){
+	        nextPage(next)
+	        window.scrollTo(0, 450);
+	      });
+	      $('#backPark').on('click', function(){
+	        prevPage(previous)
+	        window.scrollTo(0, 450);
+	      });
+	      $('#locate').on('click', function(){
+	      geoFindMe()
+	      });
+	      $("#searchPark").on('click', function(e) {
+	        e.preventDefault();
+	        searchPark();
+	      });
 	     },
 	     error: function(err) {
 	       console.log("nope")
 	     }
 	    });
 	  }
-	  function prevPage(previous) {
+	  function prevPage(previous){
 	    var prevPages = new Park()
 	    prevPages.fetch({
 	      url: previous,
@@ -11623,12 +11635,52 @@
 	        $('#locate').on('click', function(){
 	          geoFindMe()
 	        });
+	        $("#searchPark").on('click', function(e) {
+	          e.preventDefault();
+	          searchPark();
+	        });
 	      },
 	      error: function(err) {
 	        console.log("nope")
 	      }
 	    });
 	  }
+	  function searchPark() {
+	    var search = new Park()
+	    search.fetch({
+	      url: "http://skill-match.herokuapp.com/api/parks/?search=" + $("#parkSearch").val(),
+	      success: function(resp) {
+	        var html = parks({'data': resp.toJSON().results});
+	        var parkTemplate = $("#parkTemplate").text();
+	        var parkHTML = Mustache.render(parkTemplate, "data");
+	        $("#parksContainer").html(parkHTML);
+	        $("#container").html(html);
+	        console.log("success", resp);
+	        $("#searchPark").on('click', function(e) {
+	          e.preventDefault();
+	          searchPark();
+	        });
+	        $('#nextPark').on('click', function(){
+	          nextPage(next)
+	          window.scrollTo(0, 450);
+	        });
+	        $('#backPark').on('click', function(){
+	          prevPage(previous)
+	          window.scrollTo(0, 450);
+	        });
+	        $('#locate').on('click', function(){
+	          geoFindMe()
+	        });
+	      },
+	      error: function(err) {
+	        console.log("error", err);
+	      }
+	    })
+	  }
+	  $("#searchPark").on('click', function(e) {
+	    e.preventDefault();
+	    searchPark();
+	  });
 	  var Park = Backbone.Model.extend({
 	    initialize: function () {
 	    },
@@ -11655,7 +11707,7 @@
 	      $("#container").html(html);
 	      console.log("success", resp);
 	      $(".yelpReview").on('click', function() {
-	         window.open($(this).attr('href'));
+	        window.open($(this).attr('href'));
 	      });
 	      $('#nextPark').on('click', function(){
 	        nextPage(next)
@@ -11670,6 +11722,10 @@
 	      });
 	      $('#zip').on('click', function(){
 	        zipCode()
+	      });
+	      $("#searchPark").on('click', function(e) {
+	        e.preventDefault();
+	        searchPark();
 	      });
 	    },
 	    error: function(err) {
