@@ -11,8 +11,8 @@
   <button id="locate">Show my location</button>
   {{#data}}
   <ul class="parks">
-    <li>
-      <iframe class="googleMaps" width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ
+    <li class="googleMaps">
+      <iframe  width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUAqVfbZzmCDb_JkQiXhGJ0wrIZJoaxfQ
         &q={{name}}+{{display_address3}}&zoom=12">
       </iframe>
     </li>
@@ -27,7 +27,7 @@
       </br><a class="yelpReview" href="{{url}}"> Yelp Park Review</a>
     </li>
     <li class="availableSports">
-    <p>Available Sports</p>
+    <p>Available </br>Sports</p>
     {{#court_set}}
     <img class="sportPic"src="{{img_url}}">
     {{/court_set}}
