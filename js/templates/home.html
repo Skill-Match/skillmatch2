@@ -19,31 +19,7 @@
   {{/user}}
 </div>
 <div id="youMatches">
-  <div id="pending">
-    {{#data}} {{^is_confirmed}}
-    <h2>Pending</h2>
-    <ul>
-      <li>
-        <a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}">
-        </a>
-      </li>
-      <a href="/match/{{id}}" id="dateHome">
-        <li> {{date}}</li>
-      </a>
-      <li> {{time}}</br>
-        {{sport}}</br>
-        <a class="parkslink" href="/parksDetail/{{park}}">{{park_name}}</a>
-      </li>
-      <li> Created By: <a id="profileName" href="/profile/{{creator}}"> {{creator_name}} </a> </li>
-      <li> <a id="matchDetail" type="sumbit" href="/match/{{id}}"> Details </a> </li>
-      <li id="skillProgressHome"> Skill Level
-        <progress class="skill" value="{{skill_level}}" max="100"></progress>
-      </li>
-      <li class="playing">{{#players}}<img src="{{small_img}}"><a href="/profile/{{id}}" class="name">{{username}}</a>{{/players}}</li>
-    </ul>
-    {{/is_confirmed}} {{/data}}
-  </div>
-  <div id="upcoming">
+<div id="upcoming">
     {{#data}} {{#is_confirmed}}
     <h2>Upcoming</h2>
     <ul>
@@ -57,6 +33,30 @@
       <li> {{time}}</br>
         {{sport}}</br>
         <a class="parkslink" href="/parksDetail/{{park}}">{{park_name}}</a> </li>
+      <li> Created By: <a id="profileName" href="/profile/{{creator}}"> {{creator_name}} </a> </li>
+      <li> <a id="matchDetail" type="sumbit" href="/match/{{id}}"> Details </a> </li>
+      <li id="skillProgressHome"> Skill Level
+        <progress class="skill" value="{{skill_level}}" max="100"></progress>
+      </li>
+      <li class="playing">{{#players}}<img src="{{small_img}}"><a href="/profile/{{id}}" class="name">{{username}}</a>{{/players}}</li>
+    </ul>
+    {{/is_confirmed}} {{/data}}
+  </div>
+  <div id="pending">
+    {{#data}} {{^is_confirmed}}
+    <h2>Open Matches</h2>
+    <ul>
+      <li>
+        <a href="/match/{{id}}"><img id="sportImage" src="{{img_url}}">
+        </a>
+      </li>
+      <a href="/match/{{id}}" id="dateHome">
+        <li> {{date}}</li>
+      </a>
+      <li> {{time}}</br>
+        {{sport}}</br>
+        <a class="parkslink" href="/parksDetail/{{park}}">{{park_name}}</a>
+      </li>
       <li> Created By: <a id="profileName" href="/profile/{{creator}}"> {{creator_name}} </a> </li>
       <li> <a id="matchDetail" type="sumbit" href="/match/{{id}}"> Details </a> </li>
       <li id="skillProgressHome"> Skill Level

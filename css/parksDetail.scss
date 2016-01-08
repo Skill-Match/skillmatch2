@@ -23,7 +23,7 @@
         text-align: center;
         position: relative;
         bottom: 1.5em;
-        left: 25%;
+        left: 10%;
         color: black;
         box-shadow: none;
       }
@@ -55,12 +55,12 @@
   }
   .parkName {
     position: relative;
-    bottom: 5em;
+    bottom: 6em;
     left: 6%;
   }
   .parkAddress {
     position: relative;
-    bottom: 1.5em;
+    bottom: 3.5em;
     right: 34.5%;
   }
   .yelp {
@@ -68,10 +68,6 @@
     bottom: 3.5em;
     left: 9.5%;
     color: black;
-  }
-  #rateStars {
-    position: relative;
-    top: 1em;
   }
   #availableSports {
     position: relative;
