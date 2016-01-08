@@ -1199,7 +1199,7 @@ router.on('route:parks', function(id, name) {
   };
   function error() {
   };
-  $('#searchPark').val("Locating…");
+  $('#parkSearch').val("Locating…");
   navigator.geolocation.getCurrentPosition(success, error);
   }
   function nextPage(next){
@@ -1315,6 +1315,7 @@ router.on('route:parks', function(id, name) {
         console.log("error", err);
       }
     })
+  $('#parkSearch').val("Locating…");
   }
   $("#searchPark").on('click', function(e) {
     e.preventDefault();
