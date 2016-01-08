@@ -694,19 +694,22 @@ router.on('route:match', function(id, username) {
         $("#cancel").hide();
         $("#leaveMatch").hide();
         $('#feedBackMatch').hide();
-        if(Cookie.get('uid') !== undefined && Cookie.get('uid') !== creator){
-          $("#leaveMatch").show();
-        }
         if (Cookie.get('uid') == creator) {
           $("#update").show();
           $("#cancel").show();
           $("#leaveMatch").hide();
           $('#join').hide();
         };
+        if(Cookie.get('uid') !== creator && confirm == false && open == false) {
+          $("#leaveMatch").show();
+        };
         if (Cookie.get('uid') == creator && confirm == false && open == false) {
           $("#confirm").show();
           $("#decline").show();
+          $("#leaveMatch").hide();
         };
+
+
         if (Cookie.get('uid') !== creator && open == false) {
            $('#join').hide();
         };
@@ -1056,18 +1059,6 @@ router.on('route:updatematch', function(id){
       var Parks = Backbone.Collection.extend({
         model: Park,
         url: 'https://skill-match.herokuapp.com/api/parks/'
-      });
-      var park = new Parks();
-      park.fetch({
-        success: function(resp) {
-          var parks = parkList({'park': resp.toJSON()[0].results});
-          var parksTemplate = $("#parksTemplate").text();
-          var parksHTML = Mustache.render(parksTemplate, 'park');
-          $("#addPark").html(parks);
-        },
-        error: function(err) {
-          console.log("nope")
-        }
       });
       $("#updateMatch").on('click', function(e) {
         e.preventDefault();
@@ -1479,6 +1470,7 @@ router.on('route:parksDetail', function(id, name){
         function error(err) {
           console.log("error", err);
         }
+        $('.createCourtButton').html('Adding ...');
         navigator.geolocation.getCurrentPosition(success, error);
       }
       $(".createCourtButton").on('click', function() {

@@ -1,6 +1,5 @@
 <div id="UpMatchPage">
-  <h3> Create Game you would like to play </h3> {{#data}}
-  <a id="updateMatch" href="/match/{{id}}">Update Match</a>
+{{#data}}
   <ul id="update">
     <li> Sport:</li>
     <select id="addSport" name="Sport" value "{{sport}}">
@@ -17,10 +16,13 @@
     <li> Time:</li>
     <input id="addTime" type="time" value="{{time}}">
     <li> Skill: 1-100</li>
-    <input id="addSkill" type="range" min="0" max="100" step="1" value='{{skill_level}}'>
+    <li><input id="addSkill" type="range" min="0" max="100" step="1" value='{{skill_level}}'></li>
     <li> Park:</br>
       <select id="addPark" name="park">
+        <option value="{{park}}">{{park_name}}</option>
+      </select>
     </li>
+    <li><a id="updateMatch" href="/match/{{id}}">Update Match</a></li>
   </ul>
   {{/data}}
 </div>
