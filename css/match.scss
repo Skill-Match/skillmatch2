@@ -108,17 +108,19 @@
 
   #cancel {
     font-size: 12px;
+    position: absolute;
+    top: 38em;
+    right: 89%;
   }
 
   #update {
     font-size: 12px;
+    position: absolute;
+    position: absolute;
+    top: 38em;
+    right: 84%;
   }
-
   #cancelEdit {
-    display: inline-block;
-    position: relative;
-    right: 3%;
-    bottom: 14em;
     a {
       color: black;
       text-decoration: none;

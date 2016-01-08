@@ -48,7 +48,8 @@
     outline: none;
     position: absolute;
     top: 28em;
-    left: 4.5em; }
+    left: 4.5em;
+    text-decoration: none; }
   #matchDetailContainer #confirm:active {
     box-shadow: none; }
   #matchDetailContainer #decline {
@@ -61,7 +62,8 @@
     outline: none;
     position: absolute;
     top: 32em;
-    left: 4.5em; }
+    left: 4.5em;
+    text-decoration: none; }
   #matchDetailContainer #decline:active {
     box-shadow: none; }
   #matchDetailContainer #sportImage {
@@ -76,19 +78,21 @@
       position: relative;
       bottom: 1em; }
   #matchDetailContainer #cancel {
-    font-size: 12px; }
+    font-size: 12px;
+    position: absolute;
+    top: 38em;
+    right: 89%; }
   #matchDetailContainer #update {
-    font-size: 12px; }
-  #matchDetailContainer #cancelEdit {
-    display: inline-block;
-    position: relative;
-    right: 3%;
-    bottom: 14em; }
-    #matchDetailContainer #cancelEdit a {
-      color: black;
-      text-decoration: none; }
-    #matchDetailContainer #cancelEdit a:hover {
-      text-decoration: underline; }
+    font-size: 12px;
+    position: absolute;
+    position: absolute;
+    top: 38em;
+    right: 84%; }
+  #matchDetailContainer #cancelEdit a {
+    color: black;
+    text-decoration: none; }
+  #matchDetailContainer #cancelEdit a:hover {
+    text-decoration: underline; }
   #matchDetailContainer #parkLink {
     color: grey;
     text-decoration: none; }
