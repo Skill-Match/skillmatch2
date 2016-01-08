@@ -26,6 +26,7 @@
     width: 59%; }
   #matchDetailContainer #join {
     padding: 15px 30px;
+    text-decoration: none;
     background-color: #1e8880;
     color: white;
     border: none;
@@ -39,6 +40,7 @@
     box-shadow: none; }
   #matchDetailContainer #confirm {
     padding: 15px;
+    text-decoration: none;
     background-color: #1e8880;
     color: white;
     border: none;
@@ -53,6 +55,7 @@
   #matchDetailContainer #decline {
     padding: 15px;
     background-color: #1e8880;
+    text-decoration: none;
     color: white;
     border: none;
     border-radius: 20px;
@@ -96,5 +99,29 @@
   #matchDetailContainer #playersFeedback {
     display: inline-block;
     padding: 0; }
+  #matchDetailContainer #leaveMatch {
+    padding: 15px;
+    background-color: #1e8880;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none;
+    position: absolute;
+    top: 32em;
+    left: 4.5em; }
+  #matchDetailContainer #feedBackMatch {
+    padding: 15px;
+    background-color: #1e8880;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+    outline: none;
+    position: relative;
+    bottom: 26em;
+    left: 65%; }
 
 /*# sourceMappingURL=match.css.map */

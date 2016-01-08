@@ -693,44 +693,28 @@ router.on('route:match', function(id, username) {
         $("#update").hide();
         $("#cancel").hide();
         $("#leaveMatch").hide();
+        $('#feedBackMatch').hide();
         if(Cookie.get('uid') !== undefined && Cookie.get('uid') !== creator){
-          $("#leaveMatch").hide();
-        }
-        if (Cookie.get('uid') !== creator && open == false && confirm == false) {
           $("#leaveMatch").show();
-        };
-
+        }
         if (Cookie.get('uid') == creator) {
-          $("#join").hide();
-          $("#confirm").hide();
-          $("#decline").hide();
-           $("#leaveMatch").hide();
-           $("#update").show();
+          $("#update").show();
           $("#cancel").show();
+          $("#leaveMatch").hide();
+          $('#join').hide();
         };
-        if (Cookie.get('uid') == creator && confirm == false ) {
+        if (Cookie.get('uid') == creator && confirm == false && open == false) {
           $("#confirm").show();
           $("#decline").show();
         };
-        if (Cookie.get('uid') == creator && open == true) {
-          $("#confirm").hide();
-          $("#decline").hide();
-           $("#leaveMatch").hide();
-        }
-        if(confirm == true){
-          $("#confirm").hide();
-          $("#decline").hide();
-        }
-         if(completed == true){
-          $("#confirm").hide();
-          $("#decline").hide();
-          $("#leaveMatch").hide();
-           $("#update").hide();
+        if (Cookie.get('uid') !== creator && open == false) {
+           $('#join').hide();
+        };
+        if (completed == true) {
+          $("#update").hide();
           $("#cancel").hide();
-        }
-        if(open == false){
-          $("#join").hide();
-        }
+          $("#feedBackMatch").show();
+        };
         $('#homeBtn').on('click', function(){
           router.navigate('/home/' + player, {trigger: true});
         })
