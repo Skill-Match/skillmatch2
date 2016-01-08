@@ -31,6 +31,13 @@
   #parksPage #parksDetail ul {
     width: 100%;
     padding: 0; }
+    #parksPage #parksDetail ul .details {
+      position: relative;
+      left: 5%; }
+    #parksPage #parksDetail ul .available {
+      position: relative;
+      right: 20%;
+      padding: 15px; }
 #parksPage #googleMaps2 {
   position: relative;
   top: .5em;
@@ -97,7 +104,7 @@
   #parksPage .parkMatches .players {
     position: relative;
     right: 50%;
-    bottom: 2em; }
+    bottom: 1em; }
   #parksPage .parkMatches .matchSubmit {
     position: relative;
     bottom: 4em;
