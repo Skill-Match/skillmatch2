@@ -695,25 +695,15 @@ router.on('route:match', function(id, username) {
         $("#leaveMatch").hide();
         if (Cookie.get('uid') == creator) {
           $("#join").hide();
-          $("#confirm").hide();
-          $("#decline").hide();
           $("#update").show();
           $("#cancel").show();
-        };
-        if (Cookie.get('uid') == creator && open == true ) {
-
-        };
-        if(open == false) {
-          $("#confirm").show();
-          $("#decline").show();
-          $("#update").hide();
-          $("#cancel").hide();
+        }
+        if(open == true) {
+          $("#update").show();
+          $("#cancel").show();
         }
         if(confirm == true){
-          $("#confirm").hide();
           $("#leaveMatch").show();
-          $("#decline").hide();
-
         }
          if(completed == true){
           $("#confirm").hide();
@@ -722,6 +712,13 @@ router.on('route:match', function(id, username) {
         }
         if(open == false){
           $("#join").hide();
+        }
+        if(Cookie.get('uid') !== creator) {
+          $("#confirm").hide();
+          $("#decline").hide();
+          $("#update").hide();
+          $("#cancel").hide();
+          $("#leaveMatch").show();
         }
         $('#homeBtn').on('click', function(){
           router.navigate('/home/' + player, {trigger: true});
@@ -1194,10 +1191,6 @@ router.on('route:parks', function(id, name) {
             e.preventDefault();
             window.open($(this).attr('href'));
           });
-           $('#zip').on('click', function(e){
-        e.preventDefault();
-        zipCode()
-      });
      },
      error: function(err) {
        console.log("nope")
@@ -1206,52 +1199,8 @@ router.on('route:parks', function(id, name) {
   };
   function error() {
   };
-  $('#zipcode').val("Locating…");
+  $('#searchPark').val("Locating…");
   navigator.geolocation.getCurrentPosition(success, error);
-  }
-  function zipCode(zip) {
-    var nextPages = new Park()
-    nextPages.fetch({
-      url: 'http://skill-match.herokuapp.com/api/parks/?zip='+$('#zipcode').val(),
-      success: function(resp) {
-        var html = parks({'data': resp.toJSON().results});
-        var parkTemplate = $("#parkTemplate").text();
-        var parkHTML = Mustache.render(parkTemplate, "data");
-        var next = resp.toJSON().next;
-        var previous = resp.toJSON().previous;
-        $("#parksContainer").html(parkHTML);
-        $("#container").html(html);
-        console.log("success", resp);
-        console.log("success: ",resp)
-        $('#nextPark').on('click', function(){
-          nextPage(next)
-          window.scrollTo(0, 450);
-        });
-        $('#backPark').on('click', function(){
-          prevPage(previous)
-          window.scrollTo(0, 450);
-        });
-        $('#locate').on('click', function(){
-          geoFindMe()
-        });
-        $("#searchPark").on('click', function(e) {
-          e.preventDefault();
-          searchPark();
-        });
-        $(".yelpReview").on('click', function(e) {
-          e.preventDefault();
-          window.open($(this).attr('href'));
-        });
-         $('#zip').on('click', function(e){
-        e.preventDefault();
-        zipCode()
-      });
-      },
-     error: function(err) {
-       console.log("nope")
-     }
-    });
-    $('#zipcode').val("Locating…");
   }
   function nextPage(next){
     var nextPages = new Park()
@@ -1285,10 +1234,6 @@ router.on('route:parks', function(id, name) {
       $(".yelpReview").on('click', function(e) {
         e.preventDefault();
         window.open($(this).attr('href'));
-      });
-       $('#zip').on('click', function(e){
-        e.preventDefault();
-        zipCode()
       });
      },
      error: function(err) {
@@ -1329,10 +1274,6 @@ router.on('route:parks', function(id, name) {
           e.preventDefault();
           window.open($(this).attr('href'));
         });
-         $('#zip').on('click', function(e){
-        e.preventDefault();
-        zipCode()
-      });
       },
       error: function(err) {
         console.log("nope")
@@ -1369,10 +1310,6 @@ router.on('route:parks', function(id, name) {
           e.preventDefault();
           window.open($(this).attr('href'));
         });
-         $('#zip').on('click', function(e){
-        e.preventDefault();
-        zipCode()
-      });
       },
       error: function(err) {
         console.log("error", err);
@@ -1421,10 +1358,6 @@ router.on('route:parks', function(id, name) {
       });
       $('#locate').on('click', function(){
         geoFindMe()
-      });
-      $('#zip').on('click', function(e){
-        e.preventDefault();
-        zipCode()
       });
       $("#searchPark").on('click', function(e) {
         e.preventDefault();

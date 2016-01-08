@@ -46,12 +46,12 @@
   }
   .parkName {
     position: relative;
-    bottom: 6em;
+    bottom: 5em;
     left: 6%;
   }
   .parkAddress {
     position: relative;
-    bottom: 3.5em;
+    bottom: 1.5em;
     right: 34.5%;
   }
   .yelp {
@@ -60,9 +60,18 @@
     left: 9.5%;
     color: black;
   }
+  #rateStars {
+    position: relative;
+    top: 1em;
+  }
+  #availableSports {
+    position: relative;
+    right: 37%;
+  }
   #sportIcon {
     position: relative;
-    right: 13em;
+    right: 10em;
+    top: 0.4em;
   }
   #parkMatch {
     padding: 10px;

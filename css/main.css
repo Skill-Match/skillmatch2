@@ -96,7 +96,9 @@
       top: 1em; }
     #upComing .players .empty {
       opacity: 0.3;
-      border: 2px dashed black; }
+      border: 2px dashed black;
+      position: relative;
+      top: .3em; }
   #upComing #areaSearch {
     display: inline-block; }
   #upComing #areaInput {

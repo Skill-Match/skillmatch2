@@ -115,7 +115,8 @@
     .empty{
       opacity: 0.3;
       border: 2px dashed black;
-
+      position: relative;
+      top: .3em;
     }
   }
   #areaSearch {
