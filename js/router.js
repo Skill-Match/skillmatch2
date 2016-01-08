@@ -390,7 +390,7 @@ router.on('route:signup', function(){
       email: $("#remail").val(),
       password:$("#rpass").val(),
       profile: {
-      gender: $(".rgen").val(),
+      gender: $(".rgen:checked").val(),
       age: $("#rage").val(),
       phone_number: $("#rnumber").val(),
       wants_texts: $("#rtxt").is(':checked')
@@ -693,32 +693,40 @@ router.on('route:match', function(id, username) {
         $("#update").hide();
         $("#cancel").hide();
         $("#leaveMatch").hide();
+        if(Cookie.get('uid') !== undefined && Cookie.get('uid') !== creator){
+          $("#leaveMatch").hide();
+        }
+        if (Cookie.get('uid') !== creator && open == false && confirm == false) {
+          $("#leaveMatch").show();
+        };
+
         if (Cookie.get('uid') == creator) {
           $("#join").hide();
           $("#confirm").hide();
           $("#decline").hide();
-          $("#update").show();
+           $("#leaveMatch").hide();
+           $("#update").show();
           $("#cancel").show();
         };
-        if (Cookie.get('uid') == creator && open == true ) {
-
-        };
-        if(open == false) {
+        if (Cookie.get('uid') == creator && confirm == false ) {
           $("#confirm").show();
           $("#decline").show();
-          $("#update").hide();
-          $("#cancel").hide();
+        };
+        if (Cookie.get('uid') == creator && open == true) {
+          $("#confirm").hide();
+          $("#decline").hide();
+           $("#leaveMatch").hide();
         }
         if(confirm == true){
           $("#confirm").hide();
-          $("#leaveMatch").show();
           $("#decline").hide();
-
         }
          if(completed == true){
           $("#confirm").hide();
           $("#decline").hide();
           $("#leaveMatch").hide();
+           $("#update").hide();
+          $("#cancel").hide();
         }
         if(open == false){
           $("#join").hide();
