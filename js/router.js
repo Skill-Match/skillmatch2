@@ -693,43 +693,28 @@ router.on('route:match', function(id, username) {
         $("#update").hide();
         $("#cancel").hide();
         $("#leaveMatch").hide();
+        $('#feedBackMatch').hide();
         if(Cookie.get('uid') !== undefined && Cookie.get('uid') !== creator){
-          $("#leaveMatch").hide();
-        }
-        if (Cookie.get('uid') !== creator && open == false && confirm == false) {
           $("#leaveMatch").show();
-        };
+        }
         if (Cookie.get('uid') == creator) {
-          $("#join").hide();
-          $("#confirm").hide();
-          $("#decline").hide();
-          $("#leaveMatch").hide();
           $("#update").show();
           $("#cancel").show();
+          $("#leaveMatch").hide();
+          $('#join').hide();
         };
-        if (Cookie.get('uid') == creator && confirm == false ) {
+        if (Cookie.get('uid') == creator && confirm == false && open == false) {
           $("#confirm").show();
           $("#decline").show();
         };
-        if (Cookie.get('uid') == creator && open == true) {
-          $("#confirm").hide();
-          $("#decline").hide();
-           $("#leaveMatch").hide();
-        }
-        if(confirm == true){
-          $("#confirm").hide();
-          $("#decline").hide();
-        }
-         if(completed == true){
-          $("#confirm").hide();
-          $("#decline").hide();
-          $("#leaveMatch").hide();
+        if (Cookie.get('uid') !== creator && open == false) {
+           $('#join').hide();
+        };
+        if (completed == true) {
           $("#update").hide();
           $("#cancel").hide();
-        }
-        if(open == false){
-          $("#join").hide();
-        }
+          $("#feedBackMatch").show();
+        };
         $('#homeBtn').on('click', function(){
           router.navigate('/home/' + player, {trigger: true});
         })
@@ -1209,8 +1194,48 @@ router.on('route:parks', function(id, name) {
   };
   function error() {
   };
-  $('#parkSearch').val("Locating…");
+  $('#zipcode').val("Locating…");
   navigator.geolocation.getCurrentPosition(success, error);
+  }
+  function zipCode(zip) {
+    var nextPages = new Park()
+    nextPages.fetch({
+      url: 'http://skill-match.herokuapp.com/api/parks/?zip='+$('#zipcode').val(),
+      success: function(resp) {
+        var html = parks({'data': resp.toJSON().results});
+        var parkTemplate = $("#parkTemplate").text();
+        var parkHTML = Mustache.render(parkTemplate, "data");
+        var next = resp.toJSON().next;
+        var previous = resp.toJSON().previous;
+        $("#parksContainer").html(parkHTML);
+        $("#container").html(html);
+        console.log("success", resp);
+        console.log("success: ",resp)
+        $('#nextPark').on('click', function(){
+          nextPage(next)
+          window.scrollTo(0, 450);
+        });
+        $('#backPark').on('click', function(){
+          prevPage(previous)
+          window.scrollTo(0, 450);
+        });
+        $('#locate').on('click', function(){
+          geoFindMe()
+        });
+        $("#searchPark").on('click', function(e) {
+          e.preventDefault();
+          searchPark();
+        });
+        $(".yelpReview").on('click', function(e) {
+          e.preventDefault();
+          window.open($(this).attr('href'));
+        });
+      },
+     error: function(err) {
+       console.log("nope")
+     }
+    });
+    $('#zipcode').val("Locating…");
   }
   function nextPage(next){
     var nextPages = new Park()
@@ -1325,7 +1350,6 @@ router.on('route:parks', function(id, name) {
         console.log("error", err);
       }
     })
-  $('#parkSearch').val("Locating…");
   }
   $("#searchPark").on('click', function(e) {
     e.preventDefault();
@@ -1369,6 +1393,10 @@ router.on('route:parks', function(id, name) {
       });
       $('#locate').on('click', function(){
         geoFindMe()
+      });
+      $('#zip').on('click', function(e){
+        e.preventDefault();
+        zipCode()
       });
       $("#searchPark").on('click', function(e) {
         e.preventDefault();
