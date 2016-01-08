@@ -6,30 +6,15 @@
 	#zip {
 		margin-left: 1%;
 	}
+	input {
+		width: 12em;
+	}
 
 	#locate {
     position: relative;
-    bottom: 1em;
-    right: 21%;
+    top: 2.1em;
+    left: 26%;
 	}
-
-	#parkSearch {
-		margin-left: 1%;
-	}
-
-	#searchPark {
-    margin-left: 1%;
-    position: relative;
-    left: 75%;
-    bottom: 2.2em;
-	}
-	#searchForm	{
-		position: relative;
-		left: 22%;
-		bottom: 2em;
-		display: inline-block;
-	}
-
 	.parks{
 		padding: 0 3%;
 		float: left;

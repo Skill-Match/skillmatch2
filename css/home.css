@@ -77,7 +77,8 @@
     color: #00bfff; }
   #youMatches .playing img {
     position: relative;
-    bottom: 2.5em; }
+    bottom: 2.5em;
+    width: 5%; }
   #youMatches .playing .name {
     position: relative;
     right: 2.5em;
