@@ -90,8 +90,8 @@ var Router = Backbone.Router.extend({
       Cookie.set('token', token);
       Cookie.set('uid', user_id);
       Cookie.set('userName', user);
-      $('#nav').html(homeBtn);
-      $('#nav').append('<a id="logout"> Logout </a>');
+      $('#loginForm').html(homeBtn);
+      $('#loginForm').append('<a id="logout"> Logout </a>');
       homeBtn.setAttribute('href', '/home/'+username);
       if (document.URL == 'http://localhost:8080/') {
       router.navigate('/home/' + username , {trigger:true})
