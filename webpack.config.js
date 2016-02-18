@@ -19,6 +19,7 @@ module.exports = {
       {test: /\.scss$/,loaders: ["style", "css", "sass"]},
       {test: /\.json$/, loader:'json'},
       {test: /\.jsx$/, loader: 'jsx-loader?insertPragma=React.DOM&harmony'},
+      {test: /bootstrap\/js\//, loader: 'imports?jQuery=jquery'},
     ]
   }
 };
