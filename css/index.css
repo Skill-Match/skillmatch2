@@ -1,27 +1,30 @@
 * {
   font-family: 'Ubuntu', sans-serif;
 }
-.row {
+#headerRow {
   background-color: #324053;
-}
-.logo {
   width: 100%;
-  margin: 20%;
 }
-#loginForm {
-  padding: 0 7%;
-  margin-top: 2.3em;
-  margin-left: 1.2em;
-}
-#title {
-  color: white;
-  font-size: 2.5em;
-  margin: 33px 0 0 15px;
-}
-#signUp {
-  font-size: 17px;
-  color: white;
-}
+
+  .logo {
+    width: 100%;
+    margin: 20%;
+  }
+  #loginForm {
+    padding: 0 7%;
+    margin-top: 2.3em;
+    margin-left: 1.2em;
+  }
+  #title {
+    color: white;
+    font-size: 2.5em;
+    margin: 33px 0 0 15px;
+  }
+  #signUp {
+    font-size: 17px;
+    color: white;
+  }
+
 #logout:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -46,43 +49,52 @@ button {
 button:active {
   box-shadow: none;
 }
-@media(max-width: 1450px){
+
+@media(min-width: 1440px){
   .logo {
   width: 100%;
   margin: 15%;
+  }
+  #loginForm {
+    padding: 0 7%;
+    margin-top: 2.5em;
+    margin-left: 5.3em;
+  }
+  #title {
+    color: white;
+    font-size: 2em;
+    margin: 45px 0 0 15px;
+  }
+  #signUp {
+    font-size: 17px;
+    color: white;
+  }
 }
-#loginForm {
-  padding: 0 7%;
-  margin-top: 2.5em;
-  margin-left: 5.3em;
-}
-#title {
-  color: white;
-  font-size: 2em;
-  margin: 45px 0 0 15px;
-}
-#signUp {
-  font-size: 17px;
-  color: white;
-}
-}
-
 @media(max-width: 400px){
   .logo {
   width: 50%;
+  }
+  #loginForm {
+    padding: 0 7%;
+    margin-top: 2.5em;
+    margin-left: 5.3em;
+  }
+  #title {
+    color: white;
+    font-size: 2em;
+    margin: 45px 0 0 15px;
+  }
+  #signUp {
+    font-size: 17px;
+    color: white;
+  }
 }
-#loginForm {
-  padding: 0 7%;
-  margin-top: 2.5em;
-  margin-left: 5.3em;
+#footerRow {
+  background-color: #324053;
+  width: 100%;
 }
-#title {
+#footerRow a {
   color: white;
-  font-size: 2em;
-  margin: 45px 0 0 15px;
-}
-#signUp {
-  font-size: 17px;
-  color: white;
-}
+  font-size: 10px;
+  padding: 1em;
 }

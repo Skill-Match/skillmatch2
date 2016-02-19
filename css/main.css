@@ -1,5 +1,4 @@
 #imageContainer {
-  width: 100%;
   background-image: url("/images/tennis.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -7,9 +6,6 @@
   box-shadow: -1px 5px 8px 0px rgba(0, 0, 0, 0.5); }
   #imageContainer #over {
     display: inline-block;
-    position: relative;
-    top: 25%;
-    left: 13%;
     font-size: 2em; }
   #imageContainer #createMatchButton {
     color: white;
@@ -24,125 +20,5 @@
   #imageContainer #mission {
     color: white;
     width: 100%; }
-
-#upComing {
-  width: 80%;
-  margin: 2% 10%; }
-  #upComing select {
-    font-size: 18px;
-    margin: 1em .5em .5em;
-    border: none;
-    padding: 8px 10px;
-    border-radius: 5px;
-    background-color: #e3e3e3; }
-  #upComing #sportImage {
-    display: inline-block;
-    width: 23%;
-    margin: 1% 2%;
-    position: relative;
-    top: 2em; }
-    #upComing #sportImage img {
-      width: 100%; }
-  #upComing a {
-    text-decoration: none;
-    color: black; }
-  #upComing a:hover {
-    text-decoration: underline; }
-  #upComing ul {
-    width: 100%;
-    padding: 0;
-    height: 18em;
-    background-color: white;
-    float: left; }
-  #upComing li:nth-last-child(1) {
-    margin-bottom: 35px; }
-  #upComing li {
-    list-style-type: none;
-    padding-bottom: 5px;
-    width: 20%; }
-  #upComing h2 {
-    display: inline-block;
-    float: left;
-    margin-bottom: 0; }
-  #upComing .description {
-    display: inline-block;
-    font-size: 1em;
-    line-height: 1.7em;
-    width: 40%;
-    margin: 1% 2%;
-    position: relative;
-    bottom: 7em; }
-  #upComing #skillProgress {
-    position: relative;
-    right: 15%;
-    bottom: 5em;
-    display: inline-block; }
-    #upComing #skillProgress .skill {
-      width: 100%; }
-  #upComing .players {
-    display: inline-block;
-    width: 40%;
-    margin-left: 5%;
-    position: relative;
-    left: 25%;
-    bottom: 5.5em;
-    text-decoration: none; }
-    #upComing .players img {
-      border-radius: 100%;
-      width: 20%; }
-    #upComing .players .name {
-      position: relative;
-      right: 17%;
-      top: 1em; }
-    #upComing .players .empty {
-      opacity: 0.3;
-      border: 2px dashed black;
-      position: relative;
-      top: .3em; }
-  #upComing #areaSearch {
-    display: inline-block; }
-  #upComing #areaInput {
-    line-height: normal;
-    position: relative;
-    left: 15%;
-    bottom: 2.2em; }
-  #upComing #submitArea {
-    position: relative;
-    bottom: 2.2em;
-    left: 18%; }
-  #upComing #area {
-    position: relative;
-    bottom: 2.2em;
-    left: 20%; }
-  #upComing #matchSubmit {
-    padding: .5em 1em;
-    background-color: #1e8880;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
-    outline: none;
-    width: 4%;
-    display: inline-block;
-    margin: 3%;
-    position: relative;
-    left: 40%;
-    bottom: 10em; }
-    #upComing #matchSubmit a {
-      color: white; }
-  #upComing #matchSubmit:active {
-    box-shadow: none; }
-  #upComing .creatorName {
-    color: #00bfff; }
-  #upComing .creatorName:hover {
-    text-decoration: underline; }
-  #upComing .skill {
-    width: 300px; }
-  #upComing #parkAnchor {
-    color: grey; }
-  #upComing #next {
-    margin-bottom: 1em; }
-  #upComing #prev {
-    margin-left: .5em; }
 
 /*# sourceMappingURL=main.css.map */

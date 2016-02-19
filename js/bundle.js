@@ -9939,7 +9939,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #324053;\n  font-family: 'Ubuntu', sans-serif;\n}\n#header {\n  height: 6.5em;\n  width: 100%;\n}\n#title {\n    display: inline-block;\n    color: white;\n    position: absolute;\n    top:  .5em;\n  }\n#logo {\n    display: inline-block;\n    width: 8%;\n    margin-left: 2%;\n    margin-top: 1%;\n  }\n#logo img{\n    height: 80px;\n    width: 80px;\n  }\n  #nav{\n    float: right;\n    position: absolute;\n    list-style: none;\n    right: 7%;\n    top: 1em;\n    display: inline-block;\n  }\n  #nav a {\n    font-size: 30px;\n    color: white;\n    text-decoration: none;\n  }\n  #nav a:hover {\n    text-decoration: underline;\n  }\n  #nav #logout {\n    font-size: 12px;\n    margin-left: 5px;\n  }\n#container {\n  background-color: #f5f2ec;\n}\n#nav #signUp {\n  font-size: 17px;\n  float: right;\n  position: relative;\n  left: 18%;\n  bottom: 1.5em;\n  color: white;\n}\n\n#signUp:hover {\n  text-decoration: underline;\n}\n\n#logout:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\ninput {\n  font-size: 15px;\n  margin: 1em .5em .5em;\n  border: none;\n  width: 150px;\n  padding: 8px 10px;\n  border-radius: 5px;\n}\nbutton {\n  margin-top: 1.5em;\n  padding: 8px;\n  background-color:#f5f2ec;\n  border: none;\n  border-radius: 10px;\n  box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);\n  outline: none;\n}\nbutton:active {\n  box-shadow: none;\n}\n.footerNav {\n  font-size: 10px;\n  color: white;\n  text-decoration: none;\n  margin-right: .5em;\n  margin-left: .5em;\n}\n.footerNav ul {\n  margin-bottom: 3em;\n\n}\n#footer li{\n  display: inline-block;\n}\n#footer ul {\n  padding-left: 75%;\n}\n#footer p {\n  color: white;\n  font-size: 8px;\n}", ""]);
+	exports.push([module.id, "* {\n  font-family: 'Ubuntu', sans-serif;\n}\n.row {\n  background-color: #324053;\n}\n.logo {\n  width: 100%;\n  margin: 20%;\n}\n#loginForm {\n  padding: 0 7%;\n  margin-top: 2.3em;\n  margin-left: 1.2em;\n}\n#title {\n  color: white;\n  font-size: 2.5em;\n  margin: 33px 0 0 15px;\n}\n#signUp {\n  font-size: 17px;\n  color: white;\n}\n#logout:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\ninput {\n  font-size: 15px;\n  margin: 1em .5em .5em;\n  border: none;\n  width: 150px;\n  padding: 8px 10px;\n  border-radius: 5px;\n}\nbutton {\n  margin-top: 1.5em;\n  padding: 8px;\n  background-color:#f5f2ec;\n  border: none;\n  border-radius: 10px;\n  box-shadow: 1px 5px 8px 0px rgba(0,0,0,0.50);\n  outline: none;\n}\nbutton:active {\n  box-shadow: none;\n}\n@media(max-width: 1450px){\n  .logo {\n  width: 100%;\n  margin: 15%;\n}\n#loginForm {\n  padding: 0 7%;\n  margin-top: 2.5em;\n  margin-left: 5.3em;\n}\n#title {\n  color: white;\n  font-size: 2em;\n  margin: 45px 0 0 15px;\n}\n#signUp {\n  font-size: 17px;\n  color: white;\n}\n}\n\n@media(max-width: 400px){\n  .logo {\n  width: 50%;\n}\n#loginForm {\n  padding: 0 7%;\n  margin-top: 2.5em;\n  margin-left: 5.3em;\n}\n#title {\n  color: white;\n  font-size: 2em;\n  margin: 45px 0 0 15px;\n}\n#signUp {\n  font-size: 17px;\n  color: white;\n}\n}\n", ""]);
 
 	// exports
 
@@ -11061,8 +11061,8 @@
 	      Cookie.set('token', token);
 	      Cookie.set('uid', user_id);
 	      Cookie.set('userName', user);
-	      $('#nav').html(homeBtn);
-	      $('#nav').append('<a id="logout"> Logout </a>');
+	      $('#loginForm').html(homeBtn);
+	      $('#loginForm').append('<a id="logout"> Logout </a>');
 	      homeBtn.setAttribute('href', '/home/'+username);
 	      if (document.URL == 'http://localhost:8080/') {
 	      router.navigate('/home/' + username , {trigger:true})
