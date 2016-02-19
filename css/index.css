@@ -3,7 +3,7 @@
 }
 #headerRow {
   background-color: #324053;
-  width: 100%;
+  height: 8em;
 }
 
   .logo {
@@ -13,7 +13,6 @@
   #loginForm {
     padding: 0 7%;
     margin-top: 2.3em;
-    margin-left: 1.2em;
   }
   #title {
     color: white;
@@ -91,10 +90,10 @@ button:active {
 }
 #footerRow {
   background-color: #324053;
-  width: 100%;
 }
 #footerRow a {
   color: white;
   font-size: 10px;
   padding: 1em;
+  float: right;
 }
