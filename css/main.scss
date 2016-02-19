@@ -1,14 +1,12 @@
 #imageContainer {
-  background-image: url('/images/tennis.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 350px;
+
   box-shadow: -1px 5px 8px 0px rgba(0,0,0,0.50);
-  #over{
-    display: inline-block;
-    font-size: 2em;
+
+  #tennisImage {
+    width: 100%;
   }
   #createMatchButton {
+    font-size: 2em;
     color: white;
     background-color: #ef3122;
     border-radius: 15px;
@@ -21,8 +19,8 @@
     font-size: 29px;
   }
   #mission {
+    font-size: 2.5em;
     color: white;
-    width: 100%;
   }
 }
 // #upComing {
